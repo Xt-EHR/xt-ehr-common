@@ -11,7 +11,5 @@ This Implementation Guide is a work result across different work packages. Many 
 
 **Coordination and FHIR content creation:**
 
-* José Costa Teixeira (This time on top)
-* Rutt Lindström (whining about not being the first)
 
 <br/><br/>
