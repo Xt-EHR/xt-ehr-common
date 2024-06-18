@@ -4,8 +4,8 @@
 
 Logical: EHNOrganizationModel
 Parent: Base
-Title: "HP Organisation"
-Description: "Health professional organisation"
+Title: "eHN HP Organisation"
+Description: "eHN Dataset for health professional organisation"
 Characteristics: #can-be-target
 Id: ehn-organization-model
 * identifier 0..* Identifier "Organisation ID" "The healthcare provider organisation identifier. Identifier that is unique within a defined scope. Example: National healthcare provider ID. Multiple identifiers could be provided."

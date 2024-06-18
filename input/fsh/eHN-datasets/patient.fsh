@@ -4,8 +4,8 @@
 
 Logical: EHNPatientModel
 Parent: Base
-Title: "Patient"
-Description: "Identification of the patient/subject"
+Title: "eHN Patient"
+Description: "eHN Dataset for identification of the patient/subject"
 Characteristics: #can-be-target
 Id: ehn-patient-model
 * personalIdentifier 0..* Identifier "Personal identifier" "An identifier of the patient that is unique within a defined scope. Example: National ID (birth number) for a Czech patient. Multiple identifiers could be provided"

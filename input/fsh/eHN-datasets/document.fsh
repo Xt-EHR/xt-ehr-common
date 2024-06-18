@@ -4,8 +4,8 @@
 
 Logical: EHNDocumentMetadata
 Parent: Base
-Title: "Document Metadata"
-Description: "Document Metadata"
+Title: "eHN Document Metadata"
+Description: "eHN Dataset for Document Metadata"
 Characteristics: #can-be-target
 Id: ehn-documentmetadata-model
 

@@ -4,8 +4,8 @@
 
 Logical: EHNMedication
 Parent: Base
-Title: "Medication"
-Description: "Medication as a wide model serving as a base"
+Title: "eHN Medication"
+Description: "eHN Dataset for medication"
 Characteristics: #can-be-target
 Id: ehn-medication
 
