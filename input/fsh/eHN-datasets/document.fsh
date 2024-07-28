@@ -3,11 +3,10 @@
 // All cardinalities 0..*, data types are given as the best guess.
 
 Logical: EHNDocumentMetadata
-Parent: Base
 Title: "eHN Document Metadata"
 Description: "eHN Dataset for Document Metadata"
 Characteristics: #can-be-target
-Id: ehn-documentmetadata-model
+
 
 * identifier 0..* Identifier "Document Identifier" "Unique identifier of the document"
 * type 0..* CodeableConcept "Document type" "Identifies the type of document at hand, e.g. Laboratory report. Includes document name."

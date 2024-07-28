@@ -2,12 +2,11 @@
 // https://docs.google.com/spreadsheets/d/1JGA4xk68xdCC8qOQlu4SXiMYFftoT_fJAENBIZK1bis/edit?gid=1521819365#gid=1521819365
 // All cardinalities 0..*, data types are given as the best guess.
 
-Logical: EHNPatientModel
-Parent: Base
+Logical: EHNPatient
 Title: "eHN Patient"
 Description: "eHN Dataset for identification of the patient/subject"
 Characteristics: #can-be-target
-Id: ehn-patient-model
+
 * personalIdentifier 0..* Identifier "Personal identifier" "An identifier of the patient that is unique within a defined scope. Example: National ID (birth number) for a Czech patient. Multiple identifiers could be provided"
 * familyNameSurname 0..* string "Family name/surname" "The family name/surname/last name of the patient [ISO TS 22220:2011]. This field can contain more than one element or multiple data elements could be present."
 * givenName 0..* string "Given name" "The given name/first name of the patient (also known as forename or first name) [ISO TS 22220:2011]. This field can contain more than one element."

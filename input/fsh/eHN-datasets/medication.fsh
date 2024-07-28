@@ -3,11 +3,9 @@
 // All cardinalities 0..*, data types are given as the best guess.
 
 Logical: EHNMedication
-Parent: Base
 Title: "eHN Medication"
 Description: "eHN Dataset for medication"
 Characteristics: #can-be-target
-Id: ehn-medication
 
 * productName 0..* string "Name of the medicinal product" "Name of the medicinal product. It has to be noted, that according to Implementing Directive 2012/52/EU additional requirements may apply."
 * identifierMedicinalProduct 0..* Identifier "Identifier/code of the medicinal product" "Identifier of a medicinal product refers to the product inside the package, not the packaged item as such. It could be MPID according to ISO 11615, EMA PMS ID and/or a national identifier." 

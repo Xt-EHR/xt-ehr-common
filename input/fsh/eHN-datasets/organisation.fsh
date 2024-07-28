@@ -3,11 +3,9 @@
 // All cardinalities 0..*, data types are given as the best guess.
 
 Logical: EHNOrganizationModel
-Parent: Base
 Title: "eHN HP Organisation"
 Description: "eHN Dataset for health professional organisation"
 Characteristics: #can-be-target
-Id: ehn-organization-model
 * identifier 0..* Identifier "Organisation ID" "The healthcare provider organisation identifier. Identifier that is unique within a defined scope. Example: National healthcare provider ID. Multiple identifiers could be provided."
 * name 0..* string "Organisation name" "The healthcare provider organisation information."
 * address 0..* Address "Address" "Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."
