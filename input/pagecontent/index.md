@@ -7,6 +7,8 @@ This is FHIR Implementation Guide for Xt-EHR project, including common parts of 
 ### Specification
 Xt-EHR Commons IG is a base for all the other implementation guides created in Xt-EHR project. Xt-EHR Commons IG should be used as a dependency for all the use cases to make sure common data objects (patient, medication, etc) are modelled in a consistent way.
 
+The principles of creating common resources are described in [Xt-EHR Metadata IG](https://xt-ehr.github.io/xt-ehr-metadata/).
+
 ### Authors and contributors
 
 This Implementation Guide is a work result across different work packages, mostly by WP5, WP6, and WP7. 
