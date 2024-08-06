@@ -4,7 +4,7 @@ Description: "Logical model for prescribed/dispensed medication. The model is sh
 Characteristics: #can-be-target
 * ^status = #active
 
-* identifyingCode[x] 0..* CD or II "Identifier or product code for the product, independently of the level of product. If several identifiers are specified, they shall not have conflicting meanings or very different granularities." 
+* identifyingCode[x] 0..* CD or II "Identifier or product code for the product, independently of the level of product. If several identifiers are specified, they shall not have conflicting meanings or very different granularities."
 * classification 0..* CD "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)"
 * productName 0..1 ST "Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided."
 * marketingAuthorisationHolder 0..1 Class "Marketing authorisation holder of manufacturer of the medicinal product. Relevant for identifying the exact product."
