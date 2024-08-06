@@ -1,6 +1,6 @@
 Logical: EEHRxFLaboratoryObservation
 //Id: EEHRxFlaboratoryObservation
-Title: "Laboratory observation"
+Title: "Laboratory observation (model)"
 Description: """C.11 - EEHRxF refined base model for Observation performed by laboratory"""
 Characteristics: #can-be-target
 

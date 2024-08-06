@@ -1,6 +1,6 @@
 Logical: EEHRxFCondition
 //Id: EEHRxFcondition
-Title: "Condition"
+Title: "Condition (model)"
 Description: """C.15 - EEHRxF refined base model for A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern."""
 Characteristics: #can-be-target
 

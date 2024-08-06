@@ -1,6 +1,6 @@
 Logical: EEHRxFOrganization
 //Id: EEHRxForganization
-Title: "Organization"
+Title: "Organization (model)"
 Description: """C.3 - EEHRxF refined base model for Health provider or any other type of organization"""
 Characteristics: #can-be-target
 

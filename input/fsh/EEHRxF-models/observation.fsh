@@ -1,6 +1,6 @@
 Logical: EEHRxFObservation
 //Id: EEHRxFobservation
-Title: "Observation"
+Title: "Observation (model)"
 Description: """C.10 - EEHRxF refined base model for Observation information"""
 Characteristics: #can-be-target
 

@@ -1,6 +1,6 @@
 Logical: EEHRxFRelatedPerson
 //Id: EEHRxFrelatedPerson
-Title: "Related person"
+Title: "Related person (model)"
 Description: """C.13 - EEHRxF refined base model for Patient/subject related person information"""
 Characteristics: #can-be-target
 

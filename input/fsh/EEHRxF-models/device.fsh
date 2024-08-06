@@ -1,6 +1,6 @@
 Logical: EEHRxFDevice
 //Id: EEHRxFdevice
-Title: "Device"
+Title: "Device (model)"
 Description: """C.12 - EEHRxF refined base model for Device information"""
 Characteristics: #can-be-target
 

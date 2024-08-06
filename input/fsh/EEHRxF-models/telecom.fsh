@@ -1,6 +1,6 @@
 Logical: EEHRxFTelecom
 //Id: EEHRxFtelecom
-Title: "Telecom"
+Title: "Telecom (model)"
 Description: """C.5 - EEHRxF refined base model for Telecommunication contact information structure"""
 Characteristics: #can-be-target
 

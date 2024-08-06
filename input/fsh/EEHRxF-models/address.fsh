@@ -1,6 +1,6 @@
 Logical: EEHRxFAddress
 //Id: EEHRxFaddress
-Title: "Address"
+Title: "Address (model)"
 Description: """C.5 - EEHRxF refined base model for Address structure"""
 Characteristics: #can-be-target
 

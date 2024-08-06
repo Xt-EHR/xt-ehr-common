@@ -1,6 +1,6 @@
 Logical: EEHRxFHealthProfessional
 //Id: EEHRxFhealthProfessional
-Title: "Health professional"
+Title: "Health professional (model)"
 Description: """C.2 - EEHRxF refined base model for Health professional (HP)"""
 Characteristics: #can-be-target
 

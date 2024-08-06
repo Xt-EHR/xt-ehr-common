@@ -1,6 +1,6 @@
 Logical: EEHRxFSpecimen
 //Id: EEHRxFspecimen
-Title: "Specimen"
+Title: "Specimen (model)"
 Description: """C.9 - EEHRxF refined base model for Specimen information"""
 Characteristics: #can-be-target
 

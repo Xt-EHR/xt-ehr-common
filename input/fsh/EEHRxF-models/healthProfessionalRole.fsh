@@ -1,6 +1,6 @@
 Logical: EEHRxFHealthProfessionalRole
 //Id: EEHRxFhealthProfessionalRole
-Title: "Health professional role"
+Title: "Health professional role (model)"
 Description: """C.4 - EEHRxF refined base model for Role and location details associated with a practitioner that are applicable to the healthcare event."""
 Characteristics: #can-be-target
 

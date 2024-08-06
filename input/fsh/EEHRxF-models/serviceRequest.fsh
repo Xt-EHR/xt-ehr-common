@@ -1,6 +1,6 @@
 Logical: EEHRxFServiceRequest
 //Id: EEHRxFserviceRequest
-Title: "Service request"
+Title: "Service request (model)"
 Description: """C.8 - EEHRxF refined base model for Specification of requested service or services"""
 Characteristics: #can-be-target
 

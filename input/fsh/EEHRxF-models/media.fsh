@@ -1,6 +1,6 @@
 Logical: EEHRxFMedia
 //Id: EEHRxFmedia
-Title: "Media"
+Title: "Media (model)"
 Description: """C.14 - EEHRxF refined base model for A photo, video, or audio recording acquired or used in healthcare."""
 Characteristics: #can-be-target
 

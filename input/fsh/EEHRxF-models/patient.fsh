@@ -14,7 +14,7 @@ Characteristics: #can-be-target
 
 Logical: EEHRxFPatient
 //Id: EEHRxFpatient
-Title: "Patient"
+Title: "Patient (model)"
 Description: """C.1 - EEHRxF refined base model for Patient/subject information"""
 Characteristics: #can-be-target
 
