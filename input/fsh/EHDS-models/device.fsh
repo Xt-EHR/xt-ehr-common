@@ -1,7 +1,7 @@
-Logical: EEHRxFDevice
-//Id: EEHRxFdevice
+Logical: EHDSDevice
+//Id: EHDSdevice
 Title: "Device (model)"
-Description: """C.12 - EEHRxF refined base model for Device information"""
+Description: """C.12 - EHDS refined base model for Device information"""
 Characteristics: #can-be-target
 
 * identifier 1..* Identifier "C.12.1 - Identifier" """An identifier of the device which is unique within in a defined scope. Multiple identifiers can be used."""
@@ -14,5 +14,6 @@ Characteristics: #can-be-target
 * modelNumber 0..1 string "C.12.8 - Model number" """The manufacturer's model number for the device"""
 * version 0..1 string "C.12.9 - Version" """The actual design of the device or software version running on the device"""
 * type 0..* CodeableConcept "C.12.10 - Type" """Device type"""
-  * ^comment = "SNOMED CT, EMDN"
+  * ^binding.description = "SNOMED CT, EMDN"
+  * ^binding.strength = #preferred
 * note 0..* Narrative "C.12.11 - Note" """Device notes and comments"""
