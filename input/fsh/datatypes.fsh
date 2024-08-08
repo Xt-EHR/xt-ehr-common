@@ -1,7 +1,7 @@
 /*
 Temporarily copied from IHE datatypes (https://github.com/IHE/datatypes/blob/master/input/fsh/datatypes.fsh), which is based on:
 
-Sources: https://wiki.hl7.de/index.php?title=HL7_CDA_Core_Principles 
+Sources: https://wiki.hl7.de/index.php?title=HL7_CDA_Core_Principles
 https://www.hl7.org/documentcenter/public/standards/v3/iso_datatypes/iso-21090-datatypes.xsd
 */
 
@@ -129,3 +129,10 @@ Description: "Address"
 // EncapsulatedData:	ED
 // MonetaryAmount	MO	A quantity expressing an amount of money in some currency. While the monetary amount is a single kind of quantity (money) the exchange rates between the different units are variable. This is the principle difference between PQ and MO, and the reason why currency units are not physical units.
 // Interval	IVL	A set of consecutive values of an ordered base data type.
+
+Profile: Coded
+Parent: CodeableConcept
+Description: "Coded data element"
+* . ^short = "Coded"
+* . ^definition = "Coded data element should have at least one code from a specified code system present"
+* coding 1..*
