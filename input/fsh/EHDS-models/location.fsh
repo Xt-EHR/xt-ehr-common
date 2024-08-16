@@ -1,6 +1,6 @@
 Logical: EHDSLocation
 //Id: EHDSlocation
-Title: "Location"
+Title: "Location (model)"
 Description: """C.17 - EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated."""
 Characteristics: #can-be-target
 
@@ -15,4 +15,4 @@ Characteristics: #can-be-target
   * longitude 1..1 decimal "C.17.6.1 - Longitude" """Longitude with WGS84 datum"""
   * latitude 1..1 decimal "C.17.6.2 - Latitude" """Latitude with WGS84 datum"""
 * managingOrganization 0..1 Reference(EHDSOrganization) "C.17.7 - Managing organization" """The organization responsible for the provisioning and upkeep of the location"""
-* partOf 0..1 Reference(EHDSOrganization) "C.17.8 - Part of " """Another Location of which this Location is physically a part of"""
+* partOf 0..1 Reference(EHDSOrganization) "C.17.8 - Part of" """Another Location of which this Location is physically a part of"""
