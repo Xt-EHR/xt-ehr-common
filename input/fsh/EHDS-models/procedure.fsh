@@ -1,6 +1,6 @@
 Logical: EHDSProcedure
 //Id: EHDSprocedure
-Title: "Procedure"
+Title: "Procedure (model)"
 Description: """C.16 - EHDS refined base model for An action that is or was performed on or for a patient"""
 Characteristics: #can-be-target
 
