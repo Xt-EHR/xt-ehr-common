@@ -7,7 +7,7 @@ Characteristics: #can-be-target
 * identifyingCode[x] 0..* CodeableConcept or Identifier "Identifier or product code for the product, independently of the level of product. If several identifiers are specified, they shall not have conflicting meanings or very different granularities."
 * classification 0..* CodeableConcept "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)"
 * productName 0..1 string "Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided."
-* marketingAuthorisationHolder 0..1 BackboneElement "Marketing authorisation holder of manufacturer of the medicinal product. Relevant for identifying the exact product."
+* marketingAuthorisationHolder 0..1 BackboneElement "Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product."
   * organizationName 0..1 string "Name of the organisation holding the authorisation for marketing/mahufacturing"
   * organizationIdentifier 0..* Identifier "Identifier of the organisation and/or its physical location"
 * doseForm 0..1 CodeableConcept "Dose form(s) on a product level. Dose form for a single package item is defined below."
