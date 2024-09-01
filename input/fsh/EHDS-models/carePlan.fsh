@@ -21,5 +21,5 @@ Characteristics: #can-be-target
   * ^binding.description = "ICD-10 (ICD-11 when available), SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
 * goal 0..* EHDSGoal "C.19.11 - Goal" """Describes the intended objective(s) of carrying out the care plan."""
-* activity 0..* Reference(EHDSAppointment or EHDSMedicationRequest or EHDSTask or EHDSServiceRequest) "C.19.12 - Activity" """The details of the proposed activity represented in a specific resource."""
+* activity 0..* Reference(EHDSAppointment or EHDSMedicationPrescription or EHDSTask or EHDSServiceRequest) "C.19.12 - Activity" """The details of the proposed activity represented in a specific resource."""
 * note 0..* Narrative "C.19.13 - Note" """General notes about the care plan not covered elsewhere."""

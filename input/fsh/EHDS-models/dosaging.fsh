@@ -14,7 +14,7 @@ Characteristics: #can-be-target
   * dose[x] 0..1 Quantity or Range "Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)"
   * rate[x] 0..1 Ratio or Quantity or Range "Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)"
 * timing 0..1 BackboneElement "When medication should be administered (period, time of day, frequency, etc)" 
-  * event 0..* DateTime "Exact date and/or time of the administration"
+  * event 0..* dateTime "Exact date and/or time of the administration"
   * code 0..1 CodeableConcept "Timing abbreviation (AM - morning, Q4H - once in every 4 hours, BID - twice a day, etc)"
   * repeat 0..1 BackboneElement "Repetition of the administration."
     * bounds 0..1 BackboneElement "Time bounds for the treatment (current dosaging scheme). Only one of the following can exist."
