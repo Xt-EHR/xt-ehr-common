@@ -40,7 +40,7 @@ Characteristics: #can-be-target
 
 * identifier 0..1 Identifier "Identifier for the dispense"
 * patient 1..1 Reference(EHDSPatient) "The person for whom the medication is prescribed/ordered"
-* receiver 0..1 Any "Identification of the person who received the dispensed medication, especially when it was not the patient"
+//* receiver 0..1 Any "Identification of the person who received the dispensed medication, especially when it was not the patient"
 * dispenser 1..1 Reference(EHDSHealthProfessional) "The person who dispensed the product, and takes the responsibility of the dispensation"
 * relatedRequest 0..1 Reference(EHDSMedicationPrescription) "Prescription/request/order the dispense is related to"
 * medication 1..1 Reference(EHDSMedication) "Exact dispensed product"

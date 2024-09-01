@@ -47,5 +47,5 @@ Characteristics: #can-be-target
   * device 1..1 Reference(EHDSDevice) "Device coded"
 * characteristic 0..* BackboneElement "Other features of the product"
   * type 1..1 CodeableConcept "A code expressing the type of characteristic"
-  * value[x] 0..1 Any "Description of the characteristic"
+  * value 0..1 ANY "Description of the characteristic"
 * additionalProductInformation 0..1 BackboneElement "Additional information about product - for example, a reference to a product catalogue"
