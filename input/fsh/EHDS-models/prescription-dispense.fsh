@@ -52,6 +52,7 @@ Characteristics: #can-be-target
 * comment 0..* string "Additional information or comments"
   * ^comment = "Added. Still missing A.1.5.9 Repeats and A.1.5.2 Quantity of prescribed product"
 * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall duration of all dosages.)"
+* quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
 
 Logical: EHDSMedicationDispense
 Title: "Medication dispensation (model)"
@@ -131,6 +132,7 @@ Characteristics: #can-be-target
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
     * ^comment = "No change (code not required) A1.5.10"
   * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall duration of all dosages.)"
+  * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
   * usageInstructions 0..* Reference(EHDSDosaging) "Dosaging and administration instructions"
     * ^comment = "Dosage model significantly changed towards more granularity. A.1.5.3-A.1.5.7"
   * preparationInstructions 0..1 string "Additional instructions about preparation or dispense" 
