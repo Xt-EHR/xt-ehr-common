@@ -60,7 +60,7 @@ Characteristics: #can-be-target
     * ^comment = "Added (eHN guidelines A.1.4.9 mention layered structure for describing a package)"
 * device 0..* BackboneElement "Administration device included in the product"
   * deviceQuantity 1..1 Quantity "Number of such devices"
-  * device 1..1 Reference(EHDSDevice) "Device coded"
+  * device[x] 1..1 CodeableConcept or Reference(EHDSDevice) "Device coded"
     * ^comment = "Added"
 * characteristic 0..* BackboneElement "Other features of the product"
   * type 1..1 CodeableConcept "A code expressing the type of characteristic"

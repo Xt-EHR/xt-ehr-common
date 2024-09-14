@@ -13,12 +13,6 @@ Description: "No data type defined"
 * . ^definition = "No specific data type assigned - should not be used in finished data models"
 
 
-Profile: ANY
-Parent: Element
-Description: "An abstract type"
-* . ^short = "Undefined"
-* . ^definition = "An abstract type that defines the basic properties common to all data values defined in this specification. Data Value is an abstract type, meaning that no proper value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type."
-
 
 Profile: Class
 Parent: BackboneElement
@@ -138,3 +132,10 @@ Description: "Coded data element"
 * . ^short = "Coded"
 * . ^definition = "Coded data element should have at least one code from a specified code system present"
 * coding 1..*
+
+
+Profile: ANY
+Parent: Element
+Description: "An abstract type"
+* . ^short = "Undefined"
+* . ^definition = "An abstract type that defines the basic properties common to all data values defined in this specification. Data Value is an abstract type, meaning that no proper value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type."
