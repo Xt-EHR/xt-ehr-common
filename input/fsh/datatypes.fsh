@@ -3,7 +3,7 @@ Temporarily copied from IHE datatypes (https://github.com/IHE/datatypes/blob/mas
 
 Sources: https://wiki.hl7.de/index.php?title=HL7_CDA_Core_Principles
 https://www.hl7.org/documentcenter/public/standards/v3/iso_datatypes/iso-21090-datatypes.xsd
-*/
+
 
 
 Profile: Untyped
@@ -115,6 +115,7 @@ Description: "EntityName"
 * . ^short = "Entity name"
 * . ^definition = "A name for a person, organization, place or thing. A sequence of name parts, such as given name or family name, prefix, suffix, etc."
 
+*/
 /*
 Profile: AD
 Parent: Element
@@ -122,6 +123,7 @@ Description: "Address"
 * . ^short = "Address"
 * . ^definition = "Mailing and home or office addresses. A sequence of address parts, such as street or post office box, city, postal code, country, etc."
 */
+
 
 // Other candidates
 // Sequence:	LIST	An ordered collection of discrete (but not necessarily distinct) values.

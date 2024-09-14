@@ -1,11 +1,11 @@
 ### Information Models
 
-- [](StructureDefinition/EHDSMedicationPrescription)  
-- [](StructureDefinition/EHDSMedicationDispense)  
-- [](StructureDefinition/EHDSMedication)  
-- [](StructureDefinition/EHDSDosaging)  
-- [](StructureDefinition/EHDSPatient)  
-- [](StructureDefinition/EHDSHealthProfessional)  
+- [Prescription](StructureDefinition/EHDSMedicationPrescription)  
+- [Dispense](StructureDefinition/EHDSMedicationDispense)  
+- [Medicinal product](StructureDefinition/EHDSMedication)  
+- [Dosaging](StructureDefinition/EHDSDosaging)  
+- [Patient](StructureDefinition/EHDSPatient)  
+- [Prescriber (health professional)](StructureDefinition/EHDSHealthProfessional)  
 
 
 ### FHIR Implementation Guide
