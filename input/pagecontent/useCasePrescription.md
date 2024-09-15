@@ -1,5 +1,10 @@
 ### Information Models
 
+{% include prescription.svg %}  
+
+
+
+
 - [Prescription](StructureDefinition/EHDSMedicationPrescription)  
 - [Dispense](StructureDefinition/EHDSMedicationDispense)  
 - [Medicinal product](StructureDefinition/EHDSMedication)  

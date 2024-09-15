@@ -1,0 +1,45 @@
+@startuml
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+
+class "**Prescription**" as eP{
+  EHDSMedicationPrescription 
+}
+
+eP --> Patient: "1..1"
+eP --> Prescriber: "1..1"
+eP --> Line: "1..*"
+
+class "**Prescriber**" as Prescriber{
+  EHDSHealthProfessional   
+  
+}
+
+class "**Patient**" as Patient{
+  EHDSPatient   
+
+}
+
+class "**PrescriptionLine**" as Line{ 
+}
+
+Line --> Medication: "1..1"
+Line --> Dosage: "0..*"
+Line --> DispenseRequest: "0..1"
+
+class "**DispenseRequest**" as DispenseRequest{
+
+}
+
+class "**Usage Instructions**" as Dosage{
+  EHDSDosaging   
+ 
+}
+
+class "**Medication**" as Medication{
+  EHDSMedication
+ 
+}
+@enduml
