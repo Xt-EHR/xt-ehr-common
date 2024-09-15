@@ -10,7 +10,6 @@ WP6 and WP7 identified a list of data objects (including complex data types) tha
 
 Other candidates for common models: Procedure, Condition, Specimen, Encounter, Anatomical Location, Location, OrganisationPart, Payer.
 
-Please see the [Artifacts](artifacts.html) page for eHN datasets and EEHRxF models.
 
 ### eHN Guidelines Datasets
 
@@ -32,11 +31,11 @@ After that, the next layer of data models can be built on common models. Granula
 
 ### Data types
 
-FHIR or ISO data types?
+Information models use FHIR data types, but in an abstracted way.  
 
 ### Considerations and Decisions
 
 - Patient and Practitioner will not have an underlying Person object.
 - All cardinalities for eHN datasets elements are provided as 0..* unless the text specifically states otherwise.
 - Data types are guessed from the description. If subelements are expected, the data type is BackboneElement.
-- Preferred code systems are provided in textual description.
+- Preferred code systems are provided in textual bindings.
