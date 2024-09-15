@@ -27,8 +27,8 @@ This Implementation Guide is a work result across different work packages:
 
 In order to contribute to the Information Models IG authoring, do one of the following:  
 - as a project participant, join any of the tasks mentioned above for discussing the content;  
-- as a project participant, join the IG authoring group by creating a GitHyb issue with access request;  
-- as an interested stakeholder, review the work in the draft IG and give feedback in the issues;  
-- as a FHIR implementer, join any of the HL7 Europe working groups for these use cases.  
+- as a project participant, join the IG authoring group by creating a [GitHub issue](https://github.com/Xt-EHR/xt-ehr-common/issues) with access request;  
+- as an interested stakeholder, review the work in the draft IG and give feedback in [GitHub issues](https://github.com/Xt-EHR/xt-ehr-common/issues);  
+- as a FHIR implementer, join any of the HL7 Europe working groups for specific use cases.  
 
 <br/><br/>
