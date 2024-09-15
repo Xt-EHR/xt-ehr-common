@@ -8,14 +8,14 @@ Components of a prescriptions and its representation as EHDS information models:
 EHDS information models for **ePrescription**:
 - Prescription: [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription)  
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient)  
-- Prescriber: [EHDSHealthProfessional)](StructureDefinition-EHDSHealthProfessional)  
+- Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional)  
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication)  
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging)  
 
 EHDS information models for **eDispensation**:
 - Dispensation: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense)  
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient)  
-- Dispenser: [EHDSHealthProfessional)](StructureDefinition-EHDSHealthProfessional)  
+- Dispenser: [EHDSHealthProfessional)(StructureDefinition-EHDSHealthProfessional)  
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication)  
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging)  
 
@@ -33,4 +33,8 @@ FHIR Implementation Guide is being developed in a cross-project working group le
 
 - [eHealth Network Guideline on ePrescription and eDispensation of Authorised Medicinal Products](https://health.ec.europa.eu/document/download/b744f30b-a05e-4b9c-9630-ad96ebd0b2f0_en?filename=ehn_guidelines_eprescriptions_en.pdf)
 - [IHE Medication Prescription and Delivery profile](https://build.fhir.org/ig/IHE/pharm-mpd/) (draft)
+- ISO/DIS 17523 "Health informatics - Requirements for electronic prescriptions"
+- MyHealth@EU [requirements catalogue](https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/1.+MyHealth@EU+Requirements+Catalogue) and [CDA specification](https://art-decor.ehdsi.eu/publication/epSOS/)
+- [SNOMED CT Medicinal Product Model Specification](https://confluence.ihtsdotools.org/display/DOCMPM) 
+
 
