@@ -1,8 +1,9 @@
 ### Information Models
 
 Components of a prescriptions and its representation as EHDS information models:
-{% include prescription.svg %}  
-
+<figure>
+  {% include prescription.svg %}  
+</figure>
 
 EHDS information models for **ePrescription**:
 - Prescription: [EHDSMedicationPrescription](StructureDefinition/EHDSMedicationPrescription)  
