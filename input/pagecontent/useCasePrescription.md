@@ -1,16 +1,22 @@
 ### Information Models
 
+Components of a prescriptions and its representation as EHDS information models:
 {% include prescription.svg %}  
 
 
+EHDS information models for **ePrescription**:
+- Prescription: [EHDSMedicationPrescription](StructureDefinition/EHDSMedicationPrescription)  
+- Medication: [EHDSMedication](StructureDefinition/EHDSMedication)  
+- Usage instructions: [EHDSDosaging](StructureDefinition/EHDSDosaging)  
+- Patient: [EHDSPatient](StructureDefinition/EHDSPatient)  
+- Prescriber: [EHDSHealthProfessional)](StructureDefinition/EHDSHealthProfessional)  
 
-
-- [Prescription](StructureDefinition/EHDSMedicationPrescription)  
-- [Dispense](StructureDefinition/EHDSMedicationDispense)  
-- [Medicinal product](StructureDefinition/EHDSMedication)  
-- [Dosaging](StructureDefinition/EHDSDosaging)  
-- [Patient](StructureDefinition/EHDSPatient)  
-- [Prescriber (health professional)](StructureDefinition/EHDSHealthProfessional)  
+EHDS information models for **eDispensation**:
+- Dispensation: [EHDSMedicationDispense](StructureDefinition/EHDSMedicationDispense)  
+- Medication: [EHDSMedication](StructureDefinition/EHDSMedication)  
+- Usage instructions: [EHDSDosaging](StructureDefinition/EHDSDosaging)  
+- Patient: [EHDSPatient](StructureDefinition/EHDSPatient)  
+- Dispenser: [EHDSHealthProfessional)](StructureDefinition/EHDSHealthProfessional)  
 
 
 ### FHIR Implementation Guide
