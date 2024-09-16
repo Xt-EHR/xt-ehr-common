@@ -15,7 +15,7 @@ EHDS information models for **ePrescription**:
 EHDS information models for **eDispensation**:
 - Dispensation: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense)  
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient)  
-- Dispenser: [EHDSHealthProfessional)(StructureDefinition-EHDSHealthProfessional)  
+- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional)  
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication)  
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging)  
 
@@ -27,6 +27,13 @@ FHIR Implementation Guide is being developed in a cross-project working group le
 **Ongoing work:**  
 - [R4 FHIR IG](https://build.fhir.org/ig/hl7-eu/mpd/)  
 - [R5 FHIR IG](https://build.fhir.org/ig/hl7-eu/mpd/branches/fhir-r5/)  
+
+
+### IHE Profile
+
+FHIR-based IHE profile for this use case is in draft status, please see [IHE Medication Prescription and Delivery profile](https://build.fhir.org/ig/IHE/pharm-mpd/) for more information.
+
+IHE Profile has a global scope and is not part of Xt-EHR deliverable. However, the HL7 Europe / IHE joint working group (see above) allows mutually beneficial cooperation and early alignment.  
 
 
 ### Supporting Materials
