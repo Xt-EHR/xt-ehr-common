@@ -43,6 +43,7 @@ Characteristics: #can-be-target
     * ^comment = "No change (A.1.5.10)"
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
     * ^comment = "No change (code not required) A1.5.10"
+  * prescriptionIntent 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
     * ^comment = "Starting Date of Therapy A1.5.6. End date added."
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
