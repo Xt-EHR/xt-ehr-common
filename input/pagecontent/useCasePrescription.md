@@ -6,18 +6,18 @@ Components of a prescriptions and its representation as EHDS information models:
 </figure>
 
 EHDS information models for **ePrescription**:
-- Prescription: [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription)  
-- Patient: [EHDSPatient](StructureDefinition-EHDSPatient)  
-- Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional)  
-- Medication: [EHDSMedication](StructureDefinition-EHDSMedication)  
-- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging)  
+- Prescription: [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription.html)  
+- Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)  
+- Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)  
+- Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)  
+- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)  
 
 EHDS information models for **eDispensation**:
-- Dispensation: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense)  
-- Patient: [EHDSPatient](StructureDefinition-EHDSPatient)  
-- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional)  
-- Medication: [EHDSMedication](StructureDefinition-EHDSMedication)  
-- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging)  
+- Dispensation: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense.html)  
+- Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)  
+- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)  
+- Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)  
+- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)  
 
 
 ### FHIR Implementation Guide
