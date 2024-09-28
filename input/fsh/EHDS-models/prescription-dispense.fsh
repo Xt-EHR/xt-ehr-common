@@ -63,13 +63,19 @@ Characteristics: #can-be-target
     * ^comment = "Added."
   * statusReasonText 0..1 string "Textual reason for the current status of prescription"
     * ^comment = "Added."
+  
+  * reasonForChange 0..1 CodeableConcept "The reason the prescription was changed from previous"
+    * ^comment = "Added. Changed from which other (version of) prescription?"
+
+  * repeatsAllowed 0..1 unsignedInt "Number of refills authorized" "How many times the prescription item can be dispensed in addition to the original dispense."
+    * ^comment = "Added. A.1.5.9 Repeats"
 
   * comment 0..* string "Additional information or comments"
-    * ^comment = "Added. Still missing A.1.5.9 Repeats and A.1.5.2 Quantity of prescribed product"
+    * ^comment = "Added."
  
 
 Logical: EHDSMedicationDispense
-Title: "Medication dispensation (model)"
+Title: "Medication Dispensation (model)"
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 
