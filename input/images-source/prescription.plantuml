@@ -10,7 +10,7 @@ class "**Prescription**" as eP{
 
 eP --> Patient: "1..1"
 eP --> Prescriber: "1..1"
-eP --> Line: "1..*"
+eP --o Item: "1..*"
 
 class "**Prescriber**" as Prescriber{
   EHDSHealthProfessional   
@@ -22,11 +22,11 @@ class "**Patient**" as Patient{
 
 }
 
-class "**PrescriptionLine**" as Line{ 
+class "**PrescriptionItem**" as Item{ 
 }
 
-Line --> Medication: "1..1"
-Line --> Dosage: "0..*"
+Item --> Medication: "1..1"
+Item --o Dosage: "0..*"
 
 
 class "**Usage Instructions**" as Dosage{
