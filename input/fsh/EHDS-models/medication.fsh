@@ -58,6 +58,12 @@ Characteristics: #can-be-target
     * ^binding.description = "UCUM for units of measure. EDQM Standard Terms for units of presentation."
     * ^binding.strength = #preferred
     * ^comment = "Added (eHN guidelines A.1.4.9 mention layered structure for describing a package)"
+
+  * packageType 0..1 CodeableConcept "Type of package of the medication item"
+    * ^binding.description = "EDQM Standard Terms for packaging."
+    * ^binding.strength = #preferred
+    * ^comment = "Added (eHN guidelines A.1.4.8 Package type)"
+
 * device 0..* BackboneElement "Administration device included in the product"
   * deviceQuantity 1..1 Quantity "Number of such devices"
   * device[x] 1..1 CodeableConcept or Reference(EHDSDevice) "Device coded"
