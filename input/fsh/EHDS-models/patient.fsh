@@ -27,7 +27,7 @@ Characteristics: #can-be-target
 * address 0..* EHDSAddress "C.1.6 - Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
 * telecom 0..* EHDSTelecom "C.1.7 - Telecom" """Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided."""
 * maritalStatus 0..1 CodeableConcept "C.1.8 - Marital status" """Marital (civil) status of a patient"""
-  * ^binding.description = "TBD"
+  * ^binding.description = "HL7 marital-status"
   * ^binding.strength = #preferred
 * citizenship 0..1 CodeableConcept "C.1.9 - Citizenship (nationality)" """Citizenship/nationality of the patient."""
   * ^binding.description = "ISO 3166-1-2"
