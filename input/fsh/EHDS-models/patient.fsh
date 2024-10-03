@@ -1,5 +1,6 @@
 /*Idea is to document the consolidated eHN logical models (as is) first, and then refine them into computable EHDS models.
-Consolidated models are based on the work of eHN guidelines consistency task force work results*/
+Consolidated models are based on the work of eHN guidelines consistency task force work results
+*/
 
 /*
 Logical: EHDSPatient
