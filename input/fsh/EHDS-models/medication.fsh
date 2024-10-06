@@ -37,7 +37,7 @@ Characteristics: #can-be-target
       * ^binding.description = "EMA SPOR SMS"
       * ^binding.strength = #preferred
     * ^comment = "No conflicting change"
-    * strengthInfo 0..* CodeableConcept "Concentration or presentation strength"
+    * strengthInfo 0..* BackboneElement "Concentration or presentation strength"
       * strength 1..1 Ratio "Concentration or presentation strength of the precise active ingredient"
         * ^comment = "No change"
       * strengthType 0..1 CodeableConcept "Type of strength that is expressed"
