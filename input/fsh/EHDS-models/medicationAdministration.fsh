@@ -12,6 +12,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * medication 1..1 Reference(EHDSMedication) "C.18.4 - Medication" """Administered medication"""
+* batchNumber 0..1 string "Batch/lot number" "A distinctive combination of numbers and/or letters which specifically identifies a batch"
 * occurance[x] 1..1 dateTime or Period "C.18.5 - Occurance" """Specific date/time or interval of time during which the administration took place (or did not take place)"""
 * reason 0..* Reference(EHDSCondition or EHDSObservation) "C.18.6 - Reason" """Condition or observation that supports why the medication was administered"""
 * note 0..1 Narrative "C.18.7 - Note" """Information about the administration"""
