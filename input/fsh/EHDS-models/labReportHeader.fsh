@@ -10,7 +10,7 @@ Characteristics: #can-be-target
   * healthInsuranceName 0..1 string "A.1.4.2 - Health insurance name" """Full, official name of the healthcare insurance provider."""
   * healthInsuranceNumber 0..1 Identifier "A.1.4.3 - Health insurance number" """Number or code under which the insured person is registered at the insurance provider."""
 * intendedRecipient 0..* Reference(EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganization or EHDSHealthProfessionalRole or EHDSDevice) "A.1.5 - Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
-* authorisation 1..* BackboneElement "A.1.6 - Authorisation" """Document authoridation details"""
+* authorship 1..* BackboneElement "A.1.6 - Authorship" """Information about author or authors of the document"""
   * author 1..1 EHDSHealthProfessionalRole "A.1.6.1 - Author" """Author by whom the document was/were authored. Multiple authors could be provided."""
   * datetime 1..1 dateTime "A.1.6.2 - DateTime" """Date and time of the last modification of the document by its Author."""
 * attestation 0..* BackboneElement "A.1.7 - Attestation" """Document attestation details"""
@@ -27,7 +27,7 @@ Characteristics: #can-be-target
   * documentStatus 1..1 CodeableConcept "A.1.9.3 - Document status" """The status of the Hospital discharge report. E.g., preliminary, final."""
     * ^binding.description = "hl7:CompositionStatus"
     * ^binding.strength = #preferred
-  * period 0..1 Period "A.1.9.4 - Period" """Time of service that is being documented"""
+  * period 0..1 Period "A.1.9.4 - Period" """Documented period service. Typically used for searching purposes."""
   * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the Hospital discharge  report creation."""
   * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, fix value "Hospital discharge report". """
   * eventType 0..* CodeableConcept "A.1.9.7 - Event type" """Clinical service type or types covered by the document (study types, modality, body part etc.)"""
