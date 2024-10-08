@@ -51,7 +51,7 @@ Characteristics: #can-be-target
       * ^binding.strength = #preferred
   * imagingProcedures 0..* EHDSProcedure "B.1.5.3 - Imaging procedures" """Procedure performed during imaging study."""
   * medication 0..* EHDSMedicationAdministration "B.1.5.4 - Medication" """Information about medication administered (contrast, sedation, stress agents), etc."""
-  * adverseReaction 0..* EHDSAllergy "B.1.5.5 - Adverse reaction" """Adverse reactions manifested during imaging investigation."""
+  * adverseReaction 0..* EHDSAllergyIntolerance "B.1.5.5 - Adverse reaction" """Adverse reactions manifested during imaging investigation."""
   * resultData 0..1 BackboneElement "B.1.5.6 - Result data" """Laboratory report result data"""
     * resultText 1..1 Narrative "B.1.5.6.1 - Result text" """Comments and narrative representation of the observation results and findings."""
     * observationResults 0..* EHDSObservation "B.1.5.6.2 - Observation results" """Observation details (report could consist of multiple observations)"""
