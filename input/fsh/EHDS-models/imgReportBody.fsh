@@ -61,7 +61,5 @@ Characteristics: #can-be-target
       * condition 0..* EHDSCondition "B.1.5.7.2.1 - Condition" """Assessment of the condition expressed using common staging (typically TNM but also other) or coded observations (Bi-Rads, Li-Rads etc.)"""
 * recommendation 0..1 BackboneElement "B.1.6 - Recommendation" """Recommendations for additional imaging tests or other actions"""
   * description 1..1 Narrative "B.1.6.1 - Description" """Narrative description of the recommended activities including additional test, medication etc."""
-  * carePlan 0..* BackboneElement "B.1.6.2 - Care plan" """I complex and structured information about recommended goals, activities and objectives in the form of one or more formal care plan. Consider FHIR Care plan resource."""
-    * ^binding.description = "Care Plan"
-    * ^binding.strength = #preferred
+  * carePlan 0..* EHDSCarePlan "B.1.6.2 - Care plan" """A complex and structured information about recommended goals, activities and objectives in the form of one or more formal care plan."""
 * comparisonStudy 0..* Reference(EHDSImagingReport) "B.1.7 - Comparison Study" """Documentation (reference) of a prior Imaging Report to which the current images were compared."""
