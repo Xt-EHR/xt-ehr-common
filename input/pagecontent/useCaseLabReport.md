@@ -3,20 +3,22 @@
 
 Laboratory result report could be divided into several parts: document header, body and optionally it could also have various attachments.
 
+##### Laboratory Result Report
 <figure>
   {% include labReport_CIM.svg %}
 </figure>
 
+##### Laboratory Result header
 <figure>
   {% include labReportHeader_CIM.svg %}
 </figure>
 
-
+##### Laboratory Result body
 <figure>
   {% include labReportBody_CIM.svg %}
 </figure>
 
-
+##### UML representation
 Components of laboratory result report and its representation using UML notation:
 <figure>
   {% include laboratory_report.svg %}
