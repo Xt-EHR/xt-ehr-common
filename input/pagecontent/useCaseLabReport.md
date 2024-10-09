@@ -1,6 +1,23 @@
 ### Information Models
+#### Conceptual view
 
-Components of laboratory result report and its representation as EHDS information models:
+Laboratory result report could be divided into several parts: document header, body and optionally it could also have various attachments.
+
+<figure>
+  {% include labReport_CIM.svg %}
+</figure>
+
+<figure>
+  {% include labReportHeader_CIM.svg %}
+</figure>
+
+
+<figure>
+  {% include labReportBody_CIM.svg %}
+</figure>
+
+
+Components of laboratory result report and its representation using UML notation:
 <figure>
   {% include laboratory_report.svg %}
 </figure>
