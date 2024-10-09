@@ -47,5 +47,5 @@ Characteristics: #can-be-target
     * ^binding.description = "ISO 639"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
-* presentedForm 0..1 EHDSAttachment "A.1.10 - Presented form" """Entire report as issued  pdf format recommended"""
-* media[x] 0..* EHDSAttachment or EHDSMedia "A.1.11 - Media" """Media attachments."""
+//* presentedForm 0..1 EHDSAttachment "A.1.10 - Presented form" """Entire report as issued  pdf format recommended"""
+//* media[x] 0..* EHDSAttachment or EHDSMedia "A.1.11 - Media" """Media attachments."""
