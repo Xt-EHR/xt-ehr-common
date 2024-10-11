@@ -25,10 +25,10 @@ Components of laboratory result report and its representation using UML notation
 </figure>
 
 Main laboratory report specific parts:
-- [Laboratory Report Document](StructureDefinition/EHDSLaboratoryReport)
-- [Laboratory Report Header](StructureDefinition/EHDSLaboratoryReportHeader)
-- [Laboratory Report Body](StructureDefinition/EHDSLaboratoryReportBody)
-- [Laboratory Observation](StructureDefinition/EHDSLaboratoryObservation)
+- [Laboratory Report Document](StructureDefinition-EHDSLaboratoryReport)
+- [Laboratory Report Header](StructureDefinition-EHDSLaboratoryReportHeader)
+- [Laboratory Report Body](StructureDefinition-EHDSLaboratoryReportBody)
+- [Laboratory Observation](StructureDefinition-EHDSLaboratoryObservation)
 
 
 ### FHIR Implementation Guide
