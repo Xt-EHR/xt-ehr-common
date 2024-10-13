@@ -70,7 +70,7 @@ Characteristics: #can-be-target
   * repeatsAllowed 0..1 unsignedInt "Number of refills authorized" "How many times the prescription item can be dispensed in addition to the original dispense."
     * ^comment = "Added. A.1.5.9 Repeats"
 
-  * minimumDispenseInterval 0..1 Range "Minimum Dispense Interval" "If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here."
+  * minimumDispenseInterval 0..1 Duration "Minimum Dispense Interval" "If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here."
     * ^comment = "Added, based on ISO 17532:2024 A.7.3 Minimum dispensing interval"
 
   * comment 0..* string "Additional information or comments"
