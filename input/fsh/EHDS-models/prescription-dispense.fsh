@@ -48,7 +48,7 @@ Characteristics: #can-be-target
     * ^comment = "Starting Date of Therapy A1.5.6. End date added."
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
     * ^comment = "No change"
-  * usageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
+  * dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
     * ^comment = "Dosage model significantly changed towards more granularity. A.1.5.3-A.1.5.7"
   * preparationInstructions 0..1 string "Additional instructions about preparation or dispense" 
     * ^comment = "Added."
@@ -69,6 +69,9 @@ Characteristics: #can-be-target
 
   * repeatsAllowed 0..1 unsignedInt "Number of refills authorized" "How many times the prescription item can be dispensed in addition to the original dispense."
     * ^comment = "Added. A.1.5.9 Repeats"
+
+  * minimumDispenseInterval 0..1 Range "Minimum Dispense Interval" "If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here."
+    * ^comment = "Added, based on ISO 17532:2024 A.7.3 Minimum dispensing interval"
 
   * comment 0..* string "Additional information or comments"
     * ^comment = "Added."
@@ -106,9 +109,10 @@ Characteristics: #can-be-target
   * ^comment = "Added"
 * statusReasonText 0..1 string "Textual reason for the current status of dispensation"
   * ^comment = "Added"
-* usageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
+* dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
   * ^comment = "Added"
-
+* comment 0..* string "Additional information or comments"
+  * ^comment = "Added."
 
 /* This is the IHE type of modelling where prescription line is the main object, and a group is on the side
 Logical: EHDSMedicationPrescription
