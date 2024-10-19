@@ -55,7 +55,7 @@ Characteristics: #can-be-target
   * substitution 0..1 BackboneElement "Whether and which type of substitution is allowed for this medication treatment line"
     * ^comment = "No change but subelements added. A 1.5.11"
     * allowed 0..1 boolean "Whether substitution is allowed or not."
-    * type 1..1 CodeableConcept "The type of substitution that is allowed."
+    * type 0..1 CodeableConcept "The type of substitution that is allowed."
     * typeReason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement"
   * status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
     * ^comment = "Added."
