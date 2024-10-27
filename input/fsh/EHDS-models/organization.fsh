@@ -4,6 +4,8 @@ Title: "Organization (model)"
 Description: """C.3 - EHDS refined base model for Health provider or any other type of organization"""
 Characteristics: #can-be-target
 
+* ^name =  "EHDSOrganization"
+* ^type =  "EHDSOrganization"
 * identifier 0..* Identifier "C.3.1 - Identifier" """Health provider organisation identifier"""
 * type 0..* CodeableConcept "C.3.2 - Type" """Kind of organization"""
   * ^binding.description = "HL7 organization_type"
