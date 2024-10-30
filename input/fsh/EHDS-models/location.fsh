@@ -11,7 +11,7 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 ServiceDeliveryLocationRoleType"
   * ^binding.strength = #preferred
 * address 0..1 EHDSAddress "C.17.5 - Address" """Physical location address"""
-* position 0..1 BackboneElement "C.17.6 - Position" """The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)."""
+* position 0..1 Base "C.17.6 - Position" """The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)."""
   * longitude 1..1 decimal "C.17.6.1 - Longitude" """Longitude with WGS84 datum"""
   * latitude 1..1 decimal "C.17.6.2 - Latitude" """Latitude with WGS84 datum"""
 * managingOrganization 0..1 Reference(EHDSOrganization) "C.17.7 - Managing organization" """The organization responsible for the provisioning and upkeep of the location"""

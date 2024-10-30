@@ -35,7 +35,7 @@ Characteristics: #can-be-target
 * patientInstruction 0..* Narrative "C.20.15 - Patient instruction" """Patient facing information about the Appointment (e.g. fast from 8pm night before)."""
 * note 0..* Narrative "C.20.16 - Note" """Additional notes/comments about the appointment."""
 * subject 0..1 Reference(EHDSPatient or EHDSGroup) "C.20.17 - Subject" """The patient or group associated with the appointment, if they are to be present (usually) then they should also be included in the participant backbone element."""
-* participant 0..* BackboneElement "C.20.18 - Participant" """List of participants involved in the appointment."""
+* participant 0..* Base "C.20.18 - Participant" """List of participants involved in the appointment."""
   * type 0..* CodeableConcept "C.20.18.1 - Type" """List of participants involved in the appointment."""
     * ^binding.description = "HL7 Participant Type"
     * ^binding.strength = #preferred
