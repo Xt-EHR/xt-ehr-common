@@ -37,5 +37,5 @@ Information models use FHIR data types, but in an abstracted way.
 
 - Patient and Practitioner will not have an underlying Person object.
 - All cardinalities for eHN datasets elements are provided as 0..* unless the text specifically states otherwise.
-- Data types are guessed from the description. If subelements are expected, the data type is BackboneElement.
+- Data types are guessed from the description. If subelements are expected, the data type is Base.
 - Preferred code systems are provided in textual bindings.

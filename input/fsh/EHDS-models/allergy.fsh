@@ -8,7 +8,7 @@ Characteristics: #can-be-target
 * typeOfPropensity 0..1 CodeableConcept "C.21.3 - Type of propensity" """This element describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* allergyManifestation 0..* BackboneElement "C.21.4 - Allergy manifestation" """Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction). Multiple manifestations could be provided."""
+* allergyManifestation 0..* Base "C.21.4 - Allergy manifestation" """Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction). Multiple manifestations could be provided."""
   * date 0..1 dateTime "C.21.4.1 - Date" """Date and time of allergy manifestation"""
   * severity 0..1 CodeableConcept "C.21.4.2 - Severity " """Severity of the clinical manifestation of the allergic reaction."""
     * ^binding.description = "SNOMED CT"
