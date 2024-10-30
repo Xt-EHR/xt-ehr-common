@@ -38,7 +38,7 @@ Latest build version can be found [here](https://build.fhir.org/ig/hl7-eu/labora
 
 MyHealth@EU has adopted HL7 Europe's FHIR IG for laboratory report crossborder service (see [crossborder adaption](https://fhir.ehdsi.eu/laboratory/)).
 
-### Supporting Materials
+### Supporting Information
 
 - [eHealth Network Guideline on Laboratory Results](https://health.ec.europa.eu/publications/ehn-laboratory-result-guidelines_en)
 

@@ -36,7 +36,7 @@ FHIR-based IHE profile for this use case is in draft status, please see [IHE Med
 IHE Profile has a global scope and is not part of Xt-EHR deliverable. However, the HL7 Europe / IHE joint working group (see above) allows mutually beneficial cooperation and early alignment.  
 
 
-### Supporting Materials
+### Supporting Information
 
 - [eHealth Network Guideline on ePrescription and eDispensation of Authorised Medicinal Products](https://health.ec.europa.eu/document/download/b744f30b-a05e-4b9c-9630-ad96ebd0b2f0_en?filename=ehn_guidelines_eprescriptions_en.pdf)
 - [IHE Medication Prescription and Delivery profile](https://build.fhir.org/ig/IHE/pharm-mpd/) (draft)
