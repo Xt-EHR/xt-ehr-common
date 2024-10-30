@@ -15,8 +15,8 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * observationDevice 0..1 EHDSDevice "C.10.6 - Observation device" """Device (e.g. analyser) that generates the measurements"""
 * order 0..1 Reference(EHDSServiceRequest) "C.10.7 - Order" """Identifies order and order placer this observation belongs to. """
-* performer[x] 0..1 EHDSHealthProfessional or EHDSHealthProfessionalRole "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
-* reporter[x] 0..1 EHDSHealthProfessional or EHDSHealthProfessionalRole "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
+* performer[x] 0..1 EHDSHealthProfessional "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
+* reporter[x] 0..1 EHDSHealthProfessional "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
 * observationResult 1..1 BackboneElement "C.10.10 - Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
   * textualResult 0..1 Narrative "C.10.10.1 - Textual Result" """Narrative text result"""
   * numericResult 0..1 BackboneElement "C.10.10.2 - Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""

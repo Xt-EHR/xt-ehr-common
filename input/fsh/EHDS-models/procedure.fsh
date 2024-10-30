@@ -10,7 +10,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * date[x] 0..1 dateTime or Period "C.16.4 - Date" """Date and time of the procedure or interval of its performance"""
-* performer 0..* Reference(EHDSHealthProfessional or EHDSHealthProfessionalRole) "C.16.5 - Performer" """An actor who or what performed the procedure"""
+* performer 0..* Reference(EHDSHealthProfessional) "C.16.5 - Performer" """An actor who or what performed the procedure"""
 * anatomicLocation 0..* CodeableConcept "C.16.6 - Anatomic location" """Anatomic location and laterality where the procedure was performed. This is the target site."""
   * ^binding.description = "SNOMED CT, ICD-O-3"
   * ^binding.strength = #preferred

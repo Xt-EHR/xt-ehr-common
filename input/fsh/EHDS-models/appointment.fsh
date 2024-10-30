@@ -39,5 +39,5 @@ Characteristics: #can-be-target
   * type 0..* CodeableConcept "C.20.18.1 - Type" """List of participants involved in the appointment."""
     * ^binding.description = "HL7 Participant Type"
     * ^binding.strength = #preferred
-  * actor 0..1 Reference(EHDSPatient or EHDSGroup or EHDSHealthProfessional or EHDSHealthProfessionalRole or EHDSOrganization or EHDSRelatedPerson or EHDSDevice) "C.20.18.2 - Actor" """The individual, device, location, or service participating in the appointment."""
+  * actor 0..1 Reference(EHDSPatient or EHDSGroup or EHDSHealthProfessional or EHDSHealthProfessional or EHDSOrganization or EHDSRelatedPerson or EHDSDevice) "C.20.18.2 - Actor" """The individual, device, location, or service participating in the appointment."""
   * required 0..1 boolean "C.20.18.3 - Required" """Whether this participant is required to be present at the meeting."""

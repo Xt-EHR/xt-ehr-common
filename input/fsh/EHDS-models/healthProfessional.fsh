@@ -5,9 +5,8 @@ Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.4.1 - Identifier" """Health professional identifier. This can be a national identifier for the health professional and/or an identifier for the health professional in a specific role."""
 * name 0..1 HumanName "C.2.2 - Name of the HP" """Name of the health professional that has been treating or taking responsibility for the patient.[the structure of the name will be the same as for the patient (given name, family name / surname)]"""
-* contactInformation 0..* BackboneElement "Contact information for the health professional"
-  * address 0..1 EHDSAddress "C.2.3 - Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
-  * telecom 0..* EHDSTelecom "C.2.4 - Telecom" """Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided."""
+* address 0..1 EHDSAddress "C.2.3 - Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
+* telecom 0..* EHDSTelecom "C.2.4 - Telecom" """Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided."""
 * qualification 0..* CodeableConcept "Qualification of the health professional. This might be a broader list than the active role the HP is in"
   * ^binding.description = "ISCO, SNOMED CT"
   * ^binding.strength = #preferred

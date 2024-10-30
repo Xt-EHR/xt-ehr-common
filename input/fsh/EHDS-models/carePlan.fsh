@@ -15,8 +15,8 @@ Characteristics: #can-be-target
 * description 0..1 Narrative "C.19.5 - Description" """A description of the scope and nature of the plan."""
 * subject 1..1 Reference(EHDSPatient) "C.19.6 - Subject" """Identifies the patient or group whose intended care is described by the plan."""
 * period 0..1 Period "C.19.7 - Period" """Indicates when the plan did (or is intended to) come into effect and end."""
-* custodian 0..1 Reference(EHDSPatient or EHDSHealthProfessional or  EHDSHealthProfessionalRole or  EHDSOrganization or EHDSRelatedPerson) "C.19.8 - Custodian" """Custodian is responsible for the care plan. The care plan is attributed to the custodian. The custodian might or might not be a contributor."""
-* contributor 0..* Reference(EHDSPatient or EHDSHealthProfessional or EHDSHealthProfessionalRole or  EHDSOrganization or EHDSRelatedPerson) "C.19.9 - Contributor" """Identifies the individual(s), organization or device who provided the contents of the care plan."""
+* custodian 0..1 Reference(EHDSPatient or EHDSHealthProfessional or  EHDSHealthProfessional or  EHDSOrganization or EHDSRelatedPerson) "C.19.8 - Custodian" """Custodian is responsible for the care plan. The care plan is attributed to the custodian. The custodian might or might not be a contributor."""
+* contributor 0..* Reference(EHDSPatient or EHDSHealthProfessional or EHDSHealthProfessional or  EHDSOrganization or EHDSRelatedPerson) "C.19.9 - Contributor" """Identifies the individual(s), organization or device who provided the contents of the care plan."""
 * addresses 0..* CodeableConcept "C.19.10 - Addresses" """Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan."""
   * ^binding.description = "ICD-10 (ICD-11 when available), SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
