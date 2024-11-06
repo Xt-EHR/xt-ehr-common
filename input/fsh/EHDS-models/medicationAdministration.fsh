@@ -15,7 +15,7 @@ Characteristics: #can-be-target
 * occurance[x] 1..1 dateTime or Period "C.18.5 - Occurance" """Specific date/time or interval of time during which the administration took place (or did not take place)"""
 * reason 0..* Reference(EHDSCondition or EHDSObservation) "C.18.6 - Reason" """Condition or observation that supports why the medication was administered"""
 * note 0..1 Narrative "C.18.7 - Note" """Information about the administration"""
-* dosage 0..1 BackboneElement "C.18.8 - Dosage" """Details of how medication was taken"""
+* dosage 0..1 Base "C.18.8 - Dosage" """Details of how medication was taken"""
   * dosageDescription 0..1 Narrative "C.18.8.1 - Dosage description" """Free text dosage instructions"""
   * site 0..1 CodeableConcept "C.18.8.2 - Site" """Body site administered to"""
     * ^binding.description = "SNOMED CT"

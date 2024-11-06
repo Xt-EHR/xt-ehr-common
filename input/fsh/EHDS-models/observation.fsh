@@ -17,21 +17,21 @@ Characteristics: #can-be-target
 * order 0..1 Reference(EHDSServiceRequest) "C.10.7 - Order" """Identifies order and order placer this observation belongs to. """
 * performer[x] 0..1 EHDSHealthProfessional "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
 * reporter[x] 0..1 EHDSHealthProfessional "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
-* observationResult 1..1 BackboneElement "C.10.10 - Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
+* observationResult 1..1 Base "C.10.10 - Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
   * textualResult 0..1 Narrative "C.10.10.1 - Textual Result" """Narrative text result"""
-  * numericResult 0..1 BackboneElement "C.10.10.2 - Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
+  * numericResult 0..1 Base "C.10.10.2 - Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
     * numericValue[x] 0..1 Quantity or Range "C.10.10.2.1 - Numeric value" """A numeric value or interval (open or closed) of the result"""
     * units 0..1 CodeableConcept "C.10.10.2.2 - Units" """Result units of the measurement"""
       * ^binding.description = "UCUM"
       * ^binding.strength = #preferred
-    * uncertainty 0..1 BackboneElement "C.10.10.2.3 - Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
+    * uncertainty 0..1 Base "C.10.10.2.3 - Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
   * codedResult 0..1 CodeableConcept "C.10.10.3 - Coded Result" """A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."""
     * ^binding.description = "SNOMED CT (for ordinal or nominal scale results and result interpretation)UCUM (for units)"
     * ^binding.strength = #preferred
 * dataabsentreason 0..1 CodeableConcept "C.10.11 - dataAbsentReason" """Provides a reason why the expected value in the element Observation.value[x] is missing."""
   * ^binding.description = "HL7 Data absent reason"
   * ^binding.strength = #preferred
-* referenceRange 0..* BackboneElement "C.10.12 - Reference range" """Reference range, multilple reference ranges of different types culd by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."""
+* referenceRange 0..* Base "C.10.12 - Reference range" """Reference range, multilple reference ranges of different types culd by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."""
 * observationInterpretation 0..* CodeableConcept "C.10.13 - Observation interpretation" """Information about reference intervals and result interpretation."""
   * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
   * ^binding.strength = #preferred
