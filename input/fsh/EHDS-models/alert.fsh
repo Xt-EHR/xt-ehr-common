@@ -5,7 +5,14 @@ Description: """C.22 - EHDS refined base model for Alert flag"""
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.22.1 - Identifier" """Flag identifier (Business identifiers assigned to this flag)."""
-* text 0..1 Narrative "C.22.2 - Text" """A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative."""
+* text 0..1 Narrative "C.22.2 - Text" """A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.
+Example 1: intolerance to aspirin due to gastrointestinal bleeding.
+Example 2: intolerance to captopril because of cough (the patient is not allergic but can't tolerate it because of persistent cough)
+Example 3: the patient has a rare disease that requires special treatment
+Example 4: Airway Alert / Difficult Intubation
+Example 5: Diagnoses such as malignant hyperthermia, porphyria, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
+Example 6: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
+Example 7: participation in a clinical trial that has to be taken into account in a healthcare contact."""
 * priority 0..* CodeableConcept "C.22.3 - Priority" """A code that identifies the priority of the alert."""
   * ^binding.description = "hl7:Flag-priority-code"
   * ^binding.strength = #preferred
