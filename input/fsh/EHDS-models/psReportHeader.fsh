@@ -1,4 +1,4 @@
-Logical: EHDSPsReportHeader
+Logical: EHDSPatientSummaryHeader
 //Id: EHDSreportHeader
 Title: "Report header"
 Description: """A.1 - EHDS refined base model for Report header data elements"""
