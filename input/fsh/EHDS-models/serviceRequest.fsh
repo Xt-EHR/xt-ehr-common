@@ -18,5 +18,5 @@ Characteristics: #can-be-target
 * priority 0..1 CodeableConcept "C.8.6 - Priority" """Indicates how quickly the ServiceRequest should be addressed with respect to other requests."""
   * ^binding.description = "HL7 Request priority"
   * ^binding.strength = #preferred
-* supportingInformation[x] 0..* Reference (EHDSObservation or EHDSCondition or EHDSMedication) "C.8.7 - Supporting information" """Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter. Clinical conditions of the subject relevant for the results interpretation."""
+* supportingInformation 0..* Reference (EHDSObservation or EHDSCondition or EHDSMedication or Resource) "C.8.7 - Supporting information" """Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter. Clinical conditions of the subject relevant for the results interpretation."""
 * specimen 0..* Reference (EHDSSpecimen) "C.8.8 - Specimen" """Specimens to be used by the laboratory procedure"""
