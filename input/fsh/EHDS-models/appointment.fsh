@@ -27,7 +27,7 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 Act priority"
   * ^binding.strength = #preferred
 * description 0..1 Narrative "C.20.9 - Description" """The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list."""
-* supportingInformation 0..* Reference(EHDSCondition or EHDSProcedure or EHDSObservation or EHDSLaboratoryObservation) "C.20.10 - Supporting information" """Additional information to support the appointment provided when making the appointment."""
+* supportingInformation 0..* Reference(EHDSCondition or EHDSProcedure or EHDSObservation or EHDSLaboratoryObservation or Resource) "C.20.10 - Supporting information" """Additional information to support the appointment provided when making the appointment."""
 * start 0..1 dateTime "C.20.11 - Start" """Date/Time that the appointment is to take place."""
 * end 0..1 dateTime "C.20.12 - End" """Date/Time that the appointment is to conclude."""
 * requestedPeriod 0..* Period "C.20.13 - Requested period" """A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within."""
