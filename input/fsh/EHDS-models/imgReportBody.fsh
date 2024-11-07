@@ -25,6 +25,7 @@ Characteristics: #can-be-target
     * sexForClinicalUse 0..* CodeableConcept "B.1.1.7.7 - Sex for clinical use" """A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population"""
       * ^binding.description = "HL7 sex-parameter-for-clinical-use"
       * ^binding.strength = #preferred
+    * otherSupportingInformation 0..* Resource "B.1.1.7.8 - Other supporting information" """Any other type of relevant supporting information"""
 * specimen 0..* EHDSSpecimen "B.1.2 - Specimen" """Specimen information"""
 * serviceRequest 0..* EHDSServiceRequest "B.1.3 - Service request" """Specification of requested service or services"""
 * exposureInformation 0..1 Base "B.1.4 - Exposure information" """Information on total exposure to ionising radiation."""
