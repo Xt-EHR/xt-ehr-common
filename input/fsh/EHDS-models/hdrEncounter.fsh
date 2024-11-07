@@ -13,11 +13,11 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:v3-xEncounterAdmissionUrgency"
     * ^binding.strength = #preferred
   * date 1..1 dateTime "C.23.3.2 - Date" """Admission date and time."""
-  * admitter 0..1 Reference(EHDSHealthProfessional or EHDSHealthProfessionalRole) "C.23.3.3 - Admitter" """Admitting Healthcare Professional"""
+  * admitter 0..1 Reference(EHDSHealthProfessional) "C.23.3.3 - Admitter" """Admitting Healthcare Professional"""
   * admitSource 0..1 CodeableConcept "C.23.3.4 - Admit Source" """From where the patient was admitted (e.g. physician referral, transfer)."""
     * ^binding.description = "hl7:admit-source"
     * ^binding.strength = #preferred
-  * referringProfessional 0..1 Reference(EHDSHealthProfessional or EHDSHealthProfessionalRole) "C.23.3.5 - Referring professional" """Referring Healthcare Professional"""
+  * referringProfessional 0..1 Reference(EHDSHealthProfessional) "C.23.3.5 - Referring professional" """Referring Healthcare Professional"""
   * admissionReason 0..* Reference(EHDSCondition or EHDSProcedure or EHDSObservation) "C.23.3.6 - Admission reason" """Reason or reasons for admission, e.g. Problem, procedure or finding."""
   * admissionReasonComment 0..1 Narrative "C.23.3.7 - Admission reason comment" """Explanation of the reason for the encounter."""
   * admissionLegalStatus 0..1 CodeableConcept "C.23.3.8 - Admission legal status" """Legal status/situation at admission. The legal status indicates the basis on which the patient is staying in a healthcare organisation. This can be either voluntary or involuntary, however the legal status is always determined by a court. A patient can also receive healthcare based on a forensic status. (voluntary, involuntary, admission by legal authority)."""
