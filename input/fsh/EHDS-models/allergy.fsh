@@ -14,7 +14,7 @@ Characteristics: #can-be-target
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
   * description 0..1 Narrative "C.21.4.3 - Description" """Description of the event as a whole"""
-  * manifestation 1..* CodeableConcept "C.21.4.4 - Manifestation" """Clinical symptoms/signs associated with the Event"""
+  * manifestation 0..* CodeableConcept "C.21.4.4 - Manifestation" """Clinical symptoms/signs associated with the Event"""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
 * criticality 0..1 CodeableConcept "C.21.5 - Criticality" """Potential risk for future life-threatening adverse reactions when exposed to a substance known to cause an adverse reaction."""
