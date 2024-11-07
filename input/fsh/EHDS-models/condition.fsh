@@ -25,3 +25,4 @@ Characteristics: #can-be-target
 * stage 0..* CodeableConcept "C.15.11 - Stage" """Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used."""
   * ^binding.description = "e.g. TNM, ICD-O-3"
   * ^binding.strength = #preferred
+* subject 1..1 Reference(EHDSPatient or EHDSGroup) "C.15.12 - Subject" """Indicates the patient or group who the condition record is associated with."""
