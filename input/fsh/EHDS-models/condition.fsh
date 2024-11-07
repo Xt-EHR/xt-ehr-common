@@ -26,3 +26,9 @@ Characteristics: #can-be-target
   * ^binding.description = "e.g. TNM, ICD-O-3"
   * ^binding.strength = #preferred
 * subject 1..1 Reference(EHDSPatient or EHDSGroup) "C.15.12 - Subject" """Indicates the patient or group who the condition record is associated with."""
+* participant 0..* Base "C.15.13 - Participant" """Who or what participated in the activities related to the condition and how they were involved."""
+  * function 0..1 CodeableConcept "C.15.13.1 - Function" """Type of participant involvement."""
+    * ^binding.description = "To be specified"
+    * ^binding.strength = #preferred
+  * actor 1..1 Reference(EHDSHealthProfessional) "C.15.13.2 - Actor" """Identify the Health Professional who may be specifically related to the condition, e.g., as a preferred contact."""
+* externalResourceRelatedWith 0..* uri "C.15.14 - External Resourcerelated with" """Identify the External Resource which may be specifically relatedto the problem, for example a link between a rare disease problemand the corresponding guidelines."""
