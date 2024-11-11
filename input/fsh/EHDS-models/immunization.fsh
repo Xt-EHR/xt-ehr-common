@@ -22,3 +22,4 @@ Characteristics: #can-be-target
   * ^binding.description = "ISO 3166"
   * ^binding.strength = #preferred
 * nextVaccinationDate 0..1 date "C.24.13 - Next vaccination date" """The date when the vaccination is planned to be given/repeated (e.g. next dose)"""
+* subject 1..1 Reference(EHDSPatient) "C.24.14 - Subject" """The patient who either received or did not receive the immunization."""
