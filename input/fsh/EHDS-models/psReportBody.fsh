@@ -16,3 +16,6 @@ Characteristics: #can-be-target
   * currentProblems 1..* EHDSCondition "B.1.3.1 - Current problems" """Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter."""
   * medicalDevicesAndImplants 1..* EHDSDeviceUse "B.1.3.2 - Medical devices and implants" """Medical devices and implants section."""
   * procedures 1..* EHDSProcedure "B.1.3.3 - Procedures" """Major procedures."""
+* functionalStatus 0..1 EHDSFunctionalStatus "B.1.3.4 - Functional status" """Need for the patient to be continuously assessed by third parties; functional status may influence decisions about how to plan and administer treatments."""
+* medicationSummary 1..1 Base "B.1.4 - Medication summary" """Medication summary section"""
+  * currentAndRelevantPastMedicines 1..* EHDSMedication "B.1.4.1 - Current and relevant past medicines" """Relevant prescribed medicines whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not, or medicines that influence current health status or are relevant to a clinical decision."""
