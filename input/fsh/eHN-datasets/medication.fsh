@@ -2,6 +2,7 @@
 // https://docs.google.com/spreadsheets/d/1JGA4xk68xdCC8qOQlu4SXiMYFftoT_fJAENBIZK1bis/edit?gid=1521819365#gid=1521819365
 // All cardinalities 0..*, data types are given as the best guess.
 
+/*
 Logical: EHNMedication
 Title: "eHN Medication"
 Description: "eHN Dataset for medication"
@@ -19,3 +20,5 @@ Characteristics: #can-be-target
 * unitOfPresentation 0..* CodeableConcept "Unit of presentation" "Unit of presentation is used as a unit when describing the strength, but according to ISO IDMP it is also a separate attribute of the pharmaceutical product and manufactured item." 
 * packageType 0..* CodeableConcept "Package type" "Type of the container. Examples: bottle, blister, box." 
 * packSize 0..* Base "Pack size" "Typically, the pack size is the number of unit of presentations in the package. It could also be presented using units of measurement (ml, g). In some cases, there is a need to refine the package size that it describes the amounts of different manufactured items in more than one inner packages. However, the overall amount of a prescribed product must be calculable from the pack size description." 
+
+*/
