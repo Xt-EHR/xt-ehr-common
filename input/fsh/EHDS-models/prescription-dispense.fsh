@@ -28,9 +28,6 @@ Characteristics: #can-be-target
 
 * status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
   * ^comment = "Added."
-* dispensable 0..1 boolean "Dispensability of this prescription. May be calculated from status and other elements, e.g. for cross-border use cases."
-  * ^comment = "Added."
-
 * statusReason 0..* CodeableConcept "Reason for the current status of prescription, for example the reason why the prescription was made invalid"
   * ^comment = "Added."
 * statusReasonText 0..1 string "Textual reason for the current status of prescription"
