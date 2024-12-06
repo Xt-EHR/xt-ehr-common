@@ -41,4 +41,5 @@ MyHealth@EU has adopted HL7 Europe's FHIR IG for laboratory report crossborder s
 ### Supporting Information
 
 - [eHealth Network Guideline on Laboratory Results](https://health.ec.europa.eu/publications/ehn-laboratory-result-guidelines_en)
+- [MyHealth@EU crossborder HL7 FHIR specification](https://fhir.ehdsi.eu/laboratory/)
 

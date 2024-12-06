@@ -1,6 +1,6 @@
 Logical: EHDSImagingReportHeader
 //Id: EHDSimagingReportHeader
-Title: "Imging Report header (model)"
+Title: "Imaging Report header (model)"
 Description: """A.1 - EHDS refined base model for Imaging Report header data elements"""
 Characteristics: #can-be-target
 
