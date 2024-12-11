@@ -1,7 +1,7 @@
 Logical: EHDSPatientSummaryBody
 //Id: EHDSpatientSummaryBody
-Title: "Patient summary body"
-Description: """B.1 - EHDS refined base model for Patient summary body data elements"""
+Title: "Patient Summary Body"
+Description: """B.1 - EHDS refined base model for Patient Summary body data elements"""
 Characteristics: #can-be-target
 
 * alerts 1..1 Base "B.1.1 - Alerts" """Alert section includes information about allergies, intolerances and other substantial alerts or warnings that health professionals should be aware of. """

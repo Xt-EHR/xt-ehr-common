@@ -1,7 +1,7 @@
 Logical: EHDSPatientSummaryHeader
 //Id: EHDSreportHeader
-Title: "Report header"
-Description: """A.1 - EHDS refined base model for Report header data elements"""
+Title: "Patient Summary Header"
+Description: """A.1 - EHDS refined base model for Patient Summary header data elements"""
 Characteristics: #can-be-target
 
 * subject 1..1 EHDSPatient "A.1.1 - Subject" """Patient/subject information"""

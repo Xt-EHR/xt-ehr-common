@@ -1,7 +1,7 @@
 // Based on output from eHN Semantic SG, Consistency task force
 // https://docs.google.com/spreadsheets/d/1JGA4xk68xdCC8qOQlu4SXiMYFftoT_fJAENBIZK1bis/edit?gid=1521819365#gid=1521819365
 // All cardinalities 0..*, data types are given as the best guess.
-
+/*
 Logical: EHNOrganizationModel
 Title: "eHN HP Organisation"
 Description: "eHN Dataset for health professional organisation"
@@ -14,16 +14,4 @@ Characteristics: #can-be-target
 * relatedWith 0..* Reference(Resource) "Related with" "Identify the entry or entries of this Patient Summary for which the health professional is the preferred contact."
 // only in eP/eD
 * detailsForDirectContact 1..1 ExtendedContactDetail "Details for direct contact" "Details for direct contact could be an email address and/or phone/fax number of the prescriber in order for the dispenser and/or patient to contact the prescriber. This might be necessary if problems arise with dosage, allergies, reimbursement etc." // text from eP/eD
-
-
-/*
-Mapping: EHNOrganizationModelToResource
-Source: EHNOrganizationModel
-Target: "Organization"
-* detailsForDirectContact -> "Organization.contact.telecom" // specific purpose?
-* address -> "Organization.contact.address"
-* telecom -> "Organization.contact.telecom"
-* networkAffiliation -> "Organization.qualification" // extension needed? or qualification?
-* relatedWith -> "Organization" // extension needed?
-
 */

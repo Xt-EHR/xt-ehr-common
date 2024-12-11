@@ -1,3 +1,4 @@
+/*
 // Based on output from eHN Semantic SG, Consistency task force
 // https://docs.google.com/spreadsheets/d/1JGA4xk68xdCC8qOQlu4SXiMYFftoT_fJAENBIZK1bis/edit?gid=1521819365#gid=1521819365
 // All cardinalities 0..*, data types are given as the best guess.
@@ -17,3 +18,4 @@ Characteristics: #can-be-target
 * version 0..* string "Version" "Version of the document"
 * lastUpdated 0..* dateTime "Date of last update" "Date on which document was modified (date of most recent version)"
 * confidentiality 0..* CodeableConcept "Confidentiality" "Level of confidentiality of the document. Implicit value is normal."
+*/
