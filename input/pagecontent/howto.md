@@ -86,7 +86,7 @@ JSON, XML, and TTL are available as tabs on top of the page. Open the one you’
 
 In order to download the model in a spreadsheet format, navigate to the very bottom of the page and use XLSX / CSV download.
 
-For bulk download, navigate to the [Download](download.html) page. 
+For bulk download, navigate to the [Download](downloads.html) page. 
 
 For FSH version of artifacts, PLANTUML diagrams, or the source code for any other parts of this implementation guide navigate to the source code in GitHub (see the link on Home page).
 
