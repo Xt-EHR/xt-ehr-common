@@ -1,7 +1,7 @@
 // Based on output from eHN Semantic SG, Consistency task force
 // https://docs.google.com/spreadsheets/d/1JGA4xk68xdCC8qOQlu4SXiMYFftoT_fJAENBIZK1bis/edit?gid=1521819365#gid=1521819365
 // All cardinalities 0..*, data types are given as the best guess.
-
+/*
 Logical: EHNMedicationPrescription
 Title: "eHN Medication Prescription"
 Description: "eHN Dataset for medication prescription"
@@ -21,3 +21,4 @@ Characteristics: #can-be-target
 * repeats 0..* string "Repeats"	"In some countries, when medicinal products are dispensed for the first time, the patient may only receive medication for a short period of time. When a patient starts taking medication for a chronic illness, the prescriber can issue a prescription for a longer period that is now separated by repeats. In addition, the maximum quantity (A.1.4.3) of the prescribed product that may be dispensed in one dispensation may be stated here. Decision on dispensability is made in the country of prescription."
 * reasonForPrescription 0..* string "Reason for prescription"	"The reason why the medicine is being prescribed, including the option to mention that the medicinal product is being prescribed for ‘off label’ use. The reason for the prescription gives the dispenser the opportunity to review the prescription for medication safety issues. Note: in some countries it is obligatory to state the reason for prescription on the prescription itself for some or all medicinal products."
 * substitution 0..* string "Substitution"	"Substitution handling can be recorded to indicate whether and to what extent substitution is allowed by the prescriber."
+*/
