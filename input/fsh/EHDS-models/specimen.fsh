@@ -25,4 +25,4 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * receivedDate 0..1 dateTime "C.9.9 - Received date" """Date and time that the material is handed over at the laboratory or specimen collection centre."""
-
+* subject 0..1 Reference (EHDSPatient or EHDSLocation or EHDSGroup or EHDSDevice or EHDSSubstance) "C.9.10 - Subject" """Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device."""
