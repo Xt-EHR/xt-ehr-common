@@ -4,7 +4,7 @@ Title: "Observation (model)"
 Description: """C.10 - EHDS refined base model for Observation information"""
 Characteristics: #can-be-target
 
-* observationDate 1..1 dateTime "C.10.1 - Observation date" """Date and time of the observation"""
+* observationDate[x] 1..1 dateTime or Period "C.10.1 - Observation date" """Clinically relevant time or time period for the observation."""
 * observationCode 1..1 CodeableConcept "C.10.2 - Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
@@ -15,8 +15,8 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * observationDevice 0..1 EHDSDevice "C.10.6 - Observation device" """Device (e.g. analyser) that generates the measurements"""
 * order 0..1 Reference(EHDSServiceRequest) "C.10.7 - Order" """Identifies order and order placer this observation belongs to. """
-* performer[x] 0..1 EHDSHealthProfessional "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
-* reporter[x] 0..1 EHDSHealthProfessional "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
+* performer 0..1 EHDSHealthProfessional "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
+* reporter 0..1 EHDSHealthProfessional "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
 * observationResult 1..1 Base "C.10.10 - Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
   * textualResult 0..1 Narrative "C.10.10.1 - Textual Result" """Narrative text result"""
   * numericResult 0..1 Base "C.10.10.2 - Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
@@ -31,7 +31,7 @@ Characteristics: #can-be-target
 * dataabsentreason 0..1 CodeableConcept "C.10.11 - dataAbsentReason" """Provides a reason why the expected value in the element Observation.value[x] is missing."""
   * ^binding.description = "HL7 Data absent reason"
   * ^binding.strength = #preferred
-* referenceRange 0..* Base "C.10.12 - Reference range" """Reference range, multilple reference ranges of different types culd by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."""
+* referenceRange 0..* Base "C.10.12 - Reference range" """Reference range, multiple reference ranges of different types culd by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."""
 * observationInterpretation 0..* CodeableConcept "C.10.13 - Observation interpretation" """Information about reference intervals and result interpretation."""
   * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
   * ^binding.strength = #preferred
@@ -41,3 +41,4 @@ Characteristics: #can-be-target
 * anatomicLocation 0..1 CodeableConcept "C.10.17 - Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
+* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSProcedure) "C.10.18 - Subject" """The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about."""
