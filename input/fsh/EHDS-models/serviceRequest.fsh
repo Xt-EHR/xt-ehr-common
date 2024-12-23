@@ -20,3 +20,4 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * supportingInformation 0..* Reference (EHDSObservation or EHDSCondition or EHDSMedication or Resource) "C.8.7 - Supporting information" """Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter. Clinical conditions of the subject relevant for the results interpretation."""
 * specimen 0..* Reference (EHDSSpecimen) "C.8.8 - Specimen" """Specimens to be used by the laboratory procedure"""
+* subject 1..1 Reference (EHDSPatient or EHDSGroup or EHDSLocation or EHDSDevice) "C.8.9 - Subject" """Individual or Entity the service is ordered for"""
