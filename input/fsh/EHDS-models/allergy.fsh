@@ -37,4 +37,4 @@ Characteristics: #can-be-target
 * agentOrAllergen 1..1 CodeableConcept "C.21.12 - Agent or Allergen" """A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity."""
   * ^binding.description = "SNOMED CT, ATC, (IDMP / EMA SPOR SMS)"
   * ^binding.strength = #preferred
-* subject 1..1 Reference(EHDSPatient) "C.21.13 - Subject" """The patient who has the allergy or intolerance."""
+* patient 1..1 Reference(EHDSPatient) "C.21.13 - Subject" """The patient who has the allergy or intolerance."""
