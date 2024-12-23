@@ -22,7 +22,7 @@ Example 7: participation in a clinical trial that has to be taken into account i
 * code 1..1 CodeableConcept "C.22.5 - Code" """A coded or textual representation of the flag."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* subject 1..1 Reference(Patient) "C.22.6 - Subject" """Who/What this flag is a record of"""
+* patient 1..1 Reference(Patient) "C.22.6 - Subject" """Who/What this flag is a record of"""
 * period 0..1 Period "C.22.7 - Period" """Time period when flag is active. The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified."""
 * encounter 0..1 Reference(Encounter) "C.22.8 - Encounter" """This alert is only relevant during the encounter."""
 * author 0..1 Reference(EHDSHealthProfessional or EHDSOrganization or EHDSDevice) "C.22.9 - Author" """The person, organization or device that created the flag."""
