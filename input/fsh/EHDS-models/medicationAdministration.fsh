@@ -28,3 +28,4 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   * dose 0..1 Quantity "C.18.8.5 - Dose" """Amount of medication per dose"""
   * rate[x] 0..1 Ratio or Quantity "C.18.8.6 - Rate" """Dose quantity per unit of time"""
+  * patient 1..1 Reference(EHDSPatient) "C.18.9 - Patient" """The patient who has the allergy or intolerance."""
