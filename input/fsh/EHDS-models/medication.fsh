@@ -1,5 +1,5 @@
 Logical: EHDSMedication
-Title: "Medicinal product (model)"
+Title: "Medicinal product"
 Description: "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile."
 Characteristics: #can-be-target
 * ^status = #active
@@ -70,7 +70,7 @@ Characteristics: #can-be-target
     * ^comment = "Added"
 * characteristic 0..* Base "Other features of the product"
   * type 1..1 CodeableConcept "A code expressing the type of characteristic"
-  * value 0..1 boolean or CodeableConcept or string or Quantity or dateTime or integer or decimal or Ratio "Description of the characteristic"
+  * value[x] 0..1 boolean or CodeableConcept or string or Quantity or dateTime or integer or decimal or Ratio "Description of the characteristic"
   * ^comment = "Added for any other information. "
 * batch 0..1 Base "Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request."
   * ^comment = "Added from Patient Summary"
