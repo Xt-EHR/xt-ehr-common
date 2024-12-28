@@ -26,7 +26,7 @@ FHIR Implementation Guide is being developed in a cross-project working group le
 
 **Ongoing work:**  
 - [R4 FHIR IG](https://build.fhir.org/ig/hl7-eu/mpd/)  
-- [R5 FHIR IG](https://build.fhir.org/ig/hl7-eu/mpd/branches/fhir-r5/)  
+- [R5 FHIR IG](https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/)  
 
 
 ### IHE Profile
