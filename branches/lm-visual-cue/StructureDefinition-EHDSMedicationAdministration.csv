@@ -1,0 +1,48 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSMedicationAdministration","EHDSMedicationAdministration","","","",0,*,"","","","null {[]} {[]}
+","Medication administration","C.18 - EHDS refined base model for Medication administration","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSMedicationAdministration.identifier","EHDSMedicationAdministration.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.18.1 - Identifier","Medication administration  identifier","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.identifier",0,*,"",""
+"EHDSMedicationAdministration.status","EHDSMedicationAdministration.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.18.2 - Status","Will generally be set to show that the administration has been completed, but might include other sttus codes (e.g. completed, not-done, on-hold, in-progress, unknown)","","","","","","","","","",,"preferred","HL7 MedicationAdimnistrationStatusCodes","","",,,,"EHDSMedicationAdministration.status",1,1,"",""
+"EHDSMedicationAdministration.statusReason","EHDSMedicationAdministration.statusReason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.18.3 - Status reason","Reason administration not performed","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSMedicationAdministration.statusReason",0,*,"",""
+"EHDSMedicationAdministration.medication","EHDSMedicationAdministration.medication","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication]]}
+","C.18.4 - Medication","Administered medication","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.medication",1,1,"",""
+"EHDSMedicationAdministration.batchNumber","EHDSMedicationAdministration.batchNumber","","","",0,1,"","","","string {[]} {[]}
+","Batch/lot number","A distinctive combination of numbers and/or letters which specifically identifies a batch","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.batchNumber",0,1,"",""
+"EHDSMedicationAdministration.occurance[x]","EHDSMedicationAdministration.occurance[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","C.18.5 - Occurance","Specific date/time or interval of time during which the administration took place (or did not take place)","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.occurance[x]",1,1,"",""
+"EHDSMedicationAdministration.reason","EHDSMedicationAdministration.reason","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation]]}
+","C.18.6 - Reason","Condition or observation that supports why the medication was administered","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.reason",0,*,"",""
+"EHDSMedicationAdministration.note","EHDSMedicationAdministration.note","","","",0,1,"","","","Narrative {[]} {[]}
+","C.18.7 - Note","Information about the administration","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.note",0,1,"",""
+"EHDSMedicationAdministration.dosage","EHDSMedicationAdministration.dosage","","","",0,1,"","","","BackboneElement {[]} {[]}
+","C.18.8 - Dosage","Details of how medication was taken","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.dosage",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"EHDSMedicationAdministration.dosage.id","EHDSMedicationAdministration.dosage.id","","","",0,1,"","","","id {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"EHDSMedicationAdministration.dosage.extension","EHDSMedicationAdministration.dosage.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"EHDSMedicationAdministration.dosage.modifierExtension","EHDSMedicationAdministration.dosage.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"EHDSMedicationAdministration.dosage.dosageDescription","EHDSMedicationAdministration.dosage.dosageDescription","","","",0,1,"","","","Narrative {[]} {[]}
+","C.18.8.1 - Dosage description","Free text dosage instructions","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.dosage.dosageDescription",0,1,"",""
+"EHDSMedicationAdministration.dosage.site","EHDSMedicationAdministration.dosage.site","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.18.8.2 - Site","Body site administered to","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSMedicationAdministration.dosage.site",0,1,"",""
+"EHDSMedicationAdministration.dosage.route","EHDSMedicationAdministration.dosage.route","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.18.8.3 - Route","Path of substance into body","","","","","","","","","",,"preferred","SNOMED CT, EDQM","","",,,,"EHDSMedicationAdministration.dosage.route",0,1,"",""
+"EHDSMedicationAdministration.dosage.method","EHDSMedicationAdministration.dosage.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.18.8.4 - Method","How drug was administered","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSMedicationAdministration.dosage.method",0,1,"",""
+"EHDSMedicationAdministration.dosage.dose","EHDSMedicationAdministration.dosage.dose","","","",0,1,"","","","Quantity {[]} {[]}
+","C.18.8.5 - Dose","Amount of medication per dose","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.dosage.dose",0,1,"",""
+"EHDSMedicationAdministration.dosage.rate[x]","EHDSMedicationAdministration.dosage.rate[x]","","","",0,1,"","","","Ratio {[]} {[]}
+Quantity {[]} {[]}","C.18.8.6 - Rate","Dose quantity per unit of time","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.dosage.rate[x]",0,1,"",""
