@@ -5,7 +5,7 @@ Characteristics: #can-be-target
 
 
 * personalIdentifier 0..* Identifier "C.13.1 - Personal identifier" """An identifier of the related person that is unique within a defined scope. Example: National ID (birth number) for the Czech citizen. Multiple identifiers could be provided. """
-* name 0..* HumanName "C.13.2 - Name" """Name associated with the person. Name might consists of name parts, e.g. Given name or names, family name/surname, name prefix etc."""
+* name 0..* EHDSHumanName "C.13.2 - Name" """Name associated with the person. Name might consists of name parts, e.g. Given name or names, family name/surname, name prefix etc."""
 * relationship 0..1 CodeableConcept "C.13.3 - Relationship" """Relationship between a patient and a contact person for that patient. This includes relatives, guardians, caring persons etc."""
   * ^binding.description = "HL7 RoleCode"
   * ^binding.strength = #preferred
