@@ -1,6 +1,6 @@
 Logical: EHDSAlertFlag
 //Id: EHDSalertFlag
-Title: "Alert flag"
+Title: "Alert flag model"
 Description: """C.22 - EHDS refined base model for Alert flag"""
 Characteristics: #can-be-target
 

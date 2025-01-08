@@ -3,7 +3,7 @@
 
 
 Logical: EHDSMedicationPrescription
-Title: "Medication Prescription model"
+Title: "Medication prescription model"
 Description: "Logical model for medication prescription. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
@@ -77,7 +77,7 @@ Characteristics: #can-be-target
 
 
 Logical: EHDSMedicationDispense
-Title: "Medication Dispensation model"
+Title: "Medication dispensation model"
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 

@@ -1,6 +1,6 @@
 Logical: EHDSInpatientEncounter
 //Id: EHDSinpatientEncounter
-Title: "Inpatient encounter"
+Title: "Inpatient encounter model"
 Description: """C.23 - EHDS refined base model for Inpatient encounter"""
 Characteristics: #can-be-target
 

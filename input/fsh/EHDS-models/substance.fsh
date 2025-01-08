@@ -1,6 +1,6 @@
 Logical: EHDSSubstance
 //Id: EHDSsubstance
-Title: "Substance"
+Title: "Substance model"
 Description: """C.28 - EHDS refined base model for Substance"""
 Characteristics: #can-be-target
 

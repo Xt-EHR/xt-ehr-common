@@ -1,6 +1,6 @@
 Logical: EHDSHumanName
 //Id: EHDShumanName
-Title: "Human name"
+Title: "Human name model"
 Description: """C.27 - EHDS refined base model for Human name"""
 Characteristics: #can-be-target
 

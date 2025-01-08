@@ -1,5 +1,5 @@
 Logical: EHDSMedication
-Title: "Medicinal product"
+Title: "Medicinal product model"
 Description: "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile."
 Characteristics: #can-be-target
 * ^status = #active
@@ -13,7 +13,7 @@ Characteristics: #can-be-target
 * productName 0..1 string "Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided."
   * ^comment = "No change"
 * marketingAuthorisationHolder 0..1 Base "Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product."
-  * ^comment = "No change, but subelements added"  
+  * ^comment = "No change, but subelements added"
   * organizationName 0..1 string "Name of the organisation holding the authorisation for marketing/mahufacturing"
   * organizationIdentifier 0..* Identifier "Identifier of the organisation and/or its physical location"
 * doseForm 0..1 CodeableConcept "Dose form(s) on a product level. Dose form for a single package item is defined below."
@@ -27,9 +27,9 @@ Characteristics: #can-be-target
 * item 0..* Base "A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined"
   * ^comment = "Structure changed, elements repeated for complex packages"
   * doseForm 0..1 CodeableConcept "Dose form"
-    * ^comment = "No change"  
+    * ^comment = "No change"
     * ^binding.description = "EDQM Standard Terms"
-    * ^binding.strength = #preferred  
+    * ^binding.strength = #preferred
   * ingredient 1..* Base "Ingredients"
     * isActive 0..1 boolean "Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected."
       * ^comment = "Added"

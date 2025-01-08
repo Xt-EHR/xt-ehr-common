@@ -1,6 +1,6 @@
 Logical: EHDSPatientSummaryBody
 //Id: EHDSpatientSummaryBody
-Title: "Patient Summary Body"
+Title: "Patient summary body model"
 Description: """B.1 - EHDS refined base model for Patient Summary body data elements"""
 Characteristics: #can-be-target
 

@@ -1,6 +1,6 @@
 Logical: EHDSMedicationAdministration
 //Id: EHDSmedicationAdministration
-Title: "Medication administration"
+Title: "Medication administration model"
 Description: """C.18 - EHDS refined base model for Medication administration"""
 Characteristics: #can-be-target
 

@@ -1,6 +1,6 @@
 Logical: EHDSImmunization
 //Id: EHDSimmunization
-Title: "Immunization"
+Title: "Immunization model"
 Description: """C.24 - EHDS refined base model for Immunization"""
 Characteristics: #can-be-target
 

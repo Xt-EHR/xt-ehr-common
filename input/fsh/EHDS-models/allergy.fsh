@@ -1,5 +1,5 @@
 Logical: EHDSAllergyIntolerance
-Title: "Allergy Intolerance model"
+Title: "Allergy intolerance model"
 Description: """C.21 - EHDS refined base model for Allergy Intolerance"""
 Characteristics: #can-be-target
 

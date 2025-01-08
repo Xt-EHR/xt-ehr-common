@@ -1,7 +1,7 @@
 // A gues we can remove this model as it is not being used anywhere. Instead specific headers exist for each use case (all are generated from the same table).
 
 Logical: EHDSReportHeader
-Title: "Report header"
+Title: "Report header model"
 Description: "EHDS refined base model for Report header data elements. Common for hospital discharge, laboratory and medical imaging reports."
 Characteristics: #can-be-target
 

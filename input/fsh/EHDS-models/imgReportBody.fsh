@@ -1,6 +1,6 @@
 Logical: EHDSImagingReportBody
 //Id: EHDSreportBody
-Title: "Imaging Report body"
+Title: "Imaging report body model"
 Description: """B.1 - EHDS refined base model for Imaging report body"""
 Characteristics: #can-be-target
 

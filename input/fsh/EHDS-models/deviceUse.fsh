@@ -1,6 +1,6 @@
 Logical: EHDSDeviceUse
 //Id: EHDSdeviceUse
-Title: "Device Use"
+Title: "Device use model"
 Description: """C.25 - EHDS refined base model for Device Use"""
 Characteristics: #can-be-target
 

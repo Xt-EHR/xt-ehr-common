@@ -1,6 +1,6 @@
 Logical: EHDSTelecom
 //Id: EHDStelecom
-Title: "Telecom"
+Title: "Telecom model"
 Description: """C.6 - EHDS refined base model for Telecommunication contact information structure"""
 Characteristics: #can-be-target
 
