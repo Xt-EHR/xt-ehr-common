@@ -1,11 +1,11 @@
 Logical: EHDSProcedure
 //Id: EHDSprocedure
-Title: "Procedure (model)"
+Title: "Procedure model"
 Description: """C.16 - EHDS refined base model for An action that is or was performed on or for a patient"""
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.16.1 - Identifier" """Procedure identifier"""
-* description 0..1 Narrative "C.16.2 - Description" """Procedure specification in narrative form"""
+* description 0..1 string "C.16.2 - Description" """Procedure specification in string form"""
 * code 0..1 CodeableConcept "C.16.3 - Code" """Code identifying the procedure"""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
@@ -24,5 +24,5 @@ Characteristics: #can-be-target
 * deviceUsed 0..* EHDSDevice "C.16.10 - Device used" """Device used to perform the procedure"""
 * focalDevice 0..* Reference(EHDSDevice) "C.16.11 - Focal device" """Device or devices that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure."""
 * location 0..* EHDSLocation "C.16.12 - Location" """Location where the procedure had been performed"""
-* note 0..1 Narrative "C.16.13 - Note" """Additional information about the procedure"""
+* note 0..1 string "C.16.13 - Note" """Additional information about the procedure"""
 * subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSGroup) "C.16.14 - Patient" """On whom or on what the procedure was performed. This is usually an individual human, but can also be performed on animals, groups of humans or animals, organizations or practitioners (for licensing), locations or devices (for safety inspections or regulatory authorizations). If the actual focus of the procedure is different from the subject, the focus element specifies the actual focus of the procedure."""

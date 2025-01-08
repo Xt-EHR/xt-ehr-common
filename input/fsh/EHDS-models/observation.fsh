@@ -1,6 +1,6 @@
 Logical: EHDSObservation
 //Id: EHDSobservation
-Title: "Observation (model)"
+Title: "Observation model"
 Description: """C.10 - EHDS refined base model for Observation information"""
 Characteristics: #can-be-target
 
@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * performer 0..1 EHDSHealthProfessional "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
 * reporter 0..1 EHDSHealthProfessional "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
 * observationResult 1..1 Base "C.10.10 - Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
-  * textualResult 0..1 Narrative "C.10.10.1 - Textual Result" """Narrative text result"""
+  * textualResult 0..1 string "C.10.10.1 - Textual Result" """string text result"""
   * numericResult 0..1 Base "C.10.10.2 - Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
     * numericValue[x] 0..1 Quantity or Range "C.10.10.2.1 - Numeric value" """A numeric value or interval (open or closed) of the result"""
     * units 0..1 CodeableConcept "C.10.10.2.2 - Units" """Result units of the measurement"""
@@ -37,7 +37,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * triggeredBy[x] 0..* EHDSLaboratoryObservation or EHDSObservation "C.10.14 - Triggered by" """Identifies the observation(s) that triggered the performance of this observation."""
 * hasMember[x] 0..* EHDSLaboratoryObservation or EHDSObservation "C.10.15 - Has member" """This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."""
-* resultDescription 0..1 Narrative "C.10.16 - Result description" """Comments and narrative representation of the observation result and findings."""
+* resultDescription 0..1 string "C.10.16 - Result description" """Comments and string representation of the observation result and findings."""
 * anatomicLocation 0..1 CodeableConcept "C.10.17 - Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred

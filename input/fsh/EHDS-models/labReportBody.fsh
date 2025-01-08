@@ -1,6 +1,6 @@
 Logical: EHDSLaboratoryReportBody
 //Id: EHDSreportBody
-Title: "Laboratory report body (model)"
+Title: "Laboratory report body model"
 Description: """B.1 - EEHRxF refined base model for Laboratory result report body"""
 Characteristics: #can-be-target
 

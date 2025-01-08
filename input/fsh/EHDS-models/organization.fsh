@@ -1,5 +1,5 @@
 Logical: EHDSOrganization
-Title: "Organization (model)"
+Title: "Organization model"
 Description: """C.3 - EHDS refined base model for Health provider or any other type of organization"""
 Characteristics: #can-be-target
 

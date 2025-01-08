@@ -1,5 +1,5 @@
 Logical: EHDSPatient
-Title: "Patient (model)"
+Title: "Patient model"
 Description: """C.1 - EHDS refined base model for Patient/subject information"""
 Characteristics: #can-be-target
 

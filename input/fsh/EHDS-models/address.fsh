@@ -1,6 +1,6 @@
 Logical: EHDSAddress
 //Id: EHDSaddress
-Title: "Address (model)"
+Title: "Address model"
 Description: """C.5 - EHDS refined base model for Address structure"""
 Characteristics: #can-be-target
 

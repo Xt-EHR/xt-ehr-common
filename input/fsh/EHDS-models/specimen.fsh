@@ -1,6 +1,6 @@
 Logical: EHDSSpecimen
 //Id: EHDSspecimen
-Title: "Specimen (model)"
+Title: "Specimen model"
 Description: """C.9 - EHDS refined base model for Specimen information"""
 Characteristics: #can-be-target
 

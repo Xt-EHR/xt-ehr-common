@@ -1,6 +1,6 @@
 Logical: EHDSLaboratoryReportHeader
 //Id: EHDSreportHeader
-Title: "Laboratory report header (model)"
+Title: "Laboratory report header model"
 Description: """A.1 - EHDS refined base model for Report header data elements"""
 Characteristics: #can-be-target
 

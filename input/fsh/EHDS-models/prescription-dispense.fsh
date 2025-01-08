@@ -1,9 +1,9 @@
-// Keep in sync with HL7 Europe / IHE. 
+// Keep in sync with HL7 Europe / IHE.
 //Two models in one file for copy-paste ease.
 
 
 Logical: EHDSMedicationPrescription
-Title: "Medication Prescription (model)"
+Title: "Medication Prescription model"
 Description: "Logical model for medication prescription. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
@@ -50,7 +50,7 @@ Characteristics: #can-be-target
     * ^comment = "No change"
   * dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
     * ^comment = "Dosage model significantly changed towards more granularity. A.1.5.3-A.1.5.7"
-  * preparationInstructions 0..1 string "Additional instructions about preparation or dispense" 
+  * preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
     * ^comment = "Added."
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment line"
     * ^comment = "No change but subelements added. A 1.5.11"
@@ -62,7 +62,7 @@ Characteristics: #can-be-target
     * ^comment = "Added."
   * statusReasonText 0..1 string "Textual reason for the current status of prescription"
     * ^comment = "Added."
-  
+
   * reasonForChange 0..1 CodeableConcept "The reason the prescription was changed from previous"
     * ^comment = "Added. Changed from which other (version of) prescription?"
 
@@ -74,10 +74,10 @@ Characteristics: #can-be-target
 
   * comment 0..* string "Additional information or comments"
     * ^comment = "Added."
- 
+
 
 Logical: EHDSMedicationDispense
-Title: "Medication Dispensation (model)"
+Title: "Medication Dispensation model"
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 

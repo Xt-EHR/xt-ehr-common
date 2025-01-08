@@ -1,10 +1,10 @@
 Logical: EHDSAllergyIntolerance
-Title: "Allergy Intolerance"
+Title: "Allergy Intolerance model"
 Description: """C.21 - EHDS refined base model for Allergy Intolerance"""
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.21.1 - Identifier" """Appointment identifier"""
-* allergyDescription 0..1 Narrative "C.21.2 - Allergy description" """Textual description of the allergy or intolerance"""
+* allergyDescription 0..1 string "C.21.2 - Allergy description" """Textual description of the allergy or intolerance"""
 * typeOfPropensity 0..1 CodeableConcept "C.21.3 - Type of propensity" """This element describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
@@ -13,7 +13,7 @@ Characteristics: #can-be-target
   * severity 0..1 CodeableConcept "C.21.4.2 - Severity " """Severity of the clinical manifestation of the allergic reaction."""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
-  * description 0..1 Narrative "C.21.4.3 - Description" """Description of the event as a whole"""
+  * description 0..1 string "C.21.4.3 - Description" """Description of the event as a whole"""
   * manifestation 0..* CodeableConcept "C.21.4.4 - Manifestation" """Clinical symptoms/signs associated with the Event"""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred

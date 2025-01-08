@@ -1,6 +1,6 @@
 Logical: EHDSMedia
 //Id: EHDSmedia
-Title: "Media (model)"
+Title: "Media model"
 Description: """C.14 - EHDS refined base model for A photo, video, or audio recording acquired or used in healthcare."""
 Characteristics: #can-be-target
 

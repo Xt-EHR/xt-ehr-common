@@ -1,6 +1,6 @@
 /*
 Logical: EHDSHealthProfessionalRole
-Title: "Health professional role (model)"
+Title: "Health professional role model"
 Description: """C.4 - EHDS refined base model for Role and location details associated with a practitioner that are applicable to the healthcare event."""
 Characteristics: #can-be-target
 

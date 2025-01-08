@@ -1,6 +1,6 @@
 Logical: EHDSServiceRequest
 //Id: EHDSserviceRequest
-Title: "Service request (model)"
+Title: "Service request model"
 Description: """C.8 - EHDS refined base model for Specification of requested service or services"""
 Characteristics: #can-be-target
 

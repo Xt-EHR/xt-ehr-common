@@ -1,6 +1,6 @@
 Logical: EHDSCarePlan
 //Id: EHDScarePlan
-Title: "Care plan (model)"
+Title: "Care plan model"
 Description: """C.19 - EHDS refined base model for Care plan"""
 Characteristics: #can-be-target
 

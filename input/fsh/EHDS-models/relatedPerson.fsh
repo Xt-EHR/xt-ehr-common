@@ -1,5 +1,5 @@
 Logical: EHDSRelatedPerson
-Title: "Related person (model)"
+Title: "Related person model"
 Description: """C.13 - EHDS refined base model for Patient/subject guardian and other related person information"""
 Characteristics: #can-be-target
 

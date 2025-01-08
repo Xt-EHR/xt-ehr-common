@@ -1,6 +1,6 @@
 Logical: EHDSLocation
 //Id: EHDSlocation
-Title: "Location (model)"
+Title: "Location model"
 Description: """C.17 - EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated."""
 Characteristics: #can-be-target
 

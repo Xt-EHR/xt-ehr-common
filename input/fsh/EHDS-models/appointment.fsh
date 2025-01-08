@@ -1,6 +1,6 @@
 Logical: EHDSAppointment
 //Id: EHDSappointment
-Title: "Appointment (model)"
+Title: "Appointment model"
 Description: """C.20 - EHDS refined base model for Appointment"""
 Characteristics: #can-be-target
 

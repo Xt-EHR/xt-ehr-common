@@ -1,6 +1,6 @@
 Logical: EHDSDevice
 //Id: EHDSdevice
-Title: "Device (model)"
+Title: "Device model"
 Description: """C.12 - EHDS refined base model for Device information"""
 Characteristics: #can-be-target
 
