@@ -1,0 +1,1 @@
+Alias: $LNC  = http://loinc.org

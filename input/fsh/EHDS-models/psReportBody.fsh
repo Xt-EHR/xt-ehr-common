@@ -1,59 +1,68 @@
-Logical: EHDSPatientSummaryBody
-//Id: EHDSpatientSummaryBody
-Title: "Patient summary body model"
-Description: """B.1 - EHDS refined base model for Patient Summary body data elements"""
-Characteristics: #can-be-target
+import os
+import re
 
-* alerts 1..1 Base "B.1.1 - Alerts" """Alert section includes information about allergies, intolerances and other substantial alerts or warnings that health professionals should be aware of. """
-  * allergy 1..* EHDSAllergyIntolerance "B.1.1.1 - Allergy" """A record of allergies and intolerances."""
-  * medicalAlert 0..* EHDSAlertFlag "B.1.1.2 - Medical alert" """Medical alert information (other alerts not included in allergies)."""
-* medicalHistory 1..1 Base "B.1.2 - Medical history" """Medical history section."""
-  * vaccination 0..* EHDSImmunization "B.1.2.1 - Vaccination" """Vaccination / prophylaxis information."""
-  * pastProblems 0..* EHDSCondition "B.1.2.2 - Past problems" """Resolved, closed or inactive problems."""
-  * medicalHistory 0..1 Base "B.1.2.3 - Medical history" """Medical history section."""
-    * medicalHistory 0..* Narrative "B.1.2.3.1 - Medical history" """This section may provide both synthetic anamnesis (e.g. description of phases of the pathology as a chronological summary of clustered clinical information) and anecdotal evidence that clinicians can collect from the patient, and can read in a narrative form.See Section 2, Chapter III, Art 7, (c)."""
-* medicalProblems 1..1 Base "B.1.3 - Medical problems" """Medical problems section."""
-  * currentProblems 1..* EHDSCondition "B.1.3.1 - Current problems" """Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter."""
-  * medicalDevicesAndImplants 1..* EHDSDeviceUse "B.1.3.2 - Medical devices and implants" """Medical devices and implants section."""
-  * procedures 1..* EHDSProcedure "B.1.3.3 - Procedures" """Major procedures."""
-* functionalStatus 0..1 EHDSFunctionalStatus "B.1.3.4 - Functional status" """Need for the patient to be continuously assessed by third parties; functional status may influence decisions about how to plan and administer treatments."""
-* medicationSummary 1..1 Base "B.1.4 - Medication summary" """Medication summary section."""
-  * currentAndRelevantPastMedicines 1..* EHDSMedicationAdministration "B.1.4.1 - Current and relevant past medicines" """Relevant prescribed medicines whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not, or medicines that influence current health status or are relevant to a clinical decision."""
-* socialHistory 0..1 Base "B.1.5 - Social history" """Social history section."""
-  * socialHistoryDescription 1..1 Narrative "B.1.5.1 - Social HistoryObservation description" """Textual description of the socialhistory."""
-  * socialHistoryObservationsRelatedToHealth 0..* EHDSObservation "B.1.5.2 - Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
-    * referenceDateRange 0..* Period "B.1.5.2.1 - Reference date range" """Example: from 1974 to 2004"""
-* pregnancyHistory 0..1 Base "B.1.6 - Pregnancy history" """Pregnancy history section"""
-  * currentPregnancyStatus 0..1 Base "B.1.6.1 - Current pregnancy status" """Current pregnancy status section"""
-    * dateOfObservation 0..* dateTime "B.1.6.1.1 - Date of observation" """Date on which the observation of the pregnancy state was made"""
-    * status 0..* EHDSObservation "B.1.6.1.2 - Status" """Provides the woman's current state at the date the observation was made: e.g. pregnant, not pregnant, unknown"""
-      * ^binding.description = "SNOMED CT"
-      * ^binding.strength = #preferred
-    * expectedDateOfDelivery 0..1 dateTime "B.1.6.1.3 - Expected date of delivery" """Date on which the woman is due to give birth."""
-  * historyOfPreviousPregnancies 0..1 Base "B.1.6.2 - History of previous pregnancies" """History of previous pregnancies section"""
-    * previousPregnanciesStatus 0..1 EHDSObservation "B.1.6.2.1 - Previous pregnancies status" """Information on the woman's previous pregnancies:Yes, previous pregnancies; No, previous pregnancies; Unknown"""
-      * ^binding.description = "SNOMED CT"
-      * ^binding.strength = #preferred
-    * previousPregnanciesDescription 0..* Base "B.1.6.2.2 - Previous pregnancies description" """Details of the previous pregnancies"""
-      * outcomeDate 0..1 dateTime "B.1.6.2.2.1 - Outcome date" """Date referred to the previous pregnancies outcome"""
-      * outcome 0..1 EHDSObservation "B.1.6.2.2.2 - Outcome" """Outcome of the previous pregnancies"""
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
-      * numberOfChildren 0..1 EHDSObservation "B.1.6.2.2.3 - Number of children" """Number of children/fetus in this specific pregnancy"""
-* patientProvidedData 0..1 Base "B.1.7 - Patient provided data" """Patient provided data section"""
-  * travelHistory 0..* Base "B.1.7.1 - Travel history" """Visited country"""
-    * country 0..1 CodeableConcept "B.1.7.1.1 - Country" """Country code"""
-      * ^binding.description = "ISO 3166"
-      * ^binding.strength = #preferred
-    * period 0..* Period "B.1.7.1.2 - Period" """Date of entry and departure"""
-  * advanceDirective 0..1 Base "B.1.7.2 - Advance Directive" """Advance directive section"""
-    * documentation 0..* CodeableConcept "B.1.7.2.1 - Documentation" """Existence of documentation on living will"""
-      * ^binding.description = "SNOMED CT"
-      * ^binding.strength = #preferred
-* results 0..1 Base "B.1.8 - Results" """Results section"""
-  * resultObservation[x] 0..* EHDSObservation or EHDSLaboratoryObservation "B.1.8.1 - Result observation" """Observation results pertaining to the subject of care's health condition and which might have impact on future treatments"""
-* planOfCare 0..1 Base "B.1.9 - Plan of Care" """Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries"""
-  * description 0..1 Narrative "B.1.9.1 - Description" """Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient.In the future it is expected that this Section could be provided in a structured and coded format."""
-  * planOfCareEntry 0..* EHDSCarePlan "B.1.9.2 - Plan of Care Entry" """Describes the intention of how one or more practitioners intend to deliver care for a particular patient for a period of time, possibly limited to care for a specific condition or set of conditions."""
+# Paths
+folder_path = "input/fsh/EHDS-models"
+output_file = "class_diagram.puml"
+
+# Patterns for extracting information
+model_pattern = r"\*\s*(\w+)\s+[\d.]*\.\.[\d.]*\s+(\w+)"  # Matches: * name range Model
+aggregation_pattern = r"\*\s*(\w+)\s+[\d.]*\.\.[\d.]*\s+(\w+)"  # Matches references like: * field 1..* Model
+logical_parent_pattern = r"Logical:\s*(\w+)\s*Parent:\s*(\w+)"
+
+# Storage for models and relationships
+models = set()
+parent_relationships = []
+aggregations = []
+
+# Helper function for debugging
+def debug_message(message):
+    print(f"DEBUG: {message}")
+
+# Parse files
+debug_message(f"Looking for .fsh files in folder: {folder_path}")
+for file_name in os.listdir(folder_path):
+    if file_name.endswith(".fsh"):
+        file_path = os.path.join(folder_path, file_name)
+        debug_message(f"Processing file: {file_path}")
+        with open(file_path, "r") as file:
+            content = file.read()
+            
+            # Find models directly referenced (e.g., * allergy 1..* EHDSAllergyIntolerance)
+            for match in re.findall(model_pattern, content):
+                field_name, model = match
+                debug_message(f"Found model reference: {field_name} references {model}")
+                if model != "Base":  # Skip 'Base' or abstract placeholders
+                    models.add(model)
+                    aggregations.append((field_name, model))
+            
+            # Find logical -> parent relationships
+            for match in re.findall(logical_parent_pattern, content):
+                logical, parent = match
+                debug_message(f"Found logical->parent relationship: {logical} inherits from {parent}")
+                parent_relationships.append((logical, parent))
+
+# Generate PlantUML content
+debug_message(f"Generating PlantUML diagram in {output_file}")
+with open(output_file, "w") as uml_file:
+    uml_file.write("@startuml\n\n")
+    
+    # Define classes
+    for model in models:
+        uml_file.write(f"class {model} {{}}\n")
+    
+    uml_file.write("\n")
+    
+    # Add parent relationships
+    for logical, parent in parent_relationships:
+        uml_file.write(f"{logical} --|> {parent}\n")
+    
+    uml_file.write("\n")
+    
+    # Add aggregations
+    for source, target in aggregations:
+        uml_file.write(f"{source} -- {target}\n")
+    
+    uml_file.write("\n@enduml")
+
+print(f"PlantUML class diagram generated: {output_file}")
