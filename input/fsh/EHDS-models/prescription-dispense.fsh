@@ -15,6 +15,8 @@ Characteristics: #can-be-target
   * ^comment = "No change"
 * patient 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
   * ^comment = "No change (Patient model will be common for all use cases)"
+* presentedForm 0..1 string "Text representation of all relevant parts of the prescription"
+  * ^comment = "Added."
 * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * ^comment = "Added."
 * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
