@@ -25,3 +25,4 @@ Characteristics: #can-be-target
 * encounter 0..1 EHDSEncounter "C.8.11 - Encounter" """An encounter that provides additional information about the healthcare context in which this request is made."""
 * occurance[x] 0..1 dateTime or Period "C.8.12 - Occurance" """When service should occur"""
 * patientInstructions 0..1 string "C.8.13 - Patient instructions" """Patient or consumer-oriented instructions"""
+* coverage 0..* Reference (EHDSCoverage) "C.8.14 - Coverage" """Insurance or medical plan or a payment agreement."""

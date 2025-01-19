@@ -24,11 +24,11 @@ Components of laboratory result report and its representation using UML notation
   {% include laboratory_report.svg %}
 </figure>
 
-Main laboratory report specific parts:
-- [Laboratory Report Document](StructureDefinition-EHDSLaboratoryReport)
-- [Laboratory Report Header](StructureDefinition-EHDSLaboratoryReportHeader)
-- [Laboratory Report Body](StructureDefinition-EHDSLaboratoryReportBody)
-- [Laboratory Observation](StructureDefinition-EHDSLaboratoryObservation)
+### Detail EHDS information models for Laboratory report
+- [Laboratory Report Document](StructureDefinition-EHDSLaboratoryReport.html)
+- [Laboratory Report Header](StructureDefinition-EHDSLaboratoryReportHeader.html)
+- [Laboratory Report Body](StructureDefinition-EHDSLaboratoryReportBody.html)
+- [Laboratory Observation](StructureDefinition-EHDSLaboratoryObservation.html)
 
 
 ### FHIR Implementation Guide

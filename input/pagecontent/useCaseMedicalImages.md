@@ -1,7 +1,27 @@
 ### Information Models
-- [Imaging Report Document](StructureDefinition-EHDSImagingReport)
-- [Imaging Report Header](StructureDefinition-EHDSImagingReportHeader)
-- [Imaging Report Body](StructureDefinition-EHDSImagingReportBody)
+#### Conceptual view
+
+Imaging result report could be divided into several parts: document header, body and optionally it could also have various attachments.
+
+##### Imaging Result Report
+<figure>
+  {% include imgReport_CIM.svg %}
+</figure>
+
+##### Laboratory Result header
+<figure>
+  {% include imgReportHdr_CIM.svg %}
+</figure>
+
+##### Laboratory Result body
+<figure>
+  {% include imgReportBody_CIM.svg %}
+</figure>
+
+#### Detail EHDS information models for Imaging
+- [Imaging Report Document](StructureDefinition-EHDSImagingReport.html)
+- [Imaging Report Header](StructureDefinition-EHDSImagingReportHeader.html)
+- [Imaging Report Body](StructureDefinition-EHDSImagingReportBody.html)
 
 
 ### FHIR Implementation Guide

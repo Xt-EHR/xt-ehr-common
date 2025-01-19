@@ -18,7 +18,7 @@ Patient summary report could be divided into several basic parts: document heade
   {% include PsReportBody_CIM.svg %}
 </figure>
 
-Detailed EHDS information models for **Patient Summary**:
+### Detailed EHDS information models for Patient summary
 - Patient Summary Document: [EHDSPatientSummary](StructureDefinition-EHDSPatientSummary.html)
 - Patient Summary Header: [EHDSPatientSummaryHeader](StructureDefinition-EHDSPatientSummaryHeader.html)
 - Patient Summary Body: [EHDSPatientSummaryBody](StructureDefinition-EHDSPatientSummaryBody.html)
