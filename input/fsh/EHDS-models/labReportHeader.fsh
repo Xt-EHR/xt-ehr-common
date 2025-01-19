@@ -5,10 +5,7 @@ Description: """A.1 - EHDS refined base model for Report header data elements"""
 Characteristics: #can-be-target
 
 * subject 1..1 EHDSPatient "A.1.1 - Subject" """Patient/subject information"""
-* healthInsuranceAndPaymentInformation 0..1 Base "A.1.4 - Health insurance and payment information" """Health insurance information (Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.)"""
-  * healthInsuranceCode 0..1 Identifier "A.1.4.1 - Health insurance code" """Unique health insurance company identification code"""
-  * healthInsuranceName 0..1 string "A.1.4.2 - Health insurance name" """Full, official name of the healthcare insurance provider."""
-  * healthInsuranceNumber 0..1 Identifier "A.1.4.3 - Health insurance number" """Number or code under which the insured person is registered at the insurance provider."""
+* healthInsuranceAndPaymentInformation 0..* EHDSCoverage "A.1.4 - Health insurance and payment information" """Health insurance information (Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.)"""
 * intendedRecipient 0..* Reference(EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganization or EHDSDevice) "A.1.5 - Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 * authorship 1..* Base "A.1.6 - Authorship" """Information about author or authors of the document"""
   * author 1..1 EHDSHealthProfessional "A.1.6.1 - Author" """Author by whom the document was/were authored. Multiple authors could be provided."""
