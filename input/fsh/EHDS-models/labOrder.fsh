@@ -5,6 +5,6 @@ Description: """A - EHDS refined base model for Laboratory Order"""
 Characteristics: #can-be-target
 
 * laboratoryOrderHeader 1..1 EHDSLaboratoryOrderHeader "A.1 - Laboratory Order header" """Laboratory Order header"""
-* laboratoryOrderBody 1..1 EHDSPatientSummaryBody "A.2 - Patient summary body" """Patient summary body"""
-* presentedForms 0..* EHDSAttachment "A.3 - Attachment" """Attachment"""
-* laboratoryOrderAttachments[x] 0..* EHDSAttachment or EHDSMedia "A.4 - Attachment, Media" """Attachment, Media"""
+* laboratoryOrderBody 1..1 EHDSLaboratoryOrderBody "A.2 - Laboratory order body" """Laboratory order body"""
+* presentedForms 0..* EHDSAttachment "A.3 - Attachment" """Entire report as issued. Various formats could be provided,  pdf format is recommended."""
+* laboratoryOrderAttachments[x] 0..* EHDSAttachment or EHDSMedia "A.4 - Attachment, Media" """Document attachments"""
