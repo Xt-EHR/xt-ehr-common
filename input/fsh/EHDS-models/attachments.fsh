@@ -1,6 +1,6 @@
 Logical: EHDSAttachments
 //Id: EHDSattachments
-Title: "Attachements"
+Title: "Attachments"
 Description: """D.1 - EHDS refined base model for Document attachments"""
 Characteristics: #can-be-target
 
