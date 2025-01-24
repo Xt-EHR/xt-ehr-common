@@ -23,7 +23,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * stage 0..* CodeableConcept "C.15.11 - Stage" """Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used."""
-  * ^binding.description = "e.g. TNM, ICD-O-3"
+  * ^binding.description = "e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …"
   * ^binding.strength = #preferred
 * patient 1..1 Reference(EHDSPatient or EHDSGroup) "C.15.12 - Subject" """Indicates the patient or group who the condition record is associated with."""
 * participant 0..* Base "C.15.13 - Participant" """Who or what participated in the activities related to the condition and how they were involved."""
