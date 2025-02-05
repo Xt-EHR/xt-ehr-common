@@ -1,10 +1,20 @@
 // Keep in sync with HL7 Europe / IHE.
 //Two models in one file for copy-paste ease.
 
-
 Logical: EHDSMedicationPrescription
-Title: "Medication prescription model"
-Description: "Logical model for medication prescription. A prescription contains one or more prescription items."
+Title: "Medication prescription body model"
+Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
+Characteristics: #can-be-target
+
+* medicationPrescriptionHeader 1..1 EHDSLaboratoryReportHeader "Prescription header" """Prescription header data elements"""
+* medicationPrescriptionBody 1..1 EHDSLaboratoryReportBody "Prescription body" """Prescription body data elements"""
+* presentedForm 0..* EHDSAttachment "Presented Form" """Entire prescription as issued. Various formats could be provided, pdf format is recommended."""
+
+
+
+Logical: EHDSMedicationPrescriptionHeader
+Title: "Medication prescription header model"
+Description: "Logical model for medication prescription header."
 Characteristics: #can-be-target
 
 * identifier 1..* Identifier "Business identifier(s) for the prescription"
@@ -15,10 +25,7 @@ Characteristics: #can-be-target
   * ^comment = "No change"
 * patient 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
   * ^comment = "No change (Patient model will be common for all use cases)"
-* presentedForm 0..1 string "Text representation of all relevant parts of the prescription"
-  * ^comment = "Added."
-* category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
-  * ^comment = "Added."
+
 * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
   * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
 * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
@@ -30,10 +37,19 @@ Characteristics: #can-be-target
 
 * status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
   * ^comment = "Added."
+
+
+Logical: EHDSMedicationPrescriptionBody
+Title: "Medication prescription body model"
+Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
+Characteristics: #can-be-target
+
+* category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
+  * ^comment = "Added."
 * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * ^comment = "Added."
-// * statusReasonText 0..1 string "Textual reason for the current status of prescription or reason for change from previous"
-//   * ^comment = "Added."
+* statusReasonText 0..1 string "Textual reason for the current status of prescription or reason for change from previous"
+  * ^comment = "Added."
 * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Presription line for one medication. In many countries, only one line is allowed. In case multiple medications are allowed, all lines need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
