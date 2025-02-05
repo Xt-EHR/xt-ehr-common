@@ -22,7 +22,7 @@ Characteristics: #can-be-target
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
   * documentStatus 1..1 CodeableConcept "A.1.9.3 - Document status" """The status of the document/report. E.g., preliminary, final."""
-    * ^binding.description = "hl7:CompositionStatus, hl7:DiagnosticReportStatus"
+    * ^binding.description = "hl7:DiagnosticReportStatus"
     * ^binding.strength = #preferred
   * period 0..1 Period "A.1.9.4 - Period" """Documented period service. Typically used for searching purposes."""
   * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the report creation."""
