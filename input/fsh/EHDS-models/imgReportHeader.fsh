@@ -22,12 +22,12 @@ Characteristics: #can-be-target
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
   * documentStatus 1..1 CodeableConcept "A.1.9.3 - Document status" """The status of the Hospital discharge report. E.g., preliminary, final."""
-    * ^binding.description = "hl7:CompositionStatus"
+    * ^binding.description = "hl7:DiagnosticReportStatus"
     * ^binding.strength = #preferred
   * period 0..1 Period "A.1.9.4 - Period" """Documented period service. Typically used for searching purposes."""
   * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the report creation."""
-  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, such as "Hospital discharge report", "Laboratory Result Report" etc.. """
-  * eventType 0..* CodeableConcept "A.1.9.7 - Event type" """Categorization of an "event" covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of event types depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses."""
+  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, such as \"Hospital discharge report\", \"Laboratory Result Report\" etc.. """
+  * eventType 0..* CodeableConcept "A.1.9.7 - Event type" """Categorization of an \"event\" covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of event types depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses."""
     * ^binding.description = "LOINC, SNOMED CT, dicom-cid-33-Modality"
     * ^binding.strength = #preferred
   * specialty 0..* CodeableConcept "A.1.9.8 - Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""
@@ -48,5 +48,3 @@ Characteristics: #can-be-target
     * ^binding.description = "OID"
     * ^binding.strength = #preferred
   * accessionNumber 0..1 string "A.1.9.15 - Accession number" """This is an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."""
-//* presentedForm 0..1 EHDSAttachment "A.1.10 - Presented form" """Entire report as issued  pdf format recommended"""
-//* media[x] 0..* EHDSAttachment or EHDSMedia "A.1.11 - Media" """Media attachments."""
