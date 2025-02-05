@@ -6,8 +6,8 @@ Title: "Medication prescription body model"
 Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
-* medicationPrescriptionHeader 1..1 EHDSLaboratoryReportHeader "Prescription header" """Prescription header data elements"""
-* medicationPrescriptionBody 1..1 EHDSLaboratoryReportBody "Prescription body" """Prescription body data elements"""
+* medicationPrescriptionHeader 1..1 EHDSMedicationPrescriptionHeader "Prescription header" """Prescription header data elements"""
+* medicationPrescriptionBody 1..1 EHDSMedicationPrescriptionBody "Prescription body" """Prescription body data elements"""
 * presentedForm 0..* EHDSAttachment "Presented Form" """Entire prescription as issued. Various formats could be provided, pdf format is recommended."""
 
 
