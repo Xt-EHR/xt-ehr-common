@@ -2,7 +2,7 @@
 //Two models in one file for copy-paste ease.
 
 Logical: EHDSMedicationPrescription
-Title: "Medication prescription body model"
+Title: "Medication prescription model"
 Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
