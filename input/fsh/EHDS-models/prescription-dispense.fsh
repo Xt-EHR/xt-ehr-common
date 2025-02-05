@@ -17,26 +17,19 @@ Title: "Medication prescription header model"
 Description: "Logical model for medication prescription header."
 Characteristics: #can-be-target
 
+* subject 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
+  * ^comment = "No change (Patient model will be common for all use cases)"
+
 * identifier 1..* Identifier "Business identifier(s) for the prescription"
   * ^comment = "No change"
-* prescriber 1..1 EHDSHealthProfessional "The person who made the prescription, and who takes the responsibility of the treatment" "Question: would we want to add basic Practicioner model?"
+* author 1..1 EHDSHealthProfessional "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment" "Question: would we want to add basic Practicioner model?"
   * ^comment = "No change"
 * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care practicioner"
   * ^comment = "No change"
-* patient 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
-  * ^comment = "No change (Patient model will be common for all use cases)"
-
-* validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
-  * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
-* validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
-  * ^comment = "No change (A.1.5.8)"
 * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
 * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
-
-* status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
-  * ^comment = "Added."
 
 
 Logical: EHDSMedicationPrescriptionBody
@@ -44,6 +37,12 @@ Title: "Medication prescription body model"
 Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
+* validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
+  * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
+* validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
+  * ^comment = "No change (A.1.5.8)"
+* status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
+  * ^comment = "Added."
 * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * ^comment = "Added."
 * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
