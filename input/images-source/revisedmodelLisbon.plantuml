@@ -187,34 +187,36 @@ EHDSLaboratoryReportBody -u-> LR
 
 ' }
 
-' class "**EHDSImagingReportBody**" as EHDSImagingReportBody {
-'   |_ specimen 0..*   
-'   |_ serviceRequest 0..*   
-'   |_ exposureInformation 0..1   
-'     |_ effectiveDose 0..*   
-'     |_ equivalentDoseInformation 1..1   
-'       |_ equivalentDose 1..1   
-'       |_ tissueType 1..1   
-'   |_ examinationReport 1..1   
-'     |_ modality 1..*   
-'     |_ bodyPart 0..*   
-'       |_ bodyLocation 0..1   
-'       |_ laterality 0..1   
-'     |_ imagingProcedures 0..*   
-'     |_ medication 0..*   
-'     |_ adverseReaction 0..*   
-'     |_ resultData 0..1   
-'       |_ resultText 1..1   
-'       |_ observationResults 0..*   
-'     |_ conclusion 1..1   
-'       |_ impression 1..1   
-'       |_ codedConclusion 0..1   
-'         |_ condition 0..*   
-'   |_ recommendation 0..1   
-'     |_ description 1..1   
-'     |_ carePlan 0..*   
-'   |_ comparisonStudy 0..*   
-' }
+class "**EHDSImagingReportBody**" as IRB {
+  |_ specimen 0..*   
+  |_ serviceRequest 0..*   
+  |_ exposureInformation 0..1   
+    |_ effectiveDose 0..*   
+    |_ equivalentDoseInformation 1..1   
+      |_ equivalentDose 1..1   
+      |_ tissueType 1..1   
+  |_ examinationReport 1..1   
+    |_ modality 1..*   
+    |_ bodyPart 0..*   
+      |_ bodyLocation 0..1   
+      |_ laterality 0..1   
+    |_ imagingProcedures 0..*   
+    |_ medication 0..*   
+    |_ adverseReaction 0..*   
+    |_ resultData 0..1   
+      |_ resultText 1..1   
+      |_ observationResults 0..*   
+    |_ conclusion 1..1   
+      |_ impression 1..1   
+      |_ codedConclusion 0..1   
+        |_ condition 0..*   
+  |_ recommendation 0..1   
+    |_ description 1..1   
+    |_ carePlan 0..*   
+  |_ comparisonStudy 0..*   
+}
+
+IRB -u- IR
 
 ' class "**EHDSImagingReport**" as IR2 {
 '   |_ imagingReportHeader 1..1   
@@ -248,23 +250,6 @@ EHDSLaboratoryReportBody -u-> LR
 '   }
 
 
-' class "**ContentMetadata**" as ContentMetadata {
-'   |_ subject 1..1   
-'   |_ healthInsuranceAndPaymentInformation 0..1   
-'     |_ healthInsuranceCode 0..1   
-'     |_ healthInsuranceName 0..1   
-'     |_ healthInsuranceNumber 0..1   
-'   |_ intendedRecipient 0..*   
-'   |_ authorship 1..*   
-'     |_ author 1..1   
-'     |_ datetime 1..1   
-'   |_ attestation 0..*   
-'     |_ attester 1..1   
-'     |_ datetime 1..1   
-'   |_ legalAuthentication 0..1   
-'     |_ legalAuthenticator 1..1   
-'     |_ datetime 1..1   
-' }
 
 
 ' EHDSLaboratoryReportHeader -u-|> DocumentMetadata : extends
