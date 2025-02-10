@@ -26,3 +26,6 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * receivedDate 0..1 dateTime "C.9.9 - Received date" """Date and time that the material is handed over at the laboratory or specimen collection centre."""
 * subject 0..1 Reference (EHDSPatient or EHDSLocation or EHDSGroup or EHDSDevice or EHDSSubstance) "C.9.10 - Subject" """Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device."""
+* container 0..* Base "C.9.11 - Container" """The container holding the specimen."""
+  * specimenQuantity 0..1 Quantity "C.9.11.1 - Specimen quantity" """Quantity of specimen within container"""
+  * containerDevice 1..1 EHDSDevice "C.9.11.2 - Container device" """The device resource for the the container holding the specimen."""
