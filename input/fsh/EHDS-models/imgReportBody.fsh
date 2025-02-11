@@ -53,7 +53,7 @@ Characteristics: #can-be-target
   * adverseReaction 0..* EHDSAllergyIntolerance "B.1.5.5 - Adverse reaction" """Adverse reactions manifested during imaging investigation."""
   * resultData 0..1 Base "B.1.5.6 - Result data" """Laboratory report result data"""
     * resultText 1..1 Narrative "B.1.5.6.1 - Result text" """Comments and narrative representation of the observation results and findings."""
-    * observationResults 0..* EHDSObservation "B.1.5.6.2 - Observation results" """Observation details (report could consist of multiple observations)"""
+    * observationResults 0..* EHDSObservation "B.1.5.6.2 - Observation results" """Observation details (report could consist of multiple observations)"""
   * conclusion 1..1 Base "B.1.5.7 - Conclusion" """A concise and clinically contextualised summary including interpretation/impression of the diagnostic report."""
     * impression 1..1 Narrative "B.1.5.7.1 - Impression" """Narrative description of the clinical conclusion (impression)."""
     * conditionOrFinding[x] 0..* EHDSCondition or EHDSObservation "B.1.5.7.2 - Condition or finding" """Condition or finding from imaging investigation."""
