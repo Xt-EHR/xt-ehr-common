@@ -8,12 +8,12 @@ Imaging result report could be divided into several parts: document header, body
   {% include imgReport_CIM.svg %}
 </figure>
 
-##### Laboratory Result header
+##### Imaging Result header
 <figure>
   {% include imgReportHdr_CIM.svg %}
 </figure>
 
-##### Laboratory Result body
+##### Imaging Result body
 <figure>
   {% include imgReportBody_CIM.svg %}
 </figure>
