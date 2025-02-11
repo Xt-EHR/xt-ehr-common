@@ -1,7 +1,7 @@
 Logical: EHDSLaboratoryOrder
 //Id: EHDSlaboratoryOrder
-Title: "Laboratory Order"
-Description: """A - EHDS refined base model for Laboratory Order"""
+Title: "Laboratory order"
+Description: """A - EHDS refined base model for Laboratory order"""
 Characteristics: #can-be-target
 
 * laboratoryOrderHeader 1..1 EHDSLaboratoryOrderHeader "A.1 - Laboratory Order header" """Laboratory Order header"""
