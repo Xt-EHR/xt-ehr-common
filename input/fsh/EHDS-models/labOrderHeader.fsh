@@ -1,7 +1,7 @@
 Logical: EHDSLaboratoryOrderHeader
 //Id: EHDSreportHeader
-Title: "Report header model"
-Description: """A.1 - EHDS refined base model for Report header data elements"""
+Title: "Laboratory order header model"
+Description: """A.1 - EHDS refined base model for Laboratory order header data elements"""
 Characteristics: #can-be-target
 
 * subject 1..1 EHDSPatient "A.1.1 - Subject" """Patient/subject information"""
