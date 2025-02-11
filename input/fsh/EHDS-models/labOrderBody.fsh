@@ -1,11 +1,11 @@
 Logical: EHDSLaboratoryOrderBody
 //Id: EHDSlaboratoryOrderBody
-Title: "Laboratory Order body model"
-Description: """B.1 - EHDS refined base model for Laboratory result report body"""
+Title: "Laboratory order body model"
+Description: """B.1 - EHDS refined base model for Laboratory order body"""
 Characteristics: #can-be-target
 
-* orderInformation 0..* Base "B.1.1 - Order information" """Order Information (Laboratory Result Report could respond to multiple test orders)"""
-  * orderId 1..* Identifier "B.1.1.1 - Order Id" """An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."""
+* orderInformation 0..* Base "B.1.1 - Order information" """Order Information"""
+  * orderId 1..* Identifier "B.1.1.1 - Order Id" """An identifier of the laboratory test order."""
   * orderDateAndTime 0..1 dateTime "B.1.1.2 - Order date and time" """Date and time of the order placement."""
   * orderText 0..1 string "B.1.1.3 - Order text" """A verbal description of the order or any supplementary requirements specific to each type of order, if they cannot be expressed formally."""
   * orderPlacer 0..1 EHDSHealthProfessional "B.1.1.3 - Order placer" """The health professional identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number. In case when order placer is not a health professional, e.g. by patients themselves where applicable, appropriate personal identifier should be used. """
