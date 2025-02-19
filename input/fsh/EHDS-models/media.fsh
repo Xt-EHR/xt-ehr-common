@@ -26,3 +26,4 @@ Characteristics: #can-be-target
 * device 0..1 Reference(EHDSDevice) "C.14.10 - Device" """The device used to collect the media."""
 * content 1..1 EHDSAttachment "C.14.11 - Content" """The actual content of the media - inline or by direct reference to the media source file."""
 * note 0..* Narrative "C.14.12 - Note" """Comments made about the media by the performer, subject or other participants."""
+* performer 0..* Reference (EHDSHealthProfessional or EHDSOrganization) "C.14.13 - Performer" """Performer of the imaging acquisition process. """
