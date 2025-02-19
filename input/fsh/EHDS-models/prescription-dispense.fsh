@@ -1,13 +1,25 @@
 // Keep in sync with HL7 Europe / IHE.
 
+EHDSMedicationDispenseHeader
+Title: "Medication dispense header"
+Description: "Metadata elements for a header of medication dispense or dispense decline."
+Parent: EHDSCommonHeader
+Characteristics: #can-be-target
+* subject ^short = "Patient who the medication was prescribed to."
+* authorship.author ^short = "The dispenser or the person responsible for declining the request."
+* authorship.dateTime ^short = "The time of recording the dispense or declining the request."
+* status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'"
+
+
 Logical: EHDSDispenseDecline
-Title: "Dispense declination"
-Description: "Statement about declining the dispense request (prescription), usually recorder in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
+Title: "Dispense decline"
+Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
 Characteristics: #can-be-target
 
-* medicationDispenseHeader 1..1 EHDSCommonHeader "..."
-* relatedRequest 1..* EHDSMedicationPrescription "The prescription or prescription line that was refused to perform by the dispenser"
-* reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispense"
+* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense decline."
+* relatedRequest 1..* EHDSMedicationPrescription "The single-line prescription or prescription line item that was declined by the dispenser" "TODO Prescription when oneliner, item when multiple"
+* reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
+* comment 0..1 string "Additional information about why the dispensation was declined."
 
 
 Logical: EHDSMedicationPrescription
