@@ -1,37 +1,54 @@
 // Keep in sync with HL7 Europe / IHE.
 //Two models in one file for copy-paste ease.
 
-
 Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
-Description: "Logical model for medication prescription. A prescription contains one or more prescription items."
+Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
+
+* medicationPrescriptionHeader 1..1 EHDSMedicationPrescriptionHeader "Prescription header" """Prescription header data elements"""
+* medicationPrescriptionBody 1..1 EHDSMedicationPrescriptionBody "Prescription body" """Prescription body data elements"""
+* presentedForm 0..* EHDSAttachment "Presented Form" """Entire prescription as issued. Various formats could be provided, pdf format is recommended."""
+
+
+
+Logical: EHDSMedicationPrescriptionHeader
+Title: "Medication prescription header model"
+Description: "Logical model for medication prescription header."
+Characteristics: #can-be-target
+
+* subject 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
+  * ^comment = "No change (Patient model will be common for all use cases)"
 
 * identifier 1..* Identifier "Business identifier(s) for the prescription"
   * ^comment = "No change"
-* prescriber 1..1 EHDSHealthProfessional "The person who made the prescription, and who takes the responsibility of the treatment" "Question: would we want to add basic Practicioner model?"
+* author 1..1 EHDSHealthProfessional "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment" "Question: would we want to add basic Practicioner model?"
   * ^comment = "No change"
 * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care practicioner"
   * ^comment = "No change"
-* patient 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
-  * ^comment = "No change (Patient model will be common for all use cases)"
-* category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
-  * ^comment = "Added."
-* validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
-  * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
-* validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
-  * ^comment = "No change (A.1.5.8)"
 * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
 * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
 
+
+Logical: EHDSMedicationPrescriptionBody
+Title: "Medication prescription body model"
+Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
+Characteristics: #can-be-target
+
+* validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
+  * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
+* validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
+  * ^comment = "No change (A.1.5.8)"
 * status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
+  * ^comment = "Added."
+* category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * ^comment = "Added."
 * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * ^comment = "Added."
-// * statusReasonText 0..1 string "Textual reason for the current status of prescription or reason for change from previous"
-//   * ^comment = "Added."
+* statusReasonText 0..1 string "Textual reason for the current status of prescription or reason for change from previous"
+  * ^comment = "Added."
 * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Presription line for one medication. In many countries, only one line is allowed. In case multiple medications are allowed, all lines need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
