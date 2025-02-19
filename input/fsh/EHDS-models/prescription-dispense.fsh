@@ -1,5 +1,14 @@
 // Keep in sync with HL7 Europe / IHE.
-//Two models in one file for copy-paste ease.
+
+Logical: EHDSDispenseDecline
+Title: "Dispense declination"
+Description: "Statement about declining the dispense request (prescription), usually recorder in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
+Characteristics: #can-be-target
+
+* medicationDispenseHeader 1..1 EHDSCommonHeader "..."
+* relatedRequest 1..* EHDSMedicationPrescription "The prescription or prescription line that was refused to perform by the dispenser"
+* reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispense"
+
 
 Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
