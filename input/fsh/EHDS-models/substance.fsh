@@ -14,5 +14,3 @@ Characteristics: #can-be-target
 * ingredients 0..* Base "C.28.6 - Ingredients" """Composition information about the substance"""
   * quantity 0..1 Ratio "C.28.6.1 - Quantity" """The amount of the ingredient in the substance - a concentration ratio."""
   * substance 1..1 Reference (EHDSSubstance) "C.28.6.2 - Substance" """Another substance that is a component of this substance."""
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
