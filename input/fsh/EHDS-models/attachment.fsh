@@ -16,3 +16,7 @@ Characteristics: #can-be-target
 * hash 0..1 base64Binary "C.7.6 - Hash" """The calculated hash of the data using SHA-1. Represented using base64."""
 * title 0..1 string "C.7.7 - Title" """A label or set of text to display in place of the data."""
 * creationDate 0..1 dateTime "C.7.8 - Creation date" """The date that the attachment was created."""
+* height 0..1 unsignedInt "C.7.9 - Height" """Height of the image in pixels (photo/video)"""
+* width 0..1 unsignedInt "C.7.10 - Width" """Width of the image in pixels (photo/video)"""
+* frames 0..1 unsignedInt "C.7.11 - Frames" """Number of frames if > 1 (photo)"""
+* duration 0..1 decimal "C.7.12 - Duration" """Length in seconds (audio / video)"""
