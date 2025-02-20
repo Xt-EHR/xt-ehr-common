@@ -1,0 +1,586 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportBody> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSLaboratoryReportBody"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition EHDSLaboratoryReportBody</b></p><a name=\"EHDSLaboratoryReportBody\"> </a><a name=\"hcEHDSLaboratoryReportBody\"> </a><a name=\"EHDSLaboratoryReportBody-en-US\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody\" title=\"B.1 - EEHRxF refined base model for Laboratory result report body\">EHDSLaboratoryReportBody</a><a name=\"EHDSLaboratoryReportBody\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/types.html#Base\">Base</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Laboratory report body model<br/><span style=\"font-weight:bold\">Instances of this logical model can be the target of a Reference</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.orderInformation\" title=\"Order Information (Laboratory Result Report could respond to multiple test orders)\">orderInformation</a><a name=\"EHDSLaboratoryReportBody.orderInformation\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Base</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.1 - Order information<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.orderInformation.orderId\" title=\"An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders.\">orderId</a><a name=\"EHDSLaboratoryReportBody.orderInformation.orderId\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.1.1 - Order Id<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.orderInformation.orderDateAndTime\" title=\"Date and time of the order placement.\">orderDateAndTime</a><a name=\"EHDSLaboratoryReportBody.orderInformation.orderDateAndTime\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.1.2 - Order date and time</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.orderInformation.orderPlacer\" title=\"The health professional identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number. In case when order placer is not a health professional, e.g. by patients themselves where applicable, appropriate personal identifier should be used. \">orderPlacer</a><a name=\"EHDSLaboratoryReportBody.orderInformation.orderPlacer\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSHealthProfessional.html\">EHDSHealthProfessional</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.1.3 - Order placer</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.orderInformation.orderReasonText\" title=\"An explanation or justification for why this service is being requested in textual form.\">orderReasonText</a><a name=\"EHDSLaboratoryReportBody.orderInformation.orderReasonText\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/narrative.html#Narrative\">Narrative</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.1.4 - Order reason text<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.orderInformation.orderReason\" title=\"An explanation or justification for why this service is being requested in coded form. \">orderReason</a><a name=\"EHDSLaboratoryReportBody.orderInformation.orderReason\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/references.html\">Reference</a>(<a href=\"http://hl7.org/fhir/R5/condition.html\">Condition</a> | <a href=\"http://hl7.org/fhir/R5/observation.html\">Observation</a>)</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.1.5 - Order reason<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation\" title=\"Additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations. In laboratory ordering these are typically referred to as 'ask at order entry questions (AOEs).' This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example, reporting the amount of inspired oxygen for blood gas measurements.\">supportingInformation</a><a name=\"EHDSLaboratoryReportBody.supportingInformation\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Base</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2 - Supporting information<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation.observation\" title=\"Clinical findings and other observations.\">observation</a><a name=\"EHDSLaboratoryReportBody.supportingInformation.observation\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSObservation.html\">EHDSObservation</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2.1 - Observation<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation.condition\" title=\"Condition that may influence the service or result interpretation.\">condition</a><a name=\"EHDSLaboratoryReportBody.supportingInformation.condition\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSCondition.html\">EHDSCondition</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2.2 - Condition<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation.medicationAdministration\" title=\"Medication adninistered before ordering the service.\">medicationAdministration</a><a name=\"EHDSLaboratoryReportBody.supportingInformation.medicationAdministration\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSMedicationAdministration.html\">EHDSMedicationAdministration</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2.3 - Medication Administration<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse\" title=\"A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population\">sexForClinicalUse</a><a name=\"EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2.4 - Sex for clinical use<br/><span style=\"font-weight:bold\">Binding Description (No ValueSet): </span> (<a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\">preferred</a>): HL7 sex-parameter-for-clinical-use<br/><br/><br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation.vaccination\" title=\"Vaccination history of the patient. \">vaccination</a><a name=\"EHDSLaboratoryReportBody.supportingInformation.vaccination\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSImmunization.html\">EHDSImmunization</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2.5 - Vaccination<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation\" title=\"Any other type of relevant supporting information\">otherSupportingInformation</a><a name=\"EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/resource.html\">Resource</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.2.6 - Other supporting information<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.specimen\" title=\"Specimen information\">specimen</a><a name=\"EHDSLaboratoryReportBody.specimen\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSSpecimen.html\">EHDSSpecimen</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.3 - Specimen<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.serviceRequest\" title=\"Specification of requested service or services\">serviceRequest</a><a name=\"EHDSLaboratoryReportBody.serviceRequest\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSServiceRequest.html\">EHDSServiceRequest</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.4 - Service request<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.resultData\" title=\"Laboratory report result data\">resultData</a><a name=\"EHDSLaboratoryReportBody.resultData\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Base</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.5 - Result data</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.resultData.narrativeReport\" title=\"Entire report (textual summary inside the laboratory result report document) as issued by the laboratory.\">narrativeReport</a><a name=\"EHDSLaboratoryReportBody.resultData.narrativeReport\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/narrative.html#Narrative\">Narrative</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.5.1 - Narrative report</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations\" title=\"Comments, such as a textual interpretation or advice accompanying the result report, for example.\">commentsInterpretationAndRecommendations</a><a name=\"EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/narrative.html#Narrative\">Narrative</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.5.2 - Comments, interpretation and recommendations<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryReportBody-definitions.html#EHDSLaboratoryReportBody.resultData.laboratoryTestResults\" title=\"Observation details (report could consist of multiple observations)\">laboratoryTestResults</a><a name=\"EHDSLaboratoryReportBody.resultData.laboratoryTestResults\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSLaboratoryObservation.html\">EHDSLaboratoryObservation</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B.1.5.3 - Laboratory test results<br/></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "can-be-target"
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportBody"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EHDSLaboratoryReportBody"] ; # 
+  fhir:title [ fhir:v "Laboratory report body model"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-02-19T09:10:43+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Xt-EHR"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Xt-EHR" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://Xt-EHR.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "B.1 - EEHRxF refined base model for Laboratory result report body"] ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportBody"^^xsd:anyURI] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://hl7.org/fhir/StructureDefinition/Base"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/Base>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "5.0.0"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody" ] ;
+       fhir:short [ fhir:v "Laboratory report body model" ] ;
+       fhir:definition [ fhir:v "B.1 - EEHRxF refined base model for Laboratory result report body" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:isModifier [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation" ] ;
+       fhir:short [ fhir:v "B.1.1 - Order information" ] ;
+       fhir:definition [ fhir:v "Order Information (Laboratory Result Report could respond to multiple test orders)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Base"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderId" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderId" ] ;
+       fhir:short [ fhir:v "B.1.1.1 - Order Id" ] ;
+       fhir:definition [ fhir:v "An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderId" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderDateAndTime" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderDateAndTime" ] ;
+       fhir:short [ fhir:v "B.1.1.2 - Order date and time" ] ;
+       fhir:definition [ fhir:v "Date and time of the order placement." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderDateAndTime" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderPlacer" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderPlacer" ] ;
+       fhir:short [ fhir:v "B.1.1.3 - Order placer" ] ;
+       fhir:definition [ fhir:v "The health professional identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number. In case when order placer is not a health professional, e.g. by patients themselves where applicable, appropriate personal identifier should be used. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderPlacer" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReasonText" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReasonText" ] ;
+       fhir:short [ fhir:v "B.1.1.4 - Order reason text" ] ;
+       fhir:definition [ fhir:v "An explanation or justification for why this service is being requested in textual form." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReasonText" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReason" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReason" ] ;
+       fhir:short [ fhir:v "B.1.1.5 - Order reason" ] ;
+       fhir:definition [ fhir:v "An explanation or justification for why this service is being requested in coded form." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReason" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Condition"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+         ] [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+         ] )
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation" ] ;
+       fhir:short [ fhir:v "B.1.2 - Supporting information" ] ;
+       fhir:definition [ fhir:v "Additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations. In laboratory ordering these are typically referred to as 'ask at order entry questions (AOEs).' This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example, reporting the amount of inspired oxygen for blood gas measurements." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Base"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.observation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.observation" ] ;
+       fhir:short [ fhir:v "B.1.2.1 - Observation" ] ;
+       fhir:definition [ fhir:v "Clinical findings and other observations." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.observation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.condition" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.condition" ] ;
+       fhir:short [ fhir:v "B.1.2.2 - Condition" ] ;
+       fhir:definition [ fhir:v "Condition that may influence the service or result interpretation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.condition" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.medicationAdministration" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.medicationAdministration" ] ;
+       fhir:short [ fhir:v "B.1.2.3 - Medication Administration" ] ;
+       fhir:definition [ fhir:v "Medication adninistered before ordering the service." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.medicationAdministration" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse" ] ;
+       fhir:short [ fhir:v "B.1.2.4 - Sex for clinical use" ] ;
+       fhir:definition [ fhir:v "A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 sex-parameter-for-clinical-use" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.vaccination" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.vaccination" ] ;
+       fhir:short [ fhir:v "B.1.2.5 - Vaccination" ] ;
+       fhir:definition [ fhir:v "Vaccination history of the patient." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.vaccination" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImmunization"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation" ] ;
+       fhir:short [ fhir:v "B.1.2.6 - Other supporting information" ] ;
+       fhir:definition [ fhir:v "Any other type of relevant supporting information" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Resource"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.specimen" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.specimen" ] ;
+       fhir:short [ fhir:v "B.1.3 - Specimen" ] ;
+       fhir:definition [ fhir:v "Specimen information" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.specimen" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.serviceRequest" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.serviceRequest" ] ;
+       fhir:short [ fhir:v "B.1.4 - Service request" ] ;
+       fhir:definition [ fhir:v "Specification of requested service or services" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.serviceRequest" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData" ] ;
+       fhir:short [ fhir:v "B.1.5 - Result data" ] ;
+       fhir:definition [ fhir:v "Laboratory report result data" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Base"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData.narrativeReport" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.narrativeReport" ] ;
+       fhir:short [ fhir:v "B.1.5.1 - Narrative report" ] ;
+       fhir:definition [ fhir:v "Entire report (textual summary inside the laboratory result report document) as issued by the laboratory." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.narrativeReport" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations" ] ;
+       fhir:short [ fhir:v "B.1.5.2 - Comments, interpretation and recommendations" ] ;
+       fhir:definition [ fhir:v "Comments, such as a textual interpretation or advice accompanying the result report, for example." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData.laboratoryTestResults" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.laboratoryTestResults" ] ;
+       fhir:short [ fhir:v "B.1.5.3 - Laboratory test results" ] ;
+       fhir:definition [ fhir:v "Observation details (report could consist of multiple observations)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.laboratoryTestResults" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody" ] ;
+       fhir:short [ fhir:v "Laboratory report body model" ] ;
+       fhir:definition [ fhir:v "B.1 - EEHRxF refined base model for Laboratory result report body" ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation" ] ;
+       fhir:short [ fhir:v "B.1.1 - Order information" ] ;
+       fhir:definition [ fhir:v "Order Information (Laboratory Result Report could respond to multiple test orders)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Base"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderId" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderId" ] ;
+       fhir:short [ fhir:v "B.1.1.1 - Order Id" ] ;
+       fhir:definition [ fhir:v "An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Identifier"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderDateAndTime" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderDateAndTime" ] ;
+       fhir:short [ fhir:v "B.1.1.2 - Order date and time" ] ;
+       fhir:definition [ fhir:v "Date and time of the order placement." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderPlacer" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderPlacer" ] ;
+       fhir:short [ fhir:v "B.1.1.3 - Order placer" ] ;
+       fhir:definition [ fhir:v "The health professional identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number. In case when order placer is not a health professional, e.g. by patients themselves where applicable, appropriate personal identifier should be used. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReasonText" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReasonText" ] ;
+       fhir:short [ fhir:v "B.1.1.4 - Order reason text" ] ;
+       fhir:definition [ fhir:v "An explanation or justification for why this service is being requested in textual form." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReason" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.orderInformation.orderReason" ] ;
+       fhir:short [ fhir:v "B.1.1.5 - Order reason" ] ;
+       fhir:definition [ fhir:v "An explanation or justification for why this service is being requested in coded form. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Condition"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+         ] [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+         ] )
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation" ] ;
+       fhir:short [ fhir:v "B.1.2 - Supporting information" ] ;
+       fhir:definition [ fhir:v "Additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations. In laboratory ordering these are typically referred to as 'ask at order entry questions (AOEs).' This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example, reporting the amount of inspired oxygen for blood gas measurements." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Base"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.observation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.observation" ] ;
+       fhir:short [ fhir:v "B.1.2.1 - Observation" ] ;
+       fhir:definition [ fhir:v "Clinical findings and other observations." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.condition" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.condition" ] ;
+       fhir:short [ fhir:v "B.1.2.2 - Condition" ] ;
+       fhir:definition [ fhir:v "Condition that may influence the service or result interpretation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.medicationAdministration" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.medicationAdministration" ] ;
+       fhir:short [ fhir:v "B.1.2.3 - Medication Administration" ] ;
+       fhir:definition [ fhir:v "Medication adninistered before ordering the service." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.sexForClinicalUse" ] ;
+       fhir:short [ fhir:v "B.1.2.4 - Sex for clinical use" ] ;
+       fhir:definition [ fhir:v "A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 sex-parameter-for-clinical-use" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.vaccination" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.vaccination" ] ;
+       fhir:short [ fhir:v "B.1.2.5 - Vaccination" ] ;
+       fhir:definition [ fhir:v "Vaccination history of the patient. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImmunization"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.supportingInformation.otherSupportingInformation" ] ;
+       fhir:short [ fhir:v "B.1.2.6 - Other supporting information" ] ;
+       fhir:definition [ fhir:v "Any other type of relevant supporting information" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Resource"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.specimen" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.specimen" ] ;
+       fhir:short [ fhir:v "B.1.3 - Specimen" ] ;
+       fhir:definition [ fhir:v "Specimen information" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.serviceRequest" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.serviceRequest" ] ;
+       fhir:short [ fhir:v "B.1.4 - Service request" ] ;
+       fhir:definition [ fhir:v "Specification of requested service or services" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData" ] ;
+       fhir:short [ fhir:v "B.1.5 - Result data" ] ;
+       fhir:definition [ fhir:v "Laboratory report result data" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Base"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData.narrativeReport" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.narrativeReport" ] ;
+       fhir:short [ fhir:v "B.1.5.1 - Narrative report" ] ;
+       fhir:definition [ fhir:v "Entire report (textual summary inside the laboratory result report document) as issued by the laboratory." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.commentsInterpretationAndRecommendations" ] ;
+       fhir:short [ fhir:v "B.1.5.2 - Comments, interpretation and recommendations" ] ;
+       fhir:definition [ fhir:v "Comments, such as a textual interpretation or advice accompanying the result report, for example." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Narrative"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryReportBody.resultData.laboratoryTestResults" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryReportBody.resultData.laboratoryTestResults" ] ;
+       fhir:short [ fhir:v "B.1.5.3 - Laboratory test results" ] ;
+       fhir:definition [ fhir:v "Observation details (report could consist of multiple observations)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
