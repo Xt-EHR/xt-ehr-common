@@ -1,5 +1,26 @@
 // Keep in sync with HL7 Europe / IHE.
-//Two models in one file for copy-paste ease.
+
+Logical: EHDSMedicationDispenseHeader
+Title: "Medication dispense header"
+Description: "Metadata elements for a header of medication dispense or dispense decline."
+Parent: EHDSCommonHeader
+Characteristics: #can-be-target
+* subject ^short = "Patient who the medication was prescribed to."
+* authorship.author ^short = "The dispenser or the person responsible for declining the request."
+* authorship.datetime ^short = "The time of recording the dispense or declining the request."
+* status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'"
+
+
+Logical: EHDSDispenseDecline
+Title: "Dispense decline"
+Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
+Characteristics: #can-be-target
+
+* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense decline."
+* relatedRequest 1..* EHDSMedicationPrescription "The single-line prescription or prescription line item that was declined by the dispenser" "TODO Prescription when oneliner, item when multiple"
+* reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
+* comment 0..1 string "Additional information about why the dispensation was declined."
+
 
 Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
@@ -10,22 +31,20 @@ Characteristics: #can-be-target
 * medicationPrescriptionBody 1..1 EHDSMedicationPrescriptionBody "Prescription body" """Prescription body data elements"""
 * presentedForm 0..* EHDSAttachment "Presented Form" """Entire prescription as issued. Various formats could be provided, pdf format is recommended."""
 
-
-
 Logical: EHDSMedicationPrescriptionHeader
+Parent: EHDSCommonHeader
 Title: "Medication prescription header model"
 Description: "Logical model for medication prescription header."
 Characteristics: #can-be-target
 
-* subject 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered" "Question: would we want to add basic Patient model?"
-  * ^comment = "No change (Patient model will be common for all use cases)"
-
+* subject ^short = "The person for whom the medication is prescribed/ordered"
 * identifier 1..* Identifier "Business identifier(s) for the prescription"
-  * ^comment = "No change"
-* author 1..1 EHDSHealthProfessional "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment" "Question: would we want to add basic Practicioner model?"
-  * ^comment = "No change"
-* issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care practicioner"
-  * ^comment = "No change"
+* authorship.author ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment"
+// Not at all sure about this
+* authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional"
+// * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care professional"
+//  * ^comment = "No change"
+* status ^short = "Status of the prescription, this should not be status of treatment"
 * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
 * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
@@ -41,8 +60,6 @@ Characteristics: #can-be-target
   * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
 * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
   * ^comment = "No change (A.1.5.8)"
-* status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
-  * ^comment = "Added."
 * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * ^comment = "Added."
 * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
