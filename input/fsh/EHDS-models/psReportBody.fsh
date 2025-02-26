@@ -31,7 +31,7 @@ Characteristics: #can-be-target
     * procedures 1..* EHDSProcedure "B.1.3.4.2 - Procedures" """Major procedures."""
   * functionalStatusSection 0..1 Base "B.1.3.5 - Functional status section" """Funtional assessment section"""
     * subsectionNarative 0..1 string "B.1.3.5.1 - Subsection narative" """Narative content of the subsection. """
-    * functionalStatusAssessment 0..* EHDSFunctionalStatusAssessment "B.1.3.5.2 - Functional status assessment" """A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition."""
+    * functionalStatusAssessment 0..* EHDSFunctionalStatus "B.1.3.5.2 - Functional status assessment" """A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition."""
 * medicationSummary 1..1 Base "B.1.4 - Medication summary" """Medication summary section."""
   * sectionNarative 0..1 string "B.1.4.1 - Section narative" """Narative content of the section. """
   * currentAndRelevantPastMedicines 1..* EHDSMedicationAdministration "B.1.4.2 - Current and relevant past medicines" """Relevant prescribed medicines whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not, or medicines that influence current health status or are relevant to a clinical decision."""
@@ -64,7 +64,7 @@ Characteristics: #can-be-target
       * ^binding.strength = #preferred
 * results 0..1 Base "B.1.8 - Results" """Results section"""
   * sectionNarative 0..1 string "B.1.8.1 - Section narative" """Narative content of the section. """
-  * resultObservation[x] 0..* EHDSObservation or LaboratoryObservation "B.1.8.2 - Result observation" """Observation results pertaining to the subject of care's health condition and which might have impact on future treatments"""
+  * resultObservation[x] 0..* EHDSObservation or EHDSLaboratoryObservation "B.1.8.2 - Result observation" """Observation results pertaining to the subject of care's health condition and which might have impact on future treatments"""
 * planOfCare 0..1 Base "B.1.9 - Plan of Care" """Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries"""
   * description 0..1 string "B.1.9.1 - Description" """Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient.In the future it is expected that this Section could be provided in a structured and coded format."""
   * planOfCareEntry 0..* EHDSCarePlan "B.1.9.2 - Plan of Care Entry" """Describes the intention of how one or more practitioners intend to deliver care for a particular patient for a period of time, possibly limited to care for a specific condition or set of conditions."""
