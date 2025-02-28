@@ -67,3 +67,6 @@ Characteristics: #can-be-target
   * observationInterpretation 0..* CodeableConcept "C.10.19.7 - Observation interpretation" """Information about reference intervals and result interpretation."""
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
+* status 1..1 CodeableConcept "C.10.19.8 - Status" """The status of the result value."""
+  * ^binding.description = "HL7 Observation status"
+  * ^binding.strength = #preferred"
