@@ -69,4 +69,4 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
 * status 1..1 CodeableConcept "C.10.19.8 - Status" """The status of the result value."""
   * ^binding.description = "HL7 Observation status"
-  * ^binding.strength = #preferred"
+  * ^binding.strength = #preferred
