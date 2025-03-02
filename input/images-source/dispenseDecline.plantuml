@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+
+class "**DispenseDecline**" as eD{
+  EHDSDispenseDecline
+}
+
+eD --> Patient: "1..1"
+eD --> Dispenser: "1..1"
+eD --> Item: "1..*"
+
+
+class "**Dispenser**" as Dispenser{
+  EHDSHealthProfessional   
+  
+}
+
+class "**Patient**" as Patient{
+  EHDSPatient   
+
+}
+
+class "**Prescription (item)**" as Item{ 
+  EHDSMedicationPrescription
+}
+
+
+@enduml

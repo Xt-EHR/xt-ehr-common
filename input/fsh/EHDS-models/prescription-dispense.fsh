@@ -5,8 +5,9 @@ Title: "Medication dispense header"
 Description: "Metadata elements for a header of medication dispense or dispense decline."
 Parent: EHDSCommonHeader
 Characteristics: #can-be-target
+* identifier 1..* Identifier "Business identifier(s) for the dispense"
 * subject ^short = "Patient who the medication was prescribed to."
-* authorship.author ^short = "The dispenser or the person responsible for declining the request."
+* authorship.author ^short = "The person who dispensed the product, and takes the responsibility of the dispensation or declining the dispense."
 * authorship.datetime ^short = "The time of recording the dispense or declining the request."
 * status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'"
 
@@ -21,6 +22,38 @@ Characteristics: #can-be-target
 * reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
 * comment 0..1 string "Additional information about why the dispensation was declined."
 
+
+Logical: EHDSMedicationDispense
+Title: "Medication dispensation model"
+Description: "Logical model for medication dispensation (based on request or independently)"
+Characteristics: #can-be-target
+
+* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense"
+* receiver[x] 0..1 EHDSPatient "Identification of the person who received the dispensed medication, especially when it was not the patient"
+  * ^comment = "Added"
+* relatedRequest 0..* Reference(EHDSMedicationPrescription) "Prescription/request/order the dispense is related to"
+  * ^comment = "No change"
+* medication 1..1 EHDSMedication "Exact dispensed product"
+  * ^comment = "No change"
+* dispensedQuantity 1..1 Quantity "Number of dispensed packages if the pack size is known, or number of smaller items/units"
+  * ^comment = "No change"
+* timeOfDispensation 1..1 dateTime "Date and time of dispensation"
+  * ^comment = "No change"
+* substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
+  * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
+  * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
+  * reason 0..* CodeableConcept "Reason why the substitution was made"
+  * ^comment = "No change but subelements added"
+* status 1..1 CodeableConcept "Status of the dispensation"
+  * ^comment = "Added"
+* statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of dispensation, for example the reason why the dispensation was made invalid"
+  * ^comment = "Added"
+//* statusReasonText 0..1 string "Textual reason for the current status of dispensation"
+//  * ^comment = "Added"
+* dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
+  * ^comment = "Added"
+* comment 0..* string "Additional information or comments"
+  * ^comment = "Added."
 
 Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
@@ -110,40 +143,5 @@ Characteristics: #can-be-target
     * ^comment = "Added."
 
 
-Logical: EHDSMedicationDispense
-Title: "Medication dispensation model"
-Description: "Logical model for medication dispensation (based on request or independently)"
-Characteristics: #can-be-target
 
-* identifier 0..* Identifier "Identifier for the dispense"
-  * ^comment = "Not explicitly in eHN guidelines"
-* patient 1..1 EHDSPatient "The person for whom the medication is prescribed/ordered"
-  * ^comment = "No change"
-* receiver[x] 0..1 EHDSPatient "Identification of the person who received the dispensed medication, especially when it was not the patient"
-  * ^comment = "Added"
-* dispenser[x] 1..1 EHDSHealthProfessional or EHDSOrganization or EHDSDevice "The person who dispensed the product, and takes the responsibility of the dispensation"
-  * ^comment = "Added device. Organisation is in eHN guidelines, but probably meant in combination with the pharmacist"
-* relatedRequest 0..* Reference(EHDSMedicationPrescription) "Prescription/request/order the dispense is related to"
-  * ^comment = "No change"
-* medication 1..1 EHDSMedication "Exact dispensed product"
-  * ^comment = "No change"
-* dispensedQuantity 1..1 Quantity "Number of dispensed packages if the pack size is known, or number of smaller items/units"
-  * ^comment = "No change"
-* timeOfDispensation 1..1 dateTime "Date and time of dispensation"
-  * ^comment = "No change"
-* substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
-  * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
-  * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
-  * reason 0..* CodeableConcept "Reason why the substitution was made"
-  * ^comment = "No change but subelements added"
-* status 1..1 CodeableConcept "Status of the dispensation"
-  * ^comment = "Added"
-* statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of dispensation, for example the reason why the dispensation was made invalid"
-  * ^comment = "Added"
-//* statusReasonText 0..1 string "Textual reason for the current status of dispensation"
-//  * ^comment = "Added"
-* dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
-  * ^comment = "Added"
-* comment 0..* string "Additional information or comments"
-  * ^comment = "Added."
 
