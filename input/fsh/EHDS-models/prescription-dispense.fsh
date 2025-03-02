@@ -5,11 +5,11 @@ Title: "Medication dispense header"
 Description: "Metadata elements for a header of medication dispense or dispense decline."
 Parent: EHDSCommonHeader
 Characteristics: #can-be-target
-* identifier 1..* Identifier "Business identifier(s) for the dispense"
-* subject ^short = "Patient who the medication was prescribed to."
-* authorship.author ^short = "The person who dispensed the product, and takes the responsibility of the dispensation or declining the dispense."
-* authorship.datetime ^short = "The time of recording the dispense or declining the request."
-* status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'"
+* identifier 1..* Identifier "Business identifier(s) for the dispense. [Used for searching]"
+* subject ^short = "Patient who the medication was prescribed to. [Used for searching]"
+* authorship.author ^short = "The person who dispensed the product, and takes the responsibility of the dispensation or declining the dispense. [Used for searching]"
+* authorship.datetime ^short = "The time of recording the dispense or declining the request. [Used for searching]"
+* status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'. [Used for searching]"
 
 
 Logical: EHDSDispenseDecline
@@ -70,14 +70,14 @@ Title: "Medication prescription header model"
 Description: "Logical model for medication prescription header."
 Characteristics: #can-be-target
 
-* subject ^short = "The person for whom the medication is prescribed/ordered"
-* identifier 1..* Identifier "Business identifier(s) for the prescription"
-* authorship.author ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment"
+* subject ^short = "The person for whom the medication is prescribed/ordered. [Used for searching]"
+* identifier 1..* Identifier "Business identifier(s) for the prescription. [Used for searching]"
+* authorship.author ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment. [Used for searching]"
 // Not at all sure about this
-* authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional"
+* authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
 // * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care professional"
 //  * ^comment = "No change"
-* status ^short = "Status of the prescription, this should not be status of treatment"
+* status ^short = "Status of the prescription, this should not be status of treatment. [Used for searching]"
 * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
 * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
@@ -89,9 +89,9 @@ Title: "Medication prescription body model"
 Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
-* validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate"
+* validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate. [Used for searching]"
   * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
-* validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date."
+* validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
   * ^comment = "No change (A.1.5.8)"
 * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * ^comment = "Added."
