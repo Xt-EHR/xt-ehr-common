@@ -30,6 +30,7 @@ Characteristics: #can-be-target
 
 * header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense"
 * dispensingOrganizationOrDevice[x] 0..* EHDSOrganization or EHDSLocation or EHDSDevice "Dispensing organization or device"
+* dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient "Identification of the person who received the dispensed medication, especially when it was not the patient"
   * ^comment = "Added"
 * relatedRequest 0..* Reference(EHDSMedicationPrescription) "Prescription/request/order the dispense is related to"
