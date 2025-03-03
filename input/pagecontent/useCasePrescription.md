@@ -1,24 +1,39 @@
 ### Information Models
 
-Components of a prescriptions and its representation as EHDS information models:
+#### EHDS information models for **ePrescription**:
+
+Components of a prescription and their representation as EHDS information models:
 <figure>
   {% include prescription.svg %}
 </figure>
 
-EHDS information models for **ePrescription**:
 - Prescription: [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription.html)
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
 - Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
 
-EHDS information models for **eDispensation**:
-- Dispensation: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense.html)
+#### EHDS information models for **eDispensation**:
+
+- Dispense: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense.html)
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
 - Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
 
+Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.
+
+Components of **declining a dispense** and their representation as EHDS information models:
+<figure>
+  {% include dispenseDecline.svg %}
+</figure> 
+
+- DispenseDecline: [EHDSDispenseDecline](StructureDefinition-EHDSDispenseDecline.html)
+- Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
+- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
+- Prescription (item): [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription.html)
+
+Dispense can be declined for the whole prescription or just for a prescription item.
 
 ### FHIR Implementation Guide
 

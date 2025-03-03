@@ -1,11 +1,13 @@
 ### Introduction
-This implementation guide includes information models created in [Xt-EHR project](https://www.xt-ehr.eu/work-packages). Information models (or logical data models) are the basis for designing the EHDS data exchange format (EEHRxF).  
+This implementation guide includes logical information models created in [Xt-EHR project](https://www.xt-ehr.eu/work-packages). These models are the basis for designing the EHDS data exchange format (EEHRxF).  
 
 
 ### Specification
-Xt-EHR Commons IG is a base for all the other implementation guides created in Xt-EHR project. 
-FHIR Implementation Guides are created in cooperation with other EU projects working on EHDS implementation (please find the links under specific use cases).  
-Information Models IG should be used as a basis for all the use cases to make sure common data objects (patient, medication, etc) are modelled in a consistent way. Use case specific FHIR implementation guides shall include mappings to information models.  
+This guide includes EHDS models for all the priority categories, and many of the models are shared between use cases.
+
+HL7 FHIR Implementation Guides for the EEHRxF are created in cooperation with other EU projects working on EHDS implementation (please find the links under specific use cases).  
+
+Logical Information Models IG should be used as a basis for all the use cases to make sure common data objects (patient, medication, etc) are modelled in a consistent way. Use case specific FHIR implementation guides shall include mappings to the models.  
 
 The principles of metada management, including information models, are described in [Xt-EHR Metadata IG](https://xt-ehr.github.io/xt-ehr-metadata/).  
 
@@ -25,7 +27,7 @@ This Implementation Guide is a work result across different work packages:
 - WP7 Task 7.2 "Medical Images and Reports",  
 - WP7 Task 7.3 "Discharge Reports".  
 
-In order to contribute to the Information Models IG authoring, do one of the following:  
+In order to contribute to the Logical Information Models IG authoring, do one of the following:  
 - as a project participant, join any of the tasks mentioned above for discussing the content;  
 - as a project participant, join the IG authoring group by creating a [GitHub issue](https://github.com/Xt-EHR/xt-ehr-common/issues) with access request;  
 - as an interested stakeholder, review the work in the draft IG and give feedback in [GitHub issues](https://github.com/Xt-EHR/xt-ehr-common/issues);  
