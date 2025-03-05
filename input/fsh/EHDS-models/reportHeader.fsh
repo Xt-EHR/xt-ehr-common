@@ -9,8 +9,8 @@ Characteristics: #can-be-target
   * datetime 1..1 dateTime "Date and time of authoring/issuing" """Date and time of the issuing the document/resource by its author."""
 * lastUpdate 0..1 dateTime "Date and time of the last update to the resource" """Date and time of the last update to the document/information"""
 * status 1..1 CodeableConcept "Status of the resource" """Status of the resource"""
-* language 0..1 CodeableConcept "Language" """Language in which the resource is written. Language is expressed by the ISO language code."""
-  * ^binding.description = "ISO 639"
+* language 0..1 CodeableConcept "Language" """Language in which the resource is written. Language is expressed by the IETF language tag."""
+  * ^binding.description = "BCP 47"
   * ^binding.strength = #preferred
 * version 0..1 string "Version" """Business version of the resource."""
 
@@ -53,7 +53,7 @@ Characteristics: #can-be-target
 * knowledgeResources 0..* Base "Related documents and information sources"
   * externalReference 0..* RelatedArtifact "..."
   * relatedTo 0..* Reference "..."
-//* comparableStudies 
+//* comparableStudies
 
 
 
@@ -102,7 +102,7 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
   * language 0..1 CodeableConcept ".1.9.12 - Language" """Language in which the document is written. Language is expressed by the ISO language code."""
-    * ^binding.description = "ISO 639"
+    * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
   * presentedForm 0..1 Attachment "A.1.10 - Presented form" """Entire report as issued pdf format recommended"""

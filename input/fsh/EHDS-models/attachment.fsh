@@ -8,7 +8,7 @@ Characteristics: #can-be-target
   * ^binding.description = "BCP-13"
   * ^binding.strength = #preferred
 * language 0..1 CodeableConcept "C.7.2 - Language" """Human language of the content"""
-  * ^binding.description = "ISO 639"
+  * ^binding.description = "BCP 47"
   * ^binding.strength = #preferred
 * data 0..1 base64Binary "C.7.3 - Data" """The actual data of the attachment - a sequence of bytes, base64 encoded."""
 * url 0..1 uri "C.7.4 - URL" """A location where the data can be accessed."""

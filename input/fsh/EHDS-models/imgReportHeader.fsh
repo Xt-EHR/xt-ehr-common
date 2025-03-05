@@ -41,7 +41,7 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
   * language 0..1 CodeableConcept "A.1.9.12 - Language" """Language in which the document is written. Language is expressed by the ISO language code."""
-    * ^binding.description = "ISO 639"
+    * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
   * studyInstanceUid 0..* uri "A.1.9.14 - Study Instance UID" """Unique global identifier(s) that identifies an imaging study upon which the imaging report is based.An identifier that links an imaging report to one or more imaging studies. This element is relevant for the interactive selection of the available studies."""

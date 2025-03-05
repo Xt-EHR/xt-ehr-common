@@ -43,7 +43,7 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
   * language 0..1 CodeableConcept "A.1.9.12 - Language" """Language in which the document is written. Language is expressed by the ISO language code."""
-    * ^binding.description = "ISO 639"
+    * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
 * knowledgeResources 0..* Base "A.1.10 - Knowledge resources" """To provide links between specified data elements and external knowledge resources"""

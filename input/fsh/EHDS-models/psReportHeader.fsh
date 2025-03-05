@@ -29,7 +29,7 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
   * language 0..1 CodeableConcept "A.1.9.12 - Language" """Language in which the document is written. Language is expressed by the ISO language code."""
-    * ^binding.description = "ISO 639"
+    * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
   * dateOfLastUpdate 0..1 dateTime "A.1.9.16 - Date of last update" """Date on which document or document part was updated (date of most recent version)"""
