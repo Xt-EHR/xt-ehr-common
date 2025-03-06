@@ -23,9 +23,10 @@ Characteristics: #can-be-target
   * currentProblemsSection 0..1 Base "B.1.3.2 - Current problems section" """Current problems section"""
     * subsectionNarative 0..1 string "B.1.3.2.1 - Subsection narative" """Narative content of the subsection. """
     * currentProblems 1..* EHDSCondition "B.1.3.2.2 - Current problems" """Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter."""
-  * medicalDevicesAndImplantsSection 0..1 Base "B.1.3.3 - Medical devices and implants section" """Current problems section"""
+  * medicalDevicesAndImplantsSection 0..1 Base "B.1.3.3 - Medical devices and implants section" """Devices that are implanted in the patient and external medical devices and equipment that the
+health status depends on."""
     * subsectionNarative 0..1 string "B.1.3.3.1 - Subsection narative" """Narative content of the subsection. """
-    * medicalDevicesAndImplants 1..* EHDSDeviceUse "B.1.3.3.2 - Medical devices and implants" """Medical devices and implants section."""
+    * medicalDevicesAndImplants 1..* EHDSDeviceUse "B.1.3.3.2 - Medical devices and implants" """Includes the patient's implanted and external medical devices and equipment upon which their health status depends. Includes devices such as cardiac pacemakers, implantable fibrillator, prosthesis, ferromagnetic bone implants, etc. of which the HP needs to be aware."""
   * proceduresSection 0..1 Base "B.1.3.4 - Procedures section" """Procedures section"""
     * subsectionNarative 0..1 string "B.1.3.4.1 - Subsection narative" """Narative content of the subsection. """
     * procedures 1..* EHDSProcedure "B.1.3.4.2 - Procedures" """Major procedures."""
