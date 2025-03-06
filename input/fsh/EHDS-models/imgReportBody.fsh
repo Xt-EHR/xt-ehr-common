@@ -37,7 +37,7 @@ Characteristics: #can-be-target
     * tissueType 1..1 CodeableConcept "B.1.4.2.2 - Tissue type" """Type of the tissue for which do dosage was enumerated."""
       * ^binding.description = "SNOMED CT"
       * ^binding.strength = #preferred
-* examinationReport 1..1 Base "B.1.5 - Examination Report" """Examination Report"""
+* examinationReport 1..1 Base "B.1.5 - Examination Report" """Examination Report content."""
   * modality 1..* CodeableConcept "B.1.5.1 - Modality" """Imaging modality (or modalities) used during imaging investigation (DICOM CID029)."""
     * ^binding.description = "DICOM Modality"
     * ^binding.strength = #preferred
