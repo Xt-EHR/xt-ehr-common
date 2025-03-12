@@ -33,7 +33,7 @@ Characteristics: #can-be-target
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient "Identification of the person who received the dispensed medication, especially when it was not the patient"
   * ^comment = "Added"
-* relatedRequest 0..* Reference(EHDSMedicationPrescription) "Prescription/request/order the dispense is related to"
+* relatedRequest 0..* Identifier "Identifier of the prescription or prescription item the dispense is related to"
   * ^comment = "No change"
 * medication 1..1 EHDSMedication "Exact dispensed product"
   * ^comment = "No change"
