@@ -141,7 +141,9 @@ Characteristics: #can-be-target
   * minimumDispenseInterval 0..1 Duration "Minimum Dispense Interval" "If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here."
     * ^comment = "Added, based on ISO 17532:2024 A.7.3 Minimum dispensing interval"
 
-  * offLabel 0..1 boolean "Off-label use" "Off-label use is the use of pharmaceutical drugs for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug."
+  * offLabel 0..1 Base "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug" 
+    * isOffLabelUse 1..1 boolean "Indicates off-label use. Must be 'true' when .reason is provided."
+    * reason[x] 0..* CodeableConcept or string "Reason or related clarification for off-label use"
 
   * comment 0..* string "Additional information or comments"
     * ^comment = "Added."
