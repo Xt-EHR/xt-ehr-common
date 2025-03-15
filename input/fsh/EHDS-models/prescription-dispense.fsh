@@ -8,7 +8,7 @@ Characteristics: #can-be-target
 * authorship.author ^short = "The person who dispensed the product, and takes the responsibility of the dispensation or declining the dispense. [Used for searching]"
 * authorship.datetime ^short = "The time of recording the dispense or declining the request. [Used for searching]"
 * status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'. [Used for searching]"
-* statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of dispensation, for example the reason why the dispensation was made invalid"
+* statusReason ^short = "Reason for the current status of dispensation, for example the reason why the dispensation was made invalid"
   * ^comment = "Added"
 
 
@@ -111,7 +111,7 @@ Characteristics: #can-be-target
 // * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care professional"
 //  * ^comment = "No change"
 * status ^short = "Status of the prescription, this should not be status of treatment. [Used for searching]"
-* statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
+* statusReason ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * ^comment = "Added."
 * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
   * ^comment = "Added. Not relevant for crossborder."
