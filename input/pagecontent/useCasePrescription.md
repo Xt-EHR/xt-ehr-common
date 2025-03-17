@@ -15,11 +15,16 @@ Components of a prescription and their representation as EHDS information models
 
 #### EHDS information models for **eDispensation**:
 
+<figure>
+  {% include dispense.svg %}
+</figure> 
+
 - Dispense: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense.html)
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
 - Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
+- Location: [EHDSLocation](StructureDefinition-EHDSLocation.html)
 
 Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.
 
@@ -31,7 +36,6 @@ Components of **declining a dispense** and their representation as EHDS informat
 - DispenseDecline: [EHDSDispenseDecline](StructureDefinition-EHDSDispenseDecline.html)
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
 - Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
-- Prescription (item): [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription.html)
 
 Dispense can be declined for the whole prescription or just for a prescription item.
 
