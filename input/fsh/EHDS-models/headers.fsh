@@ -57,7 +57,7 @@ Characteristics: #can-be-target
 //* comparableStudies
 
 
-
+// Not used
 Logical: EHDSReportHeader
 Title: "Report header model"
 Description: "EHDS refined base model for Report header data elements. Common for hospital discharge, laboratory and medical imaging reports."
