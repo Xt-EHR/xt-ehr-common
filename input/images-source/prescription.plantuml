@@ -8,19 +8,28 @@ class "**Prescription**" as eP{
   EHDSMedicationPrescription 
 }
 
-eP --> Patient: "1..1"
-eP --> Prescriber: "1..1"
+eP --> Header: "1..1"
 eP --o Item: "1..*"
+eP --o PresentedForm: "0..*"
 
-class "**Prescriber**" as Prescriber{
+class "**Prescriber** (author)" as Prescriber{
   EHDSHealthProfessional   
   
 }
 
-class "**Patient**" as Patient{
+class "**Patient** (subject)" as Patient{
   EHDSPatient   
 
 }
+
+class "**PrescriptionHeader**" as Header{
+  EHDSMedicationPrescriptionHeader   
+
+}
+
+Header --> Prescriber: "1..1"
+Header --> Patient: "1..1"
+
 
 class "**PrescriptionItem**" as Item{ 
 }
@@ -29,13 +38,18 @@ Item --> Medication: "1..1"
 Item --o Dosage: "0..*"
 
 
-class "**Usage Instructions**" as Dosage{
+class "**DosageInstructions**" as Dosage{
   EHDSDosaging   
  
 }
 
 class "**Medication**" as Medication{
   EHDSMedication
+ 
+}
+
+class "**PresentedForm**" as PresentedForm{
+  EHDSAttachment   
  
 }
 @enduml

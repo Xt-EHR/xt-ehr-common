@@ -4,11 +4,12 @@ Description: "Common header elements for all documents and their independently f
 Characteristics: #can-be-target
 
 * subject 1..1 EHDSPatient "Subject" """Patient/subject information"""
-* authorship 1..* Base "Authorship" """Document/resource authoring details"""
+* authorship 1..* Base "Authorship" """Resource authoring details"""
   * author 1..1 EHDSHealthProfessional "Author" """Author by whom the resource was/were authored. Multiple authors could be provided."""
   * datetime 1..1 dateTime "Date and time of authoring/issuing" """Date and time of the issuing the document/resource by its author."""
 * lastUpdate 0..1 dateTime "Date and time of the last update to the resource" """Date and time of the last update to the document/information"""
 * status 1..1 CodeableConcept "Status of the resource" """Status of the resource"""
+* statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of the resource."
 * language 0..1 CodeableConcept "Language" """Language in which the resource is written. Language is expressed by the IETF language tag."""
   * ^binding.description = "BCP 47"
   * ^binding.strength = #preferred
@@ -56,7 +57,7 @@ Characteristics: #can-be-target
 //* comparableStudies
 
 
-
+// Not used
 Logical: EHDSReportHeader
 Title: "Report header model"
 Description: "EHDS refined base model for Report header data elements. Common for hospital discharge, laboratory and medical imaging reports."
