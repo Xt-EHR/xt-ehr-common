@@ -63,9 +63,12 @@ Characteristics: #can-be-target
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
   //  * ^comment = "Medication model changed - described within that model"
-  * indication 0..* CodeableConcept "Reason for the prescription (typically diagnosis, or a procedure)"
+  
+  * indication[x] 0..* CodeableConcept or EHDSCondition "Reason for the prescription (typically diagnosis, or a procedure)"
     * ^binding.description = "shall we have a preferred binding here?"
     * ^binding.strength = #preferred
+  
+  
   //  * ^comment = "No change (A.1.5.10)"
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
   //  * ^comment = "No change (code not required) A1.5.10"
