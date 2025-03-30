@@ -10,7 +10,7 @@ Patient summary report could be divided into several basic parts: document heade
 
 ##### Patient Summary Report header
 <figure>
-  {% include PsReportHeader_CIM.svg %}
+  {% include PsReportHdr_CIM.svg %}
 </figure>
 
 ##### Patient Summary Report body
