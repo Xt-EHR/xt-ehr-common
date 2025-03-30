@@ -1,6 +1,6 @@
 Logical: EHDSHospitalDischargeReport
 //Id: EHDShospitalDischargeReport
-Title: "Hospital Discharge Report"
+Title: "Hospital Discharge Report model"
 Description: """A - EHDS refined base model for Hospital Discharge Report"""
 Characteristics: #can-be-target
 
