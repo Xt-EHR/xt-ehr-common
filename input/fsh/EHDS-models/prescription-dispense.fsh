@@ -18,7 +18,7 @@ Description: "Explicit statement about declining the dispense request (prescript
 Characteristics: #can-be-target
 
 * header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense decline."
-* relatedRequest 1..* EHDSMedicationPrescription "The single-line prescription or prescription line item that was declined by the dispenser" "TODO Prescription when oneliner, item when multiple"
+* relatedRequest 1..* EHDSMedicationPrescription "The single-line prescription or prescription line item that was declined by the dispenser. [Used for searching]"
 * reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
 * comment 0..1 string "Additional information about why the dispensation was declined."
 
