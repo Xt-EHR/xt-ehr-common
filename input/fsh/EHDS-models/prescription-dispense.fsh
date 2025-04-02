@@ -1,3 +1,4 @@
+/*
 Logical: EHDSMedicationDispenseHeader
 Title: "Medication dispense header"
 Description: "Metadata elements for a header of medication dispense or dispense decline."
@@ -10,14 +11,17 @@ Characteristics: #can-be-target
 * status ^short = "Status of the dispense. In case of declining a dispense, the status should be 'declined'. [Used for searching]"
 * statusReason[x] ^short = "Reason for the current status of dispensation, for example the reason why the dispensation was made invalid"
 //  * ^comment = "Added"
-
+*/
 
 Logical: EHDSDispenseDecline
 Title: "Dispense decline"
+Parent: EHDSDataSet
 Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
 Characteristics: #can-be-target
 
-* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense decline."
+//* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense decline."
+* header.statusReason[x] 1..1
+  * ^short = "Reason for not dispensing the medication"
 * relatedRequest 1..* EHDSMedicationPrescription "The single-line prescription or prescription line item that was declined by the dispenser. [Used for searching]"
 * reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
 * comment 0..1 string "Additional information about why the dispensation was declined."
@@ -25,10 +29,11 @@ Characteristics: #can-be-target
 
 Logical: EHDSMedicationDispense
 Title: "Medication dispensation model"
+Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 
-* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense"
+//* header 1..1 EHDSMedicationDispenseHeader "Header level metadata about the dispense"
 * dispensingOrganizationOrDevice[x] 0..* EHDSOrganization or EHDSDevice "Dispensing organization or device"
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient"
@@ -53,11 +58,33 @@ Characteristics: #can-be-target
 
 Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
+Parent: EHDSDataSet
 Description: "Logical model for medication prescription body. A prescription contains one or more prescription items."
 Characteristics: #can-be-target
 
-* header 1..1 EHDSMedicationPrescriptionHeader "Prescription header" """Prescription header data elements"""
-* presentedForm 0..* EHDSAttachment "Presented Form" """Entire prescription as issued. Various formats could be provided, pdf format is recommended."""
+* header 
+  * ^short = "Prescription header" 
+  * ^definition = """Prescription header data elements"""
+  * subject ^short = "The person for whom the medication is prescribed/ordered. [Used for searching]"
+  * identifier ^short = "Business identifier(s) for the prescription. [Used for searching]"
+  * authorship.author ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment. [Used for searching]"
+  // Not at all sure about this
+  * authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
+  // * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care professional"
+  //  * ^comment = "No change"
+  * status ^short = "Status of the prescription, this should not be status of treatment. [Used for searching]"
+  * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
+  //  * ^comment = "Added."
+  * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
+  //  * ^comment = "Added. Not relevant for crossborder."
+  * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
+  //  * ^comment = "Added. Not relevant for crossborder."
+  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate. [Used for searching]"
+  //  * ^comment = "Added. Often the same as IssueDate (A 1.2.2) or Start of therapy (A 1.5.6)"
+  * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
+  //  * ^comment = "No change (A.1.5.8)"
+
+* presentedForm ^short "Entire prescription as issued. Various formats could be provided, pdf format is recommended."
 * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Presription line for one medication. In many countries, only one line is allowed. In case multiple medications are allowed, all lines need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
@@ -99,7 +126,7 @@ Characteristics: #can-be-target
   * comment 0..* string "Additional information or comments"
   //  * ^comment = "Added."
 
-
+/*
 Logical: EHDSMedicationPrescriptionHeader
 Parent: EHDSCommonHeader
 Title: "Medication prescription header model"
@@ -127,5 +154,5 @@ Characteristics: #can-be-target
 * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
 //  * ^comment = "Added."
 
-
+*/
 
