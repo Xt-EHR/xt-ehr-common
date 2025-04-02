@@ -84,7 +84,7 @@ Characteristics: #can-be-target
   * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
   //  * ^comment = "No change (A.1.5.8)"
 
-* presentedForm ^short "Entire prescription as issued. Various formats could be provided, pdf format is recommended."
+* presentedForm ^short = "Entire prescription as issued. Various formats could be provided, pdf format is recommended."
 * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Presription line for one medication. In many countries, only one line is allowed. In case multiple medications are allowed, all lines need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
