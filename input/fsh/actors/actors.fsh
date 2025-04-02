@@ -25,7 +25,7 @@ Usage: #example
 * type = #system
 
 
-// do we need this or will MyHealth@EU specify the requirements?
+// do we need this or will MyHealth@EU specify the requirements? rather leave this for eHMSEG
 Instance: actor-ncp-system
 InstanceOf: ActorDefinition
 Title: "Actor National Contact Point System"
@@ -38,8 +38,8 @@ Usage: #example
 
 Instance: actor-ehr-system
 InstanceOf: ActorDefinition
-Title: "Actor Generic EHR System"
-Description: """A generic EHR system."""
+Title: "Actor Archetypical EHR System"
+Description: """An archetypical EHR system."""
 Usage: #example
 * url = $actor-ehr-system
 * name = "EHR System"
