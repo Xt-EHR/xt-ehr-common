@@ -67,7 +67,7 @@ Characteristics: #can-be-target
   * ^definition = """Prescription header data elements"""
   * subject ^short = "The person for whom the medication is prescribed/ordered. [Used for searching]"
   * identifier ^short = "Business identifier(s) for the prescription. [Used for searching]"
-  * authorship.author ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment. [Used for searching]"
+  * authorship.author[x] ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment. [Used for searching]"
   // Not at all sure about this
   * authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
   // * issueDate 1..1 dateTime "Time of issuing (signing) the prescription by health care professional"
