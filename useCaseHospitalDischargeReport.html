@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Hospital Discharge Report - EHDS Logical Information Models v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">eP/eD</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCaseLabOrder.html">Laboratory Order</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Hospital Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Hospital Discharge Report</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/Xt-EHR/xt-ehr-common/tree/main">https://github.com/Xt-EHR/xt-ehr-common/tree/main</a> and changes regularly. See the <a href="https://www.xt-ehr.eu/specifications/fhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Hospital Discharge Report</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#information-models" id="markdown-toc-information-models">Information Models</a></li>
+  <li><a href="#detail-ehds-information-models-for-hospital-discharge-report" id="markdown-toc-detail-ehds-information-models-for-hospital-discharge-report">Detail EHDS information models for Hospital Discharge Report</a></li>
+  <li><a href="#fhir-implementation-guide" id="markdown-toc-fhir-implementation-guide">FHIR Implementation Guide</a></li>
+  <li><a href="#supporting-information" id="markdown-toc-supporting-information">Supporting information</a></li>
+</ul>
+
+</div>
+<h3 id="information-models">Information Models</h3>
+<h4 id="conceptual-view">Conceptual view</h4>
+
+<p>Hospital discharge report could be divided into several parts: document header, body and optionally it could also have various attachments.</p>
+
+<h5 id="hospital-discharge-report">Hospital Discharge Report</h5>
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="247px" preserveAspectRatio="none" style="width:586px;height:247px;background:#FFFFFF;" version="1.1" viewBox="0 0 586 247" width="586px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="200" x="10" y="104.4453" /><a href="StructureDefinition-EHDSHospitalDischargeReport.html" target="_top" title="StructureDefinition-EHDSHospitalDischargeReport.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSHospitalDischargeReport.html" xlink:show="new" xlink:title="StructureDefinition-EHDSHospitalDischargeReport.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="180" x="20" y="127.4404">Hospital Discharge Report</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="253" x="260" y="20" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="233" x="270" y="42.9951">Hospital Discharge Report header</text><path d="M210,122.5938 L220,122.5938 C235,122.5938 235,38.1484 250,38.1484 L260,38.1484 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="314" x="260" y="76.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="294" x="270" y="99.292">Hospital Discharge Report structured body</text><path d="M210,122.5938 L220,122.5938 C235,122.5938 235,94.4453 250,94.4453 L260,94.4453 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="135" x="260" y="132.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="270" y="155.5889">Presented forms</text><path d="M210,122.5938 L220,122.5938 C235,122.5938 235,150.7422 250,150.7422 L260,150.7422 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="291" x="260" y="188.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="271" x="270" y="211.8857">Hospital Discharge Report attachments</text><path d="M210,122.5938 L220,122.5938 C235,122.5938 235,207.0391 250,207.0391 L260,207.0391 " fill="none" style="stroke:#181818;stroke-width:1.0;" /></g></svg>
+</figure>
+
+<h5 id="hospital-discharge-report-header">Hospital Discharge Report header</h5>
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="700px" preserveAspectRatio="none" style="width:687px;height:700px;background:#FFFFFF;" version="1.1" viewBox="0 0 687 700" width="687px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="254" x="10" y="331.043" /><a href="StructureDefinition-EHDSHospitalDischargeReportHeader.html" target="_top" title="StructureDefinition-EHDSHospitalDischargeReportHeader.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSHospitalDischargeReportHeader.html" xlink:show="new" xlink:title="StructureDefinition-EHDSHospitalDischargeReportHeader.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="234" x="20" y="354.0381">Hospital Discharge Report Header</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="72" x="314" y="20" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="324" y="42.9951">Subject</text><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,38.1484 304,38.1484 L314,38.1484 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="126" x="314" y="76.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="324" y="99.292">Related person</text><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,94.4453 304,94.4453 L314,94.4453 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="220" x="314" y="132.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="324" y="155.5889">Preferred Health Professional</text><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,150.7422 304,150.7422 L314,150.7422 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="311" x="314" y="188.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="291" x="324" y="211.8857">Health insurance and payment information</text><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,207.0391 304,207.0391 L314,207.0391 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="146" x="314" y="245.1875" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="324" y="268.1826">Intended recipient</text><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,263.3359 304,263.3359 L314,263.3359 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="95" x="314" y="301.4844" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="324" y="324.4795">Authorship</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="462" y="315.3311">Author</text><path d="M409,319.6328 L419,319.6328 C434,319.6328 434,310.4844 449,310.4844 L459,310.4844 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="462" y="333.6279">DateTime</text><path d="M409,319.6328 L419,319.6328 C434,319.6328 434,328.7813 449,328.7813 L459,328.7813 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,319.6328 304,319.6328 L314,319.6328 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="95" x="314" y="357.7813" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="324" y="380.7764">Attestation</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="462" y="371.6279">Attester</text><path d="M409,375.9297 L419,375.9297 C434,375.9297 434,366.7813 449,366.7813 L459,366.7813 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="462" y="389.9248">DateTime</text><path d="M409,375.9297 L419,375.9297 C434,375.9297 434,385.0781 449,385.0781 L459,385.0781 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,375.9297 304,375.9297 L314,375.9297 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="159" x="314" y="414.0781" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="324" y="437.0732">Legal authentication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="526" y="427.9248">Legal authenticator</text><path d="M473,432.2266 L483,432.2266 C498,432.2266 498,423.0781 513,423.0781 L523,423.0781 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="526" y="446.2217">DateTime</text><path d="M473,432.2266 L483,432.2266 C498,432.2266 498,441.375 513,441.375 L523,441.375 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,432.2266 304,432.2266 L314,432.2266 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="162" x="314" y="551.3047" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="324" y="574.2998">Document metadata</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="529" y="464.5186">Document ID</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,459.6719 516,459.6719 L526,459.6719 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="529" y="482.8154">Document type</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,477.9688 516,477.9688 L526,477.9688 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="529" y="501.1123">Document status</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,496.2656 516,496.2656 L526,496.2656 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="529" y="519.4092">Period</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,514.5625 516,514.5625 L526,514.5625 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="529" y="537.7061">Report date and time</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,532.8594 516,532.8594 L526,532.8594 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="529" y="556.0029">Document title</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,551.1563 516,551.1563 L526,551.1563 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="529" y="574.2998">Event type</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,569.4531 516,569.4531 L526,569.4531 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="529" y="592.5967">Specialty</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,587.75 516,587.75 L526,587.75 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="529" y="610.8936">Report custodian</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,606.0469 516,606.0469 L526,606.0469 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="529" y="629.1904">Document format</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,624.3438 516,624.3438 L526,624.3438 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="529" y="647.4873">Confidentiality</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,642.6406 516,642.6406 L526,642.6406 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="529" y="665.7842">Language</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,660.9375 516,660.9375 L526,660.9375 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="529" y="684.0811">Version</text><path d="M476,569.4531 L486,569.4531 C501,569.4531 501,679.2344 516,679.2344 L526,679.2344 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M264,349.1914 L274,349.1914 C289,349.1914 289,569.4531 304,569.4531 L314,569.4531 " fill="none" style="stroke:#181818;stroke-width:1.0;" /></g></svg>
+</figure>
+
+<h5 id="hospital-discharge-report-body">Hospital Discharge Report body</h5>
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1212px" preserveAspectRatio="none" style="width:950px;height:1212px;background:#FFFFFF;" version="1.1" viewBox="0 0 950 1212" width="950px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="238" x="10" y="587.2031" /><a href="StructureDefinition-EHDSHospitalDischargeReportBody.html" target="_top" title="StructureDefinition-EHDSHospitalDischargeReportBody.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSHospitalDischargeReportBody.html" xlink:show="new" xlink:title="StructureDefinition-EHDSHospitalDischargeReportBody.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="218" x="20" y="610.1982">Hospital Discharge Report body</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="149" x="298" y="46.7422" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="308" y="69.7373">Advance directives</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="500" y="23.9951">Living will</text><path d="M447,64.8906 L457,64.8906 C472,64.8906 472,19.1484 487,19.1484 L497,19.1484 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="500" y="42.292">Date and time</text><path d="M447,64.8906 L457,64.8906 C472,64.8906 472,37.4453 487,37.4453 L497,37.4453 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="500" y="60.5889">Type</text><path d="M447,64.8906 L457,64.8906 C472,64.8906 472,55.7422 487,55.7422 L497,55.7422 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="500" y="78.8857">Comment</text><path d="M447,64.8906 L457,64.8906 C472,64.8906 472,74.0391 487,74.0391 L497,74.0391 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="500" y="97.1826">Related conditions</text><path d="M447,64.8906 L457,64.8906 C472,64.8906 472,92.3359 487,92.3359 L497,92.3359 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="500" y="115.4795">Living will document</text><path d="M447,64.8906 L457,64.8906 C472,64.8906 472,110.6328 487,110.6328 L497,110.6328 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,64.8906 288,64.8906 L298,64.8906 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="114" x="298" y="129.0781" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="308" y="152.0732">Alerts section</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="465" y="133.7764">Section narrative</text><path d="M412,147.2266 L422,147.2266 C437,147.2266 437,128.9297 452,128.9297 L462,128.9297 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="465" y="152.0732">Allergy and Intolerance</text><path d="M412,147.2266 L422,147.2266 C437,147.2266 437,147.2266 452,147.2266 L462,147.2266 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="465" y="170.3701">Medical alerts</text><path d="M412,147.2266 L422,147.2266 C437,147.2266 437,165.5234 452,165.5234 L462,165.5234 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,147.2266 288,147.2266 L298,147.2266 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="228" x="298" y="275.4531" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="308" y="298.4482">Encounter information section</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="579" y="188.667">Section narrative</text><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,183.8203 566,183.8203 L576,183.8203 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="579" y="206.9639">Priority</text><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,202.1172 566,202.1172 L576,202.1172 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="234" x="579" y="225.2607">Admitting facility (Service provider)</text><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,220.4141 566,220.4141 L576,220.4141 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="166" x="579" y="243.5576">Actual encounter period</text><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,238.7109 566,238.7109 L576,238.7109 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="579" y="298.4482">Admission information</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="784" y="261.8545">Admitter</text><path d="M731,293.6016 L741,293.6016 C756,293.6016 756,257.0078 771,257.0078 L781,257.0078 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="784" y="280.1514">Admit Source</text><path d="M731,293.6016 L741,293.6016 C756,293.6016 756,275.3047 771,275.3047 L781,275.3047 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="784" y="298.4482">Referring professional</text><path d="M731,293.6016 L741,293.6016 C756,293.6016 756,293.6016 771,293.6016 L781,293.6016 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="784" y="316.7451">Admission Reason</text><path d="M731,293.6016 L741,293.6016 C756,293.6016 756,311.8984 771,311.8984 L781,311.8984 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="784" y="335.042">Admission legal status</text><path d="M731,293.6016 L741,293.6016 C756,293.6016 756,330.1953 771,330.1953 L781,330.1953 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,293.6016 566,293.6016 L576,293.6016 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="579" y="362.4873">Discharge information</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="783" y="353.3389">Destination type</text><path d="M730,357.6406 L740,357.6406 C755,357.6406 755,348.4922 770,348.4922 L780,348.4922 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="783" y="371.6357">Destination location</text><path d="M730,357.6406 L740,357.6406 C755,357.6406 755,366.7891 770,366.7891 L780,366.7891 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,357.6406 566,357.6406 L576,357.6406 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="579" y="399.0811">Location</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="690" y="389.9326">Period</text><path d="M637,394.2344 L647,394.2344 C662,394.2344 662,385.0859 677,385.0859 L687,385.0859 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="690" y="408.2295">Organization part</text><path d="M637,394.2344 L647,394.2344 C662,394.2344 662,403.3828 677,403.3828 L687,403.3828 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M526,293.6016 L536,293.6016 C551,293.6016 551,394.2344 566,394.2344 L576,394.2344 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,293.6016 288,293.6016 L298,293.6016 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="165" x="298" y="485.8672" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="308" y="508.8623">Admission evaluation</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="516" y="453.9717">Section narrative</text><path d="M463,504.0156 L473,504.0156 C488,504.0156 488,449.125 503,449.125 L513,449.125 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="516" y="472.2686">Objective findings</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="691" y="426.5264">Date and time</text><path d="M638,467.4219 L648,467.4219 C663,467.4219 663,421.6797 678,421.6797 L688,421.6797 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="691" y="444.8232">Performer</text><path d="M638,467.4219 L648,467.4219 C663,467.4219 663,439.9766 678,439.9766 L688,439.9766 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="691" y="463.1201">Section narrative</text><path d="M638,467.4219 L648,467.4219 C663,467.4219 663,458.2734 678,458.2734 L688,458.2734 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="691" y="481.417">Anthropometric observations</text><path d="M638,467.4219 L648,467.4219 C663,467.4219 663,476.5703 678,476.5703 L688,476.5703 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="691" y="499.7139">Vital signs</text><path d="M638,467.4219 L648,467.4219 C663,467.4219 663,494.8672 678,494.8672 L688,494.8672 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="691" y="518.0107">Physical examination</text><path d="M638,467.4219 L648,467.4219 C663,467.4219 663,513.1641 678,513.1641 L688,513.1641 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M463,504.0156 L473,504.0156 C488,504.0156 488,467.4219 503,467.4219 L513,467.4219 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="516" y="563.7529">Functional status</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="687" y="536.3076">Date and time</text><path d="M634,558.9063 L644,558.9063 C659,558.9063 659,531.4609 674,531.4609 L684,531.4609 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="687" y="554.6045">Performer</text><path d="M634,558.9063 L644,558.9063 C659,558.9063 659,549.7578 674,549.7578 L684,549.7578 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="687" y="572.9014">Section narrative</text><path d="M634,558.9063 L644,558.9063 C659,558.9063 659,568.0547 674,568.0547 L684,568.0547 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="207" x="687" y="591.1982">Functional status assessment</text><path d="M634,558.9063 L644,558.9063 C659,558.9063 659,586.3516 674,586.3516 L684,586.3516 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M463,504.0156 L473,504.0156 C488,504.0156 488,558.9063 503,558.9063 L513,558.9063 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,504.0156 288,504.0156 L298,504.0156 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="118" x="298" y="659.6875" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="308" y="682.6826">Patient history</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="469" y="609.4951">Section narrative</text><path d="M416,677.8359 L426,677.8359 C441,677.8359 441,604.6484 456,604.6484 L466,604.6484 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="469" y="673.5342">Medical history</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="624" y="627.792">Section narrative</text><path d="M571,668.6875 L581,668.6875 C596,668.6875 596,622.9453 611,622.9453 L621,622.9453 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="624" y="646.0889">Past problems</text><path d="M571,668.6875 L581,668.6875 C596,668.6875 596,641.2422 611,641.2422 L621,641.2422 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="624" y="664.3857">Devices and implants</text><path d="M571,668.6875 L581,668.6875 C596,668.6875 596,659.5391 611,659.5391 L621,659.5391 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="624" y="682.6826">History of procedures</text><path d="M571,668.6875 L581,668.6875 C596,668.6875 596,677.8359 611,677.8359 L621,677.8359 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="624" y="700.9795">Vaccination</text><path d="M571,668.6875 L581,668.6875 C596,668.6875 596,696.1328 611,696.1328 L621,696.1328 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="624" y="719.2764">Epidemiological history</text><path d="M571,668.6875 L581,668.6875 C596,668.6875 596,714.4297 611,714.4297 L621,714.4297 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M416,677.8359 L426,677.8359 C441,677.8359 441,668.6875 456,668.6875 L466,668.6875 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="469" y="691.8311">Family history</text><path d="M416,677.8359 L426,677.8359 C441,677.8359 441,686.9844 456,686.9844 L466,686.9844 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="469" y="737.5732">Social determinants of health</text><path d="M416,677.8359 L426,677.8359 C441,677.8359 441,732.7266 456,732.7266 L466,732.7266 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="469" y="755.8701">Use of substances</text><path d="M416,677.8359 L426,677.8359 C441,677.8359 441,751.0234 456,751.0234 L466,751.0234 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,677.8359 288,677.8359 L298,677.8359 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="291" x="298" y="806.0625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="271" x="308" y="829.0576">Course of hospitalisation (Hospital stay)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="642" y="774.167">Section narrative</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,769.3203 629,769.3203 L639,769.3203 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="642" y="792.4639">Diagnostic summary</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,787.6172 629,787.6172 L639,787.6172 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="642" y="810.7607">Significant procedures</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,805.9141 629,805.9141 L639,805.9141 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201" x="642" y="829.0576">Medical devices and implants</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,824.2109 629,824.2109 L639,824.2109 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="642" y="847.3545">Pharmacotherapy</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,842.5078 629,842.5078 L639,842.5078 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="213" x="642" y="865.6514">Significant Observation Results</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,860.8047 629,860.8047 L639,860.8047 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="642" y="883.9482">Synthesis</text><path d="M589,824.2109 L599,824.2109 C614,824.2109 614,879.1016 629,879.1016 L639,879.1016 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,824.2109 288,824.2109 L298,824.2109 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="139" x="298" y="961.5859" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="308" y="984.5811">Discharge details</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="490" y="929.6904">Section narrative</text><path d="M437,979.7344 L447,979.7344 C462,979.7344 462,924.8438 477,924.8438 L487,924.8438 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="490" y="947.9873">Objective findings</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="665" y="902.2451">Date and time</text><path d="M612,943.1406 L622,943.1406 C637,943.1406 637,897.3984 652,897.3984 L662,897.3984 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="665" y="920.542">Performer</text><path d="M612,943.1406 L622,943.1406 C637,943.1406 637,915.6953 652,915.6953 L662,915.6953 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="665" y="938.8389">Section narrative</text><path d="M612,943.1406 L622,943.1406 C637,943.1406 637,933.9922 652,933.9922 L662,933.9922 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="665" y="957.1357">Anthropometric observations</text><path d="M612,943.1406 L622,943.1406 C637,943.1406 637,952.2891 652,952.2891 L662,952.2891 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="665" y="975.4326">Vital signs</text><path d="M612,943.1406 L622,943.1406 C637,943.1406 637,970.5859 652,970.5859 L662,970.5859 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="665" y="993.7295">Physical examination</text><path d="M612,943.1406 L622,943.1406 C637,943.1406 637,988.8828 652,988.8828 L662,988.8828 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M437,979.7344 L447,979.7344 C462,979.7344 462,943.1406 477,943.1406 L487,943.1406 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="490" y="1039.4717">Functional status</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="661" y="1012.0264">Date and time</text><path d="M608,1034.625 L618,1034.625 C633,1034.625 633,1007.1797 648,1007.1797 L658,1007.1797 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="661" y="1030.3232">Performer</text><path d="M608,1034.625 L618,1034.625 C633,1034.625 633,1025.4766 648,1025.4766 L658,1025.4766 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="661" y="1048.6201">Section narrative</text><path d="M608,1034.625 L618,1034.625 C633,1034.625 633,1043.7734 648,1043.7734 L658,1043.7734 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="207" x="661" y="1066.917">Functional status assessment</text><path d="M608,1034.625 L618,1034.625 C633,1034.625 633,1062.0703 648,1062.0703 L658,1062.0703 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M437,979.7344 L447,979.7344 C462,979.7344 462,1034.625 477,1034.625 L487,1034.625 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,979.7344 288,979.7344 L298,979.7344 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="162" x="298" y="1081.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="308" y="1104.2139">Medication summary</text><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,1099.3672 288,1099.3672 L298,1099.3672 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="85" x="298" y="1145.9609" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="308" y="1168.9561">Care plan</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="436" y="1141.5107">Title</text><path d="M383,1164.1094 L393,1164.1094 C408,1164.1094 408,1136.6641 423,1136.6641 L433,1136.6641 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="436" y="1159.8076">Addresses</text><path d="M383,1164.1094 L393,1164.1094 C408,1164.1094 408,1154.9609 423,1154.9609 L433,1154.9609 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="436" y="1178.1045">Care plan description</text><path d="M383,1164.1094 L393,1164.1094 C408,1164.1094 408,1173.2578 423,1173.2578 L433,1173.2578 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="436" y="1196.4014">Other recommendations</text><path d="M383,1164.1094 L393,1164.1094 C408,1164.1094 408,1191.5547 423,1191.5547 L433,1191.5547 " fill="none" style="stroke:#181818;stroke-width:1.0;" /><path d="M248,605.3516 L258,605.3516 C273,605.3516 273,1164.1094 288,1164.1094 L298,1164.1094 " fill="none" style="stroke:#181818;stroke-width:1.0;" /></g></svg>
+</figure>
+
+<h3 id="detail-ehds-information-models-for-hospital-discharge-report">Detail EHDS information models for Hospital Discharge Report</h3>
+<ul>
+  <li><a href="StructureDefinition-EHDSHospitalDischargeReport.html">Hospital Discharge Report Document</a></li>
+  <li><a href="StructureDefinition-EHDSHospitalDischargeReportHeader.html">Hospital Discharge Report Header</a></li>
+  <li><a href="StructureDefinition-EHDSHospitalDischargeReportBody.html">Hospital Discharge Report Body</a></li>
+</ul>
+
+<h3 id="fhir-implementation-guide">FHIR Implementation Guide</h3>
+
+<p>The work for building the European FHIR specification for Hospital Discharge Report is ongoing in a joint working group of Xt-EHR, XpanDH, xShare and HL7 Europe. Any interested stakeholder is welcome to join the group - please see the detailed <a href="https://confluence.hl7.org/display/HEU/Meetings+PS-HDR-Base">information about the meetings</a>.</p>
+
+<p>The Hospital Discharge Report FHIR Implementation Guide:</p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/hl7-eu/hdr/">R4 version</a></li>
+  <li>R5 - not available</li>
+</ul>
+
+<h3 id="supporting-information">Supporting information</h3>
+<ul>
+  <li><a href="https://health.ec.europa.eu/document/download/cbb2efd4-82b4-4127-ab58-0aaedf662df6_en?filename=ehn_hdr_guidelines_en.pdf">eHealth Network Hospital Discharge Report Guidelines</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://Xt-EHR.eu">Xt-EHR</a>.  Package eu.ehds.models#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Apr 3, 2025 07:15+0000">2025-04-03</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
