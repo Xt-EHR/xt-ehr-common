@@ -64,12 +64,9 @@ Characteristics: #can-be-target
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
   //  * ^comment = "Medication model changed - described within that model"
-  
   * indication[x] 0..* CodeableConcept or EHDSCondition "Reason for the prescription (typically diagnosis, or a procedure)"
     * ^binding.description = "shall we have a preferred binding here?"
     * ^binding.strength = #preferred
-  
-  
   //  * ^comment = "No change (A.1.5.10)"
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
   //  * ^comment = "No change (code not required) A1.5.10"
@@ -86,7 +83,7 @@ Characteristics: #can-be-target
   //  * ^comment = "No change but subelements added. A 1.5.11"
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
     * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement"
-  * status 1..1 CodeableConcept "Status of the prescription, this should not be status of treatment"
+  * status 1..1 CodeableConcept "Status of a single request/line of the prescription"
   //  * ^comment = "Added."
   * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   //  * ^comment = "Added."
