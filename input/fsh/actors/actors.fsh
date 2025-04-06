@@ -1,4 +1,4 @@
-Alias: $actor-prescribing-system = https://www.xt-ehr.eu/specifications/fhir/actor-actor-prescribing-system
+Alias: $actor-prescribing-system = https://www.xt-ehr.eu/specifications/fhir/actor-prescribing-system
 Alias: $actor-dispensing-system = https://www.xt-ehr.eu/specifications/fhir/actor-dispensing-system
 Alias: $actor-ncp-system = https://www.xt-ehr.eu/specifications/fhir/actor-ncp-system
 Alias: $actor-ehr-system = https://www.xt-ehr.eu/specifications/fhir/actor-ehr-system
