@@ -60,7 +60,7 @@ Characteristics: #can-be-target
 * header 1..1 EHDSMedicationPrescriptionHeader "Prescription header" """Prescription header data elements"""
 * presentedForm 0..* EHDSAttachment "Presented Form" """Entire prescription as issued. Various formats could be provided, pdf format is recommended."""
 * comment 0..* string "Additional information or comments"
-* prescriptionItem 1..* Base "Presription line for one medication. In many countries, only one line is allowed. In case multiple medications are allowed, all lines need to be authored together."
+* prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one line is allowed. In case multiple medications are allowed, all lines need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single line on prescription, if exists. In case of single-line prescription, this identifier is typically the same as prescription identifier."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
   //  * ^comment = "Medication model changed - described within that model"
