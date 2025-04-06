@@ -11,7 +11,6 @@ class "**DispenseDecline**" as eD{
 
 eD --> Header: "1..1"
 eD --> Item: "1..*"
-eD --> Reason: "1..1"
 
 class "**Header**" as Header{
 EHDSMedicationDispenseHeader
@@ -19,6 +18,7 @@ EHDSMedicationDispenseHeader
 
 Header --> Patient: "1..1"
 Header --> Dispenser: "1..1"
+Header --> Reason: "1..1"
 
 class "**Dispenser** (author)" as Dispenser{
   EHDSHealthProfessional   
@@ -30,7 +30,7 @@ class "**Patient** (subject)" as Patient{
 
 }
 
-class "**Reason**" as Reason{
+class "**Reason** (statusReason)" as Reason{
   CodeableConcept
   string
 
