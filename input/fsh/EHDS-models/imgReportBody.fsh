@@ -24,7 +24,7 @@ Characteristics: #can-be-target
       * ^binding.description = "HL7 sex-parameter-for-clinical-use"
       * ^binding.strength = #preferred
     * otherSupportingInformation 0..* Resource "B.1.1.7.8 - Other supporting information" """Any other type of relevant supporting information"""
-* specimen 0..* EHDSSpecimen "B.1.2 - Specimen" """Specimen information"""
+* specimen 0..* EHDSSpecimen "B.1.2 - Specimen" """Specimen information. Note: A specimen (not attached to a body) can be used for diagnostic, forensic and medical research purposes. """
 * serviceRequest 0..* EHDSServiceRequest "B.1.3 - Service request" """Specification of requested service or services"""
 * exposureInformation 0..1 Base "B.1.4 - Exposure information" """Information on total exposure to ionising radiation."""
   * effectiveDose 0..* Quantity "B.1.4.1 - Effective dose" """Sum of equivalent doses to all organs, from external and/or internal exposures, each adjusted to account for the sensitivity of the organ to radiation. [mSv]"""
