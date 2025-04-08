@@ -39,8 +39,8 @@ Characteristics: #can-be-target
 * observationInterpretation 0..* CodeableConcept "C.10.13 - Observation interpretation" """Information about reference intervals and result interpretation."""
   * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
   * ^binding.strength = #preferred
-* triggeredBy[x] 0..* EHDSLaboratoryObservation or EHDSObservation "C.10.14 - Triggered by" """Identifies the observation(s) that triggered the performance of this observation."""
-* hasMember[x] 0..* EHDSLaboratoryObservation or EHDSObservation "C.10.15 - Has member" """This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."""
+* triggeredBy 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "C.10.14 - Triggered by" """Identifies the observation(s) that triggered the performance of this observation."""
+* hasMember 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "C.10.15 - Has member" """This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."""
 * resultDescription 0..1 string "C.10.16 - Result description" """Comments and narrative representation of the observation result and findings."""
 * anatomicLocation 0..1 CodeableConcept "C.10.17 - Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
   * ^binding.description = "SNOMED CT"
@@ -67,6 +67,7 @@ Characteristics: #can-be-target
   * observationInterpretation 0..* CodeableConcept "C.10.19.7 - Observation interpretation" """Information about reference intervals and result interpretation."""
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
-* status 1..1 CodeableConcept "C.10.19.8 - Status" """The status of the result value."""
+* status 1..1 CodeableConcept "C.10.20 - Status" """The status of the result value."""
   * ^binding.description = "HL7 Observation status"
   * ^binding.strength = #preferred
+* derivedFrom 0..* Reference (EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy) "C.10.21 - Derived from" """Related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."""
