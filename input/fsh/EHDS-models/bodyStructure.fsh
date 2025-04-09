@@ -17,3 +17,4 @@ Characteristics: #can-be-target
 * laterality 0..1 CodeableConcept "C.36.5 - Laterality" """Body structure laterality."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
+* description 0..1 string "C.36.6 - Description" """Textual description of the body structure"""
