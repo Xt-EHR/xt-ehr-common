@@ -44,7 +44,4 @@ Characteristics: #can-be-target
     * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
-  * studyInstanceUid 0..* uri "A.1.9.14 - Study Instance UID" """Unique global identifier(s) that identifies an imaging study upon which the imaging report is based.An identifier that links an imaging report to one or more imaging studies. This element is relevant for the interactive selection of the available studies."""
-    * ^binding.description = "OID"
-    * ^binding.strength = #preferred
-  * accessionNumber 0..1 string "A.1.9.15 - Accession number" """This is an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."""
+  * accessionNumber 0..1 string "A.1.9.14 - Accession number" """This is an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."""
