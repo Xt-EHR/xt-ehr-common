@@ -19,7 +19,7 @@ Characteristics: #can-be-target
 * severity 0..1 CodeableConcept "C.15.9 - Severity" """A subjective assessment of the severity of the condition as evaluated by the clinician."""
   * ^binding.description = "HL7 Condtion-severity"
   * ^binding.strength = #preferred
-* anatomicLocation 0..* CodeableConcept "C.15.10 - Anatomic location" """The anatomical location including laterality where this condition manifests itself."""
+* anatomicLocation 0..* CodeableReference (EHDSBodyStructure) "C.15.10 - Anatomic location" """The anatomical location including laterality where this condition manifests itself."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * stage 0..* CodeableConcept "C.15.11 - Stage" """Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used."""
