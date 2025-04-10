@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>ePrescription &amp; eDispensation - EHDS Logical Information Models v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">eP/eD</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCaseLabOrder.html">Laboratory Order</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Hospital Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>ePrescription &amp; eDispensation</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/Xt-EHR/xt-ehr-common/tree/requirements">https://github.com/Xt-EHR/xt-ehr-common/tree/requirements</a> and changes regularly. See the <a href="https://www.xt-ehr.eu/specifications/fhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>ePrescription &amp; eDispensation</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#information-models" id="markdown-toc-information-models">Information Models</a></li>
+  <li><a href="#fhir-implementation-guide" id="markdown-toc-fhir-implementation-guide">FHIR Implementation Guide</a></li>
+  <li><a href="#ihe-profile" id="markdown-toc-ihe-profile">IHE Profile</a></li>
+  <li><a href="#supporting-information" id="markdown-toc-supporting-information">Supporting Information</a></li>
+</ul>
+
+</div>
+<h3 id="information-models">Information Models</h3>
+
+<h4 id="ehds-information-models-for-eprescription">EHDS information models for <strong>ePrescription</strong>:</h4>
+
+<p>Components of a prescription and their representation as EHDS information models:</p>
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="344px" preserveAspectRatio="none" style="width:728px;height:344px;background:#FFFFFF;" version="1.1" viewBox="0 0 728 344" width="728px" zoomAndPan="magnify"><defs /><g><!--class eP--><g id="elem_eP"><rect codeLine="6" fill="#F1F1F1" height="58.5938" id="eP" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="208" x="377.5" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="96" x="433.5" y="24.9951">Prescription</text><line style="stroke:#181818;stroke-width:0.5;" x1="378.5" x2="584.5" y1="33.2969" y2="33.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="383.5" y="50.292">EHDSMedicationPrescription</text><line style="stroke:#181818;stroke-width:0.5;" x1="378.5" x2="584.5" y1="57.5938" y2="57.5938" /></g><!--class Header--><g id="elem_Header"><rect codeLine="24" fill="#F1F1F1" height="58.5938" id="Header" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="258" x="120.5" y="143" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="153" x="173" y="160.9951">PrescriptionHeader</text><line style="stroke:#181818;stroke-width:0.5;" x1="121.5" x2="377.5" y1="169.2969" y2="169.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="126.5" y="186.292">EHDSMedicationPrescriptionHeader</text><line style="stroke:#181818;stroke-width:0.5;" x1="121.5" x2="377.5" y1="193.5938" y2="193.5938" /></g><!--class Item--><g id="elem_Item"><rect codeLine="33" fill="#F1F1F1" height="42.2969" id="Item" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="413.5" y="151.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="416.5" y="169.4951">PrescriptionItem</text><line style="stroke:#181818;stroke-width:0.5;" x1="414.5" x2="548.5" y1="177.7969" y2="177.7969" /><line style="stroke:#181818;stroke-width:0.5;" x1="414.5" x2="548.5" y1="185.7969" y2="185.7969" /></g><!--class PresentedForm--><g id="elem_PresentedForm"><rect codeLine="50" fill="#F1F1F1" height="58.5938" id="PresentedForm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="131" x="585" y="143" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="122" x="589.5" y="160.9951">PresentedForm</text><line style="stroke:#181818;stroke-width:0.5;" x1="586" x2="715" y1="169.2969" y2="169.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="591" y="186.292">EHDSAttachment</text><line style="stroke:#181818;stroke-width:0.5;" x1="586" x2="715" y1="193.5938" y2="193.5938" /></g><!--class Prescriber--><g id="elem_Prescriber"><rect codeLine="14" fill="#F1F1F1" height="58.5938" id="Prescriber" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="7" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="83" x="25.5" y="296.9951">Prescriber</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="112.5" y="296.9951">(author)</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="185" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="13" y="322.292">EHDSHealthProfessional</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="185" y1="329.5938" y2="329.5938" /></g><!--class Patient--><g id="elem_Patient"><rect codeLine="19" fill="#F1F1F1" height="58.5938" id="Patient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126" x="221.5" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="224.5" y="296.9951">Patient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="283.5" y="296.9951">(subject)</text><line style="stroke:#181818;stroke-width:0.5;" x1="222.5" x2="346.5" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="227.5" y="322.292">EHDSPatient</text><line style="stroke:#181818;stroke-width:0.5;" x1="222.5" x2="346.5" y1="329.5938" y2="329.5938" /></g><!--class Medication--><g id="elem_Medication"><rect codeLine="45" fill="#F1F1F1" height="58.5938" id="Medication" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126" x="400.5" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="85" x="421" y="296.9951">Medication</text><line style="stroke:#181818;stroke-width:0.5;" x1="401.5" x2="525.5" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="406.5" y="322.292">EHDSMedication</text><line style="stroke:#181818;stroke-width:0.5;" x1="401.5" x2="525.5" y1="329.5938" y2="329.5938" /></g><!--class Dosage--><g id="elem_Dosage"><rect codeLine="40" fill="#F1F1F1" height="58.5938" id="Dosage" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="159" x="562" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="153" x="565" y="296.9951">DosageInstructions</text><line style="stroke:#181818;stroke-width:0.5;" x1="563" x2="720" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="568" y="322.292">EHDSDosaging</text><line style="stroke:#181818;stroke-width:0.5;" x1="563" x2="720" y1="329.5938" y2="329.5938" /></g><!--link eP to Header--><g id="link_eP_Header"><path codeLine="10" d="M432.01,66.08 C394.29,87.87 342.39,117.85 303.58,140.27 " fill="none" id="eP-to-Header" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="298.91,142.96,308.7041,141.9226,303.2397,140.4593,304.703,134.995,298.91,142.96" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="380.5" y="109.0669">1..1</text></g><!--link eP to Item--><g id="link_eP_Item"><path codeLine="11" d="M481.5,66.25 C481.5,87.42 481.5,116.25 481.5,138.38 " fill="none" id="eP-to-Item" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="none" points="481.5,151.49,485.5,145.49,481.5,139.49,477.5,145.49,481.5,151.49" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="482.5" y="109.0669">1..*</text></g><!--link eP to PresentedForm--><g id="link_eP_PresentedForm"><path codeLine="12" d="M517.75,66.25 C542.93,86.21 576.69,112.98 603.87,134.52 " fill="none" id="eP-to-PresentedForm" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="none" points="614.31,142.8,612.0976,135.9367,604.9113,135.3391,607.1237,142.2024,614.31,142.8" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="577.5" y="109.0669">0..*</text></g><!--link Header to Prescriber--><g id="link_Header_Prescriber"><path codeLine="29" d="M216.68,202.25 C192.17,223.71 158.68,253.04 133.27,275.29 " fill="none" id="Header-to-Prescriber" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="129.27,278.8,138.678,275.8863,133.0338,275.5085,133.4116,269.8643,129.27,278.8" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="183.5" y="245.0669">1..1</text></g><!--link Header to Patient--><g id="link_Header_Patient"><path codeLine="30" d="M257.01,202.25 C262.5,223.27 269.96,251.84 275.73,273.91 " fill="none" id="Header-to-Patient" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="277,278.8,278.5764,269.0781,275.7268,273.9648,270.8401,271.1152,277,278.8" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="270.5" y="245.0669">1..1</text></g><!--link Item to Medication--><g id="link_Item_Medication"><path codeLine="36" d="M478.81,193.56 C475.97,214.69 471.45,248.34 468.05,273.6 " fill="none" id="Item-to-Medication" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="467.35,278.86,472.5218,270.4783,468.0211,273.9052,464.5942,269.4046,467.35,278.86" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="475.5" y="245.0669">1..1</text></g><!--link Item to Dosage--><g id="link_Item_Dosage"><path codeLine="37" d="M505.45,193.56 C529.63,213.81 567.52,245.55 597.19,270.39 " fill="none" id="Item-to-Dosage" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="none" points="607.3,278.86,605.2709,271.9403,598.103,271.1519,600.1321,278.0716,607.3,278.86" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="572.5" y="245.0669">0..*</text></g></g></svg>
+</figure>
+
+<ul>
+  <li>Prescription: <a href="StructureDefinition-EHDSMedicationPrescription.html">EHDSMedicationPrescription</a></li>
+  <li>Patient: <a href="StructureDefinition-EHDSPatient.html">EHDSPatient</a></li>
+  <li>Prescriber: <a href="StructureDefinition-EHDSHealthProfessional.html">EHDSHealthProfessional</a></li>
+  <li>Medication: <a href="StructureDefinition-EHDSMedication.html">EHDSMedication</a></li>
+  <li>Usage instructions: <a href="StructureDefinition-EHDSDosaging.html">EHDSDosaging</a></li>
+</ul>
+
+<h4 id="ehds-information-models-for-edispensation">EHDS information models for <strong>eDispensation</strong>:</h4>
+
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="421px" preserveAspectRatio="none" style="width:1038px;height:421px;background:#FFFFFF;" version="1.1" viewBox="0 0 1038 421" width="1038px" zoomAndPan="magnify"><defs /><g><!--class eD--><g id="elem_eD"><rect codeLine="6" fill="#F1F1F1" height="70.8906" id="eD" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="192" x="475" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="73" x="534.5" y="24.9951">Dispense</text><line style="stroke:#181818;stroke-width:0.5;" x1="476" x2="666" y1="33.2969" y2="33.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="180" x="481" y="50.292">EHDSMedicationDispense</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135" x="493" y="72.5889">relatedRequest 0..*</text><rect fill="#F1F1F1" height="2" style="stroke:#000000;stroke-width:1.0;" width="2" x="490" y="66.7422" /><line style="stroke:#000000;stroke-width:1.0;" x1="483" x2="491" y1="67.7422" y2="67.7422" /><line style="stroke:#000000;stroke-width:1.0;" x1="483" x2="483" y1="59.5938" y2="67.7422" /></g><!--class Header--><g id="elem_Header"><rect codeLine="18" fill="#F1F1F1" height="58.5938" id="Header" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="242" x="43" y="171" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="135.5" y="188.9951">Header</text><line style="stroke:#181818;stroke-width:0.5;" x1="44" x2="284" y1="197.2969" y2="197.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="230" x="49" y="214.292">EHDSMedicationDispenseHeader</text><line style="stroke:#181818;stroke-width:0.5;" x1="44" x2="284" y1="221.5938" y2="221.5938" /></g><!--class Medication--><g id="elem_Medication"><rect codeLine="52" fill="#F1F1F1" height="58.5938" id="Medication" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126" x="320" y="171" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="85" x="340.5" y="188.9951">Medication</text><line style="stroke:#181818;stroke-width:0.5;" x1="321" x2="445" y1="197.2969" y2="197.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="326" y="214.292">EHDSMedication</text><line style="stroke:#181818;stroke-width:0.5;" x1="321" x2="445" y1="221.5938" y2="221.5938" /></g><!--class Receiver--><g id="elem_Receiver"><rect codeLine="37" fill="#F1F1F1" height="91.1875" id="Receiver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="481.5" y="155" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="69" x="536.5" y="172.9951">Receiver</text><line style="stroke:#181818;stroke-width:0.5;" x1="482.5" x2="659.5" y1="181.2969" y2="181.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="487.5" y="198.292">EHDSPatient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="487.5" y="214.5889">EHDSRelatedPerson</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="487.5" y="230.8857">EHDSHealthProfessional</text><line style="stroke:#181818;stroke-width:0.5;" x1="482.5" x2="659.5" y1="238.1875" y2="238.1875" /></g><!--class Dosage--><g id="elem_Dosage"><rect codeLine="47" fill="#F1F1F1" height="58.5938" id="Dosage" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="154" x="696" y="171" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="148" x="699" y="188.9951">Usage Instructions</text><line style="stroke:#181818;stroke-width:0.5;" x1="697" x2="849" y1="197.2969" y2="197.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="702" y="214.292">EHDSDosaging</text><line style="stroke:#181818;stroke-width:0.5;" x1="697" x2="849" y1="221.5938" y2="221.5938" /></g><!--class Location--><g id="elem_Location"><rect codeLine="43" fill="#F1F1F1" height="58.5938" id="Location" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146" x="885" y="171" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="140" x="888" y="188.9951">DispenseLocation</text><line style="stroke:#181818;stroke-width:0.5;" x1="886" x2="1030" y1="197.2969" y2="197.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="891" y="214.292">EHDSLocation</text><line style="stroke:#181818;stroke-width:0.5;" x1="886" x2="1030" y1="221.5938" y2="221.5938" /></g><!--class Patient--><g id="elem_Patient"><rect codeLine="32" fill="#F1F1F1" height="58.5938" id="Patient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126" x="7" y="339" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="10" y="356.9951">Patient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="69" y="356.9951">(subject)</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="132" y1="365.2969" y2="365.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="13" y="382.292">EHDSPatient</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="132" y1="389.5938" y2="389.5938" /></g><!--class Dispenser--><g id="elem_Dispenser"><rect codeLine="26" fill="#F1F1F1" height="91.1875" id="Dispenser" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="168.5" y="323" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="188.5" y="340.9951">Dispenser</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="272.5" y="340.9951">(author)</text><line style="stroke:#181818;stroke-width:0.5;" x1="169.5" x2="346.5" y1="349.2969" y2="349.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="174.5" y="366.292">EHDSHealthProfessional</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="174.5" y="382.5889">EHDSOrganization</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="174.5" y="398.8857">EHDSDevice</text><line style="stroke:#181818;stroke-width:0.5;" x1="169.5" x2="346.5" y1="406.1875" y2="406.1875" /></g><!--link eD to Header--><g id="link_eD_Header"><path codeLine="12" d="M480.93,78.02 C409.81,105.28 311.55,142.94 243.37,169.08 " fill="none" id="eD-to-Header" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="238.51,170.94,248.3455,171.4527,243.1786,169.1499,245.4814,163.983,238.51,170.94" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="393" y="121.0669">1..1</text></g><!--link eD to Medication--><g id="link_eD_Medication"><path codeLine="13" d="M529.28,78.12 C497.08,104.84 452.88,141.51 421.52,167.54 " fill="none" id="eD-to-Medication" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="417.38,170.98,426.8616,168.3155,421.2293,167.7889,421.7559,162.1567,417.38,170.98" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="490" y="121.0669">1..1</text></g><!--link eD to Receiver--><g id="link_eD_Receiver"><path codeLine="14" d="M571,78.12 C571,99.15 571,126.35 571,149.67 " fill="none" id="eD-to-Receiver" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="571,154.89,575,145.89,571,149.89,567,145.89,571,154.89" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="572" y="121.0669">1..1</text></g><!--link eD to Dosage--><g id="link_eD_Dosage"><path codeLine="15" d="M615.83,78.12 C648.45,103.31 692.53,137.35 725.7,162.97 " fill="none" id="eD-to-Dosage" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="none" points="736.06,170.98,733.7619,164.1449,726.5686,163.6374,728.8668,170.4725,736.06,170.98" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="673" y="121.0669">0..*</text></g><!--link eD to Location--><g id="link_eD_Location"><path codeLine="16" d="M662.63,78.02 C749.56,110.76 867,155 867,155 C867,155 875.72,159.26 887.76,165.15 " fill="none" id="eD-to-Location" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="none" points="899.6,170.94,895.9671,164.7109,888.8198,165.6685,892.4528,171.8976,899.6,170.94" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="781" y="121.0669">0..1</text></g><!--link Header to Patient--><g id="link_Header_Patient"><path codeLine="22" d="M147.84,230.04 C131.43,259.02 106.04,303.86 88.75,334.38 " fill="none" id="Header-to-Patient" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="86.26,338.78,94.1651,332.9055,88.7161,334.4248,87.1967,328.9758,86.26,338.78" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="121" y="289.0669">1..1</text></g><!--link Header to Dispenser--><g id="link_Header_Dispenser"><path codeLine="23" d="M180.16,230.04 C193.86,254.23 213.83,289.49 230.1,318.24 " fill="none" id="Header-to-Dispenser" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="232.68,322.79,231.7295,312.9871,230.2178,318.4383,224.7667,316.9266,232.68,322.79" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="215" y="289.0669">1..1</text></g></g></svg>
+</figure>
+
+<ul>
+  <li>Dispense: <a href="StructureDefinition-EHDSMedicationDispense.html">EHDSMedicationDispense</a></li>
+  <li>Patient: <a href="StructureDefinition-EHDSPatient.html">EHDSPatient</a></li>
+  <li>Dispenser: <a href="StructureDefinition-EHDSHealthProfessional.html">EHDSHealthProfessional</a></li>
+  <li>Medication: <a href="StructureDefinition-EHDSMedication.html">EHDSMedication</a></li>
+  <li>Usage instructions: <a href="StructureDefinition-EHDSDosaging.html">EHDSDosaging</a></li>
+  <li>Location: <a href="StructureDefinition-EHDSLocation.html">EHDSLocation</a></li>
+</ul>
+
+<p>Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.</p>
+
+<p>Components of <strong>declining a dispense</strong> and their representation as EHDS information models:</p>
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="360px" preserveAspectRatio="none" style="width:751px;height:360px;background:#FFFFFF;" version="1.1" viewBox="0 0 751 360" width="751px" zoomAndPan="magnify"><defs /><g><!--class eD--><g id="elem_eD"><rect codeLine="6" fill="#F1F1F1" height="58.5938" id="eD" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="169" x="361.5" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="131" x="380.5" y="24.9951">DispenseDecline</text><line style="stroke:#181818;stroke-width:0.5;" x1="362.5" x2="529.5" y1="33.2969" y2="33.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="367.5" y="50.292">EHDSDispenseDecline</text><line style="stroke:#181818;stroke-width:0.5;" x1="362.5" x2="529.5" y1="57.5938" y2="57.5938" /></g><!--class Header--><g id="elem_Header"><rect codeLine="15" fill="#F1F1F1" height="58.5938" id="Header" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="242" x="43" y="151" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="135.5" y="168.9951">Header</text><line style="stroke:#181818;stroke-width:0.5;" x1="44" x2="284" y1="177.2969" y2="177.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="230" x="49" y="194.292">EHDSMedicationDispenseHeader</text><line style="stroke:#181818;stroke-width:0.5;" x1="44" x2="284" y1="201.5938" y2="201.5938" /></g><!--class Item--><g id="elem_Item"><rect codeLine="38" fill="#F1F1F1" height="58.5938" id="Item" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="252" x="320" y="151" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="124" x="384" y="168.9951">RelatedRequest</text><line style="stroke:#181818;stroke-width:0.5;" x1="321" x2="571" y1="177.2969" y2="177.2969" /><line style="stroke:#181818;stroke-width:0.5;" x1="321" x2="571" y1="185.2969" y2="185.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="326" y="202.292">EHDSMedicationPrescription (item)</text></g><!--class Reason--><g id="elem_Reason"><rect codeLine="32" fill="#F1F1F1" height="74.8906" id="Reason" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="137" x="607.5" y="143" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="58" x="647" y="160.9951">Reason</text><line style="stroke:#181818;stroke-width:0.5;" x1="608.5" x2="743.5" y1="169.2969" y2="169.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="613.5" y="186.292">CodeableConcept</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="613.5" y="202.5889">string</text><line style="stroke:#181818;stroke-width:0.5;" x1="608.5" x2="743.5" y1="209.8906" y2="209.8906" /></g><!--class Patient--><g id="elem_Patient"><rect codeLine="27" fill="#F1F1F1" height="58.5938" id="Patient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126" x="7" y="295" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="10" y="312.9951">Patient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="69" y="312.9951">(subject)</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="132" y1="321.2969" y2="321.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="13" y="338.292">EHDSPatient</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="132" y1="345.5938" y2="345.5938" /></g><!--class Dispenser--><g id="elem_Dispenser"><rect codeLine="22" fill="#F1F1F1" height="58.5938" id="Dispenser" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="168.5" y="295" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="188.5" y="312.9951">Dispenser</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="272.5" y="312.9951">(author)</text><line style="stroke:#181818;stroke-width:0.5;" x1="169.5" x2="346.5" y1="321.2969" y2="321.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="174.5" y="338.292">EHDSHealthProfessional</text><line style="stroke:#181818;stroke-width:0.5;" x1="169.5" x2="346.5" y1="345.5938" y2="345.5938" /></g><!--link eD to Header--><g id="link_eD_Header"><path codeLine="11" d="M389.27,66.07 C341.75,89.99 274.05,124.08 225.3,148.64 " fill="none" id="eD-to-Header" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="220.64,150.98,230.4775,150.5076,225.1064,148.7325,226.8815,143.3614,220.64,150.98" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="323" y="109.0669">1..1</text></g><!--link eD to Item--><g id="link_eD_Item"><path codeLine="12" d="M446,66.24 C446,89.24 446,121.54 446,145.77 " fill="none" id="eD-to-Item" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="446,150.81,450,141.81,446,145.81,442,141.81,446,150.81" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="447" y="109.0669">1..*</text></g><!--link eD to Reason--><g id="link_eD_Reason"><path codeLine="13" d="M492.27,66.07 C526.68,87.31 574.06,116.57 612.09,140.04 " fill="none" id="eD-to-Reason" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="616.68,142.88,611.1236,134.7482,612.4256,140.2531,606.9207,141.5552,616.68,142.88" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="569" y="109.0669">1..1</text></g><!--link Header to Patient--><g id="link_Header_Patient"><path codeLine="19" d="M144.98,210.24 C129.62,233.43 108.01,266.08 91.93,290.37 " fill="none" id="Header-to-Patient" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="88.99,294.81,97.2896,289.5074,91.747,290.6388,90.6156,285.0962,88.99,294.81" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="121" y="261.0669">1..1</text></g><!--link Header to Dispenser--><g id="link_Header_Dispenser"><path codeLine="20" d="M183.02,210.24 C198.38,233.43 219.99,266.08 236.07,290.37 " fill="none" id="Header-to-Dispenser" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="239.01,294.81,237.3844,285.0962,236.253,290.6388,230.7104,289.5074,239.01,294.81" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="218" y="261.0669">1..1</text></g></g></svg>
+</figure>
+
+<ul>
+  <li>DispenseDecline: <a href="StructureDefinition-EHDSDispenseDecline.html">EHDSDispenseDecline</a></li>
+  <li>Patient: <a href="StructureDefinition-EHDSPatient.html">EHDSPatient</a></li>
+  <li>Dispenser: <a href="StructureDefinition-EHDSHealthProfessional.html">EHDSHealthProfessional</a></li>
+</ul>
+
+<p>Dispense can be declined for the whole prescription or just for a prescription item.</p>
+
+<h3 id="fhir-implementation-guide">FHIR Implementation Guide</h3>
+
+<p>FHIR Implementation Guide is being developed in a cross-project working group lead by HL7 Europe and IHE (see <a href="https://confluence.hl7.org/display/HEU/Medication+Prescription+and+Dispense%2C+Edition+1">working group information</a>). Business and data requirements defined in Xt-EHR Task 6.2 are discussed further in the working group in order to gather feedback from the implementers. Approved requirements are adopted by HL7 Europe MPD FHIR IG.</p>
+
+<p><strong>Ongoing work:</strong></p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/hl7-eu/mpd/">R4 FHIR IG</a></li>
+  <li><a href="https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/">R5 FHIR IG</a></li>
+</ul>
+
+<h3 id="ihe-profile">IHE Profile</h3>
+
+<p>FHIR-based IHE profile for this use case is in draft status, please see <a href="https://build.fhir.org/ig/IHE/pharm-mpd/">IHE Medication Prescription and Delivery profile</a> for more information.</p>
+
+<p>IHE Profile has a global scope and is not part of Xt-EHR deliverable. However, the HL7 Europe / IHE joint working group (see above) allows mutually beneficial cooperation and early alignment.</p>
+
+<h3 id="supporting-information">Supporting Information</h3>
+
+<ul>
+  <li><a href="https://health.ec.europa.eu/document/download/b744f30b-a05e-4b9c-9630-ad96ebd0b2f0_en?filename=ehn_guidelines_eprescriptions_en.pdf">eHealth Network Guideline on ePrescription and eDispensation of Authorised Medicinal Products</a></li>
+  <li><a href="https://build.fhir.org/ig/IHE/pharm-mpd/">IHE Medication Prescription and Delivery profile</a> (draft)</li>
+  <li>ISO/DIS 17523 "Health informatics - Requirements for electronic prescriptions"</li>
+  <li>MyHealth@EU <a href="https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/1.+MyHealth@EU+Requirements+Catalogue">requirements catalogue</a> and <a href="https://art-decor.ehdsi.eu/publication/epSOS/">CDA specification</a></li>
+  <li><a href="https://confluence.ihtsdotools.org/display/DOCMPM">SNOMED CT Medicinal Product Model Specification</a></li>
+  <li><a href="https://standardterms.edqm.eu/">EDQM Standard Terms</a></li>
+  <li><a href="https://www.ema.europa.eu/en/human-regulatory-overview/research-development/data-medicines-iso-idmp-standards-overview/substance-product-organisation-referential-spor-master-data/substance-product-data-management-services">European Medicines Agency ISO IDMP implementation guidance</a>, including <a href="https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/product-management-services-pms-implementation-international-organization-standardization-iso-standards-identification-medicinal-products-idmp-europe-chapter-2_en.pdf">FHIR IG</a></li>
+  <li><a href="https://spor.ema.europa.eu/sporwi/">EMA SPOR</a></li>
+  <li>UNICOM project: <a href="https://unicom-project.eu/">web page</a>, <a href="https://build.fhir.org/ig/hl7-eu/unicom-ig/">FHIR IG</a>, <a href="https://unicom-project.eu/public-deliverables/">public deliverables</a></li>
+  <li><a href="https://www.ema.europa.eu/en/medicines/national-registers-authorised-medicines">Links to national medicines registers</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://Xt-EHR.eu">Xt-EHR</a>.  Package eu.ehds.models#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Sun, Apr 6, 2025 09:59+0000">2025-04-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
