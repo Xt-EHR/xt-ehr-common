@@ -15,9 +15,9 @@ Characteristics: #can-be-target
     * ^binding.description = "ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed"
     * ^binding.strength = #preferred
   * livingWillDocument 1..* EHDSAttachment "B.1.1.6 - Living will document" """Scanned source document with the living will and the patient's signature, such as a PDF."""
-* alertsSection 1..1 Base "B.1.2 - Alerts section" """Alert section includes information about allergies, intolerances and other substantial alerts or warnings that health professionals should be aware of. """
+* alertsSection 0..1 Base "B.1.2 - Alerts section" """Alert section includes information about allergies, intolerances and other substantial alerts or warnings that health professionals should be aware of. """
   * sectionNarative 0..1 string "B.1.2.1 - Section narative" """Narative content of the section. This narative shell containing either narative description of both allergy and alerts, or similar narative sub-section elements shell be provided.  """
-  * allergyAndIntolerance 1..* EHDSAllergyIntolerance "B.1.2.2 - Allergy and Intolerance" """A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the hospital stay)."""
+  * allergyAndIntolerance 0..* EHDSAllergyIntolerance "B.1.2.2 - Allergy and Intolerance" """A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the hospital stay)."""
   * medicalAlerts 0..* EHDSAlertFlag "B.1.2.3 - Medical alerts" """Specific alerts relevant to the patient’s condition that should be noted (other alerts not included in allergies)."""
 * encounterInformationSection 1..1 Base "B.1.3 - Encounter information section" """Hospital encounter section."""
   * sectionNarative 1..1 string "B.1.2.1 - Section narative" """Narative content of the section."""
