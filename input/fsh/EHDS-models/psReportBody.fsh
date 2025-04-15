@@ -27,7 +27,7 @@ Characteristics: #can-be-target
   * medicalDevice 0..* EHDSDeviceUse "Describes the patient’s implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP."
 * procedures 1..1 Base "Section: Procedures"  
   * dataAbsentReason 0..1 CodeableConcept "Reason for absence of data"
-  * procedure 1..* EHDSProcedure "Major procedures."
+  * procedure 0..* EHDSProcedure "Major procedures."
 * functionalStatus 0..1 Base "Section: Functional status"
   * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
 * medicationSummary 1..1 Base "Section: Medication Summary. Current and relevant past medicine."
