@@ -65,7 +65,7 @@ EHDSMedicationAdministration?
 EHDSCarePlan?
 */
 
-Logical: EHDSPatientSummaryBody
+Logical: EHDSPatientSummaryBody2
 Title: "Patient summary body model"
 Description: "EHDS model for Patient Summary body data elements"
 Characteristics: #can-be-target
@@ -98,7 +98,7 @@ Characteristics: #can-be-target
 //    * dateOfObservation 0..* dateTime "Date of observation" """Date on which the observation of the pregnancy state was made"""
     * status 0..* EHDSObservation "Current state at the date the observation was made: e.g. pregnant, not pregnant, unknown"
     * expectedDateOfDelivery 0..1 dateTime "Expected date of delivery" """Date on which the woman is due to give birth."""
-  * previousPregnancies 0..1 Base ""History of previous pregnancies"
+  * previousPregnancies 0..1 Base "History of previous pregnancies"
     * status 0..1 EHDSObservation "Previous pregnancies status: Yes, previous pregnancies; No, previous pregnancies; Unknown"
     * description 0..* Base "Previous pregnancy's descriptions in detail"
 //      * outcomeDate 0..1 dateTime "B.1.6.2.2.1 - Outcome date" """Date referred to the previous pregnancies outcome"""
