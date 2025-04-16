@@ -1,47 +1,22 @@
-Alias: $actor-prescribing-system = https://www.xt-ehr.eu/specifications/fhir/actor-prescribing-system
-Alias: $actor-dispensing-system = https://www.xt-ehr.eu/specifications/fhir/actor-dispensing-system
-Alias: $actor-ncp-system = https://www.xt-ehr.eu/specifications/fhir/actor-ncp-system
-Alias: $actor-ehr-system = https://www.xt-ehr.eu/specifications/fhir/actor-ehr-system
+Alias: $actor-prescriber = https://www.xt-ehr.eu/specifications/fhir/actor-prescribing-system
+Alias: $actor-dispenser = https://www.xt-ehr.eu/specifications/fhir/actor-dispensing-system
 
-
-Instance: actor-prescribing-system
+Instance: actor-prescriber
 InstanceOf: ActorDefinition
-Title: "Actor Prescribing System"
-Description: """A system which has functions to create medication prescriptions."""
+Title: "Prescriber Actor"
+Description: """An actor which produces medication prescriptions."""
 Usage: #example
-* url = $actor-prescribing-system
-* name = "Prescribing System"
+* url = $actor-prescriber
+* name = "Prescriber"
 * status = #active
 * type = #system
 
-Instance: actor-dispensing-system
+Instance: actor-dispenser
 InstanceOf: ActorDefinition
-Title: "Actor Dispensing System"
-Description: """A system which has functions to support and record dispensing of medication prescriptions."""
+Title: "Dispenser Actor"
+Description: """An actor which manages dispensing of medication prescriptions."""
 Usage: #example
-* url = $actor-dispensing-system
-* name = "Dispensing System"
-* status = #active
-* type = #system
-
-
-// do we need this or will MyHealth@EU specify the requirements? rather leave this for eHMSEG
-Instance: actor-ncp-system
-InstanceOf: ActorDefinition
-Title: "Actor National Contact Point System"
-Description: """A National Contact Point for eHealth."""
-Usage: #example
-* url = $actor-ncp-system
-* name = "NCP System"
-* status = #active
-* type = #system
-
-Instance: actor-ehr-system
-InstanceOf: ActorDefinition
-Title: "Actor Archetypical EHR System"
-Description: """An archetypical EHR system."""
-Usage: #example
-* url = $actor-ehr-system
-* name = "EHR System"
+* url = $actor-dispenser
+* name = "Dispenser"
 * status = #active
 * type = #system
