@@ -16,4 +16,5 @@ Characteristics: #can-be-target
 * note 0..* Narrative "C.25.8 - Note" """Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement."""
 * recorded 0..1 dateTime "C.25.9 - Recorded" """Date and time at which the statement was made/recorded."""
 * source 0..1 Reference(EHDSPatient or  EHDSHealthProfessional or EHDSRelatedPerson) "C.25.10 - Source" """Who reported the device was being used by the patient."""
+* reason 0..* Reference (EHDSCondition or EHDSObservation or EHDSProcedure) "C.25.11 - Reason" """Reason or justification for the use of the device."""
 
