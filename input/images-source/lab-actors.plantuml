@@ -1,0 +1,18 @@
+@startuml
+"Result Report Creator" as creator
+"Result Report Repository" as repos
+"Result Report Consumer" as consumer
+"Generate a report" as (create)
+"Store a report" as (store)
+"Use a report" as (use)
+"Send/Provide a report" as (send)
+"Receive/Query a report" as (receive)
+
+creator --> (create)
+creator --> (send)
+consumer --> (use)
+consumer --> (receive)
+repos --> (store)
+repos --> (send)
+repos --> (receive)
+@enduml
