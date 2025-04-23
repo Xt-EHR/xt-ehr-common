@@ -5,7 +5,11 @@ Description: """EHDS refined base model for Patient Summary"""
 Characteristics: #can-be-target
 
 * header ^short = "Metadata for the patient summary document"
-  * natureOfTheDocument 1..1 Base "A.1.9.17 - Nature of the document" """Defines the context in which the document was generated. Distinguishes between four methodological approaches for generating the document: Created entirely by a HCP2; Manually created by HCP(s) and collected by machine(s); Created by machine(s) and checked by HCP(s); Created and collected by machine(s)"""
+  * natureOfTheDocument 1..1 Base "Nature of the document" """Defines the context in which the document was generated. Distinguishes between four methodological approaches for generating the document: Created entirely by a HCP2; Manually created by HCP(s) and collected by machine(s); Created by machine(s) and checked by HCP(s); Created and collected by machine(s)"""
+  * eventType 0..0
+  * authorSpecialty 0..0
+  * attestation 0..0
+  * legalAuthentication 0..0
 * preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganization "A.1.3 - Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
 * alerts 1..1 Base "Section: Alerts." """Information about substantial alerts or warnings that health professionals should be aware of."""
   * ^requirements = "eHN PS Guideline"
