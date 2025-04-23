@@ -1,5 +1,5 @@
 Logical: EHDSDispenseDecline
-Title: "Dispense decline"
+Title: "Medication dispense decline model"
 Parent: EHDSDataSet
 Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
 Characteristics: #can-be-target
@@ -12,7 +12,7 @@ Characteristics: #can-be-target
 
 
 Logical: EHDSMedicationDispense
-Title: "Medication dispensation model"
+Title: "Medication dispense model"
 Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target

@@ -1,6 +1,6 @@
 Logical: EHDSDataSet
-Title: "Resource header model"
-Description: "Common header elements for all documents and their independently functioning parts, e.g FHIR resources."
+Title: "DataSet model"
+Description: "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources."
 Characteristics: #can-be-target
 
 * header 1..* Base "Common header for all patient-related data"
@@ -22,7 +22,7 @@ Characteristics: #can-be-target
 Logical: EHDSDocument
 Title: "Document model"
 Parent: EHDSDataSet
-Description: "EHDS refined base model for document header data elements, including the common header for all resources. Data relevant to document type and its content for administrative and searching purposes."
+Description: "EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes."
 Characteristics: #can-be-target
 
 * header ^short = "Document header elements"
