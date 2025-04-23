@@ -37,7 +37,7 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:CompositionStatus"
     * ^binding.strength = #preferred
   * period 0..1 Period "Period" """Time of service that is being documented"""
-  * reportDateTime 1..1 dateTime "Report date and time" """Date and time of the report creation."""
+  //* reportDateTime 1..1 dateTime "Report date and time" """Date and time of the report creation."""
   * attestation 0..* Base "Attestation" """Document attestation details"""
     * attester 1..1 EHDSHealthProfessional "Attester" """Attester who validated the document. Mulitple attesters could be provided."""
     * datetime 1..1 dateTime "DateTime" """Date and time of the approval of the document by Attester."""
