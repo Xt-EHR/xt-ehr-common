@@ -1,5 +1,5 @@
 Logical: EHDSLaboratoryReportHeader
-Parent: EHDSDocumentHeader
+Parent: EHDSDocument
 Title: "Laboratory report header model"
 Description: """A.1 - EHDS refined base model for laboratory report header data elements"""
 Characteristics: #can-be-target
