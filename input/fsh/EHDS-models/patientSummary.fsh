@@ -2,7 +2,6 @@ Logical: EHDSPatientSummary
 Title: "Patient summary model"
 Parent: EHDSDocument
 Description: """EHDS refined base model for Patient Summary"""
-//Characteristics: #can-be-target
 
 * header ^short = "Metadata for the patient summary document"
   * natureOfTheDocument 1..1 Base "Nature of the document" """Defines the context in which the document was generated. Distinguishes between four methodological approaches for generating the document: Created entirely by a HCP2; Manually created by HCP(s) and collected by machine(s); Created by machine(s) and checked by HCP(s); Created and collected by machine(s)"""
