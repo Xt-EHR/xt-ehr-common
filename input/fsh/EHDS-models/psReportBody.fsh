@@ -1,3 +1,4 @@
+/*
 Logical: EHDSPatientSummaryBody
 //Id: EHDSpatientSummaryBody
 Title: "Patient summary body model"
@@ -69,3 +70,4 @@ health status depends on."""
 * planOfCare 0..1 Base "B.1.9 - Plan of Care" """Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries"""
   * description 0..1 string "B.1.9.1 - Description" """Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient.In the future it is expected that this Section could be provided in a structured and coded format."""
   * planOfCareEntry 0..* EHDSCarePlan "B.1.9.2 - Plan of Care Entry" """Describes the intention of how one or more practitioners intend to deliver care for a particular patient for a period of time, possibly limited to care for a specific condition or set of conditions."""
+*/

@@ -1,5 +1,5 @@
 Logical: EHDSLaboratoryReportHeader
-Parent: EHDSDocumentHeader
+Parent: EHDSDocument
 Title: "Laboratory report header model"
 Description: """A.1 - EHDS refined base model for laboratory report header data elements"""
 Characteristics: #can-be-target
@@ -27,8 +27,8 @@ Characteristics: #can-be-target
 //  * period 0..1 Period "A.1.9.4 - Period" """Documented period service. Typically used for searching purposes."""
 //  * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the Hospital discharge  report creation."""
 //  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, fix value "Hospital discharge report". """
-* eventType ^binding.description = "SNOMED CT"
-* eventType ^binding.strength = #preferred
+* header.eventType ^binding.description = "SNOMED CT"
+* header.eventType ^binding.strength = #preferred
 //  * authorSpecialty 0..* CodeableConcept "A.1.9.8 - Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""
 //    * ^binding.description = "SNOMED CT"
 //    * ^binding.strength = #preferred
