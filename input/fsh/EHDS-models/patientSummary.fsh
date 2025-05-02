@@ -18,7 +18,7 @@ Characteristics: #can-be-target
   * medicalAlert 0..* EHDSAlertFlag "Description of medical alerts in textual format: any clinical information that is imperative to know so that the life or health of the patient does not come under threat."
     * ^requirements = "eHN PS Guideline"
 * allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances"
-  * narrative 0..1 String "Narrative, potentially formatted, content of the section"
+  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)"
   * allergy 0..* EHDSAllergyIntolerance "Allergy or intolerance information"
     * ^requirements = "eHN PS Guideline"
