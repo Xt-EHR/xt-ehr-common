@@ -31,7 +31,7 @@ Characteristics: #can-be-target
     * ^binding.description = "To be specified"
     * ^binding.strength = #preferred
   * actor 1..1 Reference(EHDSHealthProfessional) "C.15.13.2 - Actor" """Identify the Health Professional who may be specifically related to the condition, e.g., as a preferred contact."""
-* externalResourceRelatedWith 0..* uri "C.15.14 - External Resourcerelated with" """Identify the External Resource which may be specifically relatedto the problem, for example a link between a rare disease problemand the corresponding guidelines."""
+* externalResourceRelatedWith 0..* uri "C.15.14 - External Resource related with" """Identify the External Resource which may be specifically relatedto the problem, for example a link between a rare disease problemand the corresponding guidelines."""
 * diagnosisAssertionStatus 0..1 CodeableConcept "C.15.15 - Diagnosis assertion status" """Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition."""
   * ^binding.description = "HL7 Condition-ver-status"
   * ^binding.strength = #preferred

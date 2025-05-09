@@ -19,9 +19,9 @@ Patient summary report could be divided into several basic parts: document heade
 </figure>
 
 ### Detailed EHDS information models for Patient summary
-- Patient Summary Document: [EHDSPatientSummary](StructureDefinition-EHDSPatientSummary.html)
-- Patient Summary Header: [EHDSPatientSummaryHeader](StructureDefinition-EHDSPatientSummaryHeader.html)
-- Patient Summary Body: [EHDSPatientSummaryBody](StructureDefinition-EHDSPatientSummaryBody.html)
+- [Patient Summary Document](StructureDefinition-EHDSPatientSummary.html)
+- [Patient Summary Header](StructureDefinition-EHDSPatientSummaryHeader.html)
+- [Patient Summary Body](StructureDefinition-EHDSPatientSummaryBody.html)
 
 ### FHIR Implementation Guide
 

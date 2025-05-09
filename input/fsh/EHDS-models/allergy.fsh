@@ -10,7 +10,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * allergyManifestation 0..* Base "C.21.4 - Allergy manifestation" """Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction). Multiple manifestations could be provided."""
   * date 0..1 dateTime "C.21.4.1 - Date" """Date and time of allergy manifestation"""
-  * severity 0..1 CodeableConcept "C.21.4.2 - Severity " """Severity of the clinical manifestation of the allergic reaction."""
+  * severity 0..1 CodeableConcept "C.21.4.2 - Severity" """Severity of the clinical manifestation of the allergic reaction."""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
   * description 0..1 string "C.21.4.3 - Description" """Description of the event as a whole"""

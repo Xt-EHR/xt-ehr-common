@@ -14,14 +14,10 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * observationDevice 0..1 EHDSDevice "C.10.6 - Observation device" """Device (e.g. analyser) that generates the measurements"""
-  * ^binding.description = "SNOMED CT, EMDN"
-  * ^binding.strength = #preferred
 * order 0..1 Reference (EHDSServiceRequest) "C.10.7 - Order" """Identifies order and order placer this observation belongs to. """
 * performer 0..1 EHDSHealthProfessional "C.10.8 - Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
 * reporter 0..1 EHDSHealthProfessional "C.10.9 - Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
 * observationResult 1..1 Base "C.10.10 - Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
-  * ^binding.description = "SNOMED CT (for ordinal or nominal scale results and result interpretation), UCUM (for units)"
-  * ^binding.strength = #preferred
   * textualResult 0..1 string "C.10.10.1 - Textual Result" """Narrative text result"""
   * numericResult 0..1 Base "C.10.10.2 - Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
     * numericValue[x] 0..1 Quantity or Range "C.10.10.2.1 - Numeric value" """A numeric value or interval (open or closed) of the result"""
