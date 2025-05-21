@@ -13,7 +13,7 @@ Characteristics: #can-be-target
 * date[x] 0..1 dateTime or Period "Date and time of the procedure or interval of its performance"
 * performer 0..* EHDSHealthProfessional "An actor who performed the procedure"
 * bodySite 0..* EHDSBodyStructure "Anatomic location and laterality where the procedure was performed. This is the target site."
-* reason 0..* EHDSCondition or EHDSObservation or EHDSProcedure "The reason why the procedure was performed."
+* reason[x] 0..* EHDSCondition or EHDSObservation or EHDSProcedure "The reason why the procedure was performed."
 * outcome 0..1 CodeableConcept "The outcome of the procedure - did it resolve the reasons for the procedure being performed?"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred

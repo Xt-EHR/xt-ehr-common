@@ -15,7 +15,7 @@ Characteristics: #can-be-target
 * addresses 0..* CodeableConcept "Conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan."
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
-* activity 0..1 string or Reference "The details of the proposed activity represented in a specific resource."
+* activity[x] 0..1 string or Reference "The details of the proposed activity represented in a specific resource."
 
 /*
 * note 0..* Narrative "C.19.13 - Note" """General notes about the care plan not covered elsewhere."""
