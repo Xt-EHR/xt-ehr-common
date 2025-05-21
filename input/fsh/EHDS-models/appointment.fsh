@@ -4,18 +4,18 @@ Title: "Appointment model"
 Description: """EHDS refined base model for Appointment. This is a simplified model with minimal information - it is not intended to cover the full functionality of booking systems."""
 Characteristics: #can-be-target
 
-* identifier 0..* Identifier "C.20.1 - Appointment identifier"
-* subject 0..1 Reference(EHDSPatient) "C.20.17 - The patient associated with the appointment."
-* status 1..1 CodeableConcept "C.20.2 - The overall status of the Appointment."
+* identifier 0..* Identifier "Appointment identifier"
+* subject 0..1 EHDSPatient "The patient associated with the appointment."
+* status 1..1 CodeableConcept "The overall status of the Appointment."
   * ^binding.description = "HL7 Appointment status"
   * ^binding.strength = #preferred
-* class 0..* CodeableConcept "C.20.3 - Classification of patient encounter (e.g. inpatient, outpatient, emergency)."
+* class 0..* CodeableConcept "Classification of patient encounter (e.g. inpatient, outpatient, emergency)."
   * ^binding.description = "HL7 Encounter class"
   * ^binding.strength = #preferred
-* serviceType 0..* CodeableConcept "C.20.4 - The specific service that is to be performed during this appointment."
+* serviceType 0..* CodeableConcept "The specific service that is to be performed during this appointment."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* specialty 0..* CodeableConcept "C.20.5 - The specialty of a practitioner that would be required to perform the service requested in this appointment"
+* specialty 0..* CodeableConcept "The specialty of a practitioner that would be required to perform the service requested in this appointment"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * start 0..1 dateTime "C.20.11 - Date and time that the appointment is to take place."
