@@ -52,13 +52,13 @@ Characteristics: #can-be-target
           * ^binding.strength = #preferred
         * proximity[x] 0..1 CodeableConcept or Quantity "B.1.5.2.6.1.3 - Proximity" """Proximity to the source/carrier of the infectious agent during exposure. Proximity could be expressed by text, code (direct, indirect) or value specifying distance from the InfectiousAgentCarrier."""
         * country 0..1 CodeableConcept "B.1.5.2.6.1.4 - Country" """Country in which the person was potentially exposed to an infectious agent."""
-          * ^binding.description = "ISO 3166-1-2"
+          * ^binding.description = "ISO 3166-1 alpha-2"
           * ^binding.strength = #preferred
         * additionalInformation 0..1 string "B.1.5.2.6.1.5 - Additional information" """A textual note with additional information about infectious contact."""
       * travelHistory 0..1 Base "B.1.5.2.6.2 - Travel history" """Travel history reported by the patient. Multiple records could be provided."""
         * timePeriod 0..1 dateTime "B.1.5.2.6.2.1 - Time period" """Start and end date or end date and duration of stay in a country. Partial dates are allowed."""
         * countryVisited 1..1 CodeableConcept "B.1.5.2.6.2.2 - Country visited" """A country visited by the patient."""
-          * ^binding.description = "ISO 3166-1-2"
+          * ^binding.description = "ISO 3166-1 alpha-2"
           * ^binding.strength = #preferred
         * comment 0..1 string "B.1.5.2.6.2.3 - Comment" """Relevant notes on the travel stay."""
   * familyHistorySection 0..1 Base "B.1.5.3 - Family history section" """Relevant family history section."""
