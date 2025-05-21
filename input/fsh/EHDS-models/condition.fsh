@@ -5,7 +5,7 @@ Description: """C.15 - EHDS refined base model for A clinical condition, problem
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.15.1 - Identifier" """Condition identifier"""
-* description 0..1 Narrative "C.15.2 - Description" """Condition specification in narrative form"""
+* description 0..1 string "C.15.2 - Description" """Condition specification in narrative form"""
 * code 0..1 CodeableConcept "C.15.3 - Code" """Code identifying the condition, problem or diagnosis"""
   * ^binding.description = "ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed"
   * ^binding.strength = #preferred

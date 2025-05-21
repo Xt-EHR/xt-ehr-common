@@ -16,4 +16,4 @@ Characteristics: #can-be-target
 * type 0..* CodeableConcept "C.12.10 - Type" """Device type"""
   * ^binding.description = "SNOMED CT, EMDN"
   * ^binding.strength = #preferred
-* note 0..* Narrative "C.12.11 - Note" """Device notes and comments"""
+* note 0..* string "C.12.11 - Note" """Device notes and comments"""

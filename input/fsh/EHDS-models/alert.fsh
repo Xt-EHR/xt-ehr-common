@@ -5,7 +5,7 @@ Description: """C.22 - EHDS refined base model for Alert flag"""
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.22.1 - Identifier" """Flag identifier (Business identifiers assigned to this flag)."""
-* text 0..1 Narrative "C.22.2 - Text" """A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.
+* text 0..1 string "C.22.2 - Text" """A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.
 Example 1: intolerance to aspirin due to gastrointestinal bleeding.
 Example 2: intolerance to captopril because of cough (the patient is not allergic but can't tolerate it because of persistent cough)
 Example 3: the patient has a rare disease that requires special treatment

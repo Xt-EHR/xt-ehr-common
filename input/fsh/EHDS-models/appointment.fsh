@@ -32,14 +32,14 @@ Characteristics: #can-be-target
 * priority 0..1 CodeableConcept "C.20.8 - Priority" """The priority of the appointment. Can be used to make informed decisions if needing to re-prioritize appointments. """
   * ^binding.description = "HL7 Act priority"
   * ^binding.strength = #preferred
-* description 0..1 Narrative "C.20.9 - Description" """The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list."""
+* description 0..1 string "C.20.9 - Description" """The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list."""
 * supportingInformation 0..* Reference(EHDSCondition or EHDSProcedure or EHDSObservation or EHDSLaboratoryObservation or Resource) "C.20.10 - Supporting information" """Additional information to support the appointment provided when making the appointment."""
 * start 0..1 dateTime "C.20.11 - Start" """Date/Time that the appointment is to take place."""
 * end 0..1 dateTime "C.20.12 - End" """Date/Time that the appointment is to conclude."""
 * requestedPeriod 0..* Period "C.20.13 - Requested period" """A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within."""
 * slot 0..* Reference(EHDSSlot) "C.20.14 - Slot" """The slots from the participants' schedules that will be filled by the appointment."""
-* patientInstruction 0..* Narrative "C.20.15 - Patient instruction" """Patient facing information about the Appointment (e.g. fast from 8pm night before)."""
-* note 0..* Narrative "C.20.16 - Note" """Additional notes/comments about the appointment."""
+* patientInstruction 0..* string "C.20.15 - Patient instruction" """Patient facing information about the Appointment (e.g. fast from 8pm night before)."""
+* note 0..* string "C.20.16 - Note" """Additional notes/comments about the appointment."""
 
 * participant 0..* Base "C.20.18 - Participant" """List of participants involved in the appointment."""
   * type 0..* CodeableConcept "C.20.18.1 - Type" """List of participants involved in the appointment."""

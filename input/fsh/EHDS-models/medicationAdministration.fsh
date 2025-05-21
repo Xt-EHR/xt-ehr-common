@@ -14,6 +14,6 @@ Characteristics: #can-be-target
 * medication 1..1 Reference(EHDSMedication) "C.18.4 - Medication" """Administered medication"""
 * occurance[x] 1..1 dateTime or Period "C.18.5 - Occurance" """Specific date/time or interval of time during which the administration took place (or did not take place)"""
 * reason 0..* Reference(EHDSCondition or EHDSObservation) "C.18.6 - Reason" """Condition or observation that supports why the medication was administered"""
-* note 0..1 Narrative "C.18.7 - Note" """Information about the administration"""
+* note 0..1 string "C.18.7 - Note" """Information about the administration"""
 * dosage 0..1 EHDSDosage "C.18.8 - Dosage" """Details of how medication was taken"""
 * patient 1..1 Reference(EHDSPatient) "C.18.9 - Patient" """The patient who has the allergy or intolerance."""

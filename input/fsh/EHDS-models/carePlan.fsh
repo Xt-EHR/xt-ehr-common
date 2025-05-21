@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * activity[x] 0..1 string or Reference "The details of the proposed activity represented in a specific resource."
 
 /*
-* note 0..* Narrative "C.19.13 - Note" """General notes about the care plan not covered elsewhere."""
+* note 0..* string "C.19.13 - Note" """General notes about the care plan not covered elsewhere."""
 * intent 1..1 CodeableConcept "C.19.3 - Intent" """Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain."""
   * ^binding.description = "HL7 Care Plan Intent "
   * ^binding.strength = #preferred
