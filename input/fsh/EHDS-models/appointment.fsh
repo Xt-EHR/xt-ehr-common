@@ -1,22 +1,28 @@
 Logical: EHDSAppointment
 //Id: EHDSappointment
 Title: "Appointment model"
-Description: """C.20 - EHDS refined base model for Appointment"""
+Description: """EHDS refined base model for Appointment. This is a simplified model with minimal information - it is not intended to cover the full functionality of booking systems."""
 Characteristics: #can-be-target
 
-* identifier 0..* Identifier "C.20.1 - Identifier" """Appointment identifier"""
-* status 1..1 CodeableConcept "C.20.2 - Status" """The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status."""
+* identifier 0..* Identifier "C.20.1 - Appointment identifier"
+* subject 0..1 Reference(EHDSPatient) "C.20.17 - The patient associated with the appointment."
+* status 1..1 CodeableConcept "C.20.2 - The overall status of the Appointment."
   * ^binding.description = "HL7 Appointment status"
   * ^binding.strength = #preferred
-* class 0..* CodeableConcept "C.20.3 - Class" """Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations."""
+* class 0..* CodeableConcept "C.20.3 - Classification of patient encounter (e.g. inpatient, outpatient, emergency)."
   * ^binding.description = "HL7 Encounter class"
   * ^binding.strength = #preferred
-* serviceType 0..* CodeableConcept "C.20.4 - Service type" """The specific service that is to be performed during this appointment"""
+* serviceType 0..* CodeableConcept "C.20.4 - The specific service that is to be performed during this appointment."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* specialty 0..* CodeableConcept "C.20.5 - Specialty" """The specialty of a practitioner that would be required to perform the service requested in this appointment"""
+* specialty 0..* CodeableConcept "C.20.5 - The specialty of a practitioner that would be required to perform the service requested in this appointment"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
+* start 0..1 dateTime "C.20.11 - Date and time that the appointment is to take place."
+* end 0..1 dateTime "C.20.12 - Date and time that the appointment is to conclude."
+* note 0..* string "C.20.16 - Additional notes/comments about the appointment."
+
+/*
 * type 0..1 CodeableConcept "C.20.6 - Type" """The type of appointment or patient that has been booked in the slot, e.g. Routine, check-up, walk-in, routine, emenrgency etc."""
   * ^binding.description = "TBD"
   * ^binding.strength = #preferred
@@ -34,10 +40,11 @@ Characteristics: #can-be-target
 * slot 0..* Reference(EHDSSlot) "C.20.14 - Slot" """The slots from the participants' schedules that will be filled by the appointment."""
 * patientInstruction 0..* Narrative "C.20.15 - Patient instruction" """Patient facing information about the Appointment (e.g. fast from 8pm night before)."""
 * note 0..* Narrative "C.20.16 - Note" """Additional notes/comments about the appointment."""
-* subject 0..1 Reference(EHDSPatient or EHDSGroup) "C.20.17 - Subject" """The patient or group associated with the appointment, if they are to be present (usually) then they should also be included in the participant backbone element."""
+
 * participant 0..* Base "C.20.18 - Participant" """List of participants involved in the appointment."""
   * type 0..* CodeableConcept "C.20.18.1 - Type" """List of participants involved in the appointment."""
     * ^binding.description = "HL7 Participant Type"
     * ^binding.strength = #preferred
   * actor 0..1 Reference(EHDSPatient or EHDSGroup or EHDSHealthProfessional or EHDSHealthProfessional or EHDSOrganization or EHDSRelatedPerson or EHDSDevice) "C.20.18.2 - Actor" """The individual, device, location, or service participating in the appointment."""
   * required 0..1 boolean "C.20.18.3 - Required" """Whether this participant is required to be present at the meeting."""
+*/
