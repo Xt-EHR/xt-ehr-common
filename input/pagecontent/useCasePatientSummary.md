@@ -1,27 +1,18 @@
 ### Information Models
 #### Conceptual view
 
-Patient summary report could be divided into several basic parts: document header, body and optionally it could also have various attachments.
+Patient summary could be divided into several basic parts: document header, body and optionally it could also have various attachments.
 
-##### Patient Summary Report
+##### Patient Summary
 <figure>
   {% include PsReport_CIM.svg %}
 </figure>
 
-##### Patient Summary Report header
-<figure>
-  {% include PsReportHdr_CIM.svg %}
-</figure>
 
-##### Patient Summary Report body
-<figure>
-  {% include PsReportBody_CIM.svg %}
-</figure>
 
 ### Detailed EHDS information models for Patient summary
 - [Patient Summary Document](StructureDefinition-EHDSPatientSummary.html)
-- [Patient Summary Header](StructureDefinition-EHDSPatientSummaryHeader.html)
-- [Patient Summary Body](StructureDefinition-EHDSPatientSummaryBody.html)
+
 
 ### FHIR Implementation Guide
 
