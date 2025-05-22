@@ -16,7 +16,7 @@ Characteristics: #can-be-target
 * clinicalStatus 0..1 CodeableConcept "Status of the condition/problem (active, resolved, inactive, ...)"
   * ^binding.description = "HL7 Condition-clinical"
   * ^binding.strength = #preferred
-* resolutionCircumstances[x] 0..* CodeableConcept or string or Reference """Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.). This field includes "free text" if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem "hepatic cyst" and will be included in surgical procedures)."""
+* resolutionCircumstances[x] 0..* CodeableConcept or string or Reference "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." """This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem "hepatic cyst" and will be included in surgical procedures)."""
 * severity 0..1 CodeableConcept "A subjective assessment of the severity of the condition as evaluated by the clinician."
   * ^binding.description = "HL7 Condition-severity"
   * ^binding.strength = #preferred
