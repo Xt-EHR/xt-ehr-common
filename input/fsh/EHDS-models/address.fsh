@@ -13,7 +13,7 @@ Characteristics: #can-be-target
 * text 0..1 string "Text representation of the address"
 * street 0..1 string "Name of the street"
 * houseNumber 0..1 string "House number"
-* postalBox 0..1 string "Post office box"
+* postBox 0..1 string "Post box"
 * city 0..1 string "City"
 * postalCode 0..1 string "Postal code"
 * country 0..1 CodeableConcept "Country name and country code"

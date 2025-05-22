@@ -18,9 +18,9 @@ Characteristics: #can-be-target
 * specialty 0..* CodeableConcept "The specialty of a practitioner that would be required to perform the service requested in this appointment"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* start 0..1 dateTime "C.20.11 - Date and time that the appointment is to take place."
-* end 0..1 dateTime "C.20.12 - Date and time that the appointment is to conclude."
-* note 0..* string "C.20.16 - Additional notes/comments about the appointment."
+* start 0..1 dateTime "Date and time that the appointment is to take place."
+* end 0..1 dateTime "Date and time that the appointment is to conclude."
+* note 0..* string "Additional notes/comments about the appointment."
 
 /*
 * type 0..1 CodeableConcept "C.20.6 - Type" """The type of appointment or patient that has been booked in the slot, e.g. Routine, check-up, walk-in, routine, emenrgency etc."""
