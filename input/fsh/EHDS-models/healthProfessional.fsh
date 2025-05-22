@@ -1,7 +1,7 @@
 Logical: EHDSHealthProfessional
 //Id: EHDShealthProfessional
 Title: "Health professional model"
-Description: """EHDS refined base model for Health professional (HP) """
+Description: """EHDS refined base model for Health professional (HP)"""
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "An identifier of the health professional that is unique within a defined scope. Example: National health professional ID. Multiple identifiers could be provided."
