@@ -30,6 +30,8 @@ Characteristics: #can-be-target
   * prescriptionIntent 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
+    * ^binding.description = "UCUM, EDQM Standard Terms"
+    * ^binding.strength = #preferred
   * dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
   * preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"

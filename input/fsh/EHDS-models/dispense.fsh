@@ -22,6 +22,8 @@ Characteristics: #can-be-target
 * relatedRequest 0..* Identifier "Identifier of the prescription or prescription item the dispense is related to"
 * medication 1..1 EHDSMedication "Exact dispensed product"
 * dispensedQuantity 1..1 Quantity "Number of dispensed packages if the pack size is known, or number of smaller items/units"
+  * ^binding.description = "UCUM, EDQM Standard Terms"
+  * ^binding.strength = #preferred
 * timeOfDispensation 1..1 dateTime "Date and time of dispensation"
 * substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
   * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
