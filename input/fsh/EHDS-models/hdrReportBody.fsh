@@ -91,7 +91,7 @@ Characteristics: #can-be-target
       * livingConditions 0..* CodeableConcept "Living conditions that affect the accessibility of the home or the stay in the home."
         * ^binding.description = "SNOMED CT"
         * ^binding.strength = #preferred
-    * familySituation 0..1 Base "B.1.5.4.5 - Family situation"
+    * familySituation 0..1 Base "Family situation"
       * comment 0..1 string "Comment on the family situation."
       * familyComposition 0..1 CodeableConcept "Family composition" "The family composition describes the patient’s home situation and the form of cohabitation. A family can consist of one or more people."
       * maritalStatus 0..1 CodeableConcept "Person’s marital status according to the terms and definition in the national civil code."
