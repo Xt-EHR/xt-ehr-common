@@ -6,7 +6,7 @@ Characteristics: #can-be-target
 
 * identifier 0..* Identifier "C.17.1 - Identifier" """Location identifier"""
 * name 0..1 string "C.17.2 - Name" """Name of the location as used by humans"""
-* description 0..1 Narrative "C.17.3 - Description" """Additional details about the location that could be displayed as further information to identify the location beyond its name"""
+* description 0..1 string "C.17.3 - Description" """Additional details about the location that could be displayed as further information to identify the location beyond its name"""
 * type 0..* CodeableConcept "C.17.4 - Type" """Type of function performed at the location"""
   * ^binding.description = "HL7 ServiceDeliveryLocationRoleType"
   * ^binding.strength = #preferred

@@ -1,3 +1,4 @@
+/* 
 Logical: EHDSClinicalImpression
 //Id: EHDSclinicalImpression
 Title: "Clinical impression model"
@@ -27,3 +28,4 @@ Characteristics: #can-be-target
   * itemReference 0..1 Reference (EHDSCondition or EHDSObservation) "C.34.13.2 - Item reference" """Specific reference for finding or diagnosis, which may include ruled-out or resolved conditions."""
 * supportingInfo 0..* Reference (Resource) "C.34.14 - Supporting info" """Information supporting the clinical impression"""
 * comments 0..* string "C.34.15 - Comments" """Comments made about the ClinicalImpression"""
+*/
