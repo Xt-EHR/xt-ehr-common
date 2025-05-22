@@ -34,7 +34,7 @@ Characteristics: #can-be-target
   * preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
-    * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement"
+    * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
   * status 1..1 CodeableConcept "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item."
   * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * repeatsAllowed 0..1 integer "Number of refills authorized" "How many times the prescription item can be dispensed in addition to the original dispense."
