@@ -1,45 +1,3 @@
-Logical: EHDSDispenseDecline
-Title: "Medication dispense decline model"
-Parent: EHDSDataSet
-Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
-Characteristics: #can-be-target
-
-* header.statusReason[x] 1..1
-  * ^short = "Reason for not dispensing the medication"
-* relatedRequest 1..* EHDSMedicationPrescription "The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]"
-* reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
-* comment 0..1 string "Additional information about why the dispensation was declined."
-
-
-Logical: EHDSMedicationDispense
-Title: "Medication dispense model"
-Parent: EHDSDataSet
-Description: "Logical model for medication dispensation (based on request or independently)"
-Characteristics: #can-be-target
-
-* dispensingOrganizationOrDevice[x] 0..* EHDSOrganization or EHDSDevice "Dispensing organization or device"
-* dispenseLocation 0..1 EHDSLocation "Location of dispense"
-* receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient"
-//  * ^comment = "Added"
-* relatedRequest 0..* Identifier "Identifier of the prescription or prescription item the dispense is related to"
-//  * ^comment = "No change"
-* medication 1..1 EHDSMedication "Exact dispensed product"
-//  * ^comment = "No change"
-* dispensedQuantity 1..1 Quantity "Number of dispensed packages if the pack size is known, or number of smaller items/units"
-//  * ^comment = "No change"
-* timeOfDispensation 1..1 dateTime "Date and time of dispensation"
-//  * ^comment = "No change"
-* substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
-  * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
-  * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
-  * reason 0..* CodeableConcept "Reason why the substitution was made or why the expected substitution was not made."
-//  * ^comment = "No change but subelements added"
-* dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
-//  * ^comment = "Added"
-* comment 0..* string "Additional information or comments"
-//  * ^comment = "Added."
-
-
 Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
 Parent: EHDSDataSet
@@ -66,17 +24,19 @@ Characteristics: #can-be-target
   * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
   * indication[x] 0..* CodeableConcept or EHDSCondition "Reason for the prescription (typically diagnosis, or a procedure)"
-    * ^binding.description = "shall we have a preferred binding here?"
-    * ^binding.strength = #preferred
+//    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
+//    * ^binding.strength = #preferred
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
   * prescriptionIntent 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
+    * ^binding.description = "UCUM, EDQM Standard Terms"
+    * ^binding.strength = #preferred
   * dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
   * preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
-    * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement"
+    * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
   * status 1..1 CodeableConcept "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item."
   * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * repeatsAllowed 0..1 integer "Number of refills authorized" "How many times the prescription item can be dispensed in addition to the original dispense."
