@@ -7,7 +7,7 @@ Characteristics: #can-be-target
 * header.statusReason[x] 1..1
   * ^short = "Reason for not dispensing the medication"
 * relatedRequest 1..* EHDSMedicationPrescription "The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]"
-* reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
+// * reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
 * comment 0..1 string "Additional information about why the dispensation was declined."
 
 
