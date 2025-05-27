@@ -6,7 +6,7 @@ Characteristics: #can-be-target
 
 
 * sequence 0..1 integer "Order of the dosage instruction, in case one treatment consists of several dosaging schemes"
-* text 0..1 string "Free text usage/dosage instructions when structured dosaging is not provided in full"
+* text 0..1 string "Free text usage/dosage instructions when structured dosage information is not fully provided"
 * renderedDescription 0..1 string "Text representation rendered from all dosaging data elements with a value"
 * additionalInstruction 0..* CodeableConcept "Coded instructions, e.g warnings to the patient, like 'may cause drowsiness' etc"
 * patientInstruction 0..1 string "Patient oriented instructions as free text"
