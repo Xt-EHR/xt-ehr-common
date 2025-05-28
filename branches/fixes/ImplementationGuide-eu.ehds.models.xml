@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="eu.ehds.models"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide eu.ehds.models</b></p><a name="eu.ehds.models"> </a><a name="hceu.ehds.models"> </a><a name="eu.ehds.models-en-US"> </a><h2>EHDSModels</h2><p>The official URL for this implementation guide is: </p><pre>https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models</pre><div><p>EHDS Logical Information Models</p>
+</div></div>
+  </text>
+  <url value="https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models"/>
+  <version value="0.1.0"/>
+  <name value="EHDSModels"/>
+  <title value="EHDS Logical Information Models"/>
+  <status value="draft"/>
+  <date value="2025-05-26T19:44:56+00:00"/>
+  <publisher value="Xt-EHR"/>
+  <contact>
+    <name value="Xt-EHR"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://Xt-EHR.eu"/>
+    </telecom>
+  </contact>
+  <description value="EHDS Logical Information Models"/>
+  <packageId value="eu.ehds.models"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="5.0.0"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r5"/>
+    <version value="6.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r5"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r5#0.5.0"/>
+    </extension>
+    <grouping id="EHDSPsLogicalModels">
+      <name value="EHDS Patient Summary Logical Models"/>
+      <description value="Information Models for implementing EEHRxF Patient Summary under EHDS. Format based on ISO 13972 &quot;Health informatics — Clinical information models — Characteristics, structures and requirements.&quot;"/>
+    </grouping>
+    <grouping id="EHDSPrescriptionDispenseLogicalModels">
+      <name value="EHDS ePrescription and eDispense Logical Models"/>
+      <description value="Information Models for implementing EEHRxF services for medication prescription and dispense services."/>
+    </grouping>
+    <grouping id="EHDSLaboratoryLogicalModels">
+      <name value="EHDS Laboratory Domain Logical Models"/>
+      <description value="Information Models for implementing EEHRxF services in the laboratory domain under EHDS. Format based on ISO 13972 &quot;Health informatics — Clinical information models — Characteristics, structures and requirements.&quot;"/>
+    </grouping>
+    <grouping id="EHDSImagingLogicalModels">
+      <name value="EHDS Imaging Domain Logical Models"/>
+      <description value="Information Models for implementing EEHRxF services in the imaging domain under EHDS. Format based on ISO 13972 &quot;Health informatics — Clinical information models — Characteristics, structures and requirements.&quot;"/>
+    </grouping>
+    <grouping id="EHDSHdrLogicalModels">
+      <name value="EHDS Hospital Discharge Report Domain Logical Models"/>
+      <description value="Information Models for implementing EEHRxF Hospital discharge report under EHDS. Format based on ISO 13972 &quot;Health informatics — Clinical information models — Characteristics, structures and requirements.&quot;"/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSAddress"/>
+      </reference>
+      <name value="Address model"/>
+      <description value="EHDS refined base model for Address structure"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSAlertFlag"/>
+      </reference>
+      <name value="Alert flag model"/>
+      <description value="C.22 - EHDS refined base model for Alert flag"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSAllergyIntolerance"/>
+      </reference>
+      <name value="Allergy intolerance model"/>
+      <description value="EHDS refined base model for allergy/intolerance"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ANY"/>
+      </reference>
+      <name value="ANY"/>
+      <description value="An abstract type"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSAppointment"/>
+      </reference>
+      <name value="Appointment model"/>
+      <description value="EHDS refined base model for Appointment. This is a simplified model with minimal information - it is not intended to cover the full functionality of booking systems."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSAttachment"/>
+      </reference>
+      <name value="Attachment model"/>
+      <description value="EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSBodyStructure"/>
+      </reference>
+      <name value="Body structure model"/>
+      <description value="EHDS refined base model for Body structure"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSCarePlan"/>
+      </reference>
+      <name value="Care plan model"/>
+      <description value="EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Coded"/>
+      </reference>
+      <name value="Coded"/>
+      <description value="Coded data element"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSConditionHdr"/>
+      </reference>
+      <name value="Condition HDR model"/>
+      <description value="C.38 - EHDS refined base model for Condition HDR"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSHdrLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSCondition"/>
+      </reference>
+      <name value="Condition model"/>
+      <description value="EHDS refined base model for A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSCoverage"/>
+      </reference>
+      <name value="Coverage model"/>
+      <description value="EHDS refined base model for Coverage"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDataSet"/>
+      </reference>
+      <name value="DataSet model"/>
+      <description value="Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDevice"/>
+      </reference>
+      <name value="Device model"/>
+      <description value="EHDS refined base model for Device information"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDeviceUse"/>
+      </reference>
+      <name value="Device use model"/>
+      <description value="EHDS refined base model for Device Use"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDocument"/>
+      </reference>
+      <name value="Document model"/>
+      <description value="EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDosage"/>
+      </reference>
+      <name value="Dosage model"/>
+      <description value="C.40 - EHDS refined base model for Dosage"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDosaging"/>
+      </reference>
+      <name value="Dosaging model"/>
+      <description value="Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSEncounter"/>
+      </reference>
+      <name value="Encounter model"/>
+      <description value="C.30 - EHDS refined base model for Encounter"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSEndpoint"/>
+      </reference>
+      <name value="Endpoint model"/>
+      <description value="C.33 - EHDS refined base model for Endpoint"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSEpisodeOfCare"/>
+      </reference>
+      <name value="Episode of care model"/>
+      <description value="C.29 - EHDS refined base model for Episode of care"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSFamilyMemberHistory"/>
+      </reference>
+      <name value="Family member history model"/>
+      <description value="C.37 - EHDS refined base model for Family member history"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSFunctionalStatus"/>
+      </reference>
+      <name value="Functional status"/>
+      <description value="EHDS refined base model for Functional status"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSGroup"/>
+      </reference>
+      <name value="Group model"/>
+      <description value="C. - EHDS refined base model for Group"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSHealthProfessional"/>
+      </reference>
+      <name value="Health professional model"/>
+      <description value="EHDS refined base model for Health professional (HP)"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSHospitalDischargeReportBody"/>
+      </reference>
+      <name value="Hospital Discharge Report body model"/>
+      <description value="EHDS refined base model for Hospital Discharge Report body"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSHdrLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSHospitalDischargeReportHeader"/>
+      </reference>
+      <name value="Hospital Discharge Report header model"/>
+      <description value="A.1 - EHDS refined base model for Hospital Discharge Report header data elements"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSHdrLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSHospitalDischargeReport"/>
+      </reference>
+      <name value="Hospital Discharge Report model"/>
+      <description value="A - EHDS refined base model for Hospital Discharge Report"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSHdrLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSHumanName"/>
+      </reference>
+      <name value="Human name model"/>
+      <description value="C.27 - EHDS refined base model for Human name"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSImagingReportBody"/>
+      </reference>
+      <name value="Imaging report body model"/>
+      <description value="B.1 - EHDS refined base model for Imaging report body"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSImagingLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSImagingReportHeader"/>
+      </reference>
+      <name value="Imaging report header model"/>
+      <description value="A.1 - EHDS refined base model for Imaging Report header data elements"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSImagingLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSImagingReport"/>
+      </reference>
+      <name value="Imaging report model"/>
+      <description value="A - EHDS refined base model for Imaging Result Report"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSImagingLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSImagingStudy"/>
+      </reference>
+      <name value="Imaging study model"/>
+      <description value="C.32 - EHDS refined base model for Imaging study"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSImagingLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSImmunization"/>
+      </reference>
+      <name value="Immunization model"/>
+      <description value="C.24 - EHDS refined base model for Immunization"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSInpatientEncounter"/>
+      </reference>
+      <name value="Inpatient encounter model"/>
+      <description value="C.23 - EHDS refined base model for Inpatient encounter"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSHdrLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryObservation"/>
+      </reference>
+      <name value="Laboratory observation model"/>
+      <description value="C.11 - EHDS refined base model for Observation performed by laboratory"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryOrder"/>
+      </reference>
+      <name value="Laboratory order"/>
+      <description value="A - EHDS refined base model for Laboratory order"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryOrderBody"/>
+      </reference>
+      <name value="Laboratory order body model"/>
+      <description value="B.1 - EHDS refined base model for Laboratory order body"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryOrderHeader"/>
+      </reference>
+      <name value="Laboratory order header model"/>
+      <description value="A.1 - EHDS refined base model for Laboratory order header data elements"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryReportBody"/>
+      </reference>
+      <name value="Laboratory report body model"/>
+      <description value="B.1 - EEHRxF refined base model for Laboratory result report body"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryReportHeader"/>
+      </reference>
+      <name value="Laboratory report header model"/>
+      <description value="A.1 - EHDS refined base model for laboratory report header data elements"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLaboratoryReport"/>
+      </reference>
+      <name value="Laboratory report model"/>
+      <description value="A - EHDS refined base model for Laboratory result report"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSLaboratoryLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSLocation"/>
+      </reference>
+      <name value="Location model"/>
+      <description value="C.17 - EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSMedia"/>
+      </reference>
+      <name value="Media model"/>
+      <description value="C.14 - EHDS refined base model for A photo, video, or audio recording acquired or used in healthcare."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSMedicationAdministration"/>
+      </reference>
+      <name value="Medication administration model"/>
+      <description value="EHDS refined base model for medication administration"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSDispenseDecline"/>
+      </reference>
+      <name value="Medication dispense decline model"/>
+      <description value="Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."/>
+      <isExample value="false"/>
+      <groupingId value="EHDSPrescriptionDispenseLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSMedicationDispense"/>
+      </reference>
+      <name value="Medication dispense model"/>
+      <description value="Logical model for medication dispensation (based on request or independently)"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSPrescriptionDispenseLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSMedicationPrescription"/>
+      </reference>
+      <name value="Medication prescription model"/>
+      <description value="Logical model for medication prescription. A prescription contains one or more prescription items."/>
+      <isExample value="false"/>
+      <groupingId value="EHDSPrescriptionDispenseLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSMedicationStatement"/>
+      </reference>
+      <name value="Medication statement model"/>
+      <description value="C.39 - EHDS refined base model for Medication statement"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSMedication"/>
+      </reference>
+      <name value="Medicinal product model"/>
+      <description value="Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSObservation"/>
+      </reference>
+      <name value="Observation model"/>
+      <description value="C.10 - EHDS refined base model for Observation information"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSOrganization"/>
+      </reference>
+      <name value="Organization model"/>
+      <description value="C.3 - EHDS refined base model for Health provider or any other type of organization"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSPatient"/>
+      </reference>
+      <name value="Patient model"/>
+      <description value="C.1 - EHDS refined base model for Patient/subject information"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSPatientSummary"/>
+      </reference>
+      <name value="Patient summary model"/>
+      <description value="EHDS refined base model for Patient Summary"/>
+      <isExample value="false"/>
+      <groupingId value="EHDSPsLogicalModels"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSProcedure"/>
+      </reference>
+      <name value="Procedure model"/>
+      <description value="C.16 - EHDS refined base model for An action that is or was performed on or for a patient"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSRelatedPerson"/>
+      </reference>
+      <name value="Related person model"/>
+      <description value="C.13 - EHDS refined base model for Patient/subject guardian and other related person information"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSServiceRequest"/>
+      </reference>
+      <name value="Service request model"/>
+      <description value="C.8 - EHDS refined base model for Specification of requested service or services"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSSpecimen"/>
+      </reference>
+      <name value="Specimen model"/>
+      <description value="C.9 - EHDS refined base model for A sample to be used for Analysis"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSSubstance"/>
+      </reference>
+      <name value="Substance model"/>
+      <description value="C.28 - EHDS refined base model for Substance"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/EHDSTelecom"/>
+      </reference>
+      <name value="Telecom model"/>
+      <description value="C.6 - EHDS refined base model for Telecommunication contact information structure"/>
+      <isExample value="false"/>
+    </resource>
+    <page>
+      <sourceUrl value="toc.html"/>
+      <name value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <sourceUrl value="index.html"/>
+        <name value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="howto.html"/>
+        <name value="howto.html"/>
+        <title value="How to read this guide"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="knownIssues.html"/>
+        <name value="knownIssues.html"/>
+        <title value="Known issues"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="scope.html"/>
+        <name value="scope.html"/>
+        <title value="Scope and Content"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="wow.html"/>
+        <name value="wow.html"/>
+        <title value="Ways of working"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="useCasePrescription.html"/>
+        <name value="useCasePrescription.html"/>
+        <title value="ePrescription &amp; eDispensation"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="useCasePatientSummary.html"/>
+        <name value="useCasePatientSummary.html"/>
+        <title value="Patient Summary"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="useCaseLabReport.html"/>
+        <name value="useCaseLabReport.html"/>
+        <title value="Laboratory Report"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="obligationsLabReport.html"/>
+        <name value="obligationsLabReport.html"/>
+        <title value="Obligations for Laboratory Report"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="useCaseMedicalImages.html"/>
+        <name value="useCaseMedicalImages.html"/>
+        <title value="Medical Images"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="useCaseHospitalDischargeReport.html"/>
+        <name value="useCaseHospitalDischargeReport.html"/>
+        <title value="Hospital Discharge Report"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="downloads.html"/>
+        <name value="downloads.html"/>
+        <title value="Download"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>
+      <value value="2022+"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>
+      <value value="ci-build"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="produce-jekyll-data"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="autoload-resources"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="template/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="input/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-qa"/>
+      </code>
+      <value value="temp/qa"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-temp"/>
+      </code>
+      <value value="temp/pages"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-output"/>
+      </code>
+      <value value="output"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-tx-cache"/>
+      </code>
+      <value value="input-cache/txcache"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-suppressed-warnings"/>
+      </code>
+      <value value="input/ignoreWarnings.txt"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-history"/>
+      </code>
+      <value value="https://www.xt-ehr.eu/specifications/fhir/history.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-html"/>
+      </code>
+      <value value="template-page.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-md"/>
+      </code>
+      <value value="template-page-md.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-contact"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-context"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-copyright"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-jurisdiction"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-license"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-publisher"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-version"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-wg"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="active-tables"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="fmm-definition"/>
+      </code>
+      <value value="http://hl7.org/fhir/versions.html#maturity"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="propagate-status"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludelogbinaryformat"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="tabbed-snapshots"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
