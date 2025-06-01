@@ -34,3 +34,14 @@ In order to contribute to the Logical Information Models IG authoring, do one of
 - as a FHIR implementer, join any of the HL7 Europe working groups for specific use cases.  
 
 <br/><br/>
+
+## Notes on ValueSet usage:
+
+<div class = "info-box should">
+<p class= "info-title">Use of MVC as preferred Value Sets</p>
+The preferred value sets are based on the MVC, but that we've added alternative value sets where we believe they could be useful — as a proposal for the stakeholders to consider.  
+</div>
+
+
+
+

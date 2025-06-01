@@ -1,0 +1,4 @@
+Allergy and Intolerances is suggested as a mandatory section of Patient Summary. The only required element for each listed allergy, is specifying the agent or allergen. 
+The Information elements for each allergy are listed in the EHDS-PS-AllergyIntolerance model below.   
+If the producing system have no record of allergies to list (e.g. the patient has no allergies, or the system have no allergy information), the system must provide a reason. This is in accordance with the specification in ISO IPS and updates to the HL7 FHIR IPS. 
+The information elements and value sets suggested are taken from eHN Guideline, MyHealth@EU and HL7 FHIR IPS. In addition to that, the new ICD-11 Allergen classification has been added. 
