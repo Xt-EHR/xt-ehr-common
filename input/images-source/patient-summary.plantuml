@@ -1,0 +1,77 @@
+@startuml
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+class "**EHDSPatientSummary**" as EHDSPatientSummary {
+  |_ header undefined..undefined   
+    |_ attestation undefined..0   
+    |_ legalAuthentication undefined..0   
+    |_ eventType undefined..0   
+    |_ authorSpecialty undefined..0   
+    |_ natureOfTheDocument 1..1   
+  |_ preferredHealthProfessional[x] 0..*   
+  |_ alerts 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+    |_ medicalAlert 0..*   
+  |_ allergiesAndIntolerances 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+    |_ allergy 0..*   
+  |_ medicalHistory 0..1   
+    |_ narrative 0..1   
+    |_ pastProblems 0..*   
+    |_ description 0..1   
+  |_ immunisations 0..1   
+    |_ narrative 0..1   
+    |_ vaccination 0..*   
+  |_ currentProblems 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+    |_ healthConditions 0..*   
+  |_ medicalDevicesAndImplants 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+    |_ medicalDevice 0..*   
+  |_ procedures 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+    |_ procedure 0..*   
+  |_ medicationSummary 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+    |_ medicationTreatment 0..*   
+  |_ functionalStatus 0..1   
+    |_ narrative 0..1   
+    |_ functionalStatusAssessment 0..*   
+  |_ socialHistory 0..1   
+    |_ narrative 0..1   
+    |_ description 1..1   
+    |_ observation 0..*   
+  |_ pregnancyHistory 0..1   
+    |_ narrative 0..1   
+    |_ currentPregnancyStatus 0..1   
+      |_ status 0..*   
+      |_ expectedDateOfDelivery 0..1   
+    |_ previousPregnancies 0..1   
+      |_ status 0..1   
+      |_ description 0..*   
+        |_ outcome 0..1   
+        |_ numberOfChildren 0..1   
+  |_ patientProvidedData 0..1   
+    |_ narrative 0..1   
+    |_ travelHistory 0..*   
+      |_ country 0..1   
+      |_ period 0..*   
+  |_ advanceDirectives 0..1   
+    |_ narrative 0..1   
+    |_ documentation 0..*   
+  |_ results 0..1   
+    |_ narrative 0..1   
+    |_ resultObservation[x] 0..*   
+  |_ carePlan 0..1   
+    |_ narrative 0..1   
+    |_ carePlanEntry 0..*   
+}
+@enduml
