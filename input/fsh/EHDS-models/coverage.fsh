@@ -4,7 +4,7 @@ Title: "Coverage model"
 Description: """EHDS refined base model for Coverage"""
 Characteristics: #can-be-target
 
-* identifier 0..* Identifier "usiness Identifier for the coverage"
+* identifier 0..* Identifier "Business Identifier for the coverage"
 * type 0..1 CodeableConcept "Type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization."
   * ^binding.description = "hl7:coverage-selfpay, hl7:v3-ActCoverageTypeCode"
   * ^binding.strength = #preferred
