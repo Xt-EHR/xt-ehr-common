@@ -15,7 +15,7 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 marital-status"
   * ^binding.strength = #preferred
 * citizenship 0..* CodeableConcept "C.1.8 - Citizenship (nationality)" """Citizenship/nationality of the patient."""
-  * ^binding.description = "ISO 3166-1-2"
+  * ^binding.description = "ISO 3166-1 alpha-2"
   * ^binding.strength = #preferred
 * communicationLanguage 0..* CodeableConcept "C.1.9 - Communcation language" """The language which can be used to communicate with the patient about his or her health."""
   * ^binding.description = "BCP 47"
