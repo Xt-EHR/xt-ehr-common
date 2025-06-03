@@ -55,7 +55,7 @@ Characteristics: #can-be-target
           * ^binding.description = "ISO 3166-1 alpha-2"
           * ^binding.strength = #preferred
         * additionalInformation 0..1 string "A textual note with additional information about infectious contact."
-      * travelHistory 0..1 Base "Travel history reported by the patient. Multiple records could be provided."
+      * travelHistory 0..* Base "Travel history reported by the patient. Multiple records could be provided."
         * timePeriod 0..1 dateTime "Start and end date or end date and duration of stay in a country. Partial dates are allowed."
         * countryVisited 1..1 CodeableConcept "Country visited by the patient."
           * ^binding.description = "ISO 3166-1 alpha-2"
@@ -67,15 +67,9 @@ Characteristics: #can-be-target
   * socialDeterminantsOfHealth 0..1 Base "Social determinants of health" "Information about social determinants of health. "
     * subsectionNarrative 0..1 string "Sub-section narrative" "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
     * participationInSociety 0..1 Base "Participation in society" "Participation in society details."
-      * workSituation 0..1 CodeableConcept "Work situation" "Work Situation describes the extent to which and in what way the patient participates in the workforce. Work is meant in the broadest sense of the word: activities that contribute to the person themselves, their environment or society. This includes both paid and unpaid work."
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
-      * hobby 0..1 CodeableConcept "An activity the patient enjoys doing in their free time."
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
-      * socialNetwork 0..1 CodeableConcept "Social network" "A description of the patient’s social network, such as family, neighbours and friends."
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
+      * workSituation 0..1 string "Work situation" "Work Situation describes the extent to which and in what way the patient participates in the workforce. Work is meant in the broadest sense of the word: activities that contribute to the person themselves, their environment or society. This includes both paid and unpaid work."
+      * hobby 0..1 string "An activity the patient enjoys doing in their free time."
+      * socialNetwork 0..1 string "Social network" "A description of the patient’s social network, such as family, neighbours and friends."
     * educationSection 0..1 Base "Education section" "Information about patient education level."
       * educationLevel 0..1 CodeableConcept "Education level" "Indication of the highest level of education achieved."
         * ^binding.description = "hl7:v3.EducationLevel"
@@ -94,7 +88,11 @@ Characteristics: #can-be-target
     * familySituation 0..1 Base "Family situation"
       * comment 0..1 string "Comment on the family situation."
       * familyComposition 0..1 CodeableConcept "Family composition" "The family composition describes the patient’s home situation and the form of cohabitation. A family can consist of one or more people."
+        * ^binding.description = "SNOMED CT"
+        * ^binding.strength = #preferred
       * maritalStatus 0..1 CodeableConcept "Person’s marital status according to the terms and definition in the national civil code."
+        * ^binding.description = "hl7:marital-status"
+        * ^binding.strength = #preferred
       * numberOfChildren 0..1 Quantity "Number of children" "The number of children the patient has. Children in the context of this information model include step children, foster children, biological and adopted children."
       * numberOfChildrenAtHome 0..1 Quantity "Number of children living at home with the patient."
       * childDetails 0..* Base "Child details (age, co-living status and comment)."
