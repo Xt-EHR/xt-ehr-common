@@ -1,0 +1,203 @@
+@startuml
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+
+
+class "**EHDSCommonHeader**" as EHDSCommonHeader {
+  |_ subject 1..1   
+  |_ authorship 1..*   
+    |_ author 1..1   
+    |_ datetime 1..1   
+  |_ lastUpdate 0..1   
+  |_ status 1..1   
+  |_ language 0..1   
+  |_ version 0..1   
+}
+
+class "**EHDSDocumentHeader**" as EHDSDocumentHeader {
+  |_ documentId 1..*   
+  |_ documentType 1..1   
+  |_ documentTitle 1..1   
+  |_ documentStatus 1..1   
+  |_ period 0..1   
+  |_ <color:red>reportDateTime 1..1   
+  |_ attestation 0..*   
+    |_ attester 1..1   
+    |_ datetime 1..1   
+  |_ legalAuthentication 0..1   
+    |_ legalAuthenticator 1..1   
+    |_ datetime 1..1   
+  |_ eventType 0..*   
+  |_ authorSpecialty 0..*   
+  |_ custodian 1..1   
+  |_ documentFormat 0..1   
+  |_ <color:red>confidentiality 0..1   
+  |_ knowledgeResources 0..*   
+    |_ externalReference 0..*   
+    |_ relatedTo 0..*   
+}
+
+
+
+class "**EHDSMedicationPrescription**" as EHDSMedicationPrescription {
+  |_ medicationPrescriptionHeader 1..1   
+  |_ medicationPrescriptionBody 1..1   
+  |_ presentedForm 0..*   
+}
+
+
+class "**EHDSMedicationPrescriptionHeader**" as EHDSMedicationPrescriptionHeader {
+'  |_ subject  
+'  |_ auhorship 
+'    |_ author   
+'    |_ datetime   
+'  |_ status   
+  |_ identifier 1..*   
+  |_ recorder 0..1   
+  |_ recordingDate 0..1   
+}
+
+
+
+class "**EHDSImagingReport**" as EHDSImagingReport {
+  |_ imagingReportHeader 1..1   
+  |_ imagingReportStructuredBody 1..1   
+  |_ presentedForms 0..*   
+  |_ imagingReportAttachments[x] 0..*   
+  |_ dicomStudyMetadata 0..*   
+}
+
+
+
+class "**EHDSImagingReportBody**" as EHDSImagingReportBody {
+  |_ <color:red>orderInformation 0..*   
+  ' why order information?
+    |_ orderId 1..*   
+    |_ orderDateAndTime 0..1   
+    |_ orderPlacer 0..1   
+    |_ orderReasonText 0..*   
+    |_ orderReason 0..*   
+    |_ clinicalQuestion 0..1   
+    |_ supportingInformation 0..*   
+      |_ observation 0..*   
+      |_ condition 0..*   
+      |_ <color:red>medicationAdministration 0..*   
+      |_ devices 0..*   
+      |_ <color:red>pregnancyStatus 0..1   
+      |_ <color:red>gestationalAge 0..1   
+      |_ <color:red>sexForClinicalUse 0..*   
+      |_ otherSupportingInformation 0..*   
+  |_ <color:red>specimen 0..*   
+  ' why not in report?
+  |_ <color:red>serviceRequest 0..*   
+  ' duplicate?
+  |_ exposureInformation 0..1   
+  ' why not in report?
+    |_ <color:red>effectiveDose 0..*   
+    'is this sufficient?
+    |_ equivalentDoseInformation 1..1   
+      |_ equivalentDose 1..1   
+      |_ tissueType 1..1   
+  |_ examinationReport 1..1   
+    |_ modality 1..*   
+    |_ bodyPart 0..*   
+      |_ bodyLocation 0..1   
+      |_ laterality 0..1   
+    |_ <color:red>imagingProcedures 0..*   
+    ' shouldn't this be root of other elements below - modality, bodypart...?
+    |_ <color:red>medication 0..*   
+    ' is this for meds during the procedure?
+    |_ adverseReaction 0..*   
+    |_ resultData 0..1   
+      |_ resultText 1..1   
+      |_ observationResults 0..*   
+    |_ <color:red>conclusion 1..1 
+    ' can we separate from here and include recommendation?'  
+      |_ impression 1..1   
+      |_ conditionOrFinding[x] 0..*   
+  |_ recommendation 0..1   
+    |_ description 1..1   
+    |_ carePlan 0..*   
+  |_ comparisonStudy 0..*   
+}
+
+
+class "**EHDSMedicationPrescriptionBody**" as EHDSMedicationPrescriptionBody {
+  |_ validFrom 0..1   
+  |_ validUntil 0..1   
+  |_ category 0..*   
+  |_ statusReason[x] 0..1   
+  |_ statusReasonText 0..1   
+  |_ comment 0..*   
+  |_ prescriptionItem 1..*   
+    |_ identifier 0..1   
+    |_ medication 1..1   
+    |_ indication 0..*   
+    |_ indicationText 0..1   
+    |_ prescriptionIntent 0..1   
+    |_ treatmentPeriod 0..1   
+    |_ quantityPrescribed 0..1   
+    |_ dosageInstructions 0..*   
+    |_ preparationInstructions 0..1   
+    |_ substitution 0..1   
+      |_ allowed[x] 0..1   
+      |_ reason[x] 0..1   
+    |_ status 1..1   
+    |_ statusReason[x] 0..1   
+    |_ repeatsAllowed 0..1   
+    |_ minimumDispenseInterval 0..1   
+    |_ offLabel 0..1   
+    |_ comment 0..*   
+}
+
+
+EHDSMedicationPrescriptionHeader -d[hidden]- EHDSMedicationPrescriptionBody
+
+
+
+
+
+class "**EHDSImagingReportHeader**" as EHDSImagingReportHeader {
+  |_ <color:red>subject 1..1   
+  ' why base? 
+  |_ healthInsuranceAndPaymentInformation 0..*   
+  |_ intendedRecipient 0..*   
+  ' check meaning of this. see jira
+  |_ authorship 1..*   
+    |_ author 1..1   
+    |_ datetime 1..1   
+  |_ <color:blue>attestation 0..*   
+    |_ attester 1..1   
+    |_ datetime 1..1   
+  |_ <color:blue>legalAuthentication 0..1   
+    |_ legalAuthenticator 1..1   
+    |_ datetime 1..1   
+  |_ documentMetadata 1..1   
+    |_ documentId 1..1   
+    |_ documentType 1..1  
+    |_ <color:blue>documentTitle 1..1   
+    |_ <color:blue>documentStatus 1..1   
+    |_ <color:blue>period 0..1   
+    |_reportDateAndTime 1..1  
+    ' changed position 
+    |_ eventType 0..*   
+    |_ <color:yellow>allowSpecialty 0..*   
+    |_ reportCustodian 1..1   
+    |_ documentFormat 0..1   
+    |_ confidentiality 0..1   
+    |_ language 0..1   
+    |_ version 0..1   
+    |_ studyInstanceUid 0..*   
+    |_ accessionNumber 0..1   
+}
+@enduml
+
+
+
+
+
+
+@enduml
+

@@ -23,7 +23,7 @@ Characteristics: #can-be-target
 
 * onsetDate 0..1 dateTime "Date of problem onset " "Onset date of a problem/condition"
 
-* endDate 0..1 dateTime "Problem resolution date" "The date or estimated date that the condition resolved or went into remission."
+* endDate 0..1 dateTime "Problem resolution date" "The date (or estimated date) that the condition resolved or went into remission."
 
 //* resolutionCircumstances[x] 0..* CodeableConcept or string or Reference "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." """This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem "hepatic cyst" and will be included in surgical procedures)."""
 * resolutionCircumstances 0..1 string "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." """This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem "hepatic cyst" and will be included in surgical procedures)."""

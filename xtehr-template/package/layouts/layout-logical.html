@@ -59,9 +59,14 @@
 {% endif %}
       {% if site.data.structuredefinitions["{{[id]}}"].obligations %}
       <li>
-        <a href="#tabs-obligations">Obligations</a>
+        <a href="#tabs-obligations">{{site.data.stringsBase['{{[lang]}}']['Obligations']}}</a>
       </li>
-{% endif %}      
+{% endif %}
+{% if site.data.structuredefinitions["{{[id]}}"].uml %}
+      <li>
+        <a href="#tabs-uml">{{site.data.stringsBase['{{[lang]}}']['UMLDiagram']}}</a>
+      </li>
+{% endif %}
 {% unless excludexml == 'y' %}
 <!--      <li>
         <a href="#tabs-xml">Pseudo-XML</a>

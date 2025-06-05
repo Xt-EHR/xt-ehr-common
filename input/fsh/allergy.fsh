@@ -1,4 +1,4 @@
-Logical: EHDSAllergyIntolerance
+Logical: EHDSPSAllergyIntolerance
 Parent: EHDSDataSet
 Title: "Allergy intolerance model"
 Description: """EHDS refined base model for allergy/intolerance"""
