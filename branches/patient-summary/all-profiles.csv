@@ -1,0 +1,771 @@
+"Profile","Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"EHDSAddress","EHDSAddress","EHDSAddress","","","",0,*,"","","","null {[]} {[]}
+","Address model","EHDS refined base model for Address structure","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSAddress","EHDSAddress.use","EHDSAddress.use","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Purpose of the address","Purpose of the address","","","","","","","","","",,"preferred","HL7 AddressUse","","",,,,"EHDSAddress.use",0,1,"",""
+"EHDSAddress","EHDSAddress.type","EHDSAddress.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.","","","","","","","","","",,"preferred","HL7 AddressType","","",,,,"EHDSAddress.type",0,1,"",""
+"EHDSAddress","EHDSAddress.text","EHDSAddress.text","","","",0,1,"","","","string {[]} {[]}
+","Text representation of the address","Text representation of the address","","","","","","","","","",,,,,"",,,,"EHDSAddress.text",0,1,"",""
+"EHDSAddress","EHDSAddress.street","EHDSAddress.street","","","",0,1,"","","","string {[]} {[]}
+","Name of the street","Name of the street","","","","","","","","","",,,,,"",,,,"EHDSAddress.street",0,1,"",""
+"EHDSAddress","EHDSAddress.houseNumber","EHDSAddress.houseNumber","","","",0,1,"","","","string {[]} {[]}
+","House number","House number","","","","","","","","","",,,,,"",,,,"EHDSAddress.houseNumber",0,1,"",""
+"EHDSAddress","EHDSAddress.postBox","EHDSAddress.postBox","","","",0,1,"","","","string {[]} {[]}
+","Post box","Post box","","","","","","","","","",,,,,"",,,,"EHDSAddress.postBox",0,1,"",""
+"EHDSAddress","EHDSAddress.city","EHDSAddress.city","","","",0,1,"","","","string {[]} {[]}
+","City","City","","","","","","","","","",,,,,"",,,,"EHDSAddress.city",0,1,"",""
+"EHDSAddress","EHDSAddress.postalCode","EHDSAddress.postalCode","","","",0,1,"","","","string {[]} {[]}
+","Postal code","Postal code","","","","","","","","","",,,,,"",,,,"EHDSAddress.postalCode",0,1,"",""
+"EHDSAddress","EHDSAddress.country","EHDSAddress.country","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Country name and country code","Country name and country code","","","","","","","","","",,"preferred","ISO 3166-1 alpha-2","","",,,,"EHDSAddress.country",0,1,"",""
+"EHDSAttachment","EHDSAttachment","EHDSAttachment","","","",0,*,"","","","null {[]} {[]}
+","Attachment model","EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSAttachment","EHDSAttachment.contentType","EHDSAttachment.contentType","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Mime type of the content, with charset etc.","Mime type of the content, with charset etc.","","","","","","","","","",,"preferred","BCP-13","","",,,,"EHDSAttachment.contentType",0,1,"",""
+"EHDSAttachment","EHDSAttachment.language","EHDSAttachment.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Human language of the content","Human language of the content","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSAttachment.language",0,1,"",""
+"EHDSAttachment","EHDSAttachment.data","EHDSAttachment.data","","","",0,1,"","","","base64Binary {[]} {[]}
+","The actual data of the attachment - a sequence of bytes, base64 encoded.","The actual data of the attachment - a sequence of bytes, base64 encoded.","","","","","","","","","",,,,,"",,,,"EHDSAttachment.data",0,1,"",""
+"EHDSAttachment","EHDSAttachment.url","EHDSAttachment.url","","","",0,1,"","","","uri {[]} {[]}
+","A location where the data can be accessed.","A location where the data can be accessed.","","","","","","","","","",,,,,"",,,,"EHDSAttachment.url",0,1,"",""
+"EHDSAttachment","EHDSAttachment.size","EHDSAttachment.size","","","",0,1,"","","","integer64 {[]} {[]}
+","The number of bytes of data that make up this attachment (before base64 encoding).","The number of bytes of data that make up this attachment (before base64 encoding).","","","","","","","","","",,,,,"",,,,"EHDSAttachment.size",0,1,"",""
+"EHDSAttachment","EHDSAttachment.title","EHDSAttachment.title","","","",0,1,"","","","string {[]} {[]}
+","A label or set of text to display in place of the data.","A label or set of text to display in place of the data.","","","","","","","","","",,,,,"",,,,"EHDSAttachment.title",0,1,"",""
+"EHDSCondition","EHDSCondition","EHDSCondition","","","",0,*,"","","","null {[]} {[]}
+","Condition model","EHDS refined base model for A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSCondition","EHDSCondition.header","EHDSCondition.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSCondition","EHDSCondition.header.subject","EHDSCondition.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSCondition","EHDSCondition.header.identifier","EHDSCondition.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSCondition","EHDSCondition.header.authorship","EHDSCondition.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSCondition","EHDSCondition.header.authorship.author[x]","EHDSCondition.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSCondition","EHDSCondition.header.authorship.datetime","EHDSCondition.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSCondition","EHDSCondition.header.lastUpdate","EHDSCondition.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSCondition","EHDSCondition.header.status","EHDSCondition.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSCondition","EHDSCondition.header.statusReason[x]","EHDSCondition.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSCondition","EHDSCondition.header.language","EHDSCondition.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSCondition","EHDSCondition.header.version","EHDSCondition.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSCondition","EHDSCondition.presentedForm","EHDSCondition.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSCondition","EHDSCondition.problem","EHDSCondition.problem","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code identifying the condition, problem or diagnosis","Code identifying the condition, problem or diagnosis","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.5 eHDSIIllnessandDisorder (ICD-10, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.63 eHDSIRareDisease (OrphaCodes, used in MH@EU); ICD-11; SNOMED CT","","",,,,"EHDSCondition.problem",1,1,"",""
+"EHDSCondition","EHDSCondition.diagnosisAssertionStatus","EHDSCondition.diagnosisAssertionStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition.","Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition.","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.64 eHDSICertainty (HL7, used in MH@EU); http://hl7.org/fhir/ValueSet/condition-ver-status (HL7, required in HL7 FHIR)","","",,,,"EHDSCondition.diagnosisAssertionStatus",0,1,"",""
+"EHDSCondition","EHDSCondition.onsetDate","EHDSCondition.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date of problem onset ","Onset date of a problem/condition","","","","","","","","","",,,,,"",,,,"EHDSCondition.onsetDate",0,1,"",""
+"EHDSCondition","EHDSCondition.endDate","EHDSCondition.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Problem resolution date","The date (or estimated date) that the condition resolved or went into remission.","","","","","","","","","",,,,,"",,,,"EHDSCondition.endDate",0,1,"",""
+"EHDSCondition","EHDSCondition.resolutionCircumstances","EHDSCondition.resolutionCircumstances","","","",0,1,"","","","string {[]} {[]}
+","Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.).","This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem ""hepatic cyst"" and will be included in surgical procedures).","","","","","","","","","",,,,,"",,,,"EHDSCondition.resolutionCircumstances",0,1,"",""
+"EHDSCondition","EHDSCondition.clinicalStatus","EHDSCondition.clinicalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Status of the condition/problem (active, resolved, inactive, ...)","Status of the condition/problem (active, resolved, inactive, ...)","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.15 eHDSIStatusCode (SCT, used in MH@EU); http://hl7.org/fhir/ValueSet/condition-clinical (HL7, required in HL7 FHIR)","","",,,,"EHDSCondition.clinicalStatus",0,1,"",""
+"EHDSCondition","EHDSCondition.severity","EHDSCondition.severity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","A subjective assessment of the severity of the condition as evaluated by the clinician.","A subjective assessment of the severity of the condition as evaluated by the clinician.","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.13 eHDSISeverity (SCT, used in MH@EU); http://hl7.org/fhir/ValueSet/condition-severity (SCT, Preferred in HL7 FHIR); Basic 3-Value Severity Scale Value: Mild-Moderate-Severe http://id.who.int/icd/entity/681697550 (ICD-11)","","",,,,"EHDSCondition.severity",0,1,"",""
+"EHDSDataSet","EHDSDataSet","EHDSDataSet","","","",0,*,"","","","null {[]} {[]}
+","DataSet model","Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSDataSet","EHDSDataSet.header","EHDSDataSet.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSDataSet","EHDSDataSet.header.subject","EHDSDataSet.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSDataSet","EHDSDataSet.header.identifier","EHDSDataSet.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSDataSet","EHDSDataSet.header.authorship","EHDSDataSet.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSDataSet","EHDSDataSet.header.authorship.author[x]","EHDSDataSet.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSDataSet","EHDSDataSet.header.authorship.datetime","EHDSDataSet.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSDataSet","EHDSDataSet.header.lastUpdate","EHDSDataSet.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSDataSet","EHDSDataSet.header.status","EHDSDataSet.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSDataSet","EHDSDataSet.header.statusReason[x]","EHDSDataSet.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSDataSet","EHDSDataSet.header.language","EHDSDataSet.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSDataSet","EHDSDataSet.header.version","EHDSDataSet.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSDataSet","EHDSDataSet.presentedForm","EHDSDataSet.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSDevice","EHDSDevice","EHDSDevice","","","",0,*,"","","","null {[]} {[]}
+","Device model","EHDS refined base model for Device information","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSDevice","EHDSDevice.identifier","EHDSDevice.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifier of the device which is unique within in a defined scope. Multiple identifiers can be used.","Identifier of the device which is unique within in a defined scope. Multiple identifiers can be used.","","","","","","","","","",,,,,"",,,,"EHDSDevice.identifier",1,*,"",""
+"EHDSDevice","EHDSDevice.manufacturer","EHDSDevice.manufacturer","","","",0,1,"","","","string {[]} {[]}
+","Name of device manufacturer","Name of device manufacturer","","","","","","","","","",,,,,"",,,,"EHDSDevice.manufacturer",0,1,"",""
+"EHDSDevice","EHDSDevice.manufactureDate","EHDSDevice.manufactureDate","","","",0,1,"","","","dateTime {[]} {[]}
+","The date and time when the device was manufactured","The date and time when the device was manufactured","","","","","","","","","",,,,,"",,,,"EHDSDevice.manufactureDate",0,1,"",""
+"EHDSDevice","EHDSDevice.expiryDate","EHDSDevice.expiryDate","","","",0,1,"","","","dateTime {[]} {[]}
+","The date and time beyond which this device is no longer valid or should not be used (if applicable).","The date and time beyond which this device is no longer valid or should not be used (if applicable).","","","","","","","","","",,,,,"",,,,"EHDSDevice.expiryDate",0,1,"",""
+"EHDSDevice","EHDSDevice.lotNumber","EHDSDevice.lotNumber","","","",0,1,"","","","string {[]} {[]}
+","Lot number of manufacture","Lot number of manufacture","","","","","","","","","",,,,,"",,,,"EHDSDevice.lotNumber",0,1,"",""
+"EHDSDevice","EHDSDevice.serialNumber","EHDSDevice.serialNumber","","","",0,1,"","","","string {[]} {[]}
+","Serial number assigned by the manufacturer","Serial number assigned by the manufacturer","","","","","","","","","",,,,,"",,,,"EHDSDevice.serialNumber",0,1,"",""
+"EHDSDevice","EHDSDevice.name","EHDSDevice.name","","","",0,*,"","","","string {[]} {[]}
+","The name and name type of the device as known to the manufacturer and/or patient","The name and name type of the device as known to the manufacturer and/or patient","","","","","","","","","",,,,,"",,,,"EHDSDevice.name",0,*,"",""
+"EHDSDevice","EHDSDevice.modelNumber","EHDSDevice.modelNumber","","","",0,1,"","","","string {[]} {[]}
+","The manufacturer's model number for the device","The manufacturer's model number for the device","","","","","","","","","",,,,,"",,,,"EHDSDevice.modelNumber",0,1,"",""
+"EHDSDevice","EHDSDevice.version","EHDSDevice.version","","","",0,1,"","","","string {[]} {[]}
+","The actual design of the device or software version running on the device","The actual design of the device or software version running on the device","","","","","","","","","",,,,,"",,,,"EHDSDevice.version",0,1,"",""
+"EHDSDevice","EHDSDevice.type","EHDSDevice.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Device type","Device type","","","","","","","","","",,"preferred","SNOMED CT, EMDN","","",,,,"EHDSDevice.type",0,*,"",""
+"EHDSDevice","EHDSDevice.note","EHDSDevice.note","","","",0,*,"","","","string {[]} {[]}
+","Device notes and comments","Device notes and comments","","","","","","","","","",,,,,"",,,,"EHDSDevice.note",0,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline","EHDSDispenseDecline","","","",0,*,"","","","null {[]} {[]}
+","Medication dispense decline model","Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header","EHDSDispenseDecline.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.subject","EHDSDispenseDecline.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.identifier","EHDSDispenseDecline.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.authorship","EHDSDispenseDecline.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.authorship.author[x]","EHDSDispenseDecline.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.authorship.datetime","EHDSDispenseDecline.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.lastUpdate","EHDSDispenseDecline.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.status","EHDSDispenseDecline.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.statusReason[x]","EHDSDispenseDecline.header.statusReason[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for not dispensing the medication","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.language","EHDSDispenseDecline.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.header.version","EHDSDispenseDecline.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.presentedForm","EHDSDispenseDecline.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.relatedRequest","EHDSDispenseDecline.relatedRequest","","","",1,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescription {[]} {[]}
+","The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]","The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]","","","","","","","","","",,,,,"",,,,"EHDSDispenseDecline.relatedRequest",1,*,"",""
+"EHDSDispenseDecline","EHDSDispenseDecline.comment","EHDSDispenseDecline.comment","","","",0,1,"","","","string {[]} {[]}
+","Additional information about why the dispensation was declined.","Additional information about why the dispensation was declined.","","","","","","","","","",,,,,"",,,,"EHDSDispenseDecline.comment",0,1,"",""
+"EHDSDocument","EHDSDocument","EHDSDocument","","","",0,*,"","","","null {[]} {[]}
+","Document model","EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSDocument","EHDSDocument.header","EHDSDocument.header","","","",1,*,"","","","Base {[]} {[]}
+","Document header elements","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSDocument","EHDSDocument.header.subject","EHDSDocument.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSDocument","EHDSDocument.header.identifier","EHDSDocument.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Document ID","Unique identifier of the document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSDocument","EHDSDocument.header.authorship","EHDSDocument.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSDocument","EHDSDocument.header.authorship.author[x]","EHDSDocument.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSDocument","EHDSDocument.header.authorship.datetime","EHDSDocument.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSDocument","EHDSDocument.header.lastUpdate","EHDSDocument.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSDocument","EHDSDocument.header.status","EHDSDocument.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSDocument","EHDSDocument.header.statusReason[x]","EHDSDocument.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSDocument","EHDSDocument.header.language","EHDSDocument.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSDocument","EHDSDocument.header.version","EHDSDocument.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSDocument","EHDSDocument.presentedForm","EHDSDocument.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSDocument","EHDSDocument.header.documentType","EHDSDocument.header.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document type","Identifies the type of document at hand, e.g. Hospital discharge report.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSDocument.header.documentType",1,1,"",""
+"EHDSDocument","EHDSDocument.header.documentTitle","EHDSDocument.header.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Document title","Document title, such as Hospital Discharge Report, Laboratory Result Report, etc.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.documentTitle",1,1,"",""
+"EHDSDocument","EHDSDocument.header.documentStatus","EHDSDocument.header.documentStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document status","The status of the Hospital discharge report. E.g., preliminary, final.","","","","","","","","","",,"preferred","hl7:CompositionStatus","","",,,,"EHDSDocument.header.documentStatus",1,1,"",""
+"EHDSDocument","EHDSDocument.header.period","EHDSDocument.header.period","","","",0,1,"","","","Period {[]} {[]}
+","Period","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.period",0,1,"",""
+"EHDSDocument","EHDSDocument.header.attestation","EHDSDocument.header.attestation","","","",0,*,"","","","Base {[]} {[]}
+","Attestation","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation",0,*,"",""
+"EHDSDocument","EHDSDocument.header.attestation.attester","EHDSDocument.header.attestation.attester","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Attester","Attester who validated the document. Mulitple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.attester",1,1,"",""
+"EHDSDocument","EHDSDocument.header.attestation.datetime","EHDSDocument.header.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.datetime",1,1,"",""
+"EHDSDocument","EHDSDocument.header.legalAuthentication","EHDSDocument.header.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","Legal authentication","Document legal authentication","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication",0,1,"",""
+"EHDSDocument","EHDSDocument.header.legalAuthentication.legalAuthenticator","EHDSDocument.header.legalAuthentication.legalAuthenticator","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Legal authenticator","The person taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.legalAuthenticator",1,1,"",""
+"EHDSDocument","EHDSDocument.header.legalAuthentication.datetime","EHDSDocument.header.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time when the document was authorized.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.datetime",1,1,"",""
+"EHDSDocument","EHDSDocument.header.eventType","EHDSDocument.header.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Event type","Categorization of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses.","","","","","","","","","",,"preferred","LOINC, SNOMED CT, dicom-cid-33-Modality","","",,,,"EHDSDocument.header.eventType",0,*,"",""
+"EHDSDocument","EHDSDocument.header.authorSpecialty","EHDSDocument.header.authorSpecialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Specialty","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocument.header.authorSpecialty",0,*,"",""
+"EHDSDocument","EHDSDocument.header.custodian","EHDSDocument.header.custodian","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","Document custodian","Organisation that is in charge of maintaining the document/report.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.custodian",1,1,"",""
+"EHDSDocument","EHDSDocument.header.documentFormat","EHDSDocument.header.documentFormat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Document format","An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","","","","","","","","","",,"preferred","HL7 Document Format Codes","","",,,,"EHDSDocument.header.documentFormat",0,1,"",""
+"EHDSDocument","EHDSDocument.header.confidentiality","EHDSDocument.header.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Confidentiality","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSDocument.header.confidentiality",0,1,"",""
+"EHDSDocument","EHDSDocument.knowledgeResources","EHDSDocument.knowledgeResources","","","",0,*,"","","","Base {[]} {[]}
+","Related documents and information sources","Related documents and information sources","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources",0,*,"",""
+"EHDSDocument","EHDSDocument.knowledgeResources.externalReference","EHDSDocument.knowledgeResources.externalReference","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.externalReference",0,*,"",""
+"EHDSDocument","EHDSDocument.knowledgeResources.relatedTo","EHDSDocument.knowledgeResources.relatedTo","","","",0,*,"","","","Reference {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.relatedTo",0,*,"",""
+"EHDSDosaging","EHDSDosaging","EHDSDosaging","","","",0,*,"","","","null {[]} {[]}
+","Dosaging model","Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSDosaging","EHDSDosaging.sequence","EHDSDosaging.sequence","","","",0,1,"","","","integer {[]} {[]}
+","Order of the dosage instruction, in case one treatment consists of several dosaging schemes","Order of the dosage instruction, in case one treatment consists of several dosaging schemes","","","","","","","","","",,,,,"",,,,"EHDSDosaging.sequence",0,1,"",""
+"EHDSDosaging","EHDSDosaging.text","EHDSDosaging.text","","","",0,1,"","","","string {[]} {[]}
+","Free text usage/dosage instructions when structured dosage information is not fully provided","Free text usage/dosage instructions when structured dosage information is not fully provided","","","","","","","","","",,,,,"",,,,"EHDSDosaging.text",0,1,"",""
+"EHDSDosaging","EHDSDosaging.renderedDescription","EHDSDosaging.renderedDescription","","","",0,1,"","","","string {[]} {[]}
+","Text representation rendered from all dosaging data elements with a value","Text representation rendered from all dosaging data elements with a value","","","","","","","","","",,,,,"",,,,"EHDSDosaging.renderedDescription",0,1,"",""
+"EHDSDosaging","EHDSDosaging.additionalInstruction","EHDSDosaging.additionalInstruction","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Coded instructions, e.g warnings to the patient, like 'may cause drowsiness' etc","Coded instructions, e.g warnings to the patient, like 'may cause drowsiness' etc","","","","","","","","","",,,,,"",,,,"EHDSDosaging.additionalInstruction",0,*,"",""
+"EHDSDosaging","EHDSDosaging.patientInstruction","EHDSDosaging.patientInstruction","","","",0,1,"","","","string {[]} {[]}
+","Patient oriented instructions as free text","Patient oriented instructions as free text","","","","","","","","","",,,,,"",,,,"EHDSDosaging.patientInstruction",0,1,"",""
+"EHDSDosaging","EHDSDosaging.doseAndRate","EHDSDosaging.doseAndRate","","","",0,*,"","","","Base {[]} {[]}
+","Amount of medication administered per one dose (= one timing)","Amount of medication administered per one dose (= one timing)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate",0,*,"",""
+"EHDSDosaging","EHDSDosaging.doseAndRate.type","EHDSDosaging.doseAndRate.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","The kind of dose or rate specified (e.g calculated, ordered, etc).","The kind of dose or rate specified (e.g calculated, ordered, etc).","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate.type",0,1,"",""
+"EHDSDosaging","EHDSDosaging.doseAndRate.dose[x]","EHDSDosaging.doseAndRate.dose[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Range {[]} {[]}","Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)","Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate.dose[x]",0,1,"",""
+"EHDSDosaging","EHDSDosaging.doseAndRate.rate[x]","EHDSDosaging.doseAndRate.rate[x]","","","",0,1,"","","","Ratio {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}","Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)","Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate.rate[x]",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing","EHDSDosaging.timing","","","",0,1,"","","","Base {[]} {[]}
+","When medication should be administered (period, time of day, frequency, etc)","When medication should be administered (period, time of day, frequency, etc)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.event","EHDSDosaging.timing.event","","","",0,*,"","","","dateTime {[]} {[]}
+","Exact date and/or time of the administration","Exact date and/or time of the administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.event",0,*,"",""
+"EHDSDosaging","EHDSDosaging.timing.code","EHDSDosaging.timing.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Timing abbreviation (AM - morning, Q4H - once in every 4 hours, BID - twice a day, etc)","Timing abbreviation (AM - morning, Q4H - once in every 4 hours, BID - twice a day, etc)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.code",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat","EHDSDosaging.timing.repeat","","","",0,1,"","","","Base {[]} {[]}
+","Repetition of the administration.","Repetition of the administration.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.bounds","EHDSDosaging.timing.repeat.bounds","","","",0,1,"","","","Base {[]} {[]}
+","Time bounds for the treatment (current dosaging scheme). Only one of the following can exist.","Time bounds for the treatment (current dosaging scheme). Only one of the following can exist.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.bounds.duration","EHDSDosaging.timing.repeat.bounds.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Number of time units, e.g 10 days","Number of time units, e.g 10 days","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds.duration",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.bounds.range","EHDSDosaging.timing.repeat.bounds.range","","","",0,1,"","","","Range {[]} {[]}
+","A range of numbers of time units, 5-10 days","A range of numbers of time units, 5-10 days","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds.range",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.bounds.period","EHDSDosaging.timing.repeat.bounds.period","","","",0,1,"","","","Period {[]} {[]}
+","Start and end date, 05.08.2023 - 10.08.2023","Start and end date, 05.08.2023 - 10.08.2023","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds.period",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.count","EHDSDosaging.timing.repeat.count","","","",0,1,"","","","Base {[]} {[]}
+","Number of times to repeat, exact or range","Number of times to repeat, exact or range","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.count",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.count.count","EHDSDosaging.timing.repeat.count.count","","","",0,1,"","","","integer {[]} {[]}
+","Number of times (e.g 'once', '10 times')","Number of times (e.g 'once', '10 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.count.count",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.count.countMax","EHDSDosaging.timing.repeat.count.countMax","","","",0,1,"","","","integer {[]} {[]}
+","Maximum number of times (e.g 'maximum 10 times')","Maximum number of times (e.g 'maximum 10 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.count.countMax",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.duration","EHDSDosaging.timing.repeat.duration","","","",0,1,"","","","Base {[]} {[]}
+","Duration of one administration, exact or range","Duration of one administration, exact or range","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.duration",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.duration.duration","EHDSDosaging.timing.repeat.duration.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration of administration (e.g '5 minutes', '1 hour')","Duration of administration (e.g '5 minutes', '1 hour')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.duration.duration",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.duration.durationMax","EHDSDosaging.timing.repeat.duration.durationMax","","","",0,1,"","","","Quantity {[]} {[]}
+","Maximum duration of administration (e.g 'maximum 1 hour')","Maximum duration of administration (e.g 'maximum 1 hour')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.duration.durationMax",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.frequency","EHDSDosaging.timing.repeat.frequency","","","",0,1,"","","","Base {[]} {[]}
+","Frequency of intake/administration (e.g 'three times a day')","Frequency of intake/administration (e.g 'three times a day')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.frequency.numberOfTimes","EHDSDosaging.timing.repeat.frequency.numberOfTimes","","","",0,1,"","","","integer {[]} {[]}
+","Number of times per period (e.g '3 times')","Number of times per period (e.g '3 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.numberOfTimes",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes","EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes","","","",0,1,"","","","integer {[]} {[]}
+","Maximum number of times per period (e.g. 'maximum 3 times')","Maximum number of times per period (e.g. 'maximum 3 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.frequency.period","EHDSDosaging.timing.repeat.frequency.period","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration to which the frequency applies (e.g '... / 1 day')","Duration to which the frequency applies (e.g '... / 1 day')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.period",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.frequency.periodMax","EHDSDosaging.timing.repeat.frequency.periodMax","","","",0,1,"","","","Quantity {[]} {[]}
+","Upper limit of the period (e.g ... / 4-6 hours)","Upper limit of the period (e.g ... / 4-6 hours)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.periodMax",0,1,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.dayOfWeek","EHDSDosaging.timing.repeat.dayOfWeek","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","The day of the week of administration, e.g Mon, Tue, etc","The day of the week of administration, e.g Mon, Tue, etc","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.dayOfWeek",0,*,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.timeOfDay","EHDSDosaging.timing.repeat.timeOfDay","","","",0,*,"","","","time {[]} {[]}
+","Time of day of administration (e.g '10:00')","Time of day of administration (e.g '10:00')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.timeOfDay",0,*,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.eventTime","EHDSDosaging.timing.repeat.eventTime","","","",0,*,"","","","Base {[]} {[]}
+","An event the administration is bound to, e.g 'before meal', '30 min before meal'","An event the administration is bound to, e.g 'before meal', '30 min before meal'","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.eventTime",0,*,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.eventTime.when","EHDSDosaging.timing.repeat.eventTime.when","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Time period or event ('before meal', 'immediately', 'morning')","Time period or event ('before meal', 'immediately', 'morning')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.eventTime.when",0,*,"",""
+"EHDSDosaging","EHDSDosaging.timing.repeat.eventTime.offset","EHDSDosaging.timing.repeat.eventTime.offset","","","",0,1,"","","","integer {[]} {[]}
+","minutes from event, before or after (?not sure how to show before/after with only positive integers)","minutes from event, before or after (?not sure how to show before/after with only positive integers)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.eventTime.offset",0,1,"",""
+"EHDSDosaging","EHDSDosaging.asNeeded","EHDSDosaging.asNeeded","","","",0,1,"","","","boolean {[]} {[]}
+","Take as needed","Take as needed","","","","","","","","","",,,,,"",,,,"EHDSDosaging.asNeeded",0,1,"",""
+"EHDSDosaging","EHDSDosaging.asNeededFor","EHDSDosaging.asNeededFor","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Take as needed for the coded reason","Take as needed for the coded reason","","","","","","","","","",,,,,"",,,,"EHDSDosaging.asNeededFor",0,*,"",""
+"EHDSDosaging","EHDSDosaging.bodySite","EHDSDosaging.bodySite","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Body site of administration","Body site of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.bodySite",0,1,"",""
+"EHDSDosaging","EHDSDosaging.routeOfAdministration","EHDSDosaging.routeOfAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Route of administration","Route of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.routeOfAdministration",0,1,"",""
+"EHDSDosaging","EHDSDosaging.methodOfAdministration","EHDSDosaging.methodOfAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Method of administration","Method of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.methodOfAdministration",0,1,"",""
+"EHDSDosaging","EHDSDosaging.maxDose","EHDSDosaging.maxDose","","","",0,*,"","","","Base {[]} {[]}
+","Maximum dose for the patient","Maximum dose for the patient","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose",0,*,"",""
+"EHDSDosaging","EHDSDosaging.maxDose.maxDosePerPeriod","EHDSDosaging.maxDose.maxDosePerPeriod","","","",0,*,"","","","Ratio {[]} {[]}
+","Upper limit on medication per unit of time","Upper limit on medication per unit of time","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose.maxDosePerPeriod",0,*,"",""
+"EHDSDosaging","EHDSDosaging.maxDose.maxDosePerAdministration","EHDSDosaging.maxDose.maxDosePerAdministration","","","",0,1,"","","","Quantity {[]} {[]}
+","Upper limit on medication per one administration","Upper limit on medication per one administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose.maxDosePerAdministration",0,1,"",""
+"EHDSDosaging","EHDSDosaging.maxDose.maxDosePerLifetime","EHDSDosaging.maxDose.maxDosePerLifetime","","","",0,1,"","","","Quantity {[]} {[]}
+","Upper limit on medication per lifetime of the patient","Upper limit on medication per lifetime of the patient","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose.maxDosePerLifetime",0,1,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional","EHDSHealthProfessional","","","",0,*,"","","","null {[]} {[]}
+","Health professional model","EHDS refined base model for Health professional (HP)","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.identifier","EHDSHealthProfessional.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","An identifier of the health professional that is unique within a defined scope. Example: National health professional ID. Multiple identifiers could be provided.","An identifier of the health professional that is unique within a defined scope. Example: National health professional ID. Multiple identifiers could be provided.","","","","","","","","","",,,,,"",,,,"EHDSHealthProfessional.identifier",0,*,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.name","EHDSHealthProfessional.name","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName {[]} {[]}
+","Name of the health professional that has been treating or taking responsibility for the patient.","Name of the health professional that has been treating or taking responsibility for the patient.","","","","","","","","","",,,,,"",,,,"EHDSHealthProfessional.name",0,1,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.address","EHDSHealthProfessional.address","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress {[]} {[]}
+","Mailing and office or home addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose.","Mailing and office or home addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose.","","","","","","","","","",,,,,"",,,,"EHDSHealthProfessional.address",0,1,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.telecom","EHDSHealthProfessional.telecom","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom {[]} {[]}
+","Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided.","Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided.","","","","","","","","","",,,,,"",,,,"EHDSHealthProfessional.telecom",0,*,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.role","EHDSHealthProfessional.role","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Health professional role. Multiple roles could be provided.","Health professional role. Multiple roles could be provided.","","","","","","","","","",,"preferred","ISCO, SNOMED CT","","",,,,"EHDSHealthProfessional.role",0,*,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.organization","EHDSHealthProfessional.organization","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","The organization where this role is available","The organization where this role is available","","","","","","","","","",,,,,"",,,,"EHDSHealthProfessional.organization",0,1,"",""
+"EHDSHealthProfessional","EHDSHealthProfessional.specialty","EHDSHealthProfessional.specialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","The specialty of a practitioner that describes the functional role they are practicing at a given organization","The specialty of a practitioner that describes the functional role they are practicing at a given organization","","","","","","","","","",,,,,"",,,,"EHDSHealthProfessional.specialty",0,*,"",""
+"EHDSHumanName","EHDSHumanName","EHDSHumanName","","","",0,*,"","","","null {[]} {[]}
+","Human name model","C.27 - EHDS refined base model for Human name","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSHumanName","EHDSHumanName.use","EHDSHumanName.use","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.27.1 - Use","Identifies the purpose for this name.","","","","","","","","","",,"preferred","hl7:NameUse","","",,,,"EHDSHumanName.use",0,1,"",""
+"EHDSHumanName","EHDSHumanName.text","EHDSHumanName.text","","","",0,1,"","","","string {[]} {[]}
+","Written name as is should be displayed","Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.","","","","","","","","","",,,,,"",,,,"EHDSHumanName.text",0,1,"",""
+"EHDSHumanName","EHDSHumanName.family","EHDSHumanName.family","","","",0,*,"","","","string {[]} {[]}
+","Family name","The family name/surname/last name of the patient. This field can contain more than one  element or multiple fields could be present.","","","","","","","","","",,,,,"",,,,"EHDSHumanName.family",0,*,"",""
+"EHDSHumanName","EHDSHumanName.given","EHDSHumanName.given","","","",0,*,"","","","string {[]} {[]}
+","Given name","The given name/first name  (also known as forename or first name).","","","","","","","","","",,,,,"",,,,"EHDSHumanName.given",0,*,"",""
+"EHDSHumanName","EHDSHumanName.prefix","EHDSHumanName.prefix","","","",0,*,"","","","string {[]} {[]}
+","Name Prefix e.g. Sir, Rev., Prof.","Name parts that come before the name. Prefixes appear in the correct order for presenting the name.","","","","","","","","","",,,,,"",,,,"EHDSHumanName.prefix",0,*,"",""
+"EHDSHumanName","EHDSHumanName.suffix","EHDSHumanName.suffix","","","",0,*,"","","","string {[]} {[]}
+","Suffix e.g. Jr., PhD","Name parts that come after the name. Suffixes appear in the correct order for presenting the name.","","","","","","","","","",,,,,"",,,,"EHDSHumanName.suffix",0,*,"",""
+"EHDSLocation","EHDSLocation","EHDSLocation","","","",0,*,"","","","null {[]} {[]}
+","Location model","EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSLocation","EHDSLocation.identifier","EHDSLocation.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier","Location identifier","","","","","","","","","",,,,,"",,,,"EHDSLocation.identifier",0,*,"",""
+"EHDSLocation","EHDSLocation.name","EHDSLocation.name","","","",0,1,"","","","string {[]} {[]}
+","Name","Name of the location as used by humans","","","","","","","","","",,,,,"",,,,"EHDSLocation.name",0,1,"",""
+"EHDSLocation","EHDSLocation.description","EHDSLocation.description","","","",0,1,"","","","string {[]} {[]}
+","Description","Additional details about the location that could be displayed as further information to identify the location beyond its name","","","","","","","","","",,,,,"",,,,"EHDSLocation.description",0,1,"",""
+"EHDSLocation","EHDSLocation.address","EHDSLocation.address","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress {[]} {[]}
+","Address","Physical location address","","","","","","","","","",,,,,"",,,,"EHDSLocation.address",0,1,"",""
+"EHDSMedication","EHDSMedication","EHDSMedication","","","",0,*,"","","","null {[]} {[]}
+","Medicinal product model","Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSMedication","EHDSMedication.identifyingCode[x]","EHDSMedication.identifyingCode[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+Identifier {[]} {[]}","Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.","Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.","","","","","","","","","",,,,,"",,,,"EHDSMedication.identifyingCode[x]",0,*,"",""
+"EHDSMedication","EHDSMedication.classification","EHDSMedication.classification","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)","Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)","","","","","","","","","",,"preferred","WHO ATC","","",,,,"EHDSMedication.classification",0,*,"",""
+"EHDSMedication","EHDSMedication.productName","EHDSMedication.productName","","","",0,1,"","","","string {[]} {[]}
+","Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.","Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.","","","","","","","","","",,,,,"",,,,"EHDSMedication.productName",0,1,"",""
+"EHDSMedication","EHDSMedication.marketingAuthorisationHolder","EHDSMedication.marketingAuthorisationHolder","","","",0,1,"","","","Base {[]} {[]}
+","Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product.","Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product.","","","","","","","","","",,,,,"",,,,"EHDSMedication.marketingAuthorisationHolder",0,1,"",""
+"EHDSMedication","EHDSMedication.marketingAuthorisationHolder.organizationName","EHDSMedication.marketingAuthorisationHolder.organizationName","","","",0,1,"","","","string {[]} {[]}
+","Name of the organisation holding the authorisation for marketing/mahufacturing","Name of the organisation holding the authorisation for marketing/mahufacturing","","","","","","","","","",,,,,"",,,,"EHDSMedication.marketingAuthorisationHolder.organizationName",0,1,"",""
+"EHDSMedication","EHDSMedication.marketingAuthorisationHolder.organizationIdentifier","EHDSMedication.marketingAuthorisationHolder.organizationIdentifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier of the organisation and/or its physical location","Identifier of the organisation and/or its physical location","","","","","","","","","",,,,,"",,,,"EHDSMedication.marketingAuthorisationHolder.organizationIdentifier",0,*,"",""
+"EHDSMedication","EHDSMedication.doseForm","EHDSMedication.doseForm","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Dose form(s) on a product level. Dose form for a single package item is defined below.","Dose form(s) on a product level. Dose form for a single package item is defined below.","","","","","","","","","",,"preferred","EDQM Standard Terms","","",,,,"EHDSMedication.doseForm",0,1,"",""
+"EHDSMedication","EHDSMedication.packSize","EHDSMedication.packSize","","","",0,*,"","","","Quantity {[]} {[]}
+","Overall amount of product in one package (100ml; 20 tablets; 1 creme & 6 pessaries)","Overall amount of product in one package (100ml; 20 tablets; 1 creme & 6 pessaries)","","","","","","","","","",,"preferred","UCUM for units of measure. EDQM Standard Terms for units of presentation.","","",,,,"EHDSMedication.packSize",0,*,"",""
+"EHDSMedication","EHDSMedication.item","EHDSMedication.item","","","",0,*,"","","","Base {[]} {[]}
+","A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined","A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined","","","","","","","","","",,,,,"",,,,"EHDSMedication.item",0,*,"",""
+"EHDSMedication","EHDSMedication.item.doseForm","EHDSMedication.item.doseForm","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Dose form","Dose form","","","","","","","","","",,"preferred","EDQM Standard Terms","","",,,,"EHDSMedication.item.doseForm",0,1,"",""
+"EHDSMedication","EHDSMedication.item.ingredient","EHDSMedication.item.ingredient","","","",1,*,"","","","Base {[]} {[]}
+","Ingredients","Ingredients","","","","","","","","","",,,,,"",,,,"EHDSMedication.item.ingredient",1,*,"",""
+"EHDSMedication","EHDSMedication.item.ingredient.isActive","EHDSMedication.item.ingredient.isActive","","","",0,1,"","","","boolean {[]} {[]}
+","Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.","Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.","","","","","","","","","",,,,,"",,,,"EHDSMedication.item.ingredient.isActive",0,1,"",""
+"EHDSMedication","EHDSMedication.item.ingredient.substance","EHDSMedication.item.ingredient.substance","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Substance","Substance","","","","","","","","","",,"preferred","EMA SPOR SMS","","",,,,"EHDSMedication.item.ingredient.substance",1,1,"",""
+"EHDSMedication","EHDSMedication.item.ingredient.strengthInfo","EHDSMedication.item.ingredient.strengthInfo","","","",0,1,"","","","Base {[]} {[]}
+","Strength of the product - amount of substance per unit","Strength of the product - amount of substance per unit","","","","","","","","","",,,,,"",,,,"EHDSMedication.item.ingredient.strengthInfo",0,1,"",""
+"EHDSMedication","EHDSMedication.item.ingredient.strengthInfo.strength","EHDSMedication.item.ingredient.strengthInfo.strength","","","",1,1,"","","","Ratio {[]} {[]}
+","Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet","Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet","","","","","","","","","",,,,,"",,,,"EHDSMedication.item.ingredient.strengthInfo.strength",1,1,"",""
+"EHDSMedication","EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance","EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Substance that the strength refers to, in case it's different from the main substance","Substance that the strength refers to, in case it's different from the main substance","","","","","","","","","",,"preferred","EMA SPOR SMS","","",,,,"EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance",0,1,"",""
+"EHDSMedication","EHDSMedication.item.unitOfPresentation","EHDSMedication.item.unitOfPresentation","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.","Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.","","","","","","","","","",,"preferred","EDQM Standard Terms","","",,,,"EHDSMedication.item.unitOfPresentation",0,1,"",""
+"EHDSMedication","EHDSMedication.item.containedQuantity","EHDSMedication.item.containedQuantity","","","",0,1,"","","","Ratio {[]} {[]}
+","Manufactured item quantity for liquids (3ml / 1 vial)","Manufactured item quantity for liquids (3ml / 1 vial)","","","","","","","","","",,,,,"",,,,"EHDSMedication.item.containedQuantity",0,1,"",""
+"EHDSMedication","EHDSMedication.item.amount","EHDSMedication.item.amount","","","",0,1,"","","","Quantity {[]} {[]}
+","Number of such manufactured items in this product (5 vials)","Number of such manufactured items in this product (5 vials)","","","","","","","","","",,"preferred","UCUM for units of measure. EDQM Standard Terms for units of presentation.","","",,,,"EHDSMedication.item.amount",0,1,"",""
+"EHDSMedication","EHDSMedication.item.packageType","EHDSMedication.item.packageType","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type of package of the medication item","Type of package of the medication item","","","","","","","","","",,"preferred","EDQM Standard Terms for packaging.","","",,,,"EHDSMedication.item.packageType",0,1,"",""
+"EHDSMedication","EHDSMedication.device","EHDSMedication.device","","","",0,*,"","","","Base {[]} {[]}
+","Administration device included in the product","Administration device included in the product","","","","","","","","","",,,,,"",,,,"EHDSMedication.device",0,*,"",""
+"EHDSMedication","EHDSMedication.device.deviceQuantity","EHDSMedication.device.deviceQuantity","","","",1,1,"","","","Quantity {[]} {[]}
+","Number of such devices","Number of such devices","","","","","","","","","",,,,,"",,,,"EHDSMedication.device.deviceQuantity",1,1,"",""
+"EHDSMedication","EHDSMedication.device.device[x]","EHDSMedication.device.device[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}","Device coded","Device coded","","","","","","","","","",,,,,"",,,,"EHDSMedication.device.device[x]",1,1,"",""
+"EHDSMedication","EHDSMedication.characteristic","EHDSMedication.characteristic","","","",0,*,"","","","Base {[]} {[]}
+","Other features of the product","Other features of the product","","","","","","","","","",,,,,"",,,,"EHDSMedication.characteristic",0,*,"",""
+"EHDSMedication","EHDSMedication.characteristic.type","EHDSMedication.characteristic.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","A code expressing the type of characteristic","A code expressing the type of characteristic","","","","","","","","","",,,,,"",,,,"EHDSMedication.characteristic.type",1,1,"",""
+"EHDSMedication","EHDSMedication.characteristic.value[x]","EHDSMedication.characteristic.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+CodeableConcept {[]} {[]}string {[]} {[]}Quantity {[]} {[]}dateTime {[]} {[]}integer {[]} {[]}decimal {[]} {[]}Ratio {[]} {[]}","Description of the characteristic","Description of the characteristic","","","","","","","","","",,,,,"",,,,"EHDSMedication.characteristic.value[x]",0,1,"",""
+"EHDSMedication","EHDSMedication.batch","EHDSMedication.batch","","","",0,1,"","","","Base {[]} {[]}
+","Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.","Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.","","","","","","","","","",,,,,"",,,,"EHDSMedication.batch",0,1,"",""
+"EHDSMedication","EHDSMedication.batch.lotNumber","EHDSMedication.batch.lotNumber","","","",0,1,"","","","string {[]} {[]}
+","Batch identifier of the medicinal product","Batch identifier of the medicinal product","","","","","","","","","",,,,,"",,,,"EHDSMedication.batch.lotNumber",0,1,"",""
+"EHDSMedication","EHDSMedication.batch.expirationDate","EHDSMedication.batch.expirationDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Batch expiration date of the medicinal product.","Batch expiration date of the medicinal product.","","","","","","","","","",,,,,"",,,,"EHDSMedication.batch.expirationDate",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense","EHDSMedicationDispense","","","",0,*,"","","","null {[]} {[]}
+","Medication dispense model","Logical model for medication dispensation (based on request or independently)","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header","EHDSMedicationDispense.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.subject","EHDSMedicationDispense.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.identifier","EHDSMedicationDispense.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.authorship","EHDSMedicationDispense.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.authorship.author[x]","EHDSMedicationDispense.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.authorship.datetime","EHDSMedicationDispense.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.lastUpdate","EHDSMedicationDispense.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.status","EHDSMedicationDispense.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.statusReason[x]","EHDSMedicationDispense.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.language","EHDSMedicationDispense.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.header.version","EHDSMedicationDispense.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.presentedForm","EHDSMedicationDispense.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.dispenseLocation","EHDSMedicationDispense.dispenseLocation","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}
+","Location of dispense","Location of dispense","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.dispenseLocation",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.receiver[x]","EHDSMedicationDispense.receiver[x]","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson {[]} {[]}","Identification of the person who received the dispensed medication, especially when it was not the patient","Identification of the person who received the dispensed medication, especially when it was not the patient","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.receiver[x]",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.relatedRequest","EHDSMedicationDispense.relatedRequest","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier of the prescription or prescription item the dispense is related to","Identifier of the prescription or prescription item the dispense is related to","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.relatedRequest",0,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.medication","EHDSMedicationDispense.medication","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication {[]} {[]}
+","Exact dispensed product","Exact dispensed product","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.medication",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.dispensedQuantity","EHDSMedicationDispense.dispensedQuantity","","","",1,1,"","","","Quantity {[]} {[]}
+","Number of dispensed packages if the pack size is known, or number of smaller items/units","Number of dispensed packages if the pack size is known, or number of smaller items/units","","","","","","","","","",,"preferred","UCUM, EDQM Standard Terms","","",,,,"EHDSMedicationDispense.dispensedQuantity",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.timeOfDispensation","EHDSMedicationDispense.timeOfDispensation","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of dispensation","Date and time of dispensation","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.timeOfDispensation",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.substitution","EHDSMedicationDispense.substitution","","","",0,1,"","","","Base {[]} {[]}
+","Indicated whether substitution was made by the dispenser","Indicated whether substitution was made by the dispenser","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.substitution.substitutionOccurred","EHDSMedicationDispense.substitution.substitutionOccurred","","","",1,1,"","","","boolean {[]} {[]}
+","Indicated whether substitution was made by the dispenser","Indicated whether substitution was made by the dispenser","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution.substitutionOccurred",1,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.substitution.type","EHDSMedicationDispense.substitution.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","What kind of substitution was made by the dispenser","What kind of substitution was made by the dispenser","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution.type",0,1,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.substitution.reason","EHDSMedicationDispense.substitution.reason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason why the substitution was made or why the expected substitution was not made.","Reason why the substitution was made or why the expected substitution was not made.","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution.reason",0,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.dosageInstructions","EHDSMedicationDispense.dosageInstructions","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosaging {[]} {[]}
+","Dosaging and administration instructions","Dosaging and administration instructions","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.dosageInstructions",0,*,"",""
+"EHDSMedicationDispense","EHDSMedicationDispense.comment","EHDSMedicationDispense.comment","","","",0,*,"","","","string {[]} {[]}
+","Additional information or comments","Additional information or comments","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.comment",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription","EHDSMedicationPrescription","","","",0,*,"","","","null {[]} {[]}
+","Medication prescription model","Logical model for medication prescription. A prescription contains one or more prescription items.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header","EHDSMedicationPrescription.header","","","",1,*,"","","","Base {[]} {[]}
+","Prescription header","Prescription header data elements","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.subject","EHDSMedicationPrescription.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","The person for whom the medication is prescribed/ordered. [Used for searching]","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.identifier","EHDSMedicationPrescription.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier(s) for the prescription. [Used for searching]","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.authorship","EHDSMedicationPrescription.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.authorship.author[x]","EHDSMedicationPrescription.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","The prescriber, the person who made the prescription, and who takes the responsibility of the treatment. [Used for searching]","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.authorship.datetime","EHDSMedicationPrescription.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Time of issuing (signing) the prescription by health care professional. [Used for searching]","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.lastUpdate","EHDSMedicationPrescription.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.status","EHDSMedicationPrescription.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the prescription, this should not be status of treatment. For multi-item prescription, the status of prescription is often related to statuses of single lines. In case of single-item prescriptions, the status for line is usually the status of prescription. [Used for searching]","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.statusReason[x]","EHDSMedicationPrescription.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.language","EHDSMedicationPrescription.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.version","EHDSMedicationPrescription.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.presentedForm","EHDSMedicationPrescription.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","Entire prescription as issued. Various formats could be provided, PDF format is recommended.","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.recorder","EHDSMedicationPrescription.header.recorder","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","The recorder of the prescription/draft in the information system","The recorder of the prescription/draft in the information system","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.header.recorder",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.recordingDate","EHDSMedicationPrescription.header.recordingDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Time of authoring the prescription/draft in the information system","Time of authoring the prescription/draft in the information system","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.header.recordingDate",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.validFrom","EHDSMedicationPrescription.header.validFrom","","","",0,1,"","","","dateTime {[]} {[]}
+","Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate. [Used for searching]","Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate. [Used for searching]","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.header.validFrom",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.header.validUntil","EHDSMedicationPrescription.header.validUntil","","","",0,1,"","","","dateTime {[]} {[]}
+","The validity period end date. The prescription is not dispensable after this date. [Used for searching]","The validity period end date. The prescription is not dispensable after this date. [Used for searching]","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.header.validUntil",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.comment","EHDSMedicationPrescription.comment","","","",0,*,"","","","string {[]} {[]}
+","Additional information or comments","Additional information or comments","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.comment",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem","EHDSMedicationPrescription.prescriptionItem","","","",1,*,"","","","Base {[]} {[]}
+","Prescription line for one medication. In many countries, only one item is allowed. In case multiple medications are allowed, all lines need to be authored together.","Prescription line for one medication. In many countries, only one item is allowed. In case multiple medications are allowed, all lines need to be authored together.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem",1,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.identifier","EHDSMedicationPrescription.prescriptionItem.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier.","Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.identifier",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.category","EHDSMedicationPrescription.prescriptionItem.category","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc).","Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc).","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.category",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.medication","EHDSMedicationPrescription.prescriptionItem.medication","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication {[]} {[]}
+","Prescribed product, branded, generic, virtual, extemporal, etc","Prescribed product, branded, generic, virtual, extemporal, etc","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.medication",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.indication[x]","EHDSMedicationPrescription.prescriptionItem.indication[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}","Reason for the prescription (typically diagnosis, or a procedure)","Reason for the prescription (typically diagnosis, or a procedure)","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.indication[x]",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.indicationText","EHDSMedicationPrescription.prescriptionItem.indicationText","","","",0,1,"","","","string {[]} {[]}
+","Reason for the prescription in textual form. This might not be allowed by some implementations.","Reason for the prescription in textual form. This might not be allowed by some implementations.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.indicationText",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.prescriptionIntent","EHDSMedicationPrescription.prescriptionItem.prescriptionIntent","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Intent of the prescription - prophylaxis, treatment, anesthesia, etc","Intent of the prescription - prophylaxis, treatment, anesthesia, etc","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.prescriptionIntent",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.treatmentPeriod","EHDSMedicationPrescription.prescriptionItem.treatmentPeriod","","","",0,1,"","","","Period {[]} {[]}
+","Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)","Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.treatmentPeriod",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.quantityPrescribed","EHDSMedicationPrescription.prescriptionItem.quantityPrescribed","","","",0,1,"","","","Quantity {[]} {[]}
+","Overall quantity of prescribed product (e.g number of packages or number of tablets).","Overall quantity of prescribed product (e.g number of packages or number of tablets).","","","","","","","","","",,"preferred","UCUM, EDQM Standard Terms","","",,,,"EHDSMedicationPrescription.prescriptionItem.quantityPrescribed",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.dosageInstructions","EHDSMedicationPrescription.prescriptionItem.dosageInstructions","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosaging {[]} {[]}
+","Dosaging and administration instructions","Dosaging and administration instructions","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.dosageInstructions",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.preparationInstructions","EHDSMedicationPrescription.prescriptionItem.preparationInstructions","","","",0,1,"","","","string {[]} {[]}
+","Additional instructions about preparation or dispense","Additional instructions about preparation or dispense","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.preparationInstructions",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.substitution","EHDSMedicationPrescription.prescriptionItem.substitution","","","",0,1,"","","","Base {[]} {[]}
+","Whether and which type of substitution is allowed for this medication treatment item","Whether and which type of substitution is allowed for this medication treatment item","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.substitution",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]","EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]","","","",0,1,"","","","boolean {[]} {[]}
+CodeableConcept {[]} {[]}","Whether and to what extent substitution is allowed.","Whether and to what extent substitution is allowed.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]","EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)","Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.status","EHDSMedicationPrescription.prescriptionItem.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item.","Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.status",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.statusReason[x]","EHDSMedicationPrescription.prescriptionItem.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous","Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.statusReason[x]",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.repeatsAllowed","EHDSMedicationPrescription.prescriptionItem.repeatsAllowed","","","",0,1,"","","","integer {[]} {[]}
+","Number of refills authorized","How many times the prescription item can be dispensed in addition to the original dispense.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.repeatsAllowed",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval","EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval","","","",0,1,"","","","Quantity {[]} {[]}
+","Minimum Dispense Interval","If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.offLabel","EHDSMedicationPrescription.prescriptionItem.offLabel","","","",0,1,"","","","Base {[]} {[]}
+","Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug","Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.offLabel",0,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.offLabel.isOffLabelUse","EHDSMedicationPrescription.prescriptionItem.offLabel.isOffLabelUse","","","",1,1,"","","","boolean {[]} {[]}
+","Indicates off-label use. Must be 'true' when .reason is provided.","Indicates off-label use. Must be 'true' when .reason is provided.","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.offLabel.isOffLabelUse",1,1,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.offLabel.reason[x]","EHDSMedicationPrescription.prescriptionItem.offLabel.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason or related clarification for off-label use","Reason or related clarification for off-label use","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.offLabel.reason[x]",0,*,"",""
+"EHDSMedicationPrescription","EHDSMedicationPrescription.prescriptionItem.comment","EHDSMedicationPrescription.prescriptionItem.comment","","","",0,*,"","","","string {[]} {[]}
+","Additional information or comments","Additional information or comments","","","","","","","","","",,,,,"",,,,"EHDSMedicationPrescription.prescriptionItem.comment",0,*,"",""
+"EHDSOrganization","EHDSOrganization","EHDSOrganization","","","",0,*,"","","","null {[]} {[]}
+","Organization model","C.3 - EHDS refined base model for Health provider or any other type of organization","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSOrganization","EHDSOrganization.identifier","EHDSOrganization.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier of the organisation","Health provider organisation identifier","","","","","","","","","",,,,,"",,,,"EHDSOrganization.identifier",0,*,"",""
+"EHDSOrganization","EHDSOrganization.type","EHDSOrganization.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Type of organisation","Kind of organisation","","","","","","","","","",,,,,"",,,,"EHDSOrganization.type",0,*,"",""
+"EHDSOrganization","EHDSOrganization.name","EHDSOrganization.name","","","",0,1,"","","","string {[]} {[]}
+","Organisation name","Organisation name","","","","","","","","","",,,,,"",,,,"EHDSOrganization.name",0,1,"",""
+"EHDSOrganization","EHDSOrganization.address","EHDSOrganization.address","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress {[]} {[]}
+","Address","Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose.","","","","","","","","","",,,,,"",,,,"EHDSOrganization.address",0,*,"",""
+"EHDSOrganization","EHDSOrganization.contact","EHDSOrganization.contact","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom {[]} {[]}
+","Telecom","Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided.","","","","","","","","","",,,,,"",,,,"EHDSOrganization.contact",0,*,"",""
+"EHDSOrganization","EHDSOrganization.partOf","EHDSOrganization.partOf","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization]]}
+","Part of","The organization of which this organization forms a part","","","","","","","","","",,,,,"",,,,"EHDSOrganization.partOf",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance","","","",0,*,"","","","null {[]} {[]}
+","Allergy intolerance model","EHDS refined base model for allergy/intolerance","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header","EHDSPSAllergyIntolerance.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.subject","EHDSPSAllergyIntolerance.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.identifier","EHDSPSAllergyIntolerance.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.authorship","EHDSPSAllergyIntolerance.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.authorship.author[x]","EHDSPSAllergyIntolerance.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.authorship.datetime","EHDSPSAllergyIntolerance.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.lastUpdate","EHDSPSAllergyIntolerance.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.status","EHDSPSAllergyIntolerance.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.statusReason[x]","EHDSPSAllergyIntolerance.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.language","EHDSPSAllergyIntolerance.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.header.version","EHDSPSAllergyIntolerance.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.presentedForm","EHDSPSAllergyIntolerance.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.agentOrAllergen","EHDSPSAllergyIntolerance.agentOrAllergen","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Agent or allergen that causes the reaction","A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity.","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.24 **eHDSIActiveIngredient** (ATC, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.61 eHDSISubstance (EMA SMS, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.19 eHDSIAllergenNoDrug (SCT, used in MH@EU); ICD-11 Non-drug allergens","","",,,,"EHDSPSAllergyIntolerance.agentOrAllergen",1,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.typeOfPropensity","EHDSPSAllergyIntolerance.typeOfPropensity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type of propensity describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)","Type of propensity describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.18 eHDSIAdverseEventType (SCT, used in MH@EU); http://hl7.org/fhir/ValueSet/allergy-intolerance-type (HL7, required in HL7 FHIR)","","",,,,"EHDSPSAllergyIntolerance.typeOfPropensity",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.description","EHDSPSAllergyIntolerance.description","","","",0,1,"","","","string {[]} {[]}
+","Textual description of the allergy or intolerance","Textual description of the allergy or intolerance","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.description",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.criticality","EHDSPSAllergyIntolerance.criticality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Potential risk for future life-threatening adverse reactions when exposed to a substance known to cause an adverse reaction.","Potential risk for future life-threatening adverse reactions when exposed to a substance known to cause an adverse reaction.","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.57 eHDSICriticality (HL7, used in MH@EU); http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality (HL7, required in HL7 FHIR)","","",,,,"EHDSPSAllergyIntolerance.criticality",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.certainty","EHDSPSAllergyIntolerance.certainty","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and/or clinical evidence of condition.","Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and/or clinical evidence of condition.","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.58 eHDSIAllergyCertainty (HL7, used in MH@EU) ; http://hl7.org/fhir/ValueSet/allergyintolerance-verification (HL7, required in HL7 FHIR)","","",,,,"EHDSPSAllergyIntolerance.certainty",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.clinicalStatus","EHDSPSAllergyIntolerance.clinicalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Clinical status of the allergy or intolerance (e.g. active, inactive, resolved)","Clinical status of the allergy or intolerance (e.g. active, inactive, resolved)","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.59 eHDSIAllergyStatus (HL7, used in MH@EU); http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (HL7, required in HL7 FHIR)","","",,,,"EHDSPSAllergyIntolerance.clinicalStatus",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.onsetDate","EHDSPSAllergyIntolerance.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date of onset of allergy, e.g., date of the first observation of the reaction. Partial date could be used.","Date of onset of allergy, e.g., date of the first observation of the reaction. Partial date could be used.","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.onsetDate",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.endDate","EHDSPSAllergyIntolerance.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)","Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.endDate",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.reaction","EHDSPSAllergyIntolerance.reaction","","","",0,*,"","","","Base {[]} {[]}
+","Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction).","Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction).","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.reaction",0,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.reaction.manifestation","EHDSPSAllergyIntolerance.reaction.manifestation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Clinical symptoms/signs associated with the event","Clinical symptoms/signs associated with the event","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.5 eHDSIIllnessandDisorder (ICD-10, alternative in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.11 eHDSIReactionAllergy (SCT, alternative in MH@EU); ICD-11","","",,,,"EHDSPSAllergyIntolerance.reaction.manifestation",0,*,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.reaction.date","EHDSPSAllergyIntolerance.reaction.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of allergy manifestation","Date and time of allergy manifestation","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.reaction.date",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.reaction.severity","EHDSPSAllergyIntolerance.reaction.severity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Severity of the clinical manifestation of the allergic reaction.","Severity of the clinical manifestation of the allergic reaction.","","","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.13 eHDSISeverity (SCT, used in MH@EU); http://hl7.org/fhir/ValueSet/reaction-event-severity (HL7, Required in HL7 FHIR)","","",,,,"EHDSPSAllergyIntolerance.reaction.severity",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.reaction.description","EHDSPSAllergyIntolerance.reaction.description","","","",0,1,"","","","string {[]} {[]}
+","Description of the event as a whole","Description of the event as a whole","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.reaction.description",0,1,"",""
+"EHDSPSAllergyIntolerance","EHDSPSAllergyIntolerance.reaction.onsetDate","EHDSPSAllergyIntolerance.reaction.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date of the observation of the reaction","Date of the observation of the reaction","","","","","","","","","",,,,,"",,,,"EHDSPSAllergyIntolerance.reaction.onsetDate",0,1,"",""
+"EHDSPatient","EHDSPatient","EHDSPatient","","","",0,*,"","","","null {[]} {[]}
+","Patient model","C.1 - EHDS refined base model for Patient/subject information","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSPatient","EHDSPatient.personalIdentifier","EHDSPatient.personalIdentifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Personal identifier","An identifier of the patient that is unique within a defined scope. Example: National ID (birth number) or National patient identifier for the Czech patient. Multiple identifiers may be provided.","","","","","","","","","",,,,,"",,,,"EHDSPatient.personalIdentifier",1,*,"",""
+"EHDSPatient","EHDSPatient.name","EHDSPatient.name","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName {[]} {[]}
+","Name","Name associated with the patient/subject. Name might consist of name parts, e.g. Given name or names, family name/surname, name prefix etc.","","","","","","","","","",,,,,"",,,,"EHDSPatient.name",0,*,"",""
+"EHDSPatient","EHDSPatient.dateOfBirth","EHDSPatient.dateOfBirth","","","",0,1,"","","","dateTime {[]} {[]}
+","Date of birth","The date of birth of the patient [ISO TS 22220]. As age of the patient might be important for correct interpretation of the test result values, complete date of birth should be provided.","","","","","","","","","",,,,,"",,,,"EHDSPatient.dateOfBirth",0,1,"",""
+"EHDSPatient","EHDSPatient.administrativeGender","EHDSPatient.administrativeGender","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Administrative gender","This field must contain a recognized valid value for 'administrative gender'. If different, 'physiological gender' should be communicated elsewhere.","","","","","","","","","",,"preferred","HL7 Administrative Gender","","",,,,"EHDSPatient.administrativeGender",0,1,"",""
+"EHDSPatient","EHDSPatient.address","EHDSPatient.address","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress {[]} {[]}
+","Address","Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose.","","","","","","","","","",,,,,"",,,,"EHDSPatient.address",0,*,"",""
+"EHDSPatient","EHDSPatient.telecom","EHDSPatient.telecom","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom {[]} {[]}
+","Telecom","Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided.","","","","","","","","","",,,,,"",,,,"EHDSPatient.telecom",0,*,"",""
+"EHDSPatient","EHDSPatient.maritalStatus","EHDSPatient.maritalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Marital status","Marital (civil) status of a patient","","","","","","","","","",,"preferred","HL7 marital-status","","",,,,"EHDSPatient.maritalStatus",0,1,"",""
+"EHDSPatient","EHDSPatient.citizenship","EHDSPatient.citizenship","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Citizenship (nationality)","Citizenship/nationality of the patient.","","","","","","","","","",,"preferred","ISO 3166-1 alpha-2","","",,,,"EHDSPatient.citizenship",0,*,"",""
+"EHDSPatient","EHDSPatient.communicationLanguage","EHDSPatient.communicationLanguage","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Communcation language","The language which can be used to communicate with the patient about his or her health.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSPatient.communicationLanguage",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary","EHDSPatientSummary","","","",0,*,"","","","null {[]} {[]}
+","Patient summary model","EHDS refined base model for Patient Summary","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header","EHDSPatientSummary.header","","","",1,*,"","","","Base {[]} {[]}
+","Document header elements","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.subject","EHDSPatientSummary.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.identifier","EHDSPatientSummary.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Document ID","Unique identifier of the document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.authorship","EHDSPatientSummary.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.authorship.author[x]","EHDSPatientSummary.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.authorship.datetime","EHDSPatientSummary.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.lastUpdate","EHDSPatientSummary.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.status","EHDSPatientSummary.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.statusReason[x]","EHDSPatientSummary.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.language","EHDSPatientSummary.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.version","EHDSPatientSummary.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.presentedForm","EHDSPatientSummary.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.documentType","EHDSPatientSummary.header.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document type","Identifies the type of document at hand, e.g. Hospital discharge report.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSDocument.header.documentType",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.documentTitle","EHDSPatientSummary.header.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Document title","Document title, such as Hospital Discharge Report, Laboratory Result Report, etc.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.documentTitle",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.documentStatus","EHDSPatientSummary.header.documentStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document status","The status of the Hospital discharge report. E.g., preliminary, final.","","","","","","","","","",,"preferred","hl7:CompositionStatus","","",,,,"EHDSDocument.header.documentStatus",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.period","EHDSPatientSummary.header.period","","","",0,1,"","","","Period {[]} {[]}
+","Period","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.period",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.attestation","EHDSPatientSummary.header.attestation","","","",0,*,"","","","Base {[]} {[]}
+","Attestation","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.attestation.attester","EHDSPatientSummary.header.attestation.attester","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Attester","Attester who validated the document. Mulitple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.attester",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.attestation.datetime","EHDSPatientSummary.header.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.datetime",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.legalAuthentication","EHDSPatientSummary.header.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","Legal authentication","Document legal authentication","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.legalAuthentication.legalAuthenticator","EHDSPatientSummary.header.legalAuthentication.legalAuthenticator","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Legal authenticator","The person taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.legalAuthenticator",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.legalAuthentication.datetime","EHDSPatientSummary.header.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time when the document was authorized.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.datetime",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.eventType","EHDSPatientSummary.header.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Event type","Categorization of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses.","","","","","","","","","",,"preferred","LOINC, SNOMED CT, dicom-cid-33-Modality","","",,,,"EHDSDocument.header.eventType",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.authorSpecialty","EHDSPatientSummary.header.authorSpecialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Specialty","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocument.header.authorSpecialty",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.custodian","EHDSPatientSummary.header.custodian","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","Document custodian","Organisation that is in charge of maintaining the document/report.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.custodian",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.documentFormat","EHDSPatientSummary.header.documentFormat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Document format","An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","","","","","","","","","",,"preferred","HL7 Document Format Codes","","",,,,"EHDSDocument.header.documentFormat",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.header.confidentiality","EHDSPatientSummary.header.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Confidentiality","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSDocument.header.confidentiality",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.knowledgeResources","EHDSPatientSummary.knowledgeResources","","","",0,*,"","","","Base {[]} {[]}
+","Related documents and information sources","Related documents and information sources","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.knowledgeResources.externalReference","EHDSPatientSummary.knowledgeResources.externalReference","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.externalReference",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.knowledgeResources.relatedTo","EHDSPatientSummary.knowledgeResources.relatedTo","","","",0,*,"","","","Reference {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.relatedTo",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.allergiesAndIntolerances","EHDSPatientSummary.allergiesAndIntolerances","","","",1,1,"","","","Base {[]} {[]}
+","Section: Allergies and intolerances","TO_DO","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.allergiesAndIntolerances",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.allergiesAndIntolerances.narrative","EHDSPatientSummary.allergiesAndIntolerances.narrative","","","",0,1,"","","","string {[]} {[]}
+","Generated text summary of the content in section, for human interpretation","Generated text summary of the content in section, for human interpretation","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.allergiesAndIntolerances.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.allergiesAndIntolerances.emptyReason","EHDSPatientSummary.allergiesAndIntolerances.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Use if no Allergies are listed","Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)","","","","","","","","","",,"","1.3.6.1.4.1.12559.11.10.1.3.1.42.47eHDSIAbsentOrUnknownAllergy; http://hl7.org/fhir/ValueSet/list-empty-reason","","",,,,"EHDSPatientSummary.allergiesAndIntolerances.emptyReason",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.allergiesAndIntolerances.allergyIntolerance","EHDSPatientSummary.allergiesAndIntolerances.allergyIntolerance","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPSAllergyIntolerance {[]} {[]}
+","Allergy or intolerance information","Allergy or intolerance information","","eHN PS Guideline","","","","","","","",,,,,"",,,,"EHDSPatientSummary.allergiesAndIntolerances.allergyIntolerance",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.currentProblems","EHDSPatientSummary.currentProblems","","","",1,1,"","","","Base {[]} {[]}
+","Section: Current medical problems.","Conditions that are important to be known for a health professional during a health encounter.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.currentProblems",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.currentProblems.narrative","EHDSPatientSummary.currentProblems.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.currentProblems.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.currentProblems.emptyReason","EHDSPatientSummary.currentProblems.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reason for absence of data","Reason for absence of data","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.currentProblems.emptyReason",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.currentProblems.healthConditions","EHDSPatientSummary.currentProblems.healthConditions","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}
+","Health conditions affecting the health of the patient.","Health conditions affecting the health of the patient.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.currentProblems.healthConditions",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicationSummary","EHDSPatientSummary.medicationSummary","","","",1,1,"","","","Base {[]} {[]}
+","Section: Medication Summary.","Current and relevant past medicine.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicationSummary.narrative","EHDSPatientSummary.medicationSummary.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicationSummary.emptyReason","EHDSPatientSummary.medicationSummary.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reason for absence of data","Reason for absence of data","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary.emptyReason",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicalDevicesAndImplants","EHDSPatientSummary.medicalDevicesAndImplants","","","",1,1,"","","","Base {[]} {[]}
+","Section: Medical devices and implants","Section: Medical devices and implants","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicalDevicesAndImplants.narrative","EHDSPatientSummary.medicalDevicesAndImplants.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicalDevicesAndImplants.emptyReason","EHDSPatientSummary.medicalDevicesAndImplants.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reason for absence of data","Reason for absence of data","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants.emptyReason",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.procedures","EHDSPatientSummary.procedures","","","",1,1,"","","","Base {[]} {[]}
+","Section: Procedures","Section: Procedures","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.procedures.narrative","EHDSPatientSummary.procedures.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.procedures.emptyReason","EHDSPatientSummary.procedures.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reason for absence of data","Reason for absence of data","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures.emptyReason",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.immunisations","EHDSPatientSummary.immunisations","","","",0,1,"","","","Base {[]} {[]}
+","Section: Immunisations.","The primary purpose is to enable communication of a patient's immunization status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.immunisations",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.immunisations.narrative","EHDSPatientSummary.immunisations.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","eHN PS Guideline","","","","","","","",,,,,"",,,,"EHDSPatientSummary.immunisations.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicalHistory","EHDSPatientSummary.medicalHistory","","","",0,1,"","","","Base {[]} {[]}
+","Section: Medical History.","This section may provide both synthetic anamnesis (e.g. description of phases of the pathology as a chronological summary of clustered clinical information) and anecdotal evidence that clinicians can collect from the patient, and can read in a narrative form.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalHistory",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicalHistory.narrative","EHDSPatientSummary.medicalHistory.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalHistory.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.medicalHistory.pastProblems","EHDSPatientSummary.medicalHistory.pastProblems","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}
+","Problems or diagnoses that the patient suffered in the past, and which have been resolved, closed or declared as inactive (not included in current problems or diagnosis)","Problems or diagnoses that the patient suffered in the past, and which have been resolved, closed or declared as inactive (not included in current problems or diagnosis)","","eHN PS Guideline","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalHistory.pastProblems",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.alerts","EHDSPatientSummary.alerts","","","",1,1,"","","","Base {[]} {[]}
+","Section: Alerts.","Information about substantial alerts or warnings that health professionals should be aware of.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.alerts",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.functionalStatus","EHDSPatientSummary.functionalStatus","","","",0,1,"","","","Base {[]} {[]}
+","Section: Functional status","Section: Functional status","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.functionalStatus",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.socialHistory","EHDSPatientSummary.socialHistory","","","",0,1,"","","","Base {[]} {[]}
+","Section: Social history.","Observations on social factors such as alcohol consumption or smoking. From the healthcare perspective, life-style factors relate to well-being but can also provide a source of risk factors.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.socialHistory",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.socialHistory.narrative","EHDSPatientSummary.socialHistory.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.socialHistory.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.socialHistory.description","EHDSPatientSummary.socialHistory.description","","","",1,1,"","","","string {[]} {[]}
+","Textual description of the social history.","Textual description of the social history.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.socialHistory.description",1,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.pregnancyHistory","EHDSPatientSummary.pregnancyHistory","","","",0,1,"","","","Base {[]} {[]}
+","Section: Pregnancy history","Section: Pregnancy history","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.pregnancyHistory",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.travelHistory","EHDSPatientSummary.travelHistory","","","",0,*,"","","","Base {[]} {[]}
+","captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions.","captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.travelHistory",0,*,"",""
+"EHDSPatientSummary","EHDSPatientSummary.advanceDirectives","EHDSPatientSummary.advanceDirectives","","","",0,1,"","","","Base {[]} {[]}
+","Section: Advance Directives.","Provision for healthcare decisions if, in the future, a person is unable to make those decisions.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.advanceDirectives",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.results","EHDSPatientSummary.results","","","",0,1,"","","","Base {[]} {[]}
+","Section: Observation results.","Relevant observation results obtained on the patient. These may be measurements, laboratory results, anatomic pathology results, radiology results or other imaging or clinical results.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.results",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.results.narrative","EHDSPatientSummary.results.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.results.narrative",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.carePlan","EHDSPatientSummary.carePlan","","","",0,1,"","","","Base {[]} {[]}
+","Section: Care plans.","Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.carePlan",0,1,"",""
+"EHDSPatientSummary","EHDSPatientSummary.carePlan.narrative","EHDSPatientSummary.carePlan.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that this Section could be provided in a structured and coded format.","Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that this Section could be provided in a structured and coded format.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.carePlan.narrative",0,1,"",""
+"EHDSRelatedPerson","EHDSRelatedPerson","EHDSRelatedPerson","","","",0,*,"","","","null {[]} {[]}
+","Related person model","EHDS refined base model for Patient/subject guardian and other related person information","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSRelatedPerson","EHDSRelatedPerson.personalIdentifier","EHDSRelatedPerson.personalIdentifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Personal identifier","An identifier of the related person that is unique within a defined scope. Example: National ID (birth number) for the Czech citizen. Multiple identifiers could be provided. ","","","","","","","","","",,,,,"",,,,"EHDSRelatedPerson.personalIdentifier",0,*,"",""
+"EHDSRelatedPerson","EHDSRelatedPerson.name","EHDSRelatedPerson.name","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName {[]} {[]}
+","Name","Name associated with the person. Name might consists of name parts, e.g. Given name or names, family name/surname, name prefix etc.","","","","","","","","","",,,,,"",,,,"EHDSRelatedPerson.name",0,*,"",""
+"EHDSRelatedPerson","EHDSRelatedPerson.relationship","EHDSRelatedPerson.relationship","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Relationship","Relationship between a patient and a contact person for that patient. This includes relatives, guardians, caring persons etc.","","","","","","","","","",,,,,"",,,,"EHDSRelatedPerson.relationship",0,1,"",""
+"EHDSRelatedPerson","EHDSRelatedPerson.address","EHDSRelatedPerson.address","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress {[]} {[]}
+","Address","Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, Postal code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose.","","","","","","","","","",,,,,"",,,,"EHDSRelatedPerson.address",0,*,"",""
+"EHDSRelatedPerson","EHDSRelatedPerson.telecom","EHDSRelatedPerson.telecom","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom {[]} {[]}
+","Telecom","Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided.","","","","","","","","","",,,,,"",,,,"EHDSRelatedPerson.telecom",0,*,"",""
+"EHDSTelecom","EHDSTelecom","EHDSTelecom","","","",0,*,"","","","null {[]} {[]}
+","Telecom model","C.6 - EHDS refined base model for Telecommunication contact information structure","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"EHDSTelecom","EHDSTelecom.use","EHDSTelecom.use","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Use","Purpose of the address","","","","","","","","","",,"preferred","HL7 ContactPointUse","","",,,,"EHDSTelecom.use",0,1,"",""
+"EHDSTelecom","EHDSTelecom.type","EHDSTelecom.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type of contact point","Telecommunications form for contact point - what communications system is required to make use of the contact.","","","","","","","","","",,"preferred","HL7 ContactPointSystem","","",,,,"EHDSTelecom.type",0,1,"",""
+"EHDSTelecom","EHDSTelecom.value","EHDSTelecom.value","","","",1,1,"","","","string {[]} {[]}
+","C.6.3 - Value","The actual contact point details, in a form that is meaningful to the designated communication type (i.e. phone number or email address).","","","","","","","","","",,,,,"",,,,"EHDSTelecom.value",1,1,"",""
