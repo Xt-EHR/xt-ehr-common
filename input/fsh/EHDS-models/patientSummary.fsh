@@ -46,7 +46,7 @@ Characteristics: #can-be-target
 * medicationSummary 1..1 Base "Section: Medication Summary." """Current and relevant past medicine."""
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data"
-  * medicationTreatment 0..* EHDSMedicationAdministration "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
+  * medicationTreatment 0..* EHDSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
 * functionalStatus 0..1 Base "Section: Functional status"
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
