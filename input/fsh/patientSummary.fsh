@@ -37,6 +37,9 @@ Characteristics: #can-be-target
   * emptyReason 0..1 CodeableConcept "Use if no Allergies are listed" "Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)"
     * ^binding.description = "1.3.6.1.4.1.12559.11.10.1.3.1.42.47eHDSIAbsentOrUnknownAllergy; http://hl7.org/fhir/ValueSet/list-empty-reason"
     * ^binding.strength = #preferred
+    * ^example[+].label = "value"
+    * ^example[=].valueCoding = #no-known-allergies "No known allergies"
+
   * allergyIntolerance 0..* EHDSPSAllergyIntolerance "Allergy or intolerance information"
     * ^requirements = "eHN PS Guideline"
 
