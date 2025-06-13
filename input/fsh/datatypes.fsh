@@ -126,16 +126,16 @@ Description: "Address"
 // MonetaryAmount	MO	A quantity expressing an amount of money in some currency. While the monetary amount is a single kind of quantity (money) the exchange rates between the different units are variable. This is the principle difference between PQ and MO, and the reason why currency units are not physical units.
 // Interval	IVL	A set of consecutive values of an ordered base data type.
 
-Profile: Coded
-Parent: CodeableConcept
-Description: "Coded data element"
-* . ^short = "Coded"
-* . ^definition = "Coded data element should have at least one code from a specified code system present"
-* coding 1..*
+// Profile: Coded
+// Parent: CodeableConcept
+// Description: "Coded data element"
+// * . ^short = "Coded"
+// * . ^definition = "Coded data element should have at least one code from a specified code system present"
+// * coding 1..*
 
 
-Profile: ANY
-Parent: Element
-Description: "An abstract type"
-* . ^short = "Undefined"
-* . ^definition = "An abstract type that defines the basic properties common to all data values defined in this specification. Data Value is an abstract type, meaning that no proper value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type."
+// Profile: ANY
+// Parent: Element
+// Description: "An abstract type"
+// * . ^short = "Undefined"
+// * . ^definition = "An abstract type that defines the basic properties common to all data values defined in this specification. Data Value is an abstract type, meaning that no proper value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type."
