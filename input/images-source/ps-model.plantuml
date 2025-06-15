@@ -1,0 +1,96 @@
+@startuml
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+class "**[[StructureDefinition-EHDSPatientSummary.html EHDSPatientSummary]]**" as EHDSPatientSummary {
+  |_ allergiesAndIntolerances 1..1   
+    |_ generatedNarrative 1..1   
+    |_ emptyReason 0..1   
+    |_ allergyIntolerance 0..*   
+  |_ problems 1..1   
+    |_ generatedNarrative 0..1   
+    |_ emptyReason 0..1   
+    |_ problems 0..*   
+  |_ medicationSummary 1..1   
+    |_ generatedNarrative 0..1   
+    |_ emptyReason 0..1   
+    |_ medicationTreatment 0..*   
+  |_ medicalDevicesAndImplants 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+  |_ procedures 1..1   
+    |_ narrative 0..1   
+    |_ emptyReason 0..1   
+  |_ immunisations 0..1   
+    |_ narrative 0..1   
+  |_ medicalHistory 0..1   
+    |_ narrative 0..1   
+    |_ pastProblems 0..*   
+  |_ alerts 1..1   
+  |_ functionalStatus 0..1   
+  |_ socialHistory 0..1   
+    |_ narrative 0..1   
+    |_ description 1..1   
+  |_ pregnancyHistory 0..1   
+  |_ travelHistory 0..*   
+  |_ advanceDirectives 0..1   
+  |_ results 0..1   
+    |_ narrative 0..1   
+  |_ carePlan 0..1   
+    |_ narrative 0..1   
+}
+
+class "**[[StructureDefinition-EHDSPSAllergyIntolerance.html EHDSPSAllergyIntolerance]]**" as EHDSPSAllergyIntolerance {
+  |_ agentOrAllergen 1..1   
+  |_ typeOfPropensity 0..1   
+  |_ description 0..1   
+  |_ criticality 0..1   
+  |_ certainty 0..1   
+  |_ status 0..1   
+  |_ onsetDate 0..1   
+  |_ endDate 0..1   
+  |_ reaction 0..*   
+    |_ manifestation 0..*   
+    |_ date 0..1   
+    |_ severity 0..1   
+    |_ description 0..1   
+    |_ onsetDate 0..1   
+}
+
+
+class "**[[StructureDefinition-EHDSPSCondition.html EHDSPSCondition]]**" as EHDSPSCondition {
+  |_ problem 1..1   
+  |_ diagnosisAssertionStatus 0..1   
+  |_ onsetDate 0..1   
+  |_ endDate 0..1   
+  |_ resolutionCircumstances 0..1   
+  |_ problemStatus 0..1   
+  |_ severity 0..1   
+  |_ specialistContact 0..*   
+  |_ externalResourceRelatedWith 0..*   
+}
+
+
+
+class "**[[StructureDefinition-EHDSPS.html EHDSPSMedicationStatement]]**" as EHDSPSMedicationStatement {
+  |_ generatedFullDoseInstructions 0..1   
+  |_ status 0..1   
+  |_ medication 1..1   
+  |_ reason 0..*   
+  |_ intendedUse 0..1   
+  |_ doseRegimen 0..1   
+  |_ periodOfUse 0..1   
+}
+
+
+
+'EHDSPSAllergyIntolerance -d[hidden]- EHDSPSCondition
+'EHDSPSCondition -d[hidden]- EHDSPSMedicationStatement
+
+EHDSPatientSummary *-- EHDSPSAllergyIntolerance
+EHDSPatientSummary *-- EHDSPSCondition
+EHDSPatientSummary *-- EHDSPSMedicationStatement
+
+
+@enduml

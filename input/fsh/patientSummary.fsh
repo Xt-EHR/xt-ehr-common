@@ -33,15 +33,19 @@ Characteristics: #can-be-target
 
 
 * allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances" "TO_DO"
-  * narrative 0..1 string "Generated text summary of the content in section, for human interpretation"
+  * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is simply 'Allergy', and that was considered less inclusive compared to the alternative."
+
+  * generatedNarrative 1..1 string "Generated text summary of the content in section, for human interpretation"
+    * ^requirements = "The element is present in FHIR IPS IG. See general description of Patient summary modelling for more information about this element."
+
   * emptyReason 0..1 CodeableConcept "Use if no Allergies are listed" "Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)"
     * ^binding.description = "1.3.6.1.4.1.12559.11.10.1.3.1.42.47eHDSIAbsentOrUnknownAllergy; http://hl7.org/fhir/ValueSet/list-empty-reason"
     * ^binding.strength = #preferred
     * ^example[+].label = "value"
     * ^example[=].valueCoding = #no-known-allergies "No known allergies"
 
-  * allergyIntolerance 0..* EHDSPSAllergyIntolerance "Allergy or intolerance information"
-    * ^requirements = "eHN PS Guideline"
+  * allergyIntolerance 0..* EHDSPSAllergyIntolerance "List of structured allergies and intolerances"
+    * ^requirements = "This element is present in MyHealth@EU specifications and ISO IPS. The proposed way of modelling is identical to the newest version of FHIR IPS IG. See general description of Patient summary modelling for more information about this element. MH@EU has a similar concept, but it is modelled in slightly different way."
 
 
 // * allergiesAndIntolerances
@@ -50,18 +54,23 @@ Characteristics: #can-be-target
 
 
 
-* currentProblems 1..1 Base "Section: Current medical problems." """Conditions that are important to be known for a health professional during a health encounter."""
-  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-  * emptyReason 0..1 CodeableConcept "Reason for absence of data" 
-  * healthConditions 0..* EHDSCondition "Health conditions affecting the health of the patient."
+* problems 1..1 Base "Medical problems." """Conditions that are important to be known for a health professional during a health encounter."""
+  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * emptyReason 0..1 CodeableConcept "Use if no conditions are listed" 
+  * problems 0..* EHDSCondition "!!Health conditions affecting the health of the patient.!!"
 
 
 
 * medicationSummary 1..1 Base "Section: Medication Summary." """Current and relevant past medicine."""
-  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-  * emptyReason 0..1 CodeableConcept "Reason for absence of data"
-//TO_DO: ADD BACK
-//  * medicationTreatment 0..* EHDSMedicationAdministration "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
+  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * emptyReason 0..1 CodeableConcept "Use if no medicines are listed"
+  * medicationTreatment 0..* EHDSPSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
+
+
+
+
+
+
 
 
 * medicalDevicesAndImplants 1..1 Base "Section: Medical devices and implants" 

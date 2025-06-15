@@ -4,7 +4,7 @@ Title: "Human name model"
 Description: """C.27 - EHDS refined base model for Human name"""
 Characteristics: #can-be-target
 
-* use 0..1 CodeableConcept "C.27.1 - Use" """Identifies the purpose for this name."""
+* use 0..1 CodeableConcept "Use???" """Identifies the purpose for this name."""
   * ^binding.description = "hl7:NameUse"
   * ^binding.strength = #preferred
 * text 0..1 string "Written name as is should be displayed" "Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts."
