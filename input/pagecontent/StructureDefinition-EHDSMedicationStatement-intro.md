@@ -1,0 +1,6 @@
+Medication summary is suggested as a mandatory section of Patient Summary. Implementers should as a minimum be able to produce a list of medication. If the producing system have no record of medication to list (e.g. the patient uses no medication, or the system have no medication information), it must provide a reason. This is similar to the other mandatory sections, and in accordance with the specification in ISO IPS and updates to the HL7 FHIR IPS. 
+There are several required elements for each listed medication, as both type of medication, its dose and instructions for use is needed for safe communication. The Patient Summary is however meant as a summery, and it is not necessary to include all the same information elements that are needed for ePrescription and eDispensation. We welcome feedback on needed elements, and potential consequences of omitting or including requirements for certain elements. This is similar to the other mandatory sections, and in accordance with the specification in ISO IPS and updates to the HL7 FHIR IPS. 
+ 
+Receiving systems must be able to handle the data and are encouraged to display the received information to the user but are not obliged to do so. 
+
+The information elements and value sets suggested is taken from eHN GL, MyHealth@EU and HL7 FHIR IPS.  

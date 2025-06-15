@@ -69,27 +69,23 @@ Characteristics: #can-be-target
 
 
 
-
-
-
-
 * medicalDevicesAndImplants 1..1 Base "Section: Medical devices and implants" 
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data" 
 //TO_DO: ADD BACK
-//  * medicalDevice 0..* EHDSDeviceUse "Describes the patient’s implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP."
+  * medicalDevice 0..* EHDSDeviceUse "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP."
 
 
 * procedures 1..1 Base "Section: Procedures"  
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data"
 //TO_DO: ADD BACK
-//  * procedure 0..* EHDSProcedure "Major procedures."
+  * procedure 0..* EHDSProcedure "List of procedures Textual description of the procedure. Describes the type of the procedure, surgical or non-surgical ."
 
-* immunisations 0..1 Base "Section: Immunisations." """The primary purpose is to enable communication of a patient's immunization status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section."""
+* vaccination 0..1 Base "Section: Vaccination/prophylaxis." """A patient's immunization status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section."""
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
 //TO_DO: ADD BACK
-//  * vaccination 0..* EHDSImmunization "Immunizations given to the patient and their status at the point of care."
+  * vaccination 0..* EHDSImmunization "Immunizations given to the patient and their status at the point of care."
     * ^requirements = "eHN PS Guideline"
 
 
@@ -101,7 +97,7 @@ Characteristics: #can-be-target
 //  * description 0..1 string "Narrative description of past problems."
 
 //TO_DO: ADD BACK
-* alerts 1..1 Base "Section: Alerts." "Information about substantial alerts or warnings that health professionals should be aware of."
+* alerts 1..1 EHDSAlert "Section: Alerts." "Information about substantial alerts or warnings that health professionals should be aware of."
 
 
 
