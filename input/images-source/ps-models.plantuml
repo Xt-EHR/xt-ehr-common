@@ -1,0 +1,35 @@
+@startuml
+skinparam linetype ortho
+hide circle
+hide stereotype
+hide method
+
+skinparam class<<app>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+skinparam class<<tec>> {
+ BorderColor #509050
+ BackgroundColor TECHNOLOGY
+ HeaderBackgroundColor LightGreen
+}
+
+
+
+title EHDS Patient Summary Specifications
+
+package "Common Models"  {
+  class "**Patient Summary**\n**Logical Model**" as PS <<app>>
+}
+
+package "Specializations" {
+  class "Cross-Border\nPatient Summary" as XBPS <<app>>
+  class "Member State\nPatient Summary" as MSPS <<app>>
+}
+
+PS <|-- XBPS
+PS <|-- MSPS
+
+@enduml
