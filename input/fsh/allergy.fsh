@@ -10,7 +10,8 @@ Characteristics: #can-be-target
 //  * ^binding.description = "SNOMED CT"
 //  * ^binding.strength = #preferred
 
-* agentOrAllergen 1..1 CodeableConcept "Agent or allergen to which the patient has an adverse reaction propensity" "A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity."
+
+* agentOrAllergen 1..1 CodeableConcept "A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity."
   * ^binding.description = """
 1.3.6.1.4.1.12559.11.10.1.3.1.42.24 **eHDSIActiveIngredient** (ATC, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.61 eHDSISubstance (EMA SMS, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.19 eHDSIAllergenNoDrug (SCT, used in MH@EU); ICD-11 Allergens
 """
@@ -18,7 +19,7 @@ Characteristics: #can-be-target
   * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL."
 
 
-* typeOfPropensity 0..1 CodeableConcept "Whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"
+* typeOfPropensity 0..1 CodeableConcept "This element describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"
   * ^binding.description = """
 1.3.6.1.4.1.12559.11.10.1.3.1.42.18 eHDSIAdverseEventType (SCT, used in MH@EU); http://hl7.org/fhir/ValueSet/allergy-intolerance-type (HL7, required in HL7 FHIR)
 """
@@ -29,7 +30,7 @@ Characteristics: #can-be-target
 * description 0..1 string "Textual description of the allergy or intolerance"
   * ^requirements = "The element is present in eHN PS GL and ISO IPS specifications. Element description is taken from eHN PS GL. The name was shortened to Description, from eHN PS GL 'Allergy description' and ISO IPS 'Allergy/Intolerance description'."
 
-* criticality 0..1 CodeableConcept "Potential risk for future life-threatening adverse reactions when exposed to a substance known to cause an adverse reaction."
+* criticality 0..1 CodeableConcept "Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance."
   * ^binding.description = """
 1.3.6.1.4.1.12559.11.10.1.3.1.42.57 eHDSICriticality (HL7, used in MH@EU); http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality (HL7, required in HL7 FHIR)
 """
@@ -39,12 +40,12 @@ Characteristics: #can-be-target
 
 
 
-* certainty 0..1 CodeableConcept "Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and/or clinical evidence of condition."
+* certainty 0..1 CodeableConcept "Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and /or clinical evidence of condition"
   * ^binding.description = """
 1.3.6.1.4.1.12559.11.10.1.3.1.42.58 eHDSIAllergyCertainty (HL7, used in MH@EU) ; http://hl7.org/fhir/ValueSet/allergyintolerance-verification (HL7, required in HL7 FHIR)
 """
   * ^binding.strength = #preferred
-  * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL."
+  * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL"
 
 
 * status 0..1 CodeableConcept "Current status of the allergy or intolerance, for example, whether it is active, in remission, resolved, etc."
@@ -54,8 +55,9 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
   * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL."
 
-* onsetDate 0..1 dateTime "!!!When allergy or intolerance was identified!!!" "Date of onset of allergy, e.g., date of the first observation of the reaction. Partial date could be used."
-  * ^requirements = "eHN PS Guideline, ISO IPS"
+* onsetDate 0..1 dateTime "When allergy or intolerance was identified"
+// this is not accurate. When allergy was identified? or when it started?
+  * ^requirements = "The element is present in (MyHealth@EU specifications ?) and ISO IPS. Element name is taken from ISO IPS and description is taken from FHIR IPS IG"
 
 
 // * onsetLifePeriod 0..1 CodeableConcept "Onset life period (childhood, adolescence, etc.)."
@@ -71,14 +73,15 @@ Characteristics: #can-be-target
 
 
 
-* reaction 0..* Base "Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction)."
+* reaction 0..* Base "Adverse Reaction Events linked to exposure to substance.."
+//TO_DO: Was beter: "Description of the clinical manifestation of the allergic reaction including date of manifestation and severity. Example: anaphylactic shock, angioedema (the clinical manifestation also gives information about the severity of the observed reaction)."
   * ^requirements = "ISO IPS (explicit), implicitly in eHN PS Guideline, MH@EU"
-  * manifestation 0..* CodeableConcept "Clinical manifestation of the allergic reaction." "Description of the clinical manifestation of the allergic reaction. Example: anaphylactic shock, angioedema. (the clinical manifestation also gives information about the severity of the observed reaction)."
+  * manifestation 0..* CodeableConcept "Description of the clinical manifestation of the allergic reaction. Example: anaphylactic shock, angioedema. (the clinical manifestation also gives information about the severity of the observed reaction)."
     * ^binding.description = """
-1.3.6.1.4.1.12559.11.10.1.3.1.42.5 eHDSIIllnessandDisorder (ICD-10, alternative in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.11 eHDSIReactionAllergy (SCT, alternative in MH@EU); ICD-11
+1.3.6.1.4.1.12559.11.10.1.3.1.42.5 eHDSIIllnessandDisorder (ICD-10, alternative in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.11 eHDSIReactionAllergy (SCT, alternative in MH@EU); ICD-11 MMS
 """
     * ^binding.strength = #preferred
-    * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL. Cardinality in MyHealth@EU for this element is one manifestation per severity and onset, while the cardinality in"
+    * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL. Cardinality in MyHealth@EU for this element, used here, is one manifestation per severity and onset, while the cardinality in FHIR IPS IG allows multiple manifestations per severity and onset."
 
   * date 0..1 dateTime "Date and time of allergy manifestation"
   * severity 0..1 CodeableConcept "Severity of the clinical manifestation of the allergic reaction."
@@ -87,9 +90,11 @@ Characteristics: #can-be-target
 """
     * ^binding.strength = #preferred
     * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL."
-  * description 0..1 string "????Description of the event as a whole???"
+
+//  * description 0..1 string "????Description of the event as a whole???"
+
 
   * onsetDate 0..1 dateTime "Date of the observation of the reaction"
-    * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL."
+    * ^requirements = "The element is present in eHN PS GL. Element name and description is taken from eHN PS GL."
 
 
