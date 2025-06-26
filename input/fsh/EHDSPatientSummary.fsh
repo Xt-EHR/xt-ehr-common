@@ -89,10 +89,12 @@ Characteristics: #can-be-target
     * ^requirements = "eHN PS Guideline"
 
 
-* medicalHistory 0..1 Base "Section: Medical History." """This section may provide both synthetic anamnesis (e.g. description of phases of the pathology as a chronological summary of clustered clinical information) and anecdotal evidence that clinicians can collect from the patient, and can read in a narrative form."""
-  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-  * pastProblems 0..* EHDSCondition "Problems or diagnoses that the patient suffered in the past, and which have been resolved, closed or declared as inactive (not included in current problems or diagnosis)"
-    * ^requirements = "eHN PS Guideline"
+// Removed per #219
+// * medicalHistory 0..1 Base "Section: Medical History." """This section may provide both synthetic anamnesis (e.g. description of phases of the pathology as a chronological summary of clustered clinical information) and anecdotal evidence that clinicians can collect from the patient, and can read in a narrative form."""
+//   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+//   * pastProblems 0..* EHDSCondition "Problems or diagnoses that the patient suffered in the past, and which have been resolved, closed or declared as inactive (not included in current problems or diagnosis)"
+//     * ^requirements = "eHN PS Guideline"
+
 // Why description and narrative?
 //  * description 0..1 string "Narrative description of past problems."
 
