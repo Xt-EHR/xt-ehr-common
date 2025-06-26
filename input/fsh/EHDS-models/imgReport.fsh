@@ -69,6 +69,6 @@ Characteristics: #can-be-target
     * description 1..1 string "Narrative description of the recommended activities including additional test, medication etc."
     * carePlan 0..* EHDSCarePlan "A complex and structured information about recommended goals, activities and objectives in the form of one or more formal care plan."
   * comparisonStudy 0..* EHDSImagingReport "Documentation (reference) of a prior Imaging Report to which the current images were compared."
-
+* knowledgeResources 0..0
 * dicomStudyMetadata 0..* EHDSImagingStudy "Metadata of the DICOM study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context. A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities."
 * attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"
