@@ -64,7 +64,7 @@ Characteristics: #can-be-target
 * medicationSummary 1..1 Base "Section: Medication Summary." """Current and relevant past medicine."""
   * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
   * emptyReason 0..1 CodeableConcept "Use if no medicines are listed"
-  * medicationTreatment 0..* EHDSPSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
+  * medicationTreatment 0..* EHDSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
 
 
 
