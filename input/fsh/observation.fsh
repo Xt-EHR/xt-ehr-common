@@ -40,11 +40,6 @@ Characteristics: #can-be-target
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
 
-
-* observationMethod 0..1 CodeableConcept "C.10.5 - Observation method" """Observation method (measurement principle) to obtain the result."""
-  * ^binding.description = "SNOMED CT"
-  * ^binding.strength = #preferred
-
 * component 0..* Base "Component" """Some observations have multiple component observations. These component observations are expressed as separate code value pairs that share the same attributes."""
   * code 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * result 1..1 contentReference #EHDSObservation.observationResult "Observation result" """Result of the observation including text, quantity, coded and boolean results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
