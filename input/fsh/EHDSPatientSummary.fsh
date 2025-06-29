@@ -134,11 +134,9 @@ Characteristics: #can-be-target
 //       * outcome 0..1 EHDSObservation "Outcome of the pregnancy"
 //       * numberOfChildren 0..1 integer "Number of children/fetuses in this specific pregnancy"
 
-* travelHistory 0..* Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
-  * country 0..1 CodeableConcept "Country visited"
-    * ^binding.description = "ISO 3166"
-    * ^binding.strength = #preferred
-  * period 0..* Period "Date of entry and departure" "The period during which the patient visited the country"
+* travelHistory 0..1 Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
+  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+  * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
 
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
