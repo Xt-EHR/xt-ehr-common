@@ -117,7 +117,11 @@ Characteristics: #can-be-target
 //TO_DO: ADD BACK
 //  * observation 0..* EHDSObservation "Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
 //    * referenceDateRange 0..* Period "Reference date range" """Example: from 1974 to 2004"""
-* pregnancyHistory 0..1 Base "Section: Pregnancy history"
+
+* pregnancyHistory 0..1 Base "Section: Pregnancy history" """To present the current health state of the patient with respect to pregnancy and to provide chronological and outcome information about past pregnancies. """
+  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * currentPregnancyStatus 0..1 EHDSCurrentPregnancy "Current pregnancy status" """Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, unknown."""
+  * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
 
 //TO_DO: ADD BACK
 //   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
@@ -161,7 +165,6 @@ Characteristics: #can-be-target
 //TO_DO: WHY?
 // * patientProvidedData 0..1 Base "Section: Patient provided data"
 //   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-
 
 /*
 Need models: 
