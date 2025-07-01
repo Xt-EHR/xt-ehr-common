@@ -135,8 +135,10 @@ Characteristics: #can-be-target
 //       * numberOfChildren 0..1 integer "Number of children/fetuses in this specific pregnancy"
 
 * travelHistory 0..1 Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
+  * ^requirements = "eHN PS Guideline, ISO IPS"
   * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
   * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
+    * ^requirements = "eHN PS Guideline, ISO IPS"
 
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
