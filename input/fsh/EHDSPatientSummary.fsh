@@ -103,8 +103,10 @@ Characteristics: #can-be-target
 
 
 * functionalStatus 0..1 Base "Section: Functional status"
+  * ^requirements = "eHN PS Guideline, ISO IPS"
   * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
   * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual's ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
+  
 
 * socialHistory 0..1 Base "Section: Social history." """Observations on social factors such as alcohol consumption or smoking. From the healthcare perspective, life-style factors relate to well-being but can also provide a source of risk factors."""
 
