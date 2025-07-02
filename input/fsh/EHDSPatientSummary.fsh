@@ -134,12 +134,11 @@ Characteristics: #can-be-target
 //       * outcome 0..1 EHDSObservation "Outcome of the pregnancy"
 //       * numberOfChildren 0..1 integer "Number of children/fetuses in this specific pregnancy"
 
-* travelHistory 0..* Base "captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
-//TO_DO: ADD BACK
-    // * country 0..1 CodeableConcept "Country code"
-    //   * ^binding.description = "ISO 3166"
-    //   * ^binding.strength = #preferred
-    // * period 0..* Period "Date of entry and departure"
+* travelHistory 0..1 Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
+  * ^requirements = "eHN PS Guideline, ISO IPS"
+  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
+    * ^requirements = "eHN PS Guideline, ISO IPS"
 
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
@@ -151,8 +150,9 @@ Characteristics: #can-be-target
 
 * results 0..1 Base "Section: Observation results." """Relevant observation results obtained on the patient. These may be measurements, laboratory results, anatomic pathology results, radiology results or other imaging or clinical results."""
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-//TO_DO: ADD BACK
-//  * resultObservation[x] 0..* EHDSObservation or EHDSLaboratoryObservation "Observation results pertaining to the subject of care's health condition and which might have impact on future treatments"
+ // * resultObservation[x] 0..* EHDSObservation or EHDSLaboratoryObservation "Observation results pertaining to the subject of care's health condition and which might have impact on future treatments"
+
+
 * carePlan 0..1 Base "Section: Care plans." """Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries"""
   * narrative 0..1 string "Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that this Section could be provided in a structured and coded format."
 //TO_DO: ADD BACK
