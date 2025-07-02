@@ -127,6 +127,7 @@ Characteristics: #can-be-target
 — Yes, previous pregnancies 
 — No, previous pregnancies 
 — Unknown"""
+    * ^requirements = "eHN PS Guideline, ISO IPS"
   * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
   * ^requirements = "eHN PS Guideline, ISO IPS"
 
