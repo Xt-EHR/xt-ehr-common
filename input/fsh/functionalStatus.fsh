@@ -19,7 +19,7 @@ Characteristics: #can-be-target
   * ^requirements = "MyHealth@EU, eHN PS Guideline, ISO IPS"
 * functionalAssessmentDate 0..1 dateTime "Date of the functional assessment"
   * ^requirements = "eHN PS Guideline, ISO IPS"
-* functionalAssessmentResult[x] 0..1 CodeableConcept or string or Quantity "Functional assessment result value"
+* functionalAssessmentResult[x] 0..* CodeableConcept or string or Quantity "Functional assessment result value"
   * ^binding.description = """ICF, SNOMED CT"""
   * ^binding.strength = #preferred
   * ^requirements = "eHN PS Guideline, ISO IPS"
