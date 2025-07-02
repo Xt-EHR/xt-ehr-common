@@ -1,5 +1,6 @@
 Logical: EHDSFunctionalStatus
 //Id: EHDSfunctionalStatus
+Parent: EHDSDataSet
 Title: "Functional status"
 Description: """EHDS refined base model for Functional status"""
 Characteristics: #can-be-target
