@@ -123,6 +123,10 @@ Characteristics: #can-be-target
   * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
   * currentPregnancyStatus 0..1 EHDSCurrentPregnancy "Current pregnancy status" """Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, unknown."""
     * ^requirements = "eHN PS Guideline, ISO IPS"
+  * previousPregnanciesStatus 0..1 CodeableConcept "Overall status of previous pregnancies" """Overall status of previous pregnancies, including 
+— Yes, previous pregnancies 
+— No, previous pregnancies 
+— Unknown"""
   * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
   * ^requirements = "eHN PS Guideline, ISO IPS"
 
