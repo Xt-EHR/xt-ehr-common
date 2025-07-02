@@ -4,3 +4,11 @@ There are several required elements for each listed medication, as both type of 
 Receiving systems must be able to handle the data and are encouraged to display the received information to the user but are not obliged to do so. 
 
 The information elements and value sets suggested is taken from eHN GL, MyHealth@EU and HL7 FHIR IPS.  
+
+<div class="stakeholder-note">
+
+Feedback is welcome on any aspect of the content.<br>However, the following topics have been identified as areas where input would be particularly valuable:
+
+* **intendedUseType** - used as a category of purpose of use, or simply to signal whether a medication is used for therapeutic, diagnosis, prophylaxis, etc.
+
+</div>
