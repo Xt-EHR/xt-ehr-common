@@ -14,6 +14,9 @@ Characteristics: #can-be-target
 * anatomicLocation 0..* CodeableConcept "C.16.6 - Anatomic location" """Anatomic location and laterality where the procedure was performed. This is the target site."""
   * ^binding.description = "SNOMED CT, ICD-O-3"
   * ^binding.strength = #preferred
+* reasonCode 0..* CodeableConcept "C.16.7 - Reason code" """The coded reason why the procedure was performed. This may be a coded diagnosis, or a coded finding."""
+  * ^binding.description = "SNOMED CT, ICD-10*, Orphacode if rare disease is diagnosed"
+  * ^binding.strength = #preferred
 * reason 0..* Reference(EHDSCondition or EHDSObservation or EHDSProcedure) "C.16.7 - Reason" """The reason why the procedure was performed."""
 * outcome 0..1 CodeableConcept "C.16.8 - Outcome" """The outcome of the procedure - did it resolve the reasons for the procedure being performed?"""
   * ^binding.description = "SNOMED CT"
@@ -23,6 +26,5 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * deviceUsed 0..* EHDSDevice "C.16.10 - Device used" """Device used to perform the procedure"""
 * focalDevice 0..* Reference(EHDSDevice) "C.16.11 - Focal device" """Device or devices that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure."""
-* location 0..* EHDSLocation "C.16.12 - Location" """Location where the procedure had been performed"""
-* note 0..1 string "C.16.13 - Note" """Additional information about the procedure"""
-* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSGroup) "C.16.14 - Patient" """On whom or on what the procedure was performed. This is usually an individual human, but can also be performed on animals, groups of humans or animals, organizations or practitioners (for licensing), locations or devices (for safety inspections or regulatory authorizations). If the actual focus of the procedure is different from the subject, the focus element specifies the actual focus of the procedure."""
+* note 0..1 string "C.16.12 - Note" """Additional information about the procedure"""
+* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSGroup) "C.16.13 - Patient" """On whom or on what the procedure was performed. This is usually an individual human, but can also be performed on animals, groups of humans or animals, organizations or practitioners (for licensing), locations or devices (for safety inspections or regulatory authorizations). If the actual focus of the procedure is different from the subject, the focus element specifies the actual focus of the procedure."""
