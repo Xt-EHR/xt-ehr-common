@@ -35,7 +35,7 @@ Characteristics: #can-be-target
 * allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances" "TO_DO"
   * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is merely 'Allergy', and that was considered less inclusive compared to the alternative."
 
-  * generatedNarrative 1..1 string "Generated text summary of the content in section, for human interpretation"
+  * narrative 1..1 string "Text summary of the content in section"
     * ^requirements = "The element is present in FHIR IPS IG. See general description of Patient summary modelling for more information about this element."
 
   * allergyIntolerance 0..* EHDSPSAllergyIntolerance "List of structured allergies and intolerances"
@@ -55,14 +55,14 @@ Characteristics: #can-be-target
 
 
 * problems 1..1 Base "Medical problems." """Conditions that are important to be known for a health professional during a health encounter."""
-  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * narrative 0..1 string "Text summary of the content in the section"
   * emptyReason 0..1 CodeableConcept "Use if no conditions are listed" 
   * problems 0..* EHDSCondition "!!Health conditions affecting the health of the patient.!!"
 
 
 
 * medicationSummary 1..1 Base "Section: Medication Summary." """Current and relevant past medicine."""
-  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * narrative 0..1 string "Text summary of the content in the section"
   * emptyReason 0..1 CodeableConcept "Use if no medicines are listed"
   * medicationTreatment 0..* EHDSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
 
@@ -136,7 +136,7 @@ Characteristics: #can-be-target
 
 * travelHistory 0..1 Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
   * ^requirements = "eHN PS Guideline, ISO IPS"
-  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * narrative 0..1 string "Text summary of the content in the section"
   * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
     * ^requirements = "eHN PS Guideline, ISO IPS"
 
