@@ -11,3 +11,4 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * address 0..* EHDSAddress "C.13.4 - Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
 * telecom 0..* EHDSTelecom "C.13.5 - Telecom" """Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided."""
+* patient 1..1 Reference (EHDSPatient) "C.13.6 - Patient" """The patient this person is related to"""
