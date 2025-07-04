@@ -8,9 +8,9 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * narrative 0..1 string "Textual description of the directive"
-  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
+  * ^requirements = "eHN PS and HDR Guidelines, MyHealth@EU, ISO IPS"
 * effectivePeriod 0..1 Period "Time period during which the directive is effective"
-  * ^requirements = "eHN PS Guideline, ISO IPS"
+  * ^requirements = "eHN HDR Guideline, ISO IPS"
 * authorizingEntity[x] 0..1 Patient or Practitioner or RelatedPerson or Organization "Person or organization that authorizes the directive"
   * ^requirements = "ISO IPS"
 * relatedConditions[x] 0..1 CodeableConcept "The problem or disorder to which the living will applies. Multiple fields could be provided."
@@ -18,4 +18,4 @@ Characteristics: #can-be-target
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
 * advanceDirectiveDocument 0..1 EHDSAttachment "Scanned source document with the living will and the patient's signature, such as a PDF."
-  * ^requirements = "eHN PS Guideline, ISO IPS"
+  * ^requirements = "eHN HDR Guideline, ISO IPS"
