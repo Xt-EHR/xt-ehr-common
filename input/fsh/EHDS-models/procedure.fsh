@@ -11,9 +11,9 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * date[x] 0..1 dateTime or Period "Date and time of the procedure or interval of its performance"
-* performer 0..* EHDSHealthProfessional "An actor who performed the procedure"
+* performer 0..* Reference(EHDSHealthProfessional) "An actor who performed the procedure"
 * bodySite 0..* EHDSBodyStructure "Anatomic location and laterality where the procedure was performed. This is the target site."
-* reasonCode 0..* CodeableConcept "C.16.7 - Reason code" """The coded reason why the procedure was performed. This may be a coded diagnosis, or a coded finding."""
+* reasonCode 0..* CodeableConcept "Reason code" """The coded reason why the procedure was performed. This may be a coded diagnosis, or a coded finding."""
   * ^binding.description = "SNOMED CT, ICD-10*, Orphacode if rare disease is diagnosed"
   * ^binding.strength = #preferred
 * reason[x] 0..* Reference(EHDSCondition or EHDSObservation or EHDSProcedure) "The reason why the procedure was performed."
@@ -24,5 +24,5 @@ Characteristics: #can-be-target
   * ^binding.description = "ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed"
   * ^binding.strength = #preferred
 * deviceUsed 0..* EHDSDevice "Device used to perform the procedure"
-* focalDevice 0..* EHDSDevice "Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure."
+* focalDevice 0..* Reference(EHDSDevice) "Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure."
 * note 0..1 string "Additional information about the procedure"
