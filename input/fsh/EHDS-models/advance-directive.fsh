@@ -7,6 +7,22 @@ Characteristics: #can-be-target
   * ^requirements = "ISO IPS"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
+  * ^comment = """Examples:
+Intubation,
+Tube Feedings,
+Life Support,
+Cardiopulmonary resuscitation,
+Antibiotics,
+Resuscitation,
+Artificial respiration,
+Administration of medication,
+Transfusion,
+Transfer of care to hospital,
+Dialysis procedure,
+Negatived eclaration,
+Organ donation,
+Body donation,
+Intravenous infusion"""
 * narrative 0..1 string "Textual description of the directive"
   * ^requirements = "eHN PS and HDR Guidelines, MyHealth@EU, ISO IPS"
 * effectivePeriod 0..1 Period "Time period during which the directive is effective"
