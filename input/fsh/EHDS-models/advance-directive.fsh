@@ -19,7 +19,7 @@ Administration of medication,
 Transfusion,
 Transfer of care to hospital,
 Dialysis procedure,
-Negatived eclaration,
+Negative declaration,
 Organ donation,
 Body donation,
 Intravenous infusion"""
