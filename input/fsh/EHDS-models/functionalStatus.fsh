@@ -19,7 +19,7 @@ Characteristics: #can-be-target
   * onsetDate 0..1 dateTime "Onset date of a condition"
     * ^requirements = "eHN HDR Guideline, ISO IPS"
 * functionalStatusAssessment 0..* Base "Functional assessment of the patient" """Functional status assessment of the patient according to a specific assessment scheme."""
-  * ^requirements = ""
+  * ^requirements = "eHN HDR Guideline, ISO IPS"
   * functionalAssessmentDescription 0..1 string "Description of the functional assessment"
     * ^requirements = "eHN HDR Guideline, ISO IPS"
   * functionalAssessmentCode 0..1 CodeableConcept "Standardized code corresponding to the Functional assessment"
