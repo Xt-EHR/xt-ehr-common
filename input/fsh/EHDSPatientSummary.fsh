@@ -133,19 +133,6 @@ Characteristics: #can-be-target
   * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
   * ^requirements = "eHN PS Guideline, ISO IPS"
 
-//TO_DO: ADD BACK
-//   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-//   * currentPregnancyStatus 0..1 Base "Current pregnancy status"
-// //    * dateOfObservation 0..* dateTime "Date of observation" """Date on which the observation of the pregnancy state was made"""
-//     * status 0..* EHDSObservation "Current state at the date the observation was made: e.g. pregnant, not pregnant, unknown"
-//     * expectedDateOfDelivery 0..1 dateTime "Expected date of delivery" """Date on which the woman is due to give birth."""
-//   * previousPregnancies 0..1 Base "History of previous pregnancies"
-//     * status 0..1 EHDSObservation "Previous pregnancies status: Yes, previous pregnancies; No, previous pregnancies; Unknown"
-//     * description 0..* Base "Previous pregnancy's descriptions in detail"
-// //      * outcomeDate 0..1 dateTime "B.1.6.2.2.1 - Outcome date" """Date referred to the previous pregnancies outcome"""
-//       * outcome 0..1 EHDSObservation "Outcome of the pregnancy"
-//       * numberOfChildren 0..1 integer "Number of children/fetuses in this specific pregnancy"
-
 * travelHistory 0..1 Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
   * ^requirements = "eHN PS Guideline, ISO IPS"
   * narrative 0..1 string "Text summary of the content in the section"
@@ -154,11 +141,11 @@ Characteristics: #can-be-target
 
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
-// //TO_DO: ADD BACK
-//   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-//   * documentation 0..* CodeableConcept "May take the form of a reference to a legal document (e.g., Living Will) or an external textual description."
-//     * ^binding.description = "SNOMED CT"
-//     * ^binding.strength = #preferred
+  * ^requirements = "eHN PS Guideline, ISO IPS"
+  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+  * emptyReason 0..1 CodeableConcept "Reason for absence of data"
+  * advanceDirective 0..* EHDSAdvanceDirective "Healthcare directives concerning life or after life wishes of the patient" """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
+
 
 * results 0..1 Base "Section: Observation results." """Relevant observation results obtained on the patient. These may be measurements, laboratory results, anatomic pathology results, radiology results or other imaging or clinical results."""
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
