@@ -105,20 +105,17 @@ Characteristics: #can-be-target
 
 
 * functionalStatus 0..1 Base "Section: Functional status"
-//TO_DO: ADD BACK?
-//  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-//TO_DO: ADD BACK
-//  * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
+  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+  * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
 
 * socialHistory 0..1 Base "Section: Social history." """Observations on social factors such as alcohol consumption or smoking. From the healthcare perspective, life-style factors relate to well-being but can also provide a source of risk factors."""
 
-//TO_DO: ADD BACK
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-//TO_DO: Why narrative and text?
+
+  // add below to separate model
   * description 1..1 string "Textual description of the social history."
-//TO_DO: ADD BACK
-//  * observation 0..* EHDSObservation "Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
-//    * referenceDateRange 0..* Period "Reference date range" """Example: from 1974 to 2004"""
+  * observation 0..* EHDSObservation "Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
+  * referenceDateRange 0..* Period "Reference date range" """Example: from 1974 to 2004"""
 
 * pregnancyHistory 0..1 Base "Section: Pregnancy history" """To present the current health state of the patient with respect to pregnancy and to provide chronological and outcome information about past pregnancies. """
   * ^requirements = "eHN PS Guideline, ISO IPS"
@@ -157,8 +154,9 @@ Characteristics: #can-be-target
   * narrative 0..1 string "Text summary of the content in the section"
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
-// //TO_DO: ADD BACK
-//   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+  * advanceDirective 0..* EHDSAdvanceDirective "Provision for healthcare decisions if, in the future, a person is unable to make those decisions"
+
 //   * documentation 0..* CodeableConcept "May take the form of a reference to a legal document (e.g., Living Will) or an external textual description."
 //     * ^binding.description = "SNOMED CT"
 //     * ^binding.strength = #preferred
@@ -170,8 +168,7 @@ Characteristics: #can-be-target
 
 * carePlan 0..1 Base "Section: Care plans." """Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries"""
   * narrative 0..1 string "Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that this Section could be provided in a structured and coded format."
-//TO_DO: ADD BACK
-//  * carePlanEntry 0..* EHDSCarePlan "Describes the intention of how one or more practitioners intend to deliver care for a particular patient for a period of time, possibly limited to care for a specific condition or set of conditions."
+  * carePlanEntry 0..* EHDSCarePlan "Describes the intention of how one or more practitioners intend to deliver care for a particular patient for a period of time, possibly limited to care for a specific condition or set of conditions."
 
 
 
