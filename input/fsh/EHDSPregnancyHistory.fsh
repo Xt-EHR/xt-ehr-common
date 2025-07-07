@@ -1,4 +1,6 @@
 Logical: EHDSPregnancyHistory
+Parent: EHDSDataSet
+
 // Id: EHDSPregnancyHistory
 Title: "Pregnancy history model"
 Description: "Pregnancy history"
