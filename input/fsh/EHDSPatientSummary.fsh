@@ -14,7 +14,7 @@ Characteristics: #can-be-target
 // We don't have anything to say about these elements - which is not the same as "we don't want anyone to exchange them, so we exclude them from the model".
 
 // This element is not present and the code is conflicting with the eHN guidelines
-//* preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganization "A.1.3 - Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
+//* preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganisation "Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
 
 
 
@@ -68,20 +68,18 @@ Characteristics: #can-be-target
 * medicalDevicesAndImplants 1..1 Base "Section: Medical devices and implants" 
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data" 
-//TO_DO: ADD BACK
   * medicalDevice 0..* EHDSDeviceUse "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP."
 
 
 * procedures 1..1 Base "Section: Procedures"  
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data"
-//TO_DO: ADD BACK
-  * procedure 0..* EHDSProcedure "List of procedures Textual description of the procedure. Describes the type of the procedure, surgical or non-surgical ."
+  * procedure 0..* EHDSProcedure "List of procedures" 
 
-* vaccination 0..1 Base "Section: Vaccination/prophylaxis." """A patient's immunization status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section."""
+* vaccination 0..1 Base "Section: Vaccination/prophylaxis." """A patient's immunisation status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarised. Adverse reactions against vaccines should be documented in the allergy section."""
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
 //TO_DO: ADD BACK
-  * vaccination 0..* EHDSImmunization "Immunizations given to the patient and their status at the point of care."
+  * vaccination 0..* EHDSImmunisation "Immunisations given to the patient and their status at the point of care."
     * ^requirements = "eHN PS Guideline"
 
 
