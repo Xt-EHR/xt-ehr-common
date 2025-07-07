@@ -35,7 +35,7 @@ Characteristics: #can-be-target
 * allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances" "TO_DO"
   * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is merely 'Allergy', and that was considered less inclusive compared to the alternative."
 
-  * generatedNarrative 1..1 string "Generated text summary of the content in section, for human interpretation"
+  * narrative 1..1 string "Text summary of the content in section"
     * ^requirements = "The element is present in FHIR IPS IG. See general description of Patient summary modelling for more information about this element."
 
   * allergyIntolerance 0..* EHDSPSAllergyIntolerance "List of structured allergies and intolerances"
@@ -55,14 +55,14 @@ Characteristics: #can-be-target
 
 
 * problems 1..1 Base "Medical problems." """Conditions that are important to be known for a health professional during a health encounter."""
-  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * narrative 0..1 string "Text summary of the content in the section"
   * emptyReason 0..1 CodeableConcept "Use if no conditions are listed" 
   * problems 0..* EHDSCondition "!!Health conditions affecting the health of the patient.!!"
 
 
 
 * medicationSummary 1..1 Base "Section: Medication Summary." """Current and relevant past medicine."""
-  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * narrative 0..1 string "Text summary of the content in the section"
   * emptyReason 0..1 CodeableConcept "Use if no medicines are listed"
   * medicationTreatment 0..* EHDSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
 
@@ -119,7 +119,19 @@ Characteristics: #can-be-target
 //TO_DO: ADD BACK
 //  * observation 0..* EHDSObservation "Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
 //    * referenceDateRange 0..* Period "Reference date range" """Example: from 1974 to 2004"""
-* pregnancyHistory 0..1 Base "Section: Pregnancy history"
+
+* pregnancyHistory 0..1 Base "Section: Pregnancy history" """To present the current health state of the patient with respect to pregnancy and to provide chronological and outcome information about past pregnancies. """
+  * ^requirements = "eHN PS Guideline, ISO IPS"
+  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * currentPregnancyStatus 0..1 EHDSCurrentPregnancy "Current pregnancy status" """Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, unknown."""
+    * ^requirements = "eHN PS Guideline, ISO IPS"
+  * previousPregnanciesStatus 0..1 CodeableConcept "Overall status of previous pregnancies" """Overall status of previous pregnancies, including 
+— Yes, previous pregnancies 
+— No, previous pregnancies 
+— Unknown"""
+    * ^requirements = "eHN PS Guideline, ISO IPS"
+  * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
+  * ^requirements = "eHN PS Guideline, ISO IPS"
 
 //TO_DO: ADD BACK
 //   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
@@ -136,10 +148,13 @@ Characteristics: #can-be-target
 
 * travelHistory 0..1 Base "Relevant information about the patient's recent travel history" "Captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions."
   * ^requirements = "eHN PS Guideline, ISO IPS"
-  * generatedNarrative 0..1 string "Generated text summary of the content in the section, for human interpretation"
+  * narrative 0..1 string "Text summary of the content in the section"
   * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
     * ^requirements = "eHN PS Guideline, ISO IPS"
 
+* patientStory 0..1 Base "What the patient believes to be important for the attending clinician to know." """A concise narrative from the patient’s perspective about their present health state. This is a record of the things that a person feels it is important to communicate about their needs, strengths, values, concerns and preferences to others providing support and care."""
+  * ^requirements = "ISO IPS"
+  * narrative 0..1 string "Text summary of the content in the section"
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
 // //TO_DO: ADD BACK
@@ -163,7 +178,6 @@ Characteristics: #can-be-target
 //TO_DO: WHY?
 // * patientProvidedData 0..1 Base "Section: Patient provided data"
 //   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-
 
 /*
 Need models: 

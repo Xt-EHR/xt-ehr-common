@@ -1,4 +1,5 @@
 Logical: EHDSCarePlan
+Parent: EHDSDataSet
 //Id: EHDScarePlan
 Title: "Care plan model"
 Description: "EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans."
