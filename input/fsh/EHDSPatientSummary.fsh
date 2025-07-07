@@ -152,6 +152,9 @@ Characteristics: #can-be-target
   * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
     * ^requirements = "eHN PS Guideline, ISO IPS"
 
+* patientStory 0..1 Base "What the patient believes to be important for the attending clinician to know." """A concise narrative from the patient’s perspective about their present health state. This is a record of the things that a person feels it is important to communicate about their needs, strengths, values, concerns and preferences to others providing support and care."""
+  * ^requirements = "ISO IPS"
+  * narrative 0..1 string "Text summary of the content in the section"
 
 * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""
 // //TO_DO: ADD BACK
