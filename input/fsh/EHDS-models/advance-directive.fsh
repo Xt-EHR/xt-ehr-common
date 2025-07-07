@@ -29,7 +29,7 @@ Intravenous infusion"""
   * ^requirements = "eHN HDR Guideline, ISO IPS"
 * authorizingEntity[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson or EHDSOrganization "Person or organisation that authorizes the directive"
   * ^requirements = "ISO IPS"
-* relatedConditions[x] 0..1 CodeableConcept "The problem or disorder to which the living will applies. Multiple fields could be provided."
+* relatedConditions[x] 0..* CodeableConcept "The problem or disorder to which the living will applies. Multiple fields could be provided."
   * ^requirements = "ISO IPS"
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
