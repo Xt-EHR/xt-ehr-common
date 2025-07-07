@@ -37,7 +37,7 @@ Characteristics: #can-be-target
   * ^requirements = ""Logical: EHDSFunctionalStatus
 //Id: EHDSfunctionalStatus
 Title: "Functional status model"
-Description: """C.35 - EHDS refined base model for Functional status. Functional status is a based on EHDSClinicalImpression and uses a specialized Observation profile to support WHODAS 2.0 assessment categories."""
+Description: """EHDS refined base model for Functional status. Functional status is a based on EHDSClinicalImpression and uses a specialized Observation profile to support WHODAS 2.0 assessment categories."""
 Characteristics: #can-be-target
 Parent: EHDSClinicalImpression
 
@@ -48,7 +48,7 @@ Parent: EHDSClinicalImpression
 Logical: EHDSFunctionalAssessmentObservation
 //Id: EHDSFunctionalAssessmentObservation
 Title: "Functional assessment observation model"
-Description: """C.35 - EHDS refined model for Functional status assessment observation."""
+Description: """EHDS refined model for Functional status assessment observation."""
 Characteristics: #can-be-target
 Parent: EHDSObservation
 

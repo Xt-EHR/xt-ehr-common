@@ -18,12 +18,12 @@ Characteristics: #can-be-target
 * activity[x] 0..1 string or Reference "The details of the proposed activity represented in a specific resource."
 
 /*
-* note 0..* string "C.19.13 - Note" """General notes about the care plan not covered elsewhere."""
-* intent 1..1 CodeableConcept "C.19.3 - Intent" """Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain."""
+* note 0..* string "Note" """General notes about the care plan not covered elsewhere."""
+* intent 1..1 CodeableConcept "Intent" """Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain."""
   * ^binding.description = "HL7 Care Plan Intent "
   * ^binding.strength = #preferred
-* custodian 0..1 Reference(EHDSPatient or EHDSHealthProfessional or  EHDSHealthProfessional or  EHDSOrganization or EHDSRelatedPerson) "C.19.8 - Custodian" """Custodian is responsible for the care plan. The care plan is attributed to the custodian. The custodian might or might not be a contributor."""
-* contributor 0..* Reference(EHDSPatient or EHDSHealthProfessional or EHDSHealthProfessional or  EHDSOrganization or EHDSRelatedPerson) "C.19.9 - Contributor" """Identifies the individual(s), organization or device who provided the contents of the care plan."""
-* activity 0..* Reference(EHDSAppointment or EHDSMedicationPrescription or EHDSTask or EHDSServiceRequest) "C.19.12 - Activity" """"""
-* goal 0..* EHDSGoal "C.19.11 - Goal" """Describes the intended objective(s) of carrying out the care plan."""
+* custodian 0..1 Reference(EHDSPatient or EHDSHealthProfessional or  EHDSHealthProfessional or  EHDSOrganization or EHDSRelatedPerson) "Custodian" """Custodian is responsible for the care plan. The care plan is attributed to the custodian. The custodian might or might not be a contributor."""
+* contributor 0..* Reference(EHDSPatient or EHDSHealthProfessional or EHDSHealthProfessional or  EHDSOrganization or EHDSRelatedPerson) "Contributor" """Identifies the individual(s), organization or device who provided the contents of the care plan."""
+* activity 0..* Reference(EHDSAppointment or EHDSMedicationPrescription or EHDSTask or EHDSServiceRequest) "Activity" """"""
+* goal 0..* EHDSGoal "Goal" """Describes the intended objective(s) of carrying out the care plan."""
 */

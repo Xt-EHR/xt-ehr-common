@@ -2,7 +2,7 @@ Logical: EHDSInpatientEncounter
 Parent: EHDSEncounter
 //Id: EHDSinpatientEncounter
 Title: "Inpatient encounter model"
-Description: """C.23 - EHDS refined base model for Inpatient encounter"""
+Description: """EHDS refined base model for Inpatient encounter"""
 Characteristics: #can-be-target
 
 * encounterType 1..1
