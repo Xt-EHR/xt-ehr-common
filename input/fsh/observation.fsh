@@ -42,7 +42,6 @@ Characteristics: #can-be-target
 * anatomicLocation 0..1 CodeableConcept "Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSProcedure) "Subject" """The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about."""
 * component 0..* Base "Component" """Some observations have multiple component observations. These component observations are expressed as separate code value pairs that share the same attributes."""
   * code 1..1 CodeableConcept "Code" """Code representing the observation using the agreed code systems."""
     * ^binding.description = "LOINC, NPU, SNOMED CT"
