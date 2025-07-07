@@ -14,6 +14,3 @@ The main proposed changes of the proposed EEHRxF logical model, compared with th
 
 * The logical models have cardinality, and repeatable elements are split into their own models, which is often reused between different priority categories (e.g. problems, procedures). The individual information elements in these reusable models are based on the eHN Guideline, unless otherwise stated. 
 
-<figure>
-{% include ps-model.svg %}
-</figure>
