@@ -17,29 +17,25 @@ Characteristics: #can-be-target
 //* preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganization "A.1.3 - Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
 
 
-/*
 
-//TO_DO: ADD BACK
+
 * alerts 1..1 Base "Section: Alerts." "Information about substantial alerts or warnings that health professionals should be aware of."
-//  * ^requirements = "eHN PS Guideline, section ...?"
-
+  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data"
-  * medicalAlert 0..* EHDSAlertFlag "Description of medical alerts in textual format: any clinical information that is imperative to know so that the life or health of the patient does not come under threat."
-    * ^requirements = "eHN PS Guideline"
-*/
+  * medicalAlert 0..* EHDSAlert "Description of medical alerts in textual format: any clinical information that is imperative to know so that the life or health of the patient does not come under threat."
+    * ^requirements = "ISO IPS"
+
 
 
 
 
 * allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances" "TO_DO"
-  * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is merely 'Allergy', and that was considered less inclusive compared to the alternative."
-
+  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * narrative 1..1 string "Text summary of the content in section"
-    * ^requirements = "The element is present in FHIR IPS IG. See general description of Patient summary modelling for more information about this element."
-
   * allergyIntolerance 0..* EHDSPSAllergyIntolerance "List of structured allergies and intolerances"
-    * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is merely 'Allergy', and that was considered less inclusive compared to the alternative."
+    * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
+
 
   * emptyReason 0..1 CodeableConcept "Use if no Allergies are listed" "Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)"
     * ^binding.description = "1.3.6.1.4.1.12559.11.10.1.3.1.42.47eHDSIAbsentOrUnknownAllergy; http://hl7.org/fhir/ValueSet/list-empty-reason"
@@ -98,24 +94,17 @@ Characteristics: #can-be-target
 // Why description and narrative?
 //  * description 0..1 string "Narrative description of past problems."
 
-//TO_DO: ADD BACK
-* alerts 1..1 EHDSAlert "Section: Alerts." "Information about substantial alerts or warnings that health professionals should be aware of."
-
-
-
 
 * functionalStatus 0..1 Base "Section: Functional status"
+  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-  * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
+  * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual's ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
 
 * socialHistory 0..1 Base "Section: Social history." """Observations on social factors such as alcohol consumption or smoking. From the healthcare perspective, life-style factors relate to well-being but can also provide a source of risk factors."""
-
+  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
-
-  // add below to separate model
-  * description 1..1 string "Textual description of the social history."
-  * observation 0..* EHDSObservation "Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
-  * referenceDateRange 0..* Period "Reference date range" """Example: from 1974 to 2004"""
+  * socialHistoryObservation 0..* EHDSSocialHistory "Social history observations related to health" """Health related lifestyle factors or lifestyle observations and social determinants of health. Example: cigarette smoker, alcohol consumption"""
+    * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
 
 * pregnancyHistory 0..1 Base "Section: Pregnancy history" """To present the current health state of the patient with respect to pregnancy and to provide chronological and outcome information about past pregnancies. """
   * ^requirements = "eHN PS Guideline, ISO IPS"
