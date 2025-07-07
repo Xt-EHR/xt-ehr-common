@@ -6,6 +6,7 @@ Characteristics: #can-be-target
 
 * personalIdentifier 0..* Identifier "Personal identifier" """An identifier of the related person that is unique within a defined scope. Example: National ID (birth number) for the Czech citizen. Multiple identifiers could be provided. """
 * name 0..* EHDSHumanName "Name" """Name associated with the person. Name might consists of name parts, e.g. Given name or names, family name/surname, name prefix etc."""
+* subject 1..1 EHDSPatient "The patient in relation to whom the related person is defined."
 * relationship 0..1 CodeableConcept "Relationship" """Relationship between a patient and a contact person for that patient. This includes relatives, guardians, caring persons etc."""
   * ^binding.description = "HL7 RoleCode"
   * ^binding.strength = #preferred
