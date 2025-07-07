@@ -1,3 +1,4 @@
+/*
 Logical: EHDSDeviceUse
 //Id: EHDSdevice
 Parent: EHDSDataSet
@@ -25,3 +26,4 @@ Characteristics: #can-be-target
 * bodySite 0..1 CodeableConcept "Anatomical location of the device. May include laterality."
 
 * reason[x] 0..* EHDSCondition or EHDSObservation or EHDSProcedure "Reason or justification for the use of the device."
+*/

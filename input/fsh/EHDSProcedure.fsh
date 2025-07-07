@@ -1,3 +1,4 @@
+/*
 Logical: EHDSProcedure
 Parent: EHDSDataSet
 Title: "Procedure model"
@@ -38,3 +39,4 @@ Characteristics: #can-be-target
 // * focalDevice 0..* EHDSDevice "Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure."
 // * location 0..* EHDSLocation "Location where the procedure was performed"
 // * note 0..1 string "Additional information about the procedure"
+*/
