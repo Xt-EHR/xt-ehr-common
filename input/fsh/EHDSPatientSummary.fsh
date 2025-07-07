@@ -30,10 +30,10 @@ Characteristics: #can-be-target
 
 
 
-* allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances" "TO_DO"
+* allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances"
   * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * narrative 1..1 string "Text summary of the content in section"
-  * allergyIntolerance 0..* EHDSPSAllergyIntolerance "List of structured allergies and intolerances"
+  * allergyIntolerance 0..* EHDSAllergyIntolerance "List of structured allergies and intolerances"
     * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
 
 
