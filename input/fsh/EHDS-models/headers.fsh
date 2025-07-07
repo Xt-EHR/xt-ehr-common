@@ -3,7 +3,7 @@ Title: "DataSet model"
 Description: "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources."
 Characteristics: #can-be-target
 
-* header 1..* Base "Common header for all patient-related data"
+* header 1..1 Base "Common header for all patient-related data"
   * subject 1..1 EHDSPatient "Subject" """Patient/subject information"""
   * identifier 0..* Identifier "Business identifier for the object"
   * authorship 1..* Base "Authorship" """Resource authoring details"""
