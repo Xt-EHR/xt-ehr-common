@@ -4,10 +4,12 @@ Parent: EHDSDataSet
 Title: "Care plan model"
 Description: "EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans."
 Characteristics: #can-be-target
-
-* identifier 0..* Identifier " Identifier for the care plan"
-* subject 1..1 EHDSPatient "The patient whose intended care is described by the plan."
-* status 1..1 CodeableConcept "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."
+* header.identifier 
+  * ^short = "Identifier for the care plan"
+* header.subject 
+  * ^short = "The patient whose intended care is described by the plan."
+* header.status 
+  * ^short = "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."
   * ^binding.description = "HL7 Request status"
   * ^binding.strength = #preferred
 * title 0..1 string "Human-friendly name for the care plan"
