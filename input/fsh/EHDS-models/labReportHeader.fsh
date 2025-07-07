@@ -18,15 +18,15 @@ Characteristics: #can-be-target
 //  * datetime 1..1 dateTime "A.1.8.2 - DateTime" """Date and time when the document was authorized."""
 //* documentMetadata 1..1 Base "A.1.9 - Document metadata" """Data relevant to document type and its content for administrative and searching purposes."""
 //  * documentId 1..1 Identifier "A.1.9.1 - Document ID" """Unique identifier of the document"""
-//  * documentType 1..1 CodeableConcept "A.1.9.2 - Document type" """Identifies the type of document at hand, e.g. Hospital discharge report."""
+//  * documentType 1..1 CodeableConcept "A.1.9.2 - Document type" """Identifies the type of document at hand, e.g. Discharge report."""
 //    * ^binding.description = "LOINC"
 //    * ^binding.strength = #preferred
-//  * documentStatus 1..1 CodeableConcept "A.1.9.3 - Document status" """The status of the Hospital discharge report. E.g., preliminary, final."""
+//  * documentStatus 1..1 CodeableConcept "A.1.9.3 - Document status" """The status of the Discharge report. E.g., preliminary, final."""
 //    * ^binding.description = "hl7:CompositionStatus"
 //    * ^binding.strength = #preferred
 //  * period 0..1 Period "A.1.9.4 - Period" """Documented period service. Typically used for searching purposes."""
-//  * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the Hospital discharge  report creation."""
-//  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, fix value "Hospital discharge report". """
+//  * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the Discharge  report creation."""
+//  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, fix value "Discharge report". """
 * header.eventType ^binding.description = "SNOMED CT"
 * header.eventType ^binding.strength = #preferred
 //  * authorSpecialty 0..* CodeableConcept "A.1.9.8 - Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""

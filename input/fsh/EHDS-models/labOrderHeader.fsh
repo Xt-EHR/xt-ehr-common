@@ -18,7 +18,7 @@ Characteristics: #can-be-target
   * datetime 1..1 dateTime "A.1.8.2 - DateTime" """Date and time when the document was authorized."""
 * documentMetadata 1..1 Base "A.1.9 - Document metadata" """Data relevant to document type and its content for administrative and searching purposes."""
   * documentId 1..1 Identifier "A.1.9.1 - Document ID" """Unique identifier of the document"""
-  * documentType 1..1 CodeableConcept "A.1.9.2 - Document type" """Identifies the type of document at hand, e.g. Hospital discharge report."""
+  * documentType 1..1 CodeableConcept "A.1.9.2 - Document type" """Identifies the type of document at hand, e.g. Discharge report."""
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
   * documentStatus 1..1 CodeableConcept "A.1.9.3 - Document status" """The status of the document/report. E.g., preliminary, final."""
@@ -26,7 +26,7 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   * period 0..1 Period "A.1.9.4 - Period" """Documented period service. Typically used for searching purposes."""
   * reportDateAndTime 1..1 dateTime "A.1.9.5 - Report date and time" """Date and time of the report creation."""
-  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, such as "Hospital discharge report", "Laboratory Result Report" etc.. """
+  * documentTitle 1..1 string "A.1.9.6 - Document title" """Document title, such as "Discharge report", "Laboratory Result Report" etc.. """
   * eventType 0..* CodeableConcept "A.1.9.7 - Event type" """Categorization of an "event" covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of event types depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses."""
     * ^binding.description = "LOINC, SNOMED CT, dicom-cid-33-Modality"
     * ^binding.strength = #preferred

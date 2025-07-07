@@ -1,27 +1,27 @@
 ### Information Models
 #### Conceptual view
 
-Hospital discharge report could be divided into several parts: document header, body and optionally it could also have various attachments.
+Discharge report could be divided into several parts: document header, body and optionally it could also have various attachments.
 
-##### Hospital Discharge Report
+##### Discharge Report
 <figure>
   {% include hdrReport_CIM.svg %}
 </figure>
 
-##### Hospital Discharge Report header
+##### Discharge Report header
 <figure>
   {% include hdrReportHdr_CIM.svg %}
 </figure>
 
-##### Hospital Discharge Report body
+##### Discharge Report body
 <figure>
   {% include hdrReportBody_CIM.svg %}
 </figure>
 
-### Detail EHDS information models for Hospital Discharge Report
-- [Hospital Discharge Report Document](StructureDefinition-EHDSHospitalDischargeReport.html)
-- [Hospital Discharge Report Header](StructureDefinition-EHDSHospitalDischargeReportHeader.html)
-- [Hospital Discharge Report Body](StructureDefinition-EHDSHospitalDischargeReportBody.html)
+### Detail EHDS information models for Discharge Report
+- [Discharge Report Document](StructureDefinition-EHDSDischargeReport.html)
+- [Discharge Report Header](StructureDefinition-EHDSDischargeReportHeader.html)
+- [Discharge Report Body](StructureDefinition-EHDSDischargeReportBody.html)
 
 ### FHIR Implementation Guide
 

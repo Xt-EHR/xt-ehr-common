@@ -29,11 +29,11 @@ Characteristics: #can-be-target
   * identifier 1..*
     * ^short = "Document ID"
     * ^definition = """Unique identifier of the document"""
-  * documentType 1..1 CodeableConcept "Document type" """Identifies the type of document at hand, e.g. Hospital discharge report."""
+  * documentType 1..1 CodeableConcept "Document type" """Identifies the type of document at hand, e.g. Discharge report."""
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
-  * documentTitle 1..1 string "Document title" """Document title, such as Hospital Discharge Report, Laboratory Result Report, etc."""
-  * documentStatus 1..1 CodeableConcept "Document status" """The status of the Hospital discharge report. E.g., preliminary, final."""
+  * documentTitle 1..1 string "Document title" """Document title, such as Discharge Report, Laboratory Result Report, etc."""
+  * documentStatus 1..1 CodeableConcept "Document status" """The status of the Discharge report. E.g., preliminary, final."""
     * ^binding.description = "hl7:CompositionStatus"
     * ^binding.strength = #preferred
   * period 0..1 Period "Period" """Time of service that is being documented"""

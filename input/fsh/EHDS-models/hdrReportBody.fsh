@@ -1,7 +1,7 @@
-Logical: EHDSHospitalDischargeReportBody
-//Id: EHDShospitalDischargeReportBody
-Title: "Hospital Discharge Report body model"
-Description: "EHDS refined base model for Hospital Discharge Report body"
+Logical: EHDSDischargeReportBody
+//Id: EHDSDischargeReportBody
+Title: "Discharge Report body model"
+Description: "EHDS refined base model for Discharge Report body"
 Characteristics: #can-be-target
 
 * advanceDirectives 0..1 Base "Authored Advance Directive Information"

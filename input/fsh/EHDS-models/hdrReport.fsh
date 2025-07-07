@@ -1,10 +1,9 @@
-Logical: EHDSHospitalDischargeReport
-//Id: EHDShospitalDischargeReport
-Title: "Hospital Discharge Report model"
-Description: """A - EHDS refined base model for Hospital Discharge Report"""
+Logical: EHDSDischargeReport
+Title: "Discharge Report model"
+Description: """EHDS refined base model for Discharge Report"""
 Characteristics: #can-be-target
 
-* hospitalDischargeReportHeader 1..1 EHDSHospitalDischargeReportHeader "A.1 - Hospital Discharge Report header" """Report header data elements"""
-* hospitalDischargeReportStructuredBody 1..1 EHDSHospitalDischargeReportBody "A.2 - Hospital Discharge Report body" """Report body data elements"""
-* presentedForms 0..* EHDSAttachment "A.3 - Attachment" """Entire report as issued. Various formats could be provided,  pdf format is recommended."""
-* hospitalDischargeReportAttachments[x] 0..* EHDSAttachment or EHDSMedia "A.4 - Attachment, Media" """Report attachments data elements"""
+* header 1..1 EHDSDischargeReportHeader "Discharge Report header"
+* body 1..1 EHDSDischargeReportBody "Discharge Report body"
+* presentedForms 0..* EHDSAttachment "Entire report as issued. Various formats could be provided,  PDF format is recommended."
+* attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"
