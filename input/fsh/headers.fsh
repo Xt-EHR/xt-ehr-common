@@ -3,7 +3,7 @@ Title: "DataSet model"
 Description: "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources."
 Characteristics: #can-be-target
 
-* header 1..* Base "Common header for all patient-related data"
+* header 1..1 Base "Common header for all patient-related data"
   * subject 1..1 EHDSPatient "Subject" """Patient/subject information"""
   * identifier 0..* Identifier "Business identifier for the object"
   * authorship 1..* Base "Authorship" """Resource authoring details"""
@@ -58,5 +58,5 @@ Characteristics: #can-be-target
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
 * knowledgeResources 0..* Base "Related documents and information sources"
-  * externalReference 0..* RelatedArtifact "..."
-  * relatedTo 0..* Reference "..."
+  * externalReference 0..* RelatedArtifact "Reference to external knowledge resource" """A reference leading to Clinical Practice Guidelines (CPG), emergency and anesthesia guidelines or other clinical relevant guidelines. This should be used only for providing specific guidance which may not be readily available to the health professional caring for the patient."""
+  * relatedTo 0..* Reference "Reference to part of the patient summary"  """Identify the entry or entries of this Patient Summary for which this additional information relates with, for example a link between a rare disease problem and guidelines for that particular rare disease."""
