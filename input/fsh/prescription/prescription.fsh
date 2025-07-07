@@ -39,7 +39,7 @@ Characteristics: #can-be-target
     * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
   * status 1..1 CodeableConcept "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item."
   * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
-  * repeatsAllowed 0..1 integer "Number of refills authorized" "How many times the prescription item can be dispensed in addition to the original dispense."
+  * repeatsAllowed 0..1 integer "Number of refills authorised" "How many times the prescription item can be dispensed in addition to the original dispense."
   * minimumDispenseInterval 0..1 Quantity "Minimum Dispense Interval" "If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here."
   * offLabel 0..1 Base "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug" 
     * isOffLabelUse 1..1 boolean "Indicates off-label use. Must be 'true' when .reason is provided."

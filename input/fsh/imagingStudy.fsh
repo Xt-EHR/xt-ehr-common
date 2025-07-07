@@ -15,7 +15,7 @@ Characteristics: #can-be-target
 * numberOfSeries 0..1 unsignedInt "C.32.7 - Number of series" """Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present."""
 * numberOfInstances 0..1 unsignedInt "C.32.8 - Number of instances" """Number of  Service-Object Pairs (SOP) Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present."""
 * description 0..1 string "C.32.9 - Description" """The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed."""
-* studyCustodian 0..1 EHDSOrganization "C.32.10 - Study custodian" """Organization name, address, contact information."""
+* studyCustodian 0..1 EHDSOrganisation "C.32.10 - Study custodian" """organisation name, address, contact information."""
 * studyEndpoint 0..1 EHDSEndpoint "C.32.11 - Study endpoint" """An endpoint describes the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."""
 * series 0..* Base "C.32.12 - Series" """Each study has one or more series of instances"""
   * seriesUid 1..1 id "C.32.12.1 - Series UID" """DICOM Series Instance UID for the series"""
@@ -49,4 +49,4 @@ Characteristics: #can-be-target
   * phaseCode 1..1 CodeableConcept "C.32.13.1 - Phase code" """Study phase, e.g., without contrast, arterial phase, venous phase, delayed phase. Only some types of studies have phases."""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
-  * radiationDose 0..1 Quantity "C.32.13.2 - Radiation dose" """Dose length product - Computerized Tomography (CT) related."""
+  * radiationDose 0..1 Quantity "C.32.13.2 - Radiation dose" """Dose length product - Computerd Tomography (CT) related."""

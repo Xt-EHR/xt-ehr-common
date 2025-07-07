@@ -4,7 +4,7 @@ Title: "Endpoint model"
 Description: """C.33 - EHDS refined base model for Endpoint"""
 Characteristics: #can-be-target
 
-* identifier 1..* Identifier "C.33.1 - Identifier" """Identifier for the organization that is used to identify the endpoint across multiple disparate systems."""
+* identifier 1..* Identifier "C.33.1 - Identifier" """Identifier for the organisation that is used to identify the endpoint across multiple disparate systems."""
 * status 1..1 CodeableConcept "C.33.2 - Status" """Status of the endpoint. The endpoint status represents whether the endpoint can currently be used for connections or why it can't be used."""
   * ^binding.description = "hl7:EndpointStatus"
   * ^binding.strength = #preferred
@@ -12,7 +12,7 @@ Characteristics: #can-be-target
   * ^binding.description = "hl7:endpoint-connection-type"
   * ^binding.strength = #preferred
 * name 0..1 string "C.33.4 - Name" """A friendly name that this endpoint can be referred to with."""
-* managingOrganization 0..1 EHDSOrganization "C.33.5 - Managing organization" """The organization that provides technical management services for this endpoint. """
+* managingOrganisation 0..1 EHDSOrganisation "C.33.5 - Managing organisation" """The organisation that provides technical management services for this endpoint. """
 * payload 0..* Base "C.33.6 - Payload" """The set of payloads that are provided/available at this endpoint."""
   * type 0..* CodeableConcept "C.33.6.1 - Type" """The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)."""
     * ^binding.description = "hl7:endpoint-payload-type"

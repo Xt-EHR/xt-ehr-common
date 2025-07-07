@@ -7,7 +7,7 @@ Characteristics: #can-be-target
   * subject 1..1 EHDSPatient "Subject" """Patient/subject information"""
   * identifier 0..* Identifier "Business identifier for the object"
   * authorship 1..* Base "Authorship" """Resource authoring details"""
-    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganization or EHDSDevice "Author" """Author(s) by whom the resource was/were authored. Multiple authors could be provided."""
+    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author" """Author(s) by whom the resource was/were authored. Multiple authors could be provided."""
     * datetime 1..1 dateTime "Date and time of authoring/issuing" """Date and time of the issuing the document/resource by its author."""
   * lastUpdate 0..1 dateTime "Date and time of the last update to the resource" """Date and time of the last update to the document/information"""
   * status 1..1 CodeableConcept "Status of the resource" """Status of the resource"""
@@ -43,14 +43,14 @@ Characteristics: #can-be-target
     * datetime 1..1 dateTime "DateTime" """Date and time of the approval of the document by Attester."""
   * legalAuthentication 0..1 Base "Legal authentication" """Document legal authentication"""
     * legalAuthenticator 1..1 EHDSHealthProfessional "Legal authenticator" """The person taking responsibility for the medical content of the document"""
-    * datetime 1..1 dateTime "DateTime" """Date and time when the document was authorized."""
+    * datetime 1..1 dateTime "DateTime" """Date and time when the document was authorised."""
   * eventType 0..* CodeableConcept "Event type" """Categorization of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses."""
     * ^binding.description = "LOINC, SNOMED CT, dicom-cid-33-Modality"
     * ^binding.strength = #preferred
   * authorSpecialty 0..* CodeableConcept "Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
-  * custodian 1..1 EHDSOrganization "Document custodian" """Organisation that is in charge of maintaining the document/report."""
+  * custodian 1..1 EHDSOrganisation "Document custodian" """Organisation that is in charge of maintaining the document/report."""
   * documentFormat 0..1 CodeableConcept "Document format" """An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType."""
     * ^binding.description = "HL7 Document Format Codes"
     * ^binding.strength = #preferred

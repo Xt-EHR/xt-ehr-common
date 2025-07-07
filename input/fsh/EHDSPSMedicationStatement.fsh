@@ -15,13 +15,13 @@ Characteristics: #can-be-target
 * medication 1..1 EHDSMedication "Describes the medicinal product."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
 
-// * classification 0..* CodeableConcept "Standardized code corresponding to the product classification."
+// * classification 0..* CodeableConcept "Standardd code corresponding to the product classification."
 //   * ^requirements = "MyHealth@EU"
 
-* medicationReason 0..* CodeableConcept "Coded reason for the prescription (typically diagnosis, or a procedure)"
+* medicationReason 0..* CodeableConcept "Coded reason for the use of the medication (typically diagnosis, or a procedure)"
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
 
-* medicationReasonText 0..1 string "Reason for the prescription (typically diagnosis, or a procedure) in free text."
+* medicationReasonText 0..1 string "Reason for the use of the medication (typically diagnosis, or a procedure) in free text."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"  
 
 // indeded use cf. EHDSMedicationPrescription.prescriptionIntent
@@ -31,7 +31,7 @@ Characteristics: #can-be-target
 // multiple regimen/dosagings can exist in sequence
 * dosageInstructions 1..* EHDSDosaging "Details of how medication is/was taken or should be taken" "Details of how medication is/was taken or should be taken. This includes the number of units per intake and frequency of intake over a specified duration of time. Example: 1 tablet every 24h, for 10 days ."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
-  * ^comment = "We deviate the definition from the eHN guideline to make the defintion broad enough to support the complexity we expect"
+  * ^comment = "We deviate the definition from the eHN guideline to make the definition broad enough to support the complexity we expect"
 
 
 * periodOfUse 0..1 Period "Period when patient took, is taking or is expected to take the medication" "Period when patient took, is taking or is expected to take the medication. This information may be expressed using start and end date times OR indicating the duration. The first is used to indicate a specified interval (e.g., from March 15th, 2017); the latter for indicating a 'floating' period (e.g., 2 weeks). In case of unbounded period (continuous therapy), the end element will be valued with an exceptional value."

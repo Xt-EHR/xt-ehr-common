@@ -16,7 +16,7 @@ Characteristics: #can-be-target
 * episodeOfCare 0..* Reference (EHDSEpisodeOfCare) "C.30.6 - Episode of care" """Episode(s) of care that this encounter should be recorded against"""
 * basedOn 0..* Reference (EHDSCarePlan or EHDSServiceRequest) "C.30.7 - Based on" """The request that initiated this encounter"""
 * partOf 0..1 Reference (EHDSEncounter) "C.30.8 - Part of" """Another Encounter this encounter is part of"""
-* serviceProvider 0..1 Reference (EHDSOrganization) "C.30.9 - Service provider" """The organization (facility) responsible for this encounter"""
+* serviceProvider 0..1 Reference (EHDSOrganisation) "C.30.9 - Service provider" """The organisation (facility) responsible for this encounter"""
 * appointment 0..* Reference (EHDSAppointment) "C.30.10 - Appointment" """The appointment that scheduled this encounter"""
 * actualPeriod 0..1 Period "C.30.11 - Actual period" """The actual start and end time of the encounter"""
 * plannedStartDate 0..1 dateTime "C.30.12 - Planned start date" """The planned start date/time (or admission date) of the encounter"""
@@ -36,7 +36,7 @@ Characteristics: #can-be-target
   * destinationType 0..1 CodeableConcept "C.30.15.1 - Destination type" """Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc.  """
     * ^binding.description = "hl7.discharge-disposition"
     * ^binding.strength = #preferred
-  * destinationLocation 0..1 Reference (EHDSOrganization or EHDSLocation) "C.30.15.2 - Destination location" """The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact."""
+  * destinationLocation 0..1 Reference (EHDSOrganisation or EHDSLocation) "C.30.15.2 - Destination location" """The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact."""
 * location 0..* Base "C.30.16 - Location" """List of locations where the patient has been."""
   * period 0..1 Period "C.30.16.1 - Period" """Time period during which the patient was present at the location"""
-  * organizationPart 1..1 EHDSLocation "C.30.16.2 - Organization part" """Organization or organization part (department) where the patient was present."""
+  * organisationPart 1..1 EHDSLocation "C.30.16.2 - organisation part" """organisation or organisation part (department) where the patient was present."""
