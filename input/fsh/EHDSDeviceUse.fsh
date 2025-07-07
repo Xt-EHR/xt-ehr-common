@@ -2,7 +2,6 @@ Logical: EHDSDeviceUse
 //Id: EHDSdevice
 Parent: EHDSDataSet
 Title: "Device model"
-Parent: EHDSDataSet
 Description: "EHDS refined base model for Device information"
 Characteristics: #can-be-target
 
