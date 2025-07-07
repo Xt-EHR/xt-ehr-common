@@ -50,7 +50,7 @@ Characteristics: #can-be-target
   * ^requirements = "ISO IPS, MH@EU"
 
 
-* specialistContact 0..* Reference "Health Professional who may be specifically related to the problem, as a preferred contact."
+* specialistContact 0..* EHDSHealthProfessional "Health Professional who may be specifically related to the problem, as a preferred contact."
   * ^requirements = "ISO IPS, MH@EU"
 
 * externalResourceRelatedWith 0..* uri "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines."
