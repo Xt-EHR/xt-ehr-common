@@ -3,7 +3,7 @@ Parent: EHDSDataSet
 
 // Id: EHDSPregnancyHistory
 Title: "Pregnancy history model"
-Description: "Pregnancy history"
+Description: "Pregnancy history for one pregnancy"
 Characteristics: #can-be-target
 * narrative 0..1 string "Narrative, potentially formatted, content of the section" """Narrative description describing the outcome of any previous pregnancies. """
   * ^requirements = "eHN PS Guideline, ISO IPS"
