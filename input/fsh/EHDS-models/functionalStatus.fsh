@@ -11,9 +11,9 @@ Characteristics: #can-be-target
   // Disability in IPS
   * ^requirements = "eHN HDR Guideline, ISO IPS"
   * ^comment = "Disability in IPS"
-  * condtion 0..1 CodeableConcept "Condition related to the functional status"
+  * condition 0..1 CodeableConcept "Condition related to the functional status"
   * ^requirements = "eHN HDR Guideline, ISO IPS"
-  * conditonText 0..1 string "Textual description of the condition"
+  * conditionText 0..1 string "Textual description of the condition"
     * ^requirements = "eHN HDR Guideline, ISO IPS"
   * ^requirements = "eHN HDR Guideline, ISO IPS"
   * onsetDate 0..1 dateTime "Onset date of a condition"
