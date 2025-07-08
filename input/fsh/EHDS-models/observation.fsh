@@ -46,7 +46,6 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * resultDescription 0..1 string "Comments and narrative representation of the observation result and findings."
 
-
 * component 0..* Base "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)."
   * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
     * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
@@ -59,7 +58,6 @@ Characteristics: #can-be-target
   * interpretation 0..* CodeableConcept "Information about reference intervals and result interpretation."
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
-
 
 * derivedFrom[x] 0..* EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy "Reference to the related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."
 * triggeredBy[x] 0..* EHDSLaboratoryObservation or EHDSObservation "References to the observation(s) that triggered the performance of this observation."
