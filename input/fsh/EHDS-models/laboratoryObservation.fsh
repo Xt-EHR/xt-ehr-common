@@ -4,7 +4,7 @@ Title: "Laboratory observation model"
 Description: """EHDS refined base model for Observation performed by laboratory"""
 Characteristics: #can-be-target
 
-
+* header.subject ^type.profile[+] = Canonical(EHDSPatient)
 * header.subject ^type.profile[+] = Canonical(EHDSLocation)
 * testKit 0..1 EHDSDevice "Test kit" """Laboratory test kit used during measurement."""
 * calibrator 0..1 Identifier "Calibrator" """Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain. """
