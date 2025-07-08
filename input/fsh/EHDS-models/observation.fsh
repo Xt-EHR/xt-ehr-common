@@ -25,7 +25,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * result 0..1 Base "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
-  * value 1..1 string or Quantity or Range or CodeableConcept
+  * value[x] 1..1 string or Quantity or Range or CodeableConcept
     * ^binding.description = "UCUM"
     * ^binding.strength = #preferred
   * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
@@ -45,7 +45,7 @@ Characteristics: #can-be-target
 
 * component 0..* Base "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)."
   * result 0..1 Base "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
-    * value 1..1 string or Quantity or Range or CodeableConcept
+    * value[x] 1..1 string or Quantity or Range or CodeableConcept
       * ^binding.description = "UCUM"
       * ^binding.strength = #preferred
     * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
