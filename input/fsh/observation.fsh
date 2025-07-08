@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * order 0..1 Reference (EHDSServiceRequest) "Order" """Identifies order and order placer this observation belongs to. """
 * performer 0..1 EHDSHealthProfessional "Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
 // * reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
-* result[x] 0..1 string or Quantity or Range or CodeableConcept "" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
+* resultValue[x] 0..1 string or Quantity or Range or CodeableConcept "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * uncertainty 0..1 Base "Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
