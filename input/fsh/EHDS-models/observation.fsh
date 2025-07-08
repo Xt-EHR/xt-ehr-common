@@ -29,9 +29,9 @@ Characteristics: #can-be-target
   * valueQuantity
     * ^binding.description = "UCUM"
     * ^binding.strength = #preferred
-  * valueRange
-    * ^binding.description = "UCUM"
-    * ^binding.strength = #preferred
+//  * valueRange
+//    * ^binding.description = "UCUM"
+//    * ^binding.strength = #preferred
   * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
