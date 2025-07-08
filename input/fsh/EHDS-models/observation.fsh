@@ -24,7 +24,7 @@ Characteristics: #can-be-target
 * anatomicLocation 0..1 CodeableConcept "Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* result 0..1 Base "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
+* result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
   * value[x] 1..1 string or Quantity or Range or CodeableConcept
     * ^binding.description = "UCUM"
     * ^binding.strength = #preferred
@@ -37,14 +37,14 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * referenceRange 0..* Base "Reference range, multiple reference ranges of different types culd by provided. Provides guide for interpretation of result." 
   * ^comment = "Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."
-* interpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
+* interpretation 0..* CodeableConcept "Information about reference intervals and result interpretation."
   * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
   * ^binding.strength = #preferred
-* resultDescription 0..1 string "Result description" """Comments and narrative representation of the observation result and findings."""
+* resultDescription 0..1 string "Comments and narrative representation of the observation result and findings."
 
 
 * component 0..* Base "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)."
-  * result 0..1 Base "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
+  * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
     * value[x] 1..1 string or Quantity or Range or CodeableConcept
       * ^binding.description = "UCUM"
       * ^binding.strength = #preferred
@@ -57,11 +57,11 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   * referenceRange 0..* Base "Reference range, multiple reference ranges of different types culd by provided. Provides guide for interpretation of result." 
     * ^comment = "Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."
-  * interpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
+  * interpretation 0..* CodeableConcept "Information about reference intervals and result interpretation."
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
 
 
-* derivedFrom 0..* Reference (EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy) "Derived from" """Related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."""
-* triggeredBy 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "Triggered by" """Identifies the observation(s) that triggered the performance of this observation."""
-* hasMember 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "Has member" """This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."""
+* derivedFrom 0..* EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy "Reference to the related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."
+* triggeredBy 0..* EHDSLaboratoryObservation or EHDSObservation "References to the observation(s) that triggered the performance of this observation."
+* hasMember 0..* EHDSLaboratoryObservation or EHDSObservation "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."
