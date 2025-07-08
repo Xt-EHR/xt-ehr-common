@@ -6,34 +6,29 @@ Description: """EHDS refined base model for Observation information"""
 Characteristics: #can-be-target
 
 * observationDate[x] 1..1 dateTime or Period "Observation date" """Clinically relevant time or time period for the observation."""
-* observationCode 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
+* code 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
   * ^binding.strength = #preferred
-* observationName 1..1 string "Observation name" """Full name of the observation according to the used test coding standard."""
-* observationOriginalName 0..1 string "Observation original name" """Original (conventional) name of the observation """
+* name 1..1 string "Observation name" """Full name of the observation according to the used test coding standard."""
+* originalName 0..1 string "Observation original name" """Original (conventional) name of the observation """
 * observationMethod 0..1 CodeableConcept "Observation method" """Observation method (measurement principle) to obtain the result."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* observationDevice 0..1 EHDSDevice "Observation device" """Device (e.g. analyser) that generates the measurements"""
+* device 0..1 EHDSDevice "Observation device" """Device (e.g. analyser) that generates the measurements"""
 * order 0..1 Reference (EHDSServiceRequest) "Order" """Identifies order and order placer this observation belongs to. """
 * performer 0..1 EHDSHealthProfessional "Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
-* reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
-* observationResult 1..1 Base "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
-  * textualResult 0..1 string "Textual Result" """Narrative text result"""
-  * numericResult 0..1 Base "Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
-    * numericValue[x] 0..1 Quantity or Range "Numeric value" """A numeric value or interval (open or closed) of the result"""
-    * units 0..1 CodeableConcept "Units" """Result units of the measurement"""
-      * ^binding.description = "UCUM"
-      * ^binding.strength = #preferred
-    * uncertainty 0..1 Base "Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
-  * codedResult 0..1 CodeableConcept "Coded Result" """A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."""
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
+// * reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
+* result[x] 0..1 string or Quantity or Range or CodeableConcept "" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
+  * ^binding.description = "SNOMED CT"
+  * ^binding.strength = #preferred
+* uncertainty 0..1 Base "Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
+  * ^comment = "To be elaborated in future work."
 * dataAbsentReason 0..1 CodeableConcept "dataAbsentReason" """Provides a reason why the expected value in the element Observation.value[x] is missing."""
   * ^binding.description = "HL7 Data absent reason"
   * ^binding.strength = #preferred
 * referenceRange 0..* Base "Reference range" """Reference range, multiple reference ranges of different types culd by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."""
-* observationInterpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
+  * ^comment = "To be elaborated in future work."
+* interpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
   * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
   * ^binding.strength = #preferred
 * triggeredBy 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "Triggered by" """Identifies the observation(s) that triggered the performance of this observation."""
@@ -46,21 +41,17 @@ Characteristics: #can-be-target
   * code 1..1 CodeableConcept "Code" """Code representing the observation using the agreed code systems."""
     * ^binding.description = "LOINC, NPU, SNOMED CT"
     * ^binding.strength = #preferred
-  * textualResult 0..1 string "Textual Result" """Narrative text result"""
-  * numericResult 0..1 Base "Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
-    * numericValue[x] 0..1 Quantity or Range "Numeric value" """A numeric value or interval (open or closed) of the result"""
-    * units 0..1 CodeableConcept "Units" """Result units of the measurement"""
-      * ^binding.description = "UCUM"
-      * ^binding.strength = #preferred
-    * uncertainty 0..1 Base "Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
-  * codedResult 0..1 CodeableConcept "Coded Result" """A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."""
+  * result[x] 0..1 string or Quantity or Range or CodeableConcept "" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
+  * uncertainty 0..1 Base "Uncertainty" """Measurement uncertainty type and interval should be provided if needed."""
+  * ^comment = "To be elaborated in future work."
   * dataAbsentReason 0..1 CodeableConcept "dataAbsentReason" """Provides a reason why the expected value in the element Observation.value[x] is missing."""
     * ^binding.description = "HL7 Data absent reason"
     * ^binding.strength = #preferred
   * referenceRange 0..* Base "Reference range" """Reference range, multiple reference ranges of different types culd by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."""
-  * observationInterpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
+    * ^comment = "To be elaborated in future work."
+  * interpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
 // * status 1..1 CodeableConcept "Status" """The status of the result value."""

@@ -14,3 +14,7 @@ Characteristics: #can-be-target
 * observationCode //1..1 CodeableConcept "C.11.1 - Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU"
   * ^binding.strength = #preferred
+* reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
+* hasMember 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "Has member" """This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."""
+* resultDescription 0..1 string "Result description" """Comments and narrative representation of the observation result and findings."""
+* derivedFrom 0..* Reference (EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy) "Derived from" """Related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."""
