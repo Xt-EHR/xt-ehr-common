@@ -11,6 +11,6 @@ Characteristics: #can-be-target
   * ^binding.description = "Code system to be specified"
   * ^binding.strength = #preferred
 * previousResults 0..* EHDSLaboratoryObservation "Previous results" """Previous results of the same observation"""
-* observationCode //1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
+* code //1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU"
   * ^binding.strength = #preferred
