@@ -1,22 +1,24 @@
 Logical: EHDSObservation
-//Id: EHDSobservation
+Parent: EHDSDataSet
 Title: "Observation model"
 Description: """EHDS refined base model for Observation information"""
 Characteristics: #can-be-target
 
+* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSProcedure) "Subject" """The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about."""
 * observationDate[x] 1..1 dateTime or Period "Observation date" """Clinically relevant time or time period for the observation."""
 * observationCode 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
   * ^binding.strength = #preferred
-* observationName 1..1 string "Observation name" """Full name of the observation according to the used test coding standard."""
+//* observationName 1..1 string "Observation name" """Full name of the observation according to the used test coding standard."""
 * observationOriginalName 0..1 string "Observation original name" """Original (conventional) name of the observation """
 * observationMethod 0..1 CodeableConcept "Observation method" """Observation method (measurement principle) to obtain the result."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* observationDevice 0..1 EHDSDevice "Observation device" """Device (e.g. analyser) that generates the measurements"""
 * order 0..1 Reference (EHDSServiceRequest) "Order" """Identifies order and order placer this observation belongs to. """
 * performer 0..1 EHDSHealthProfessional "Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
 * reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
+* observationDevice 0..1 EHDSDevice "Observation device" """Device (e.g. analyser) that generates the measurements"""
+
 * observationResult 1..1 Base "Observation result" """Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."""
   * textualResult 0..1 string "Textual Result" """Narrative text result"""
   * numericResult 0..1 Base "Numeric Result" """A numeric value or interval (open or closed) of the result, result units of the measurement should be provided Measurement uncertainty interval are provided if needed."""
@@ -41,7 +43,7 @@ Characteristics: #can-be-target
 * anatomicLocation 0..1 CodeableConcept "Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSProcedure) "Subject" """The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about."""
+
 * component 0..* Base "Component" """Some observations have multiple component observations. These component observations are expressed as separate code value pairs that share the same attributes."""
   * code 1..1 CodeableConcept "Code" """Code representing the observation using the agreed code systems."""
     * ^binding.description = "LOINC, NPU, SNOMED CT"
@@ -63,7 +65,8 @@ Characteristics: #can-be-target
   * observationInterpretation 0..* CodeableConcept "Observation interpretation" """Information about reference intervals and result interpretation."""
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
     * ^binding.strength = #preferred
-* status 1..1 CodeableConcept "Status" """The status of the result value."""
+//* status 1..1 CodeableConcept "Status" """The status of the result value."""
+* status  
   * ^binding.description = "HL7 Observation status"
   * ^binding.strength = #preferred
 * derivedFrom 0..* Reference (EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy) "Derived from" """Related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."""
