@@ -24,15 +24,15 @@ Characteristics: #can-be-target
 * anatomicLocation 0..1 EHDSBodyStructure "Anatomic location and laterality where the observation was performed."
 * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
   * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
-  * valueQuantity
-    * ^binding.description = "UCUM"
+//  * valueQuantity
+    * ^binding.description = "UCUM for units, SNOMED CT for coded results"
     * ^binding.strength = #preferred
   // * valueRange
     // * ^binding.description = "UCUM"
     // * ^binding.strength = #preferred
-  * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
+  // * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
+  //   * ^binding.description = "SNOMED CT"
+  //   * ^binding.strength = #preferred
   * uncertainty 0..1 Base "Measurement uncertainty type and interval if needed."
 * dataAbsentReason 0..1 CodeableConcept "Provides a reason why the expected value in the element Observation.value[x] is missing."
   * ^binding.description = "HL7 Data absent reason"
