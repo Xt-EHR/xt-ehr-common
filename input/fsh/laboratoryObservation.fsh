@@ -1,17 +1,17 @@
 Logical: EHDSLaboratoryObservation
 Parent: EHDSObservation
 Title: "Laboratory observation model"
-Description: """C.11 - EHDS refined base model for Observation performed by laboratory"""
+Description: """EHDS refined base model for Observation performed by laboratory"""
 Characteristics: #can-be-target
 
-//* generalObservation 1..1 EHDSObservation "C.11.1 - General observation" """General observation information"""
+// * header.subject ^type.profile[+] = Canonical(EHDSPatient)
+// * header.subject ^type.profile[+] = Canonical(EHDSLocation)
 * testKit 0..1 EHDSDevice "Test kit" """Laboratory test kit used during measurement."""
 * calibrator 0..1 Identifier "Calibrator" """Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain. """
 * accreditationStatus 0..1 CodeableConcept "Accreditation status" """Accreditation status of the laboratory for the particular observation."""
   * ^binding.description = "Code system to be specified"
   * ^binding.strength = #preferred
 * previousResults 0..* EHDSLaboratoryObservation "Previous results" """Previous results of the same observation"""
-* reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
-* hasMember 0..* Reference (EHDSLaboratoryObservation or EHDSObservation) "Has member" """This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."""
-* resultDescription 0..1 string "Result description" """Comments and narrative representation of the observation result and findings."""
-* derivedFrom 0..* Reference (EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy) "Derived from" """Related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."""
+* code //1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
+  * ^binding.description = "LOINC, NPU"
+  * ^binding.strength = #preferred
