@@ -9,32 +9,30 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 Observation status"
   * ^binding.strength = #preferred
 //* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSProcedure) "Subject" """The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about."""
-* observationDate[x] 1..1 dateTime or Period "Observation date" """Clinically relevant time or time period for the observation."""
+* observationDate[x] 1..1 dateTime or Period "Clinically relevant time or time period for the observation"
 * code 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
   * ^binding.strength = #preferred
 //* observationName 1..1 string "Observation name" """Full name of the observation according to the used test coding standard."""
-* originalName 0..1 string "Observation original name" """Original (conventional) name of the observation """
+* originalName 0..1 string "Original (conventional) name of the observation"
 * method 0..1 CodeableConcept "Observation method" """Observation method (measurement principle) to obtain the result."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* order 0..1 Reference (EHDSServiceRequest) "Order" """Identifies order and order placer this observation belongs to. """
-* performer 0..1 EHDSHealthProfessional "Performer" """Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. """
-//* reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
-* anatomicLocation 0..1 CodeableConcept "Anatomic location" """Anatomic location and laterality where the observation should be or was performed. """
-  * ^binding.description = "SNOMED CT"
-  * ^binding.strength = #preferred
+* order 0..1 EHDSServiceRequest "Identifies order and order placer this observation belongs to"
+* performer 0..1 EHDSHealthProfessional "Performer" 
+// * reporter 0..1 EHDSHealthProfessional "Reporter" """With certain observation results, e.g. there may also be an interpreter or a person responsible for validation."""
+* anatomicLocation 0..1 EHDSBodyStructure "Anatomic location and laterality where the observation was performed."
 * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
   * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
-//  * valueQuantity
-//    * ^binding.description = "UCUM"
-//    * ^binding.strength = #preferred
-//  * valueRange
-//    * ^binding.description = "UCUM"
-//    * ^binding.strength = #preferred
-//  * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
-//    * ^binding.description = "SNOMED CT"
-//    * ^binding.strength = #preferred
+  * valueQuantity
+    * ^binding.description = "UCUM"
+    * ^binding.strength = #preferred
+  // * valueRange
+    // * ^binding.description = "UCUM"
+    // * ^binding.strength = #preferred
+  * valueCodeableConcept ^short = "A coded result from a selected coding system(s). This could be a code describing bacteria or other microorganism identified, description of urinary concernment, code explaining technical reason why the test could not be done etc."
+    * ^binding.description = "SNOMED CT"
+    * ^binding.strength = #preferred
   * uncertainty 0..1 Base "Measurement uncertainty type and interval if needed."
 * dataAbsentReason 0..1 CodeableConcept "Provides a reason why the expected value in the element Observation.value[x] is missing."
   * ^binding.description = "HL7 Data absent reason"
