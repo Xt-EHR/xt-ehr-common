@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * alertsSection 0..1 Base "Alerts section" "Alert section includes information about allergies, intolerances and other substantial alerts or warnings that health professionals should be aware of. "
   * sectionNarrative 0..1 string "Narrative content of the section. This narrative shell containing either narrative description of both allergy and alerts, or similar narrative sub-section elements shell be provided.  "
   * allergyAndIntolerance 0..* EHDSAllergyIntolerance "Allergy and Intolerance. A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the hospital stay)."
-  * medicalAlerts 0..* EHDSAlertFlag "Medical alerts. Specific alerts relevant to the patient’s condition that should be noted (other alerts not included in allergies)."
+  * medicalAlerts 0..* EHDSAlert "Medical alerts. Specific alerts relevant to the patient’s condition that should be noted (other alerts not included in allergies)."
 * encounterInformationSection 1..1 Base "Encounter information section."
   * sectionNarrative 1..1 string "Narrative content of the section."
   * encounterInformationSection 0..1 EHDSEncounter "Encounter information section. Hospital encounter details."

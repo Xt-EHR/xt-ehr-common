@@ -4,7 +4,7 @@ Title: "Observation model"
 Description: """EHDS refined base model for Observation information"""
 Characteristics: #can-be-target
 
-* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganization or EHDSHealthProfessional or EHDSProcedure) "Subject" """The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about."""
+* subject 1..1 Reference (EHDSPatient or EHDSLocation or EHDSDevice or EHDSOrganisation or EHDSHealthProfessional or EHDSProcedure) "Subject" """The patient, or group of patients, location, device, organisation, procedure or practitioner this observation is about."""
 * observationDate[x] 1..1 dateTime or Period "Observation date" """Clinically relevant time or time period for the observation."""
 * observationCode 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"

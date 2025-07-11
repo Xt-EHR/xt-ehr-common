@@ -7,7 +7,7 @@ Characteristics: #can-be-target
   * subject 1..1 EHDSPatient "Subject" """Patient/subject information"""
   * identifier 0..* Identifier "Business identifier for the object"
   * authorship 1..* Base "Authorship" """Resource authoring details"""
-    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganization or EHDSDevice "Author" """Author(s) by whom the resource was/were authored. Multiple authors could be provided."""
+    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author" """Author(s) by whom the resource was/were authored. Multiple authors could be provided."""
     * datetime 1..1 dateTime "Date and time of authoring/issuing" """Date and time of the issuing the document/resource by its author."""
   * lastUpdate 0..1 dateTime "Date and time of the last update to the resource" """Date and time of the last update to the document/information"""
   * status 1..1 CodeableConcept "Status of the resource" """Status of the resource"""
@@ -50,7 +50,7 @@ Characteristics: #can-be-target
   * authorSpecialty 0..* CodeableConcept "Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
-  * custodian 1..1 EHDSOrganization "Document custodian" """Organisation that is in charge of maintaining the document/report."""
+  * custodian 1..1 EHDSOrganisation "Document custodian" """Organisation that is in charge of maintaining the document/report."""
   * documentFormat 0..1 CodeableConcept "Document format" """An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType."""
     * ^binding.description = "HL7 Document Format Codes"
     * ^binding.strength = #preferred
