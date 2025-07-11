@@ -14,7 +14,7 @@ Characteristics: #can-be-target
 // // We don't have anything to say about these elements - which is not the same as "we don't want anyone to exchange them, so we exclude them from the model".
 
 // // This element is not present and the code is conflicting with the eHN guidelines
-// //* preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganization "A.1.3 - Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
+// //* preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganisation "A.1.3 - Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
 
 
 // /*

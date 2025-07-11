@@ -16,7 +16,7 @@ Characteristics: #can-be-target
 * episodeOfCare 0..* Reference (EHDSEpisodeOfCare) "Episode of care" """Episode(s) of care that this encounter should be recorded against"""
 * basedOn 0..* Reference (EHDSCarePlan or EHDSServiceRequest) "Based on" """The request that initiated this encounter"""
 * partOf 0..1 Reference (EHDSEncounter) "Part of" """Another Encounter this encounter is part of"""
-* serviceProvider 0..1 Reference (EHDSOrganization) "Service provider" """The organization (facility) responsible for this encounter"""
+* serviceProvider 0..1 Reference (EHDSOrganisation) "Service provider" """The organisation (facility) responsible for this encounter"""
 * appointment 0..* Reference (EHDSAppointment) "Appointment" """The appointment that scheduled this encounter"""
 * actualPeriod 0..1 Period "Actual period" """The actual start and end time of the encounter"""
 * plannedStartDate 0..1 dateTime "Planned start date" """The planned start date/time (or admission date) of the encounter"""
@@ -36,7 +36,7 @@ Characteristics: #can-be-target
   * destinationType 0..1 CodeableConcept "Destination type" """Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc.  """
     * ^binding.description = "hl7.discharge-disposition"
     * ^binding.strength = #preferred
-  * destinationLocation 0..1 Reference (EHDSOrganization or EHDSLocation) "Destination location" """The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact."""
+  * destinationLocation 0..1 Reference (EHDSOrganisation or EHDSLocation) "Destination location" """The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact."""
 * location 0..* Base "Location" """List of locations where the patient has been."""
   * period 0..1 Period "Period" """Time period during which the patient was present at the location"""
-  * organizationPart 1..1 EHDSLocation "Organization part" """Organization or organization part (department) where the patient was present."""
+  * organisationPart 1..1 EHDSLocation "Organisation part" """Organisation or organisation part (department) where the patient was present."""

@@ -16,7 +16,7 @@ Characteristics: #can-be-target
 * doseNumber 0..1 integer64 "Number in a series of vaccinations / doses" """Order in the vaccination course."""
 * batchNumber 0..* string "Batch number" """A distinctive combination of numbers and/or letters which specifically identifies a batch."""
 * dateOfVaccination 1..1 date "Date of vaccination" """The date and time when the vaccination was administered"""
-* administeringCentre 0..* EHDSOrganization "Administering centre" """Name/code of administering centre or a health authority responsible for the vaccination event"""
+* administeringCentre 0..* EHDSOrganisation "Administering centre" """Name/code of administering centre or a health authority responsible for the vaccination event"""
 * healthProfessionalIdentification 0..* EHDSHealthProfessional "Health Professional identification" """Name or health professional code responsible for administering the vaccine or prophylaxis"""
 * countryOfVaccination 0..1 CodeableConcept "Country of vaccination" """The country in which the individual has been vaccinated"""
   * ^binding.description = "ISO 3166"

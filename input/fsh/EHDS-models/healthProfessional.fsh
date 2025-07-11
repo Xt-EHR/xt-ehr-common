@@ -11,5 +11,5 @@ Characteristics: #can-be-target
 * role 0..* CodeableConcept "Health professional role. Multiple roles could be provided."
   * ^binding.description = "ISCO, SNOMED CT"
   * ^binding.strength = #preferred
-* organization 0..1 EHDSOrganization "The organization where this role is available"
-* specialty 0..* CodeableConcept "The specialty of a practitioner that describes the functional role they are practicing at a given organization"
+* organisation 0..1 EHDSOrganisation "The organisation where this role is available"
+* specialty 0..* CodeableConcept "The specialty of a practitioner that describes the functional role they are practicing at a given organisation"

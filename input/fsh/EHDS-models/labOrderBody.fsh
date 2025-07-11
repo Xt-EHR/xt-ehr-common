@@ -8,7 +8,7 @@ Characteristics: #can-be-target
   * orderId 1..* Identifier "B.1.1.1 - Order Id" """An identifier of the laboratory test order."""
   * orderDateAndTime 0..1 dateTime "B.1.1.2 - Order date and time" """Date and time of the order placement."""
   * orderText 0..1 string "B.1.1.3 - Order text" """A verbal description of the order or any supplementary requirements specific to each type of order, if they cannot be expressed formally."""
-  * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganization or EHDSPatient "B.1.1.3 - Order placer" """The person/organization \"authorised\" to place the order. Order placer could be either a health professional, health professional organization or the patient himself."""
+  * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient "B.1.1.3 - Order placer" """The person/organisation \"authorised\" to place the order. Order placer could be either a health professional, health professional organisation or the patient himself."""
   * orderReasonText 0..* string "B.1.1.4 - Order reason text" """An explanation or justification for why this service is being requested in textual form."""
   * orderReason 0..* Reference (EHDSCondition or EHDSObservation) "B.1.1.5 - Order reason" """An explanation or justification for why this service is being requested in coded form. """
 * encounter 0..1 Reference (EHDSEncounter) "B.1.2 - Encounter" """An encounter that provides additional information about the healthcare context in which this order is made."""

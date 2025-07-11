@@ -107,7 +107,7 @@ Profile: EN
 Parent: Element
 Description: "EntityName"
 * . ^short = "Entity name"
-* . ^definition = "A name for a person, organization, place or thing. A sequence of name parts, such as given name or family name, prefix, suffix, etc."
+* . ^definition = "A name for a person, organisation, place or thing. A sequence of name parts, such as given name or family name, prefix, suffix, etc."
 
 */
 /*

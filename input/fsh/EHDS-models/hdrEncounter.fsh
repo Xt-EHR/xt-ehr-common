@@ -13,5 +13,5 @@ Characteristics: #can-be-target
 * admission 1..1
 * discharge 1..1
 * location
-  * organizationPart 1..1
-    * ^definition = """Organization or organization part (hospital department) where the patient was present."""
+  * organisationPart 1..1
+    * ^definition = """Organisation or organisation part (hospital department) where the patient was present."""
