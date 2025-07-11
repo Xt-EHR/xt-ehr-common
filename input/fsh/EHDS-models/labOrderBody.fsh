@@ -24,5 +24,5 @@ Characteristics: #can-be-target
 * specimen 0..* EHDSSpecimen "B.1.4 - Specimen" """Specimen information"""
 * serviceRequests 0..* EHDSServiceRequest "B.1.5 - Service requests" """Specification of requested service or services"""
 * allergy 0..* EHDSAllergyIntolerance "B.1.6 - Allergy" """Allergies and intolerances that may affect order execution or interpretation of results"""
-* alerts 0..* EHDSAlertFlag "B.1.7 - Alerts" """Alerts and warnings that may affect order execution or interpretation of results"""
+* alerts 0..* EHDSAlert "B.1.7 - Alerts" """Alerts and warnings that may affect order execution or interpretation of results"""
 * appointment 0..1 EHDSAppointment "B.1.8 - Appointment" """Information about the appointment (if the appointment has been booked)"""
