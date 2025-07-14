@@ -13,7 +13,7 @@ Characteristics: #can-be-target
   * sectionNarative 0..1 string "B.1.2.1 - Section narative" """Narative content of the section. This narative shell containing either narative description of al subsections, or similar narative sub-section elements shell be provided. This will be the preferred way.  """
   * vaccinationSection 0..1 Base "B.1.2.2 - Vaccination section" """Vaccination history subsection."""
     * subsectionNarative 0..1 string "B.1.2.2.1 - Subsection narative" """Narative content of the section. """
-    * vaccination 0..* EHDSImmunization "B.1.2.2.2 - Vaccination" """Vaccination / prophylaxis information."""
+    * vaccination 0..* EHDSImmunisation "B.1.2.2.2 - Vaccination" """Vaccination / prophylaxis information."""
   * pastProblemsSection 0..1 Base "B.1.2.3 - Past problems section" """Problems history subsection."""
     * subsectionNarative 0..1 string "B.1.2.3.1 - Subsection narative" """Narative content of the subsection. """
     * pastProblems 0..* EHDSCondition "B.1.2.3.2 - Past problems" """Resolved, closed or inactive problems."""

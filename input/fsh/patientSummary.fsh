@@ -77,10 +77,10 @@ Characteristics: #can-be-target
 // //TO_DO: ADD BACK
 // //  * procedure 0..* EHDSProcedure "Major procedures."
 
-// * immunisations 0..1 Base "Section: Immunisations." """The primary purpose is to enable communication of a patient's immunization status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section."""
+// * immunisations 0..1 Base "Section: Immunisations." """The primary purpose is to enable communication of a patient's immunisation status. The section should include current immunisation status and may contain the entire immunisation history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section."""
 //   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
 // //TO_DO: ADD BACK
-// //  * vaccination 0..* EHDSImmunization "Immunizations given to the patient and their status at the point of care."
+// //  * vaccination 0..* EHDSImmunisation "Immunisations given to the patient and their status at the point of care."
 //     * ^requirements = "eHN PS Guideline"
 
 
