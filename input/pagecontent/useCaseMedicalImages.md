@@ -20,13 +20,13 @@ Imaging result report could be divided into several parts: document header, body
 
 #### Detail EHDS information models for Imaging
 - [Imaging Report Document](StructureDefinition-EHDSImagingReport.html)
-- [Imaging Report Header](StructureDefinition-EHDSImagingReportHeader.html)
-- [Imaging Report Body](StructureDefinition-EHDSImagingReportBody.html)
+- [Imaging Study/Manifest](StructureDefinition-EHDSImagingStudy.html)
 
 
 ### FHIR Implementation Guide
 
-Joint working group with HL7 Europe is expected to start in early 2025.
+Published version: https://hl7.eu/fhir/imaging-r5/
+Work in progress: [Latest build](https://build.fhir.org/ig/hl7-eu/imaging); [GitHub](https://github.com/hl7-eu/imaging/)
 
 ### IHE Profile
 ...
