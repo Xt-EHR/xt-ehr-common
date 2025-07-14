@@ -1,4 +1,5 @@
-/* DELETED
+/* 
+DELETED
 Logical: EHDSImagingReportBody
 //Id: EHDSreportBody
 Title: "Imaging report body model"
@@ -62,4 +63,4 @@ Characteristics: #can-be-target
   * description 1..1 string "B.1.6.1 - Description" """Narrative description of the recommended activities including additional test, medication etc."""
   * carePlan 0..* EHDSCarePlan "B.1.6.2 - Care plan" """A complex and structured information about recommended goals, activities and objectives in the form of one or more formal care plan."""
 * comparisonStudy 0..* Reference(EHDSImagingReport) "B.1.7 - Comparison Study" """Documentation (reference) of a prior Imaging Report to which the current images were compared."""
-/*
+*/

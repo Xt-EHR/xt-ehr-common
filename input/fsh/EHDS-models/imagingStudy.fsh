@@ -39,6 +39,9 @@ Characteristics: #can-be-target
     * instanceUid 1..1 id "Instance UID" """DICOM SOP Instance UID"""
     * sopClass 1..1 uri "SOP class" """DICOM class type"""
     * instanceNumber 0..1 integer "Instance number" """The number of this instance in the series"""
+
+
+/* Removed according to issue 172
     * radiationDoseInformation 0..1 Base "Radiation dose information" """Kerma area product (KAP), Total KAP, Kerma at the end of tube (dental X-ray), Thickness of breast for the calculation of Average absorbed breast dose."""
       * kap 0..1 Quantity "KAP" """Kerma area product (KAP). A method of radiation dose monitoring used in radiographic and fluoroscopic studies."""
       * totalKerma 0..1 Quantity "Total Kerma" """Kerma is a measure of energy transferred from radiation to matter and is an acronym for kinetic energy released to matter."""
@@ -50,3 +53,5 @@ Characteristics: #can-be-target
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
   * radiationDose 0..1 Quantity "Radiation dose" """Dose length product - Computerized Tomography (CT) related."""
+
+*/
