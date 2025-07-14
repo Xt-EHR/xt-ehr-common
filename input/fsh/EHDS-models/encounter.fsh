@@ -12,7 +12,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * note 0..1 string "A narrative description of the encounter course."
 * episodeOfCare 0..* EHDSEpisodeOfCare "Reference to the episode(s) of care that this encounter should be recorded against"
-* basedOn 0..* EHDSCarePlan or EHDSServiceRequest "Reference to the request that initiated this encounter"
+* basedOn[x] 0..* EHDSCarePlan or EHDSServiceRequest "Reference to the request that initiated this encounter"
 * partOf 0..1 EHDSEncounter "Reference to another encounter this encounter is part of"
 * serviceProvider 0..1 EHDSOrganisation "The organisation (facility) responsible for this encounter"
 * actualPeriod 0..1 Period "The actual start and end time of the encounter"
@@ -36,4 +36,4 @@ Characteristics: #can-be-target
   * destinationLocation[x] 0..1 EHDSOrganisation or EHDSLocation "The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact."
 * location 0..* Base "List of locations where the patient has been."
   * period 0..1 Period "Time period during which the patient was present at the location"
-  * organisationPart 1..1 EHDSLocation "Organisation or organisation part (department) where the patient was present."
+  * organisationPart[x] 1..1 EHDSOrganisation or EHDSLocation "Organisation or organisation part (department) where the patient was present."
