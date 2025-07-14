@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * studyCustodian 0..1 EHDSOrganisation "Organisation name, address, contact information."
 * studyEndpoint 0..1 EHDSEndpoint "Study endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
 * series 0..* Base "Series. Each study has one or more series of instances"
-  * seriesUid 1..1 id "DICOM Series Instance UID for the series"
+  * seriesUid 1..1 Identifier "DICOM Series Instance UID for the series"
   * number 0..1 integer "Numeric identifier of this series"
   * acquisitionModality 1..1 CodeableConcept "Acquisition modality - the modality used for this series"
     * ^binding.description = "DICOM CID029"
@@ -36,7 +36,7 @@ Characteristics: #can-be-target
   * started 0..1 dateTime "When the series started"
   * instancesInTheSeries 0..* Base "Instances in the series - a single SOP instance from the series"
     * instanceTitle 0..1 string "Instance title that is the description of the instance."
-    * instanceUid 1..1 id "DICOM SOP Instance UID"
+    * instanceUid 1..1 Identifier "DICOM SOP Instance UID"
     * sopClass 1..1 uri "SOP class - DICOM class type"
     * instanceNumber 0..1 integer "The number of this instance in the series"
 
