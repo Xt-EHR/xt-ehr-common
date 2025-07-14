@@ -28,7 +28,7 @@ Characteristics: #can-be-target
 
 //ok. performer and dateAndTime removed as they are present in Observations
 * admissionEvaluation 0..1 Base "Section: Admission evaluation" "Admission evaluation section should be reported exceptionally only if it is relevant to ensure continuity of care."
-    * ^requirements = "eHN Guideline HDR (v1.1): A2.4"
+  * ^requirements = "eHN Guideline HDR (v1.1): A2.4"
   * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative sub-section elements should be provided."
   * objectiveFindings 0..1 Base "Objective findings" "Sub-section with objective findings."
     * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative sub-section elements should be provided."
@@ -41,7 +41,7 @@ Characteristics: #can-be-target
   //ok
   * functionalStatus 0..1 Base "Section: Functional status" "Functional status can be assessed in several different ways, usually with a focus on the person’s abilities to perform basic activities of daily living (ADL), which include basic self-care such as bathing, feeding, and toileting and instrumental activities of daily living (IADL), which includes activities such as cooking, shopping, and managing one’s own affairs.For details see: https://paciowg.github.io/functional-status-ig/"
     * ^requirements = "eHN Guideline HDR (v1.1): A2.4.2"
-  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+    * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual's ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
 
 // ok. infectiousContacts into a different model?    
