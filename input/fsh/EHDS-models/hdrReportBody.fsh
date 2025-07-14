@@ -209,8 +209,8 @@ Characteristics: #can-be-target
 
 //ok
 * functionalStatus 0..1 Base "Section: Functional status" "Functional status can be assessed in several different ways, usually with a focus on the person’s abilities to perform basic activities of daily living (ADL), which include basic self-care such as bathing, feeding, and toileting and instrumental activities of daily living (IADL), which includes activities such as cooking, shopping, and managing one’s own affairs.For details see: https://paciowg.github.io/functional-status-ig/"
-    * ^requirements = "eHN Guideline HDR (v1.1): A.2.7.2"
-    * narrative 0..1 string "Narrative, potentially formatted, content of the section"
+  * ^requirements = "eHN Guideline HDR (v1.1): A.2.7.2"
+  * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual's ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
 * medicationSummary 0..1 Base "Medication summary. Summary information on the medication recommended for the period after discharge, indicating whether the medication is changed or newly started. Compared to previous practices, the overview is supplemented with medication that has been discontinued."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.1"
