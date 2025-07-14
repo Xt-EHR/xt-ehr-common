@@ -17,7 +17,7 @@ Characteristics: #can-be-target
   * sexForClinicalUse 0..* CodeableConcept "B.1.2.4 - Sex for clinical use" """A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population"""
     * ^binding.description = "HL7 sex-parameter-for-clinical-use"
     * ^binding.strength = #preferred
-  * vaccination 0..* EHDSImmunization "B.1.2.5 - Vaccination" """Vaccination history of the patient. """
+  * vaccination 0..* EHDSImmunisation "B.1.2.5 - Vaccination" """Vaccination history of the patient. """
   * otherSupportingInformation 0..* Resource "B.1.2.6 - Other supporting information" """Any other type of relevant supporting information"""
 * specimen 0..* EHDSSpecimen "B.1.3 - Specimen" """Specimen information"""
 * serviceRequest 0..* EHDSServiceRequest "B.1.4 - Service request" """Specification of requested service or services"""
