@@ -1,3 +1,4 @@
+/* DELETED
 Logical: EHDSImagingReportHeader
 //Id: EHDSimagingReportHeader
 Title: "Imaging report header model"
@@ -45,3 +46,5 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
   * accessionNumber 0..1 string "A.1.9.14 - Accession number" """This is an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."""
+
+  */ 
