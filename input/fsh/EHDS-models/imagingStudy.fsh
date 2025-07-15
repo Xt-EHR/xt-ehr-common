@@ -1,14 +1,14 @@
 Logical: EHDSImagingStudy
-//Id: EHDSimagingStudy
+Parent: EHDSDataSet
 Title: "Imaging study model"
 Description: """EHDS refined base model for Imaging study"""
 Characteristics: #can-be-target
 
-* identifier 1..* Identifier "Identifiers for the ImagingStudy such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier."
+* header.identifier ^short = "Identifiers for the Imaging Study such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier."
+* header.identifier 1..*
 * modality 0..* CodeableConcept "All of the distinct values for series' modalities"
   * ^binding.description = "DICOM CID029"
   * ^binding.strength = #preferred
-* subject 1..1 EHDSPatient "The subject of the study"
 * encounter 0..1 EHDSEncounter "Reference to the encounter with which this imaging study is associated"
 * started 0..1 dateTime "Date and time the study started."
 * basedOn 0..* EHDSServiceRequest "References to the diagnostic requests that resulted in this imaging study being performed."
@@ -17,7 +17,7 @@ Characteristics: #can-be-target
 * description 0..1 string "The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed."
 * studyCustodian 0..1 EHDSOrganisation "Organisation name, address, contact information."
 * studyEndpoint 0..1 EHDSEndpoint "Study endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
-* series 0..* Base "Series. Each study has one or more series of instances"
+* series 0..* Base "Series. Each study has one or more series of instances, but they may be absent when no series information needs to be conveyed"
   * seriesUid 1..1 Identifier "DICOM Series Instance UID for the series"
   * number 0..1 integer "Numeric identifier of this series"
   * acquisitionModality 1..1 CodeableConcept "Acquisition modality - the modality used for this series"
@@ -26,19 +26,18 @@ Characteristics: #can-be-target
   * description 0..1 string "A short human readable summary of the series"
   * numberOfInstances 0..1 integer "Number of Series Related Instances"
   * seriesEndpoint 0..1 EHDSEndpoint "Series endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
-  * bodySite 0..1 CodeableConcept "Body part examined"
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
+  * bodySite 0..1 EHDSBodyStructure "Body part examined"
   * laterality 0..1 CodeableConcept "Body part laterality"
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
   * specimen 0..* EHDSSpecimen "Specimen imaged"
   * started 0..1 dateTime "When the series started"
-  * instancesInTheSeries 0..* Base "Instances in the series - a single SOP instance from the series"
+  * instancesInTheSeries 0..* Base "Each series has one or more instances, but they may be absent when no instance information needs to be conveyed"
     * instanceTitle 0..1 string "Instance title that is the description of the instance."
     * instanceUid 1..1 Identifier "DICOM SOP Instance UID"
     * sopClass 1..1 uri "SOP class - DICOM class type"
     * instanceNumber 0..1 integer "The number of this instance in the series"
+    * numberOfFrames 0..1 integer "The number of frames in a multiframe instance"
 
 
 /* Removed according to issue 172

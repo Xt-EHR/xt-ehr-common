@@ -23,6 +23,6 @@ Characteristics: #can-be-target
 * specimen 0..* Reference (EHDSSpecimen) "Specimen" """Specimens to be used by the laboratory procedure"""
 * subject 1..1 Reference (EHDSPatient or EHDSGroup or EHDSLocation or EHDSDevice) "Subject" """Individual or Entity the service is ordered for"""
 * encounter 0..1 EHDSEncounter "Encounter" """An encounter that provides additional information about the healthcare context in which this request is made."""
-* occurance[x] 0..1 dateTime or Period "Occurance" """When service should occur"""
+* occurrence[x] 0..1 dateTime or Period "Occurrence" """When service should occur"""
 * patientInstructions 0..1 string "Patient instructions" """Patient or consumer-oriented instructions"""
 * coverage 0..* Reference (EHDSCoverage) "Coverage" """Insurance or medical plan or a payment agreement."""
