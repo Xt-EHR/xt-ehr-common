@@ -1,14 +1,14 @@
 Logical: EHDSImagingStudy
-//Id: EHDSimagingStudy
+Parent: EHDSDataSet
 Title: "Imaging study model"
 Description: """EHDS refined base model for Imaging study"""
 Characteristics: #can-be-target
 
-* identifier 1..* Identifier "Identifiers for the ImagingStudy such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier."
+* header.identifier ^short = "Identifiers for the Imaging Study such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier."
+* header.identifier 1..*
 * modality 0..* CodeableConcept "All of the distinct values for series' modalities"
   * ^binding.description = "DICOM CID029"
   * ^binding.strength = #preferred
-* subject 1..1 EHDSPatient "The subject of the study"
 * encounter 0..1 EHDSEncounter "Reference to the encounter with which this imaging study is associated"
 * started 0..1 dateTime "Date and time the study started."
 * basedOn 0..* EHDSServiceRequest "References to the diagnostic requests that resulted in this imaging study being performed."
