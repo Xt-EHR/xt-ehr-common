@@ -19,7 +19,7 @@ Characteristics: #can-be-target
     * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
     * orderReason[x] 0..* EHDSCondition or EHDSObservation "An explanation or justification for why this service is being requested in coded form."
     * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the imaging investigation."
-    * supportingInformation 0..* Base "Additional clinical information about the patient or specimen that may affect service delivery or interpretation." """This information includes diagnosis, clinical findings and other observations. This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order.  For example, reporting the metal implants present in patient's body."""
+    * supportingInformation 0..1 Base "Additional clinical information about the patient or specimen that may affect service delivery or interpretation." """This information includes diagnosis, clinical findings and other observations. This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order.  For example, reporting the metal implants present in patient's body."""
       * observation 0..* EHDSObservation "Clinical findings and other observations (e.g., height and weights of the patient)."
       * condition 0..* EHDSCondition "Conditions that may influence the service or result interpretation."
       * medicationAdministration 0..* EHDSMedicationAdministration "Medication administered before ordering the service."
