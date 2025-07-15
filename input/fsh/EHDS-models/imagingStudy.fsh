@@ -39,6 +39,7 @@ Characteristics: #can-be-target
     * instanceUid 1..1 Identifier "DICOM SOP Instance UID"
     * sopClass 1..1 uri "SOP class - DICOM class type"
     * instanceNumber 0..1 integer "The number of this instance in the series"
+    * numberOfFrames 0..1 integer "The number of frames in a multiframe instance"
 
 
 /* Removed according to issue 172
