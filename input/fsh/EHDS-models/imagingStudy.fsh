@@ -26,9 +26,7 @@ Characteristics: #can-be-target
   * description 0..1 string "A short human readable summary of the series"
   * numberOfInstances 0..1 integer "Number of Series Related Instances"
   * seriesEndpoint 0..1 EHDSEndpoint "Series endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
-  * bodySite 0..1 CodeableConcept "Body part examined"
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
+  * bodySite 0..1 EHDSBodyStructure "Body part examined"
   * laterality 0..1 CodeableConcept "Body part laterality"
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred

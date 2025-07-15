@@ -49,13 +49,7 @@ Characteristics: #can-be-target
     * modality 1..* CodeableConcept "Imaging modality (or modalities) used during imaging investigation (DICOM CID029)."
       * ^binding.description = "DICOM Modality"
       * ^binding.strength = #preferred
-    * bodyPart 0..* Base "All body parts investigated"
-      * bodyLocation 0..1 CodeableConcept "Localisation on/in the body."
-        * ^binding.description = "SNOMED CT, ICD-O-3"
-        * ^binding.strength = #preferred
-      * laterality 0..1 CodeableConcept "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
+    * bodyPart 0..* EHDSBodyStructure "All body parts investigated"
     * imagingProcedures 0..* EHDSProcedure "Imaging procedure performed during imaging study."
     * medication 0..* EHDSMedicationAdministration "Information about medication administered (contrast, sedation, stress agents), etc."
     * adverseReaction 0..* EHDSAllergyIntolerance "Adverse reactions manifested during imaging investigation."
