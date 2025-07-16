@@ -17,12 +17,17 @@ Characteristics: #can-be-target
 //* preferredHealthProfessional[x] 0..* EHDSHealthProfessional or EHDSOrganisation "Preferred Health Professional" """Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."""
 
 
+
+
 * alerts 1..1 Base "Section: Alerts." "Information about substantial alerts or warnings that health professionals should be aware of."
   * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * narrative 0..1 string "Narrative, potentially formatted, content of the section"
   * emptyReason 0..1 CodeableConcept "Reason for absence of data"
   * medicalAlert 0..* EHDSAlert "Description of medical alerts in textual format: any clinical information that is imperative to know so that the life or health of the patient does not come under threat."
     * ^requirements = "ISO IPS"
+
+
+
 
 
 * allergiesAndIntolerances 1..1 Base "Section: Allergies and intolerances"
@@ -51,10 +56,13 @@ Characteristics: #can-be-target
   * problems 0..* EHDSCondition "!!Health conditions affecting the health of the patient.!!"
 
 
+
 * medicationSummary 1..1 Base "Section: Medication Summary." """Current and relevant past medicine."""
   * narrative 0..1 string "Text summary of the content in the section"
   * emptyReason 0..1 CodeableConcept "Use if no medicines are listed"
   * medicationTreatment 0..* EHDSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
+
+
 
 
 * medicalDevicesAndImplants 1..1 Base "Section: Medical devices and implants" 
