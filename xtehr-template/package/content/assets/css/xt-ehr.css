@@ -38,6 +38,15 @@
   --dragon-background-color: #ebe7ee; /* 29. Dragon background color */
   --dragon-font-color: #c76139; /* 30. Dragon font color */
 
+  --must-color: #ba4328;
+  --must-bg-color: #fedfd0;
+
+  --should-color: #b1a730;
+  --should-bg-color: #fefad0;
+
+  --may-color: #388fa7;
+  --may-bg-color: #daf7ff;
+  
 
 }
 
@@ -64,4 +73,120 @@ p, li {
 
 table.grid td {
   font-size: 13px;
+}
+
+
+
+
+.info-box {
+  border: 2px solid #004080;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f0f0f0;
+  position: relative;
+  font-size: 0.9em;
+  line-height: 1.6;  
+}
+
+.info-title {
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Ensure the text and icon align vertically */
+  /* padding-left: 30px; */
+}
+
+.info-box .info-title:before {
+  font-family: 'Font Awesome 5 Free';
+  content: ""; /* This will be dynamically filled based on the class */
+  margin-right: 10px;
+  display: block;
+  width: 20px; /* Ensure sufficient space for the icon */
+  text-align: center;
+}
+
+.info-box.must {
+  border-color: var(--must-color);
+  background-color: var(--must-bg-color);
+}
+
+.info-box.must .info-title,
+.info-box.must .info-title:before {
+  color: var(--must-color);
+  background-color: var(--must-bg-color);
+}
+
+.info-box.should {
+  border-color: var(--should-color);
+  background-color: var(--should-bg-color);
+}
+
+.info-box.should .info-title,
+.info-box.should .info-title:before {
+  color: var(--should-color);
+  background-color: var(--should-bg-color);
+}
+
+.info-box.may {
+  border-color: var(--may-color);
+  background-color: var(--may-bg-color);
+}
+
+.info-box.may .info-title,
+.info-box.may .info-title:before {
+  color: var(--may-color);
+  background-color: var(--may-bg-color);
+}
+.info-box.must .info-title:before {
+  content: "\f023"; /* Lock icon for "must" */
+}
+
+.info-box.should .info-title:before {
+  content: "\f164"; /* Thumbs up icon for "should" */
+}
+
+.info-box.may .info-title:before {
+  content: "\f05a"; /* Information circle icon for "may" */
+}
+
+.info-box pre {
+  display: inline-block; /* Inline-block makes it flow in line but respect whitespace */
+  background: #e1e1e1;  /* Light grey background for distinction */
+  padding: 2px 4px;      /* Padding around the text */
+  margin: 0 2px;         /* Margins for spacing */
+  border-radius: 4px;    /* Rounded corners */
+  vertical-align: middle; /* Adjusts the vertical alignment to match baseline of surrounding text */
+  white-space: pre-wrap; /* Allows text to wrap if necessary */
+}
+
+
+
+.stakeholder-note {
+  margin: 1em 0;
+  padding: 2em 1em 1em 1em; /* Top padding increased to make space for title box */
+  border: 2px solid #550000;
+  border-left: 10px solid #b93940; /* thicker left border */
+  border-radius: 8px;
+  background-color: #f0d1d0;
+  position: relative;
+}
+
+/* Box around the title */
+.stakeholder-note::before {
+  content: "Stakeholder Consultation";
+  position: absolute;
+  top: -0.9em; /* Float above the top border */
+  left: .4em; /* Float above the top border */
+  display: block;
+  font-weight: bold;
+  font-size: larger;
+  color: #fff;
+  background-color: #b93940;
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  margin-bottom: 0.8em;
+  width: fit-content;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
