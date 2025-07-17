@@ -1,3 +1,4 @@
+/*
 Logical: EHDSDischargeReportBody
 //Id: EHDSDischargeReportBody
 Title: "Discharge Report body model"
@@ -229,3 +230,5 @@ Characteristics: #can-be-target
   * carePlan 0..* EHDSCarePlan "Structured care plan after discharge. Multiple care plans could be provided."
   * otherRecommendations 0..1 string "Other recommendations (advice) after discharge. E.g., recommendation to suggest hip replacement, reduce number of cigarettes, stop smoking, increase physical exercises, etc."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.3"
+
+  */
