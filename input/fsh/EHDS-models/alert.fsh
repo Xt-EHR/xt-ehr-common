@@ -1,6 +1,6 @@
 Logical: EHDSAlert
 Parent: EHDSDataSet
-Title: "Alert flag model"
+Title: "Alert model"
 Description: "Alert flag"
 Characteristics: #can-be-target
 
