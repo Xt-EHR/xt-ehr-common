@@ -1,5 +1,5 @@
 Logical: EHDSMedication
-Title: "Medication"
+Title: "Medication model"
 Description: "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile. Model is suitable for generic/virtual medications as well as branded/real products."
 Characteristics: #can-be-target
 * ^status = #active
