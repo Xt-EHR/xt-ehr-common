@@ -6,7 +6,7 @@ Characteristics: #can-be-target
 
 //* subject 1..1 EHDSPatient "A.1.1 - Subject" """Patient/subject information"""
 * healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
-* intendedRecipient 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
+* intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 //* authorship 1..* Base "A.1.6 - Authorship" """Information about author or authors of the document"""
 //  * author 1..1 EHDSHealthProfessional "A.1.6.1 - Author" """Author by whom the document was/were authored. Multiple authors could be provided."""
 //  * datetime 1..1 dateTime "A.1.6.2 - DateTime" """Date and time of the last modification of the document by its Author."""
