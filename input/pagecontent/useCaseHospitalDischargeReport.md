@@ -20,8 +20,7 @@ Discharge report could be divided into several parts: document header, body and 
 
 ### Detail EHDS information models for Discharge Report
 - [Discharge Report Document](StructureDefinition-EHDSDischargeReport.html)
-- [Discharge Report Header](StructureDefinition-EHDSDischargeReportHeader.html)
-- [Discharge Report Body](StructureDefinition-EHDSDischargeReportBody.html)
+
 
 ### FHIR Implementation Guide
 

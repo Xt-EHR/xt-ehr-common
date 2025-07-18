@@ -1,3 +1,4 @@
+/*
 Logical: EHDSDischargeReportBody
 //Id: EHDSDischargeReportBody
 Title: "Discharge Report body model"
@@ -75,7 +76,14 @@ Characteristics: #can-be-target
       * travelHistory 0..1 Base "Travel history reported by the patient. Multiple records could be provided."
         * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.1.5.2"
         * travelHistory 0..* EHDSTravelHistory "Travel history for one country"
-
+    * pregnancyHistory 0..1 Base "Section: Pregnancy history" """To present the current health state of the patient with respect to pregnancy and to provide chronological and outcome information about past pregnancies. """
+      * ^requirements = "eHN Guideline PS (v3.4) A2.6, ISO IPS"
+      * currentPregnancyStatus 0..1 EHDSCurrentPregnancy "Current pregnancy status" """Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, unknown."""
+      * previousPregnanciesStatus 0..1 CodeableConcept "Overall status of previous pregnancies" """Overall status of previous pregnancies, including 
+  — Yes, previous pregnancies 
+  — No, previous pregnancies 
+  — Unknown"""
+      * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
 
   * familyHistorySection 0..1 Base "Family history section" "Relevant family history section."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.2"
@@ -222,3 +230,5 @@ Characteristics: #can-be-target
   * carePlan 0..* EHDSCarePlan "Structured care plan after discharge. Multiple care plans could be provided."
   * otherRecommendations 0..1 string "Other recommendations (advice) after discharge. E.g., recommendation to suggest hip replacement, reduce number of cigarettes, stop smoking, increase physical exercises, etc."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.3"
+
+  */
