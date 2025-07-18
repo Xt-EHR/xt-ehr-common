@@ -8,7 +8,7 @@ Characteristics: #can-be-target
 * typeOfSpecies 0..1 CodeableConcept "Biologic type of species for laboratory result reports bound to non-human subjects."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* material 0..1 CodeableConcept "Material that forms the Specimen."
+* material 0..1 CodeableConcept "Material that forms the specimen."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * collectionPeriod 0..1 Period "The period or date and time of specimen collection."
