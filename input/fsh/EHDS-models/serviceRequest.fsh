@@ -9,8 +9,7 @@ Characteristics: #can-be-target
 //* header.subject ^type.profile[+] = Canonical(EHDSPatient)
 //* header.subject ^type.profile[+] = Canonical(EHDSLocation)
 //* header.subject ^type.profile[+] = Canonical(EHDSDevice)
-
-* subject[x] 1..1 EHDSPatient or EHDSLocation or EHDSDevice = "Individual or Entity the service is ordered for"
+* subject[x] 1..1 EHDSPatient or EHDSLocation or EHDSDevice "Individual or Entity the service is ordered for"
 * serviceText 0..1 string "Service text" """Textual description of the requested service"""
 * serviceCode 0..1 CodeableConcept "Service code" """A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"

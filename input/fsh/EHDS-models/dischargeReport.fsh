@@ -138,39 +138,13 @@ Characteristics: #can-be-target
       * useOfSubstances 0..1 Base "Use of substances" "Information about use and/or abuse of specific substances."
         * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.4"
         * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
-        * alcoholUse 0..* Base "Alcohol consumption by the patient. Multiple records on alcohol use could be provided."
+        * alcoholUse 0..* EHDSSubstanceUse "Alcohol consumption by the patient. Multiple records on alcohol use could be provided."
           * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.4.1"
-          * status 0..1 CodeableConcept "Status of the patient’s alcohol use."
-            * ^binding.description = "SNOMED CT"
-            * ^binding.strength = #preferred
-          * periodAndQuantity 0..1 Base "Period of use and amount observation (The extent of the patient’s alcohol use in units of alcohol per time period.)"
-            * period 0..1 Period "Time period of alcohol use."
-            * quantity 1..1 Quantity "Quantity (volume per time unit)."
-          * comment 0..1 string "Textual comment."
-        * tobaccoUse 0..* Base "Tobacco use" "Represent smoking or tobacco habits. Multiple records on tobacco use could be provided."
+        * tobaccoUse 0..* EHDSSubstanceUse "Tobacco use" "Represent smoking or tobacco habits. Multiple records on tobacco use could be provided."
           * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.4.2"
-          * status 0..1 CodeableConcept "Status of the patient’s tobacco use."
-            * ^binding.description = "SNOMED CT"
-            * ^binding.strength = #preferred
-          * periodAndQuantity 0..1 Base "Period of use and amount (The extent of the patient’s tobacco use in units per time period.)"
-            * period 0..1 Period "Time period of tobacco usage."
-            * quantity 1..1 Quantity "The number of cigarettes, cigars or grams of rolling tobacco consumed per day, week, month or year."
-          * comment 0..1 string "Textual comment."
-        * drugConsumption 0..* Base "Consumption of drugs and other substances (in terms of abuse)."
+        * drugConsumption 0..* EHDSSubstanceUse "Consumption of drugs and other substances (in terms of abuse)."
           * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.4.3"
-          * status 0..1 CodeableConcept "The status of the patient’s drug consumption."
-            * ^binding.description = "SNOMED CT"
-            * ^binding.strength = #preferred
-          * periodAndQuantity 0..1 Base "Period of use and amount (The extent of the patient’s drug use in units per time period.)"
-            * period 0..1 Period "Time period of drug use."
-            * quantity 1..1 Quantity "The number of units (pills, joints, shots etc.) per day, week, month, or year; or the frequency of use."
-          * drugOrMedicationType 0..1 CodeableConcept "Drug or medication type"
-            * ^binding.description = "SNOMED CT"
-            * ^binding.strength = #preferred
-          * routeOfAdministration 0..* CodeableConcept "Route or routes of administration"
-            * ^binding.description = "EDQM"
-            * ^binding.strength = #preferred
-          * comment 0..1 string "Textual comment."
+
 
   * courseOfHospitalisation 1..1 Base "Course of hospital stay."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.6"
