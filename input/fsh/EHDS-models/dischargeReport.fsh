@@ -145,13 +145,14 @@ Characteristics: #can-be-target
         * drugConsumption 0..* EHDSSubstanceUse "Consumption of drugs and other substances (in terms of abuse)."
           * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.4.3"
 
-
   * courseOfHospitalisation 1..1 Base "Course of hospital stay."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.6"
     * diagnosticSummary 1..1 Base "Diagnostic summary. All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care." """The diagnostic summary differentiates, in accordance with the international recommendation, between problems treated during hospital stay and other (untreated) problems. Treated problems are problems that were the subject of diagnostics, therapy, nursing, or (continuous) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA), conditions acquired during hospital stay (HAC) and problems that cannot be classified as being of any of the two (N/A). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation, after all examinations. This section contains concise, well specified, codeable, summary of problems. Problems are ordered by importance (main problems first) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section."""
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.1"
-      * problemDescription 0..1 string "Problem specification in narrative form."
-      * problemDetails 0..* EHDSConditionHdr "Problem details include code that identifies problem, specification of the body structure, laterality, and other aspects of the problem."
+      * narrative 0..1 string "Problem specification in narrative form."
+      * problemDetails 0..* Base "Problems that were treated or affected provisioning of care (diagnostics, therapy, nursing, monitoring) during the encounter. At least one problem should be marked as treated. Other problems are recorded only if they are important for continuity of care (after discharge)."
+        * treatmentClass 1..1 CodeableConcept "Class of the problem (treated, other) in relation to the encounter."
+        * problem 1..1 EHDSCondition "Problem details include code that identifies problem, specification of the body structure, laterality, and other aspects of the problem."
     
     * significantProcedures 0..1 Base "Significant procedures section" """Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care, e.g. surgeries and other "instrumental" interventions (endoscopic, intravascular), chemotherapy, radiotherapy, purification methods (dialysis, hemoperfusion), circulation support methods (counterpulsation, etc.), administration of blood derivatives or others. This section does not include purely diagnostic procedures (MRI, CT, etc.). If no significant performance has been performed, this fact must be explicitly stated using the IPS Absent and Unknown Data."""
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.2"
