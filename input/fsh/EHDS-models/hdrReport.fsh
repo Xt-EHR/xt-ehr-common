@@ -167,7 +167,7 @@ Characteristics: #can-be-target
           * drugOrMedicationType 0..1 CodeableConcept "Drug or medication type"
             * ^binding.description = "SNOMED CT"
             * ^binding.strength = #preferred
-          * routeOfAdministration 0..* CodeableConcept "Route or routes of administration "
+          * routeOfAdministration 0..* CodeableConcept "Route or routes of administration"
             * ^binding.description = "EDQM"
             * ^binding.strength = #preferred
           * comment 0..1 string "Textual comment."

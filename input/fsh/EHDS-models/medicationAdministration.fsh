@@ -1,15 +1,14 @@
 Logical: EHDSMedicationAdministration
-//Id: EHDSmedicationAdministration
+Parent: EHDSDataSet
 Title: "Medication administration model"
-Description: "EHDS refined base model for medication administration"
+Description: "EHDS refined base model for a single medication administration"
 Characteristics: #can-be-target
 
-* identifier 0..* Identifier "Medication administration identifier"
-* subject 1..1 EHDSPatient "The patient who the medication was administrated to."
-* status 1..1 CodeableConcept "Status of the administration (e.g. completed, not-done, on-hold, in-progress, unknown)"
+
+* header.status ^short = "Status of the administration (e.g. completed, not-done, on-hold, in-progress, unknown)"
   * ^binding.description = "HL7 MedicationAdimnistrationStatusCodes"
   * ^binding.strength = #preferred
-* statusReason 0..* CodeableConcept "Reason administration was not performed"
+* header.statusReason[x] ^short = "Reason administration was not performed"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * medication 1..1 EHDSMedication "Administered medication"
