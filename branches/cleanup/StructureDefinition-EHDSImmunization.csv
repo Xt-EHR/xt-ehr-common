@@ -1,0 +1,29 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSImmunization","EHDSImmunization","","","",0,*,"","","","null {[]} {[]}
+","Immunization model","C.24 - EHDS refined base model for Immunization","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSImmunization.identifier","EHDSImmunization.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.24.1 - Identifier","Immunization identifier","","","","","","","","","",,,,,"",,,,"EHDSImmunization.identifier",0,*,"",""
+"EHDSImmunization.status","EHDSImmunization.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.24.2 - Status","Indicates the current status of the immunization event (completed, not-done).","","","","","","","","","",,,,,"",,,,"EHDSImmunization.status",1,1,"",""
+"EHDSImmunization.diseaseOrAgentTargeted","EHDSImmunization.diseaseOrAgentTargeted","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.24.3 - Disease or agent targeted","Disease or agent that the vaccination provides protection against.","","","","","","","","","",,"preferred","ICD-10*, SNOMED CT","","",,,,"EHDSImmunization.diseaseOrAgentTargeted",0,*,"",""
+"EHDSImmunization.vaccine","EHDSImmunization.vaccine","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.24.4 - Vaccine","Generic description of the vaccine/prophylaxis or its component(s).","","","","","","","","","",,"preferred","SNOMED CT, ATC (IDMP/ EMA SPOR SMS)","","",,,,"EHDSImmunization.vaccine",1,1,"",""
+"EHDSImmunization.administeredProduct","EHDSImmunization.administeredProduct","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication {[]} {[]}
+","C.24.5 - Administered product","Medicinal product administered.","","","","","","","","","",,,,,"",,,,"EHDSImmunization.administeredProduct",0,1,"",""
+"EHDSImmunization.doseNumber","EHDSImmunization.doseNumber","","","",0,1,"","","","integer64 {[]} {[]}
+","C.24.7 - Number in a series of vaccinations / doses","Order in the vaccination course.","","","","","","","","","",,,,,"",,,,"EHDSImmunization.doseNumber",0,1,"",""
+"EHDSImmunization.batchNumber","EHDSImmunization.batchNumber","","","",0,*,"","","","string {[]} {[]}
+","C.24.8 - Batch number","A distinctive combination of numbers and/or letters which specifically identifies a batch.","","","","","","","","","",,,,,"",,,,"EHDSImmunization.batchNumber",0,*,"",""
+"EHDSImmunization.dateOfVaccination","EHDSImmunization.dateOfVaccination","","","",1,1,"","","","date {[]} {[]}
+","C.24.9 - Date of vaccination","The date and time when the vaccination was administered","","","","","","","","","",,,,,"",,,,"EHDSImmunization.dateOfVaccination",1,1,"",""
+"EHDSImmunization.administeringCentre","EHDSImmunization.administeringCentre","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","C.24.10 - Administering centre","Name/code of administering centre or a health authority responsible for the vaccination event","","","","","","","","","",,,,,"",,,,"EHDSImmunization.administeringCentre",0,*,"",""
+"EHDSImmunization.healthProfessionalIdentification","EHDSImmunization.healthProfessionalIdentification","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","C.24.11 - Health Professional identification","Name or health professional code responsible for administering the vaccine or prophylaxis","","","","","","","","","",,,,,"",,,,"EHDSImmunization.healthProfessionalIdentification",0,*,"",""
+"EHDSImmunization.countryOfVaccination","EHDSImmunization.countryOfVaccination","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.24.12 - Country of vaccination","The country in which the individual has been vaccinated","","","","","","","","","",,"preferred","ISO 3166","","",,,,"EHDSImmunization.countryOfVaccination",0,1,"",""
+"EHDSImmunization.nextVaccinationDate","EHDSImmunization.nextVaccinationDate","","","",0,1,"","","","date {[]} {[]}
+","C.24.13 - Next vaccination date","The date when the vaccination is planned to be given/repeated (e.g. next dose)","","","","","","","","","",,,,,"",,,,"EHDSImmunization.nextVaccinationDate",0,1,"",""
+"EHDSImmunization.subject","EHDSImmunization.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient]]}
+","C.24.14 - Subject","The patient who either received or did not receive the immunization.","","","","","","","","","",,,,,"",,,,"EHDSImmunization.subject",1,1,"",""
