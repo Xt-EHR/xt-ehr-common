@@ -1,3 +1,4 @@
+/*
 Logical: EHDSInpatientEncounter
 Parent: EHDSEncounter
 //Id: EHDSinpatientEncounter
@@ -12,4 +13,4 @@ Characteristics: #can-be-target
 * actualPeriod 1..1
 * admission 1..1
 * discharge 1..1
-
+*/
