@@ -20,7 +20,7 @@ Characteristics: #can-be-target
     * narrative 0..1 string "Narrative, potentially formatted, content of the section"
     * medicalAlert 0..* EHDSAlert "Description of medical alerts in textual format: any clinical information that is imperative to know so that the life or health of the patient does not come under threat."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.2.2"
-    * allergyAndIntolerance 0..* EHDSAllergyIntolerance "Allergy and Intolerance. A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the hospital stay)."
+    * allergyAndIntolerance 0..* EHDSAllergyIntolerance "Allergy and Intolerance. A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the encounter)."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.2.1"
 
     //ok
@@ -145,7 +145,7 @@ Characteristics: #can-be-target
         * drugConsumption 0..* EHDSSubstanceUse "Consumption of drugs and other substances (in terms of abuse)."
           * ^requirements = "eHN Guideline HDR (v1.1): A.2.5.4.3"
 
-  * courseOfHospitalisation 1..1 Base "Course of hospital stay."
+  * courseOfEncounter 1..1 Base "Course of inpatient or outpatient encounter."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.6"
     * diagnosticSummary 1..1 Base "Diagnostic summary. All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care." """The diagnostic summary differentiates, in accordance with the international recommendation, between problems treated during hospital stay and other (untreated) problems. Treated problems are problems that were the subject of diagnostics, therapy, nursing, or (continuous) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA), conditions acquired during hospital stay (HAC) and problems that cannot be classified as being of any of the two (N/A). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation, after all examinations. This section contains concise, well specified, codeable, summary of problems. Problems are ordered by importance (main problems first) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section."""
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.1"
@@ -154,27 +154,27 @@ Characteristics: #can-be-target
         * treatmentClass 1..1 CodeableConcept "Class of the problem (treated, other) in relation to the encounter."
         * problem 1..1 EHDSCondition "Problem details include code that identifies problem, specification of the body structure, laterality, and other aspects of the problem."
     
-    * significantProcedures 0..1 Base "Significant procedures section" """Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care, e.g. surgeries and other "instrumental" interventions (endoscopic, intravascular), chemotherapy, radiotherapy, purification methods (dialysis, hemoperfusion), circulation support methods (counterpulsation, etc.), administration of blood derivatives or others. This section does not include purely diagnostic procedures (MRI, CT, etc.). If no significant performance has been performed, this fact must be explicitly stated using the IPS Absent and Unknown Data."""
+    * significantProcedures 0..1 Base "Significant procedures section" """Significant surgical and non-surgical procedures performed during encounter which are significant for continuity of care, e.g. surgeries and other instrumental interventions (endoscopic, intravascular), chemotherapy, radiotherapy, purification methods (dialysis, hemoperfusion), circulation support methods (counterpulsation, etc.), administration of blood derivatives or others. This section does not include purely diagnostic procedures (MRI, CT, etc.). If no significant performance has been performed, this fact must be explicitly stated using the IPS Absent and Unknown Data."""
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.2"
       * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
       * procedureEntry 0..* EHDSProcedure "Structured procedure entry."
     
-    * medicalDevicesAndImplants 1..1 Base "Medical devices and implants section" "Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment). Also medical devices explanted, or its use was stopped during hospitalisation. If the section is blank, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system"
+    * medicalDevicesAndImplants 1..1 Base "Medical devices and implants section" "Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment). Also medical devices explanted, or its use was stopped during encounter. If the section is blank, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system"
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.3"
       * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
       * medicalDevicesAndImplants 1..* EHDSDeviceUse "Medical devices and implants"
     
-    * pharmacotherapy 0..1 Base "Pharmacotherapy section" "Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine, corticosteroids in high doses, etc.) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section. Medicinal products, the administration of which was started during hospitalisation, but is also recommended after discharge, will be listed in the summary table in the recommendation section."
+    * pharmacotherapy 0..1 Base "Pharmacotherapy section" "Selected drug treatment during encounter. Medicinal products that were administered during encounter and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine, corticosteroids in high doses, etc.) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section. Medicinal products, the administration of which was started during encounter, but is also recommended after discharge, will be listed in the summary table in the recommendation section."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.5"
       * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
       * pharmacotherapy 0..* EHDSMedicationStatement "Pharmacotherapy structured entry."
     
-    * significantObservationResults 0..1 Base "Significant Observation Results" "Results of significant functional, diagnostic, and imaging examinations to ensure continuity of care, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered."
+    * significantObservationResults 0..1 Base "Significant Observation Results" "Results of significant functional, diagnostic, and imaging examinations to ensure continuity of care, performed during encounter. Results of examinations ordered but not yet delivered should be presented separately from results already delivered."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.6"
       * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
       * significantObservationResult[x] 0..* EHDSObservation or EHDSLaboratoryObservation "Significant Observation Result" "Structured significant observation entry."
     
-    * synthesis 1..1 Base "Synthesis" "This section provides clinical synthesis (e.g. description of reasons and course of hospital stay) clustered by managed conditions, Clinical synthesis may include clinical reasoning (differential diagnostics, explanation of clinical context) in clinically complex conditions."
+    * synthesis 1..1 Base "Synthesis" "This section provides clinical synthesis (e.g. description of reasons and course of encounter) clustered by managed conditions, Clinical synthesis may include clinical reasoning (differential diagnostics, explanation of clinical context) in clinically complex conditions."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.7"
       * problemSynthesis 1..* string "Summary description of the reason and course of hospitalisation for a specific problem."
       * clinicalReasoning 0..1 string "Clinical reasoning" "The clinical summary can be concluded with a clinical consideration (diff. diagnosis, explanation of context, etc.) for clinically complex conditions."
