@@ -1,9 +1,15 @@
 Logical: EHDSServiceRequest
-//Id: EHDSserviceRequest
+//Parent: EHDSDataSet
 Title: "Service request model"
 Description: """EHDS refined base model for Specification of requested service or services"""
 Characteristics: #can-be-target
 
+// this is giving an error in QA, but is needed to derive from EHDSDataSet
+//* header.subject ^short = "Individual or Entity the service is ordered for"
+//* header.subject ^type.profile[+] = Canonical(EHDSPatient)
+//* header.subject ^type.profile[+] = Canonical(EHDSLocation)
+//* header.subject ^type.profile[+] = Canonical(EHDSDevice)
+* subject[x] 1..1 EHDSPatient or EHDSLocation or EHDSDevice "Individual or Entity the service is ordered for"
 * serviceText 0..1 string "Service text" """Textual description of the requested service"""
 * serviceCode 0..1 CodeableConcept "Service code" """A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
@@ -19,7 +25,6 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * supportingInformation[x] 0..* EHDSObservation or EHDSCondition or EHDSProcedure or EHDSMedicationAdministration "Supporting information" """Health conditions relevant for the results interpretation, e.g. fasting status, sex for clinical use, etc."""
 * specimen 0..* EHDSSpecimen "Specimen" """Specimens to be used by the laboratory procedure"""
-* subject[x] 1..1 EHDSPatient or EHDSLocation or EHDSDevice "Subject" """Individual or Entity the service is ordered for"""
 * encounter 0..1 EHDSEncounter "Encounter" """An encounter that provides additional information about the healthcare context in which this request is made."""
 * occurrence[x] 0..1 dateTime or Period "Occurrence" """When service should occur"""
 * patientInstructions 0..1 string "Patient instructions" """Patient or consumer-oriented instructions"""
