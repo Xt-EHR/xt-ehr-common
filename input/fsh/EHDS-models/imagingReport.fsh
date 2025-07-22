@@ -42,6 +42,7 @@ Characteristics: #can-be-target
     * ^requirements = "eHN Guideline IMG (v1.1): A.4"
   * serviceRequest 0..* EHDSServiceRequest "Specification of requested service(s)."
   * exposureInformation 0..1 Base "Information on total exposure to ionising radiation. This information is required by regulations in several EU countries."
+    * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.4, Article 2 Imaging report definition"
     * effectiveDose 0..* Quantity "Effective dose - sum of equivalent doses to all organs, from external and/or internal exposures, each adjusted to account for the sensitivity of the organ to radiation. [mSv]"
       * ^binding.description = "UCUM (for units)"
       * ^binding.strength = #preferred
