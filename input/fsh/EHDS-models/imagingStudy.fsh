@@ -6,6 +6,7 @@ Characteristics: #can-be-target
 
 * header.identifier ^short = "Identifiers for the Imaging Study such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier."
 * header.identifier 1..*
+  * ^requirements = "eHN Guideline IMG (v1.1): B.1.1"
 * modality 0..* CodeableConcept "All of the distinct values for series' modalities"
   * ^binding.description = "DICOM CID029"
   * ^binding.strength = #preferred
@@ -15,29 +16,41 @@ Characteristics: #can-be-target
 * numberOfSeries 0..1 integer "Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present."
 * numberOfInstances 0..1 integer "Number of Service-Object Pairs (SOP) Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present."
 * description 0..1 string "The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed."
+  * ^requirements = "eHN Guideline IMG (v1.1): B.1.2"
 * studyCustodian 0..1 EHDSOrganisation "Organisation name, address, contact information."
+  * ^requirements = "eHN Guideline IMG (v1.1): B.1.3"
 * studyEndpoint 0..1 EHDSEndpoint "Study endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
 * series 0..* Base "Series. Each study has one or more series of instances, but they may be absent when no series information needs to be conveyed"
+  * ^requirements = "eHN Guideline IMG (v1.1): B.1.4"
   * seriesUid 1..1 Identifier "DICOM Series Instance UID for the series"
+    * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.2"
   * number 0..1 integer "Numeric identifier of this series"
   * acquisitionModality 1..1 CodeableConcept "Acquisition modality - the modality used for this series"
+    * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.3"  
     * ^binding.description = "DICOM CID029"
     * ^binding.strength = #preferred
   * description 0..1 string "A short human readable summary of the series"
+    * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.1"
   * numberOfInstances 0..1 integer "Number of Series Related Instances"
   * seriesEndpoint 0..1 EHDSEndpoint "Series endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
-  * bodySite 0..1 EHDSBodyStructure "Body part examined"
-  * laterality 0..1 CodeableConcept "Body part laterality"
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
+    * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.6"
+  * bodySite 0..1 EHDSBodyStructure "Body part (with laterality) examined"
+//  * laterality 0..1 CodeableConcept "Body part laterality"
+//    * ^binding.description = "SNOMED CT"
+//    * ^binding.strength = #preferred
   * specimen 0..* EHDSSpecimen "Specimen imaged"
   * started 0..1 dateTime "When the series started"
   * instancesInTheSeries 0..* Base "Each series has one or more instances, but they may be absent when no instance information needs to be conveyed"
+    * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.7"
     * instanceTitle 0..1 string "Instance title that is the description of the instance."
     * instanceUid 1..1 Identifier "DICOM SOP Instance UID"
+      * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.7.1"
     * sopClass 1..1 uri "SOP class - DICOM class type"
+      * ^requirements = "DICOM KOS"
     * instanceNumber 0..1 integer "The number of this instance in the series"
+      * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.7.3"
     * numberOfFrames 0..1 integer "The number of frames in a multiframe instance"
+      * ^requirements = "DICOM KOS"
 
 
 /* Removed according to issue 172
