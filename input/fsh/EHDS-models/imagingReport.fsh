@@ -66,7 +66,7 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.2"
     * adverseReaction 0..* EHDSAllergyIntolerance "Adverse reactions manifested during imaging investigation."
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.3"
-    * resultData 0..1 Base "Laboratory report result data"
+    * resultData 0..1 Base "Imaging report result data"
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.4"
       * resultText 1..1 string "Comments and narrative representation of the observation results and findings."
       * observationResults 0..* EHDSObservation "Observation details (report could consist of multiple observations)"

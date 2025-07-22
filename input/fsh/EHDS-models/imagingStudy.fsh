@@ -46,9 +46,11 @@ Characteristics: #can-be-target
     * instanceUid 1..1 Identifier "DICOM SOP Instance UID"
       * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.7.1"
     * sopClass 1..1 uri "SOP class - DICOM class type"
+      * ^requirements = "DICOM KOS"
     * instanceNumber 0..1 integer "The number of this instance in the series"
       * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.7.3"
     * numberOfFrames 0..1 integer "The number of frames in a multiframe instance"
+      * ^requirements = "DICOM KOS"
 
 
 /* Removed according to issue 172
