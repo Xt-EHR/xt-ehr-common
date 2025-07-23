@@ -31,10 +31,11 @@ Characteristics: #can-be-target
       * condition 0..* EHDSCondition "Conditions that may influence the service or result interpretation."
       * medicationAdministration 0..* EHDSMedicationAdministration "Medication administered before ordering the service."
       * devices 0..* EHDSDevice "List of implants or devices that affect the course of the examination or its interpretation (e.g. metal implants)."
-      * pregnancyStatus 0..1 CodeableConcept "Pregnancy status when the imaging examination was performed (e.g., pregnant, not pregnant, unknown)."
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
-      * gestationalAge 0..1 Quantity "Gestational age - duration of the pregnancy on the day on which the patient was asked or at the delivery. The duration can be given in weeks and/or days."
+      * pregnancyStatus 0..1 EHDSCurrentPregnancy "Pregnancy status when the imaging examination was performed (e.g., pregnant, not pregnant, unknown)."
+//      * pregnancyStatus 0..1 CodeableConcept "Pregnancy status when the imaging examination was performed (e.g., pregnant, not pregnant, unknown)."
+      //   * ^binding.description = "SNOMED CT"
+      //   * ^binding.strength = #preferred
+      // * gestationalAge 0..1 Quantity "Gestational age - duration of the pregnancy on the day on which the patient was asked or at the delivery. The duration can be given in weeks and/or days."
       * sexForClinicalUse 0..* CodeableConcept "Sex parameter for clinical use - provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population."
         * ^binding.description = "HL7 sex-parameter-for-clinical-use"
         * ^binding.strength = #preferred
