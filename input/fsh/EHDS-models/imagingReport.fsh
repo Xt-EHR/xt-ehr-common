@@ -20,7 +20,7 @@ Characteristics: #can-be-target
     * orderDateAndTime 0..1 dateTime "Date and time of the order placement."
     * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient "The person/organisation \"authorised\" to place the order. Order placer could be either a health professional, health professional organisation or the patient himself."
     * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
-    * orderReason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation "An explanation or justification for why this service is being requested in coded form."
+    * orderReason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation "An explanation or justification for why this service is being requested in coded or structured form."
       * ^binding.description = "SNOMED CT"
       * ^requirements = "eHN Guideline IMG (v1.1): A.3.1, A3.2"
     * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the imaging investigation."
