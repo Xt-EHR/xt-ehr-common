@@ -12,8 +12,8 @@ Characteristics: #can-be-target
 * dateOfBirth 0..1 date "Date of birth of the family member."
 * ageOrDateOfDeath[x] 0..1 date or Quantity "Age or date of the death of the family member."
 * condition 0..* CodeableConcept "Medical problems this person suffers or suffered."
-  * ^binding.description = "ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed"
+  * ^binding.description = "ICD-10, SNOMED CT, Orphacode if rare disease is diagnosed"
   * ^binding.strength = #preferred
 * causeOfDeath 0..1 CodeableConcept "Information about disease or condition that was the main cause of death."
-  * ^binding.description = "ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed"
+  * ^binding.description = "ICD-10, SNOMED CT, Orphacode if rare disease is diagnosed"
   * ^binding.strength = #preferred
