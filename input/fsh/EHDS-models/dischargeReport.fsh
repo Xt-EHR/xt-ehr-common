@@ -145,6 +145,8 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.1"
       * narrative 0..1 string "Problem specification in narrative form."
       * problemDetails 0..* Base "Problems that were treated or affected provisioning of care (diagnostics, therapy, nursing, monitoring) during the encounter. At least one problem should be marked as treated. Other problems are recorded only if they are important for continuity of care (after discharge)."
+        * presentOnAdmission 1..1 CodeableConcept "Whether the condition was present on admission or acquired during encounter" """Category of the problem allows flagging for conditions acquired during encounter."""
+          * ^comment = "Value set can include Present on admission [POA], Hospital acquired condition [HAC], Not applicable or Unknown"
         * treatmentClass 1..1 CodeableConcept "Class of the problem (treated, other) in relation to the encounter."
         * problem 1..1 EHDSCondition "Problem details include code that identifies problem, specification of the body structure, laterality, and other aspects of the problem."
     
