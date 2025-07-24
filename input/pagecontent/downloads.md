@@ -8,11 +8,7 @@ The following file contains all the value sets, profiles, extensions, list of pa
 
 - [NPM Package](package.tgz)
 
-In addition there are format specific definition files:
 
-- [XML](definitions.xml.zip)
-- [JSON](definitions.json.zip)
-- [TTL](definitions.ttl.zip)
 
 
 
