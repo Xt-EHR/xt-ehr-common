@@ -8,6 +8,9 @@ Characteristics: #can-be-target
 * header.status  
   * ^binding.description = "HL7 Observation status"
   * ^binding.strength = #preferred
+* header.subject
+  * ^short = "Patient who is receiving health care. This patient might be different from the direct subject of the observation."
+* header.directSubject[x] 0..1 EHDSPatient or EHDSPatientAnimal or EHDSLocation or EHDSDevice or EHDSHealthProfessional or EHDSOrganisation or EHDSProcedure "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device"
 * observationDate[x] 1..1 dateTime or Period "Clinically relevant time or time period for the observation"
 * code 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
