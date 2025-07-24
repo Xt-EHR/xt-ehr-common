@@ -22,6 +22,7 @@ Characteristics: #can-be-target
     * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
     * orderReason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation "An explanation or justification for why this service is being requested in coded or structured form."
       * ^binding.description = "SNOMED CT"
+      * ^binding.strength = #preferred
       * ^requirements = "eHN Guideline IMG (v1.1): A.3.1, A3.2"
     * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the imaging investigation."
       * ^requirements = "eHN Guideline IMG (v1.1): A.3.3"

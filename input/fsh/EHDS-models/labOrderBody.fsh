@@ -12,6 +12,7 @@ Characteristics: #can-be-target
   * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
   * orderReason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation "An explanation or justification for why this service is being requested in coded or structured form."
     * ^binding.description = "SNOMED CT"
+    * ^binding.strength = #preferred
   * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the laboratory investigation."
 * encounter 0..1 Reference (EHDSEncounter) "An encounter that provides additional information about the healthcare context in which this order is made."
 * supportingInformation 0..1 Base "Additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations. In laboratory ordering these are typically referred to as 'ask at order entry questions (AOEs).' This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example, reporting the amount of inspired oxygen for blood gas measurements."
@@ -21,7 +22,7 @@ Characteristics: #can-be-target
   * sexForClinicalUse 0..* CodeableConcept "A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population"
     * ^binding.description = "HL7 sex-parameter-for-clinical-use"
     * ^binding.strength = #preferred
-  * vaccination 0..* EHDSImmunisation "Vaccination history of the patient. "
+  * vaccination 0..* EHDSImmunisation "Vaccination history of the patient."
   * otherSupportingInformation 0..* Resource "Any other type of relevant supporting information"
 * specimen 0..* EHDSSpecimen "Specimen information"
 * serviceRequests 0..* EHDSServiceRequest "Specification of requested service or services"

@@ -30,7 +30,7 @@ Characteristics: #can-be-target
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
 * discharge 0..1 Base "Discharge details"
-  * destinationType 0..1 CodeableConcept "Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc.  """
+  * destinationType 0..1 CodeableConcept "Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc."""
     * ^binding.description = "hl7.discharge-disposition"
     * ^binding.strength = #preferred
   * destinationLocation[x] 0..1 EHDSOrganisation or EHDSLocation "The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact."
