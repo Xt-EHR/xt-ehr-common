@@ -5,17 +5,7 @@ Discharge report could be divided into several parts: document header, body and 
 
 ##### Discharge Report
 <figure>
-  {% include hdrReport_CIM.svg %}
-</figure>
-
-##### Discharge Report header
-<figure>
-  {% include hdrReportHdr_CIM.svg %}
-</figure>
-
-##### Discharge Report body
-<figure>
-  {% include hdrReportBody_CIM.svg %}
+  {% include EHDSDischargeReport.svg %}
 </figure>
 
 ### Detail EHDS information models for Discharge Report
