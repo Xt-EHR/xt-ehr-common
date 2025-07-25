@@ -1,0 +1,29 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSProcedure","EHDSProcedure","","","",0,*,"","","","null {[]} {[]}
+","Procedure model","C.16 - EHDS refined base model for An action that is or was performed on or for a patient","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSProcedure.identifier","EHDSProcedure.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier for the procedure","Identifier for the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.identifier",0,*,"",""
+"EHDSProcedure.subject","EHDSProcedure.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","On whom the procedure was performed.","On whom the procedure was performed.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.subject",1,1,"",""
+"EHDSProcedure.code","EHDSProcedure.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code identifying the procedure","Code identifying the procedure","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSProcedure.code",0,1,"",""
+"EHDSProcedure.date[x]","EHDSProcedure.date[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Date and time of the procedure or interval of its performance","Date and time of the procedure or interval of its performance","","","","","","","","","",,,,,"",,,,"EHDSProcedure.date[x]",0,1,"",""
+"EHDSProcedure.performer","EHDSProcedure.performer","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","An actor who performed the procedure","An actor who performed the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.performer",0,*,"",""
+"EHDSProcedure.bodySite","EHDSProcedure.bodySite","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Anatomic location and laterality where the procedure was performed. This is the target site.","Anatomic location and laterality where the procedure was performed. This is the target site.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.bodySite",0,*,"",""
+"EHDSProcedure.reason[x]","EHDSProcedure.reason[x]","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure {[]} {[]}","The reason why the procedure was performed.","The reason why the procedure was performed.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.reason[x]",0,*,"",""
+"EHDSProcedure.outcome","EHDSProcedure.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","The outcome of the procedure - did it resolve the reasons for the procedure being performed?","The outcome of the procedure - did it resolve the reasons for the procedure being performed?","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSProcedure.outcome",0,1,"",""
+"EHDSProcedure.complication","EHDSProcedure.complication","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the procedure description, which will typically describe the procedure itself rather than any 'post procedure' issues.","Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the procedure description, which will typically describe the procedure itself rather than any 'post procedure' issues.","","","","","","","","","",,"preferred","ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed","","",,,,"EHDSProcedure.complication",0,*,"",""
+"EHDSProcedure.deviceUsed","EHDSProcedure.deviceUsed","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}
+","Device used to perform the procedure","Device used to perform the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.deviceUsed",0,*,"",""
+"EHDSProcedure.focalDevice","EHDSProcedure.focalDevice","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}
+","Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.","Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.focalDevice",0,*,"",""
+"EHDSProcedure.location","EHDSProcedure.location","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}
+","Location where the procedure was performed","Location where the procedure was performed","","","","","","","","","",,,,,"",,,,"EHDSProcedure.location",0,*,"",""
+"EHDSProcedure.note","EHDSProcedure.note","","","",0,1,"","","","string {[]} {[]}
+","Additional information about the procedure","Additional information about the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.note",0,1,"",""
