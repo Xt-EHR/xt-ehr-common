@@ -18,6 +18,12 @@ Imaging result report could be divided into several parts: document header, body
   {% include imgReportBody_CIM.svg %}
 </figure>
 
+##### Dicom Study Metadata
+<figure>
+  {% include imgManifest_CIM.svg %}
+</figure>
+
+
 #### Detail EHDS information models for Imaging
 - [Imaging Report Document](StructureDefinition-EHDSImagingReport.html)
 - [Imaging Study/Manifest](StructureDefinition-EHDSImagingStudy.html)
