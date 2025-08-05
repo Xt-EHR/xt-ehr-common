@@ -26,8 +26,6 @@ Components of laboratory result report and its representation using UML notation
 
 ### Detail EHDS information models for Laboratory report
 - [Laboratory Report Document](StructureDefinition-EHDSLaboratoryReport.html)
-- [Laboratory Report Header](StructureDefinition-EHDSLaboratoryReportHeader.html)
-- [Laboratory Report Body](StructureDefinition-EHDSLaboratoryReportBody.html)
 - [Laboratory Observation](StructureDefinition-EHDSLaboratoryObservation.html)
 
 
