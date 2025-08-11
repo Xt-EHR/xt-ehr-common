@@ -1,24 +1,3 @@
-Logical: EHDSDataSet
-Title: "DataSet model"
-Description: "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources."
-Characteristics: #can-be-target
-
-* header 1..* Base "Common header for all patient-related data"
-  * subject 1..1 EHDSPatient "Subject" """Patient/subject information"""
-  * identifier 0..* Identifier "Business identifier for the object"
-  * authorship 1..* Base "Authorship" """Resource authoring details"""
-    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganization or EHDSDevice "Author" """Author(s) by whom the resource was/were authored. Multiple authors could be provided."""
-    * datetime 1..1 dateTime "Date and time of authoring/issuing" """Date and time of the issuing the document/resource by its author."""
-  * lastUpdate 0..1 dateTime "Date and time of the last update to the resource" """Date and time of the last update to the document/information"""
-  * status 1..1 CodeableConcept "Status of the resource" """Status of the resource"""
-  * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of the resource."
-  * language 0..1 CodeableConcept "Language" """Language in which the resource is written. Language is expressed by the IETF language tag."""
-    * ^binding.description = "BCP 47"
-    * ^binding.strength = #preferred
-  * version 0..1 string "Version" """Business version of the resource."""
-* presentedForm 0..* EHDSAttachment "A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document"
-
-
 Logical: EHDSDocument
 Title: "Document model"
 Parent: EHDSDataSet
@@ -29,11 +8,11 @@ Characteristics: #can-be-target
   * identifier 1..*
     * ^short = "Document ID"
     * ^definition = """Unique identifier of the document"""
-  * documentType 1..1 CodeableConcept "Document type" """Identifies the type of document at hand, e.g. Hospital discharge report."""
+  * documentType 1..1 CodeableConcept "Document type" """Identifies the type of document at hand, e.g. Discharge report."""
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
-  * documentTitle 1..1 string "Document title" """Document title, such as Hospital Discharge Report, Laboratory Result Report, etc."""
-  * documentStatus 1..1 CodeableConcept "Document status" """The status of the Hospital discharge report. E.g., preliminary, final."""
+  * documentTitle 1..1 string "Document title" """Document title, such as Discharge Report, Laboratory Result Report, etc."""
+  * documentStatus 1..1 CodeableConcept "Document status" """The status of the Discharge report. E.g., preliminary, final."""
     * ^binding.description = "hl7:CompositionStatus"
     * ^binding.strength = #preferred
   * period 0..1 Period "Period" """Time of service that is being documented"""
@@ -50,7 +29,7 @@ Characteristics: #can-be-target
   * authorSpecialty 0..* CodeableConcept "Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
-  * custodian 1..1 EHDSOrganization "Document custodian" """Organisation that is in charge of maintaining the document/report."""
+  * custodian 1..1 EHDSOrganisation "Document custodian" """Organisation that is in charge of maintaining the document/report."""
   * documentFormat 0..1 CodeableConcept "Document format" """An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType."""
     * ^binding.description = "HL7 Document Format Codes"
     * ^binding.strength = #preferred

@@ -1,7 +1,7 @@
 ### Information Models
 #### Conceptual view
 
-Patient summary could be divided into several basic parts: document header, body and optionally it could also have various attachments.
+Patient Summary could be divided into several basic parts: document header, body and optionally it could also have various attachments.
 
 ##### Patient Summary
 <figure>

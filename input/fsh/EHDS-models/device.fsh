@@ -4,7 +4,7 @@ Title: "Device model"
 Description: "EHDS refined base model for Device information"
 Characteristics: #can-be-target
 
-* identifier 1..* Identifier "Identifier of the device which is unique within in a defined scope. Multiple identifiers can be used."
+* identifier 1..* Identifier "Normalised identifier of the device instance, such as UDI according to REGULATION (EU) 2017/745. Multiple identifiers can be used."
 * manufacturer 0..1 string "Name of device manufacturer"
 * manufactureDate 0..1 dateTime "The date and time when the device was manufactured"
 * expiryDate 0..1 dateTime "The date and time beyond which this device is no longer valid or should not be used (if applicable)."

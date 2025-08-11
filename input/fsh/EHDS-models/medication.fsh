@@ -1,6 +1,6 @@
 Logical: EHDSMedication
-Title: "Medicinal product model"
-Description: "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile."
+Title: "Medication model"
+Description: "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile. Model is suitable for generic/virtual medications as well as branded/real products."
 Characteristics: #can-be-target
 * ^status = #active
 
@@ -14,8 +14,8 @@ Characteristics: #can-be-target
 //  * ^comment = "No change"
 * marketingAuthorisationHolder 0..1 Base "Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product."
 //  * ^comment = "No change, but subelements added"
-  * organizationName 0..1 string "Name of the organisation holding the authorisation for marketing/mahufacturing"
-  * organizationIdentifier 0..* Identifier "Identifier of the organisation and/or its physical location"
+  * organisationName 0..1 string "Name of the organisation holding the authorisation for marketing/mahufacturing"
+  * organisationIdentifier 0..* Identifier "Identifier of the organisation and/or its physical location"
 * doseForm 0..1 CodeableConcept "Dose form(s) on a product level. Dose form for a single package item is defined below."
 //  * ^comment = "No change"
   * ^binding.description = "EDQM Standard Terms"
