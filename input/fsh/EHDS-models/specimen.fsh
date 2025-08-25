@@ -13,9 +13,9 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * collectionPeriod 0..1 Period "The period or date and time of specimen collection."
 * bodySite 0..1 EHDSBodyStructure "Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left"
-* morphology 0..1 CodeableConcept "Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer."
-  * ^binding.description = "SNOMED CT"
-  * ^binding.strength = #preferred
+// * morphology 0..1 CodeableConcept "Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer."
+//   * ^binding.description = "SNOMED CT"
+//   * ^binding.strength = #preferred
 * sourceDevice 0..1 CodeableConcept "Source device in case the material is not collected directly from the patient but comes from a patient-related object, e.g. a catheter"
   * ^binding.description = "SNOMED CT, EMDN"
   * ^binding.strength = #preferred
