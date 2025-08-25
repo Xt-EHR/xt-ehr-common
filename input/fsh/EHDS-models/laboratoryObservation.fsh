@@ -14,12 +14,15 @@ Characteristics: #can-be-target
 // * header.subject ^type.profile[+] = Canonical(EHDSHealthProfessional)
 // * header.subject ^type.profile[+] = Canonical(EHDSOrganisation)
 // * header.subject ^type.profile[+] = Canonical(EHDSProcedure)
-* testKit 0..1 EHDSDevice "Test kit" """Laboratory test kit used during measurement."""
-* calibrator 0..1 Identifier "Calibrator" """Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain. """
-* accreditationStatus 0..1 CodeableConcept "Accreditation status" """Accreditation status of the laboratory for the particular observation."""
-  * ^binding.description = "Code system to be specified"
-  * ^binding.strength = #preferred
-* previousResults 0..* EHDSLaboratoryObservation "Previous results" """Previous results of the same observation"""
+* testKit 0..1 EHDSDevice "Laboratory test kit used during measurement."
+* calibrator 0..1 Identifier "Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain. "
+* accreditationStatus 0..1 boolean "Accreditation status of the laboratory for the observation."
+  // * ^binding.description = "Code system to be specified"
+  // * ^binding.strength = #preferred
+* previousResults 0..* EHDSLaboratoryObservation "Previous results of the same observation"
 * code //1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU"
+  * ^binding.strength = #preferred
+* pointOfCareTest 0..1 boolean "Examination performed near or at the site of a patient." """Indicates if the observation is a point-of-care test (POCT), i.e. an examination performed near or at the site of a patient."""
+  * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
