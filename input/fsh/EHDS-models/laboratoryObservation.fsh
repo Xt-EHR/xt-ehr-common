@@ -24,5 +24,3 @@ Characteristics: #can-be-target
   * ^binding.description = "LOINC, NPU"
   * ^binding.strength = #preferred
 * pointOfCareTest 0..1 boolean "Examination performed near or at the site of a patient." """Indicates if the observation is a point-of-care test (POCT), i.e. an examination performed near or at the site of a patient."""
-  * ^binding.description = "SNOMED CT"
-  * ^binding.strength = #preferred
