@@ -5,7 +5,7 @@ Description: """EHDS refined base model for Observation information"""
 Characteristics: #can-be-target
 
 //subject only patient. Laboratory result has more.
-* header.status  
+* header.status
   * ^binding.description = "HL7 Observation status"
   * ^binding.strength = #preferred
 * header.subject
@@ -20,7 +20,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * order 0..1 EHDSServiceRequest "Identifies order and order placer this observation belongs to"
-* performer 0..1 EHDSHealthProfessional "Performer" 
+* performer[x] 0..1 EHDSHealthProfessional or EHDSPatient or EHDSRelatedPerson "Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions."
 //reporter in DataSet
 * anatomicLocation 0..1 EHDSBodyStructure "Anatomic location and laterality where the observation was performed."
 * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
@@ -31,7 +31,7 @@ Characteristics: #can-be-target
 * dataAbsentReason 0..1 CodeableConcept "Provides a reason why the expected value in the element Observation.value[x] is missing."
   * ^binding.description = "HL7 Data absent reason"
   * ^binding.strength = #preferred
-* referenceRange 0..* Base "Reference range, multiple reference ranges of different types culd by provided. Provides guide for interpretation of result." 
+* referenceRange 0..* Base "Reference range, multiple reference ranges of different types culd by provided. Provides guide for interpretation of result."
   * ^comment = "Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."
 * interpretation 0..* CodeableConcept "Information about reference intervals and result interpretation."
   * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
@@ -48,7 +48,7 @@ Characteristics: #can-be-target
   * dataAbsentReason 0..1 CodeableConcept "Provides a reason why the expected value in the element Observation.value[x] is missing."
     * ^binding.description = "HL7 Data absent reason"
     * ^binding.strength = #preferred
-  * referenceRange 0..* Base "Reference range, multiple reference ranges of different types culd by provided. Provides guide for interpretation of result." 
+  * referenceRange 0..* Base "Reference range, multiple reference ranges of different types culd by provided. Provides guide for interpretation of result."
     * ^comment = "Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied."
   * interpretation 0..* CodeableConcept "Information about reference intervals and result interpretation."
     * ^binding.description = "SNOMED CT, HL7 ObservationInterpretation"
