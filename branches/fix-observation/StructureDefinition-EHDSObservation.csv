@@ -1,0 +1,66 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSObservation","EHDSObservation","","","",0,*,"","","","null {[]} {[]}
+","Observation model","EHDS refined base model for Observation information","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSObservation.header","EHDSObservation.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSObservation.header.subject","EHDSObservation.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSObservation.header.identifier","EHDSObservation.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSObservation.header.authorship","EHDSObservation.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSObservation.header.authorship.author[x]","EHDSObservation.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSObservation.header.authorship.datetime","EHDSObservation.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSObservation.header.lastUpdate","EHDSObservation.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSObservation.header.status","EHDSObservation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSObservation.header.statusReason[x]","EHDSObservation.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSObservation.header.language","EHDSObservation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSObservation.header.version","EHDSObservation.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSObservation.presentedForm","EHDSObservation.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSObservation.observationDate[x]","EHDSObservation.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Observation date","Clinically relevant time or time period for the observation.","","","","","","","","","",,"preferred","LOINC, NPU, SNOMED CT","","",,,,"EHDSObservation.observationDate[x]",1,1,"",""
+"EHDSObservation.performer","EHDSObservation.performer","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Performer","Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document. ","","","","","","","","","",,,,,"",,,,"EHDSObservation.performer",0,1,"",""
+"EHDSObservation.reporter","EHDSObservation.reporter","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Reporter","With certain observation results, e.g. there may also be an interpreter or a person responsible for validation.","","","","","","","","","",,,,,"",,,,"EHDSObservation.reporter",0,1,"",""
+"EHDSObservation.status","EHDSObservation.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status","The status of the result.","","","","","","","","","",,"preferred","HL7 Observation status","","",,,,"EHDSObservation.status",1,1,"",""
+"EHDSObservation.code","EHDSObservation.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Observation code","Code representing the observation using the agreed code systems.","","","","","","","","","",,,,,"",,,,"EHDSObservation.code",1,1,"",""
+"EHDSObservation.observationMethod","EHDSObservation.observationMethod","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Observation method","Observation method (measurement principle) to obtain the result.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSObservation.observationMethod",0,1,"",""
+"EHDSObservation.anatomicLocation","EHDSObservation.anatomicLocation","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Anatomic location","Anatomic location and laterality where the observation should be or was performed.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSObservation.anatomicLocation",0,1,"",""
+"EHDSObservation.observationResult","EHDSObservation.observationResult","","","",1,1,"","","","Base {[]} {[]}
+","Observation result","Result of the observation including text, quantity, coded and boolean results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation.","","","","","","","","","",,,,,"",,,,"EHDSObservation.observationResult",1,1,"",""
+"EHDSObservation.observationResult.value[x]","EHDSObservation.observationResult.value[x]","","","",1,1,"","","","string {[]} {[]}
+Quantity {[]} {[]}CodeableConcept {[]} {[]}boolean {[]} {[]}","Value or result of the observation","Value or result of the observation","","","","","","","","","",,,,,"",,,,"EHDSObservation.observationResult.value[x]",1,1,"",""
+"EHDSObservation.observationResult.uncertainty","EHDSObservation.observationResult.uncertainty","","","",0,1,"","","","Quantity {[]} {[]}
+","Uncertainty","Measurement uncertainty type and interval should be provided if needed.","","","","","","","","","",,,,,"",,,,"EHDSObservation.observationResult.uncertainty",0,1,"",""
+"EHDSObservation.observationResult.dataAbsentReason","EHDSObservation.observationResult.dataAbsentReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","dataAbsentReason","Provides a reason why the expected value in the element Observation.value[x] is missing.","","","","","","","","","",,"preferred","HL7 Data absent reason","","",,,,"EHDSObservation.observationResult.dataAbsentReason",0,1,"",""
+"EHDSObservation.observationResult.referenceRange","EHDSObservation.observationResult.referenceRange","","","",0,*,"","","","Base {[]} {[]}
+","Reference range","Reference range, multiple reference ranges of different types could by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied.","","","","","","","","","",,"preferred","SNOMED CT, HL7 ObservationInterpretation","","",,,,"EHDSObservation.observationResult.referenceRange",0,*,"",""
+"EHDSObservation.component","EHDSObservation.component","","","",0,*,"","","","Base {[]} {[]}
+","Component","Some observations have multiple component observations. These component observations are expressed as separate code value pairs that share the same attributes.","","","","","","","","","",,,,,"",,,,"EHDSObservation.component",0,*,"",""
+"EHDSObservation.component.code","EHDSObservation.component.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Observation code","Code representing the observation using the agreed code systems.","","","","","","","","","",,,,,"",,,,"EHDSObservation.component.code",1,1,"",""
+"EHDSObservation.component.result","EHDSObservation.component.result","","","",1,1,"","","","","Observation result","Result of the observation including text, quantity, coded and boolean results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation.","","","","","","","","","",,,,,"",,,,"EHDSObservation.component.result",1,1,"",""
+"EHDSObservation.component.referenceRange","EHDSObservation.component.referenceRange","","","",0,*,"","","","Base {[]} {[]}
+","Reference range","Reference range, multiple reference ranges of different types could by providedProvides guide for interpretation of result. Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied.","","","","","","","","","",,,,,"",,,,"EHDSObservation.component.referenceRange",0,*,"",""
+"EHDSObservation.component.observationInterpretation","EHDSObservation.component.observationInterpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Observation interpretation","Information about reference intervals and result interpretation.","","","","","","","","","",,"preferred","SNOMED CT, HL7 ObservationInterpretation","","",,,,"EHDSObservation.component.observationInterpretation",0,*,"",""
+"EHDSObservation.hasMember","EHDSObservation.hasMember","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation]]}
+","Has member","This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.","","","","","","","","","",,,,,"",,,,"EHDSObservation.hasMember",0,*,"",""
+"EHDSObservation.resultDescription","EHDSObservation.resultDescription","","","",0,1,"","","","string {[]} {[]}
+","Result description","Comments and narrative representation of the observation result and findings.","","","","","","","","","",,,,,"",,,,"EHDSObservation.resultDescription",0,1,"",""
+"EHDSObservation.observationInterpretation","EHDSObservation.observationInterpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Observation interpretation","Information about reference intervals and result interpretation.","","","","","","","","","",,,,,"",,,,"EHDSObservation.observationInterpretation",0,*,"",""

@@ -1,0 +1,75 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSImagingStudy","EHDSImagingStudy","","","",0,*,"","","","null {[]} {[]}
+","Imaging study model","C.32 - EHDS refined base model for Imaging study","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSImagingStudy.identifier","EHDSImagingStudy.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","C.32.1 - Identifier","Identifiers for the ImagingStudy such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.identifier",1,*,"",""
+"EHDSImagingStudy.modality","EHDSImagingStudy.modality","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.32.2 - Modality","All of the distinct values for series' modalities","","","","","","","","","",,"preferred","DICOM CID029","","",,,,"EHDSImagingStudy.modality",0,*,"",""
+"EHDSImagingStudy.subject","EHDSImagingStudy.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}
+","C.32.3 - Subject","Who or what is the subject of the study","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.subject",1,1,"",""
+"EHDSImagingStudy.encounter","EHDSImagingStudy.encounter","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter]]}
+","C.32.4 - Encounter","Encounter with which this imaging study is associated","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.encounter",0,1,"",""
+"EHDSImagingStudy.started","EHDSImagingStudy.started","","","",0,1,"","","","dateTime {[]} {[]}
+","C.32.5 - Started","Date and time the study started.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.started",0,1,"",""
+"EHDSImagingStudy.basedOn","EHDSImagingStudy.basedOn","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest]]}
+","C.32.6 - Based on","A list of the diagnostic requests that resulted in this imaging study being performed.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.basedOn",0,*,"",""
+"EHDSImagingStudy.numberOfSeries","EHDSImagingStudy.numberOfSeries","","","",0,1,"","","","unsignedInt {[]} {[]}
+","C.32.7 - Number of series","Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.numberOfSeries",0,1,"",""
+"EHDSImagingStudy.numberOfInstances","EHDSImagingStudy.numberOfInstances","","","",0,1,"","","","unsignedInt {[]} {[]}
+","C.32.8 - Number of instances","Number of  Service-Object Pairs (SOP) Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.numberOfInstances",0,1,"",""
+"EHDSImagingStudy.description","EHDSImagingStudy.description","","","",0,1,"","","","string {[]} {[]}
+","C.32.9 - Description","The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.description",0,1,"",""
+"EHDSImagingStudy.studyCustodian","EHDSImagingStudy.studyCustodian","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","C.32.10 - Study custodian","Organization name, address, contact information.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.studyCustodian",0,1,"",""
+"EHDSImagingStudy.studyEndpoint","EHDSImagingStudy.studyEndpoint","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint {[]} {[]}
+","C.32.11 - Study endpoint","An endpoint describes the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.studyEndpoint",0,1,"",""
+"EHDSImagingStudy.series","EHDSImagingStudy.series","","","",0,*,"","","","Base {[]} {[]}
+","C.32.12 - Series","Each study has one or more series of instances","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series",0,*,"",""
+"EHDSImagingStudy.series.seriesUid","EHDSImagingStudy.series.seriesUid","","","",1,1,"","","","id {[]} {[]}
+","C.32.12.1 - Series UID","DICOM Series Instance UID for the series","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.seriesUid",1,1,"",""
+"EHDSImagingStudy.series.number","EHDSImagingStudy.series.number","","","",0,1,"","","","unsignedInt {[]} {[]}
+","C.32.12.2 - Number","Numeric identifier of this series","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.number",0,1,"",""
+"EHDSImagingStudy.series.acquisitionModality","EHDSImagingStudy.series.acquisitionModality","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.32.12.3 - Acquisition modality","The modality used for this series","","","","","","","","","",,"preferred","DICOM CID029","","",,,,"EHDSImagingStudy.series.acquisitionModality",1,1,"",""
+"EHDSImagingStudy.series.description","EHDSImagingStudy.series.description","","","",0,1,"","","","string {[]} {[]}
+","C.32.12.4 - Description","A short human readable summary of the series","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.description",0,1,"",""
+"EHDSImagingStudy.series.numberOfInstances","EHDSImagingStudy.series.numberOfInstances","","","",0,1,"","","","unsignedInt {[]} {[]}
+","C.32.12.5 - Number of instances","Number of Series Related Instances","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.numberOfInstances",0,1,"",""
+"EHDSImagingStudy.series.seriesEndpoint","EHDSImagingStudy.series.seriesEndpoint","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint {[]} {[]}
+","C.32.12.6 - Series endpoint","An endpoint describes the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.seriesEndpoint",0,1,"",""
+"EHDSImagingStudy.series.bodySite","EHDSImagingStudy.series.bodySite","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.32.12.7 - Body site","Body part examined","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSImagingStudy.series.bodySite",0,1,"",""
+"EHDSImagingStudy.series.laterality","EHDSImagingStudy.series.laterality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.32.12.8 - Laterality","Body part laterality","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSImagingStudy.series.laterality",0,1,"",""
+"EHDSImagingStudy.series.specimen","EHDSImagingStudy.series.specimen","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen]]}
+","C.32.12.9 - Specimen","Specimen imaged","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.specimen",0,*,"",""
+"EHDSImagingStudy.series.started","EHDSImagingStudy.series.started","","","",0,1,"","","","dateTime {[]} {[]}
+","C.32.12.10 - Started","When the series started","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.started",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries","EHDSImagingStudy.series.instancesInTheSeries","","","",0,*,"","","","Base {[]} {[]}
+","C.32.12.11 - Instances in the series","A single SOP instance from the series","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries",0,*,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.instanceTitle","EHDSImagingStudy.series.instancesInTheSeries.instanceTitle","","","",0,1,"","","","string {[]} {[]}
+","C.32.12.11.1 - Instance title","The description of the instance.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.instanceTitle",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.instanceUid","EHDSImagingStudy.series.instancesInTheSeries.instanceUid","","","",1,1,"","","","id {[]} {[]}
+","C.32.12.11.2 - Instance UID","DICOM SOP Instance UID","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.instanceUid",1,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.sopClass","EHDSImagingStudy.series.instancesInTheSeries.sopClass","","","",1,1,"","","","uri {[]} {[]}
+","C.32.12.11.3 - SOP class","DICOM class type","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.sopClass",1,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.instanceNumber","EHDSImagingStudy.series.instancesInTheSeries.instanceNumber","","","",0,1,"","","","unsignedInt {[]} {[]}
+","C.32.12.11.4 - Instance number","The number of this instance in the series","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.instanceNumber",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation","EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation","","","",0,1,"","","","Base {[]} {[]}
+","C.32.12.11.5 - Radiation dose information","Kerma area product (KAP), Total KAP, Kerma at the end of tube (dental X-ray), Thickness of breast for the calculation of Average absorbed breast dose.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.kap","EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.kap","","","",0,1,"","","","Quantity {[]} {[]}
+","C.32.12.11.5.1 - KAP","Kerma area product (KAP). A method of radiation dose monitoring used in radiographic and fluoroscopic studies.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.kap",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.totalKerma","EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.totalKerma","","","",0,1,"","","","Quantity {[]} {[]}
+","C.32.12.11.5.2 - Total Kerma","Kerma is a measure of energy transferred from radiation to matter and is an acronym for kinetic energy released to matter.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.totalKerma",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.endTubeKerma","EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.endTubeKerma","","","",0,1,"","","","Quantity {[]} {[]}
+","C.32.12.11.5.3 - End tube Kerma","Kerma at the end of tube","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.endTubeKerma",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.breastThickness","EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.breastThickness","","","",0,1,"","","","Quantity {[]} {[]}
+","C.32.12.11.5.4 - Breast thickness","Thickness of breast for the calculation of Average absorbed breast dose.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.breastThickness",0,1,"",""
+"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.abd","EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.abd","","","",0,1,"","","","Quantity {[]} {[]}
+","C.32.12.11.5.5 - 2ABD","Average absorbed breast dose.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.abd",0,1,"",""
+"EHDSImagingStudy.phase","EHDSImagingStudy.phase","","","",0,1,"","","","Base {[]} {[]}
+","C.32.13 - Phase","Study phase, e.g., without contrast, arterial phase, venous phase, delayed phase. Only some types of studies have phases.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.phase",0,1,"",""
+"EHDSImagingStudy.phase.phaseCode","EHDSImagingStudy.phase.phaseCode","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.32.13.1 - Phase code","Study phase, e.g., without contrast, arterial phase, venous phase, delayed phase. Only some types of studies have phases.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSImagingStudy.phase.phaseCode",1,1,"",""
+"EHDSImagingStudy.phase.radiationDose","EHDSImagingStudy.phase.radiationDose","","","",0,1,"","","","Quantity {[]} {[]}
+","C.32.13.2 - Radiation dose","Dose length product - Computerized Tomography (CT) related.","","","","","","","","","",,,,,"",,,,"EHDSImagingStudy.phase.radiationDose",0,1,"",""

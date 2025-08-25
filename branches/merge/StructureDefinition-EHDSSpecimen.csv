@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSSpecimen","EHDSSpecimen","","","",0,*,"","","","null {[]} {[]}
+","Specimen model","EHDS refined base model for A sample to be used for Analysis","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSSpecimen.identifier","EHDSSpecimen.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","An identifier of the specimen which is unique within in a defined scope.","An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by ordering system, identifier assigned by laboratory etc. Multiple identifiers can be used.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.identifier",1,*,"",""
+"EHDSSpecimen.typeOfSpecies","EHDSSpecimen.typeOfSpecies","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Biologic type of species for laboratory result reports bound to non-human subjects.","Biologic type of species for laboratory result reports bound to non-human subjects.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSpecimen.typeOfSpecies",0,1,"",""
+"EHDSSpecimen.material","EHDSSpecimen.material","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Material that forms the specimen.","Material that forms the specimen.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSpecimen.material",0,1,"",""
+"EHDSSpecimen.collectionPeriod","EHDSSpecimen.collectionPeriod","","","",0,1,"","","","Period {[]} {[]}
+","The period or date and time of specimen collection.","The period or date and time of specimen collection.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collectionPeriod",0,1,"",""
+"EHDSSpecimen.bodySite","EHDSSpecimen.bodySite","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left","Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.bodySite",0,1,"",""
+"EHDSSpecimen.morphology","EHDSSpecimen.morphology","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer.","Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSpecimen.morphology",0,1,"",""
+"EHDSSpecimen.sourceDevice","EHDSSpecimen.sourceDevice","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source device in case the material is not collected directly from the patient but comes from a patient-related object, e.g. a catheter","Source device in case the material is not collected directly from the patient but comes from a patient-related object, e.g. a catheter","","","","","","","","","",,"preferred","SNOMED CT, EMDN","","",,,,"EHDSSpecimen.sourceDevice",0,1,"",""
+"EHDSSpecimen.collectionProcedure","EHDSSpecimen.collectionProcedure","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure {[]} {[]}
+","The procedure that collects the specimen.","The procedure that collects the specimen.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collectionProcedure",0,1,"",""
+"EHDSSpecimen.collectionProcedureMethod","EHDSSpecimen.collectionProcedureMethod","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Collection procedure method","If relevant for the results, the method of obtaining the specimen.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSpecimen.collectionProcedureMethod",0,1,"",""
+"EHDSSpecimen.receivedDate","EHDSSpecimen.receivedDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time that the material is handed over at the laboratory or specimen collection centre.","Date and time that the material is handed over at the laboratory or specimen collection centre.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.receivedDate",0,1,"",""
+"EHDSSpecimen.subject[x]","EHDSSpecimen.subject[x]","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatientAnimal {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance {[]} {[]}","Subject","Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.subject[x]",0,1,"",""
+"EHDSSpecimen.container","EHDSSpecimen.container","","","",0,*,"","","","Base {[]} {[]}
+","The container holding the specimen.","The container holding the specimen.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.container",0,*,"",""
+"EHDSSpecimen.container.specimenQuantity","EHDSSpecimen.container.specimenQuantity","","","",0,1,"","","","Quantity {[]} {[]}
+","Specimen quantity","Quantity of specimen within container.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.container.specimenQuantity",0,1,"",""
+"EHDSSpecimen.container.containerDevice","EHDSSpecimen.container.containerDevice","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}
+","Container device","The device resource for the the container holding the specimen.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.container.containerDevice",1,1,"",""
