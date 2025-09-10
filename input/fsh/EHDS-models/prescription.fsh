@@ -27,7 +27,7 @@ Characteristics: #can-be-target
 //    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
 //    * ^binding.strength = #preferred
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
-  * prescriptionIntent 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
+  * intendedUseType 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
     * ^binding.description = "UCUM, EDQM Standard Terms"
