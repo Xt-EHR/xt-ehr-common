@@ -11,7 +11,7 @@ Characteristics: #can-be-target
   * identifier ^short = "Business identifier(s) for the prescription. [Used for searching]"
   * authorship.author[x] ^short = "The prescriber, the person who made the prescription, and who takes the responsibility of the treatment. [Used for searching]"
   * authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
-  * status ^short = "Status of the prescription, this should not be status of treatment. For multi-item prescription, the status of prescription is often related to statuses of single lines. In case of single-item prescriptions, the status for line is usually the status of prescription. [Used for searching]"
+  * status ^short = "Status of authorisation to dispense of the prescription item, this should not be status of treatment. For multiple-item prescription, the aggregate status of the whole prescription is stated using EHDSMedicationPrescription.header.status. For single-item prescription, the prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]"
   * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
   * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
@@ -27,7 +27,7 @@ Characteristics: #can-be-target
 //    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
 //    * ^binding.strength = #preferred
   * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
-  * prescriptionIntent 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
+  * intendedUseType 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * treatmentPeriod 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
     * ^binding.description = "UCUM, EDQM Standard Terms"
