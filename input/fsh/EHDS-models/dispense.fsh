@@ -26,7 +26,7 @@ Characteristics: #can-be-target
 * dispensedQuantity 1..1 Quantity "Number of dispensed packages if the pack size is known, or number of smaller items/units"
   * ^binding.description = "UCUM, EDQM Standard Terms"
   * ^binding.strength = #preferred
-* timeOfDispensation 1..1 dateTime "Date and time of dispensation. When not present, the time of dispensation is assumed to be the time of authoring/issuing dispense record."
+* timeOfDispensation 1..1 dateTime "Date and time of dispensation. When not present, the time of dispensation is assumed to be the time of issuing dispense record."
 * substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
   * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
   * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
