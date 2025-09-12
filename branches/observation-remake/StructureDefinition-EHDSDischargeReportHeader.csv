@@ -1,0 +1,67 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSDischargeReportHeader","EHDSDischargeReportHeader","","","",0,*,"","","","null {[]} {[]}
+","Discharge Report header model","EHDS refined base model for Discharge Report header data elements","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSDischargeReportHeader.header","EHDSDischargeReportHeader.header","","","",1,1,"","","","Base {[]} {[]}
+","Document header elements","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSDischargeReportHeader.header.subject","EHDSDischargeReportHeader.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSDischargeReportHeader.header.identifier","EHDSDischargeReportHeader.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Document ID","Unique identifier of the document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSDischargeReportHeader.header.authorship","EHDSDischargeReportHeader.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSDischargeReportHeader.header.authorship.author[x]","EHDSDischargeReportHeader.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSDischargeReportHeader.header.authorship.datetime","EHDSDischargeReportHeader.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSDischargeReportHeader.header.lastUpdate","EHDSDischargeReportHeader.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSDischargeReportHeader.header.status","EHDSDischargeReportHeader.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSDischargeReportHeader.header.statusReason[x]","EHDSDischargeReportHeader.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSDischargeReportHeader.header.language","EHDSDischargeReportHeader.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSDischargeReportHeader.header.version","EHDSDischargeReportHeader.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSDischargeReportHeader.presentedForm","EHDSDischargeReportHeader.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSDischargeReportHeader.header.documentType","EHDSDischargeReportHeader.header.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document type","Identifies the type of document at hand, e.g. Discharge report.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSDocument.header.documentType",1,1,"",""
+"EHDSDischargeReportHeader.header.documentTitle","EHDSDischargeReportHeader.header.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Document title","Document title, such as Discharge Report, Laboratory Result Report, etc.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.documentTitle",1,1,"",""
+"EHDSDischargeReportHeader.header.documentStatus","EHDSDischargeReportHeader.header.documentStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document status","The status of the Discharge report. E.g., preliminary, final.","","","","","","","","","",,"preferred","hl7:CompositionStatus","","",,,,"EHDSDocument.header.documentStatus",1,1,"",""
+"EHDSDischargeReportHeader.header.period","EHDSDischargeReportHeader.header.period","","","",0,1,"","","","Period {[]} {[]}
+","Period","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.period",0,1,"",""
+"EHDSDischargeReportHeader.header.attestation","EHDSDischargeReportHeader.header.attestation","","","",0,*,"","","","Base {[]} {[]}
+","Attestation","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation",0,*,"",""
+"EHDSDischargeReportHeader.header.attestation.attester","EHDSDischargeReportHeader.header.attestation.attester","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Attester","Attester who validated the document. Mulitple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.attester",1,1,"",""
+"EHDSDischargeReportHeader.header.attestation.datetime","EHDSDischargeReportHeader.header.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.datetime",1,1,"",""
+"EHDSDischargeReportHeader.header.legalAuthentication","EHDSDischargeReportHeader.header.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","Legal authentication","Document legal authentication","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication",0,1,"",""
+"EHDSDischargeReportHeader.header.legalAuthentication.legalAuthenticator","EHDSDischargeReportHeader.header.legalAuthentication.legalAuthenticator","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Legal authenticator","The person taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.legalAuthenticator",1,1,"",""
+"EHDSDischargeReportHeader.header.legalAuthentication.datetime","EHDSDischargeReportHeader.header.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time when the document was authorized.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.datetime",1,1,"",""
+"EHDSDischargeReportHeader.header.eventType","EHDSDischargeReportHeader.header.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Event type","Categorization of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses.","","","","","","","","","",,"preferred","LOINC, SNOMED CT, dicom-cid-33-Modality","","",,,,"EHDSDocument.header.eventType",0,*,"",""
+"EHDSDischargeReportHeader.header.authorSpecialty","EHDSDischargeReportHeader.header.authorSpecialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Specialty","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocument.header.authorSpecialty",0,*,"",""
+"EHDSDischargeReportHeader.header.custodian","EHDSDischargeReportHeader.header.custodian","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","Document custodian","Organisation that is in charge of maintaining the document/report.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.custodian",1,1,"",""
+"EHDSDischargeReportHeader.header.documentFormat","EHDSDischargeReportHeader.header.documentFormat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Document format","An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","","","","","","","","","",,"preferred","HL7 Document Format Codes","","",,,,"EHDSDocument.header.documentFormat",0,1,"",""
+"EHDSDischargeReportHeader.header.confidentiality","EHDSDischargeReportHeader.header.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Confidentiality","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSDocument.header.confidentiality",0,1,"",""
+"EHDSDischargeReportHeader.knowledgeResources","EHDSDischargeReportHeader.knowledgeResources","","","",0,*,"","","","Base {[]} {[]}
+","Related documents and information sources","Related documents and information sources","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources",0,*,"",""
+"EHDSDischargeReportHeader.knowledgeResources.externalReference","EHDSDischargeReportHeader.knowledgeResources.externalReference","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.externalReference",0,*,"",""
+"EHDSDischargeReportHeader.knowledgeResources.relatedTo","EHDSDischargeReportHeader.knowledgeResources.relatedTo","","","",0,*,"","","","Reference {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.relatedTo",0,*,"",""
+"EHDSDischargeReportHeader.healthInsuranceAndPaymentInformation","EHDSDischargeReportHeader.healthInsuranceAndPaymentInformation","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage {[]} {[]}
+","Health insurance and payment information","Health insurance information (Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.)","","","","","","","","","",,,,,"",,,,"EHDSDischargeReportHeader.healthInsuranceAndPaymentInformation",0,*,"",""
+"EHDSDischargeReportHeader.intendedRecipient","EHDSDischargeReportHeader.intendedRecipient","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}
+","Intended recipient","Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable","","","","","","","","","",,,,,"",,,,"EHDSDischargeReportHeader.intendedRecipient",0,*,"",""

@@ -1,0 +1,23 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSMedicationDispenseHeader","EHDSMedicationDispenseHeader","","","",0,*,"","","","null {[]} {[]}
+","Medication dispense header","Metadata elements for a header of medication dispense or dispense decline.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSMedicationDispenseHeader.subject","EHDSMedicationDispenseHeader.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient who the medication was prescribed to. [Used for searching]","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.subject",1,1,"",""
+"EHDSMedicationDispenseHeader.authorship","EHDSMedicationDispenseHeader.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship",1,*,"",""
+"EHDSMedicationDispenseHeader.authorship.author","EHDSMedicationDispenseHeader.authorship.author","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","The person who dispensed the product, and takes the responsibility of the dispensation or declining the dispense. [Used for searching]","Author by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship.author",1,1,"",""
+"EHDSMedicationDispenseHeader.authorship.datetime","EHDSMedicationDispenseHeader.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","The time of recording the dispense or declining the request. [Used for searching]","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship.datetime",1,1,"",""
+"EHDSMedicationDispenseHeader.lastUpdate","EHDSMedicationDispenseHeader.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.lastUpdate",0,1,"",""
+"EHDSMedicationDispenseHeader.status","EHDSMedicationDispenseHeader.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the dispense. In case of declining a dispense, the status should be 'declined'. [Used for searching]","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.status",1,1,"",""
+"EHDSMedicationDispenseHeader.statusReason[x]","EHDSMedicationDispenseHeader.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of dispensation, for example the reason why the dispensation was made invalid","Reason for the current status of the resource.","Added","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.statusReason[x]",0,1,"",""
+"EHDSMedicationDispenseHeader.language","EHDSMedicationDispenseHeader.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSCommonHeader.language",0,1,"",""
+"EHDSMedicationDispenseHeader.version","EHDSMedicationDispenseHeader.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.version",0,1,"",""
+"EHDSMedicationDispenseHeader.identifier","EHDSMedicationDispenseHeader.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Business identifier(s) for the dispense. [Used for searching]","Business identifier(s) for the dispense. [Used for searching]","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispenseHeader.identifier",1,*,"",""
