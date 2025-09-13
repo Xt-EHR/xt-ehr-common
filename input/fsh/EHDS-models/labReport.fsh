@@ -30,7 +30,7 @@ Characteristics: #can-be-target
     * orderDateAndTime 0..1 dateTime "Date and time of the order placement."
     * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient "The person/organisation \"authorised\" to place the order. Order placer could be either a health professional, health professional organisation or the patient himself."
     * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
-    * orderReason[x] 0..* CodeableConcept or EHDSCondition or  EHDSObservation "An explanation or justification for why this service is being requested in coded form. "
+    * orderReason[x] 0..* CodeableConcept or EHDSCondition or  EHDSObservation "An explanation or justification for why this service is being requested in coded form."
       * ^binding.description = "SNOMED CT"
       * ^binding.strength = #preferred
     * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the laboratory investigation."
@@ -41,7 +41,7 @@ Characteristics: #can-be-target
     * sexForClinicalUse 0..* CodeableConcept "A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population"
       * ^binding.description = "HL7 sex-parameter-for-clinical-use"
       * ^binding.strength = #preferred
-    * vaccination 0..* EHDSImmunisation "Vaccination history of the patient. "
+    * vaccination 0..* EHDSImmunisation "Vaccination history of the patient."
     * otherSupportingInformation 0..* Resource "Any other type of relevant supporting information"
 * specimen 0..* EHDSSpecimen "Specimen information"
 * serviceRequest 0..* EHDSServiceRequest "Specification of requested service or services"
