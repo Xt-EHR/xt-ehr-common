@@ -17,6 +17,8 @@ Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 
+* header.authorship.datetime
+  * ^short = "Date and time of issuing dispense record"
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient"
 * relatedRequest 0..* Identifier "Identifier of the prescription or prescription item the dispense is related to"
@@ -24,7 +26,7 @@ Characteristics: #can-be-target
 * dispensedQuantity 1..1 Quantity "Number of dispensed packages if the pack size is known, or number of smaller items/units"
   * ^binding.description = "UCUM, EDQM Standard Terms"
   * ^binding.strength = #preferred
-* timeOfDispensation 1..1 dateTime "Date and time of dispensation"
+* timeOfDispensation 1..1 dateTime "Date and time of dispensation. When not present, the time of dispensation is assumed to be the time of issuing dispense record."
 * substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
   * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
   * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
