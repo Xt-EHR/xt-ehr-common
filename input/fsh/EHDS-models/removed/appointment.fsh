@@ -1,3 +1,4 @@
+/*
 Logical: EHDSAppointment
 //Id: EHDSappointment
 Title: "Appointment model"
@@ -21,6 +22,7 @@ Characteristics: #can-be-target
 * start 0..1 dateTime "Date and time that the appointment is to take place."
 * end 0..1 dateTime "Date and time that the appointment is to conclude."
 * note 0..* string "Additional notes/comments about the appointment."
+*/
 
 /*
 * type 0..1 CodeableConcept "Type" """The type of appointment or patient that has been booked in the slot, e.g. Routine, check-up, walk-in, routine, emenrgency etc."""

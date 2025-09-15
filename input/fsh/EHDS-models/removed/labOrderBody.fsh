@@ -1,3 +1,4 @@
+/*
 Logical: EHDSLaboratoryOrderBody
 //Id: EHDSlaboratoryOrderBody
 Title: "Laboratory order body model"
@@ -29,3 +30,4 @@ Characteristics: #can-be-target
 * allergy 0..* EHDSAllergyIntolerance "Allergies and intolerances that may affect order execution or interpretation of results"
 * alerts 0..* EHDSAlert "Alerts and warnings that may affect order execution or interpretation of results"
 * appointment 0..1 EHDSAppointment "Information about the appointment (if the appointment has been booked)"
+*/

@@ -1,3 +1,4 @@
+/*
 Logical: EHDSLaboratoryOrderHeader
 //Id: EHDSreportHeader
 Title: "Laboratory order header model"
@@ -44,8 +45,5 @@ Characteristics: #can-be-target
     * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
   * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
-/*
-* knowledgeResources 0..* Base "A.1.10 - Knowledge resources" """To provide links between specified data elements and external knowledge resources"""
-  * externalReference 0..* uri "A.1.10.1 - External reference" """A reference leading to Clinical Practice Guidelines (CPG), emergency and anesthesia guidelines or other clinical relevant guidelines. This should be used only for providing specific guidance which may not be readily available to the health professional caring for the patient."""
-  * relatedWith 0..* Reference (EHDSCondition or EHDSProcedure or EHDSObservation) "A.1.10.2 - Related with" """Identify the entry or entries of this document or document part for which this additional information relates with, for example a link between a rare disease problem and guidelines for that particular rare disease (this section)."""
+
 */
