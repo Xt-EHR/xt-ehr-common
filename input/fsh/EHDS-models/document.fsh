@@ -12,9 +12,6 @@ Characteristics: #can-be-target
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
   * documentTitle 1..1 string "Document title" """Document title, such as Discharge Report, Laboratory Result Report, etc."""
-  * documentStatus 1..1 CodeableConcept "Document status" """The status of the Discharge report. E.g., preliminary, final."""
-    * ^binding.description = "hl7:CompositionStatus"
-    * ^binding.strength = #preferred
   * period 0..1 Period "Period" """Time of service that is being documented"""
   //* reportDateTime 1..1 dateTime "Report date and time" """Date and time of the report creation."""
   * attestation 0..* Base "Attestation" """Document attestation details"""
@@ -29,13 +26,11 @@ Characteristics: #can-be-target
   * authorSpecialty 0..* CodeableConcept "Specialty" """Additional details about where the content was created (e.g. clinical specialty)"""
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
-  * custodian 1..1 EHDSOrganisation "Document custodian" """Organisation that is in charge of maintaining the document/report."""
-  * documentFormat 0..1 CodeableConcept "Document format" """An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType."""
-    * ^binding.description = "HL7 Document Format Codes"
-    * ^binding.strength = #preferred
+  * custodian 0..1 EHDSOrganisation "Document custodian" """Organisation that is in charge of maintaining the document/report."""
   * confidentiality 0..1 CodeableConcept "Confidentiality" """Level of confidentiality of the document. Implicit value is normal."""
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
 * knowledgeResources 0..* Base "Related documents and information sources"
   * externalReference 0..* RelatedArtifact "..."
   * relatedTo 0..* Reference "..."
+* presentedForm 0..* EHDSAttachment "A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document"
