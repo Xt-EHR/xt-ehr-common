@@ -23,7 +23,6 @@ Characteristics: #can-be-target
 * intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 * header.eventType ^binding.description = "SNOMED CT"
 * header.eventType ^binding.strength = #preferred
-* knowledgeResources 0..0
 * body 0..1 Base "Laboratory Report structured body"
   * orderInformation 0..* Base "Order Information (Laboratory Result Report could respond to multiple test orders)"
     * orderId 1..* Identifier "An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."
