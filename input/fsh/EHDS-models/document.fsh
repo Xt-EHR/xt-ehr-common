@@ -30,7 +30,7 @@ Characteristics: #can-be-target
   * confidentiality 0..1 CodeableConcept "Confidentiality" """Level of confidentiality of the document. Implicit value is normal."""
     * ^binding.description = "hl7:Confidentiality"
     * ^binding.strength = #preferred
-* knowledgeResources 0..* Base "Related documents and information sources"
-  * externalReference 0..* RelatedArtifact "..."
-  * relatedTo 0..* Reference "..."
 * presentedForm 0..* EHDSAttachment "A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document"
+//* knowledgeResources 0..* Base "Related documents and information sources"
+//  * externalReference 0..* RelatedArtifact "..."
+//  * relatedTo 0..* Reference "..."
