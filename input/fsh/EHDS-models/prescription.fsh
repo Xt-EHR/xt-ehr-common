@@ -17,7 +17,7 @@ Characteristics: #can-be-target
   * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
   * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate. [Used for searching]"
   * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
-* presentedForm ^short = "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
+* presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
 * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one item is allowed. In case multiple medications are allowed, all lines need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier."
