@@ -11,7 +11,7 @@ Characteristics: #can-be-target
   * documentType 1..1 CodeableConcept "Document type" """Identifies the type of document at hand, e.g. Discharge report."""
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred
-  * documentTitle 1..1 string "Human readable document title that can be displayed in search results, etc. This can be documentType's display name, or it can be assembled from multiple elements. Examples: "Laboratory Result Report", "Patient Summary of Jane Green 10.12.2024"
+  * documentTitle 1..1 string "Human readable document title that can be displayed in search results, etc. This can be documentType's display name, or it can be assembled from multiple elements. Examples: 'Laboratory Result Report', 'Patient Summary of Jane Green 10.12.2024'"
   * period 0..1 Period "Period" """Time of service that is being documented"""
   //* reportDateTime 1..1 dateTime "Report date and time" """Date and time of the report creation."""
   * attestation 0..* Base "Attestation" """Document attestation details"""
