@@ -6,7 +6,6 @@ Characteristics: #can-be-target
 
 * header.intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 * header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
-* knowledgeResources 0..0
 * body 0..1 Base "Structured body of the discharge report document" 
     //ok
   * advanceDirectives 0..1 Base "Section: Advance Directives." """Provision for healthcare decisions if, in the future, a person is unable to make those decisions."""

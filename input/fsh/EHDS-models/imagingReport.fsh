@@ -89,7 +89,6 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.6.2"
   * comparisonStudy 0..* EHDSImagingReport "Documentation (reference) of a prior Imaging Report to which the current images were compared."
     * ^requirements = "eHN Guideline IMG (v1.1): A.7"
-* knowledgeResources 0..0
 * dicomStudyMetadata 0..* EHDSImagingStudy "Metadata of the DICOM study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context. A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities."
   * ^requirements = "eHN Guideline IMG (v1.1): A.6"
 * attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"

@@ -1,3 +1,4 @@
+/*
 Logical: EHDSLaboratoryReportHeader
 Parent: EHDSDocument
 Title: "Laboratory report header model"
@@ -45,6 +46,6 @@ Characteristics: #can-be-target
 //  * version 0..1 string "A.1.9.13 - Version" """Version of the document"""
 //* presentedForm 0..1 EHDSAttachment "A.1.10 - Presented form" """Entire report as issued  pdf format recommended"""
 //* media[x] 0..* EHDSAttachment or EHDSMedia "A.1.11 - Media" """Media attachments."""
-* knowledgeResources 0..0
 //  * externalReference 0..* RelatedArtifact "..."
 //  * relatedTo 0..* Reference "..."
+*/
