@@ -23,7 +23,7 @@ This Implementation Guide is a work result across different work packages:
 - WP5 Task 5.4 "Metadata management",  
 - WP6 Task 6.1 "Patient Summary",  
 - WP6 Task 6.2 "ePrescription and eDispensation",  
-- WP7 Task 7.1 "Laboratory Results and Reports",  
+- WP7 Task 7.1 "Medical Results and Reports",  
 - WP7 Task 7.2 "Medical Images and Reports",  
 - WP7 Task 7.3 "Discharge Reports".  
 
