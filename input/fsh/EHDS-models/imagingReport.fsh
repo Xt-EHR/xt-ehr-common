@@ -7,10 +7,13 @@ Characteristics: #can-be-target
 
 * header 1..1
 * header ^short = "Imaging Report header"
+* header.authorship ^short = "Report authoring details"
+* header.authorship.author ^short = "Author(s) by whom the document was/were authored. Multiple authors could be provided."
 * header.documentType ^short = "Type of document (code for medical imaging report)"
+* header.status ^short = "Status of the document"
 * header.accessionNumber 0..1 string "Accession number - an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."
   * ^requirements = "eHN Guideline IMG (v1.1): A.1.8.11"
-* header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information" """Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."""
+* header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
   * ^requirements = "eHN Guideline IMG (v1.1): A.1.3"
 * header.intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"
   * ^requirements = "eHN Guideline IMG (v1.1): A.1.4"
