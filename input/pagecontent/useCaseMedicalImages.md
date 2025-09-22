@@ -8,16 +8,6 @@ Imaging result report could be divided into several parts: document header, body
   {% include imgReport_CIM.svg %}
 </figure>
 
-##### Imaging Result header
-<figure>
-  {% include imgReportHdr_CIM.svg %}
-</figure>
-
-##### Imaging Result body
-<figure>
-  {% include imgReportBody_CIM.svg %}
-</figure>
-
 ##### Dicom Study Metadata
 <figure>
   {% include imgManifest_CIM.svg %}
