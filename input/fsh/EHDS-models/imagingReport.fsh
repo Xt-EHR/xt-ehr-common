@@ -1,7 +1,7 @@
 Logical: EHDSImagingReport
 Title: "Imaging report model"
 Parent: EHDSDocument
-Description: """EHDS refined base model for Medical Imaging Result Report"""
+Description: """Imaging report reflects the observations and interpretations of one or more imaging studies, contains elements such as the reason why the study is requested, relevant contextual medical information, the modality used to acquire images and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice."""
 Characteristics: #can-be-target
 
 
