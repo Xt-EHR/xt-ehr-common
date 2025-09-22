@@ -14,7 +14,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * administeredProduct 0..1 EHDSMedication "Administered medicinal product"
 * doseNumber 0..1 integer "Number in a series of vaccinations / doses" """Order in the vaccination course."""
-* datetimeOfVaccination 1..1 date "Date and time of vaccination" """The date and time when the vaccination was administered"""
+* dateTimeOfVaccination 1..1 dateTime "Date and time of vaccination" """The date and optionally the exact time when the vaccination was administered."""
 * administeringCentre 0..* EHDSOrganisation "Administering centre" """Name/code of administering centre or a health authority responsible for the vaccination event"""
 * vaccineAdministrator 0..* EHDSHealthProfessional "Administrator of vaccine" """Health professional responsible for administering the vaccine or prophylaxis"""
 * nextVaccinationDate 0..1 date "Next vaccination date" """The date when the vaccination is planned to be given/repeated (e.g. next dose)"""
