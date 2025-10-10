@@ -1,0 +1,25 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSCondition","EHDSCondition","","","",0,*,"","","","null {[]} {[]}
+","Condition (model)","C.15 - EHDS refined base model for A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSCondition.identifier","EHDSCondition.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.15.1 - Identifier","Condition identifier","","","","","","","","","",,,,,"",,,,"EHDSCondition.identifier",0,*,"",""
+"EHDSCondition.description","EHDSCondition.description","","","",0,1,"","","","Narrative {[]} {[]}
+","C.15.2 - Description","Condition specification in narrative form","","","","","","","","","",,,,,"",,,,"EHDSCondition.description",0,1,"",""
+"EHDSCondition.code","EHDSCondition.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.15.3 - Code","Code identifying the condition, problem or diagnosis","","","","","","","","","",,"preferred","ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed","","",,,,"EHDSCondition.code",0,1,"",""
+"EHDSCondition.onsetDate","EHDSCondition.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","C.15.4 - Onset date","Onset date of a problem/condition","","","","","","","","","",,,,,"",,,,"EHDSCondition.onsetDate",0,1,"",""
+"EHDSCondition.endDate","EHDSCondition.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","C.15.5 - End date","The date or estimated date that the condition resolved or went into remission.","","","","","","","","","",,,,,"",,,,"EHDSCondition.endDate",0,1,"",""
+"EHDSCondition.category","EHDSCondition.category","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.15.6 - Category","Category or categories of the problem.","","","","","","","","","",,,,,"",,,,"EHDSCondition.category",0,*,"",""
+"EHDSCondition.clinicalStatus","EHDSCondition.clinicalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.15.7 - Clinical status","Status of the condition/problem (active, resolved, inactive, ...)","","","","","","","","","",,"preferred","HL7 Condtion-clinical","","",,,,"EHDSCondition.clinicalStatus",0,1,"",""
+"EHDSCondition.resolutionCircumstances","EHDSCondition.resolutionCircumstances","","","",0,*,"","","","CodeableReference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+","C.15.8 - Resolution circumstances","Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.). This field includes ""free text"" if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem ""hepatic cyst"" and will be included in surgical procedures).","","","","","","","","","",,,,,"",,,,"EHDSCondition.resolutionCircumstances",0,*,"",""
+"EHDSCondition.severity","EHDSCondition.severity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.15.9 - Severity","A subjective assessment of the severity of the condition as evaluated by the clinician.","","","","","","","","","",,"preferred","HL7 Condtion-severity","","",,,,"EHDSCondition.severity",0,1,"",""
+"EHDSCondition.anatomicLocation","EHDSCondition.anatomicLocation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.15.10 - Anatomic location","The anatomical location including laterality where this condition manifests itself.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSCondition.anatomicLocation",0,*,"",""
+"EHDSCondition.stage","EHDSCondition.stage","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.15.11 - Stage","Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used.","","","","","","","","","",,"preferred","e.g. TNM, ICD-O-3","","",,,,"EHDSCondition.stage",0,*,"",""

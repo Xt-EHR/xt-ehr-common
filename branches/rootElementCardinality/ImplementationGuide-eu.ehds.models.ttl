@@ -1,0 +1,1348 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eu.ehds.models"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide eu.ehds.models</b></p><a name=\"eu.ehds.models\"> </a><a name=\"hceu.ehds.models\"> </a><h2>EHDSModels</h2><p>The official URL for this implementation guide is: </p><pre>https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models</pre><div><p>EHDS Logical Information Models</p>\n</div></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EHDSModels"] ; # 
+  fhir:title [ fhir:v "EHDS Logical Information Models"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-08-21T19:18:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Xt-EHR"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Xt-EHR" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://Xt-EHR.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "EHDS Logical Information Models"] ; # 
+  fhir:packageId [ fhir:v "eu.ehds.models"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r5" ] ;
+     fhir:version [ fhir:v "6.5.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r5" ] ;
+     fhir:version [ fhir:v "5.2.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:code ;
+         fhir:v "hl7.fhir.uv.tools.r5#0.7.1"
+       ]
+     ] ) ;
+     fhir:grouping ( [
+       fhir:id [ fhir:v "EHDSPsLogicalModels" ] ;
+       fhir:name [ fhir:v "EHDS Patient Summary Logical Models" ] ;
+       fhir:description [ fhir:v "Information Models for implementing EEHRxF Patient Summary under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements. The Patient Summary is currently being defined in a [separate branch](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/branches/patient-summary/artifacts.html#ehds-patient-summary-logical-models)" ]
+     ] [
+       fhir:id [ fhir:v "EHDSPrescriptionDispenseLogicalModels" ] ;
+       fhir:name [ fhir:v "EHDS ePrescription and eDispense Logical Models" ] ;
+       fhir:description [ fhir:v "Information Models for implementing EEHRxF services for medication prescription and dispense services." ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryLogicalModels" ] ;
+       fhir:name [ fhir:v "EHDS Laboratory Domain Logical Models" ] ;
+       fhir:description [ fhir:v "Information Models for implementing EEHRxF services in the laboratory domain under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\"" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImagingLogicalModels" ] ;
+       fhir:name [ fhir:v "EHDS Imaging Domain Logical Models" ] ;
+       fhir:description [ fhir:v "Information Models for implementing EEHRxF services in the imaging domain under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\"" ]
+     ] [
+       fhir:id [ fhir:v "EHDSHdrLogicalModels" ] ;
+       fhir:name [ fhir:v "EHDS Discharge Report Domain Logical Models" ] ;
+       fhir:description [ fhir:v "Information Models for implementing EEHRxF Discharge report under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\"" ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSAddress" ]
+       ] ;
+       fhir:name [ fhir:v "Address model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Address structure" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAdvanceDirective> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSAdvanceDirective" ]
+       ] ;
+       fhir:name [ fhir:v "Advance directive model" ] ;
+       fhir:description [ fhir:v "Healthcare directives concerning life or after life wishes of the patient" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAlert> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSAlert" ]
+       ] ;
+       fhir:name [ fhir:v "Alert model" ] ;
+       fhir:description [ fhir:v "Alert flag" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSAllergyIntolerance" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy intolerance model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for allergy/intolerance" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAppointment> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSAppointment" ]
+       ] ;
+       fhir:name [ fhir:v "Appointment model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Appointment. This is a simplified model with minimal information - it is not intended to cover the full functionality of booking systems." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSAttachment" ]
+       ] ;
+       fhir:name [ fhir:v "Attachment model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSBodyStructure> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSBodyStructure" ]
+       ] ;
+       fhir:name [ fhir:v "Body structure model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Body structure" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSCarePlan" ]
+       ] ;
+       fhir:name [ fhir:v "Care plan model" ] ;
+       fhir:description [ fhir:v "EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSCondition" ]
+       ] ;
+       fhir:name [ fhir:v "Condition model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSCoverage" ]
+       ] ;
+       fhir:name [ fhir:v "Coverage model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Coverage" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCurrentPregnancy> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSCurrentPregnancy" ]
+       ] ;
+       fhir:name [ fhir:v "Current pregnancy status model" ] ;
+       fhir:description [ fhir:v "Current pregnancy status" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDataSet> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDataSet" ]
+       ] ;
+       fhir:name [ fhir:v "DataSet model" ] ;
+       fhir:description [ fhir:v "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDevice" ]
+       ] ;
+       fhir:name [ fhir:v "Device model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Device information" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDeviceUse> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDeviceUse" ]
+       ] ;
+       fhir:name [ fhir:v "Device use model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for device use information" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDischargeReport> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDischargeReport" ]
+       ] ;
+       fhir:name [ fhir:v "Discharge Report model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Discharge Report" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSHdrLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDocument> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDocument" ]
+       ] ;
+       fhir:name [ fhir:v "Document model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosage> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDosage" ]
+       ] ;
+       fhir:name [ fhir:v "Dosage model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Dosage" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosaging> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDosaging" ]
+       ] ;
+       fhir:name [ fhir:v "Dosaging model" ] ;
+       fhir:description [ fhir:v "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSEncounter" ]
+       ] ;
+       fhir:name [ fhir:v "Encounter model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Encounter" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSEndpoint" ]
+       ] ;
+       fhir:name [ fhir:v "Endpoint model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Endpoint" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSEpisodeOfCare" ]
+       ] ;
+       fhir:name [ fhir:v "Episode of care model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Episode of care" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSFamilyMemberHistory> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSFamilyMemberHistory" ]
+       ] ;
+       fhir:name [ fhir:v "Family member history model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for family member history" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSFunctionalStatus> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSFunctionalStatus" ]
+       ] ;
+       fhir:name [ fhir:v "Functional status" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Functional status" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSHealthProfessional" ]
+       ] ;
+       fhir:name [ fhir:v "Health professional model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Health professional (HP)" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSHumanName" ]
+       ] ;
+       fhir:name [ fhir:v "Human name model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Human name" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSImagingReport" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging report model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Medical Imaging Result Report" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSImagingLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSImagingStudy" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging study model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Imaging study" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSImagingLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImmunisation> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSImmunisation" ]
+       ] ;
+       fhir:name [ fhir:v "Immunisation model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Immunisation" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSInfectiousContact> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSInfectiousContact" ]
+       ] ;
+       fhir:name [ fhir:v "Infectious contact model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for an infectious contact" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryObservation> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryObservation" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory observation model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Observation performed by laboratory" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSLaboratoryLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryOrder> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryOrder" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory order" ] ;
+       fhir:description [ fhir:v "A - EHDS refined base model for Laboratory order" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSLaboratoryLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryOrderBody> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryOrderBody" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory order body model" ] ;
+       fhir:description [ fhir:v "B.1 - EHDS refined base model for Laboratory order body" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSLaboratoryLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryOrderHeader> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryOrderHeader" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory order header model" ] ;
+       fhir:description [ fhir:v "A.1 - EHDS refined base model for Laboratory order header data elements" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSLaboratoryLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportBody> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryReportBody" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory report body model" ] ;
+       fhir:description [ fhir:v "B.1 - EEHRxF refined base model for Laboratory result report body" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportHeader> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryReportHeader" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory report header model" ] ;
+       fhir:description [ fhir:v "A.1 - EHDS refined base model for laboratory report header data elements" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReport> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLaboratoryReport" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory report model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Laboratory result report" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSLaboratoryLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSLocation" ]
+       ] ;
+       fhir:name [ fhir:v "Location model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSMedia" ]
+       ] ;
+       fhir:name [ fhir:v "Media model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for A photo, video, or audio recording acquired or used in healthcare." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSMedicationAdministration" ]
+       ] ;
+       fhir:name [ fhir:v "Medication administration model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for a single medication administration" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDispenseDecline> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSDispenseDecline" ]
+       ] ;
+       fhir:name [ fhir:v "Medication dispense decline model" ] ;
+       fhir:description [ fhir:v "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)." ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSPrescriptionDispenseLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationDispense> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSMedicationDispense" ]
+       ] ;
+       fhir:name [ fhir:v "Medication dispense model" ] ;
+       fhir:description [ fhir:v "Logical model for medication dispensation (based on request or independently)" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSPrescriptionDispenseLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSMedication" ]
+       ] ;
+       fhir:name [ fhir:v "Medication model" ] ;
+       fhir:description [ fhir:v "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile. Model is suitable for generic/virtual medications as well as branded/real products." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescription> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSMedicationPrescription" ]
+       ] ;
+       fhir:name [ fhir:v "Medication prescription model" ] ;
+       fhir:description [ fhir:v "Logical model for medication prescription. A prescription contains one or more prescription items." ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSPrescriptionDispenseLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationStatement> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSMedicationStatement" ]
+       ] ;
+       fhir:name [ fhir:v "Medication statement model" ] ;
+       fhir:description [ fhir:v "Statement about a single medication as part of a medication summary." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSObservation" ]
+       ] ;
+       fhir:name [ fhir:v "Observation model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Observation information" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSOrganisation" ]
+       ] ;
+       fhir:name [ fhir:v "Organisation model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Health provider or any other type of organisation" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatientAnimal> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSPatientAnimal" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Animal model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Patient:Animal" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSPatient" ]
+       ] ;
+       fhir:name [ fhir:v "Patient model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for patient (subject of care) information" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatientSummary> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSPatientSummary" ]
+       ] ;
+       fhir:name [ fhir:v "Patient summary model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Patient Summary" ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "EHDSPsLogicalModels" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPregnancyHistory> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSPregnancyHistory" ]
+       ] ;
+       fhir:name [ fhir:v "Pregnancy history model" ] ;
+       fhir:description [ fhir:v "Pregnancy history for one pregnancy" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSProcedure" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for an action that is or was performed on or for a patient" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSRelatedPerson" ]
+       ] ;
+       fhir:name [ fhir:v "Related person model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Patient/subject guardian and other related person information" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSServiceRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Service request model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Specification of requested service or services" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSocialHistory> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSSocialHistory" ]
+       ] ;
+       fhir:name [ fhir:v "Social history model" ] ;
+       fhir:description [ fhir:v "EHDS model for social history observations" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSSpecimen" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for A sample to be used for Analysis" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSSubstance" ]
+       ] ;
+       fhir:name [ fhir:v "Substance model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Substance" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstanceUse> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSSubstanceUse" ]
+       ] ;
+       fhir:name [ fhir:v "Substance use model" ] ;
+       fhir:description [ fhir:v "Statement about using a substance (such as tobacco, alcohol, drugs, etc)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSTelecom" ]
+       ] ;
+       fhir:name [ fhir:v "Telecom model" ] ;
+       fhir:description [ fhir:v "EHDS refined base model for Telecommunication contact information structure" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTravelHistory> ;
+         fhir:reference [ fhir:v "StructureDefinition/EHDSTravelHistory" ]
+       ] ;
+       fhir:name [ fhir:v "Travel history model" ] ;
+       fhir:description [ fhir:v "Relevant information about the patient's recent travel history, for one visit" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] ) ;
+     fhir:page [
+       fhir:source [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "howto.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "howto.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "How to read this guide" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "knownIssues.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "knownIssues.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Known issues" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "scope.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "scope.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Scope and Content" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "wow.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "wow.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Ways of working" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "useCasePrescription.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "useCasePrescription.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "ePrescription & eDispensation" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "useCasePatientSummary.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "useCasePatientSummary.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Patient Summary" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "useCaseLabReport.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "useCaseLabReport.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Laboratory Report" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "obligationsLabReport.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "obligationsLabReport.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Obligations for Laboratory Report" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "useCaseMedicalImages.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "useCaseMedicalImages.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Medical Images" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "useCaseHospitalDischargeReport.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "useCaseHospitalDischargeReport.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Discharge Report" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "downloads.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Download" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "copyrightyear" ]
+       ] ;
+       fhir:value [ fhir:v "2022+" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "releaselabel" ]
+       ] ;
+       fhir:value [ fhir:v "ci-build" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "produce-jekyll-data" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "autoload-resources" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "template/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "input/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-qa" ]
+       ] ;
+       fhir:value [ fhir:v "temp/qa" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-temp" ]
+       ] ;
+       fhir:value [ fhir:v "temp/pages" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-output" ]
+       ] ;
+       fhir:value [ fhir:v "output" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-tx-cache" ]
+       ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-suppressed-warnings" ]
+       ] ;
+       fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-history" ]
+       ] ;
+       fhir:value [ fhir:v "https://www.xt-ehr.eu/specifications/fhir/history.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-html" ]
+       ] ;
+       fhir:value [ fhir:v "template-page.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-md" ]
+       ] ;
+       fhir:value [ fhir:v "template-page-md.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-contact" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-context" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-copyright" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-jurisdiction" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-license" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-publisher" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-version" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-wg" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active-tables" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "fmm-definition" ]
+       ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "propagate-status" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludelogbinaryformat" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tabbed-snapshots" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
