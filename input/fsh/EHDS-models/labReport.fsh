@@ -21,7 +21,7 @@ Characteristics: #can-be-target
 * header ^short = "Laboratory Report header"
   * authorship ^short = "Authorship of the laboratory report"
     * author[x] ^definition = """Author(s) by whom the laboratory result report was authored. Multiple authors could be provided."""
-    * author[x] ^comment = """Author of the laboratory report could be either a health professional who authed the report, laboratory itself or laboratory information system. Author information is the only mandatory element of the laboratory report header. As such, each laboratory shall be able to provide at least the author information."""
+    * author[x] ^comment = """Author of the laboratory report could be either a health professional who authored the report, laboratory itself or laboratory information system. Author information is the only mandatory element of the laboratory report header. As such, each laboratory shall be able to provide at least the author information."""
   * attestation
     * attester[x] ^definition = """Attester who validated laboratory result report. Multiple attesters could be provided."""
     * attester[x] ^comment = """Attestation (validation) of the laboratory report content is the usual step before legal authentication. Attestation could be provided by e.g. the laboratory specialist or the laboratory information system based on internal rules of the laboratory."""
