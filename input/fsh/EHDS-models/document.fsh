@@ -14,7 +14,7 @@ Characteristics: #can-be-target
   * period 0..1 Period "Time of service that is being documented"
   * version 0..1 string "Business version of the document."
   * attestation 0..* Base "Document attestation details"
-    * attester[x] 1..1 EHDSHealthProfessional or EHDSDevice  "Attester who validated the document. Mulitple attesters could be provided."
+    * attester[x] 1..1 EHDSHealthProfessional or EHDSDevice  "Attester who validated the document. Multiple attesters could be provided."
     * datetime 1..1 dateTime "Date and time of the approval of the document by Attester."
   * legalAuthentication 0..1 Base "Document legal authentication details"
     * legalAuthenticator[x] 1..1 EHDSHealthProfessional or EHDSOrganisation "The person or organization taking responsibility for the medical content of the document"
