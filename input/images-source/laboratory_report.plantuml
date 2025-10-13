@@ -2,7 +2,7 @@
 skinparam linetype polyline
 hide circle
 hide stereotype
-
+hide empty members
 
 class "**Laboratory report**" as labReport{
   Laboratory Report Header
@@ -30,30 +30,85 @@ class "**Laboratory Report Body**" as body{
 }
 
 body *--> orderInformation: "0..*"
+body *--> supportingInformation: "0..1"
 body *--> specimen: "0..*"
+body *--> serviceRequest: "0..*"
 body *--> resultData: "1..1"
+body *--> healthInsuranceAndPaymentInformation: "0..*"
 
 class "**Order information**" as orderInformation {
-
+  orderId 1..*
+  orderDateTime 0..1
+  orderPlacer 0..1
+  orderReason 0..*
+  orderReasonText 0..*
+  clinicalQuastion 0..1
 }
+
+class "**Supporting information**" as supportingInformation {
+  observation 0..*
+  condition 0..*
+  medicationAdministration 0..*
+  vaccination 0..*
+  sexForClinicalUse 0..*
+  other 0..*
+}
+
 
 class "**Specimen**" as specimen {
-
+  typeOfSpecies 0..1
+  material 0..1
+  collectionPeriod 0..1
+  bodySite 0..1
+  receivedDate 0..1
+  collectionProcedure 0..1
+  container 0..*
 }
 
+class "**Service Request**" as serviceRequest {
+  serviceText 0..1
+  serviceCode 0..1
+  quantity 0..1
+  priority 0..1
+  patientInstructions 0..1
+  coverage 0..*
+}
+
+
 class "**Result data**" as resultData {
-  Narrative Report 0..1
   Comments Interpretations and Recommendations 0..*
-  Test Results
 }
 
 resultData *--> results: 0..*
 
-class "**Test Results**" as results {
-  Narrative Report
-  Comments Interpretations and Recommendations
-  Test Results
+class "**Lab Observation**" as results {
+  authorship information 1..*
+  status 1..1
+  observationDate 1..1
+  code 1..1
+  method 0..1
+  **orderReference** 0..1
+  performer 0..1
+  value [quantity, code, range, ...] 0..1
+  dataAbsentReason 0..1
+  uncertainty 0..1
+  referenceRange 0..*
+  interpretationCode 0..*
+  device 0..1
+  testKit 0..1
+  calibrator 0..1
+  accreditation status 0..1
+  comments, narrative interpretations 0..*
+  component 0..*
+  **derivedFrom** 0..*
+  **triggeredBy** 0..*
+  **hasMember** 0..*
 }
+
+results --> results: "triggeredBy 0..*"
+results --> results: "hasMember 0..*"
+results --> results: "derivedFrom 0..*"
+results --> orderInformation: "orderReference 0..1"
 
 
 class "**Presented Form**" as presentedForm {
@@ -62,6 +117,11 @@ class "**Presented Form**" as presentedForm {
 
 class "**Media**" as media {
   Attachment
+}
+
+class "**Payment Information**" as healthInsuranceAndPaymentInformation {
+  insurance 0..*
+  payment 0..*
 }
 
 
