@@ -52,11 +52,11 @@ Characteristics: #can-be-target
       * ^binding.strength = #preferred
     * vaccination 0..* EHDSImmunisation "Vaccination history of the patient. "
     * otherSupportingInformation 0..* Resource "Any other type of relevant supporting information"
-* specimen 0..* EHDSSpecimen "Specimen information"
-* serviceRequest 0..* EHDSServiceRequest "Specification of requested service or services"
-* resultData 1..1 Base "Laboratory report result data"
+  * specimen 0..* EHDSSpecimen "Specimen information"
+  * serviceRequest 0..* EHDSServiceRequest "Specification of requested service or services"
+  * resultData 1..1 Base "Laboratory report result data"
   //* narrativeReport 0..1 Narrative "Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."
-  * commentsInterpretationAndRecommendations 0..* Narrative "Narrative Comments, such as a textual interpretation or advice accompanying the result report, for example."
-  * laboratoryTestResults 0..* EHDSLaboratoryObservation "Observation details (report could consist of multiple observations)"
+    * commentsInterpretationAndRecommendations 0..* Narrative "Narrative Comments, such as a textual interpretation or advice accompanying the result report, for example."
+    * laboratoryTestResults 0..* EHDSLaboratoryObservation "Observation details (report could consist of multiple observations)"
 * attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"
 
