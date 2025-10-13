@@ -1,3 +1,4 @@
+/*
 Logical: EHDSLaboratoryOrder
 //Id: EHDSlaboratoryOrder
 Title: "Laboratory order"
@@ -8,3 +9,4 @@ Characteristics: #can-be-target
 * laboratoryOrderStructuredBody 0..1 EHDSLaboratoryOrderBody "A.2 - Laboratory order structured body" """Laboratory order body"""
 * presentedForms 0..* EHDSAttachment "A.3 - Attachment" """Entire report as issued. Various formats could be provided,  pdf format is recommended."""
 * laboratoryOrderAttachments[x] 0..* EHDSAttachment or EHDSMedia "A.4 - Attachment, Media" """Document attachments"""
+*/

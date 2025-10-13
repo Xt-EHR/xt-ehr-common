@@ -1,15 +1,19 @@
 Logical: EHDSImagingReport
 Title: "Imaging report model"
 Parent: EHDSDocument
-Description: """EHDS refined base model for Medical Imaging Result Report"""
+Description: """Imaging report reflects the observations and interpretations of one or more imaging studies, contains elements such as the reason why the study is requested, relevant contextual medical information, the modality used to acquire images and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice."""
 Characteristics: #can-be-target
 
 
 * header 1..1
 * header ^short = "Imaging Report header"
+* header.authorship ^short = "Report authoring details"
+* header.authorship.author[x] ^short = "Author by whom the document was/were authored. Multiple authors could be provided."
+* header.documentType ^short = "Type of document (code for medical imaging report)"
+* header.status ^short = "Status of the document"
 * header.accessionNumber 0..1 string "Accession number - an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."
   * ^requirements = "eHN Guideline IMG (v1.1): A.1.8.11"
-* header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information" """Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."""
+* header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
   * ^requirements = "eHN Guideline IMG (v1.1): A.1.3"
 * header.intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"
   * ^requirements = "eHN Guideline IMG (v1.1): A.1.4"
@@ -26,21 +30,21 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline IMG (v1.1): A.3.1, A3.2"
     * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the imaging investigation."
       * ^requirements = "eHN Guideline IMG (v1.1): A.3.3"
-    * supportingInformation 0..1 Base "Additional clinical information about the patient or specimen that may affect service delivery or interpretation." """This information includes diagnosis, clinical findings and other observations. This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order.  For example, reporting the metal implants present in patient's body."""
-      * ^requirements = "eHN Guideline IMG (v1.1): A3.2?"
-      * observation 0..* EHDSObservation "Clinical findings and other observations (e.g., height and weights of the patient)."
-      * condition 0..* EHDSCondition "Conditions that may influence the service or result interpretation."
-      * medicationAdministration 0..* EHDSMedicationAdministration "Medication administered before ordering the service."
-      * devices 0..* EHDSDevice "List of implants or devices that affect the course of the examination or its interpretation (e.g. metal implants)."
-      * pregnancyStatus 0..1 EHDSCurrentPregnancy "Pregnancy status when the imaging examination was performed (e.g., pregnant, not pregnant, unknown)."
+  * supportingInformation 0..1 Base "Additional clinical information about the patient or specimen that may affect service delivery or interpretation." """This information includes diagnosis, clinical findings and other observations. This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order.  For example, reporting the metal implants present in patient's body."""
+    * ^requirements = "eHN Guideline IMG (v1.1): A3.2?"
+    * observation 0..* EHDSObservation "Clinical findings and other observations (e.g., height and weights of the patient)."
+    * condition 0..* EHDSCondition "Conditions that may influence the service or result interpretation."
+    * medicationAdministration 0..* EHDSMedicationAdministration "Medication administered before ordering the service specifically for this procedure."
+    * devices 0..* EHDSDevice "List of implants or devices that affect the course of the examination or its interpretation (e.g. metal implants)."
+    * pregnancyStatus 0..1 EHDSCurrentPregnancy "Pregnancy status when the imaging examination was performed (e.g., pregnant, not pregnant, unknown)."
 //      * pregnancyStatus 0..1 CodeableConcept "Pregnancy status when the imaging examination was performed (e.g., pregnant, not pregnant, unknown)."
-      //   * ^binding.description = "SNOMED CT"
-      //   * ^binding.strength = #preferred
-      // * gestationalAge 0..1 Quantity "Gestational age - duration of the pregnancy on the day on which the patient was asked or at the delivery. The duration can be given in weeks and/or days."
-      * sexForClinicalUse 0..* CodeableConcept "Sex parameter for clinical use - provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population."
-        * ^binding.description = "HL7 sex-parameter-for-clinical-use"
-        * ^binding.strength = #preferred
-      * otherSupportingInformation 0..* Resource "Any other type of relevant supporting information"
+    //   * ^binding.description = "SNOMED CT"
+    //   * ^binding.strength = #preferred
+    // * gestationalAge 0..1 Quantity "Gestational age - duration of the pregnancy on the day on which the patient was asked or at the delivery. The duration can be given in weeks and/or days."
+    * sexForClinicalUse 0..* CodeableConcept "Sex parameter for clinical use - provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population."
+      * ^binding.description = "HL7 sex-parameter-for-clinical-use"
+      * ^binding.strength = #preferred
+    * otherSupportingInformation 0..* Resource "Any other type of relevant supporting information"
   * specimen 0..* EHDSSpecimen "Specimen information. Note: A specimen (not attached to a body) can be used for diagnostic, forensic and medical research purposes."
     * ^requirements = "eHN Guideline IMG (v1.1): A.4"
   * serviceRequest 0..* EHDSServiceRequest "Specification of requested service(s)."
@@ -89,7 +93,6 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.6.2"
   * comparisonStudy 0..* EHDSImagingReport "Documentation (reference) of a prior Imaging Report to which the current images were compared."
     * ^requirements = "eHN Guideline IMG (v1.1): A.7"
-* knowledgeResources 0..0
 * dicomStudyMetadata 0..* EHDSImagingStudy "Metadata of the DICOM study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context. A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities."
   * ^requirements = "eHN Guideline IMG (v1.1): A.6"
 * attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"

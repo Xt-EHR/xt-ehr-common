@@ -1,3 +1,43 @@
+  <div style="
+  border: 1px solid #aaaa00;
+  border-radius: 4px;
+  background-color: #ffff99;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8em;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  line-height: 1.5;
+">
+
+  <!-- Info icon -->
+  <div style="flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+    <img 
+      src="24px.svg" 
+      alt="Information icon" 
+      style="height: 28px; width: 28px; filter: invert(35%) sepia(70%) saturate(400%) hue-rotate(25deg) brightness(85%);"
+    />
+  </div>
+
+  <!-- Text -->
+  <div style="flex: 1 1 auto; text-align: left; color: #333;">
+    <p style="margin: 0;">This is the first preview release of the EHDS Logical Information Models developed under the Xt-EHR Joint Action. This version is provided for early review and may be subject to future refinement.</p>
+  </div>
+
+</div>
+
+<style>
+@media (max-width: 600px) {
+  div[style*="display: flex;"][style*='background-color: #ffff99'] {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+
 ### Introduction
 This implementation guide includes logical information models created in [Xt-EHR project](https://www.xt-ehr.eu/work-packages). These models are the basis for designing the EHDS data exchange format (EEHRxF).  
 
@@ -23,7 +63,7 @@ This Implementation Guide is a work result across different work packages:
 - WP5 Task 5.4 "Metadata management",  
 - WP6 Task 6.1 "Patient Summary",  
 - WP6 Task 6.2 "ePrescription and eDispensation",  
-- WP7 Task 7.1 "Laboratory Results and Reports",  
+- WP7 Task 7.1 "Medical Results and Reports",  
 - WP7 Task 7.2 "Medical Images and Reports",  
 - WP7 Task 7.3 "Discharge Reports".  
 
