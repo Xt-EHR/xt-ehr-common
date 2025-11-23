@@ -49,18 +49,18 @@ Characteristics: #can-be-target
   * specimen 0..* EHDSSpecimen "Specimen information. Note: A specimen (not attached to a body) can be used for diagnostic, forensic and medical research purposes."
     * ^requirements = "eHN Guideline IMG (v1.1): A.4"
   * serviceRequest 0..* EHDSServiceRequest "Specification of requested service(s)."
-  * exposureInformation 0..1 Base "Information on total exposure to ionising radiation. This information is required by regulations in several EU countries."
+  * exposureInformation 0..1 string "Information on total exposure to ionising radiation. This information is required by regulations in several EU countries."
     * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.4, Article 2 Imaging report definition"
-    * effectiveDose 0..* Quantity "Effective dose - sum of equivalent doses to all organs, from external and/or internal exposures, each adjusted to account for the sensitivity of the organ to radiation. [mSv]"
-      * ^binding.description = "UCUM (for units)"
-      * ^binding.strength = #preferred
-    * equivalentDoseInformation 1..1 Base "Equivalent dose is based on the absorbed dose per organ, adjusted to account for the effectiveness of the type of radiation [mSv]."
-      * equivalentDose 1..1 Quantity "Equivalent dose is a measure of the radiation dose to tissue where an attempt has been made to allow for the different relative biological effects of different types of ionizing radiation. Equivalent dose is based on the absorbed dose per organ, adjusted to account for the effectiveness of the type of radiation [mSv]."
-        * ^binding.description = "UCUM (for units)"
-        * ^binding.strength = #preferred
-      * tissueType 1..1 CodeableConcept "Type of the tissue for which do dosage was enumerated."
-        * ^binding.description = "SNOMED CT"
-        * ^binding.strength = #preferred
+//    * effectiveDose 0..* Quantity "Effective dose - sum of equivalent doses to all organs, from external and/or internal exposures, each adjusted to account for the sensitivity of the organ to radiation. [mSv]"
+//      * ^binding.description = "UCUM (for units)"
+//      * ^binding.strength = #preferred
+//    * equivalentDoseInformation 1..1 Base "Equivalent dose is based on the absorbed dose per organ, adjusted to account for the effectiveness of the type of radiation [mSv]."
+//      * equivalentDose 1..1 Quantity "Equivalent dose is a measure of the radiation dose to tissue where an attempt has been made to allow for the different relative biological effects of different types of ionizing radiation. Equivalent dose is based on the absorbed dose per organ, adjusted to account for the effectiveness of the type of radiation [mSv]."
+//        * ^binding.description = "UCUM (for units)"
+//        * ^binding.strength = #preferred
+//      * tissueType 1..1 CodeableConcept "Type of the tissue for which do dosage was enumerated."
+//        * ^binding.description = "SNOMED CT"
+//        * ^binding.strength = #preferred
   * examinationReport 1..1 Base "Examination report content."
     * ^requirements = "eHN Guideline IMG (v1.1): A.5"
     * modality 1..* CodeableConcept "Imaging modality (or modalities) used during imaging investigation (DICOM CID029)."
