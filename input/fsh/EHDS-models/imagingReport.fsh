@@ -10,6 +10,7 @@ Characteristics: #can-be-target
 * header.authorship ^short = "Report authoring details"
 * header.authorship.author[x] ^short = "Author by whom the document was/were authored. Multiple authors could be provided."
 * header.documentType ^short = "Type of document (code for medical imaging report)"
+* header.documentType ^definition = "Type of document (code for medical imaging report)"
 * header.status ^short = "Status of the document"
 * header.eventType ^short = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
 * header.accessionNumber 0..1 string "Accession number - an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s). As it is prefixed by the registration authority it is a globally unique ID, usable both nationally and cross-border."
