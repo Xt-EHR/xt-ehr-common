@@ -46,7 +46,7 @@ Characteristics: #can-be-target
     * observation 0..* EHDSObservation "Clinical findings and other observations."
     * condition 0..* EHDSCondition "Condition that may influence the service or result interpretation."
     * medicationAdministration 0..* EHDSMedicationAdministration "Medication administered before ordering the service."
-    * sexForClinicalUse 0..* CodeableConcept "A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population"
+    * sexForClinicalUse 0..1 CodeableConcept "A Sex Parameter for Clinical Use is a parameter that provides guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.. This property is intended for use in clinical decision making, and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population"
       * ^binding.description = "HL7 sex-parameter-for-clinical-use"
       * ^binding.strength = #preferred
     * vaccination 0..* EHDSImmunisation "Vaccination history of the patient."

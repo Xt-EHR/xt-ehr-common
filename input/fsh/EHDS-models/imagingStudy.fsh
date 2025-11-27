@@ -54,6 +54,13 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.7.3"
     * numberOfFrames 0..1 integer "The number of frames in a multiframe instance"
       * ^requirements = "DICOM KOS"
+    * keyImage 0..* Base "List of key image flags with a reason why this image is selected as a key image, and reference to the Key Image Note that flags the image as significant within the Imaging Study Manifest"
+      * flag 1..1 CodeableConcept "Reason for flagging the image as significant"
+        * ^binding.description = "DICOM PS3.16 in Table CID 7010"
+        * ^binding.strength = #preferred
+      * reason 0..1 string "Textual reason for flagging the image as significant"
+      * seriesUID 1..* Identifier "Series instance UID for the series that contains the instances flagged as significant"
+      * instanceUID 1..* Identifier "SOP Instance UID for the instances flagged as significant by the Key Image Note object (DICOM KOS) that flags this image"
 
 
 /* Removed according to issue 172
