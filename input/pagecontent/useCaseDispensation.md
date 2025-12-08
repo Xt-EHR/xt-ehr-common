@@ -1,17 +1,30 @@
 ### Information Models
 
-#### EHDS information models for **ePrescription**:
+#### EHDS information models for **eDispensation**:
 
-Components of a prescription and their representation as EHDS information models:
 <figure>
-  {% include prescription.svg %}
-</figure>
+  {% include dispense.svg %}
+</figure> 
 
-- Prescription: [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription.html)
+- Dispense: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense.html)
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
-- Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
+- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
 - Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
+- Location: [EHDSLocation](StructureDefinition-EHDSLocation.html)
+
+Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.
+
+Components of **declining a dispense** and their representation as EHDS information models:
+<figure>
+  {% include dispenseDecline.svg %}
+</figure> 
+
+- DispenseDecline: [EHDSDispenseDecline](StructureDefinition-EHDSDispenseDecline.html)
+- Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
+- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
+
+Dispense can be declined for the whole prescription or just for a prescription item.
 
 ### FHIR Implementation Guide
 
