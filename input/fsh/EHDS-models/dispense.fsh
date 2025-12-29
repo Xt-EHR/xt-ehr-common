@@ -31,5 +31,5 @@ Characteristics: #can-be-target
   * substitutionOccurred 1..1 boolean "Indicated whether substitution was made by the dispenser"
   * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
   * reason 0..* CodeableConcept "Reason why the substitution was made or why the expected substitution was not made."
-* dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
+* dosageInstructions 0..1 EHDSDosaging "Dosaging and administration instructions"
 * comment 0..* string "Additional information or comments"

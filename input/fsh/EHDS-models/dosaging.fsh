@@ -1,4 +1,35 @@
-// Keep in sync with IHE MPD/MEOW
+/*
+Logical: EHDSDosaging
+Title: "Dosaging model"
+Description: "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case."
+Characteristics: #can-be-target
+
+* renderedDosageInstruction 0..1 string "Full dosaging information as human-readable text"
+* dosageDetails 0..* Base "Details of single dosaging scheme step"
+  * patientInstruction 0..1 string "Patient oriented instructions as free text for this dosaging step"
+  * doseAndRate 0..* Base "Amount of medication administered per one dose (= one timing)"
+    * dose[x] 0..1 Quantity or Range "Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)"
+    * rate[x] 0..1 Quantity or Ratio "Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)"
+  * timing 0..1 Base "When medication should be administered (period, time of day, frequency, etc)"
+    * repeat 0..1 Base "Repetition of the administration."
+      * bounds 0..1 Base "Time bounds for the treatment (current dosaging scheme). Only one of the following can exist."
+        * duration 0..1 Quantity "Number of time units, e.g 10 days"
+        * period 0..1 Period "Start and end date, 05.08.2023 - 10.08.2023"
+      * duration 0..1 Quantity "Duration of administration (e.g '5 minutes', '1 hour')"
+      * frequency 0..1 Base "Frequency of intake/administration (e.g 'three times a day')"
+        * numberOfTimes 0..1 integer "Number of times per period (e.g '3 times')"
+        * period 0..1 Quantity "Duration to which the frequency applies (e.g '... / 1 day')"
+      * dayOfWeek 0..* CodeableConcept "The day of the week of administration, e.g Mon, Tue, etc"
+      * timeOfDay 0..* time "Time of day of administration (e.g '10:00')"
+      * eventTime 0..* Base "An event the administration is bound to, e.g 'before meal', '30 min before meal'"
+        * when 0..* CodeableConcept "Time period or event ('before meal', 'immediately', 'morning')"
+  * asNeeded 0..1 boolean "Take as needed"
+  * bodySite 0..1 CodeableConcept "Body site of administration"
+  * routeOfAdministration 0..1 CodeableConcept "Route of administration"
+
+
+
+/*
 Logical: EHDSDosaging
 Title: "Dosaging model"
 Description: "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case."
@@ -47,3 +78,4 @@ Characteristics: #can-be-target
   * maxDosePerPeriod 0..* Ratio "Upper limit on medication per unit of time"
   * maxDosePerAdministration 0..1 Quantity "Upper limit on medication per one administration"
   * maxDosePerLifetime 0..1 Quantity "Upper limit on medication per lifetime of the patient"
+*/
