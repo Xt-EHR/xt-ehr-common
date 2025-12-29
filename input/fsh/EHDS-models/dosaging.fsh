@@ -1,4 +1,3 @@
-/*
 Logical: EHDSDosaging
 Title: "Dosaging model"
 Description: "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case."
