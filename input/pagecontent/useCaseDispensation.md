@@ -15,17 +15,6 @@
 
 Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.
 
-Components of **declining a dispense** and their representation as EHDS information models:
-<figure>
-  {% include dispenseDecline.svg %}
-</figure> 
-
-- DispenseDecline: [EHDSDispenseDecline](StructureDefinition-EHDSDispenseDecline.html)
-- Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
-- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
-
-Dispense can be declined for the whole prescription or just for a prescription item.
-
 ### FHIR Implementation Guide
 
 FHIR Implementation Guide is being developed in a cross-project working group lead by HL7 Europe and IHE (see [working group information](https://confluence.hl7.org/display/HEU/Medication+Prescription+and+Dispense%2C+Edition+1)). Business and data requirements defined in Xt-EHR Task 6.2 are discussed further in the working group in order to gather feedback from the implementers. Approved requirements are adopted by HL7 Europe MPD FHIR IG.

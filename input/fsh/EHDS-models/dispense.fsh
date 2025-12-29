@@ -1,14 +1,14 @@
-Logical: EHDSDispenseDecline
-Title: "Medication dispense decline model"
-Parent: EHDSDataSet
-Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
-Characteristics: #can-be-target
+// Logical: EHDSDispenseDecline
+// Title: "Medication dispense decline model"
+// Parent: EHDSDataSet
+// Description: "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment)."
+// Characteristics: #can-be-target
 
-* header.statusReason[x] 1..1
-  * ^short = "Reason for not dispensing the medication"
-* relatedRequest 1..* EHDSMedicationPrescription "The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]"
-// * reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
-* comment 0..1 string "Additional information about why the dispensation was declined."
+// * header.statusReason[x] 1..1
+//   * ^short = "Reason for not dispensing the medication"
+// * relatedRequest 1..* EHDSMedicationPrescription "The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]"
+// // * reason[x] 1..1 CodeableConcept or string "Reason for not performing the dispensation."
+// * comment 0..1 string "Additional information about why the dispensation was declined."
 
 
 Logical: EHDSMedicationDispense
