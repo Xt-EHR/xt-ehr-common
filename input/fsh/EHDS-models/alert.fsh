@@ -16,7 +16,7 @@ Example 4: Airway Alert / Difficult Intubation
 Example 5: Diagnoses such as malignant hyperthermia, porphyria, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
 Example 6: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
 Example 7: participation in a clinical trial that has to be taken into account in a healthcare contact."""
-* priority 0..* CodeableConcept "A code that identifies the priority of the alert."
+* priority 0..1 CodeableConcept "A code that identifies the priority of the alert."
   * ^binding.description = "hl7:Flag-priority-code"
   * ^binding.strength = #preferred
 * code 1..1 CodeableConcept "A coded or textual representation of the alert."
