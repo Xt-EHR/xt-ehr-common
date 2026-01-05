@@ -5,7 +5,7 @@ Description: "Alert flag"
 Characteristics: #can-be-target
 
 * header.authorship.author[x] ^short = "The author of the alert statement, i.e. the setter of the alert."
-* header.status ^short = """Current status of the flag, Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error."""
+* header.status ^short = """Current status of the flag, indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error."""
   * ^binding.description = "hl7:Flag-status"
   * ^binding.strength = #preferred
 * text 0..1 string "Narrative representation of the alert" """A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.
