@@ -2,7 +2,7 @@ Logical: EHDSAlert
 Parent: EHDSDataSet
 Title: "Alert model"
 // add medical or non-medical alert
-Description: """A statement higlighting a fact about the patient that requires special attention.
+Description: """A statement higlighting a fact about the patient that requires clinical attention to ensure safety and prevent adverse outcomes.
 Example 1: intolerance to aspirin due to gastrointestinal bleeding.
 Example 2: intolerance to captopril because of cough (the patient is not allergic but can't tolerate it because of persistent cough)
 Example 3: the patient has a rare disease that requires special treatment
@@ -24,4 +24,4 @@ Characteristics: #can-be-target
   * ^binding.description = "hl7:Flag-priority-code"
   * ^binding.strength = #preferred
 * period 0..1 Period "Time period when alert is active. The period of time from the activation of the alert to inactivation of the alert. If the alert is active, the end of the period should be unspecified."
-* sourceReference 0..* Reference() "A reference to the resource the alert is about."
+* sourceReference 0..* Reference(Resource) "A reference to the resource the alert is about."
