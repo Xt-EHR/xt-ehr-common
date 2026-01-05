@@ -4,6 +4,7 @@ Title: "Alert model"
 Description: "Alert flag"
 Characteristics: #can-be-target
 
+* header.authorship.author[x] ^short = "The author of the alert statement, i.e. the setter of the alert."
 * text 0..1 string "Text" """A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.
 Example 1: intolerance to aspirin due to gastrointestinal bleeding.
 Example 2: intolerance to captopril because of cough (the patient is not allergic but can't tolerate it because of persistent cough)
