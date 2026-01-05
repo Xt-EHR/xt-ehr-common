@@ -16,7 +16,7 @@ Characteristics: #can-be-target
 * header.status ^short = """Current status of the alert, indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error."""
   * ^binding.description = "hl7:Flag-status"
   * ^binding.strength = #preferred
-* code 1..1 CodeableConcept "A coded representation of the alert."
+* code 0..1 CodeableConcept "A coded representation of the alert."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * description 0..1 string "Narrative representation of the alert" 
