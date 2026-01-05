@@ -23,5 +23,5 @@ Example 7: participation in a clinical trial that has to be taken into account i
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * period 0..1 Period "Period" """Time period when flag is active. The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified."""
-
+* supportingInfo 0..* Reference "Supporting information" """Additional information about the alert, e.g. the reason the alert was set."""
 //check Flag.supportingInfo element for connecting with patient-specific data (Condition, etc)
