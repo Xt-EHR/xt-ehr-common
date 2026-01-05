@@ -24,4 +24,4 @@ Characteristics: #can-be-target
   * ^binding.description = "hl7:Flag-priority-code"
   * ^binding.strength = #preferred
 * period 0..1 Period "Time period when alert is active. The period of time from the activation of the alert to inactivation of the alert. If the alert is active, the end of the period should be unspecified."
-* sourceReference 0..* Reference(Any) "A reference to the resource the alert is about."
+* sourceReference 0..* Reference() "A reference to the resource the alert is about."
