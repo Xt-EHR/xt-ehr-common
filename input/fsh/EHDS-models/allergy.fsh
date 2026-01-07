@@ -5,6 +5,14 @@ Description: """EHDS refined base model for allergy/intolerance"""
 Characteristics: #can-be-target
 
 
+* header.status ^short = "Current status of the allergy or intolerance, for example, whether it is active, in remission, resolved, etc."
+  * ^binding.description = "HL7 allergy intolerance status"
+//   """
+// 1.3.6.1.4.1.12559.11.10.1.3.1.42.59 eHDSIAllergyStatus (HL7, used in MH@EU); http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (HL7, required in HL7 FHIR)
+// """
+  * ^binding.strength = #preferred
+  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
+
 * agentOrAllergen 1..1 CodeableConcept "A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity."
   * ^binding.description = "ATC, EMA SPOR SMS, SNOMED CT"
 // """
@@ -36,14 +44,6 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 allergy intolerance verification"
 //   """
 // 1.3.6.1.4.1.12559.11.10.1.3.1.42.58 eHDSIAllergyCertainty (HL7, used in MH@EU) ; http://hl7.org/fhir/ValueSet/allergyintolerance-verification (HL7, required in HL7 FHIR)
-// """
-  * ^binding.strength = #preferred
-  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
-
-* status 0..1 CodeableConcept "Current status of the allergy or intolerance, for example, whether it is active, in remission, resolved, etc."
-  * ^binding.description = "HL7 allergy intolerance status"
-//   """
-// 1.3.6.1.4.1.12559.11.10.1.3.1.42.59 eHDSIAllergyStatus (HL7, used in MH@EU); http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (HL7, required in HL7 FHIR)
 // """
   * ^binding.strength = #preferred
   * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
