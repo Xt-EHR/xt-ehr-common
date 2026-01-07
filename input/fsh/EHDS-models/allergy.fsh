@@ -13,14 +13,6 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
   * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
 
-* agentOrAllergen 1..1 CodeableConcept "A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity."
-  * ^binding.description = "ATC, EMA SPOR SMS, SNOMED CT"
-// """
-// 1.3.6.1.4.1.12559.11.10.1.3.1.42.24 **eHDSIActiveIngredient** (ATC, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.61 eHDSISubstance (EMA SMS, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.19 eHDSIAllergenNoDrug (SCT, used in MH@EU); ICD-11 Allergens
-// ""
-  * ^binding.strength = #preferred
-  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
-
 * typeOfPropensity 0..1 CodeableConcept "This element describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"
   * ^binding.description = "SNOMED CT, HL7 allergy intolerance type"
 //   """
@@ -28,6 +20,14 @@ Characteristics: #can-be-target
 // """
   * ^binding.strength = #preferred
   * ^requirements = "eHN PS Guideline, MyHealth@EU"
+
+* agentOrAllergen 1..1 CodeableConcept "A specific allergen or other agent/substance (drug, food, chemical agent, etc.) to which the patient has an adverse reaction propensity."
+  * ^binding.description = "ATC, EMA SPOR SMS, SNOMED CT"
+// """
+// 1.3.6.1.4.1.12559.11.10.1.3.1.42.24 **eHDSIActiveIngredient** (ATC, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.61 eHDSISubstance (EMA SMS, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.19 eHDSIAllergenNoDrug (SCT, used in MH@EU); ICD-11 Allergens
+// ""
+  * ^binding.strength = #preferred
+  * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
 
 * description 0..1 string "Textual description of the allergy or intolerance"
   * ^requirements = "eHN PS Guideline, ISO IPS"
