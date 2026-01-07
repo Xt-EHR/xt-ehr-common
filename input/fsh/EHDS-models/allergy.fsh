@@ -69,7 +69,7 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
     * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL. Cardinality in MyHealth@EU for this element, used here, is one manifestation per severity and onset, while the cardinality in FHIR IPS IG allows multiple manifestations per severity and onset."
 
-  * date 0..1 dateTime "Date and time of allergy manifestation"
+  // * date 0..1 dateTime "Date and time of allergy manifestation"
   * severity 0..1 CodeableConcept "Severity of the clinical manifestation of the allergic reaction."
     * ^binding.description = """
 1.3.6.1.4.1.12559.11.10.1.3.1.42.13 eHDSISeverity (SCT, used in MH@EU); http://hl7.org/fhir/ValueSet/reaction-event-severity (HL7, Required in HL7 FHIR)
@@ -77,7 +77,7 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
     * ^requirements = "The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. Element name and description is taken from eHN PS GL."
 
-  * onsetDate 0..1 dateTime "Date of the observation of the reaction"
+  * onsetDate 0..1 dateTime "Date and time of the reaction"
     * ^requirements = "The element is present in eHN PS GL. Element name and description is taken from eHN PS GL."
 
 /*
