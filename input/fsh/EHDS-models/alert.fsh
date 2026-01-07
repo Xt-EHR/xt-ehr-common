@@ -19,7 +19,7 @@ Characteristics: #can-be-target
 * code 0..1 CodeableConcept "A coded representation of the alert."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* description 0..1 string "Narrative representation of the alert" 
+* description 0..1 string "Narrative representation of the alert." 
 * priority 0..1 CodeableConcept "A code that identifies the priority of the alert."
   * ^binding.description = "hl7:Flag-priority-code"
   * ^binding.strength = #preferred
