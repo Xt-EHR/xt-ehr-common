@@ -1,0 +1,27 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSDispenseDecline","EHDSDispenseDecline","","","",0,*,"","","","null {[]} {[]}
+","Medication dispense decline model","Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment).","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSDispenseDecline.header","EHDSDispenseDecline.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSDispenseDecline.header.subject","EHDSDispenseDecline.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSDispenseDecline.header.identifier","EHDSDispenseDecline.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSDispenseDecline.header.authorship","EHDSDispenseDecline.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Resource authoring details","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSDispenseDecline.header.authorship.author[x]","EHDSDispenseDecline.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSDispenseDecline.header.authorship.datetime","EHDSDispenseDecline.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSDispenseDecline.header.lastUpdate","EHDSDispenseDecline.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource (may be used for technical corrections).","Date and time of the last update to the resource (may be used for technical corrections).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSDispenseDecline.header.status","EHDSDispenseDecline.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource or document","Status of the resource or document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSDispenseDecline.header.statusReason[x]","EHDSDispenseDecline.header.statusReason[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for not dispensing the medication","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSDispenseDecline.header.language","EHDSDispenseDecline.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSDispenseDecline.relatedRequest","EHDSDispenseDecline.relatedRequest","","","",1,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription {[]} {[]}
+","The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]","The single-item prescription or prescription line item that was declined by the dispenser. [Used for searching]","","","","","","","","","",,,,,"",,,,"EHDSDispenseDecline.relatedRequest",1,*,"",""
+"EHDSDispenseDecline.comment","EHDSDispenseDecline.comment","","","",0,1,"","","","string {[]} {[]}
+","Additional information about why the dispensation was declined.","Additional information about why the dispensation was declined.","","","","","","","","","",,,,,"",,,,"EHDSDispenseDecline.comment",0,1,"",""
