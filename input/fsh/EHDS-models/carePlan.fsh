@@ -8,6 +8,8 @@ Characteristics: #can-be-target
   * ^short = "Identifier for the care plan"
 * header.subject 
   * ^short = "The patient whose intended care is described by the plan."
+* header.authorship.author[x]
+  * ^short = "The responsible party (custodian) for the care plan."
 * header.status 
   * ^short = "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."
   * ^binding.description = "HL7 Request status"
@@ -15,11 +17,11 @@ Characteristics: #can-be-target
 * title 0..1 string "Human-friendly name for the care plan"
 * description 0..1 string "A description of the scope and nature of the plan."
 * period 0..1 Period "Indicates when the plan did (or is intended to) come into effect and end."
-* addresses 0..* CodeableConcept "Conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan."
+* addresses[x] 0..* CodeableConcept or EHDSCondition "Conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan."
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
-* activity[x] 0..1 string or Reference "The details of the proposed activity represented in a specific resource."
-
+* activity[x] 0..* CodeableConcept or Reference "The details of the proposed activity represented in a specific resource."
+* goal 0..* CodeableConcept """Describes the intended objective(s) of carrying out the care plan."""
 
 /*
 * note 0..* string "Note" """General notes about the care plan not covered elsewhere."""
