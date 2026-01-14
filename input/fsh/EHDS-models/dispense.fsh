@@ -18,9 +18,9 @@ Description: "Logical model for medication dispensation (based on request or ind
 Characteristics: #can-be-target
 
 * header.authorship.author 
-  * ^short = "The actor who issued the dispense record"
+  * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
 * header.authorship.datetime
-  * ^short = "Date and time of issuing dispense record"
+  * ^short = "Date and time of issuing dispense record."
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient"
 * relatedRequest 0..* Identifier "Identifier of the prescription or prescription item the dispense is related to"
