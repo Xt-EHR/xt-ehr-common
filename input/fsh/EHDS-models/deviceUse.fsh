@@ -9,6 +9,7 @@ Characteristics: #can-be-target
 * header.status ^short = "Current status of the device usage."
   * ^binding.description = "HL7 device-statement-status"
   * ^binding.strength = #preferred
+// consider changing to period below
 * startDate 0..1 dateTime "Date when the device was implanted in the patient or the external device was first in use."
   * ^requirements = "eHN PS Guideline, ISO IPS."
 * endDate 0..1 dateTime "Date when the device was explanted from the patient or the external device was no longer in use."
