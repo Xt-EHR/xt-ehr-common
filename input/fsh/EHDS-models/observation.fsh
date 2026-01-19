@@ -15,18 +15,34 @@ Characteristics: #can-be-target
 * code 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
   * ^binding.strength = #preferred
+* name 1..1 string "Name of the observation"
 * originalName 0..1 string "Original (conventional) name of the observation"
 * method 0..1 CodeableConcept "Observation method" """Observation method (measurement principle) to obtain the result."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
+* specimen 0..1 EHDSSpecimen "Specimen used for this observation."
 * order 0..1 EHDSServiceRequest "Identifies order and order placer this observation belongs to"
 * performer[x] 0..1 EHDSHealthProfessional or EHDSPatient or EHDSRelatedPerson "Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions."
 //reporter in DataSet
 * anatomicLocation 0..1 EHDSBodyStructure "Anatomic location and laterality where the observation was performed."
 * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
-  * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
-    * ^binding.description = "UCUM for units, SNOMED CT for coded results"
-    * ^binding.strength = #preferred
+//  * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
+//    * ^binding.description = "UCUM for units, SNOMED CT for coded results"
+//    * ^binding.strength = #preferred
+  * value 1..1 Base "Observation result value according to the type of observation."
+    * text 0..1 string "Observation result value as a text. Should be used only if coded result value is not expected otherwise use valueCodeableConcept.text."
+    * numeric 0..1 Quantity "Observation result value as a quantity, result units of the measurement should be provided."
+      * ^binding.description = "UCUM for units"
+      * ^binding.strength = #preferred
+    * range 0..1 Range "Observation result value as a range (open or closed). Result units of the measurement should be provided."
+      * ^binding.description = "UCUM for units"
+      * ^binding.strength = #preferred
+    * coded 0..1 CodeableConcept "Observation result value from a valid code system"
+      * ^binding.description = "SNOMED CT"
+      * ^binding.strength = #preferred
+      * ^example.label = "coded result"
+      * ^example.valueString = "For example this could be a code describing identified bacteria or other microorganism identified, description of urinary concernment, jaundice (hyperbilirubinemia), scoring (GCS), etc."
+    * uncertainty 0..1 Base "Measurement uncertainty type and interval if needed."
   * uncertainty 0..1 Base "Measurement uncertainty type and interval if needed."
 * dataAbsentReason 0..1 CodeableConcept "Provides a reason why the expected value in the element Observation.value[x] is missing."
   * ^binding.description = "HL7 Data absent reason"
@@ -42,8 +58,20 @@ Characteristics: #can-be-target
   * code 1..1 CodeableConcept "Code representing the observation using the agreed code systems."
     * ^binding.description = "LOINC, NPU, SNOMED CT"
     * ^binding.strength = #preferred
+  * originalName 0..1 string "Original (conventional) name of the observation"
   * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
-    * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
+  //* value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation."
+    * value 1..1 Base "Observation result value according to the type of observation."
+      * text 0..1 string "Observation result value as a text. Should be used only if coded result value is not expected otherwise use valueCodeableConcept.text."
+      * numeric 0..1 Quantity "Observation result value as a quantity, result units of the measurement should be provided."
+        * ^binding.description = "UCUM for units"
+        * ^binding.strength = #preferred
+      * range 0..1 Range "Observation result value as a range (open or closed). Result units of the measurement should be provided."
+        * ^binding.description = "UCUM for units"
+        * ^binding.strength = #preferred
+      * coded 0..1 CodeableConcept "Observation result value from a valid code system"
+        * ^binding.description = "SNOMED CT"
+        * ^binding.strength = #preferred
     * uncertainty 0..1 Base "Measurement uncertainty type and interval if needed."
   * dataAbsentReason 0..1 CodeableConcept "Provides a reason why the expected value in the element Observation.value[x] is missing."
     * ^binding.description = "HL7 Data absent reason"
