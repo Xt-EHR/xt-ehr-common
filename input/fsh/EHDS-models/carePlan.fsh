@@ -21,7 +21,7 @@ Characteristics: #can-be-target
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
 * activity[x] 0..* CodeableConcept or Reference "The details of the proposed activity represented in a specific resource."
-* goal 0..* CodeableConcept """Describes the intended objective(s) of carrying out the care plan."""
+* goal 0..* CodeableConcept "Describes the intended objective(s) of carrying out the care plan."
 
 /*
 * note 0..* string "Note" """General notes about the care plan not covered elsewhere."""
