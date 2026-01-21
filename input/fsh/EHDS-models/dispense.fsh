@@ -17,7 +17,7 @@ Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 
-* header.authorship.author 
+* header.authorship.author[x] 
   * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
 * header.authorship.datetime
   * ^short = "Date and time of issuing the dispense record"
