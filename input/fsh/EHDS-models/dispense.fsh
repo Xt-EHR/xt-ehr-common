@@ -33,8 +33,9 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * timeOfDispensation 0..1 dateTime "Date and time when medication is handed over. When not present, the time of dispensation is assumed to be the time of issuing dispense record."
 // * substitution 0..1 Base "Indicated whether substitution was made by the dispenser"
-* substitutionOccurred 0..1 boolean "Whether substitution was made by the dispenser. Definition of subsitution is specific to the jurisdiction."
+* substitutionOccurred 0..1 boolean "Whether substitution was made by the dispenser. Definition of substitution is specific to the jurisdiction."
 //  * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
 //  * reason 0..* CodeableConcept "Reason why the substitution was made or why the expected substitution was not made."
 * dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
 * note 0..1 string "Additional information or comments"
+
