@@ -18,7 +18,7 @@ Characteristics: #can-be-target
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"  
 * dosageInstructions 1..* EHDSDosaging "Details of how medication is/was taken or should be taken. Example: 1 tablet every 24h, for 10 days. For factual single administration tracking, all repeats are registered as separate instances."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
-* timeOfUse 0..1[x] dateTime or Period "The time frame for which the medication use statement applies. In case of unbounded period (continuous therapy), the Period end element will be valued with an exceptional value."
+* timeOfUse[x] 0..1 dateTime or Period "The time frame for which the medication use statement applies. In case of unbounded period (continuous therapy), the Period end element will be valued with an exceptional value."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
 * relatedRequest 0..* EHDSMedicationRequest "Link to prescriptions related to this use statement"
 * relatedDispense 0..* EHDSMedicationDispense "Link to a dispense record related to this use statement, not applicable to explicit administration records"
