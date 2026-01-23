@@ -20,7 +20,7 @@ Characteristics: #can-be-target
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
 * timeOfUse[x] 0..1 dateTime or Period "The time frame for which the medication use statement applies. In case of unbounded period (continuous therapy), the Period end element will be valued with an exceptional value."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
-* relatedRequest 0..* EHDSMedicationRequest "Link to prescriptions related to this use statement"
+* relatedRequest 0..* EHDSMedicationPrescription "Link to prescriptions related to this use statement"
 * relatedDispense 0..* EHDSMedicationDispense "Link to a dispense record related to this use statement, not applicable to explicit administration records"
 * note 0..1 string "Textual information about the intended use or administration of the medication"
 // TODO I think the description here does not actually compute. Also unclear how to differentiate between point in time and period.
