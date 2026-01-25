@@ -23,7 +23,7 @@ Characteristics: #can-be-target
 * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier."
-  * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
+//  * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
   * indication[x] 0..* CodeableConcept or EHDSCondition "Reason for the prescription (typically diagnosis, or a procedure)"
 //    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
