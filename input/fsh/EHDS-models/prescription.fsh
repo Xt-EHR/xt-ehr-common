@@ -17,7 +17,7 @@ Characteristics: #can-be-target
 //  * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
 //  * recordingDate 0..1 dateTime "Time of recording the prescription/draft in the information system"
   // repeats authoring.datetime or if missing?
-  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats authoring (issue) date. [Used for searching]"
+  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. If missing this is authoring (issue) date. [Used for searching]"
   * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
 * presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
 * comment 0..* string "Additional information or comments"
