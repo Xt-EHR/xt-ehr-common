@@ -15,8 +15,9 @@ Characteristics: #can-be-target
   * status ^short = "Status of authorisation to dispense of the prescription item, this should not be status of treatment. For multiple-item prescription, the aggregate status of the whole prescription is stated using EHDSMedicationPrescription.header.status. For single-item prescription, the prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]"
   * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
   * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
-  * recordingDate 0..1 dateTime "Time of authoring the prescription/draft in the information system"
-  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats issueDate. [Used for searching]"
+  * recordingDate 0..1 dateTime "Time of recording the prescription/draft in the information system"
+  // repeats authoring.datetime or if missing?
+  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. In most cases this information repeats authoring (issue) date. [Used for searching]"
   * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
 * presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
 * comment 0..* string "Additional information or comments"
