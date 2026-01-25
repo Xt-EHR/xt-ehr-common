@@ -16,7 +16,6 @@ Characteristics: #can-be-target
   * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
 //  * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
 //  * recordingDate 0..1 dateTime "Time of recording the prescription/draft in the information system"
-  // repeats authoring.datetime or if missing?
   * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. If missing this is authoring (issue) date. [Used for searching]"
   * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
 * presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
@@ -25,10 +24,10 @@ Characteristics: #can-be-target
   * identifier 0..1 Identifier "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier."
 //  * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
-  * indication[x] 0..* CodeableConcept or EHDSCondition "Reason for the prescription (typically diagnosis, or a procedure)"
+  * indication[x] 0..* CodeableConcept or EHDSCondition or string "Reason for the prescription (typically diagnosis, or a procedure)"
 //    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
 //    * ^binding.strength = #preferred
-  * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
+//  * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
   * intendedUseType 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * periodOfUse 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
