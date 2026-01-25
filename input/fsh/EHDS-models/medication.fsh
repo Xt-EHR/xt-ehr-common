@@ -42,7 +42,7 @@ Characteristics: #can-be-target
       //  * ^comment = "No change"
 //      * strengthType 0..1 CodeableConcept "Type of strength that is expressed"
 //      //  * ^comment = "Added"
-      * basisOfStrengthSubstance 0..1 CodeableConcept "Substance that the strength refers to, in case it's different from the main substance"
+      * basisOfStrengthSubstance 0..1 CodeableConcept "Substance that the strength refers to, in case it's different from .item.strength.substance"
       //  * ^comment = "Added (eHN guidelines A.1.4.4.1 'in addition reference strength could be provided')"
         * ^binding.description = "EMA SPOR SMS"
         * ^binding.strength = #preferred
