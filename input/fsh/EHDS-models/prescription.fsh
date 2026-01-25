@@ -20,7 +20,7 @@ Characteristics: #can-be-target
   * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
 * presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
 * comment 0..* string "Additional information or comments"
-* prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one item is allowed. In case multiple medications are allowed, all lines need to be authored together."
+* prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together."
   * identifier 0..1 Identifier "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier."
   * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
