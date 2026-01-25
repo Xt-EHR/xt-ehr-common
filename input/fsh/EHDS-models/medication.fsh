@@ -12,7 +12,7 @@ Characteristics: #can-be-target
 //  * ^comment = "No change"
 * productName 0..1 string "Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided."
 //  * ^comment = "No change"
-* marketingAuthorisationHolder 0..1 Base "Marketing authorisation holder or manufacturer of the medicinal product. Relevant for identifying the exact product."
+* marketingAuthorisationHolder 0..1 Base "Marketing authorisation holder of the medicinal product. Relevant for identifying the exact product. If the marketing authorisationholder is not known, it can be the manufacturer."
 //  * ^comment = "No change, but subelements added"
   * organisationName 0..1 string "Name of the organisation holding the authorisation for marketing/manufacturing"
   * organisationIdentifier 0..* Identifier "Identifier of the organisation and/or its physical location"
