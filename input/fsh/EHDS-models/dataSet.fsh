@@ -13,5 +13,3 @@ Characteristics: #can-be-target
   * language 0..1 CodeableConcept "Language in which the resource is written. Language is expressed by the IETF language tag."
     * ^binding.description = "BCP 47"
     * ^binding.strength = #preferred
-
-
