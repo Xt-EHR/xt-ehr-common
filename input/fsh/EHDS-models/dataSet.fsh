@@ -5,7 +5,7 @@ Characteristics: #can-be-target
 
 * header 1..1 Base "Common header for all patient-related data"
   * subject 1..1 EHDSPatient "Patient/subject information"
-  * identifier 0..* Identifier "Business identifier for the object, unique withit its system. Supporting disambiguation between different contexts (systems/countries)."
+  * identifier 0..* Identifier "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)."
   * authorship 1..* Base "Resource authoring details. Multiple authors can be provided."
     * author[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author and/or responsible for the resource. More specific models should define this more concretely."
     * datetime 1..1 dateTime "Date and time of authoring/issuing"
