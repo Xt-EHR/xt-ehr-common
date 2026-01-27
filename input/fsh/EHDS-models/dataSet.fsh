@@ -5,9 +5,9 @@ Characteristics: #can-be-target
 
 * header 1..1 Base "Common header for all patient-related data"
   * subject 1..1 EHDSPatient "Patient/subject information"
-  * identifier 0..* Identifier "Business identifier for the object"
-  * authorship 1..* Base "Resource authoring details"
-    * author[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author(s) by whom the resource was/were authored. Multiple authors could be provided."
+  * identifier 0..* Identifier "Business identifier for the object, unique withit its system. Supporting disambiguation between different contexts (systems/countries)."
+  * authorship 1..* Base "Resource authoring details. Multiple authors can be provided."
+    * author[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author and/or responsible for the resource. More specific models should define this more concretely."
     * datetime 1..1 dateTime "Date and time of authoring/issuing"
   * status 1..1 CodeableConcept "Status of the resource or document"
   * language 0..1 CodeableConcept "Language in which the resource is written. Language is expressed by the IETF language tag."
