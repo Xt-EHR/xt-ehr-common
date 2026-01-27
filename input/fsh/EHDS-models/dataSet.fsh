@@ -7,7 +7,7 @@ Characteristics: #can-be-target
   * subject 1..1 EHDSPatient "Patient/subject information"
   * identifier 0..* Identifier "Business identifier for the object"
   * authorship 1..* Base "Resource authoring details"
-    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author(s) by whom the resource was/were authored. Multiple authors could be provided."
+    * author[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author(s) by whom the resource was/were authored. Multiple authors could be provided."
     * datetime 1..1 dateTime "Date and time of authoring/issuing"
   * lastUpdate 0..1 dateTime "Date and time of the last update to the resource (may be used for technical corrections)."
   * status 1..1 CodeableConcept "Status of the resource or document"
