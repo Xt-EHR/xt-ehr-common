@@ -7,7 +7,7 @@ Characteristics: #can-be-target
   * subject 1..1 EHDSPatient "Patient/subject information"
   * identifier 0..* Identifier "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)."
   * authorship 0..* Base "Resource authoring details. Multiple authors can be provided."
-    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author and/or responsible for the resource. More specific models should define this more concretely."
+    * author[x] 1..1 EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Author responsible for the provided information. The exact role of the responsible author varies across use cases and is often specified in individual models."
     * datetime 1..1 dateTime "Date and time of authoring/issuing"
   * status 1..1 CodeableConcept "Status of the resource or document"
   * language 0..1 CodeableConcept "Language in which the resource is written. Language is expressed by the IETF language tag."
