@@ -1,20 +1,20 @@
 Logical: EHDSImmunisation
 Parent: EHDSDataSet
 Title: "Immunisation model"
-Description: """EHDS refined base model for Immunisation"""
+Description: """Model describes the administration of immunisation products, including vaccines and immunoglobulins, covering active and passive immunisations. It focuses on immunisation as a clinical procedure rather than the resulting immunity. The model supports routine immunisations at standard doses and may overlap with medication summaries or prescription lists. Natural immunity, immunisation outcomes, refusals, and administration or planning details are out of scope."""
 Characteristics: #can-be-target
 
 * header.status 
-  * ^definition = """Indicates the current status of the immunisation event (completed, not-done)."""
-* diseaseOrAgentTargeted 0..* CodeableConcept "Disease or agent targeted" """Disease or agent that the vaccination provides protection against."""
+  * ^short = "Status of the immunisation event (completed, not-done)."
+  * ^definition = "Status of the immunisation event (completed, not-done)."
+* diseaseOrAgentTargeted 0..* CodeableConcept "Disease or agent that the vaccination provides protection against (e.g. 76902006 Tetanus)."
   * ^binding.description = "ICD-10, SNOMED CT"
   * ^binding.strength = #preferred
-* vaccine 1..1 CodeableConcept "Type of vaccine" """Generic description of the vaccine/prophylaxis or its component(s)."""
+* vaccine 1..1 CodeableConcept "Type of immunisation, e.g. J07AM01 Tetanus toxoid; or 871803007 Hepatitis A and Hepatitis B virus antigens only vaccine product."
   * ^binding.description = "SNOMED CT, ATC"
   * ^binding.strength = #preferred
-* administeredProduct 0..1 EHDSMedication "Administered medicinal product"
-* doseNumber 0..1 integer "Number in a series of vaccinations / doses" """Order in the vaccination course."""
-* dateTimeOfVaccination 1..1 dateTime "Date and time of vaccination" """The date and optionally the exact time when the vaccination was administered."""
-* administeringCentre 0..* EHDSOrganisation "Administering centre" """Name/code of administering centre or a health authority responsible for the vaccination event"""
-* vaccineAdministrator 0..* EHDSHealthProfessional "Administrator of vaccine" """Health professional responsible for administering the vaccine or prophylaxis"""
-* nextVaccinationDate 0..1 date "Next vaccination date" """The date when the vaccination is planned to be given/repeated (e.g. next dose)"""
+* administeredProduct 0..1 EHDSMedication "Administered medicinal product (e.g. TETAVAX suspension for injection), including batch/lot details when necessary."
+* administrationTime 1..1 dateTime "The date and optionally the exact time when the vaccination was administered."
+* administeringCentre 0..1 EHDSOrganisation "Administering centre or a health authority responsible for the vaccination event"""
+* administrator 0..1 EHDSHealthProfessional "Health professional responsible for administering the immunisation product."
+* note 0..1 string "Any additional free-text information about the immunisation"
