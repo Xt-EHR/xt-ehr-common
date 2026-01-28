@@ -35,7 +35,7 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   // TODO: needs updating if we change the dosaging model!
   * dosageInstructions 1..* EHDSDosaging "Dosaging and administration instructions"
-  * preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
+  //* preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
     * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
@@ -46,4 +46,4 @@ Characteristics: #can-be-target
   * offLabel 0..1 Base "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug" 
     * isOffLabelUse 1..1 boolean "Indicates off-label use. Must be 'true' when .reason is provided."
     * reason[x] 0..* CodeableConcept or string "Reason or related clarification for off-label use"
-  * note 0..1 string "Additional information or comments, e.g. notes for the pharmacist"
+  * note 0..1 string "Additional information or comments, e.g. message to the dispenser"
