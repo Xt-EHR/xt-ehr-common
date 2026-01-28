@@ -69,7 +69,7 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.1.1"
       * ^binding.description = "DICOM Modality"
       * ^binding.strength = #preferred
-    * bodyPart 0..* EHDSBodyStructure "All body parts investigated"
+    * bodySite 0..* EHDSBodyStructure "All body parts investigated"
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.1.6"
     * imagingProcedures 0..* EHDSProcedure "Imaging procedure performed during imaging study."
       * ^requirements = "eHN Guideline IMG (v1.1): A.5.1.2-A.5.1.9"
