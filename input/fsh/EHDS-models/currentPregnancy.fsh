@@ -6,7 +6,7 @@ Characteristics: #can-be-target
 
 * narrative 0..1 string "Textual description of current pregnancy status" """Narrative description describing the status of the current pregnancy."""
   * ^requirements = "eHN PS Guideline, ISO IPS"
-* currentPregnancyStatus 1..1 CodeableConcept "Pregnancy status, e.g. pregnant, pregnancy not yet confirmed, possible pregnancy" """Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, pregnancy not yet confirmed, possible pregnancy, unknown."""
+* currentPregnancyStatus 1..1 CodeableConcept "Pregnancy status, e.g. pregnant, pregnancy not yet confirmed, possible pregnancy"
   * ^binding.description = "SNOMED CT"
 //  * ^binding.description = """1.3.6.1.4.1.12559.11.10.1.3.1.42.60	eHDSICurrentPregnancyStatus (SNOMED CT, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.63 eHDSIRareDisease (OrphaCodes, used in MH@EU); ICD-11; SNOMED CT"""
   * ^binding.strength = #preferred
