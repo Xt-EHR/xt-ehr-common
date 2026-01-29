@@ -23,7 +23,7 @@ Negative declaration,
 Organ donation,
 Body donation,
 Intravenous infusion"""
-* narrative 0..1 string "Textual description of the directive"
+* note 0..1 string "Textual description of the directive"
   * ^requirements = "eHN PS and HDR Guidelines, MyHealth@EU, ISO IPS"
-* advanceDirectiveDocument 0..1 EHDSAttachment "Scanned source document with the living will and the patient's signature, such as a PDF."
+* attachment 0..1 EHDSAttachment "Scanned source document with the living will and the patient's signature, such as a PDF."
   * ^requirements = "eHN HDR Guideline, ISO IPS"
