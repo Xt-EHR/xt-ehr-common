@@ -111,7 +111,7 @@ Characteristics: #can-be-target
     * ^requirements = "eHN PS Guideline, ISO IPS"
   * previousPregnanciesStatus 0..1 CodeableConcept "Overall status of previous pregnancies" """Overall status of previous pregnancies, including 
 — Yes, previous pregnancies 
-— No, previous pregnancies 
+— No previous pregnancies 
 — Unknown"""
     * ^requirements = "eHN PS Guideline, ISO IPS"
   * previousPregnancies 0..* EHDSPregnancyHistory "History of previous pregnancies" """Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy."""
