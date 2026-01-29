@@ -15,7 +15,7 @@ Characteristics: #can-be-target
 * code 1..1 CodeableConcept "Observation code" """Code representing the observation using the agreed code systems."""
   * ^binding.description = "LOINC, NPU, SNOMED CT"
   * ^binding.strength = #preferred
-* name 1..1 string "Name of the observation"
+//* name 1..1 string "Name of the observation"
 * originalName 0..1 string "Original (conventional) name of the observation"
 * method 0..1 CodeableConcept "Observation method" """Observation method (measurement principle) to obtain the result."""
   * ^binding.description = "SNOMED CT"
