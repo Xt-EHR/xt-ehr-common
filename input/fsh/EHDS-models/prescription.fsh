@@ -13,7 +13,7 @@ Characteristics: #can-be-target
   * authorship.author[x] only EHDSHealthProfessional or EHDSOrganisation 
   * authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
   * status ^short = "Status of authorisation to dispense of the prescription item, this should not be status of treatment. For multiple-item prescription, the aggregate status of the whole prescription is stated using EHDSMedicationPrescription.header.status. For single-item prescription, the prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]"
-  * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
+//  * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
 //  * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
 //  * recordingDate 0..1 dateTime "Time of recording the prescription/draft in the information system"
   * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. If missing this is authoring (issue) date. [Used for searching]"
