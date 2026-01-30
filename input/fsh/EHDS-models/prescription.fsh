@@ -37,7 +37,7 @@ Characteristics: #can-be-target
   * dosageInstructions 1..* EHDSDosaging "Dosaging and administration instructions"
   //* preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * validityPeriod 0..1 Period "The period over which the prescription is considered valid and dispenseable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription."
-  * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"
+  * substitution 0..1 Base "Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing."
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
     * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
   * status 1..1 CodeableConcept "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item."
