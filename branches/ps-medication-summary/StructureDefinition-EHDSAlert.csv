@@ -1,0 +1,28 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSAlert","EHDSAlert","","","",0,*,"","","","null {[]} {[]}
+","Alert flag model","Alert flag","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSAlert.identifier","EHDSAlert.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier","Flag identifier (Business identifiers assigned to this flag).","","","","","","","","","",,,,,"",,,,"EHDSAlert.identifier",0,*,"",""
+"EHDSAlert.text","EHDSAlert.text","","","",0,1,"","","","string {[]} {[]}
+","Text","A human-readable narrative that contains a summary of the flag and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \""clinically safe\"" for a human to just read the narrative.
+Example 1: intolerance to aspirin due to gastrointestinal bleeding.
+Example 2: intolerance to captopril because of cough (the patient is not allergic but can't tolerate it because of persistent cough)
+Example 3: the patient has a rare disease that requires special treatment
+Example 4: Airway Alert / Difficult Intubation
+Example 5: Diagnoses such as malignant hyperthermia, porphyria, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
+Example 6: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
+Example 7: participation in a clinical trial that has to be taken into account in a healthcare contact.","","","","","","","","","",,,,,"",,,,"EHDSAlert.text",0,1,"",""
+"EHDSAlert.priority","EHDSAlert.priority","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Priority","A code that identifies the priority of the alert.","","","","","","","","","",,"preferred","hl7:Flag-priority-code","","",,,,"EHDSAlert.priority",0,*,"",""
+"EHDSAlert.status","EHDSAlert.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Status","Current status of the flag, Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.","","","","","","","","","",,"preferred","hl7:Flag-status","","",,,,"EHDSAlert.status",0,1,"",""
+"EHDSAlert.code","EHDSAlert.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code","A coded or textual representation of the flag.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSAlert.code",1,1,"",""
+"EHDSAlert.patient","EHDSAlert.patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+","Subject","Who/What this flag is a record of","","","","","","","","","",,,,,"",,,,"EHDSAlert.patient",1,1,"",""
+"EHDSAlert.period","EHDSAlert.period","","","",0,1,"","","","Period {[]} {[]}
+","Period","Time period when flag is active. The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified.","","","","","","","","","",,,,,"",,,,"EHDSAlert.period",0,1,"",""
+"EHDSAlert.encounter","EHDSAlert.encounter","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+","Encounter","This alert is only relevant during the encounter.","","","","","","","","","",,,,,"",,,,"EHDSAlert.encounter",0,1,"",""
+"EHDSAlert.author","EHDSAlert.author","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}
+","Author","The person, organization or device that created the flag.","","","","","","","","","",,,,,"",,,,"EHDSAlert.author",0,1,"",""

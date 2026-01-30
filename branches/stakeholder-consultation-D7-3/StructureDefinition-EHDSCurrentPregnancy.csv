@@ -1,0 +1,37 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSCurrentPregnancy","EHDSCurrentPregnancy","","","",0,*,"","","","null {[]} {[]}
+","Current pregnancy status model","Current pregnancy status","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSCurrentPregnancy.header","EHDSCurrentPregnancy.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSCurrentPregnancy.header.subject","EHDSCurrentPregnancy.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSCurrentPregnancy.header.identifier","EHDSCurrentPregnancy.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSCurrentPregnancy.header.authorship","EHDSCurrentPregnancy.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSCurrentPregnancy.header.authorship.author[x]","EHDSCurrentPregnancy.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSCurrentPregnancy.header.authorship.datetime","EHDSCurrentPregnancy.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSCurrentPregnancy.header.lastUpdate","EHDSCurrentPregnancy.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSCurrentPregnancy.header.status","EHDSCurrentPregnancy.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSCurrentPregnancy.header.statusReason[x]","EHDSCurrentPregnancy.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSCurrentPregnancy.header.language","EHDSCurrentPregnancy.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSCurrentPregnancy.header.version","EHDSCurrentPregnancy.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSCurrentPregnancy.presentedForm","EHDSCurrentPregnancy.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSCurrentPregnancy.narrative","EHDSCurrentPregnancy.narrative","","","",0,1,"","","","string {[]} {[]}
+","Textual description of current pregnancy status","Narrative description describing the status of the current pregnancy.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSCurrentPregnancy.narrative",0,1,"",""
+"EHDSCurrentPregnancy.currentPregnancyStatus","EHDSCurrentPregnancy.currentPregnancyStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Current pregnancy status","Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, unknown.","","eHN PS Guideline, ISO IPS","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSCurrentPregnancy.currentPregnancyStatus",1,1,"",""
+"EHDSCurrentPregnancy.dateOfStatus","EHDSCurrentPregnancy.dateOfStatus","","","",0,1,"","","","dateTime {[]} {[]}
+","Effective date of the current pregnancy status.","Effective date of the current pregnancy status.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSCurrentPregnancy.dateOfStatus",0,1,"",""
+"EHDSCurrentPregnancy.expectedDateOfDelivery","EHDSCurrentPregnancy.expectedDateOfDelivery","","","",0,1,"","","","date {[]} {[]}
+","Date in which the woman is due to give birth. Year, day and month are required.","Date in which the woman is due to give birth. Year, day and month are required.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSCurrentPregnancy.expectedDateOfDelivery",0,1,"",""
+"EHDSCurrentPregnancy.gestationalAge","EHDSCurrentPregnancy.gestationalAge","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration of the pregnancy at this day","Gestational age - duration of the pregnancy on the day on which the patient was asked or at the delivery. The duration can be given in weeks and/or days.","","","","","","","","","",,,,,"",,,,"EHDSCurrentPregnancy.gestationalAge",0,1,"",""

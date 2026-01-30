@@ -1,0 +1,27 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSEndpoint","EHDSEndpoint","","","",0,*,"","","","null {[]} {[]}
+","Endpoint model","EHDS refined base model for Endpoint","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSEndpoint.identifier","EHDSEndpoint.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifier","Identifier for the organisation that is used to identify the endpoint across multiple disparate systems.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.identifier",1,*,"",""
+"EHDSEndpoint.status","EHDSEndpoint.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status","Status of the endpoint. The endpoint status represents whether the endpoint can currently be used for connections or why it can't be used.","","","","","","","","","",,"preferred","hl7:EndpointStatus","","",,,,"EHDSEndpoint.status",1,1,"",""
+"EHDSEndpoint.connectionType","EHDSEndpoint.connectionType","","","",1,*,"","","","CodeableConcept {[]} {[]}
+","Connection type","A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook).","","","","","","","","","",,"preferred","hl7:endpoint-connection-type","","",,,,"EHDSEndpoint.connectionType",1,*,"",""
+"EHDSEndpoint.name","EHDSEndpoint.name","","","",0,1,"","","","string {[]} {[]}
+","Name","A friendly name that this endpoint can be referred to with.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.name",0,1,"",""
+"EHDSEndpoint.managingOrganisation","EHDSEndpoint.managingOrganisation","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}
+","Managing organisation","The organisation that provides technical management services for this endpoint.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.managingOrganisation",0,1,"",""
+"EHDSEndpoint.payload","EHDSEndpoint.payload","","","",0,*,"","","","Base {[]} {[]}
+","Payload","The set of payloads that are provided/available at this endpoint.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.payload",0,*,"",""
+"EHDSEndpoint.payload.type","EHDSEndpoint.payload.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Type","The type of content that may be used at this endpoint (e.g. XDS Discharge summaries).","","","","","","","","","",,"preferred","hl7:endpoint-payload-type","","",,,,"EHDSEndpoint.payload.type",0,*,"",""
+"EHDSEndpoint.payload.mimeType","EHDSEndpoint.payload.mimeType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Mime type","The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json.","","","","","","","","","",,"preferred","BCP-13","","",,,,"EHDSEndpoint.payload.mimeType",0,*,"",""
+"EHDSEndpoint.payload.profileCanonical","EHDSEndpoint.payload.profileCanonical","","","",0,*,"","","","uri {[]} {[]}
+","Profile Canonical","The FHIR profile that is expected at this endpoint. It describes the resources that are handled, or even simply which resource types.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.payload.profileCanonical",0,*,"",""
+"EHDSEndpoint.payload.profileUri","EHDSEndpoint.payload.profileUri","","","",0,*,"","","","uri {[]} {[]}
+","Profile uri","The profile (as a uri) that is expected at this endpoint when not represented using a FHIR profile.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.payload.profileUri",0,*,"",""
+"EHDSEndpoint.address","EHDSEndpoint.address","","","",1,1,"","","","uri {[]} {[]}
+","Address","The uri that describes the actual end-point to connect to.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.address",1,1,"",""
+"EHDSEndpoint.header","EHDSEndpoint.header","","","",0,*,"","","","string {[]} {[]}
+","Header","Additional headers / information to send as part of the notification. Usage depends on the channel type.","","","","","","","","","",,,,,"",,,,"EHDSEndpoint.header",0,*,"",""
