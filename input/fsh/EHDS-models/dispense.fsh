@@ -27,7 +27,7 @@ Characteristics: #can-be-target
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient. When not present, it is assumed that the patient is the receiver."
 * relatedRequest 0..* Identifier "Identifier of the prescription item the dispense is related to"
-* medication 1..1 EHDSMedication "Exact dispensed product"
+* medication 1..1 EHDSMedication "Exact dispensed product. If multiple medications are dispensed together, multiple dispense records should be created."
 * dispensedQuantity 1..1 Quantity "Number of dispensed packages if the package size is known, or number of smaller items/units, according to the medication dispensed. A unit is expected."
   * ^binding.description = "UCUM, EDQM Standard Terms"
   * ^binding.strength = #preferred

@@ -40,7 +40,7 @@ Characteristics: #can-be-target
       * offset 0..1 integer "minutes from event, before or after (?not sure how to show before/after with only positive integers)"
 * asNeeded 0..1 boolean "Take as needed"
 * asNeededFor 0..* CodeableConcept "Take as needed for the coded reason"
-* bodySite 0..1 CodeableConcept "Body site of administration"
+* bodySite 0..1 EHDSBodyStructure "Body site of administration"
 * routeOfAdministration 0..1 CodeableConcept "Route of administration"
 * methodOfAdministration 0..1 CodeableConcept "Method of administration"
 * maxDose 0..* Base "Maximum dose for the patient"
