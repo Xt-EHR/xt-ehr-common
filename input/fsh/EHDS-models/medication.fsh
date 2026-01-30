@@ -4,19 +4,21 @@ Description: "Logical model for prescribed/dispensed medication. The model is sh
 Characteristics: #can-be-target
 * ^status = #active
 
-* identifyingCode[x] 0..* CodeableConcept or Identifier "Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities."
+* identifyingCode[x] 0..* CodeableConcept or Identifier "Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities. An identifier might not exist e.g. for substance-based prescriptions."
+  * ^binding.description = "EMA SPOR PMS or national code system"
+  * ^binding.strength = #preferred
 //  * ^comment = "Non-conflicting change"
 * classification 0..* CodeableConcept "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)"
   * ^binding.description = "WHO ATC"
   * ^binding.strength = #preferred
 //  * ^comment = "No change"
-* productName 0..1 string "Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided."
+* productName 0..1 string "Current trade name (authorised name) of the product. When medication is speficied by a CodeableConcept, the name may be omitted when available as the display name of the concept."
 //  * ^comment = "No change"
-* marketingAuthorisationHolder 0..1 Base "Marketing authorisation holder of the medicinal product. Relevant for identifying the exact product. If the marketing authorisationholder is not known, it can be the manufacturer."
+* marketingAuthorisationHolder 0..1 Base "Marketing authorisation holder of the medicinal product. Relevant for identifying the exact product. If the marketing authorisation holder is not known, it can be the manufacturer."
 //  * ^comment = "No change, but subelements added"
   * organisationName 0..1 string "Name of the organisation holding the authorisation for marketing/manufacturing"
   * organisationIdentifier 0..* Identifier "Identifier of the organisation and/or its physical location"
-* doseForm 0..1 CodeableConcept "Dose form(s) on a product level. Dose form for a single package item is defined below."
+* doseForm 0..1 CodeableConcept "Dose form(s) on a package level, correspinding to IDMP Combined Pharmaceutical Dose Form and EDQM Combination Pack or Combined Dose Form. Dose form for a single package item is defined in item.doseForm."
 //  * ^comment = "No change"
   * ^binding.description = "EDQM Standard Terms"
   * ^binding.strength = #preferred
@@ -27,7 +29,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * item 0..* Base "A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined"
 //  * ^comment = "Structure changed, elements repeated for complex packages"
-  * doseForm 0..1 CodeableConcept "Dose form"
+  * doseForm 0..1 CodeableConcept "Administrable or manufactured item dose form, depending on the the type of medication definition. This cannot include combined dose forms."
   //  * ^comment = "No change"
     * ^binding.description = "EDQM Standard Terms"
     * ^binding.strength = #preferred
