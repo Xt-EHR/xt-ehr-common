@@ -16,8 +16,8 @@ Characteristics: #can-be-target
   * statusReason[x] ^short = "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"
 //  * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
 //  * recordingDate 0..1 dateTime "Time of recording the prescription/draft in the information system"
-  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. If missing this is authoring (issue) date. [Used for searching]"
-  * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
+//  * validFrom 0..1 dateTime "Effective date of the prescription. The prescription is not dispensable before this date. If missing this is authoring (issue) date. [Used for searching]"
+//  * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
 * presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
 // * comment 0..* string "Additional information or comments"
 * prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together."
@@ -36,6 +36,7 @@ Characteristics: #can-be-target
   // TODO: needs updating if we change the dosaging model!
   * dosageInstructions 1..* EHDSDosaging "Dosaging and administration instructions"
   //* preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
+  * validityPeriod 0..1 Period "The period over which the prescription is considered valid and dispenseable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription."
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
     * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
