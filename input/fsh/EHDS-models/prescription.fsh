@@ -25,8 +25,8 @@ Characteristics: #can-be-target
 //  * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * medication 1..1 EHDSMedication "Prescribed product, branded, generic, virtual, extemporal, etc"
   * indication[x] 0..* CodeableConcept or EHDSCondition or string "Reason for the prescription (typically diagnosis, or a procedure)"
-//    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
-//    * ^binding.strength = #preferred
+    * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
+    * ^binding.strength = #preferred
 //  * indicationText 0..1 string "Reason for the prescription in textual form. This might not be allowed by some implementations."
   * intendedUseType 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
   * periodOfUse 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
