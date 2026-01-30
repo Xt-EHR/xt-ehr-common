@@ -57,7 +57,7 @@ Characteristics: #can-be-target
   //  * ^comment = "Added (eHN guidelines A.1.4.9 mention layered structure for describing a package)"
 //    * ^binding.description = "UCUM for units of measure. EDQM Standard Terms for units of presentation."
 //    * ^binding.strength = #preferred
-  * amount 0..1 Quantity "Number of such manufactured items in this product (5 vials)"
+  * amount 0..1 Quantity "Number of such manufactured items in this product (5 vials). The combined amount of all items will be considered to be the total package size."
     * ^binding.description = "UCUM for units of measure. EDQM Standard Terms for units of presentation."
     * ^binding.strength = #preferred
   //  * ^comment = "Added (eHN guidelines A.1.4.9 mention layered structure for describing a package)"
