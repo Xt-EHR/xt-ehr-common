@@ -20,7 +20,8 @@ Characteristics: #can-be-target
 //  * ^comment = "No change"
   * ^binding.description = "EDQM Standard Terms"
   * ^binding.strength = #preferred
-* packSize 0..* Quantity "Overall amount of product in one package (100ml; 20 tablets; 1 creme & 6 pessaries)"
+// * packSize 0..* Quantity "Overall amount of product in one package (100ml; 20 tablets; 1 creme & 6 pessaries)"
+* description 0..1 string "Textual description of the product, e.g. including package description."
 //  * ^comment = "No change"
   * ^binding.description = "UCUM for units of measure. EDQM Standard Terms for units of presentation."
   * ^binding.strength = #preferred
@@ -64,17 +65,17 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   //  * ^comment = "Added (eHN guidelines A.1.4.8 Package type)"
 
-* device 0..* Base "Administration device included in the product"
+* device 0..* Base "Administration device included in the product. Devices that are not inside the medication package are excluded."
   * deviceQuantity 1..1 Quantity "Number of such devices"
   * device[x] 1..1 CodeableConcept or Reference(EHDSDevice) "Device coded"
   //  * ^comment = "Added"
-* characteristic 0..* Base "Additional features of the product, e.g. whether it is reimbursible, "
-  * type 1..1 CodeableConcept "A code expressing the type of characteristic"
-  * value[x] 0..1 boolean or CodeableConcept or string or Quantity or dateTime or integer or decimal or Ratio "Description of the characteristic"
+* characteristic 0..* Base "Additional features of the product, e.g. whether it is reimbursible, is sugar free or has an easy-open cap. It is expected that implementers will define a valueset supporting their use cases."
+  * type 1..1 CodeableConcept "A code expressing the type of characteristic."
+  * value[x] 0..1 boolean or CodeableConcept or string or Quantity or dateTime or integer or decimal or Ratio "Description of the characteristic value."
 //  * ^comment = "Added for any other information. "
 * batch 0..1 Base "Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request."
 //  * ^comment = "Added from Patient Summary"
-  * lotNumber 0..1 string "Batch identifier of the medicinal product"
+  * lotNumber 0..1 string "Batch identifier of the medicinal product."
   * expirationDate 0..1 dateTime "Batch expiration date of the medicinal product."
 //* additionalProductInformation 0..1 Base "Additional information about product - for example, a reference to a product catalogue"
 //  * ^comment = "Added"
