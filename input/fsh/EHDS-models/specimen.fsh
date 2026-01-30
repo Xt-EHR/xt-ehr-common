@@ -7,7 +7,7 @@ Characteristics: #can-be-target
 // new logical model for Specimen reflecting feedback requirements to clarify and add details
 * identifier 1..* Identifier "An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by ordering system, identifier assigned by laboratory etc. Multiple identifiers can be used."
 * status 0..1 CodeableConcept "Availability of the specimen."
-  * ^binding.description = "hl7:specimen-status"
+  * ^binding.description = "HL7 specimen-status"
   * ^binding.strength = #preferred
 * type 0..1 CodeableConcept "The kind of material that forms the Specimen."
   * ^binding.description = "SNOMED CT"
@@ -16,7 +16,7 @@ Characteristics: #can-be-target
 * parentSpecimen 0..* EHDSSpecimen "Specimen from which this specimen originated"
 * request 0..* EHDSServiceRequest "Why the specimen ws collected"
 * combined 0..1 Coding "This element signifies if the specimen is part of a group or pooled."
-  * ^binding.description = "hl7:specimen-combined"
+  * ^binding.description = "HL7 specimen-combined"
   * ^binding.strength = #preferred
 * collection 0..* Base "The role the specimen serves"
   * performer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient or EHDSRelatedPerson "Person who collected the specimen"
@@ -28,14 +28,14 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
   * device 0..1 EHDSDevice "Device used to perform specimen collection"
   * bodySite 0..1 EHDSBodyStructure "Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left"
-    * ^binding.description = "SNOMED CT"
-    * ^binding.strength = #preferred
+//    * ^binding.description = "SNOMED CT"
+//    * ^binding.strength = #preferred
 * receivedDate 0..1 dateTime "Date and time that the material is handed over at the laboratory."
 * container 0..* Base "The container holding the specimen."
   * specimenQuantity 0..1 Quantity "Quantity of specimen within container"
   * containerDevice 1..1 EHDSDevice "The device resource for the the container holding the specimen."
-* condition 0..* CodeableConcept "State of the specimen"
-  * ^binding.description = "hl7:specimenCondition"
+* condition 0..* CodeableConcept "State of the specimen. State of the speeimen should be alligned with dataAbsentReason element of the Observatiom model."
+  * ^binding.description = "HL7 specimenCondition"
   * ^binding.strength = #preferred
 * note 0..1 string "To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen)."
 
