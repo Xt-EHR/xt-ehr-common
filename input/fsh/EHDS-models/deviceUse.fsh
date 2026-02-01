@@ -10,7 +10,7 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 device-statement-status"
   * ^binding.strength = #preferred
 // consider changing to periodOfUse below?
-* period 0..1 Period "The period of time during which the device was implanted in the patient or the external device was in use."
+* periodOfUse 0..1 Period "The period of time during which the device was implanted in the patient or the external device was in use."
   * ^requirements = "eHN PS Guideline, ISO IPS."
 // * startDate 0..1 dateTime "Date when the device was implanted in the patient or the external device was first in use."
 //   * ^requirements = "eHN PS Guideline, ISO IPS."
