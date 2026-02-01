@@ -19,9 +19,7 @@ Characteristics: #can-be-target
 * reason 0..* CodeableConcept "Reason" """Describes why the event occurred in coded or textual form."""
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* bodysite 0..1 CodeableConcept "BodySite" """Observed body part, i.e. target site"""
-  * ^binding.description = "SNOMED CT"
-  * ^binding.strength = #preferred
+* bodySite 0..1 EHDSBodyStructure "BodySite" """Observed body part, i.e. target site"""
 * deviceName 0..1 string "Device name" """The name of the device / manufacturer of the device that was used to make the recording."""
 * device 0..1 EHDSDevice "Device" """The device used to collect the media."""
 * content 1..1 EHDSAttachment "Content" """The actual content of the media - inline or by direct reference to the media source file."""
