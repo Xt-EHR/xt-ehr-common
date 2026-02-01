@@ -3,6 +3,15 @@ Parent: EHDSDataSet
 Title: "Advance directive model"
 Description: """Healthcare directives concerning life or after life wishes of the patient"""
 Characteristics: #can-be-target
+
+* header
+  * authorship
+    * ^short = "Advance directive authorship information."
+  * authorship
+    * author[x]
+      * ^short = "Author and/or responsible for the advance directive."
+
+
 * category 0..* CodeableConcept "Categories of directives related to decisions prior and after death, such as life support, resuscitation or organ donation."
   * ^requirements = "ISO IPS"
   * ^binding.description = "SNOMED CT"
