@@ -26,7 +26,7 @@ Characteristics: #can-be-target
     * orderId 1..* Identifier "Identifier(s) of the imaging service order."
     * orderDateAndTime 0..1 dateTime "Date and time of the order placement."
     * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient "The person/organisation \"authorised\" to place the order. Order placer could be either a health professional, health professional organisation or the patient himself."
-    * orderReason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation or string "An explanation or justification for why this service is being requested in coded or structured form."
+    * orderReason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation or string "An explanation or justification for why this service is being requested."
       * ^binding.description = "SNOMED CT"
       * ^binding.strength = #preferred
       * ^requirements = "eHN Guideline IMG (v1.1): A.3.1, A3.2"
