@@ -4,7 +4,7 @@ Title: "Body structure model"
 Description: """EHDS refined base model for Body structure"""
 Characteristics: #can-be-target
 
-* identifier 0..* Identifier "Identifier for this instance of the anatomical structure."
+// * identifier 0..* Identifier "Identifier for this instance of the anatomical structure."
 * morphology 0..1 CodeableConcept "The kind of structure being represented by the body structure at BodyStructure.location. This can define both normal and abnormal morphologies."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
