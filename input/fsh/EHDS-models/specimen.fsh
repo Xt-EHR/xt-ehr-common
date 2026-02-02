@@ -1,7 +1,7 @@
 Logical: EHDSSpecimen
 //Id: EHDSspecimen
 Title: "Specimen model"
-Description: """EHDS refined base model for A sample to be used for Analysis"""
+Description: """EHDS refined base model for a specimen to be used for Analysis"""
 Characteristics: #can-be-target
 
 // new logical model for Specimen reflecting feedback requirements to clarify and add details
@@ -15,22 +15,22 @@ Characteristics: #can-be-target
 * source[x] 0..1 EHDSPatient or EHDSPatientAnimal or EHDSLocation or EHDSDevice or EHDSSubstance "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device"
 * parentSpecimen 0..* EHDSSpecimen "Specimen from which this specimen originated"
 * request 0..* EHDSServiceRequest "Why the specimen ws collected"
-* combined 0..1 Coding "This element signifies if the specimen is part of a group or pooled."
+* combined 0..1 CodeableConcept "This element signifies if the specimen is part of a group or pooled."
   * ^binding.description = "HL7 specimen-combined"
   * ^binding.strength = #preferred
-* collection 0..* Base "The role the specimen serves"
-  * performer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient or EHDSRelatedPerson "Person who collected the specimen"
-  * collectionPeriod 1..1 Period "The period or date and time of specimen collection."
+* collection 0..* Base "Collection details"
+  * performer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient or EHDSRelatedPerson "Person or organisation who collected the specimen"
+  * period 1..1 Period "The period or date and time of specimen collection."
   * quantity 0..1 Quantity "The quantity of specimen collected"
-  * collectionProcedure 0..1 EHDSProcedure "The procedure that collects the specimen."
+  * procedure 0..1 EHDSProcedure "The procedure that collects the specimen."
   * method 0..1 CodeableConcept "If relevant for the results, the method of obtaining the specimen."
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
   * device 0..1 EHDSDevice "Device used to perform specimen collection"
-  * bodySite 0..1 EHDSBodyStructure "Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left"
+  * bodySite 0..1 EHDSBodyStructure "Anatomic location (e.g. body location, laterality and other details) where the material is collected, e.g. Elbow, left"
 //    * ^binding.description = "SNOMED CT"
 //    * ^binding.strength = #preferred
-* receivedDate 0..1 dateTime "Date and time that the material is handed over at the laboratory."
+* receivedDate 0..1 dateTime "Date and time when specimen is received by the testing laboratory."
 * container 0..* Base "The container holding the specimen."
   * specimenQuantity 0..1 Quantity "Quantity of specimen within container"
   * containerDevice 1..1 EHDSDevice "The device resource for the the container holding the specimen."
