@@ -1,3 +1,4 @@
+/*
 Logical: EHDSFamilyMemberHistory
 Parent: EHDSDataSet
 Title: "Family member history model"
@@ -17,3 +18,4 @@ Characteristics: #can-be-target
 * causeOfDeath 0..1 CodeableConcept "Information about disease or condition that was the main cause of death."
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode if rare disease is diagnosed"
   * ^binding.strength = #preferred
+*/
