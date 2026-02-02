@@ -24,7 +24,7 @@ Characteristics: #can-be-target
 * order 0..1 EHDSServiceRequest "Identifies order and order placer this observation belongs to"
 * performer[x] 0..1 EHDSHealthProfessional or EHDSPatient or EHDSRelatedPerson "Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions."
 //reporter in DataSet
-* anatomicLocation 0..1 EHDSBodyStructure "Anatomic location and laterality where the observation was performed."
+* bodySite 0..1 EHDSBodyStructure "Anatomic location and laterality where the observation was performed."
 * result 0..1 Base "Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
 //  * value[x] 1..1 string or Quantity or Range or CodeableConcept "Observation result value according to the type of observation"
 //    * ^binding.description = "UCUM for units, SNOMED CT for coded results"
