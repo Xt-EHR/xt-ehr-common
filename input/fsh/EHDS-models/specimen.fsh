@@ -20,9 +20,9 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * collection 0..* Base "Collection details"
   * performer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient or EHDSRelatedPerson "Person or organisation who collected the specimen"
-  * period 1..1 Period "The period or date and time of specimen collection."
+  * collected[x] 1..1 Period or dateTime "The period or date and time of specimen collection."
   * quantity 0..1 Quantity "The quantity of specimen collected"
-  * procedure 0..1 EHDSProcedure "The procedure that collects the specimen."
+  //* procedure 0..1 EHDSProcedure "The procedure that collects the specimen. If procedure information will be provided, then procedure details must match information in the speciment.collection structure, e.g. performer, time of collection etc.."
   * method 0..1 CodeableConcept "If relevant for the results, the method of obtaining the specimen."
     * ^binding.description = "SNOMED CT"
     * ^binding.strength = #preferred
