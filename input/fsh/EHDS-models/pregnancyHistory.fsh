@@ -4,15 +4,15 @@ Title: "Pregnancy history model"
 Description: "Pregnancy history for one pregnancy"
 Characteristics: #can-be-target
 
-* narrative 0..1 string "Narrative, potentially formatted, content of the section" """Narrative description describing the outcome of any previous pregnancies. """
+* header.status ^short = "Status of this observation"
+* header.authorship.author[x] ^short = "Author of this observation"
+* endDate 0..1 dateTime "The end date of the pregnancy."
   * ^requirements = "eHN PS Guideline, ISO IPS"
-* outcomeDate 0..1 dateTime "Outcome date" """Date referred to the previous pregnancies outcome."""
+* outcome 0..1 CodeableConcept "The outcome of the pregnancy."
   * ^requirements = "eHN PS Guideline, ISO IPS"
-* outcome 0..1 CodeableConcept "Outcome" """Outcome of the previous pregnancy."""
-  * ^requirements = "eHN PS Guideline, ISO IPS"
-  * ^binding.description = """
-1.3.6.1.4.1.12559.11.10.1.3.1.42.62 eHDSIOutcomeOfPregnancy (SNOMED CT, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.63 eHDSIRareDisease (OrphaCodes, used in MH@EU); ICD-11; SNOMED CT
-"""
+  * ^binding.description = """SNOMED CT"""
   * ^binding.strength = #preferred
-* numberOfChildren 0..1 integer "Number of children/fetuses in this specific pregnancy"
+* numberOfFetuses 0..1 integer "Number of children/fetuses in this specific pregnancy"
+  * ^requirements = "eHN PS Guideline, ISO IPS"
+* note 0..1 string "Free text notes by the health professional"
   * ^requirements = "eHN PS Guideline, ISO IPS"
