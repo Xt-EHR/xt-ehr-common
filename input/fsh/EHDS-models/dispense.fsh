@@ -17,13 +17,18 @@ Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on request or independently)"
 Characteristics: #can-be-target
 
-* header.authorship.author[x] 
+* header.author[x] 
   * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
-* header.authorship.datetime
+  * ^definition = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
+* header.authoringDate
   * ^short = "Date and time of issuing the dispense record"
-* header.status ^short = "The status of the dispense, e.g. completed, declined, entered-in-error"
+  * ^definition = "Date and time of issuing the dispense record"
+* header.status 
+  * ^short = "The status of the dispense, e.g. completed, declined, entered-in-error"
+  * ^definition = "The status of the dispense, e.g. completed, declined, entered-in-error"
   * ^binding.description = "HL7 MedicationDispense Status Codes"
   * ^binding.strength = #preferred
+// TODO header.source - add comment that not allowed or not?
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient. When not present, it is assumed that the patient is the receiver."
 * relatedRequest 0..* Identifier "Identifier of the prescription item the dispense is related to"

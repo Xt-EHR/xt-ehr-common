@@ -10,6 +10,8 @@ Characteristics: #can-be-target
 * header.identifier ^short = "Identifiers for the Imaging Study such as DICOM Study Instance UID. If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier."
 * header.identifier 1..*
   * ^requirements = "eHN Guideline IMG (v1.1): B.1.1"
+* header.author[x] 1..*
+* header.authoringDate 1..1  
 * modality 0..* CodeableConcept "All of the distinct values for series' modalities"
   * ^binding.description = "DICOM CID029"
   * ^binding.strength = #preferred

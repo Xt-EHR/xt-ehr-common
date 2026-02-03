@@ -6,12 +6,16 @@ Characteristics: #can-be-target
 
 * header.identifier 
   * ^short = "Identifier for the care plan"
+  * ^definition = "Identifier for the care plan"
 * header.subject 
   * ^short = "The patient whose intended care is described in the plan."
-* header.authorship.author[x]
+  * ^definition = "The patient whose intended care is described in the plan."
+* header.author[x]
   * ^short = "The responsible party (custodian) for the care plan."
+  * ^definition = "The responsible party (custodian) for the care plan."
 * header.status 
   * ^short = "Indicates whether the plan is currently being acted upon, represents future intentions, or is now a historical record."
+  * ^definition = "Indicates whether the plan is currently being acted upon, represents future intentions, or is now a historical record."
   * ^binding.description = "HL7 Request status"
   * ^binding.strength = #preferred
 * title 0..1 string "Human-friendly name for the care plan"

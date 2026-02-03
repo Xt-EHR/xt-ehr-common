@@ -5,13 +5,8 @@ Description: """Healthcare directives concerning life or after life wishes of th
 Characteristics: #can-be-target
 
 * header
-  * authorship
-    * ^short = "Advance directive authorship information."
-  * authorship
-    * author[x]
-      * ^short = "Author and/or responsible for the advance directive."
-
-
+  * author[x] ^short = "Author of the advance directive."
+  * author[x] ^definition = "Author of the advance directive."
 * category 0..* CodeableConcept "Categories of directives related to decisions prior and after death, such as life support, resuscitation or organ donation."
   * ^requirements = "ISO IPS"
   * ^binding.description = "SNOMED CT"
