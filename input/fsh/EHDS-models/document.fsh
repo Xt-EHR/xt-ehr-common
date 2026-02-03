@@ -10,8 +10,9 @@ Characteristics: #can-be-target
   * status ^short = "Status of the document"
   * author[x] 1..* 
     * ^short = "Author(s) of the document"
-  * authoringDate 1..1 
+  * date 1..1
     * ^short = "Date of finalising/issuing the document"
+//    * ^min = 1
   * documentType 1..1 CodeableConcept "Type of document at hand, e.g. 60591-5 Patient summary document."
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred

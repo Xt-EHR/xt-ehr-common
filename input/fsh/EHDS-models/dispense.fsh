@@ -20,7 +20,8 @@ Characteristics: #can-be-target
 * header.author[x] 
   * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
   * ^definition = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
-* header.authoringDate
+//* header.authoringDate
+* header.date 1..1
   * ^short = "Date and time of issuing the dispense record"
   * ^definition = "Date and time of issuing the dispense record"
 * header.status 

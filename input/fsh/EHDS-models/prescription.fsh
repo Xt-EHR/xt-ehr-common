@@ -17,7 +17,7 @@ Characteristics: #can-be-target
     * ^short = "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]"
     * ^definition = "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]"
   * author[x] only EHDSHealthProfessional or EHDSOrganisation 
-  * authoringDate 1..1
+  * date 1..1
     * ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
     * ^definition = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"  
   * status ^short = "Status of authorisation for dispensing the prescription items. This should not be the status of treatment. For a multiple-item prescription, this conveys the aggregate status of the entire prescription. In case of a single-item prescription, prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]"
