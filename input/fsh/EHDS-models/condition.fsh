@@ -27,7 +27,7 @@ Characteristics: #can-be-target
   * ^binding.description = "HL7 Condition/Diagnosis Severity; SNOMED CT"
   * ^binding.strength = #preferred
 // MyHealth@EU PS on CDA uses SNOMED CT, but HDR uses HL7 for severity
-* anatomicLocation 0..* EHDSBodyStructure "The anatomical location including laterality where this condition manifests itself."
+* bodySite 0..* EHDSBodyStructure "The anatomical location including laterality where this condition manifests itself."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.1.2"
 * stage 0..* CodeableConcept "Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used."
   * ^binding.description = "e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …"
