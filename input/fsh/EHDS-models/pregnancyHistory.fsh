@@ -5,7 +5,7 @@ Description: "Pregnancy history for one pregnancy"
 Characteristics: #can-be-target
 
 * header.status ^short = "Status of this observation"
-* header.authorship.author ^short = "Author of this observation"
+* header.authorship.author[x] ^short = "Author of this observation"
 * endDate 0..1 dateTime "The end date of the pregnancy."
   * ^requirements = "eHN PS Guideline, ISO IPS"
 * outcome 0..1 CodeableConcept "The outcome of the pregnancy."
