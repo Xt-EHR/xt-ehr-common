@@ -7,14 +7,19 @@ Characteristics: #can-be-target
 // * identifier 0..* Identifier "Identifier for the procedure"
 // * subject 1..1 EHDSPatient "On whom the procedure was performed."
 
-* header.status ^short = "Status of the procedure (e.g. completed, on hold, stopped)"
-  * ^binding.description = "HL7 Event Status"
-  * ^binding.strength = #preferred
-* header.authorship.author ^short = "Author responsible for the provided information."
-* code 1..1 CodeableConcept "Concept code and display name identifying the procedure"
+* header
+  * status 
+    * ^short = "Status of the procedure (e.g. completed, on hold, stopped)"
+    * ^definition = "Status of the procedure (e.g. completed, on hold, stopped)"
+    * ^binding.description = "HL7 Event Status"
+    * ^binding.strength = #preferred
+  * author[x]
+    * ^short = "Author responsible for the provided information."
+    * ^definition = "Author responsible for the provided information."
+* code 1..1 CodeableConcept "Concept code and display name identifying the type of procedure"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* date[x] 0..1 dateTime or Period "Date and time of the procedure or interval of its performance"
+* procedureDate[x] 0..1 dateTime or Period "Date and time of the procedure or interval of its performance"
 * performer 0..* EHDSHealthProfessional "Actors who performed the procedure (only main responsible actors expected)"
 * bodySite 0..* EHDSBodyStructure "Target body site of the procedure. Laterality may be included as a qualifier of the body site."
 * reason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation or EHDSProcedure "The reason the procedure was performed. This may be a concept from a terminology or a reference to a specific instance that describes the reason."
