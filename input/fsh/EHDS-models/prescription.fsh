@@ -7,17 +7,22 @@ Characteristics: #can-be-target
 * header 
   * ^short = "Prescription header" 
   * ^definition = """Prescription header"""
-  * subject ^short = "The person for whom the medication is prescribed/ordered. [Used for searching]"
-  * subject ^definition = "The person for whom the medication is prescribed/ordered. [Used for searching]"  
-  * identifier ^short = "Business identifier(s) for the prescription. [Used for searching]"
-  * identifier ^definition = "Business identifier(s) for the prescription. [Used for searching]"  
-  * authorship.author[x] ^short = "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]"
-  * authorship.author[x] ^definition = "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]"
-  * authorship.author[x] only EHDSHealthProfessional or EHDSOrganisation 
-  * authorship.datetime ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
-  * authorship.datetime ^definition = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"  
+  * subject 
+    * ^short = "The person for whom the medication is prescribed/ordered. [Used for searching]"
+    * ^definition = "The person for whom the medication is prescribed/ordered. [Used for searching]"  
+  * identifier 1..*
+    * ^short = "Business identifier(s) for the prescription. [Used for searching]"
+    * ^definition = "Business identifier(s) for the prescription. [Used for searching]"  
+  * author[x] 1..*
+    * ^short = "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]"
+    * ^definition = "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]"
+  * author[x] only EHDSHealthProfessional or EHDSOrganisation 
+  * date 1..1
+    * ^short = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"
+    * ^definition = "Time of issuing (signing) the prescription by health care professional. [Used for searching]"  
   * status ^short = "Status of authorisation for dispensing the prescription items. This should not be the status of treatment. For a multiple-item prescription, this conveys the aggregate status of the entire prescription. In case of a single-item prescription, prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]"
   * status ^definition = "Status of authorisation for dispensing the prescription items. This should not be the status of treatment. For a multiple-item prescription, this conveys the aggregate status of the entire prescription. In case of a single-item prescription, prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]"
+  // TODO add comment about source never being patient for actionable prescriptions or remove source?
   * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or changed from a previous state."
 //  * recorder 0..1 EHDSHealthProfessional "The recorder of the prescription/draft in the information system"
 //  * recordingDate 0..1 dateTime "Time of recording the prescription/draft in the information system"
@@ -25,8 +30,9 @@ Characteristics: #can-be-target
 //  * validUntil 0..1 dateTime "The validity period end date. The prescription is not dispensable after this date. [Used for searching]"
 * presentedForm 0..* EHDSAttachment "Entire prescription as issued. Various formats could be provided, PDF format is recommended."
 // * comment 0..* string "Additional information or comments"
+// TODO prescriptionItem.identifier vs header.identifier - which cardinalities?
 * prescriptionItem 1..* Base "Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together."
-  * identifier 0..1 Identifier "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier. [Used for searching]"
+  * identifier 1..1 Identifier "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier. [Used for searching]"
 //  * category 0..* CodeableConcept "Category or categories of prescription. For example type of reimbursement, or type of prescription (e.g. hospital, private, etc)."
   * status 1..1 CodeableConcept "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item."
   * statusReason[x] 0..1 CodeableConcept or string "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous"

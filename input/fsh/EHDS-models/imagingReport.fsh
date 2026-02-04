@@ -4,22 +4,25 @@ Parent: EHDSDocument
 Description: """Imaging report reflects the observations and interpretations of one or more imaging studies, contains elements such as the reason why the study is requested, relevant contextual medical information, the modality used to acquire images and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice."""
 Characteristics: #can-be-target
 
-
-* header 1..1
 * header ^short = "Imaging Report header"
-* header.authorship ^short = "Report authoring details"
-* header.authorship.author[x] ^short = "Author by whom the document was/were authored. Multiple authors could be provided."
-* header.documentType ^short = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
-* header.documentType ^definition = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
-* header.status ^short = "Status of the document"
-* header.eventType ^short = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
-* header.eventType ^definition = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
-* header.accessionNumber 0..1 Identifier "Accession number - an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s)."
-  * ^requirements = "eHN Guideline IMG (v1.1): A.1.8.11"
+  * status 
+    * ^short = "Status of the document"
+    * ^definition = "Status of the document"
+  * author[x] 
+    * ^short = "The author of the report."
+    * ^definition = "The author of the report."
+  * documentType 
+    * ^short = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
+    * ^definition = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
+  * eventType 
+    * ^short = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
+    * ^definition = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
+  * accessionNumber 0..1 Identifier "Accession number - an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s)."
+    * ^requirements = "eHN Guideline IMG (v1.1): A.1.8.11"
 //* header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
 //  * ^requirements = "eHN Guideline IMG (v1.1): A.1.3"
-* header.intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"
-  * ^requirements = "eHN Guideline IMG (v1.1): A.1.4"
+  * intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"
+    * ^requirements = "eHN Guideline IMG (v1.1): A.1.4"
 * body 0..1 Base "Imaging Report structured body"
   * orderInformation 0..* Base "Order Information (Imaging Result Report could respond to multiple orders)."
     * ^requirements = "eHN Guideline IMG (v1.1): A.2"
