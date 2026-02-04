@@ -4,6 +4,7 @@ Title: "Dosage model"
 Description: """EHDS refined base model for Dosage"""
 Characteristics: #can-be-target
 
+//TODO - remove
 * dosageDescription 0..1 string "Dosage description" """Free text dosage instructions."""
 * site 0..1 CodeableConcept "Site" """Body site administered to."""
 * route 0..1 CodeableConcept "Route" """Path of substance into body."""

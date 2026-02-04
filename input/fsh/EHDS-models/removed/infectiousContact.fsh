@@ -1,3 +1,4 @@
+/*
 Logical: EHDSInfectiousContact
 Parent: EHDSDataSet
 Title: "Infectious contact model"
@@ -13,3 +14,4 @@ Characteristics: #can-be-target
   * ^binding.description = "ISO 3166-1 alpha-2"
   * ^binding.strength = #preferred
 * note 0..1 string "A textual note with additional information about infectious contact."
+*/
