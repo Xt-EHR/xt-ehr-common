@@ -7,6 +7,9 @@ Characteristics: #can-be-target
 * header.status 
   * ^short = "Status of the immunisation event (completed, not-done)."
   * ^definition = "Status of the immunisation event (completed, not-done)."
+* header.author[x] 
+  * ^short = "The author of the immunisation statement."
+  * ^definition = "The author of the immunisation statement."
 * diseaseOrAgentTargeted 0..* CodeableConcept "Disease or agent that the vaccination provides protection against (e.g. 76902006 Tetanus)."
   * ^binding.description = "ICD-10, SNOMED CT"
   * ^binding.strength = #preferred

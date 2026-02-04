@@ -4,6 +4,7 @@ Title: "Encounter model"
 Description: """EHDS refined base model for Encounter"""
 Characteristics: #can-be-target
 
+//TODO
 * priority 0..1 CodeableConcept "Priority" """Indicates the urgency of the encounter."""
   * ^binding.description = "hl7:v3-xEncounterAdmissionUrgency"
   * ^binding.strength = #preferred
