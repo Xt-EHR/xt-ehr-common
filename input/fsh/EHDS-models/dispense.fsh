@@ -36,7 +36,7 @@ Characteristics: #can-be-target
 * substitutionOccurred 0..1 boolean "Whether substitution was made by the dispenser. Definition of substitution is specific to the jurisdiction."
 //  * type 0..1 CodeableConcept "What kind of substitution was made by the dispenser"
 //  * reason 0..* CodeableConcept "Reason why the substitution was made or why the expected substitution was not made."
-* dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
+* dosageInstructions 0..1 EHDSDosaging "Dosaging and administration instructions"
 * note 0..1 string "Additional information or comments"
 
 

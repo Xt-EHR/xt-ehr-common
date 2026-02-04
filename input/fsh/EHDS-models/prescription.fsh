@@ -29,7 +29,7 @@ Characteristics: #can-be-target
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
     * ^binding.description = "UCUM, EDQM Standard Terms"
     * ^binding.strength = #preferred
-  * dosageInstructions 0..* EHDSDosaging "Dosaging and administration instructions"
+  * dosageInstructions 0..1 EHDSDosaging "Dosaging and administration instructions"
   * preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this medication treatment item"
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
