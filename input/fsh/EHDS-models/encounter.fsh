@@ -20,7 +20,7 @@ Characteristics: #can-be-target
   * admitSource 0..1 CodeableConcept "From where the patient was admitted (e.g. physician referral, transfer)."
     * ^binding.description = "HL7 Admit Source"
     * ^binding.strength = #preferred
-* dischargeDiagnosis 0..* CodeableConcept or EHDSCondition ""
+* dischargeDiagnosis[x] 0..* CodeableConcept or EHDSCondition "The diagnoses at the time of discharge."
 * dischargeDestination 0..1 Base "Location or organisation to which the patient is going after discharge."
   * type 0..1 CodeableConcept "Type of location (e.g. home, hospital, nursing home, etc.)"
   * location[x] 0..1 EHDSOrganisation or EHDSLocation "The location or organisation (including contact details)"
