@@ -12,5 +12,10 @@ Characteristics: #can-be-target
 * occurrence[x] 1..1 dateTime or Period "Specific date/time or interval of time during which the administration took place (or did not take place)"
 * reason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation "Condition or observation that supports why the medication was administered"
 * note 0..1 string "Textual information about the administration"
-* dosage 0..1 EHDSDosage "Details of how medication was taken"
+// dosage 0..1 EHDSDosage "Details of how medication was taken"
+* dosage 0..1 EHDSDosaging "Details of how medication was taken"
+  * dosageDetails 0..1
+    * sequence 0..0
+    * repeat 0..0
+    * asNeeded 0..0
 

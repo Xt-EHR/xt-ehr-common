@@ -47,7 +47,7 @@ Characteristics: #can-be-target
     * ^binding.description = "UCUM, EDQM Standard Terms"
     * ^binding.strength = #preferred
   // TODO: needs updating if we change the dosaging model!
-  * dosageInstructions 1..* EHDSDosaging "Dosaging and administration instructions"
+  * dosageInstructions 1..1 EHDSDosaging "Dosaging and administration instructions"
   //* preparationInstructions 0..1 string "Additional instructions about preparation or dispense"
   * validityPeriod 0..1 Period "The period over which the prescription is considered valid and dispensable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription."
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing."
