@@ -6,9 +6,15 @@ Characteristics: #can-be-target
 
 // * identifier 0..* Identifier "An identifier for this statement."
 // * subject 1..1 EHDSPatient "The patient using the device."
-* header.status ^short = "Current status of the device usage."
-  * ^binding.description = "HL7 device-statement-status"
+* header.status 
+  * ^short = "Current status of the device usage (e.g. active, completed, etc)."
+  * ^definition = "Current status of the device usage (e.g. active, completed, etc)."
+  * ^binding.description = "HL7 Device Use Statement Status or HL7 Device Usage Status"
   * ^binding.strength = #preferred
+* header.author[x] 
+  * ^short = "The author of the device usage statement."
+  * ^definition = "The author of the device usage statement."
+
 // consider changing to periodOfUse below?
 * periodOfUse 0..1 Period "The period of time during which the device was implanted in the patient or the external device was in use."
   * ^requirements = "eHN PS Guideline, ISO IPS."

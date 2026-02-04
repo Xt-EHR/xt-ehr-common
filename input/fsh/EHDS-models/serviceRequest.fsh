@@ -18,7 +18,7 @@ Characteristics: #can-be-target
   * ^binding.description = "ICD-10 (ICD-11 when available), SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
 * quantity 0..1 Quantity "Quantity" """Amount of requested services of the same type"""
-* anatomicLocation 0..* EHDSBodyStructure "Anatomic location" """Anatomic location and laterality where the procedure should be performed. This is the target site."""
+* bodySite 0..* EHDSBodyStructure "Anatomic location" """Anatomic location and laterality where the procedure should be performed. This is the target site."""
 * reasonReference[x] 0..* EHDSObservation or EHDSCondition or EHDSMedication "Reason reference" """Indicates another resource that provides a justification for why this service is being requested."""
 * priority 0..1 CodeableConcept "Priority" """Indicates how quickly the ServiceRequest should be addressed with respect to other requests."""
   * ^binding.description = "HL7 Request priority"
@@ -31,4 +31,4 @@ Characteristics: #can-be-target
 * coverage 0..* EHDSCoverage "Coverage" """Insurance or medical plan or a payment agreement."""
 
 //Removed references to FHIR resources: DiagnosticReport, DocumentReference, Resource. Not sure if they should be replaced with something.
-//Changed data type for anatomicLocation to EHDSBodyStructure
+//Changed data type for bodySite to EHDSBodyStructure

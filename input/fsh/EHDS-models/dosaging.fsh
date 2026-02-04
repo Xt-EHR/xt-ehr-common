@@ -4,6 +4,7 @@ Title: "Dosaging model"
 Description: "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case."
 Characteristics: #can-be-target
 
+//TODO remake from branch
 
 * sequence 0..1 integer "Order of the dosage instruction, in case one treatment consists of several dosaging schemes"
 * text 0..1 string "Free text usage/dosage instructions when structured dosage information is not fully provided"
