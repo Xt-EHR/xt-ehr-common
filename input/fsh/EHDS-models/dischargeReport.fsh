@@ -7,8 +7,15 @@ Characteristics: #can-be-target
 //TODO: check the outcome of narrative vs note and correct accordingly
 //TODO: check the outcome of discussion whether EHDSLaboratoryObservation needs to be mentioned in addition to EHDSObservation.
 
-* header.intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation "Intended recipient(s) of the information, i.e. a person or organisation that should be notified or be aware of the content. This element is used to indicate explicit communication intent and does not represent routine storage or passive availability of information (e.g. in portals). Listing an intended recipient does not create an assignment or responsibility."
-* header.period ^short = "Time of service that is being documented (typically the same as the time of encounter)"
+* header
+  * status 
+    * ^short = "Status of the document"
+    * ^definition = "Status of the document"
+  * author[x] 
+    * ^short = "The author of the report."
+    * ^definition = "The author of the report."
+  * intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation "Intended recipient(s) of the information, i.e. a person or organisation that should be notified or be aware of the content. This element is used to indicate explicit communication intent and does not represent routine storage or passive availability of information (e.g. in portals). Listing an intended recipient does not create an assignment or responsibility."
+  * period ^short = "Time of service that is being documented (typically the same as the time of encounter)"
 // * header.healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
 * body 0..1 Base "Structured body of the discharge report document" 
   * alerts 0..1 Base "Section: Alerts." "Information about substantial alerts or warnings (including allergies) that health professionals should be aware of."

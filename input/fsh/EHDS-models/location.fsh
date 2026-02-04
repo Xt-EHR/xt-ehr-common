@@ -4,6 +4,7 @@ Title: "Location model"
 Description: """EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated."""
 Characteristics: #can-be-target
 
+//TODO
 * identifier 0..* Identifier "Identifier" """Location identifier"""
 * name 0..1 string "Name" """Name of the location as used by humans"""
 * description 0..1 string "Description" """Additional details about the location that could be displayed as further information to identify the location beyond its name"""

@@ -12,10 +12,14 @@ Example 6: transplanted organs illustrate other information that has to be taken
 Example 7: participation in a clinical trial that has to be taken into account in a healthcare contact."""
 Characteristics: #can-be-target
 
-* header.authorship.author[x] ^short = "The author of the alert statement, i.e. the setter of the alert."
-* header.status ^short = """Current status of the alert, indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error."""
+* header.author[x]
+  * ^short = "The author of the alert statement, i.e. the setter of the alert."
+  * ^definition = "The author of the alert statement, i.e. the setter of the alert."
+* header.status ^short = "Current status of the alert, indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error."
   * ^binding.description = "hl7:Flag-status"
   * ^binding.strength = #preferred
+  * ^definition = """Current status of the alert, indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error."""
+
 * code 0..1 CodeableConcept "A coded representation of the alert."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred

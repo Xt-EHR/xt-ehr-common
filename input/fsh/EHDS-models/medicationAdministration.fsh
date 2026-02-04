@@ -4,7 +4,7 @@ Title: "Medication administration model"
 Description: "EHDS refined base model for a single medication administration"
 Characteristics: #can-be-target
 
-
+//TODO
 * header.status ^short = "Status of the administration (e.g. completed, not-done, on-hold, in-progress, unknown)"
   * ^binding.description = "HL7 MedicationAdimnistrationStatusCodes"
   * ^binding.strength = #preferred
