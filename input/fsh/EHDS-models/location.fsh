@@ -14,5 +14,5 @@ Description: """EHDS refined base model for Details and position information for
 //* position 0..1 Base "The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)."
 //  * longitude 1..1 decimal "Longitude with WGS84 datum"
 //  * latitude 1..1 decimal "Latitude with WGS84 datum"
-* managingOrganisation 0..1 EHDSOrganisation "Managing organisation" "The organisation responsible for the provisioning and upkeep of the location"
-* partOf 0..1 EHDSOrganisation "Another Location of which this Location is physically a part of"
+* managingOrganisation 0..1 EHDSOrganisation "The organisation responsible for the provisioning and upkeep of the location"
+* partOf 0..1 EHDSOrganisation "Another location of which this location is physically a part of"
