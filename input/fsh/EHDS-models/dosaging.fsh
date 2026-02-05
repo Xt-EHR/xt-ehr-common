@@ -36,11 +36,3 @@ Characteristics: #can-be-target
   * routeOfAdministration 0..1 CodeableConcept "Route of administration"
     * ^binding.description = "EDQM Standard Terms"
     * ^binding.strength = #preferred
-
-Logical: EHDSAdministeredDosaging
-Parent: EHDSDosaging
-Title: "Administered dosaging model"
-* dosageDetails 0..1
-  * sequence 0..0
-  * repeat 0..0
-  * asNeeded 0..0
