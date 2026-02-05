@@ -11,7 +11,7 @@ Components of a prescription and their representation as EHDS information models
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
 - Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
-- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
+- Usage instructions: [EHDSDosage](StructureDefinition-EHDSDosage.html)
 
 ### FHIR Implementation Guide
 

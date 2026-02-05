@@ -1,6 +1,6 @@
-Logical: EHDSAdministeredDosaging
-Parent: EHDSDosaging
-Title: "Administered dosaging model"
+Logical: EHDSAdministeredDosage
+Parent: EHDSDosage
+Title: "Administered dosage model"
 * dosageDetails 0..1
   * sequence 0..0
   * repeat 0..0

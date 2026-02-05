@@ -71,7 +71,7 @@ Characteristics: #can-be-target
   * medicationSummary 0..1 Base "Summary information on the medication recommended for the period after discharge, indicating whether the medication is changed or newly started. Compared to previous practices, the overview is supplemented with medication that has been discontinued."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.1"
     * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
-    * medicationUse 1..1 EHDSMedicationStatement "Details about medication and dosaging"
+    * medicationUse 1..1 EHDSMedicationStatement "Details about medication and dosage"
     * note 0..1 string "Free text notes by the health professional"
 
   * carePlan 0..1 Base "Care plan and other recommendations after discharge."

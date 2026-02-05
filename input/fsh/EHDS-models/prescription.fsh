@@ -36,11 +36,11 @@ Characteristics: #can-be-target
     * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
     * ^binding.strength = #preferred
   * intendedUseType 0..1 CodeableConcept "Intent of the prescription - prophylaxis, treatment, anesthesia, etc"
-  * periodOfUse 0..1 Period "Period over which the medication is to be taken (in case of multiple dosaging schemes, this would be the overall period of all dosages.)"
+  * periodOfUse 0..1 Period "Period over which the medication is to be taken (in case of multiple dosage schemes, this would be the overall period of all dosages.)"
   * quantityPrescribed 0..1 Quantity "Overall quantity of prescribed product (e.g number of packages or number of tablets)."
     * ^binding.description = "UCUM, EDQM Standard Terms"
     * ^binding.strength = #preferred
-  * dosageInstructions 1..1 EHDSDosaging "Dosaging and administration instructions"
+  * dosageInstructions 1..1 EHDSDosage "Dosage and administration instructions"
   * validityPeriod 0..1 Period "The period over which the prescription is considered valid and dispensable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription."
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing."
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
