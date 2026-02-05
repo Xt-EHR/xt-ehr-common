@@ -24,7 +24,7 @@ Characteristics: #can-be-target
 * reason[x] 0..* CodeableConcept or EHDSCondition or EHDSObservation or EHDSProcedure "Reason or justification for the use of the device."
   * ^requirements = "eHN PS Guideline, ISO IPS."
 
-* source[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Who reported the device was being used by the patient."
+// * source[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Who reported the device was being used by the patient."
 * note 0..1 string "Note about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement."
 
 
