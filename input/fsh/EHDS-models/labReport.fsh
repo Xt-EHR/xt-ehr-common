@@ -1,7 +1,7 @@
 /* Logical: EHDSLaboratoryReport
 //Id: EHDSlaboratoryReport
 Title: "Laboratory report model"
-Description: """A - EHDS refined base model for Laboratory result report"""
+Description: """A - Model for Laboratory result report"""
 Characteristics: #can-be-target
 
 * laboratoryReportHeader 1..1 EHDSLaboratoryReportHeader "A.1 - Laboratory report header" """Report header data elements"""
@@ -14,7 +14,7 @@ Characteristics: #can-be-target
 Logical: EHDSLaboratoryReport
 Title: "Laboratory report model"
 Parent: EHDSDocument
-Description: """EHDS refined base model for Laboratory result report"""
+Description: """Laboratory result report model."""
 Characteristics: #can-be-target
 
 * header 1..1

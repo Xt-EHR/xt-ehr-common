@@ -1,7 +1,7 @@
 Logical: EHDSDevice
 //Id: EHDSdevice
 Title: "Device model"
-Description: "EHDS refined base model for Device information"
+Description: "Model for device information"
 * instanceIdentifier 0..* Identifier "Identifier of the device instance"
 * udiCarrier 0..* Identifier "Unique Device Identifier (UDI) value"
 * manufacturer 0..1 string "Name of device manufacturer"

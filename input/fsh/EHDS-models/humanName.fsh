@@ -1,7 +1,7 @@
 Logical: EHDSHumanName
 //Id: EHDShumanName
 Title: "Human name model"
-Description: "EHDS refined base model for Human name"
+Description: """Model for human name"""
 
 * use 0..1 CodeableConcept "Identifies the purpose for this name."
   * ^binding.description = "hl7:NameUse"
