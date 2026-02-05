@@ -1,6 +1,6 @@
 Logical: EHDSOrganisation
 Title: "Organisation model"
-Description: """EHDS refined base model for Health provider or any other type of organisation"""
+Description: """Model for information about an organisation"""
 
 * identifier 0..* Identifier "Identifier" """Health provider organisation identifier"""
 * type 0..* CodeableConcept "Type" """Kind of organisation"""

@@ -1,7 +1,7 @@
 Logical: EHDSObservation
 Parent: EHDSDataSet
 Title: "Observation model"
-Description: """EHDS refined base model for Observation information"""
+Description: """Model for information about an oservation and its results."""
 
 //subject only patient. Laboratory result has more.
 * header.status

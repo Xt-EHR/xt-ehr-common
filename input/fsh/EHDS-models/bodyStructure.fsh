@@ -1,7 +1,7 @@
 Logical: EHDSBodyStructure
 //Id: EHDSbodyStructure
 Title: "Body structure model"
-Description: """EHDS refined base model for Body structure"""
+Description: """Model for Body structure"""
 
 // * identifier 0..* Identifier "Identifier for this instance of the anatomical structure."
 * morphology 0..1 CodeableConcept "The kind of structure being represented by the body structure at BodyStructure.location. This can define both normal and abnormal morphologies."

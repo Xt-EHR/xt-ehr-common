@@ -2,7 +2,7 @@ Logical: EHDSFunctionalStatus
 Parent: EHDSDataSet
 //Id: EHDSfunctionalStatus
 Title: "Functional status"
-Description: """EHDS refined base model for Functional status"""
+Description: """Model for functional status"""
 
 //TODO
 * description 0..1 string "Narrative description of the functional status" """Narrative description of the need for the patient to be continuously assessed by third parties; functional status may influence decisions about how to plan and administer treatments."""

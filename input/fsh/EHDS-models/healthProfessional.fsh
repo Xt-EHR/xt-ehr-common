@@ -1,7 +1,7 @@
 Logical: EHDSHealthProfessional
 //Id: EHDShealthProfessional
 Title: "Health professional model"
-Description: """EHDS refined base model for Health professional (HP)"""
+Description: """Model for information about a health professional."""
 
 * identifier 0..* Identifier "An identifier of the health professional that is unique within a defined scope. Example: National health professional ID. Multiple identifiers could be provided."
 * name 0..1 EHDSHumanName "Name of the health professional that has been treating or taking responsibility for the patient."

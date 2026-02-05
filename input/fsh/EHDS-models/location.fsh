@@ -1,7 +1,7 @@
 Logical: EHDSLocation
 //Id: EHDSlocation
 Title: "Location model"
-Description: """EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated."""
+Description: """Model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated."""
 
 //TODO
 * identifier 0..* Identifier "Identifier" """Location identifier"""
