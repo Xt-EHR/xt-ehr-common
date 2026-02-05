@@ -12,7 +12,7 @@ Characteristics: #can-be-target
 * type 0..1 CodeableConcept "The kind of material that forms the Specimen."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* source[x] 0..1 EHDSPatient or EHDSPatientAnimal or EHDSLocation or EHDSDevice or EHDSSubstance "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device"
+* specimenSource[x] 0..1 EHDSPatient or EHDSLocation or EHDSDevice "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a device. Additional types of specimen may be allowed in implementations."
 * parentSpecimen 0..* EHDSSpecimen "Specimen from which this specimen originated"
 * request 0..* EHDSServiceRequest "Why the specimen ws collected"
 * combined 0..1 CodeableConcept "This element signifies if the specimen is part of a group or pooled."
