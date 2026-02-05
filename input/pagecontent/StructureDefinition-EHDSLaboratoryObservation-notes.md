@@ -1,4 +1,4 @@
-## Scope and Usage
+#### Scope and Usage
 
 **Observation** is one of the most complex and versatile structures in the logical model. It is designed to cover many different types of observations across a wide range of use cases, from sharing simple findings (e.g. skin color or pulse rate) to representing complex laboratory and medical test results.
 
@@ -11,9 +11,9 @@ To support this flexibility, the Observation model allows the use of additional 
 
 One of the crucial challenges is selecting the appropriate modeling approach to accurately express the intended semantic meaning for each complex observation scenario.
 
-## When to use components
+#### When to use components
 
-### Semantic meaning of components
+##### Semantic meaning of components
 
 A **component** represents a structured sub-result that:
 
@@ -37,7 +37,7 @@ Components:
 - cannot stand alone without the parent observation, and
 - are usually presented together.
 
-### Guidance for use
+##### Guidance for use
 
 Use **components** if **all** of the following are true:
 
@@ -46,9 +46,9 @@ Use **components** if **all** of the following are true:
 - they are meaningless or potentially misleading in isolation, and
 - they are not expected to be referenced independently.
 
-## When to use relationships between observations
+#### When to use relationships between observations
 
-### Semantic meaning of relationships
+##### Semantic meaning of relationships
 
 The Observation model allows observations to be related using the following relationship types:
 
@@ -62,7 +62,7 @@ Each related observation:
 - may be observed or reported separately, and
 - may be reused or referenced independently.
 
-### Guidance for use
+##### Guidance for use
 
 Use **relationships between observations** when the related observations:
 
@@ -71,7 +71,7 @@ Use **relationships between observations** when the related observations:
 - may have different performers or methods, and
 - can be referenced, queried, or interpreted independently.
 
-## Summary principles
+#### Summary principles
 
 - Use **components** when the parts are inseparable aspects of a single observation.
 - Use **relationships between observations** when each observation has independent clinical meaning.
