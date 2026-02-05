@@ -11,7 +11,8 @@ Characteristics: #can-be-target
   * author[x] 
     * ^short = "The author of the report."
     * ^definition = "The author of the report."
-  * attestation.attester[x] = "Attester who validated the document
+  * attestation.attester[x]
+    * ^short = "Attester who validated the document
   * documentType 
     * ^short = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
     * ^definition = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
