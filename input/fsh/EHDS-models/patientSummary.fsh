@@ -75,10 +75,11 @@ Characteristics: #can-be-target
 //     * ^requirements = "eHN PS Guideline"
 
 
-* functionalStatus 0..1 Base "Section: Functional status"
+* functionalStatus 0..1 Base "Section: Functional status" "An individual's ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being."
   * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
-  * functionalStatusAssessment 0..* EHDSFunctionalStatus "An individual's ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being"
+  * condition 0..* EHDSCondition "Condition information describing patient's functional status or disability."
+  * assessment 0..* EHDSObservation "Assessment results regarding functional status."
   * note 0..1 string "Free text notes by the health professional"
 
 * socialHistory 0..1 Base "Section: Social history." """Observations on social factors such as alcohol consumption or smoking. From the healthcare perspective, life-style factors relate to well-being but can also provide a source of risk factors."""
