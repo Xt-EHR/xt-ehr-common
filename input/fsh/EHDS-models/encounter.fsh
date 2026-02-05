@@ -13,7 +13,7 @@ Characteristics: #can-be-target
     * ^definition = "Author (typically a health professional) who is responsible for this encounter" 
 * priority 0..1 CodeableConcept "Indicates the urgency of the encounter (e.g. urgent, routine)."
 * type 1..1 CodeableConcept "Type of the encounter (inpatient, ambulatory, teleconsultation)."
-* period 0..1 Period "The actual start and end time of the encounter."
+* period 1..1 Period "The actual start and end time of the encounter."
 * serviceProvider 0..1 EHDSOrganisation "The organisation (facility) responsible for this encounter"
 * referringProfessional 0..1 EHDSHealthProfessional "Referring healthcare professional"
 * basedOn[x] 0..* EHDSCarePlan or EHDSServiceRequest "Reference to the request that initiated this encounter"
