@@ -19,16 +19,16 @@ Characteristics: #can-be-target
 
 * header 1..1
 * header ^short = "Laboratory Report header"
-  * authorship ^short = "Authorship of the laboratory report"
-    * author[x] ^definition = """Author(s) by whom the laboratory result report was authored. Multiple authors could be provided."""
-    * author[x] ^comment = """Author of the laboratory report could be either a health professional who authored the report, laboratory itself or laboratory information system. Author information is the only mandatory element of the laboratory report header. As such, each laboratory shall be able to provide at least the author information."""
+  * author[x] ^short = "Author(s) by whom the laboratory result report was authored."
+  * author[x] ^definition = """Author(s) by whom the laboratory result report was authored. Multiple authors could be provided."""
+  * author[x] ^comment = """Author of the laboratory report could be either a health professional who authored the report, laboratory itself or laboratory information system. Author information is the only mandatory element of the laboratory report header. As such, each laboratory shall be able to provide at least the author information."""
   * attestation
     * attester[x] ^definition = """Attester who validated laboratory result report. Multiple attesters could be provided."""
     * attester[x] ^comment = """Attestation (validation) of the laboratory report content is the usual step before legal authentication. Attestation could be provided by e.g. the laboratory specialist or the laboratory information system based on internal rules of the laboratory."""
   * legalAuthentication
     * legalAuthenticator[x] ^definition = """The person or organization taking responsibility for the medical content of the document"""
     * legalAuthenticator[x] ^comment = """Legal authentication of the laboratory report is the usual step after attestation. Legal authentication could be provided by e.g. the head of the laboratory or the laboratory organization itself."""
-* healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
+//* healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
 * intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 * header.eventType ^binding.description = "SNOMED CT"
 * header.eventType ^binding.strength = #preferred
