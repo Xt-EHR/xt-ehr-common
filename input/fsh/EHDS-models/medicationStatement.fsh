@@ -12,8 +12,8 @@ Characteristics: #can-be-target
     * ^binding.strength = #preferred
     * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * author[x] 
-    * ^short = "The author of the allergy/intolerance information."
-    * ^definition = "The author of the allergy/intolerance information."
+    * ^short = "The author of the medication use statement"
+    * ^definition = "The author of the medication use statement"
 * treatmentStatus 0..1 CodeableConcept "The current status of taking the medicine (e.g. taking, on-hold, stopped)"
   * ^requirements = "MyHealth@EU"
 * medication 1..1 EHDSMedication "Describes the medicinal product."
