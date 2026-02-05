@@ -28,7 +28,7 @@ Characteristics: #can-be-target
   * legalAuthentication
     * legalAuthenticator[x] ^definition = """The person or organization taking responsibility for the medical content of the document"""
     * legalAuthenticator[x] ^comment = """Legal authentication of the laboratory report is the usual step after attestation. Legal authentication could be provided by e.g. the head of the laboratory or the laboratory organization itself."""
-* healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
+//* healthInsuranceAndPaymentInformation 0..* EHDSCoverage "Health insurance and payment information"
 * intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 * header.eventType ^binding.description = "SNOMED CT"
 * header.eventType ^binding.strength = #preferred
