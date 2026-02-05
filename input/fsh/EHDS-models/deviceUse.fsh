@@ -2,9 +2,6 @@ Logical: EHDSDeviceUse
 Parent: EHDSDataSet
 Title: "Device use model"
 Description: """EHDS refined base model for device use information"""
-Characteristics: #can-be-target
-
-// * identifier 0..* Identifier "An identifier for this statement."
 // * subject 1..1 EHDSPatient "The patient using the device."
 * header.status 
   * ^short = "Current status of the device usage (e.g. active, completed, etc)."

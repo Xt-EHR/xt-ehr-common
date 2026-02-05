@@ -2,7 +2,6 @@ Logical: EHDSCurrentPregnancy
 Parent: EHDSDataSet
 Title: "Current pregnancy status model"
 Description: "Current pregnancy status"
-Characteristics: #can-be-target
 
 * header.status 
   * ^short = "Status of this observation"

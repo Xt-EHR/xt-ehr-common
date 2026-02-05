@@ -2,7 +2,6 @@ Logical: EHDSMedicationAdministration
 Parent: EHDSDataSet
 Title: "Medication administration model"
 Description: "EHDS refined base model for a single medication administration"
-Characteristics: #can-be-target
 
 //TODO
 * header.status ^short = "Status of the administration (e.g. completed, not-done, on-hold, in-progress, unknown)"

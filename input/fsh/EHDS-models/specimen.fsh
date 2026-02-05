@@ -2,7 +2,6 @@ Logical: EHDSSpecimen
 //Id: EHDSspecimen
 Title: "Specimen model"
 Description: """EHDS refined base model for a specimen to be used for Analysis"""
-Characteristics: #can-be-target
 
 // new logical model for Specimen reflecting feedback requirements to clarify and add details
 * identifier 1..* Identifier "An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by ordering system, identifier assigned by laboratory etc. Multiple identifiers can be used."

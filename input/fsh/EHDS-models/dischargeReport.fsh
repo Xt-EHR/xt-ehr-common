@@ -2,7 +2,6 @@ Logical: EHDSDischargeReport
 Parent: EHDSDocument
 Title: "Discharge Report model"
 Description: """A generic, flexible model for any kind of discharge report. Different types of encounters may require adding relevant sections and elements, or omitting irrelevant ones, depending on their data needs."""
-Characteristics: #can-be-target
 
 //TODO: check the outcome of narrative vs note and correct accordingly
 //TODO: check the outcome of discussion whether EHDSLaboratoryObservation needs to be mentioned in addition to EHDSObservation.

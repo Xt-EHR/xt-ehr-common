@@ -2,7 +2,6 @@ Logical: EHDSProcedure
 Parent: EHDSDataSet
 Title: "Procedure model"
 Description: """The model provides basic information about a procedure performed on or for a patient. This includes surgical, therapeutic, and diagnostic procedures, as well as specimen collection. The model does not cover procedures in the planning stage."""
-Characteristics: #can-be-target
 
 // * identifier 0..* Identifier "Identifier for the procedure"
 // * subject 1..1 EHDSPatient "On whom the procedure was performed."

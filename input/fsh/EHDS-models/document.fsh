@@ -2,7 +2,6 @@ Logical: EHDSDocument
 Title: "Document model"
 Parent: EHDSDataSet
 Description: "EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes."
-Characteristics: #can-be-target
 
 * header ^short = "Document header"
   * identifier 1..*

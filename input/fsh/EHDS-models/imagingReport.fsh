@@ -2,7 +2,6 @@ Logical: EHDSImagingReport
 Title: "Imaging report model"
 Parent: EHDSDocument
 Description: """Imaging report reflects the observations and interpretations of one or more imaging studies, contains elements such as the reason why the study is requested, relevant contextual medical information, the modality used to acquire images and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice."""
-Characteristics: #can-be-target
 
 * header ^short = "Imaging report header"
   * status 

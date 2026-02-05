@@ -3,7 +3,6 @@ Logical: EHDSAppointment
 //Id: EHDSappointment
 Title: "Appointment model"
 Description: """EHDS refined base model for Appointment. This is a simplified model with minimal information - it is not intended to cover the full functionality of booking systems."""
-Characteristics: #can-be-target
 
 * identifier 0..* Identifier "Appointment identifier"
 * subject 0..1 EHDSPatient "The patient associated with the appointment."
