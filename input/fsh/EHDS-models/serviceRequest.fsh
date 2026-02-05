@@ -28,7 +28,7 @@ Characteristics: #can-be-target
 * encounter 0..1 EHDSEncounter "Encounter" """An encounter that provides additional information about the healthcare context in which this request is made."""
 * occurrence[x] 0..1 dateTime or Period "Occurrence" """When service should occur"""
 * patientInstructions 0..1 string "Patient instructions" """Patient or consumer-oriented instructions"""
-* coverage 0..* EHDSCoverage "Coverage" """Insurance or medical plan or a payment agreement."""
+//* coverage 0..* EHDSCoverage "Coverage" """Insurance or medical plan or a payment agreement."""
 
 //Removed references to FHIR resources: DiagnosticReport, DocumentReference, Resource. Not sure if they should be replaced with something.
 //Changed data type for bodySite to EHDSBodyStructure
