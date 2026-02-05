@@ -2,8 +2,6 @@ Logical: EHDSEncounter
 Parent: EHDSDataSet
 Title: "Encounter model"
 Description: "The model provides a structured way to capture information about a patient’s interaction with a healthcare service. It enables recording details related to individual encounters and supports linking closely related encounters when needed. Tracking broader or longer episodes of care that extend beyond individual encounters is outside the scope of this model."
-Characteristics: #can-be-target
-
 * header
   * status 
     * ^short = "Status of the encounter (e.g. discharged, discontinued, completed)"

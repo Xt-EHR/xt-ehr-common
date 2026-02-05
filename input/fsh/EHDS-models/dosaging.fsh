@@ -1,8 +1,6 @@
 Logical: EHDSDosage
 Title: "Dosage model"
 Description: "The model covers usage instructions for administering a medicinal product, focusing on the most frequently used data elements. More complex dosage schemes may require additional elements, which should be communicated as part of the rendered dosage instructions element."
-Characteristics: #can-be-target
-
 * renderedDosageInstruction 0..1 string "Full dosage information as human-readable text covering all dosage steps. Generating the text follows local rules and should include all locally implemented dosage data even when such elements are not present in this model."
 * dosageDetails 0..* Base "Details of single dosage scheme step"
   * sequence 0..1 integer "Order of the dosage instruction, in case one treatment consists of several dosage steps. When two schemes share the same sequence number, they are meant to be running in parallel."  

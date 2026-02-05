@@ -2,7 +2,6 @@ Logical: EHDSSubstanceUse
 Parent: EHDSDataSet
 Title: "Substance use model"
 Description: """Statement about using a substance (such as tobacco, alcohol, drugs, etc)."""
-Characteristics: #can-be-target
 
 * header.status ^short = "Status of the patient’s alcohol use."
   * ^binding.description = "SNOMED CT"

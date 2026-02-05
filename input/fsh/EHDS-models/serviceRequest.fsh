@@ -2,7 +2,6 @@ Logical: EHDSServiceRequest
 Parent: EHDSDataSet
 Title: "Service request model"
 Description: """The model covers details about a requested service or services. One order may include several requests."""
-Characteristics: #can-be-target
 
 * description 0..1 string "Textual description of the requested service"
 * code 0..1 CodeableConcept "A code and name that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested."

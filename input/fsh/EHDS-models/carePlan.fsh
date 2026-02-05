@@ -2,7 +2,6 @@ Logical: EHDSCarePlan
 Parent: EHDSDataSet
 Title: "Care plan model"
 Description: "Simplified model for care plan. The model includes minimal information and is not designed to cover the full functionality of care plans. The model is applicable to different domains."
-Characteristics: #can-be-target
 
 * header.identifier 
   * ^short = "Identifier for the care plan"

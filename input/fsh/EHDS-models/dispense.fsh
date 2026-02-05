@@ -2,7 +2,6 @@ Logical: EHDSMedicationDispense
 Title: "Medication dispense model"
 Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on a request and dispensed in a pharmacy). Implementers should take into account, if allowed and needed, the calculation of remaining dispensable product based on this information."
-Characteristics: #can-be-target
 
 * header.author[x] 
   * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."

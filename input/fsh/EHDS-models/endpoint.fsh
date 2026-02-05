@@ -2,7 +2,6 @@ Logical: EHDSEndpoint
 //Id: EHDSendpoint
 Title: "Endpoint model"
 Description: "Model covers technical details of an endpoint that can be used for electronic services"
-Characteristics: #can-be-target
 
 * identifier 1..* Identifier "Identifier for the endpoint"
 * status 1..1 CodeableConcept "Status of the endpoint (e.g. active, limited)."

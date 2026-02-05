@@ -5,7 +5,6 @@ Logical: EHDSImagingStudy
 Parent: EHDSDataSet
 Title: "Imaging study model"
 Description: """Imaging study model includes the key information about the content of an imaging study. It does not include image pixels but includes location pointers to its image content and organises this information according to the well-established model of an imaging study made of one or more series and each series made of instances or images. Composed of a set of data (DICOM KOS) that facilitates the location of all available images."""
-Characteristics: #can-be-target
 
 * header.identifier ^short = "Identifiers for the imaging study such as DICOM Study Instance UID. If one or more series elements are present in the imaging study, then there shall be one DICOM Study UID identifier."
 * header.identifier 1..*

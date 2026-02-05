@@ -2,7 +2,6 @@ Logical: EHDSAddress
 //Id: EHDSaddress
 Title: "Address model"
 Description: """EHDS refined base model for Address structure"""
-Characteristics: #can-be-target
 
 * use 0..1 CodeableConcept "Purpose of the address"
   * ^binding.description = "HL7 AddressUse"

@@ -2,7 +2,6 @@ Logical: EHDSMedicationPrescription
 Title: "Medication prescription model"
 Parent: EHDSDataSet
 Description: "Logical model for medication prescription. A prescription contains one or more prescription items (medications)."
-Characteristics: #can-be-target
 
 * header 
   * ^short = "Prescription header" 

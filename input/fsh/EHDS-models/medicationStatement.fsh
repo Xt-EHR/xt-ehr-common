@@ -2,7 +2,6 @@ Logical: EHDSMedicationStatement
 Parent: EHDSDataSet
 Title: "Medication statement model"
 Description: """Statement about a single medication as part of a medication summary."""
-Characteristics: #can-be-target
 
 //TODO
 * medicationTreatmentStatus 0..1 CodeableConcept "The current status of the taking of medicine"

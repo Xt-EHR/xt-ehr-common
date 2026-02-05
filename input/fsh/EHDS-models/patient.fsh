@@ -1,7 +1,6 @@
 Logical: EHDSPatient
 Title: "Patient model"
 Description: """EHDS refined base model for patient (subject of care) information"""
-Characteristics: #can-be-target
 
 * identifier 1..* Identifier "An identifier of the patient that is unique within a defined scope (typically a national patient identifier, but it can also be a temporary identifier issued by the EHR)."
 * name 0..* EHDSHumanName "Name associated with the patient/subject." """Name might consist of name parts, e.g. Given name or names, family name/surname, name prefix etc."""

@@ -1,7 +1,6 @@
 Logical: EHDSRelatedPerson
 Title: "Related person model"
 Description: """EHDS refined base model for Patient/subject guardian and other related person information"""
-Characteristics: #can-be-target
 
 
 * personalIdentifier 0..* Identifier "An identifier of the related person that is unique within a defined scope (e.g. national ID number). Multiple identifiers could be provided."
