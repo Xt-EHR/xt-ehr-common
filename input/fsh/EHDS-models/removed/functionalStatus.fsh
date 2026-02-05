@@ -1,4 +1,4 @@
-Logical: EHDSFunctionalStatus
+/* Logical: EHDSFunctionalStatus
 Parent: EHDSDataSet
 //Id: EHDSfunctionalStatus
 Title: "Functional status"
@@ -31,7 +31,7 @@ Description: """Model for functional status"""
   * functionalAssessmentResult[x] 0..1 string or Quantity or CodeableConcept "Functional assessment result value"
     * ^requirements = "eHN HDR Guideline, ISO IPS"
     * ^binding.description = "ICF, SNOMED CT"
-    * ^binding.strength = #preferred
+    * ^binding.strength = #preferred */
 
 /*
   * ^requirements = ""Logical: EHDSFunctionalStatus
