@@ -3,8 +3,8 @@ Logical: EHDSHumanName
 Title: "Human name model"
 Description: """Model for human name"""
 
-* use 0..1 CodeableConcept "Identifies the purpose for this name."
-  * ^binding.description = "hl7:NameUse"
+* use 0..1 CodeableConcept "Identifies the purpose of this name."
+  * ^binding.description = "HL7 Name Use"
   * ^binding.strength = #preferred
 * text 0..1 string "Specifies the entire name as it should be displayed e.g. on an application UI."
 * family 0..* string "The family name/surname/last name of a person."
