@@ -30,7 +30,7 @@ Description: """Model for a clinical condition, problem, diagnosis, or other eve
   * ^binding.strength = #preferred
 */
 // MyHealth@EU PS on CDA uses SNOMED CT for status, but FHIR has required binding
-* resolutionCircumstances 0..* string "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." """This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem "hepatic cyst" and will be included in surgical procedures)."""
+* resolutionCircumstances 0..1 string "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." """This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem "hepatic cyst" and will be included in surgical procedures)."""
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.1.8; PS (v3.4) A.2.2.2.4"
 * severity 0..1 CodeableConcept "A subjective assessment of the severity of the condition as evaluated by the clinician."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.1.9"
