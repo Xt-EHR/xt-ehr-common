@@ -17,4 +17,4 @@ Description: "Model for device information"
 * type 0..* CodeableConcept "Device type"
   * ^binding.description = "SNOMED CT, EMDN"
   * ^binding.strength = #preferred
-* note 0..* string "Device notes and comments"
+* note 0..1 string "Device note and/or comment"
