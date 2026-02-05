@@ -1,4 +1,4 @@
-Logical: EHDSSubstanceUse
+/* Logical: EHDSSubstanceUse
 Parent: EHDSDataSet
 Title: "Substance use model"
 Description: """Statement about using a substance (such as tobacco, alcohol, drugs, etc)."""
@@ -16,4 +16,4 @@ Description: """Statement about using a substance (such as tobacco, alcohol, dru
 * routeOfAdministration 0..* CodeableConcept "Route(s) of administration"
   * ^binding.description = "EDQM"
   * ^binding.strength = #preferred
-* note 0..1 string "Textual comment."
+* note 0..1 string "Textual comment." */
