@@ -40,7 +40,7 @@ Characteristics: #can-be-target
 * medicationSummary 1..1 Base "Section: Medication summary" """Current and relevant past medicines."""
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
   * emptyReason 0..1 CodeableConcept "Use if no medicines are listed"
-  * medicationUse 0..* EHDSMedicationStatement "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
+  * medicationUse 0..* EHDSMedicationUse "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
   * note 0..1 string "Free text notes by the health professional"
 
 * medicalDevicesAndImplants 1..1 Base "Section: Medical devices and implants" "The devices that are implanted in the patient and external medical devices and equipment that the health
