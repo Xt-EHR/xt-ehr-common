@@ -53,7 +53,7 @@ Description: """A generic, flexible model for any kind of discharge report. Diff
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.2"   
     * medicalDevicesAndImplants 0..* EHDSDeviceUse "Medical devices (including implants) whose use was started, stopped, or otherwise modified during the encounter."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.3"    
-    * pharmacotherapy 0..* EHDSMedicationStatement "Significant medication treatments during encounter. The content of this section may be repeated in the medication summary for full overview of patient's medications."
+    * pharmacotherapy 0..* EHDSMedicationUse "Significant medication treatments during encounter. The content of this section may be repeated in the medication summary for full overview of patient's medications."
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.5"
     * testResults[x] 0..* EHDSObservation or EHDSLaboratoryObservation "Significant medical test results of functional, diagnostic (including laboratory), and imaging examinations performed during encounter. This may include orders for which the results have not yet arrived."
     * note 0..1 string "Free text notes by the health professional"
@@ -70,7 +70,7 @@ Description: """A generic, flexible model for any kind of discharge report. Diff
   * medicationSummary 0..1 Base "Summary information on the medication recommended for the period after discharge, indicating whether the medication is changed or newly started. Compared to previous practices, the overview is supplemented with medication that has been discontinued."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.1"
     * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
-    * medicationUse 1..1 EHDSMedicationStatement "Details about medication and dosage"
+    * medicationUse 1..1 EHDSMedicationUse "Details about medication and dosage"
     * note 0..1 string "Free text notes by the health professional"
 
   * carePlan 0..1 Base "Care plan and other recommendations after discharge."
