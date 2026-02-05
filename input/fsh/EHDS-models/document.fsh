@@ -12,7 +12,7 @@ Characteristics: #can-be-target
     * ^short = "Author(s) of the document"
   * date 1..1
     * ^short = "Date of finalising/issuing the document"
-//    * ^min = 1
+  * source 0..0
   * documentType 1..1 CodeableConcept "Type of document at hand, e.g. 60591-5 Patient summary document."
     * ^binding.description = "LOINC"
     * ^binding.strength = #preferred

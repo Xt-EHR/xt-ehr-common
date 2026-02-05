@@ -12,6 +12,7 @@ Characteristics: #can-be-target
   * ^requirements = "eHN Guideline IMG (v1.1): B.1.1"
 * header.author[x] 1..*
 * header.date 1..1  
+* header.source 0..0
 * modality 0..* CodeableConcept "All of the distinct values for series' modalities"
   * ^binding.description = "DICOM CID029"
   * ^binding.strength = #preferred
