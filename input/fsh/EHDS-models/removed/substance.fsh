@@ -1,3 +1,4 @@
+/*
 Logical: EHDSSubstance
 //Id: EHDSsubstance
 Title: "Substance model"
@@ -14,3 +15,4 @@ Characteristics: #can-be-target
 * ingredients 0..* Base "Ingredients" """Composition information about the substance"""
   * quantity 0..1 Ratio "Quantity" """The amount of the ingredient in the substance - a concentration ratio."""
   * substance 1..1 Reference (EHDSSubstance) "Substance" """Another substance that is a component of this substance."""
+*/

@@ -10,7 +10,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * header.subject
   * ^short = "Patient who is receiving health care. This patient might be different from the direct subject of the observation."
-* header.directSubject[x] 0..1 EHDSPatient or EHDSPatientAnimal or EHDSLocation or EHDSDevice or EHDSHealthProfessional or EHDSOrganisation or EHDSProcedure "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device"
+* header.directSubject[x] 0..1 EHDSPatient or EHDSLocation or EHDSDevice or EHDSHealthProfessional or EHDSOrganisation or EHDSProcedure "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device. Additional types of subject may be allowed in implementations."
 * observationDate[x] 1..1 dateTime or Period "Clinically relevant time or time period for the observation"
 * type 1..1 CodeableConcept "Observation type. Code and name representing the type of the observation using the agreed code systems."
   * ^binding.description = "LOINC, NPU, SNOMED CT"
