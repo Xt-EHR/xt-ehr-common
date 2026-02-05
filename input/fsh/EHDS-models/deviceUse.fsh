@@ -1,7 +1,7 @@
 Logical: EHDSDeviceUse
 Parent: EHDSDataSet
 Title: "Device use model"
-Description: """Model for information about the use of a device for a patient."""
+Description: """Model for information about the use of a device in the care of patient."""
 // * subject 1..1 EHDSPatient "The patient using the device."
 * header.status 
   * ^short = "Current status of the device usage (e.g. active, completed, etc)."
