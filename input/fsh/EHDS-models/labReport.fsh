@@ -57,5 +57,5 @@ Characteristics: #can-be-target
   //* narrativeReport 0..1 Narrative "Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."
     * commentsInterpretationAndRecommendations 0..* Narrative "Narrative Comments, such as a textual interpretation or advice accompanying the result report, for example."
     * laboratoryTestResults 0..* EHDSLaboratoryObservation "Observation details (report could consist of multiple observations)"
-* attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"
+* attachments 0..* EHDSAttachment "Report attachments"
 
