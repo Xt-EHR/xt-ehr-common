@@ -1,3 +1,4 @@
+/*
 Logical: EHDSDosage
 //Id: EHDSdosage
 Title: "Dosage model"
@@ -11,3 +12,5 @@ Characteristics: #can-be-target
 * method 0..1 CodeableConcept "Method" """How drug was administered."""
 * dose 0..1 Quantity "Dose" """Amount of medication per dose."""
 * rate[x] 0..1 Ratio or Quantity "Rate" """Dose quantity per unit of time."""
+
+*/
