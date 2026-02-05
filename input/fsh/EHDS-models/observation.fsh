@@ -85,7 +85,7 @@ Characteristics: #can-be-target
   * code 1..1 CodeableConcept "Code representing the observation using the agreed code systems."
     * ^binding.description = "LOINC, NPU, SNOMED CT"
     * ^binding.strength = #preferred
-  * originalName 0..1 string "Original (conventional) name of the observation as used in the local laboratory or clinical system."
+  * originalName 0..1 string "Original (user-friendly) name of the observation as used in the local laboratory or clinical system."
   * result 1..1 Base "Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
     * value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept "Observation result value according to the type of observation. Model covers only most frequently used data types but other data types can be used as well.
       Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided."
