@@ -2,7 +2,6 @@ Logical: EHDSMedicationUse
 Parent: EHDSDataSet
 Title: "Medication use model"
 Description: """Statement about a single medication as part of a medication summary."""
-Characteristics: #can-be-target
 
 * header
   * status

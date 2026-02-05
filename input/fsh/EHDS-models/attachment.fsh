@@ -2,7 +2,6 @@ Logical: EHDSAttachment
 //Id: EHDSattachment
 Title: "Attachment model"
 Description: """EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type."""
-Characteristics: #can-be-target
 
 * contentType 0..1 CodeableConcept "Mime type of the content, with charset etc."
   * ^binding.description = "BCP-13"

@@ -1,7 +1,6 @@
 Logical: EHDSMedication
 Title: "Medication model"
 Description: "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and administrations. Each of those may have different restrictions in a FHIR profile. The model is suitable for generic/virtual medications as well as branded/real products. The model aims to have basic alignment with ISO IDMP but it does not cover the full complexity needed for medication registries."
-Characteristics: #can-be-target
 * ^status = #active
 
 * identifyingCode[x] 0..* CodeableConcept or Identifier "An identifier (e.g. from EMA SPOR PMS or national registry) or a code (e.g. from SNOMED CT or national code system) for the product (virtual product, branded product, or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities. An identifier might not exist e.g. for substance-based prescriptions."
@@ -65,7 +64,7 @@ Characteristics: #can-be-target
 
 * device 0..* Base "Administration device included in the product. Devices that are not inside the medication package are excluded."
   * deviceQuantity 1..1 Quantity "Number of such devices"
-  * device[x] 1..1 CodeableConcept or Reference(EHDSDevice) "Device coded"
+  * device[x] 1..1 CodeableConcept or EHDSDevice "Device coded"
   //  * ^comment = "Added"
 * characteristic 0..* Base "Additional features of the product (e.g. reimbursable, sugar-free, easy-open cap, score-lined). It is expected that implementers will define a valueset supporting their use cases."
   * type 1..1 CodeableConcept "A code expressing the type of characteristic."

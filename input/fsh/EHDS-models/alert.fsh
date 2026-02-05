@@ -10,7 +10,6 @@ Example 4: Airway Alert / Difficult Intubation
 Example 5: Diagnoses such as malignant hyperthermia, porphyria, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
 Example 6: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
 Example 7: participation in a clinical trial that has to be taken into account in a healthcare contact."""
-Characteristics: #can-be-target
 
 * header.author[x]
   * ^short = "The author of the alert statement, i.e. the setter of the alert."
@@ -28,4 +27,4 @@ Characteristics: #can-be-target
   * ^binding.description = "hl7:Flag-priority-code"
   * ^binding.strength = #preferred
 * period 0..1 Period "Time period when alert is active. The period of time from the activation of the alert to inactivation of the alert. If the alert is active, the end of the period should be unspecified."
-* sourceReference 0..* Reference(Resource) "A reference to the resource the alert is about."
+* sourceReference 0..* Resource "A reference to the resource the alert is about."

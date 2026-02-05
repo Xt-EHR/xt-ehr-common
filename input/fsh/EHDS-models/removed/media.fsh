@@ -1,3 +1,4 @@
+/*
 Logical: EHDSMedia
 //Id: EHDSmedia
 Title: "Media model"
@@ -25,3 +26,4 @@ Characteristics: #can-be-target
 * content 1..1 EHDSAttachment "Content" """The actual content of the media - inline or by direct reference to the media source file."""
 * note 0..* string "Note" """Comments made about the media by the performer, subject or other participants."""
 * performer[x] 0..* EHDSHealthProfessional or EHDSOrganisation "Performer" """Performer of the imaging acquisition process. """
+*/

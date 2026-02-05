@@ -2,7 +2,6 @@ Logical: EHDSDischargeReport
 Parent: EHDSDocument
 Title: "Discharge Report model"
 Description: """A generic, flexible model for any kind of discharge report. Different types of encounters may require adding relevant sections and elements, or omitting irrelevant ones, depending on their data needs."""
-Characteristics: #can-be-target
 
 //TODO: check the outcome of narrative vs note and correct accordingly
 //TODO: check the outcome of discussion whether EHDSLaboratoryObservation needs to be mentioned in addition to EHDSObservation.
@@ -82,4 +81,4 @@ Characteristics: #can-be-target
       * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.3"
   * synthesis 0..1 string "Clinical synthesis (e.g. description of reasons and course of encounter) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics, explanation of clinical context) in clinically complex conditions."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.7"
-* attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"
+* attachments 0..* EHDSAttachment "Report attachments data elements"

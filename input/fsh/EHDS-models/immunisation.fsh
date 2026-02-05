@@ -2,7 +2,6 @@ Logical: EHDSImmunisation
 Parent: EHDSDataSet
 Title: "Immunisation model"
 Description: """Model describes the administration of immunisation products, including vaccines and immunoglobulins, covering active and passive immunisations. It focuses on immunisation as a clinical procedure rather than the resulting immunity. The model supports routine immunisations at standard doses and may overlap with medication summaries or prescription lists. Natural immunity, immunisation outcomes, refusals, and administration or planning details are out of scope."""
-Characteristics: #can-be-target
 
 * header.status 
   * ^short = "Status of the immunisation event (completed, not-done)."

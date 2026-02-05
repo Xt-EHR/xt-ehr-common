@@ -2,7 +2,6 @@ Logical: EHDSAllergyIntolerance
 Parent: EHDSDataSet
 Title: "Allergy intolerance model"
 Description: """EHDS refined base model for allergy/intolerance"""
-Characteristics: #can-be-target
 
 
 * header
