@@ -10,7 +10,7 @@
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
 - Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
-- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
+- Usage instructions: [EHDSDosage](StructureDefinition-EHDSDosage.html)
 - Location: [EHDSLocation](StructureDefinition-EHDSLocation.html)
 
 Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.
