@@ -23,7 +23,7 @@ Characteristics: #can-be-target
 * priority 0..1 CodeableConcept "Priority" """Indicates how quickly the ServiceRequest should be addressed with respect to other requests."""
   * ^binding.description = "HL7 Request priority"
   * ^binding.strength = #preferred
-* supportingInformation[x] 0..* EHDSObservation or EHDSCondition or EHDSProcedure or EHDSMedicationAdministration "Supporting information" """Health conditions relevant for the results interpretation, e.g. fasting status, sex for clinical use, etc."""
+* supportingInformationReference[x] 0..* EHDSObservation or EHDSCondition or EHDSProcedure or EHDSMedicationAdministration or CodeableConcept or Resource "A reference to the health conditions and other clinical information relevant for the results interpretation, e.g. fasting status, sex for clinical use, etc."
 * specimen 0..* EHDSSpecimen "Specimen" """Specimens to be used by the laboratory procedure"""
 * encounter 0..1 EHDSEncounter "Encounter" """An encounter that provides additional information about the healthcare context in which this request is made."""
 * occurrence[x] 0..1 dateTime or Period "Occurrence" """When service should occur"""
