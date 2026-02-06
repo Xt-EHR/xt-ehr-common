@@ -18,11 +18,7 @@ Patient Summary could be divided into several basic parts: document header, body
 
 Patient Summary FHIR Implementation Guide is based on International Patient Summary FHIR IG.
 
-The work for building the European specialisation of International Patient Summary is ongoing in a joint working group of Xt-EHR, XpanDH, xShare and HL7 Europe. Any interested stakeholder is welcome to join the group - please see the detailed [information about the meetings](https://confluence.hl7.org/display/HEU/Meetings+PS-HDR-Base).
-
-The European Patient Summary FHIR Implementation Guide:
-- [R4 version](https://build.fhir.org/ig/hl7-eu/eps/)
-- R5 - not available (also, not available for IPS)
+The work for building the European specialisation of International Patient Summary is ongoing in a joint working group with HL7 Europe ([see details](https://confluence.hl7.org/spaces/HEU/pages/358255737/Implementation+Guides)).
 
 
 ### Supporting information
