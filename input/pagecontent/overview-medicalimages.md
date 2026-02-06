@@ -21,8 +21,8 @@ Imaging result report could be divided into several parts: document header, body
 
 ### FHIR Implementation Guide
 
-Published version: https://hl7.eu/fhir/imaging-r5/
-Work in progress: [Latest build](https://build.fhir.org/ig/hl7-eu/imaging); [GitHub](https://github.com/hl7-eu/imaging/)
+HL7 Europe published FHIR IG: https://hl7.eu/fhir/imaging-r5/
+
 
 ### IHE Profile
 ...
