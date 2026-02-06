@@ -14,7 +14,7 @@ eP --o PresentedForm: "0..*"
 
 class "**Prescriber** (author)" as Prescriber{
   EHDSHealthProfessional   
-  
+  EHDSOrgnisation
 }
 
 class "**Patient** (subject)" as Patient{
@@ -27,7 +27,7 @@ class "**Header**" as Header{
 
 }
 
-Header --> Prescriber: "1..1"
+Header --> Prescriber: "1..*"
 Header --> Patient: "1..1"
 
 
@@ -35,7 +35,7 @@ class "**PrescriptionItem**" as Item{
 }
 
 Item --> Medication: "1..1"
-Item --o Dosage: "0..*"
+Item --o Dosage: "1..1"
 
 
 class "**DosageInstructions**" as Dosage{
