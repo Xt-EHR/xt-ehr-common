@@ -39,7 +39,6 @@ class "**Order information**" as orderInformation {
   orderId 1..*
   orderDateTime 0..1
   orderPlacer 0..1
-  orderReasonText 0..1
   orderReason 0..*
   clinicalQuestion 0..1
 }
@@ -66,12 +65,11 @@ class "**Specimen**" as specimen {
 }
 
 class "**Service Request**" as serviceRequest {
-  serviceText 0..1
-  serviceCode 0..1
-  reasonCode 0..*
+  description 0..1
+  code 0..1
   quantity 0..1
   bodySite 0..*
-  reasonReference 0..*
+  **reasonReference** 0..*
   priority 0..1
   **supportingInformationReference** 0..*
   **specimen** 0..*
