@@ -1,28 +1,19 @@
 ### Information Models
-#### Conceptual view
+
+#### Medical Test Results
+
+Medical test results are communicated using [EHDSObservation model](StructureDefinition-EHDSObservation.html). This model is shared by all medical test results, and it is sufficient for communicating laboratory test results in non-laboratory context. 
+
+In specific laboratory context [EHDSLaboratoryObservation model](StructureDefinition-EHDSLaboratoryObservation.html) is used - it is a derivation from EHDSObservation and adds specific elements.
+
+##### Laboratory Result Report
 
 Laboratory result report could be divided into several parts: document header, body and optionally it could also have various attachments.
 
-##### Laboratory Result Report
 <figure>
   {% include labReport_CIM.svg %}
 </figure>
 
-##### Laboratory Result header
-<figure>
-  {% include labReportHeader_CIM.svg %}
-</figure>
-
-##### Laboratory Result body
-<figure>
-  {% include labReportBody_CIM.svg %}
-</figure>
-
-##### UML representation
-Components of laboratory result report and its representation using UML notation:
-<figure>
-  {% include laboratory_report.svg %}
-</figure>
 
 ### Detail EHDS information models for Laboratory report
 - [Laboratory Report Document](StructureDefinition-EHDSLaboratoryReport.html)
@@ -32,7 +23,6 @@ Components of laboratory result report and its representation using UML notation
 ### FHIR Implementation Guide
 
 Laboratory Report FHIR Implementation Guide has been published by HL7 Europe ([published version](https://hl7.eu/fhir/laboratory/index.html)).
-Latest build version can be found [here](https://build.fhir.org/ig/hl7-eu/laboratory/). The changes proposed by Xt-EHR project and approved by the community will be included in the future version of the specification.
 
 MyHealth@EU has adopted HL7 Europe's FHIR IG for laboratory report crossborder service (see [crossborder adaption](https://fhir.ehdsi.eu/laboratory/)).
 

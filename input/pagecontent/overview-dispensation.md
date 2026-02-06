@@ -1,17 +1,25 @@
 ### Information Models
 
-#### EHDS information models for **ePrescription**:
+#### Conceptual view
 
-Components of a prescription and their representation as EHDS information models:
 <figure>
-  {% include prescription.svg %}
+  {% include prescription_dispense_CIM_TC.svg %}
 </figure>
 
-- Prescription: [EHDSMedicationPrescription](StructureDefinition-EHDSMedicationPrescription.html)
+Components of a dispense and their representation as EHDS information models:
+
+<figure>
+  {% include dispense.svg %}
+</figure> 
+
+- Dispense: [EHDSMedicationDispense](StructureDefinition-EHDSMedicationDispense.html)
 - Patient: [EHDSPatient](StructureDefinition-EHDSPatient.html)
-- Prescriber: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
+- Dispenser: [EHDSHealthProfessional](StructureDefinition-EHDSHealthProfessional.html)
 - Medication: [EHDSMedication](StructureDefinition-EHDSMedication.html)
-- Usage instructions: [EHDSDosaging](StructureDefinition-EHDSDosaging.html)
+- Usage instructions: [EHDSDosage](StructureDefinition-EHDSDosage.html)
+- Location: [EHDSLocation](StructureDefinition-EHDSLocation.html)
+
+Please note that dispense can only include one medication - therefore, in case of multi-line prescriptions, the dispense should reference the prescription item rather than just the full prescription.
 
 ### FHIR Implementation Guide
 

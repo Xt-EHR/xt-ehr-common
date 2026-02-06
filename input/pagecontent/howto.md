@@ -5,12 +5,12 @@ Logical information/data models offer a technology-neutral perspective on data. 
 The models approach used by Xt-EHR for EHDS follows the ISO 13972 standard "Health informatics — Clinical information models — Characteristics, structures and requirements."  
 While the models are published as HL7 FHIR StructureDefinition resources (HL7 FHIR logical models), the models themselves are technology-agnostic and applicable to any data exchange standard.  
   
-The implementation guide follows the conventions of all HL7 FHIR implementation guides, making it easy to read for those who are familiar with any other HL7 FHIR specifications. The specification is mostly intuitively understandable for most readers, but some basic tips for reading the guide might be useful for those who do not have prior FHIR experience.   
+The implementation guide follows the conventions of HL7 FHIR implementation guides, making it easy to read for those who are familiar with any other HL7 FHIR specifications. The specification is mostly intuitively understandable for most readers, but some basic tips for reading the guide might be useful for those who do not have prior FHIR experience.   
 
 
 ### Differential vs Snapshot view  
   
-When navigating to a page of a model, the default tab that opens is the Differential view. This means, that in case the model is derived from another model, only the differences are shown on this page.   
+When navigating to a page of a model, the tab may open at the Differential view. This means, that in case the model is derived from another model, only the differences are shown on this page.   
 For example, the Laboratory Observation model is derived from the general Observation model, and adds a few constraints and elements that are specific to the laboratory use case. For derived models:  
 - The Differential view shows only the differences from the model it’s based on;  
 - The Key Elements view shows highlighted elements: this view is more useful for a FHIR profile, but does not provide much extra detail in the case of logical models;  
@@ -56,9 +56,9 @@ EHDS models use FHIR data types for defining data types, but with less constrain
 |Any EHDS model|When a data type is marked as EHDSModelName, a contained or referenced block of data is expected from the named model.||  
 {:.table-bordered .table-striped .thead-light}  
 
-In some cases a choice between data types is allowed. In that case, the grouper element is marked with [x] and slices for that element are automatically created for each allowed data type. Usually, only one choice out of the options is allowed to be used at any given time.
+In some cases a choice between data types is allowed. In that case, the grouper element is marked with [x] and slices for that element are automatically created for each allowed data type. Usually, only one choice out of the options is allowed to be used at any given time (when element is repeatable, the repeats may include data of different data types).
 
-Knowing if a block of data is technically included as a reference to another block or physically contained is not always possible in models. In some cases, a reference is most likely, but there are always exceptions, and the line is never clear. Therefore, when a data type is another model, it does not define whether it should be referenced or contained.
+Knowing if a block of data is technically included as a reference or physically contained is not always possible in models. In some cases, a reference is most likely, but there are always exceptions, and the line is never clear. Therefore, when a data type is another model, it does not define whether it should be referenced or contained. These choices are implementation-specific - for example, identifiers or technical references are more likely to be used within a country while containing full information objects is common for crossborder use.
 
 
 ### Available formats 
@@ -69,11 +69,11 @@ Every use case is also equipped with diagrams that give an overview of how diffe
 
 Read more about different visual representations above and more about download options below.  
 
-### Once more, is it FHIR or not?
+### Logical models vs FHIR profiles?
 
 The models in this implementation guide follow the ISO Clinical Information Models standard approach and represent the logical/clinical view of the data. Even though FHIR data types and FHIR metadata resources are used for publishing the models, the content itself is not specific to HL7 FHIR or any other data exchange or storage standard or its implementation.   
 
-In order to implement actual data exchange, these models need to be realised as dedicated HL7 FHIR implementation guides. While models are all derived from the FHIR Base resource, actual data exchange is based on various FHIR resources that correspond to the content of the logical models. In order to ensure consistency between models and FHIR profiles, mappings are created in every FHIR implementation guide.
+In order to implement actual data exchange, these models need to be realised as dedicated HL7 FHIR implementation guides. While models are all derived from the FHIR Base resource, actual data exchange is based on various FHIR resources that correspond to the content of the logical models. In order to ensure consistency between models and FHIR profiles, mappings between models and FHIR profiles are created in HL7 Europe FHIR implementation guides.
 
 Read more about [HL7 FHIR logical models](https://hl7.org/fhir/logical.html)
 
@@ -88,5 +88,5 @@ In order to download the model in a spreadsheet format, navigate to the very bot
 
 For bulk download, navigate to the [Download](downloads.html) page. 
 
-For FSH version of artifacts, PLANTUML diagrams, or the source code for any other parts of this implementation guide, navigate to the source code in GitHub (see the link on Home page).
+For FSH version of artifacts, PLANTUML diagrams, or the source code for any other parts of this implementation guide, navigate to the source code in [GitHub](https://github.com/Xt-EHR/xt-ehr-common).
 

@@ -1,7 +1,7 @@
 /* Logical: EHDSLaboratoryReport
 //Id: EHDSlaboratoryReport
 Title: "Laboratory report model"
-Description: """A - EHDS refined base model for Laboratory result report"""
+Description: """A - Model for Laboratory result report"""
 Characteristics: #can-be-target
 
 * laboratoryReportHeader 1..1 EHDSLaboratoryReportHeader "A.1 - Laboratory report header" """Report header data elements"""
@@ -14,7 +14,7 @@ Characteristics: #can-be-target
 Logical: EHDSLaboratoryReport
 Title: "Laboratory report model"
 Parent: EHDSDocument
-Description: """EHDS refined base model for Laboratory result report"""
+Description: """Laboratory result report model."""
 Characteristics: #can-be-target
 
 * header 1..1
@@ -37,8 +37,8 @@ Characteristics: #can-be-target
     * orderId 1..* Identifier "An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."
     * orderDateAndTime 0..1 dateTime "Date and time of the order placement."
     * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient "The person/organisation \"authorised\" to place the order. Order placer could be either a health professional, health professional organisation or the patient himself."
-    * orderReasonText 0..1 string "An explanation or justification for why this service is being requested in textual form."
-    * orderReason[x] 0..* CodeableConcept or EHDSCondition or  EHDSObservation "An explanation or justification for why this service is being requested in coded form."
+//    * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
+    * orderReason[x] 0..* CodeableConcept or EHDSCondition or  EHDSObservation or string "An explanation or justification for why this service is being requested in coded form."
       * ^binding.description = "SNOMED CT"
       * ^binding.strength = #preferred
     * clinicalQuestion 0..1 string "Specification of clinical question (goal of the investigation) to be answered by the laboratory investigation."
@@ -57,5 +57,5 @@ Characteristics: #can-be-target
   //* narrativeReport 0..1 Narrative "Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."
     * commentsInterpretationAndRecommendations 0..* Narrative "Narrative Comments, such as a textual interpretation or advice accompanying the result report, for example."
     * laboratoryTestResults 0..* EHDSLaboratoryObservation "Observation details (report could consist of multiple observations)"
-* attachments[x] 0..* EHDSAttachment or EHDSMedia "Report attachments data elements"
+* attachments 0..* EHDSAttachment "Report attachments"
 

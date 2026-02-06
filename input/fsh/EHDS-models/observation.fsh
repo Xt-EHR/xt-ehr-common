@@ -1,8 +1,7 @@
 Logical: EHDSObservation
 Parent: EHDSDataSet
 Title: "Observation model"
-Description: """EHDS refined base model for Observation information"""
-Characteristics: #can-be-target
+Description: """Model for information about an oservation and its results."""
 
 //subject only patient. Laboratory result has more.
 * header.status
@@ -10,7 +9,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * header.subject
   * ^short = "Patient who is receiving health care. This patient might be different from the direct subject of the observation."
-* header.directSubject[x] 0..1 EHDSPatient or EHDSPatientAnimal or EHDSLocation or EHDSDevice or EHDSHealthProfessional or EHDSOrganisation or EHDSProcedure "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device"
+* header.directSubject[x] 0..1 EHDSPatient or EHDSLocation or EHDSDevice or EHDSHealthProfessional or EHDSOrganisation or EHDSProcedure "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device. Additional types of subject may be allowed in implementations."
 * observationDate[x] 1..1 dateTime or Period "Clinically relevant time or time period for the observation"
 * type 1..1 CodeableConcept "Observation type. Code and name representing the type of the observation using the agreed code systems."
   * ^binding.description = "LOINC, NPU, SNOMED CT"
@@ -85,7 +84,7 @@ Characteristics: #can-be-target
   * type 1..1 CodeableConcept "Observation type. Code and name representing the type of the observation using the agreed code systems."
     * ^binding.description = "LOINC, NPU, SNOMED CT"
     * ^binding.strength = #preferred
-  * originalName 0..1 string "Original (conventional) name of the observation as used in the local laboratory or clinical system."
+  * originalName 0..1 string "Original (user-friendly) name of the observation as used in the local laboratory or clinical system."
   * result 1..1 Base "Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."
     * value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept "Observation result value according to the type of observation. Model covers only most frequently used data types but other data types can be used as well.
       Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided."

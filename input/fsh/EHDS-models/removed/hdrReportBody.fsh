@@ -189,7 +189,7 @@ Characteristics: #can-be-target
   * pharmacotherapy 0..1 Base "Pharmacotherapy section" "Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine, corticosteroids in high doses, etc.) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section. Medicinal products, the administration of which was started during hospitalisation, but is also recommended after discharge, will be listed in the summary table in the recommendation section."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.5"
     * narrative 0..1 string "Narrative content of the section. This narrative shell containing either summary narrative description of all subsections, or similar narrative subsection elements should be provided."
-    * pharmacotherapy 0..* EHDSMedicationStatement "Pharmacotherapy structured entry."
+    * pharmacotherapy 0..* EHDSMedicationUse "Pharmacotherapy structured entry."
   
   * significantObservationResults 0..1 Base "Significant Observation Results" "Results of significant functional, diagnostic, and imaging examinations to ensure continuity of care, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered."
     * ^requirements = "eHN Guideline HDR (v1.1): A.2.6.6"
@@ -223,7 +223,7 @@ Characteristics: #can-be-target
 * medicationSummary 0..1 Base "Medication summary. Summary information on the medication recommended for the period after discharge, indicating whether the medication is changed or newly started. Compared to previous practices, the overview is supplemented with medication that has been discontinued."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.1"
   * narrative 0..1 string "Narrative content of the section."
-  * medicationDetails 0..* EHDSMedicationStatement "Medication details" "Structured medication entry."
+  * medicationDetails 0..* EHDSMedicationUse "Medication details" "Structured medication entry."
 * carePlan 0..* Base "Care plan and other recommendations after discharge." "Care plan and other recommendations after discharge section."
   * ^requirements = "eHN Guideline HDR (v1.1): A.2.8.2 (A.2.9.2)"
   * narrative 0..1 string "Narrative content of the section."

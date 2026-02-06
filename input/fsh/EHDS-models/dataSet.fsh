@@ -1,8 +1,6 @@
 Logical: EHDSDataSet
 Title: "DataSet model"
 Description: "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources."
-Characteristics: #can-be-target
-
 * header 1..1 Base "Basic metadata for this information"
   * subject 1..1 EHDSPatient "Patient/subject information"
   * identifier 0..* Identifier "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)."

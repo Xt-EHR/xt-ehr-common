@@ -1,3 +1,4 @@
+/*
 Logical: EHDSEpisodeOfCare
 Parent: EHDSDataSet
 Title: "Episode of care model"
@@ -13,3 +14,4 @@ Characteristics: #can-be-target
   * description 1..1 string "Textual description of the medical condition that was addressed during the episode of care"
   * condition[x] 0..1 CodeableConcept or EHDSCondition "The medical condition that was addressed during the episode of care"
 
+*/

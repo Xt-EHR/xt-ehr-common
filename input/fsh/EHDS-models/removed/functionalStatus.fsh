@@ -1,9 +1,8 @@
-Logical: EHDSFunctionalStatus
+/* Logical: EHDSFunctionalStatus
 Parent: EHDSDataSet
 //Id: EHDSfunctionalStatus
 Title: "Functional status"
-Description: """EHDS refined base model for Functional status"""
-Characteristics: #can-be-target
+Description: """Model for functional status"""
 
 //TODO
 * description 0..1 string "Narrative description of the functional status" """Narrative description of the need for the patient to be continuously assessed by third parties; functional status may influence decisions about how to plan and administer treatments."""
@@ -32,7 +31,7 @@ Characteristics: #can-be-target
   * functionalAssessmentResult[x] 0..1 string or Quantity or CodeableConcept "Functional assessment result value"
     * ^requirements = "eHN HDR Guideline, ISO IPS"
     * ^binding.description = "ICF, SNOMED CT"
-    * ^binding.strength = #preferred
+    * ^binding.strength = #preferred */
 
 /*
   * ^requirements = ""Logical: EHDSFunctionalStatus

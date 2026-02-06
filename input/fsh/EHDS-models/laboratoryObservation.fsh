@@ -1,8 +1,7 @@
 Logical: EHDSLaboratoryObservation
 Parent: EHDSObservation
 Title: "Laboratory observation model"
-Description: """EHDS refined base model for Observation performed by laboratory"""
-Characteristics: #can-be-target
+Description: """Model for observation performed by laboratory"""
 
 //* generalObservation 1..1 EHDSObservation "General observation" """General observation information"""
 

@@ -1,3 +1,4 @@
+/*
 Logical: EHDSPatientAnimal
 //Id: EHDSpatientAnimal
 Title: "Patient Animal model"
@@ -21,3 +22,4 @@ Characteristics: #can-be-target
   * ^binding.strength = #preferred
 * address 0..* EHDSAddress "Address" """Address where the animal is located. The addresses are always sequences of address parts (e.g. street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
 * deceased[x] 0..1 boolean or dateTime "Deceased" """Indicates if the individual is deceased or not."""
+*/

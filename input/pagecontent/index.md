@@ -24,7 +24,7 @@
 
   <!-- Text -->
   <div style="flex: 1 1 auto; text-align: left; color: #333;">
-    <p style="margin: 0;">This is the first preview release of the EHDS Logical Information Models developed under the Xt-EHR Joint Action. This version is provided for early review and may be subject to future refinement.</p>
+    <p style="margin: 0;">This is the second preview release of the EHDS Logical Information Models developed under the Xt-EHR Joint Action. This is a release candidate version and may be subject to future refinement.</p>
   </div>
 
 </div>

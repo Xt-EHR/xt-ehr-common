@@ -6,22 +6,22 @@ hide stereotype
 
 class "**Dispense**" as eD{
   EHDSMedicationDispense
-  |_relatedRequest 0..*  
 }
 
 
 eD --> Header: "1..1"
 eD --> Medication: "1..1"
-eD --> Receiver: "1..1"
-eD --o Dosage: "0..*"
+eD --> Receiver: "0..1"
+eD --o Dosage: "0..1"
 eD --o Location: "0..1"
+eD --> "0..*" Prescription : relatedRequest >
 
 class "**Header**" as Header{
 
 }
 
 Header --> Patient: "1..1"
-Header --> Dispenser: "1..1"
+Header --> Dispenser: "1..*"
 
 
 class "**Dispenser** (author)" as Dispenser{
@@ -46,12 +46,16 @@ class "**Dispense Location**" as Location{
 
 }
 class "**Usage Instructions**" as Dosage{
-  EHDSDosaging   
+  EHDSDosage   
  
 }
 
 class "**Medication**" as Medication{
   EHDSMedication
  
+}
+
+class "**PrescriptionItem**" as Prescription{
+  Identifier
 }
 @enduml

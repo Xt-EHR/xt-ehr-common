@@ -1,8 +1,7 @@
 Logical: EHDSSpecimen
 //Id: EHDSspecimen
 Title: "Specimen model"
-Description: """EHDS refined base model for a specimen to be used for Analysis"""
-Characteristics: #can-be-target
+Description: """Model for a specimen to be used for analysis"""
 
 // new logical model for Specimen reflecting feedback requirements to clarify and add details
 * identifier 1..* Identifier "An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by ordering system, identifier assigned by laboratory etc. Multiple identifiers can be used."
@@ -12,7 +11,7 @@ Characteristics: #can-be-target
 * type 0..1 CodeableConcept "The kind of material that forms the Specimen."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* source[x] 0..1 EHDSPatient or EHDSPatientAnimal or EHDSLocation or EHDSDevice or EHDSSubstance "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance, a biologically-derived product, or a device"
+* specimenSource[x] 0..1 EHDSPatient or EHDSLocation or EHDSDevice "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a device. Additional types of specimen may be allowed in implementations."
 * parentSpecimen 0..* EHDSSpecimen "Specimen from which this specimen originated"
 * request 0..* EHDSServiceRequest "Why the specimen ws collected"
 * combined 0..1 CodeableConcept "This element signifies if the specimen is part of a group or pooled."

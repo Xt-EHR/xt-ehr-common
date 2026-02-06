@@ -2,7 +2,6 @@ Logical: EHDSPregnancyHistory
 Parent: EHDSDataSet
 Title: "Pregnancy history model"
 Description: "Pregnancy history for one pregnancy"
-Characteristics: #can-be-target
 
 * header.status 
   * ^short = "Status of this observation"

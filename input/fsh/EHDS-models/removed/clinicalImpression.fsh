@@ -3,7 +3,6 @@ Logical: EHDSClinicalImpression
 //Id: EHDSclinicalImpression
 Title: "Clinical impression model"
 Description: """EHDS refined base model for Clinical impression"""
-Characteristics: #can-be-target
 
 * identifier 1..* Identifier "Identifier" """A business identifier of the impression."""
 * code 0..1 CodeableConcept "Code" """Kind of assessment performed."""
