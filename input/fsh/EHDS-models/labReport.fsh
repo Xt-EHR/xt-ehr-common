@@ -37,7 +37,7 @@ Characteristics: #can-be-target
     * orderId 1..* Identifier "An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."
     * orderDateAndTime 0..1 dateTime "Date and time of the order placement."
     * orderPlacer[x] 0..1 EHDSHealthProfessional or EHDSOrganisation or EHDSPatient "The person/organisation \"authorised\" to place the order. Order placer could be either a health professional, health professional organisation or the patient himself."
-    * orderReasonText 0..* string "An explanation or justification for why this service is being requested in textual form."
+    * orderReasonText 0..1 string "An explanation or justification for why this service is being requested in textual form."
     * orderReason[x] 0..* CodeableConcept or EHDSCondition or  EHDSObservation "An explanation or justification for why this service is being requested in coded form."
       * ^binding.description = "SNOMED CT"
       * ^binding.strength = #preferred
