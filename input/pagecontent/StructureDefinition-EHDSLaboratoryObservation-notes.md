@@ -1,6 +1,6 @@
-## When to use components
+#### When to use components
 
-### Semantic meaning of components
+##### Semantic meaning of components
 
 A **component** represents a structured sub-result that:
 
@@ -24,7 +24,7 @@ Components:
 - cannot stand alone without the parent observation, and
 - are usually presented together.
 
-### Guidance for use
+##### Guidance for use
 
 Use **components** if **all** of the following are true:
 
@@ -33,9 +33,9 @@ Use **components** if **all** of the following are true:
 - they are meaningless or potentially misleading in isolation, and
 - they are not expected to be referenced independently.
 
-## When to use relationships between observations
+#### When to use relationships between observations
 
-### Semantic meaning of relationships
+##### Semantic meaning of relationships
 
 The Observation model allows observations to be related using the following relationship types:
 
@@ -49,7 +49,7 @@ Each related observation:
 - may be observed or reported separately, and
 - may be reused or referenced independently.
 
-### Guidance for use
+##### Guidance for use
 
 Use **relationships between observations** when the related observations:
 
@@ -58,7 +58,7 @@ Use **relationships between observations** when the related observations:
 - may have different performers or methods, and
 - can be referenced, queried, or interpreted independently.
 
-## Summary principles
+#### Summary principles
 
 - Use **components** when the parts are inseparable aspects of a single observation.
 - Use **relationships between observations** when each observation has independent clinical meaning.
