@@ -8,16 +8,6 @@ Laboratory result report could be divided into several parts: document header, b
   {% include labReport_CIM.svg %}
 </figure>
 
-##### Laboratory Result header
-<figure>
-  {% include labReportHeader_CIM.svg %}
-</figure>
-
-##### Laboratory Result body
-<figure>
-  {% include labReportBody_CIM.svg %}
-</figure>
-
 ##### UML representation
 Components of laboratory result report and its representation using UML notation:
 <figure>

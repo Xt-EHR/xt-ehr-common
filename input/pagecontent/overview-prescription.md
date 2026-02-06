@@ -1,8 +1,13 @@
 ### Information Models
 
-#### EHDS information models for **ePrescription**:
+#### Conceptual view
+
+<figure>
+  {% include prescription_prescription_CIM_TC.svg %}
+</figure>
 
 Components of a prescription and their representation as EHDS information models:
+
 <figure>
   {% include prescription.svg %}
 </figure>

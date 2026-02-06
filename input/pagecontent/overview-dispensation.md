@@ -1,6 +1,12 @@
 ### Information Models
 
-#### EHDS information models for **eDispensation**:
+#### Conceptual view
+
+<figure>
+  {% include prescription_dispense_CIM_TC.svg %}
+</figure>
+
+Components of a dispense and their representation as EHDS information models:
 
 <figure>
   {% include dispense.svg %}
