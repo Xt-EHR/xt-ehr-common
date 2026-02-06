@@ -81,7 +81,7 @@ Description: """Model for information about an oservation and its results."""
 * note 0..1 string "Comments and narrative representation of the observation result and findings."
 
 * component 0..* Base "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)."
-  * code 1..1 CodeableConcept "Code representing the observation using the agreed code systems."
+  * type 1..1 CodeableConcept "Observation type. Code and name representing the type of the observation using the agreed code systems."
     * ^binding.description = "LOINC, NPU, SNOMED CT"
     * ^binding.strength = #preferred
   * originalName 0..1 string "Original (user-friendly) name of the observation as used in the local laboratory or clinical system."
