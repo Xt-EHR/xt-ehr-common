@@ -1,0 +1,33 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSCarePlan","EHDSCarePlan","","","",0,*,"","","","null {[]} {[]}
+","Care plan model","EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSCarePlan.header","EHDSCarePlan.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSCarePlan.header.subject","EHDSCarePlan.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","The patient whose intended care is described by the plan.","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSCarePlan.header.identifier","EHDSCarePlan.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier for the care plan","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSCarePlan.header.authorship","EHDSCarePlan.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Resource authoring details","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSCarePlan.header.authorship.author[x]","EHDSCarePlan.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSCarePlan.header.authorship.datetime","EHDSCarePlan.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSCarePlan.header.lastUpdate","EHDSCarePlan.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource (may be used for technical corrections).","Date and time of the last update to the resource (may be used for technical corrections).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSCarePlan.header.status","EHDSCarePlan.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.","Status of the resource or document","","","","","","","","","",,"preferred","HL7 Request status","","",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSCarePlan.header.statusReason[x]","EHDSCarePlan.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSCarePlan.header.language","EHDSCarePlan.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSCarePlan.title","EHDSCarePlan.title","","","",0,1,"","","","string {[]} {[]}
+","Human-friendly name for the care plan","Human-friendly name for the care plan","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.title",0,1,"",""
+"EHDSCarePlan.description","EHDSCarePlan.description","","","",0,1,"","","","string {[]} {[]}
+","A description of the scope and nature of the plan.","A description of the scope and nature of the plan.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.description",0,1,"",""
+"EHDSCarePlan.period","EHDSCarePlan.period","","","",0,1,"","","","Period {[]} {[]}
+","Indicates when the plan did (or is intended to) come into effect and end.","Indicates when the plan did (or is intended to) come into effect and end.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.period",0,1,"",""
+"EHDSCarePlan.addresses","EHDSCarePlan.addresses","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan.","Conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan.","","","","","","","","","",,"preferred","ICD-10, SNOMED CT, Orphacode","","",,,,"EHDSCarePlan.addresses",0,*,"",""
+"EHDSCarePlan.activity[x]","EHDSCarePlan.activity[x]","","","",0,1,"","","","string {[]} {[]}
+Reference {[]} {[]}","The details of the proposed activity represented in a specific resource.","The details of the proposed activity represented in a specific resource.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.activity[x]",0,1,"",""

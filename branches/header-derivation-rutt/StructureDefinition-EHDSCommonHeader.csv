@@ -1,0 +1,21 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSCommonHeader","EHDSCommonHeader","","","",0,*,"","","","null {[]} {[]}
+","Resource header model","Common header elements for all documents and their independently functioning parts, e.g FHIR resources.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSCommonHeader.subject","EHDSCommonHeader.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.subject",1,1,"",""
+"EHDSCommonHeader.authorship","EHDSCommonHeader.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship",1,*,"",""
+"EHDSCommonHeader.authorship.author[x]","EHDSCommonHeader.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship.author[x]",1,1,"",""
+"EHDSCommonHeader.authorship.datetime","EHDSCommonHeader.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship.datetime",1,1,"",""
+"EHDSCommonHeader.lastUpdate","EHDSCommonHeader.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.lastUpdate",0,1,"",""
+"EHDSCommonHeader.status","EHDSCommonHeader.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.status",1,1,"",""
+"EHDSCommonHeader.statusReason[x]","EHDSCommonHeader.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.statusReason[x]",0,1,"",""
+"EHDSCommonHeader.language","EHDSCommonHeader.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSCommonHeader.language",0,1,"",""
+"EHDSCommonHeader.version","EHDSCommonHeader.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.version",0,1,"",""

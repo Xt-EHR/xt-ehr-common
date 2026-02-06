@@ -1,0 +1,21 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSMedicationAdministration","EHDSMedicationAdministration","","","",0,*,"","","","null {[]} {[]}
+","Medication administration model","EHDS refined base model for medication administration","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSMedicationAdministration.identifier","EHDSMedicationAdministration.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Medication administration identifier","Medication administration identifier","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.identifier",0,*,"",""
+"EHDSMedicationAdministration.subject","EHDSMedicationAdministration.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","The patient who the medication was administrated to.","The patient who the medication was administrated to.","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.subject",1,1,"",""
+"EHDSMedicationAdministration.status","EHDSMedicationAdministration.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the administration (e.g. completed, not-done, on-hold, in-progress, unknown)","Status of the administration (e.g. completed, not-done, on-hold, in-progress, unknown)","","","","","","","","","",,"preferred","HL7 MedicationAdimnistrationStatusCodes","","",,,,"EHDSMedicationAdministration.status",1,1,"",""
+"EHDSMedicationAdministration.statusReason","EHDSMedicationAdministration.statusReason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason administration was not performed","Reason administration was not performed","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSMedicationAdministration.statusReason",0,*,"",""
+"EHDSMedicationAdministration.medication","EHDSMedicationAdministration.medication","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication {[]} {[]}
+","Administered medication","Administered medication","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.medication",1,1,"",""
+"EHDSMedicationAdministration.occurrence[x]","EHDSMedicationAdministration.occurrence[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Specific date/time or interval of time during which the administration took place (or did not take place)","Specific date/time or interval of time during which the administration took place (or did not take place)","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.occurrence[x]",1,1,"",""
+"EHDSMedicationAdministration.reason[x]","EHDSMedicationAdministration.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation {[]} {[]}","Condition or observation that supports why the medication was administered","Condition or observation that supports why the medication was administered","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.reason[x]",0,*,"",""
+"EHDSMedicationAdministration.note","EHDSMedicationAdministration.note","","","",0,1,"","","","string {[]} {[]}
+","Textual information about the administration","Textual information about the administration","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.note",0,1,"",""
+"EHDSMedicationAdministration.dosage","EHDSMedicationAdministration.dosage","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosage {[]} {[]}
+","Details of how medication was taken","Details of how medication was taken","","","","","","","","","",,,,,"",,,,"EHDSMedicationAdministration.dosage",0,1,"",""

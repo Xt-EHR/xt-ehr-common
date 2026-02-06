@@ -1,0 +1,150 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSPatientSummary","EHDSPatientSummary","","","",0,*,"","","","null {[]} {[]}
+","Patient summary model","EHDS refined base model for Patient Summary","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSPatientSummary.header","EHDSPatientSummary.header","","","",1,*,"","","","Base {[]} {[]}
+","Document header elements","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSPatientSummary.header.subject","EHDSPatientSummary.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSPatientSummary.header.identifier","EHDSPatientSummary.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Document ID","Unique identifier of the document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSPatientSummary.header.authorship","EHDSPatientSummary.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSPatientSummary.header.authorship.author[x]","EHDSPatientSummary.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSPatientSummary.header.authorship.datetime","EHDSPatientSummary.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSPatientSummary.header.lastUpdate","EHDSPatientSummary.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSPatientSummary.header.status","EHDSPatientSummary.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSPatientSummary.header.statusReason[x]","EHDSPatientSummary.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSPatientSummary.header.language","EHDSPatientSummary.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSPatientSummary.header.version","EHDSPatientSummary.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSPatientSummary.presentedForm","EHDSPatientSummary.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSPatientSummary.header.documentType","EHDSPatientSummary.header.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document type","Identifies the type of document at hand, e.g. Hospital discharge report.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSDocument.header.documentType",1,1,"",""
+"EHDSPatientSummary.header.documentTitle","EHDSPatientSummary.header.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Document title","Document title, such as Hospital Discharge Report, Laboratory Result Report, etc.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.documentTitle",1,1,"",""
+"EHDSPatientSummary.header.documentStatus","EHDSPatientSummary.header.documentStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document status","The status of the Hospital discharge report. E.g., preliminary, final.","","","","","","","","","",,"preferred","hl7:CompositionStatus","","",,,,"EHDSDocument.header.documentStatus",1,1,"",""
+"EHDSPatientSummary.header.period","EHDSPatientSummary.header.period","","","",0,1,"","","","Period {[]} {[]}
+","Period","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.period",0,1,"",""
+"EHDSPatientSummary.header.attestation","EHDSPatientSummary.header.attestation","","","",0,*,"","","","Base {[]} {[]}
+","Attestation","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation",0,*,"",""
+"EHDSPatientSummary.header.attestation.attester","EHDSPatientSummary.header.attestation.attester","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Attester","Attester who validated the document. Mulitple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.attester",1,1,"",""
+"EHDSPatientSummary.header.attestation.datetime","EHDSPatientSummary.header.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.datetime",1,1,"",""
+"EHDSPatientSummary.header.legalAuthentication","EHDSPatientSummary.header.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","Legal authentication","Document legal authentication","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication",0,1,"",""
+"EHDSPatientSummary.header.legalAuthentication.legalAuthenticator","EHDSPatientSummary.header.legalAuthentication.legalAuthenticator","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Legal authenticator","The person taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.legalAuthenticator",1,1,"",""
+"EHDSPatientSummary.header.legalAuthentication.datetime","EHDSPatientSummary.header.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time when the document was authorized.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.datetime",1,1,"",""
+"EHDSPatientSummary.header.eventType","EHDSPatientSummary.header.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Event type","Categorization of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses.","","","","","","","","","",,"preferred","LOINC, SNOMED CT, dicom-cid-33-Modality","","",,,,"EHDSDocument.header.eventType",0,*,"",""
+"EHDSPatientSummary.header.authorSpecialty","EHDSPatientSummary.header.authorSpecialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Specialty","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocument.header.authorSpecialty",0,*,"",""
+"EHDSPatientSummary.header.custodian","EHDSPatientSummary.header.custodian","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","Document custodian","Organisation that is in charge of maintaining the document/report.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.custodian",1,1,"",""
+"EHDSPatientSummary.header.documentFormat","EHDSPatientSummary.header.documentFormat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Document format","An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","","","","","","","","","",,"preferred","HL7 Document Format Codes","","",,,,"EHDSDocument.header.documentFormat",0,1,"",""
+"EHDSPatientSummary.header.confidentiality","EHDSPatientSummary.header.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Confidentiality","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSDocument.header.confidentiality",0,1,"",""
+"EHDSPatientSummary.knowledgeResources","EHDSPatientSummary.knowledgeResources","","","",0,*,"","","","Base {[]} {[]}
+","Related documents and information sources","Related documents and information sources","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources",0,*,"",""
+"EHDSPatientSummary.knowledgeResources.externalReference","EHDSPatientSummary.knowledgeResources.externalReference","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.externalReference",0,*,"",""
+"EHDSPatientSummary.knowledgeResources.relatedTo","EHDSPatientSummary.knowledgeResources.relatedTo","","","",0,*,"","","","Reference {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocument.knowledgeResources.relatedTo",0,*,"",""
+"EHDSPatientSummary.allergiesAndIntolerances","EHDSPatientSummary.allergiesAndIntolerances","","","",1,1,"","","","Base {[]} {[]}
+","Section: Allergies and intolerances","TO_DO","","The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is merely 'Allergy', and that was considered less inclusive compared to the alternative.","","","","","","","",,,,,"",,,,"EHDSPatientSummary.allergiesAndIntolerances",1,1,"",""
+"EHDSPatientSummary.allergiesAndIntolerances.generatedNarrative","EHDSPatientSummary.allergiesAndIntolerances.generatedNarrative","","","",1,1,"","","","string {[]} {[]}
+","Generated text summary of the content in section, for human interpretation","Generated text summary of the content in section, for human interpretation","","The element is present in FHIR IPS IG. See general description of Patient summary modelling for more information about this element.","","","","","","","",,,,,"",,,,"EHDSPatientSummary.allergiesAndIntolerances.generatedNarrative",1,1,"",""
+"EHDSPatientSummary.allergiesAndIntolerances.allergyIntolerance","EHDSPatientSummary.allergiesAndIntolerances.allergyIntolerance","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPSAllergyIntolerance {[]} {[]}
+","List of structured allergies and intolerances","List of structured allergies and intolerances","","The element is present in eHN PS GL, MyHealth@EU specifications and ISO IPS. The element name is taken from MyHealth@EU specification and is the same in ISO IPS and FHIR IPS IG. The name in eHN PS GL  for this element is merely 'Allergy', and that was considered less inclusive compared to the alternative.","","","","","","","",,,,,"",,,,"EHDSPatientSummary.allergiesAndIntolerances.allergyIntolerance",0,*,"",""
+"EHDSPatientSummary.allergiesAndIntolerances.emptyReason","EHDSPatientSummary.allergiesAndIntolerances.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Use if no Allergies are listed","Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)","","This element is present in MyHealth@EU specifications and ISO IPS. The proposed way of modelling is identical to the newest version of FHIR IPS IG. See general description of Patient summary modelling for more information about this element. MH@EU has a similar concept, but it is modelled in slightly different way.","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.47eHDSIAbsentOrUnknownAllergy; http://hl7.org/fhir/ValueSet/list-empty-reason","","",,,,"EHDSPatientSummary.allergiesAndIntolerances.emptyReason",0,1,"",""
+"EHDSPatientSummary.problems","EHDSPatientSummary.problems","","","",1,1,"","","","Base {[]} {[]}
+","Medical problems.","Conditions that are important to be known for a health professional during a health encounter.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.problems",1,1,"",""
+"EHDSPatientSummary.problems.generatedNarrative","EHDSPatientSummary.problems.generatedNarrative","","","",0,1,"","","","string {[]} {[]}
+","Generated text summary of the content in the section, for human interpretation","Generated text summary of the content in the section, for human interpretation","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.problems.generatedNarrative",0,1,"",""
+"EHDSPatientSummary.problems.emptyReason","EHDSPatientSummary.problems.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Use if no conditions are listed","Use if no conditions are listed","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.problems.emptyReason",0,1,"",""
+"EHDSPatientSummary.problems.problems","EHDSPatientSummary.problems.problems","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}
+","!!Health conditions affecting the health of the patient.!!","!!Health conditions affecting the health of the patient.!!","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.problems.problems",0,*,"",""
+"EHDSPatientSummary.medicationSummary","EHDSPatientSummary.medicationSummary","","","",1,1,"","","","Base {[]} {[]}
+","Section: Medication Summary.","Current and relevant past medicine.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary",1,1,"",""
+"EHDSPatientSummary.medicationSummary.generatedNarrative","EHDSPatientSummary.medicationSummary.generatedNarrative","","","",0,1,"","","","string {[]} {[]}
+","Generated text summary of the content in the section, for human interpretation","Generated text summary of the content in the section, for human interpretation","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary.generatedNarrative",0,1,"",""
+"EHDSPatientSummary.medicationSummary.emptyReason","EHDSPatientSummary.medicationSummary.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Use if no medicines are listed","Use if no medicines are listed","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary.emptyReason",0,1,"",""
+"EHDSPatientSummary.medicationSummary.medicationTreatment","EHDSPatientSummary.medicationSummary.medicationTreatment","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPSMedicationStatement {[]} {[]}
+","Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not.","Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicationSummary.medicationTreatment",0,*,"",""
+"EHDSPatientSummary.medicalDevicesAndImplants","EHDSPatientSummary.medicalDevicesAndImplants","","","",1,1,"","","","Base {[]} {[]}
+","Section: Medical devices and implants","Section: Medical devices and implants","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants",1,1,"",""
+"EHDSPatientSummary.medicalDevicesAndImplants.narrative","EHDSPatientSummary.medicalDevicesAndImplants.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants.narrative",0,1,"",""
+"EHDSPatientSummary.medicalDevicesAndImplants.emptyReason","EHDSPatientSummary.medicalDevicesAndImplants.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reason for absence of data","Reason for absence of data","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants.emptyReason",0,1,"",""
+"EHDSPatientSummary.medicalDevicesAndImplants.medicalDevice","EHDSPatientSummary.medicalDevicesAndImplants.medicalDevice","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDeviceUse {[]} {[]}
+","Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP.","Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalDevicesAndImplants.medicalDevice",0,*,"",""
+"EHDSPatientSummary.procedures","EHDSPatientSummary.procedures","","","",1,1,"","","","Base {[]} {[]}
+","Section: Procedures","Section: Procedures","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures",1,1,"",""
+"EHDSPatientSummary.procedures.narrative","EHDSPatientSummary.procedures.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures.narrative",0,1,"",""
+"EHDSPatientSummary.procedures.emptyReason","EHDSPatientSummary.procedures.emptyReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Reason for absence of data","Reason for absence of data","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures.emptyReason",0,1,"",""
+"EHDSPatientSummary.procedures.procedure","EHDSPatientSummary.procedures.procedure","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure {[]} {[]}
+","List of procedures Textual description of the procedure. Describes the type of the procedure, surgical or non-surgical .","List of procedures Textual description of the procedure. Describes the type of the procedure, surgical or non-surgical .","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.procedures.procedure",0,*,"",""
+"EHDSPatientSummary.vaccination","EHDSPatientSummary.vaccination","","","",0,1,"","","","Base {[]} {[]}
+","Section: Vaccination/prophylaxis.","A patient's immunization status. The section should include current immunization status and may contain the entire immunization history that is relevant to the period of time being summarized. Adverse reactions against vaccines should be documented in the allergy section.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.vaccination",0,1,"",""
+"EHDSPatientSummary.vaccination.narrative","EHDSPatientSummary.vaccination.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.vaccination.narrative",0,1,"",""
+"EHDSPatientSummary.vaccination.vaccination","EHDSPatientSummary.vaccination.vaccination","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImmunization {[]} {[]}
+","Immunizations given to the patient and their status at the point of care.","Immunizations given to the patient and their status at the point of care.","","eHN PS Guideline","","","","","","","",,,,,"",,,,"EHDSPatientSummary.vaccination.vaccination",0,*,"",""
+"EHDSPatientSummary.medicalHistory","EHDSPatientSummary.medicalHistory","","","",0,1,"","","","Base {[]} {[]}
+","Section: Medical History.","This section may provide both synthetic anamnesis (e.g. description of phases of the pathology as a chronological summary of clustered clinical information) and anecdotal evidence that clinicians can collect from the patient, and can read in a narrative form.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalHistory",0,1,"",""
+"EHDSPatientSummary.medicalHistory.narrative","EHDSPatientSummary.medicalHistory.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalHistory.narrative",0,1,"",""
+"EHDSPatientSummary.medicalHistory.pastProblems","EHDSPatientSummary.medicalHistory.pastProblems","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}
+","Problems or diagnoses that the patient suffered in the past, and which have been resolved, closed or declared as inactive (not included in current problems or diagnosis)","Problems or diagnoses that the patient suffered in the past, and which have been resolved, closed or declared as inactive (not included in current problems or diagnosis)","","eHN PS Guideline","","","","","","","",,,,,"",,,,"EHDSPatientSummary.medicalHistory.pastProblems",0,*,"",""
+"EHDSPatientSummary.alerts","EHDSPatientSummary.alerts","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAlert {[]} {[]}
+","Section: Alerts.","Information about substantial alerts or warnings that health professionals should be aware of.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.alerts",1,1,"",""
+"EHDSPatientSummary.functionalStatus","EHDSPatientSummary.functionalStatus","","","",0,1,"","","","Base {[]} {[]}
+","Section: Functional status","Section: Functional status","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.functionalStatus",0,1,"",""
+"EHDSPatientSummary.socialHistory","EHDSPatientSummary.socialHistory","","","",0,1,"","","","Base {[]} {[]}
+","Section: Social history.","Observations on social factors such as alcohol consumption or smoking. From the healthcare perspective, life-style factors relate to well-being but can also provide a source of risk factors.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.socialHistory",0,1,"",""
+"EHDSPatientSummary.socialHistory.narrative","EHDSPatientSummary.socialHistory.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.socialHistory.narrative",0,1,"",""
+"EHDSPatientSummary.socialHistory.description","EHDSPatientSummary.socialHistory.description","","","",1,1,"","","","string {[]} {[]}
+","Textual description of the social history.","Textual description of the social history.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.socialHistory.description",1,1,"",""
+"EHDSPatientSummary.pregnancyHistory","EHDSPatientSummary.pregnancyHistory","","","",0,1,"","","","Base {[]} {[]}
+","Section: Pregnancy history","To present the current health state of the patient with respect to pregnancy and to provide chronological and outcome information about past pregnancies.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSPatientSummary.pregnancyHistory",0,1,"",""
+"EHDSPatientSummary.pregnancyHistory.generatedNarrative","EHDSPatientSummary.pregnancyHistory.generatedNarrative","","","",0,1,"","","","string {[]} {[]}
+","Generated text summary of the content in the section, for human interpretation","Generated text summary of the content in the section, for human interpretation","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.pregnancyHistory.generatedNarrative",0,1,"",""
+"EHDSPatientSummary.pregnancyHistory.currentPregnancyStatus","EHDSPatientSummary.pregnancyHistory.currentPregnancyStatus","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCurrentPregnancy {[]} {[]}
+","Current pregnancy status","Current state of the pregnancy at the date the observation was made, e.g. pregnant, not pregnant, unknown.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSPatientSummary.pregnancyHistory.currentPregnancyStatus",0,1,"",""
+"EHDSPatientSummary.pregnancyHistory.previousPregnanciesStatus","EHDSPatientSummary.pregnancyHistory.previousPregnanciesStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Overall status of previous pregnancies","Overall status of previous pregnancies, including 
+— Yes, previous pregnancies 
+— No, previous pregnancies 
+— Unknown","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSPatientSummary.pregnancyHistory.previousPregnanciesStatus",0,1,"",""
+"EHDSPatientSummary.pregnancyHistory.previousPregnancies","EHDSPatientSummary.pregnancyHistory.previousPregnancies","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPregnancyHistory {[]} {[]}
+","History of previous pregnancies","Information about previous pregnancies, including outcomes and number of children/fetuses in each pregnancy.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.pregnancyHistory.previousPregnancies",0,*,"",""
+"EHDSPatientSummary.travelHistory","EHDSPatientSummary.travelHistory","","","",0,*,"","","","Base {[]} {[]}
+","captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions.","captures relevant information about the patient's recent travel history that may be of clinical relevance — particularly in relation to exposure to infectious diseases, epidemiological risks, or environmental factors. The intent is to support clinical decision-making and risk assessment, especially in contexts such as outbreaks or endemic disease regions.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.travelHistory",0,*,"",""
+"EHDSPatientSummary.advanceDirectives","EHDSPatientSummary.advanceDirectives","","","",0,1,"","","","Base {[]} {[]}
+","Section: Advance Directives.","Provision for healthcare decisions if, in the future, a person is unable to make those decisions.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.advanceDirectives",0,1,"",""
+"EHDSPatientSummary.results","EHDSPatientSummary.results","","","",0,1,"","","","Base {[]} {[]}
+","Section: Observation results.","Relevant observation results obtained on the patient. These may be measurements, laboratory results, anatomic pathology results, radiology results or other imaging or clinical results.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.results",0,1,"",""
+"EHDSPatientSummary.results.narrative","EHDSPatientSummary.results.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative, potentially formatted, content of the section","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.results.narrative",0,1,"",""
+"EHDSPatientSummary.carePlan","EHDSPatientSummary.carePlan","","","",0,1,"","","","Base {[]} {[]}
+","Section: Care plans.","Therapeutic recommendations that do not include pharmacologic treatments, such as diet, physical exercise, planned surgeries","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.carePlan",0,1,"",""
+"EHDSPatientSummary.carePlan.narrative","EHDSPatientSummary.carePlan.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that this Section could be provided in a structured and coded format.","Narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that this Section could be provided in a structured and coded format.","","","","","","","","","",,,,,"",,,,"EHDSPatientSummary.carePlan.narrative",0,1,"",""

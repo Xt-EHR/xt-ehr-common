@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Patient Summary - EHDS Logical Information Models v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Priority Categories
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="overview-prescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="overview-dispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="overview-medicaltestresult.html">Medical Test Results</a>
+      </li>
+      <li>
+        <a href="overview-patientsummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="overview-medicalimages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="overview-dischargereport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Patient Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.2.1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/stakeholder-consultation-D7-1'>https://github.com/Xt-EHR/xt-ehr-common/tree/stakeholder-consultation-D7-1</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Patient Summary</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#information-models" id="markdown-toc-information-models">Information Models</a></li>
+  <li><a href="#detailed-ehds-information-models-for-patient-summary" id="markdown-toc-detailed-ehds-information-models-for-patient-summary">Detailed EHDS information models for Patient summary</a></li>
+  <li><a href="#fhir-implementation-guide" id="markdown-toc-fhir-implementation-guide">FHIR Implementation Guide</a></li>
+  <li><a href="#supporting-information" id="markdown-toc-supporting-information">Supporting information</a></li>
+</ul>
+
+</div>
+<h3 id="information-models">Information Models</h3>
+<h4 id="conceptual-view">Conceptual view</h4>
+
+<p>Patient Summary could be divided into several basic parts: document header, body and optionally it could also have various attachments.</p>
+
+<h5 id="patient-summary">Patient Summary</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="1347px" preserveAspectRatio="none" style="width:726px;height:1347px;background:#FFFFFF;" version="1.1" viewBox="0 0 726 1347" width="726px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="195.041" x="10" y="654.7578" /><a href="StructureDefinition-EHDSPatientSummary.html" target="_top" title="StructureDefinition-EHDSPatientSummary.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSPatientSummary.html" xlink:show="new" xlink:title="StructureDefinition-EHDSPatientSummary.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" text-decoration="underline" textLength="175.041" x="20" y="677.7529">EHDSPatientSummary</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="70.9756" x="255.041" y="138.2266" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.9756" x="265.041" y="161.2217">Header</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3359" x="379.0166" y="23.9951">Subject</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,19.1484 366.0166,19.1484 L376.0166,19.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63.0684" x="379.0166" y="42.292">Identifier</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,37.4453 366.0166,37.4453 L376.0166,37.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.1338" x="379.0166" y="60.5889">Author</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,55.7422 366.0166,55.7422 L376.0166,55.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.4619" x="379.0166" y="78.8857">Date</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,74.0391 366.0166,74.0391 L376.0166,74.0391" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.6113" x="379.0166" y="97.1826">Status</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,92.3359 366.0166,92.3359 L376.0166,92.3359" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.0908" x="379.0166" y="115.4795">Language</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,110.6328 366.0166,110.6328 L376.0166,110.6328" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.3164" x="379.0166" y="133.7764">Document Type</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,128.9297 366.0166,128.9297 L376.0166,128.9297" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107.4131" x="379.0166" y="152.0732">Document Title</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,147.2266 366.0166,147.2266 L376.0166,147.2266" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.1533" x="379.0166" y="170.3701">Period</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,165.5234 366.0166,165.5234 L376.0166,165.5234" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.5684" x="379.0166" y="188.667">Version</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,183.8203 366.0166,183.8203 L376.0166,183.8203" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.3486" x="379.0166" y="206.9639">Attestation</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.3213" x="509.3652" y="197.8154">Attester</text><path d="M456.3652,202.1172 L466.3652,202.1172 C481.3652,202.1172 481.3652,192.9688 496.3652,192.9688 L506.3652,192.9688" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.0918" x="509.3652" y="216.1123">Datetime</text><path d="M456.3652,202.1172 L466.3652,202.1172 C481.3652,202.1172 481.3652,211.2656 496.3652,211.2656 L506.3652,211.2656" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,202.1172 366.0166,202.1172 L376.0166,202.1172" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.9902" x="379.0166" y="243.5576">Legal Authentication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.9834" x="577.0068" y="234.4092">Legal Authenticator</text><path d="M524.0068,238.7109 L534.0068,238.7109 C549.0068,238.7109 549.0068,229.5625 564.0068,229.5625 L574.0068,229.5625" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.0918" x="577.0068" y="252.7061">Datetime</text><path d="M524.0068,238.7109 L534.0068,238.7109 C549.0068,238.7109 549.0068,247.8594 564.0068,247.8594 L574.0068,247.8594" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,238.7109 366.0166,238.7109 L376.0166,238.7109" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.8936" x="379.0166" y="261.8545">Event Type</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,257.0078 366.0166,257.0078 L376.0166,257.0078" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120.4082" x="379.0166" y="280.1514">Service Specialty</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,275.3047 366.0166,275.3047 L376.0166,275.3047" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.2256" x="379.0166" y="298.4482">Custodian</text><path d="M326.0166,156.375 L336.0166,156.375 C351.0166,156.375 351.0166,293.6016 366.0166,293.6016 L376.0166,293.6016" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,156.375 245.041,156.375 L255.041,156.375" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="131.043" x="255.041" y="312.75" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.043" x="265.041" y="335.7451">Presented Form</text><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,330.8984 245.041,330.8984 L255.041,330.8984" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="60.6191" x="255.041" y="377.4922" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.6191" x="265.041" y="400.4873">Alerts</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="368.6602" y="373.042">Generated Narrative</text><path d="M315.6602,395.6406 L325.6602,395.6406 C340.6602,395.6406 340.6602,368.1953 355.6602,368.1953 L365.6602,368.1953" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.2471" x="368.6602" y="391.3389">Empty Reason</text><path d="M315.6602,395.6406 L325.6602,395.6406 C340.6602,395.6406 340.6602,386.4922 355.6602,386.4922 L365.6602,386.4922" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.4102" x="368.6602" y="409.6357">Medical Alert</text><path d="M315.6602,395.6406 L325.6602,395.6406 C340.6602,395.6406 340.6602,404.7891 355.6602,404.7891 L365.6602,404.7891" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="368.6602" y="427.9326">Note</text><path d="M315.6602,395.6406 L325.6602,395.6406 C340.6602,395.6406 340.6602,423.0859 355.6602,423.0859 L365.6602,423.0859" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,395.6406 245.041,395.6406 L255.041,395.6406" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="203.0186" x="255.041" y="450.6797" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183.0186" x="265.041" y="473.6748">Allergies And Intolerances</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="511.0596" y="446.2295">Generated Narrative</text><path d="M458.0596,468.8281 L468.0596,468.8281 C483.0596,468.8281 483.0596,441.3828 498.0596,441.3828 L508.0596,441.3828" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132.4258" x="511.0596" y="464.5264">Allergy Intolerance</text><path d="M458.0596,468.8281 L468.0596,468.8281 C483.0596,468.8281 483.0596,459.6797 498.0596,459.6797 L508.0596,459.6797" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.2471" x="511.0596" y="482.8232">Empty Reason</text><path d="M458.0596,468.8281 L468.0596,468.8281 C483.0596,468.8281 483.0596,477.9766 498.0596,477.9766 L508.0596,477.9766" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="511.0596" y="501.1201">Note</text><path d="M458.0596,468.8281 L468.0596,468.8281 C483.0596,468.8281 483.0596,496.2734 498.0596,496.2734 L508.0596,496.2734" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,468.8281 245.041,468.8281 L255.041,468.8281" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="85.085" x="255.041" y="523.8672" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.085" x="265.041" y="546.8623">Problems</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="393.126" y="519.417">Generated Narrative</text><path d="M340.126,542.0156 L350.126,542.0156 C365.126,542.0156 365.126,514.5703 380.126,514.5703 L390.126,514.5703" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.2471" x="393.126" y="537.7139">Empty Reason</text><path d="M340.126,542.0156 L350.126,542.0156 C365.126,542.0156 365.126,532.8672 380.126,532.8672 L390.126,532.8672" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57.791" x="393.126" y="556.0107">Problem</text><path d="M340.126,542.0156 L350.126,542.0156 C365.126,542.0156 365.126,551.1641 380.126,551.1641 L390.126,551.1641" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="393.126" y="574.3076">Note</text><path d="M340.126,542.0156 L350.126,542.0156 C365.126,542.0156 365.126,569.4609 380.126,569.4609 L390.126,569.4609" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,542.0156 245.041,542.0156 L255.041,542.0156" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="168.668" x="255.041" y="597.0547" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.668" x="265.041" y="620.0498">Medication Summary</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="476.709" y="592.6045">Generated Narrative</text><path d="M423.709,615.2031 L433.709,615.2031 C448.709,615.2031 448.709,587.7578 463.709,587.7578 L473.709,587.7578" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.2471" x="476.709" y="610.9014">Empty Reason</text><path d="M423.709,615.2031 L433.709,615.2031 C448.709,615.2031 448.709,606.0547 463.709,606.0547 L473.709,606.0547" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107.167" x="476.709" y="629.1982">Medication Use</text><path d="M423.709,615.2031 L433.709,615.2031 C448.709,615.2031 448.709,624.3516 463.709,624.3516 L473.709,624.3516" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="476.709" y="647.4951">Note</text><path d="M423.709,615.2031 L433.709,615.2031 C448.709,615.2031 448.709,642.6484 463.709,642.6484 L473.709,642.6484" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,615.2031 245.041,615.2031 L255.041,615.2031" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="230.2734" x="255.041" y="670.2422" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="210.2734" x="265.041" y="693.2373">Medical Devices And Implants</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="538.3145" y="665.792">Generated Narrative</text><path d="M485.3145,688.3906 L495.3145,688.3906 C510.3145,688.3906 510.3145,660.9453 525.3145,660.9453 L535.3145,660.9453" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.2471" x="538.3145" y="684.0889">Empty Reason</text><path d="M485.3145,688.3906 L495.3145,688.3906 C510.3145,688.3906 510.3145,679.2422 525.3145,679.2422 L535.3145,679.2422" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.4834" x="538.3145" y="702.3857">Device Use</text><path d="M485.3145,688.3906 L495.3145,688.3906 C510.3145,688.3906 510.3145,697.5391 525.3145,697.5391 L535.3145,697.5391" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="538.3145" y="720.6826">Note</text><path d="M485.3145,688.3906 L495.3145,688.3906 C510.3145,688.3906 510.3145,715.8359 525.3145,715.8359 L535.3145,715.8359" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,688.3906 245.041,688.3906 L255.041,688.3906" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="98.4971" x="255.041" y="743.4297" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.4971" x="265.041" y="766.4248">Procedures</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="406.5381" y="738.9795">Generated Narrative</text><path d="M353.5381,761.5781 L363.5381,761.5781 C378.5381,761.5781 378.5381,734.1328 393.5381,734.1328 L403.5381,734.1328" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.2471" x="406.5381" y="757.2764">Empty Reason</text><path d="M353.5381,761.5781 L363.5381,761.5781 C378.5381,761.5781 378.5381,752.4297 393.5381,752.4297 L403.5381,752.4297" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71.2031" x="406.5381" y="775.5732">Procedure</text><path d="M353.5381,761.5781 L363.5381,761.5781 C378.5381,761.5781 378.5381,770.7266 393.5381,770.7266 L403.5381,770.7266" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="406.5381" y="793.8701">Note</text><path d="M353.5381,761.5781 L363.5381,761.5781 C378.5381,761.5781 378.5381,789.0234 393.5381,789.0234 L403.5381,789.0234" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,761.5781 245.041,761.5781 L255.041,761.5781" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="123.0244" x="255.041" y="808.1719" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.0244" x="265.041" y="831.167">Immunisations</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="431.0654" y="812.8701">Generated Narrative</text><path d="M378.0654,826.3203 L388.0654,826.3203 C403.0654,826.3203 403.0654,808.0234 418.0654,808.0234 L428.0654,808.0234" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95.7305" x="431.0654" y="831.167">Immunisation</text><path d="M378.0654,826.3203 L388.0654,826.3203 C403.0654,826.3203 403.0654,826.3203 418.0654,826.3203 L428.0654,826.3203" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="431.0654" y="849.4639">Note</text><path d="M378.0654,826.3203 L388.0654,826.3203 C403.0654,826.3203 403.0654,844.6172 418.0654,844.6172 L428.0654,844.6172" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,826.3203 245.041,826.3203 L255.041,826.3203" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="141.8438" x="255.041" y="872.2109" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121.8438" x="265.041" y="895.2061">Functional Status</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="449.8848" y="867.7607">Generated Narrative</text><path d="M396.8848,890.3594 L406.8848,890.3594 C421.8848,890.3594 421.8848,862.9141 436.8848,862.9141 L446.8848,862.9141" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.8076" x="449.8848" y="886.0576">Condition</text><path d="M396.8848,890.3594 L406.8848,890.3594 C421.8848,890.3594 421.8848,881.2109 436.8848,881.2109 L446.8848,881.2109" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.9795" x="449.8848" y="904.3545">Assessment</text><path d="M396.8848,890.3594 L406.8848,890.3594 C421.8848,890.3594 421.8848,899.5078 436.8848,899.5078 L446.8848,899.5078" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="449.8848" y="922.6514">Note</text><path d="M396.8848,890.3594 L406.8848,890.3594 C421.8848,890.3594 421.8848,917.8047 436.8848,917.8047 L446.8848,917.8047" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,890.3594 245.041,890.3594 L255.041,890.3594" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="115.7646" x="255.041" y="936.25" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95.7646" x="265.041" y="959.2451">Social History</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="423.8057" y="940.9482">Generated Narrative</text><path d="M370.8057,954.3984 L380.8057,954.3984 C395.8057,954.3984 395.8057,936.1016 410.8057,936.1016 L420.8057,936.1016" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.251" x="423.8057" y="959.2451">Observation</text><path d="M370.8057,954.3984 L380.8057,954.3984 C395.8057,954.3984 395.8057,954.3984 410.8057,954.3984 L420.8057,954.3984" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="423.8057" y="977.542">Note</text><path d="M370.8057,954.3984 L380.8057,954.3984 C395.8057,954.3984 395.8057,972.6953 410.8057,972.6953 L420.8057,972.6953" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,954.3984 245.041,954.3984 L255.041,954.3984" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="148.2627" x="255.041" y="1000.2891" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.2627" x="265.041" y="1023.2842">Pregnancy History</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="456.3037" y="995.8389">Generated Narrative</text><path d="M403.3037,1018.4375 L413.3037,1018.4375 C428.3037,1018.4375 428.3037,990.9922 443.3037,990.9922 L453.3037,990.9922" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="180.6533" x="456.3037" y="1014.1357">Current Pregnancy Status</text><path d="M403.3037,1018.4375 L413.3037,1018.4375 C428.3037,1018.4375 428.3037,1009.2891 443.3037,1009.2891 L453.3037,1009.2891" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.6865" x="456.3037" y="1032.4326">Previous Pregnancies</text><path d="M403.3037,1018.4375 L413.3037,1018.4375 C428.3037,1018.4375 428.3037,1027.5859 443.3037,1027.5859 L453.3037,1027.5859" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="456.3037" y="1050.7295">Note</text><path d="M403.3037,1018.4375 L413.3037,1018.4375 C428.3037,1018.4375 428.3037,1045.8828 443.3037,1045.8828 L453.3037,1045.8828" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,1018.4375 245.041,1018.4375 L255.041,1018.4375" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="117.9316" x="255.041" y="1064.3281" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.9316" x="265.041" y="1087.3232">Travel History</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="425.9727" y="1069.0264">Generated Narrative</text><path d="M372.9727,1082.4766 L382.9727,1082.4766 C397.9727,1082.4766 397.9727,1064.1797 412.9727,1064.1797 L422.9727,1064.1797" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.9316" x="425.9727" y="1087.3232">Travel History</text><path d="M372.9727,1082.4766 L382.9727,1082.4766 C397.9727,1082.4766 397.9727,1082.4766 412.9727,1082.4766 L422.9727,1082.4766" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="425.9727" y="1105.6201">Note</text><path d="M372.9727,1082.4766 L382.9727,1082.4766 C397.9727,1082.4766 397.9727,1100.7734 412.9727,1100.7734 L422.9727,1100.7734" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,1082.4766 245.041,1082.4766 L255.041,1082.4766" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="110.8086" x="255.041" y="1120.625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90.8086" x="265.041" y="1143.6201">Patient Story</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="418.8496" y="1143.6201">Note</text><path d="M365.8496,1138.7734 L375.8496,1138.7734 C390.8496,1138.7734 390.8496,1138.7734 405.8496,1138.7734 L415.8496,1138.7734" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,1138.7734 245.041,1138.7734 L255.041,1138.7734" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="155.2695" x="255.041" y="1176.9219" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135.2695" x="265.041" y="1199.917">Advance Directives</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="463.3105" y="1181.6201">Generated Narrative</text><path d="M410.3105,1195.0703 L420.3105,1195.0703 C435.3105,1195.0703 435.3105,1176.7734 450.3105,1176.7734 L460.3105,1176.7734" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127.9756" x="463.3105" y="1199.917">Advance Directive</text><path d="M410.3105,1195.0703 L420.3105,1195.0703 C435.3105,1195.0703 435.3105,1195.0703 450.3105,1195.0703 L460.3105,1195.0703" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="463.3105" y="1218.2139">Note</text><path d="M410.3105,1195.0703 L420.3105,1195.0703 C435.3105,1195.0703 435.3105,1213.3672 450.3105,1213.3672 L460.3105,1213.3672" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,1195.0703 245.041,1195.0703 L255.041,1195.0703" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="160.8818" x="255.041" y="1233.2188" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140.8818" x="265.041" y="1256.2139">Observation Results</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="468.9229" y="1237.917">Generated Narrative</text><path d="M415.9229,1251.3672 L425.9229,1251.3672 C440.9229,1251.3672 440.9229,1233.0703 455.9229,1233.0703 L465.9229,1233.0703" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.8867" x="468.9229" y="1256.2139">Result</text><path d="M415.9229,1251.3672 L425.9229,1251.3672 C440.9229,1251.3672 440.9229,1251.3672 455.9229,1251.3672 L465.9229,1251.3672" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="468.9229" y="1274.5107">Note</text><path d="M415.9229,1251.3672 L425.9229,1251.3672 C440.9229,1251.3672 440.9229,1269.6641 455.9229,1269.6641 L465.9229,1269.6641" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,1251.3672 245.041,1251.3672 L255.041,1251.3672" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="94.252" x="255.041" y="1289.5156" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.252" x="265.041" y="1312.5107">Care Plans</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.1426" x="402.293" y="1294.2139">Generated Narrative</text><path d="M349.293,1307.6641 L359.293,1307.6641 C374.293,1307.6641 374.293,1289.3672 389.293,1289.3672 L399.293,1289.3672" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.958" x="402.293" y="1312.5107">Care Plan</text><path d="M349.293,1307.6641 L359.293,1307.6641 C374.293,1307.6641 374.293,1307.6641 389.293,1307.6641 L399.293,1307.6641" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33.1406" x="402.293" y="1330.8076">Note</text><path d="M349.293,1307.6641 L359.293,1307.6641 C374.293,1307.6641 374.293,1325.9609 389.293,1325.9609 L399.293,1325.9609" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M205.041,672.9063 L215.041,672.9063 C230.041,672.9063 230.041,1307.6641 245.041,1307.6641 L255.041,1307.6641" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h3 id="detailed-ehds-information-models-for-patient-summary">Detailed EHDS information models for Patient summary</h3>
+<ul>
+  <li><a href="StructureDefinition-EHDSPatientSummary.html">Patient Summary Document</a></li>
+</ul>
+
+<h3 id="fhir-implementation-guide">FHIR Implementation Guide</h3>
+
+<p>Patient Summary FHIR Implementation Guide is based on International Patient Summary FHIR IG.</p>
+
+<p>The work for building the European specialisation of International Patient Summary is ongoing in a joint working group with HL7 Europe (<a href="https://confluence.hl7.org/spaces/HEU/pages/358255737/Implementation+Guides">see details</a>).</p>
+
+<h3 id="supporting-information">Supporting information</h3>
+
+<ul>
+  <li><a href="https://international-patient-summary.net/">International Patient Summary</a></li>
+  <li><a href="https://health.ec.europa.eu/document/download/e020f311-c35b-45ae-ba3d-03212b57fa65_en?filename=ehn_guidelines_patientsummary_en.pdf">eHealth Network Patient Summary guidelines</a></li>
+  <li><a href="https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/05.01.+Create+the+MyHealth@EU+Patient+Summary+content">MyHealth@EU Requirements Catalogue</a></li>
+  <li><a href="https://art-decor.ehdsi.eu/publication/epsos-html-20240422T073854/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.1.3-2024-04-19T100332.html">MyHealth@EU CDA specification</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  Package xtehr.eu.ehds.models#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 6, 2026 17:48+0000">2026-02-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

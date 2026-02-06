@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>ePrescription - EHDS Logical Information Models v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="useCaseDispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>ePrescription</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.2.1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSTelecom-changes'>https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSTelecom-changes</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>ePrescription</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#information-models" id="markdown-toc-information-models">Information Models</a></li>
+  <li><a href="#fhir-implementation-guide" id="markdown-toc-fhir-implementation-guide">FHIR Implementation Guide</a></li>
+  <li><a href="#ihe-profile" id="markdown-toc-ihe-profile">IHE Profile</a></li>
+  <li><a href="#supporting-information" id="markdown-toc-supporting-information">Supporting Information</a></li>
+</ul>
+
+</div>
+<h3 id="information-models">Information Models</h3>
+
+<h4 id="ehds-information-models-for-eprescription">EHDS information models for <strong>ePrescription</strong>:</h4>
+
+<p>Components of a prescription and their representation as EHDS information models:</p>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="344px" preserveAspectRatio="none" style="width:718px;height:344px;background:#FFFFFF;" version="1.1" viewBox="0 0 718 344" width="718px" zoomAndPan="magnify"><defs /><g><!--class eP--><g class="entity" data-entity="eP" data-source-line="6" data-uid="ent0002" id="entity_eP"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="210.7549" x="347.5" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="96.0928" x="404.8311" y="24.9951">Prescription</text><line style="stroke:#181818;stroke-width:0.5;" x1="348.5" x2="557.2549" y1="33.2969" y2="33.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198.7549" x="353.5" y="50.292">EHDSMedicationPrescription</text><line style="stroke:#181818;stroke-width:0.5;" x1="348.5" x2="557.2549" y1="57.5938" y2="57.5938" /></g><!--class Header--><g class="entity" data-entity="Header" data-source-line="10" data-uid="ent0003" id="entity_Header"><rect fill="#F1F1F1" height="42.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63.0801" x="257.5" y="151.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57.0801" x="260.5" y="169.4951">Header</text><line style="stroke:#181818;stroke-width:0.5;" x1="258.5" x2="319.5801" y1="177.7969" y2="177.7969" /><line style="stroke:#181818;stroke-width:0.5;" x1="258.5" x2="319.5801" y1="185.7969" y2="185.7969" /></g><!--class Item--><g class="entity" data-entity="Item" data-source-line="11" data-uid="ent0005" id="entity_Item"><rect fill="#F1F1F1" height="42.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138.0771" x="384" y="151.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="132.0771" x="387" y="169.4951">PrescriptionItem</text><line style="stroke:#181818;stroke-width:0.5;" x1="385" x2="521.0771" y1="177.7969" y2="177.7969" /><line style="stroke:#181818;stroke-width:0.5;" x1="385" x2="521.0771" y1="185.7969" y2="185.7969" /></g><!--class PresentedForm--><g class="entity" data-entity="PresentedForm" data-source-line="12" data-uid="ent0007" id="entity_PresentedForm"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="133.3584" x="557.5" y="143" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="121.3379" x="563.5103" y="160.9951">PresentedForm</text><line style="stroke:#181818;stroke-width:0.5;" x1="558.5" x2="689.8584" y1="169.2969" y2="169.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121.3584" x="563.5" y="186.292">EHDSAttachment</text><line style="stroke:#181818;stroke-width:0.5;" x1="558.5" x2="689.8584" y1="193.5938" y2="193.5938" /></g><!--class Prescriber--><g class="entity" data-entity="Prescriber" data-source-line="14" data-uid="ent0009" id="entity_Prescriber"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="181.7021" x="7" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81.416" x="26.3882" y="296.9951">Prescriber</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57.0596" x="112.2544" y="296.9951">(author)</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="187.7021" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169.7021" x="13" y="322.292">EHDSHealthProfessional</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="187.7021" y1="329.5938" y2="329.5938" /></g><!--class Patient--><g class="entity" data-entity="Patient" data-source-line="19" data-uid="ent0010" id="entity_Patient"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129.4707" x="224.5" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57.3535" x="227.5" y="296.9951">Patient</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.667" x="289.3037" y="296.9951">(subject)</text><line style="stroke:#181818;stroke-width:0.5;" x1="225.5" x2="352.9707" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88.416" x="230.5" y="322.292">EHDSPatient</text><line style="stroke:#181818;stroke-width:0.5;" x1="225.5" x2="352.9707" y1="329.5938" y2="329.5938" /></g><!--class Medication--><g class="entity" data-entity="Medication" data-source-line="36" data-uid="ent0013" id="entity_Medication"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127.6025" x="389" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="87.0693" x="409.2666" y="296.9951">Medication</text><line style="stroke:#181818;stroke-width:0.5;" x1="390" x2="515.6025" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.6025" x="395" y="322.292">EHDSMedication</text><line style="stroke:#181818;stroke-width:0.5;" x1="390" x2="515.6025" y1="329.5938" y2="329.5938" /></g><!--class Dosage--><g class="entity" data-entity="Dosage" data-source-line="37" data-uid="ent0015" id="entity_Dosage"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="159.3164" x="552.5" y="279" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="153.3164" x="555.5" y="296.9951">DosageInstructions</text><line style="stroke:#181818;stroke-width:0.5;" x1="553.5" x2="710.8164" y1="305.2969" y2="305.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.7588" x="558.5" y="322.292">EHDSDosage</text><line style="stroke:#181818;stroke-width:0.5;" x1="553.5" x2="710.8164" y1="329.5938" y2="329.5938" /></g><!--link eP to Header--><g class="link" data-entity-1="eP" data-entity-2="Header" data-source-line="10" data-uid="lnk4" id="link_eP_Header"><path codeLine="10" d="M417.82,66.25 C386.38,91.93 345.7871,125.1047 318.1271,147.6947" fill="none" id="eP-to-Header" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="313.48,151.49,322.9809,148.8951,317.3526,148.3272,317.9205,142.699,313.48,151.49" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="382" y="109.0669">1..1</text></g><!--link eP to Item--><g class="link" data-entity-1="eP" data-entity-2="Item" data-source-line="11" data-uid="lnk6" id="link_eP_Item"><path codeLine="11" d="M453,66.25 C453,91.93 453,116.9 453,139.49" fill="none" id="eP-to-Item" style="stroke:#181818;stroke-width:1;" /><polygon fill="none" points="453,151.49,457,145.49,453,139.49,449,145.49,453,151.49" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="454" y="109.0669">1..*</text></g><!--link eP to PresentedForm--><g class="link" data-entity-1="eP" data-entity-2="PresentedForm" data-source-line="12" data-uid="lnk8" id="link_eP_PresentedForm"><path codeLine="12" d="M489.68,66.25 C518.54,88.86 549.0946,112.7983 577.9346,135.3983" fill="none" id="eP-to-PresentedForm" style="stroke:#181818;stroke-width:1;" /><polygon fill="none" points="587.38,142.8,585.1246,135.9507,577.9346,135.3983,580.1901,142.2476,587.38,142.8" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="550" y="109.0669">0..*</text></g><!--link Header to Prescriber--><g class="link" data-entity-1="Header" data-entity-2="Prescriber" data-source-line="29" data-uid="lnk11" id="link_Header_Prescriber"><path codeLine="29" d="M260.41,193.56 C228.14,216.19 180.3214,249.7435 143.7414,275.4135" fill="none" id="Header-to-Prescriber" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="138.83,278.86,148.4947,276.9644,142.9228,275.9879,143.8993,270.416,138.83,278.86" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="206" y="245.0669">1..1</text></g><!--link Header to Patient--><g class="link" data-entity-1="Header" data-entity-2="Patient" data-source-line="30" data-uid="lnk12" id="link_Header_Patient"><path codeLine="30" d="M289,193.56 C289,216.19 289,247.19 289,272.86" fill="none" id="Header-to-Patient" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="289,278.86,293,269.86,289,273.86,285,269.86,289,278.86" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="290" y="245.0669">1..1</text></g><!--link Item to Medication--><g class="link" data-entity-1="Item" data-entity-2="Medication" data-source-line="36" data-uid="lnk14" id="link_Item_Medication"><path codeLine="36" d="M453,193.56 C453,216.19 453,247.19 453,272.86" fill="none" id="Item-to-Medication" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="453,278.86,457,269.86,453,273.86,449,269.86,453,278.86" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="454" y="245.0669">1..1</text></g><!--link Item to Dosage--><g class="link" data-entity-1="Item" data-entity-2="Dosage" data-source-line="37" data-uid="lnk16" id="link_Item_Dosage"><path codeLine="37" d="M479.8,193.56 C510.03,216.19 549.8436,245.9985 584.1336,271.6685" fill="none" id="Item-to-Dosage" style="stroke:#181818;stroke-width:1;" /><polygon fill="none" points="593.74,278.86,591.334,272.0621,584.1336,271.6685,586.5396,278.4664,593.74,278.86" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="555" y="245.0669">0..*</text></g></g></svg>
+</figure>
+
+<ul>
+  <li>Prescription: <a href="StructureDefinition-EHDSMedicationPrescription.html">EHDSMedicationPrescription</a></li>
+  <li>Patient: <a href="StructureDefinition-EHDSPatient.html">EHDSPatient</a></li>
+  <li>Prescriber: <a href="StructureDefinition-EHDSHealthProfessional.html">EHDSHealthProfessional</a></li>
+  <li>Medication: <a href="StructureDefinition-EHDSMedication.html">EHDSMedication</a></li>
+  <li>Usage instructions: <a href="StructureDefinition-EHDSDosage.html">EHDSDosage</a></li>
+</ul>
+
+<h3 id="fhir-implementation-guide">FHIR Implementation Guide</h3>
+
+<p>FHIR Implementation Guide is being developed in a cross-project working group lead by HL7 Europe and IHE (see <a href="https://confluence.hl7.org/display/HEU/Medication+Prescription+and+Dispense%2C+Edition+1">working group information</a>). Business and data requirements defined in Xt-EHR Task 6.2 are discussed further in the working group in order to gather feedback from the implementers. Approved requirements are adopted by HL7 Europe MPD FHIR IG.</p>
+
+<p><strong>Ongoing work:</strong></p>
+<ul>
+  <li><a href="https://build.fhir.org/ig/hl7-eu/mpd/">R4 FHIR IG</a></li>
+  <li><a href="https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/">R5 FHIR IG</a></li>
+</ul>
+
+<h3 id="ihe-profile">IHE Profile</h3>
+
+<p>FHIR-based IHE profile for this use case is in draft status, please see the <a href="https://build.fhir.org/ig/IHE/pharm-mpd/">IHE Medication Prescription and Dispense profile</a> for more information.</p>
+
+<p>IHE Profile has a global scope and is not part of Xt-EHR deliverable. However, the HL7 Europe / IHE joint working group (see above) allows mutually beneficial cooperation and early alignment.</p>
+
+<h3 id="supporting-information">Supporting Information</h3>
+
+<ul>
+  <li><a href="https://health.ec.europa.eu/document/download/b744f30b-a05e-4b9c-9630-ad96ebd0b2f0_en?filename=ehn_guidelines_eprescriptions_en.pdf">eHealth Network Guideline on ePrescription and eDispensation of Authorised Medicinal Products</a></li>
+  <li><a href="https://build.fhir.org/ig/IHE/pharm-mpd/">IHE Medication Prescription and Dispense profile</a> (draft)</li>
+  <li>ISO/DIS 17523 "Health informatics - Requirements for electronic prescriptions"</li>
+  <li>MyHealth@EU <a href="https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/1.+MyHealth@EU+Requirements+Catalogue">requirements catalogue</a> and <a href="https://art-decor.ehdsi.eu/publication/">CDA specification</a></li>
+  <li><a href="https://confluence.ihtsdotools.org/display/DOCMPM">SNOMED CT Medicinal Product Model Specification</a></li>
+  <li><a href="https://standardterms.edqm.eu/">EDQM Standard Terms</a></li>
+  <li><a href="https://www.ema.europa.eu/en/human-regulatory-overview/research-development/data-medicines-iso-idmp-standards-overview/substance-product-organisation-referential-spor-master-data/substance-product-data-management-services">European Medicines Agency ISO IDMP implementation guidance</a>, including <a href="https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/product-management-services-pms-implementation-international-organisation-standardization-iso-standards-identification-medicinal-products-idmp-europe-chapter-2_en.pdf">FHIR IG</a></li>
+  <li><a href="https://spor.ema.europa.eu/sporwi/">EMA SPOR</a></li>
+  <li>UNICOM project: <a href="https://unicom-project.eu/">web page</a>, <a href="https://build.fhir.org/ig/hl7-eu/unicom-ig/">FHIR IG</a>, <a href="https://unicom-project.eu/public-deliverables/">public deliverables</a></li>
+  <li><a href="https://www.ema.europa.eu/en/medicines/national-registers-authorised-medicines">Links to national medicines registers</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  Package xtehr.eu.ehds.models#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 5, 2026 19:33+0000">2026-02-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

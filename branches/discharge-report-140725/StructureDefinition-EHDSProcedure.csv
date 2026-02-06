@@ -1,0 +1,47 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSProcedure","EHDSProcedure","","","",0,*,"","","","null {[]} {[]}
+","Procedure model","EHDS refined base model for an action that is or was performed on or for a patient","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSProcedure.header","EHDSProcedure.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSProcedure.header.subject","EHDSProcedure.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSProcedure.header.identifier","EHDSProcedure.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSProcedure.header.authorship","EHDSProcedure.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSProcedure.header.authorship.author[x]","EHDSProcedure.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSProcedure.header.authorship.datetime","EHDSProcedure.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSProcedure.header.lastUpdate","EHDSProcedure.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSProcedure.header.status","EHDSProcedure.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSProcedure.header.statusReason[x]","EHDSProcedure.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSProcedure.header.language","EHDSProcedure.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSProcedure.header.version","EHDSProcedure.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSProcedure.presentedForm","EHDSProcedure.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSProcedure.code","EHDSProcedure.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code identifying the procedure","Code identifying the procedure","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSProcedure.code",0,1,"",""
+"EHDSProcedure.date[x]","EHDSProcedure.date[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Date and time of the procedure or interval of its performance","Date and time of the procedure or interval of its performance","","","","","","","","","",,,,,"",,,,"EHDSProcedure.date[x]",0,1,"",""
+"EHDSProcedure.performer","EHDSProcedure.performer","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","An actor who performed the procedure","An actor who performed the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.performer",0,*,"",""
+"EHDSProcedure.bodySite","EHDSProcedure.bodySite","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Procedure target body site. Details of where the procedure was performed. Laterality may be included as qualifier of the body site.","Procedure target body site. Details of where the procedure was performed. Laterality may be included as qualifier of the body site.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.bodySite",0,*,"",""
+"EHDSProcedure.reason[x]","EHDSProcedure.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure {[]} {[]}","The reason why the procedure was performed. This may be a concept from a terminology or a reference to a specific instance that describes the reason.","The reason why the procedure was performed. This may be a concept from a terminology or a reference to a specific instance that describes the reason.","","","","","","","","","",,"preferred","SNOMED CT, ICD-10, Orphacode if rare disease is diagnosed","","",,,,"EHDSProcedure.reason[x]",0,*,"",""
+"EHDSProcedure.outcome","EHDSProcedure.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","The outcome of the procedure - did it resolve the reasons for the procedure being performed?","The outcome of the procedure - did it resolve the reasons for the procedure being performed?","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSProcedure.outcome",0,1,"",""
+"EHDSProcedure.complication","EHDSProcedure.complication","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the procedure description, which will typically describe the procedure itself rather than any 'post procedure' issues.","Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the procedure description, which will typically describe the procedure itself rather than any 'post procedure' issues.","","","","","","","","","",,"preferred","ICD-10, SNOMED CT, Orphacode if rare disease is diagnosed","","",,,,"EHDSProcedure.complication",0,*,"",""
+"EHDSProcedure.deviceUsed","EHDSProcedure.deviceUsed","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}
+","Device used to perform the procedure","Device used to perform the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.deviceUsed",0,*,"",""
+"EHDSProcedure.focalDevice","EHDSProcedure.focalDevice","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}
+","Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.","Device(s) that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.focalDevice",0,*,"",""
+"EHDSProcedure.note","EHDSProcedure.note","","","",0,1,"","","","string {[]} {[]}
+","Additional information about the procedure","Additional information about the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.note",0,1,"",""

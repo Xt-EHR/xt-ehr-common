@@ -1,0 +1,17 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSFamilyMemberHistory","EHDSFamilyMemberHistory","","","",0,*,"","","","null {[]} {[]}
+","Family member history model","EHDS refined base model for Family member history","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSFamilyMemberHistory.identifier","EHDSFamilyMemberHistory.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier","Business identifier for this record.","","","","","","","","","",,,,,"",,,,"EHDSFamilyMemberHistory.identifier",0,*,"",""
+"EHDSFamilyMemberHistory.patient","EHDSFamilyMemberHistory.patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient]]}
+","Patient","The person who this history concerns.","","","","","","","","","",,,,,"",,,,"EHDSFamilyMemberHistory.patient",1,1,"",""
+"EHDSFamilyMemberHistory.patientRelationship","EHDSFamilyMemberHistory.patientRelationship","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Patient relationship","The family relation between the related person and the patient.","","","","","","","","","",,"preferred","hl7:v3-RoleCode","","",,,,"EHDSFamilyMemberHistory.patientRelationship",0,1,"",""
+"EHDSFamilyMemberHistory.dateOfBirth","EHDSFamilyMemberHistory.dateOfBirth","","","",0,1,"","","","date {[]} {[]}
+","Date of birth","Full or partial date of birth","","","","","","","","","",,,,,"",,,,"EHDSFamilyMemberHistory.dateOfBirth",0,1,"",""
+"EHDSFamilyMemberHistory.ageOrDateOfDeath[x]","EHDSFamilyMemberHistory.ageOrDateOfDeath[x]","","","",0,1,"","","","date {[]} {[]}
+Quantity {[]} {[]}","Age or date of death","Age or date of the death of the family member.","","","","","","","","","",,,,,"",,,,"EHDSFamilyMemberHistory.ageOrDateOfDeath[x]",0,1,"",""
+"EHDSFamilyMemberHistory.condition","EHDSFamilyMemberHistory.condition","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Condition","Medical problems this person suffers or suffered.","","","","","","","","","",,"preferred","ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed","","",,,,"EHDSFamilyMemberHistory.condition",0,*,"",""
+"EHDSFamilyMemberHistory.causeOfDeath","EHDSFamilyMemberHistory.causeOfDeath","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Cause of death","Information about disease or condition that was the main cause of death.","","","","","","","","","",,"preferred","ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed","","",,,,"EHDSFamilyMemberHistory.causeOfDeath",0,1,"",""

@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSEpisodeOfCare","EHDSEpisodeOfCare","","","",0,*,"","","","null {[]} {[]}
+","Episode of care model","EHDS refined base model for Episode of care","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSEpisodeOfCare.header","EHDSEpisodeOfCare.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSEpisodeOfCare.header.subject","EHDSEpisodeOfCare.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSEpisodeOfCare.header.identifier","EHDSEpisodeOfCare.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifiers assigned to this episode of care.","Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSEpisodeOfCare.header.authorship","EHDSEpisodeOfCare.header.authorship","","","",0,*,"","","","Base {[]} {[]}
+","Resource authoring details. Multiple authors can be provided.","Resource authoring details. Multiple authors can be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",0,*,"",""
+"EHDSEpisodeOfCare.header.authorship.author[x]","EHDSEpisodeOfCare.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Author responsible for the provided information. The exact role of the responsible author varies across use cases and is often specified in individual models.","Author responsible for the provided information. The exact role of the responsible author varies across use cases and is often specified in individual models.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSEpisodeOfCare.header.authorship.datetime","EHDSEpisodeOfCare.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSEpisodeOfCare.header.status","EHDSEpisodeOfCare.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource or document","Status of the resource or document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSEpisodeOfCare.header.language","EHDSEpisodeOfCare.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSEpisodeOfCare.type","EHDSEpisodeOfCare.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A classification of the type of episode of care; e.g. specialist referral, disease management.","A classification of the type of episode of care; e.g. specialist referral, disease management.","","","","","","","","","",,,,,"",,,,"EHDSEpisodeOfCare.type",0,*,"",""
+"EHDSEpisodeOfCare.reasonText","EHDSEpisodeOfCare.reasonText","","","",0,1,"","","","string {[]} {[]}
+","Textual descriptions of the medical reasons that are expected to be addressed during the episode of care.","Textual descriptions of the medical reasons that are expected to be addressed during the episode of care.","","","","","","","","","",,,,,"",,,,"EHDSEpisodeOfCare.reasonText",0,1,"",""
+"EHDSEpisodeOfCare.reason[x]","EHDSEpisodeOfCare.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation {[]} {[]}","Coded list of medical reasons that are expected to be addressed during the episode of care.","Coded list of medical reasons that are expected to be addressed during the episode of care.","","","","","","","","","",,,,,"",,,,"EHDSEpisodeOfCare.reason[x]",0,*,"",""
+"EHDSEpisodeOfCare.diagnosis","EHDSEpisodeOfCare.diagnosis","","","",0,*,"","","","Base {[]} {[]}
+","List of medical conditions that were addressed during the episode of care","List of medical conditions that were addressed during the episode of care","","","","","","","","","",,,,,"",,,,"EHDSEpisodeOfCare.diagnosis",0,*,"",""
+"EHDSEpisodeOfCare.diagnosis.description","EHDSEpisodeOfCare.diagnosis.description","","","",1,1,"","","","string {[]} {[]}
+","Textual description of the medical condition that was addressed during the episode of care","Textual description of the medical condition that was addressed during the episode of care","","","","","","","","","",,,,,"",,,,"EHDSEpisodeOfCare.diagnosis.description",1,1,"",""
+"EHDSEpisodeOfCare.diagnosis.condition[x]","EHDSEpisodeOfCare.diagnosis.condition[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition {[]} {[]}","The medical condition that was addressed during the episode of care","The medical condition that was addressed during the episode of care","","","","","","","","","",,,,,"",,,,"EHDSEpisodeOfCare.diagnosis.condition[x]",0,1,"",""

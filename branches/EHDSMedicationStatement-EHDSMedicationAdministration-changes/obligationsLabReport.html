@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Obligations for Laboratory Report - EHDS Logical Information Models v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="useCaseDispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Obligations for Laboratory Report</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.2.1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSMedicationStatement-EHDSMedicationAdministration-changes'>https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSMedicationStatement-EHDSMedicationAdministration-changes</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Obligations for Laboratory Report</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#actors-and-use-cases" id="markdown-toc-actors-and-use-cases">Actors and use cases</a></li>
+</ul>
+
+</div>
+
+<h3 id="overview">Overview</h3>
+
+<p>Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.</p>
+
+<p>This page describes the actors and functional use cases that have been defined for specifying the obligations.</p>
+
+<h3 id="actors-and-use-cases">Actors and use cases</h3>
+
+<!-- [EHDSAddress]: StructureDefinition-EHDSAddress.html
+[EHDSAdministeredDosage]: StructureDefinition-EHDSAdministeredDosage.html
+[EHDSAdvanceDirective]: StructureDefinition-EHDSAdvanceDirective.html
+[EHDSAlert]: StructureDefinition-EHDSAlert.html
+[EHDSAllergyIntolerance]: StructureDefinition-EHDSAllergyIntolerance.html
+[EHDSAttachment]: StructureDefinition-EHDSAttachment.html
+[EHDSBodyStructure]: StructureDefinition-EHDSBodyStructure.html
+[EHDSCarePlan]: StructureDefinition-EHDSCarePlan.html
+[EHDSCondition]: StructureDefinition-EHDSCondition.html
+[EHDSCoverage]: StructureDefinition-EHDSCoverage.html
+[EHDSCurrentPregnancy]: StructureDefinition-EHDSCurrentPregnancy.html
+[EHDSDataSet]: StructureDefinition-EHDSDataSet.html
+[EHDSDevice]: StructureDefinition-EHDSDevice.html
+[EHDSDeviceUse]: StructureDefinition-EHDSDeviceUse.html
+[EHDSDischargeReport]: StructureDefinition-EHDSDischargeReport.html
+[EHDSDocument]: StructureDefinition-EHDSDocument.html
+[EHDSDosage]: StructureDefinition-EHDSDosage.html
+[EHDSEncounter]: StructureDefinition-EHDSEncounter.html
+[EHDSEndpoint]: StructureDefinition-EHDSEndpoint.html
+[EHDSFunctionalStatus]: StructureDefinition-EHDSFunctionalStatus.html
+[EHDSHealthProfessional]: StructureDefinition-EHDSHealthProfessional.html
+[EHDSHumanName]: StructureDefinition-EHDSHumanName.html
+[EHDSImagingReport]: StructureDefinition-EHDSImagingReport.html
+[EHDSImagingStudy]: StructureDefinition-EHDSImagingStudy.html
+[EHDSImmunisation]: StructureDefinition-EHDSImmunisation.html
+[EHDSLaboratoryObservation]: StructureDefinition-EHDSLaboratoryObservation.html
+[EHDSLaboratoryReport]: StructureDefinition-EHDSLaboratoryReport.html
+[EHDSLocation]: StructureDefinition-EHDSLocation.html
+[EHDSMedia]: StructureDefinition-EHDSMedia.html
+[EHDSMedicationAdministration]: StructureDefinition-EHDSMedicationAdministration.html
+[EHDSMedicationDispense]: StructureDefinition-EHDSMedicationDispense.html
+[EHDSMedication]: StructureDefinition-EHDSMedication.html
+[EHDSMedicationPrescription]: StructureDefinition-EHDSMedicationPrescription.html
+[EHDSMedicationUse]: StructureDefinition-EHDSMedicationUse.html
+[EHDSObservation]: StructureDefinition-EHDSObservation.html
+[EHDSOrganisation]: StructureDefinition-EHDSOrganisation.html
+[EHDSPatient]: StructureDefinition-EHDSPatient.html
+[EHDSPatientSummary]: StructureDefinition-EHDSPatientSummary.html
+[EHDSPregnancyHistory]: StructureDefinition-EHDSPregnancyHistory.html
+[EHDSProcedure]: StructureDefinition-EHDSProcedure.html
+[EHDSRelatedPerson]: StructureDefinition-EHDSRelatedPerson.html
+[EHDSServiceRequest]: StructureDefinition-EHDSServiceRequest.html
+[EHDSSocialHistory]: StructureDefinition-EHDSSocialHistory.html
+[EHDSSpecimen]: StructureDefinition-EHDSSpecimen.html
+[EHDSSubstanceUse]: StructureDefinition-EHDSSubstanceUse.html
+[EHDSTelecom]: StructureDefinition-EHDSTelecom.html
+[EHDSTravelHistory]: StructureDefinition-EHDSTravelHistory.html -->
+
+<p>Three actors have been specified:
+<!-- * the [Creator](ActorDefinition-actor-creator-eu-lab.html) ; -->
+<!-- * the [Repository](ActorDefinition-actor-repos-eu-lab.html) ; and -->
+<!-- * the [Consumer](ActorDefinition-actor-consumer-eu-lab.html) --></p>
+
+<ul>
+  <li>Result report creator</li>
+  <li>Result report repository</li>
+  <li>Result report consumer</li>
+</ul>
+
+<p>The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing.
+The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
+The last actor is the system using the report received or retrieved.</p>
+
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="192px" preserveAspectRatio="none" style="width:987px;height:192px;background:#FFFFFF;" version="1.1" viewBox="0 0 987 192" width="987px" zoomAndPan="magnify"><defs /><g><!--entity creator--><g class="entity" data-entity="creator" data-source-line="1" data-uid="ent0002" id="entity_creator"><ellipse cx="177.1772" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M177.1772,22 L177.1772,49 M164.1772,30 L190.1772,30 M177.1772,49 L164.1772,64 M177.1772,49 L190.1772,64" fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="193.3545" x="80.5" y="78.4951">Medical Test Result Creator</text></g><!--entity repos--><g class="entity" data-entity="repos" data-source-line="2" data-uid="ent0003" id="entity_repos"><ellipse cx="503.9463" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M503.9463,22 L503.9463,49 M490.9463,30 L516.9463,30 M503.9463,49 L490.9463,64 M503.9463,49 L516.9463,64" fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="215.8926" x="396" y="78.4951">Medical Test Result Repository</text></g><!--entity consumer--><g class="entity" data-entity="consumer" data-source-line="3" data-uid="ent0004" id="entity_consumer"><ellipse cx="833.104" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M833.104,22 L833.104,49 M820.104,30 L846.104,30 M833.104,49 L820.104,64 M833.104,49 L846.104,64" fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="212.208" x="727" y="78.4951">Medical Test Result Consumer</text></g><g class="entity" data-entity="create" data-source-line="4" data-uid="ent0005" id="entity_create"><ellipse cx="89.1087" cy="164.0217" fill="#F1F1F1" rx="83.1087" ry="19.0217" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.9316" x="25.5866" y="167.0568">Generate a report</text></g><g class="entity" data-entity="store" data-source-line="5" data-uid="ent0006" id="entity_store"><ellipse cx="503.8752" cy="163.775" fill="#F1F1F1" rx="71.8752" ry="16.775" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.8564" x="451.947" y="167.5226">Store a report</text></g><g class="entity" data-entity="use" data-source-line="6" data-uid="ent0007" id="entity_use"><ellipse cx="913.7733" cy="163.9547" fill="#F1F1F1" rx="67.7733" ry="15.9547" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.7002" x="867.4232" y="167.7022">Use a report</text></g><g class="entity" data-entity="send" data-source-line="7" data-uid="ent0008" id="entity_send"><ellipse cx="301.9943" cy="163.8989" fill="#F1F1F1" rx="94.9943" ry="21.3989" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.9609" x="225.5138" y="166.7455">Send/Provide a report</text></g><g class="entity" data-entity="receive" data-source-line="8" data-uid="ent0009" id="entity_receive"><ellipse cx="711.1332" cy="163.8266" fill="#F1F1F1" rx="99.6332" ry="22.3266" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.249" x="629.5087" y="166.6733">Receive/Query a report</text></g><!--link creator to create--><g class="link" data-entity-1="creator" data-entity-2="create" data-source-line="10" data-uid="lnk10" id="link_creator_create"><path d="M149.4,81.67 C133.67,102.85 118.2556,123.5918 105.8256,140.3418" fill="none" id="creator-to-create" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="102.25,145.16,110.8255,140.3164,105.2296,141.1448,104.4012,135.5489,102.25,145.16" style="stroke:#181818;stroke-width:1;" /></g><!--link creator to send--><g class="link" data-entity-1="creator" data-entity-2="send" data-source-line="11" data-uid="lnk11" id="link_creator_send"><path d="M216.21,81.67 C237.54,101.9 258.7553,122.0024 276.3953,138.7224" fill="none" id="creator-to-send" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="280.75,142.85,276.9697,133.7555,277.1211,139.4104,271.4663,139.5618,280.75,142.85" style="stroke:#181818;stroke-width:1;" /></g><!--link consumer to use--><g class="link" data-entity-1="consumer" data-entity-2="use" data-source-line="12" data-uid="lnk12" id="link_consumer_use"><path d="M858.41,81.67 C873.72,104.07 889.0062,126.4252 900.3362,143.0152" fill="none" id="consumer-to-use" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="903.72,147.97,901.9475,138.282,900.9002,143.841,895.3411,142.7937,903.72,147.97" style="stroke:#181818;stroke-width:1;" /></g><!--link consumer to receive--><g class="link" data-entity-1="consumer" data-entity-2="receive" data-source-line="13" data-uid="lnk13" id="link_consumer_receive"><path d="M794.73,81.67 C774.33,101.49 754.2636,120.9692 737.0936,137.6492" fill="none" id="consumer-to-receive" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="732.79,141.83,742.0326,138.4279,736.3763,138.346,736.4582,132.6897,732.79,141.83" style="stroke:#181818;stroke-width:1;" /></g><!--link repos to store--><g class="link" data-entity-1="repos" data-entity-2="store" data-source-line="14" data-uid="lnk14" id="link_repos_store"><path d="M504,81.67 C504,103.52 504,124.06 504,140.74" fill="none" id="repos-to-store" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="504,146.74,508,137.74,504,141.74,500,137.74,504,146.74" style="stroke:#181818;stroke-width:1;" /></g><!--link repos to send--><g class="link" data-entity-1="repos" data-entity-2="send" data-source-line="15" data-uid="lnk15" id="link_repos_send"><path d="M440.92,81.51 C405.73,102.15 368.5252,123.974 339.9052,140.764" fill="none" id="repos-to-send" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="334.73,143.8,344.5168,142.6961,339.0427,141.27,340.4687,135.7958,334.73,143.8" style="stroke:#181818;stroke-width:1;" /></g><!--link repos to receive--><g class="link" data-entity-1="repos" data-entity-2="receive" data-source-line="16" data-uid="lnk16" id="link_repos_receive"><path d="M568.64,81.51 C603.99,101.74 641.2131,123.0488 670.5031,139.8188" fill="none" id="repos-to-receive" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="675.71,142.8,669.8871,134.8569,671.3709,140.3156,665.9121,141.7994,675.71,142.8" style="stroke:#181818;stroke-width:1;" /></g></g></svg></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  Package xtehr.eu.ehds.models#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 5, 2026 21:14+0000">2026-02-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

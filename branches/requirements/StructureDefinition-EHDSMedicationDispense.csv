@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSMedicationDispense","EHDSMedicationDispense","","","",0,*,"","","","null {[]} {[]}
+","Medication dispensation model","Logical model for medication dispensation (based on request or independently)","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSMedicationDispense.header","EHDSMedicationDispense.header","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationDispenseHeader {[]} {[]}
+","Header level metadata about the dispense","Header level metadata about the dispense","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.header",1,1,"",""
+"EHDSMedicationDispense.dispensingOrganizationOrDevice[x]","EHDSMedicationDispense.dispensingOrganizationOrDevice[x]","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Dispensing organization or device","Dispensing organization or device","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.dispensingOrganizationOrDevice[x]",0,*,"",""
+"EHDSMedicationDispense.dispenseLocation","EHDSMedicationDispense.dispenseLocation","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}
+","Location of dispense","Location of dispense","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.dispenseLocation",0,1,"",""
+"EHDSMedicationDispense.receiver[x]","EHDSMedicationDispense.receiver[x]","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson {[]} {[]}","Identification of the person who received the dispensed medication, especially when it was not the patient","Identification of the person who received the dispensed medication, especially when it was not the patient","Added","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.receiver[x]",0,1,"",""
+"EHDSMedicationDispense.relatedRequest","EHDSMedicationDispense.relatedRequest","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifier of the prescription or prescription item the dispense is related to","Identifier of the prescription or prescription item the dispense is related to","No change","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.relatedRequest",0,*,"",""
+"EHDSMedicationDispense.medication","EHDSMedicationDispense.medication","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication {[]} {[]}
+","Exact dispensed product","Exact dispensed product","No change","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.medication",1,1,"",""
+"EHDSMedicationDispense.dispensedQuantity","EHDSMedicationDispense.dispensedQuantity","","","",1,1,"","","","Quantity {[]} {[]}
+","Number of dispensed packages if the pack size is known, or number of smaller items/units","Number of dispensed packages if the pack size is known, or number of smaller items/units","No change","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.dispensedQuantity",1,1,"",""
+"EHDSMedicationDispense.timeOfDispensation","EHDSMedicationDispense.timeOfDispensation","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of dispensation","Date and time of dispensation","No change","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.timeOfDispensation",1,1,"",""
+"EHDSMedicationDispense.substitution","EHDSMedicationDispense.substitution","","","",0,1,"","","","Base {[]} {[]}
+","Indicated whether substitution was made by the dispenser","Indicated whether substitution was made by the dispenser","No change but subelements added","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution",0,1,"",""
+"EHDSMedicationDispense.substitution.substitutionOccurred","EHDSMedicationDispense.substitution.substitutionOccurred","","","",1,1,"","","","boolean {[]} {[]}
+","Indicated whether substitution was made by the dispenser","Indicated whether substitution was made by the dispenser","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution.substitutionOccurred",1,1,"",""
+"EHDSMedicationDispense.substitution.type","EHDSMedicationDispense.substitution.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","What kind of substitution was made by the dispenser","What kind of substitution was made by the dispenser","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution.type",0,1,"",""
+"EHDSMedicationDispense.substitution.reason","EHDSMedicationDispense.substitution.reason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason why the substitution was made","Reason why the substitution was made","","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.substitution.reason",0,*,"",""
+"EHDSMedicationDispense.dosageInstructions","EHDSMedicationDispense.dosageInstructions","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosaging {[]} {[]}
+","Dosaging and administration instructions","Dosaging and administration instructions","Added","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.dosageInstructions",0,*,"",""
+"EHDSMedicationDispense.comment","EHDSMedicationDispense.comment","","","",0,*,"","","","string {[]} {[]}
+","Additional information or comments","Additional information or comments","Added.","","","","","","","","",,,,,"",,,,"EHDSMedicationDispense.comment",0,*,"",""

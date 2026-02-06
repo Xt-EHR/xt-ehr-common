@@ -1,0 +1,33 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSMedicationUse","EHDSMedicationUse","","","",0,*,"","","","null {[]} {[]}
+","Medication use model","Statement about a single medication as part of a medication summary.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSMedicationUse.header","EHDSMedicationUse.header","","","",1,1,"","","","Base {[]} {[]}
+","Basic metadata for this information","Basic metadata for this information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSMedicationUse.header.subject","EHDSMedicationUse.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSMedicationUse.header.identifier","EHDSMedicationUse.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).","Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSMedicationUse.header.author[x]","EHDSMedicationUse.header.author[x]","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","The author of the medication use statement","The author of the medication use statement","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.author[x]",0,*,"",""
+"EHDSMedicationUse.header.date","EHDSMedicationUse.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and optionally time of authoring/issuing","Date and optionally time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.date",0,1,"",""
+"EHDSMedicationUse.header.status","EHDSMedicationUse.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the medication use statement (e.g. recorded)","Status of the medication use statement (e.g. recorded)","","eHN PS Guideline, MyHealth@EU, ISO IPS","","","","","","","",,"preferred","HL7 MedicationStatement Status Codes","","",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSMedicationUse.header.source","EHDSMedicationUse.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.","Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.source",0,1,"",""
+"EHDSMedicationUse.header.language","EHDSMedicationUse.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSMedicationUse.treatmentStatus","EHDSMedicationUse.treatmentStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","The current status of taking the medicine (e.g. taking, on-hold, stopped)","The current status of taking the medicine (e.g. taking, on-hold, stopped)","","MyHealth@EU","","","","","","","",,,,,"",,,,"EHDSMedicationUse.treatmentStatus",0,1,"",""
+"EHDSMedicationUse.medication","EHDSMedicationUse.medication","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication {[]} {[]}
+","Describes the medicinal product.","Describes the medicinal product.","","eHN PS Guideline, ISO IPS, MyHealth@EU","","","","","","","",,,,,"",,,,"EHDSMedicationUse.medication",1,1,"",""
+"EHDSMedicationUse.reason[x]","EHDSMedicationUse.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the use of the medication (typically diagnosis, or a procedure)","Reason for the use of the medication (typically diagnosis, or a procedure)","","eHN PS Guideline, ISO IPS, MyHealth@EU","","","","","","","",,,,,"",,,,"EHDSMedicationUse.reason[x]",0,*,"",""
+"EHDSMedicationUse.dosageInstructions","EHDSMedicationUse.dosageInstructions","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosage {[]} {[]}
+","Details of how medication is/was taken or should be taken","Details of how medication is/was taken or should be taken","","eHN PS Guideline, ISO IPS, MyHealth@EU","","","","","","","",,,,,"",,,,"EHDSMedicationUse.dosageInstructions",1,1,"",""
+"EHDSMedicationUse.periodOfUse","EHDSMedicationUse.periodOfUse","","","",0,1,"","","","Period {[]} {[]}
+","Period when the patient took, is taking or is expected to take the medication","Period when the patient took, is taking or is expected to take the medication","","eHN PS Guideline, ISO IPS, MyHealth@EU","","","","","","","",,,,,"",,,,"EHDSMedicationUse.periodOfUse",0,1,"",""
+"EHDSMedicationUse.derivedFrom[x]","EHDSMedicationUse.derivedFrom[x]","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationDispense {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministration {[]} {[]}","Prescriptions, dispenses or administrations that are the basis of this medication use statement.","Prescriptions, dispenses or administrations that are the basis of this medication use statement.","","","","","","","","","",,,,,"",,,,"EHDSMedicationUse.derivedFrom[x]",0,*,"",""
+"EHDSMedicationUse.note","EHDSMedicationUse.note","","","",0,1,"","","","string {[]} {[]}
+","Additional information about the medication use statement","Additional information about the medication use statement","","","","","","","","","",,,,,"",,,,"EHDSMedicationUse.note",0,1,"",""

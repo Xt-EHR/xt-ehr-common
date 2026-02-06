@@ -1,0 +1,40 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSAlert","EHDSAlert","","","",0,*,"","","","null {[]} {[]}
+","Alert model","A statement higlighting a fact about the patient that requires clinical attention to ensure safety and prevent adverse outcomes.
+Example 1: intolerance to aspirin due to gastrointestinal bleeding.
+Example 2: intolerance to captopril because of cough (the patient is not allergic but can't tolerate it because of persistent cough)
+Example 3: the patient has a rare disease that requires special treatment
+Example 4: Airway Alert / Difficult Intubation
+Example 5: Diagnoses such as malignant hyperthermia, porphyria, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
+Example 6: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
+Example 7: participation in a clinical trial that has to be taken into account in a healthcare contact.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSAlert.header","EHDSAlert.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSAlert.header.subject","EHDSAlert.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSAlert.header.identifier","EHDSAlert.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSAlert.header.authorship","EHDSAlert.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Resource authoring details","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSAlert.header.authorship.author[x]","EHDSAlert.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","The author of the alert statement, i.e. the setter of the alert.","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSAlert.header.authorship.datetime","EHDSAlert.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSAlert.header.lastUpdate","EHDSAlert.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource (may be used for technical corrections).","Date and time of the last update to the resource (may be used for technical corrections).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSAlert.header.status","EHDSAlert.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Current status of the alert, indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.","Status of the resource or document","","","","","","","","","",,"preferred","hl7:Flag-status","","",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSAlert.header.statusReason[x]","EHDSAlert.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSAlert.header.language","EHDSAlert.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSAlert.code","EHDSAlert.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","A coded representation of the alert.","A coded representation of the alert.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSAlert.code",0,1,"",""
+"EHDSAlert.description","EHDSAlert.description","","","",0,1,"","","","string {[]} {[]}
+","Narrative representation of the alert","Narrative representation of the alert","","","","","","","","","",,,,,"",,,,"EHDSAlert.description",0,1,"",""
+"EHDSAlert.priority","EHDSAlert.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","A code that identifies the priority of the alert.","A code that identifies the priority of the alert.","","","","","","","","","",,"preferred","hl7:Flag-priority-code","","",,,,"EHDSAlert.priority",0,1,"",""
+"EHDSAlert.period","EHDSAlert.period","","","",0,1,"","","","Period {[]} {[]}
+","Time period when alert is active. The period of time from the activation of the alert to inactivation of the alert. If the alert is active, the end of the period should be unspecified.","Time period when alert is active. The period of time from the activation of the alert to inactivation of the alert. If the alert is active, the end of the period should be unspecified.","","","","","","","","","",,,,,"",,,,"EHDSAlert.period",0,1,"",""
+"EHDSAlert.sourceReference","EHDSAlert.sourceReference","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+","A reference to the resource the alert is about.","A reference to the resource the alert is about.","","","","","","","","","",,,,,"",,,,"EHDSAlert.sourceReference",0,*,"",""

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Laboratory Report - EHDS Logical Information Models v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="useCaseDispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Laboratory Report</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.2.1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSDevice-DeviceUse-changes'>https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSDevice-DeviceUse-changes</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Laboratory Report</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#information-models" id="markdown-toc-information-models">Information Models</a></li>
+  <li><a href="#detail-ehds-information-models-for-laboratory-report" id="markdown-toc-detail-ehds-information-models-for-laboratory-report">Detail EHDS information models for Laboratory report</a></li>
+  <li><a href="#fhir-implementation-guide" id="markdown-toc-fhir-implementation-guide">FHIR Implementation Guide</a></li>
+  <li><a href="#supporting-information" id="markdown-toc-supporting-information">Supporting Information</a></li>
+</ul>
+
+</div>
+<h3 id="information-models">Information Models</h3>
+<h4 id="conceptual-view">Conceptual view</h4>
+
+<p>Laboratory result report could be divided into several parts: document header, body and optionally it could also have various attachments.</p>
+
+<h5 id="laboratory-result-report">Laboratory Result Report</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="247px" preserveAspectRatio="none" style="width:483px;height:247px;background:#FFFFFF;" version="1.1" viewBox="0 0 483 247" width="483px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="147.75" x="10" y="104.4453" /><a href="StructureDefinition-EHDSLaboratoryReport.html" target="_top" title="StructureDefinition-EHDSLaboratoryReport.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSLaboratoryReport.html" xlink:show="new" xlink:title="StructureDefinition-EHDSLaboratoryReport.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="127.75" x="20" y="127.4404">Laboratory Report</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="201.5215" x="207.75" y="20" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181.5215" x="217.75" y="42.9951">Laboratory Report header</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,38.1484 197.75,38.1484 L207.75,38.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="264.002" x="207.75" y="76.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="244.002" x="217.75" y="99.292">Laboratory Report structured body</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,94.4453 197.75,94.4453 L207.75,94.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="135.2129" x="207.75" y="132.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.2129" x="217.75" y="155.5889">Presented forms</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,150.7422 197.75,150.7422 L207.75,150.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="240.8145" x="207.75" y="188.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="220.8145" x="217.75" y="211.8857">Laboratory Report attachments</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,207.0391 197.75,207.0391 L207.75,207.0391" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h5 id="laboratory-result-header">Laboratory Result header</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="587px" preserveAspectRatio="none" style="width:641px;height:587px;background:#FFFFFF;" version="1.1" viewBox="0 0 641 587" width="641px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="201.5215" x="10" y="274.7461" /><a href="StructureDefinition-EHDSLaboratoryReport.html" target="_top" title="StructureDefinition-EHDSLaboratoryReport.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSLaboratoryReport.html" xlink:show="new" xlink:title="StructureDefinition-EHDSLaboratoryReport.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="181.5215" x="20" y="297.7412">Laboratory Report header</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="72.3359" x="261.5215" y="20" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3359" x="271.5215" y="42.9951">Subject</text><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,38.1484 251.5215,38.1484 L261.5215,38.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="321.9707" x="261.5215" y="76.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="301.9707" x="271.5215" y="99.292">Health insurance and payment information</text><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,94.4453 251.5215,94.4453 L261.5215,94.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="148.5225" x="261.5215" y="132.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.5225" x="271.5215" y="155.5889">Intended recipient</text><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,150.7422 251.5215,150.7422 L261.5215,150.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="96.0771" x="261.5215" y="188.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.0771" x="271.5215" y="211.8857">Authorship</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.1338" x="410.5986" y="202.7373">Author</text><path d="M357.5986,207.0391 L367.5986,207.0391 C382.5986,207.0391 382.5986,197.8906 397.5986,197.8906 L407.5986,197.8906" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1543" x="410.5986" y="221.0342">DateTime</text><path d="M357.5986,207.0391 L367.5986,207.0391 C382.5986,207.0391 382.5986,216.1875 397.5986,216.1875 L407.5986,216.1875" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,207.0391 251.5215,207.0391 L261.5215,207.0391" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="97.3486" x="261.5215" y="245.1875" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.3486" x="271.5215" y="268.1826">Attestation</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.3213" x="411.8701" y="259.0342">Attester</text><path d="M358.8701,263.3359 L368.8701,263.3359 C383.8701,263.3359 383.8701,254.1875 398.8701,254.1875 L408.8701,254.1875" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1543" x="411.8701" y="277.3311">DateTime</text><path d="M358.8701,263.3359 L368.8701,263.3359 C383.8701,263.3359 383.8701,272.4844 398.8701,272.4844 L408.8701,272.4844" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,263.3359 251.5215,263.3359 L261.5215,263.3359" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="163.9922" x="261.5215" y="301.4844" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143.9922" x="271.5215" y="324.4795">Legal authentication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136.9854" x="478.5137" y="315.3311">Legal authenticator</text><path d="M425.5137,319.6328 L435.5137,319.6328 C450.5137,319.6328 450.5137,310.4844 465.5137,310.4844 L475.5137,310.4844" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1543" x="478.5137" y="333.6279">DateTime</text><path d="M425.5137,319.6328 L435.5137,319.6328 C450.5137,319.6328 450.5137,328.7813 465.5137,328.7813 L475.5137,328.7813" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,319.6328 251.5215,319.6328 L261.5215,319.6328" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="164.833" x="261.5215" y="438.7109" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.833" x="271.5215" y="461.7061">Document metadata</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.8887" x="479.3545" y="351.9248">Document ID</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,347.0781 466.3545,347.0781 L476.3545,347.0781" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.2539" x="479.3545" y="370.2217">Document type</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,365.375 466.3545,365.375 L476.3545,365.375" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.998" x="479.3545" y="388.5186">Document status</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,383.6719 466.3545,383.6719 L476.3545,383.6719" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.1533" x="479.3545" y="406.8154">Period</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,401.9688 466.3545,401.9688 L476.3545,401.9688" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.9258" x="479.3545" y="425.1123">Report date and time</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,420.2656 466.3545,420.2656 L476.3545,420.2656" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3506" x="479.3545" y="443.4092">Document title</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,438.5625 466.3545,438.5625 L476.3545,438.5625" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.8311" x="479.3545" y="461.7061">Event type</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,456.8594 466.3545,456.8594 L476.3545,456.8594" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.2168" x="479.3545" y="480.0029">Specialty</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,475.1563 466.3545,475.1563 L476.3545,475.1563" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.6357" x="479.3545" y="498.2998">Report custodian</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,493.4531 466.3545,493.4531 L476.3545,493.4531" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.9355" x="479.3545" y="516.5967">Document format</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,511.75 466.3545,511.75 L476.3545,511.75" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.917" x="479.3545" y="534.8936">Confidentiality</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,530.0469 466.3545,530.0469 L476.3545,530.0469" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.0908" x="479.3545" y="553.1904">Language</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,548.3438 466.3545,548.3438 L476.3545,548.3438" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.5684" x="479.3545" y="571.4873">Version</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,566.6406 466.3545,566.6406 L476.3545,566.6406" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,456.8594 251.5215,456.8594 L261.5215,456.8594" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h5 id="laboratory-result-body">Laboratory Result body</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="318px" preserveAspectRatio="none" style="width:759px;height:318px;background:#FFFFFF;" version="1.1" viewBox="0 0 759 318" width="759px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="187.542" x="10" y="139.9844" /><a href="StructureDefinition-EHDSLaboratoryReport.html" target="_top" title="StructureDefinition-EHDSLaboratoryReport.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSLaboratoryReport.html" xlink:show="new" xlink:title="StructureDefinition-EHDSLaboratoryReport.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="167.542" x="20" y="162.9795">Laboratory Report Body</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="145.5283" x="247.542" y="46.7422" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.5283" x="257.542" y="69.7373">Order information</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57.4971" x="446.0703" y="23.9951">Order Id</text><path d="M393.0703,64.8906 L403.0703,64.8906 C418.0703,64.8906 418.0703,19.1484 433.0703,19.1484 L443.0703,19.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.9189" x="446.0703" y="42.292">Order date and time</text><path d="M393.0703,64.8906 L403.0703,64.8906 C418.0703,64.8906 418.0703,37.4453 433.0703,37.4453 L443.0703,37.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.9033" x="446.0703" y="60.5889">Order placer</text><path d="M393.0703,64.8906 L403.0703,64.8906 C418.0703,64.8906 418.0703,55.7422 433.0703,55.7422 L443.0703,55.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.4893" x="446.0703" y="78.8857">Order reason text</text><path d="M393.0703,64.8906 L403.0703,64.8906 C418.0703,64.8906 418.0703,74.0391 433.0703,74.0391 L443.0703,74.0391" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.1621" x="446.0703" y="97.1826">Order reason</text><path d="M393.0703,64.8906 L403.0703,64.8906 C418.0703,64.8906 418.0703,92.3359 433.0703,92.3359 L443.0703,92.3359" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.418" x="446.0703" y="115.4795">Clinical question</text><path d="M393.0703,64.8906 L403.0703,64.8906 C418.0703,64.8906 418.0703,110.6328 433.0703,110.6328 L443.0703,110.6328" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M197.542,158.1328 L207.542,158.1328 C222.542,158.1328 222.542,64.8906 237.542,64.8906 L247.542,64.8906" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="182.4902" x="247.542" y="147.375" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162.4902" x="257.542" y="170.3701">Supporting information</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.251" x="483.0322" y="133.7764">Observation</text><path d="M430.0322,165.5234 L440.0322,165.5234 C455.0322,165.5234 455.0322,128.9297 470.0322,128.9297 L480.0322,128.9297" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.8076" x="483.0322" y="152.0732">Condition</text><path d="M430.0322,165.5234 L440.0322,165.5234 C455.0322,165.5234 455.0322,147.2266 470.0322,147.2266 L480.0322,147.2266" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183.7021" x="483.0322" y="170.3701">Medication Administration</text><path d="M430.0322,165.5234 L440.0322,165.5234 C455.0322,165.5234 455.0322,165.5234 470.0322,165.5234 L480.0322,165.5234" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.5713" x="483.0322" y="188.667">Sex for clinical use</text><path d="M430.0322,165.5234 L440.0322,165.5234 C455.0322,165.5234 455.0322,183.8203 470.0322,183.8203 L480.0322,183.8203" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.0107" x="483.0322" y="206.9639">Service requests</text><path d="M430.0322,165.5234 L440.0322,165.5234 C455.0322,165.5234 455.0322,202.1172 470.0322,202.1172 L480.0322,202.1172" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M197.542,158.1328 L207.542,158.1328 C222.542,158.1328 222.542,165.5234 237.542,165.5234 L247.542,165.5234" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="89.0977" x="247.542" y="203.6719" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.0977" x="257.542" y="226.667">Specimen</text><path d="M197.542,158.1328 L207.542,158.1328 C222.542,158.1328 222.542,221.8203 237.542,221.8203 L247.542,221.8203" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="99.8711" x="247.542" y="259.9688" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.8711" x="257.542" y="282.9639">Result data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.9365" x="400.4131" y="264.667">Narrative report</text><path d="M347.4131,278.1172 L357.4131,278.1172 C372.4131,278.1172 372.4131,259.8203 387.4131,259.8203 L397.4131,259.8203" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="346.6025" x="400.4131" y="282.9639">Comments interpretations and recommendations</text><path d="M347.4131,278.1172 L357.4131,278.1172 C372.4131,278.1172 372.4131,278.1172 387.4131,278.1172 L397.4131,278.1172" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159.2568" x="400.4131" y="301.2607">Laboratory test results</text><path d="M347.4131,278.1172 L357.4131,278.1172 C372.4131,278.1172 372.4131,296.4141 387.4131,296.4141 L397.4131,296.4141" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M197.542,158.1328 L207.542,158.1328 C222.542,158.1328 222.542,278.1172 237.542,278.1172 L247.542,278.1172" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h5 id="uml-representation">UML representation</h5>
+<p>Components of laboratory result report and its representation using UML notation:</p>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="1226px" preserveAspectRatio="none" style="width:1404px;height:1226px;background:#FFFFFF;" version="1.1" viewBox="0 0 1404 1226" width="1404px" zoomAndPan="magnify"><defs /><g><!--class labReport--><g class="entity" data-entity="labReport" data-source-line="6" data-uid="ent0002" id="entity_labReport"><rect fill="#F1F1F1" height="99.4844" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="195.1758" x="618" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="141.21" x="644.9829" y="24.9951">Laboratory report</text><line style="stroke:#181818;stroke-width:0.5;" x1="619" x2="812.1758" y1="33.2969" y2="33.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183.1758" x="624" y="50.292">Laboratory Report Header</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167.542" x="624" y="66.5889">Laboratory Report Body</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.043" x="624" y="82.8857">Presented Form</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42.0479" x="624" y="99.1826">Media</text></g><!--class header--><g class="entity" data-entity="header" data-source-line="13" data-uid="ent0003" id="entity_header"><rect fill="#F1F1F1" height="148.375" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="326.7129" x="107" y="183" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="207.04" x="166.8364" y="200.9951">Laboratory Report Header</text><line style="stroke:#181818;stroke-width:0.5;" x1="108" x2="432.7129" y1="209.2969" y2="209.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.9082" x="113" y="226.292">subject 1..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314.7129" x="113" y="242.5889">healthInsuranceAndPaymentInformation 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157.0625" x="113" y="258.8857">intendedRecipient 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.0283" x="113" y="275.1826">authorization 1..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105.6084" x="113" y="291.4795">attestation 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167.7949" x="113" y="307.7764">legalAuthentication 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168.0957" x="113" y="324.0732">documentMetadata 1..1</text></g><!--class body--><g class="entity" data-entity="body" data-source-line="14" data-uid="ent0005" id="entity_body"><rect fill="#F1F1F1" height="26.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="195.3965" x="469" y="244" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="189.3965" x="472" y="261.9951">Laboratory Report Body</text></g><!--class presentedForm--><g class="entity" data-entity="presentedForm" data-source-line="15" data-uid="ent0007" id="entity_presentedForm"><rect fill="#F1F1F1" height="50.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="132.2119" x="699.5" y="231.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="126.2119" x="702.5" y="249.4951">Presented Form</text><line style="stroke:#181818;stroke-width:0.5;" x1="700.5" x2="830.7119" y1="257.7969" y2="257.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82.3184" x="705.5" y="274.792">Attachment</text></g><!--class media--><g class="entity" data-entity="media" data-source-line="16" data-uid="ent0009" id="entity_media"><rect fill="#F1F1F1" height="50.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94.3184" x="866.5" y="231.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="47.6943" x="889.812" y="249.4951">Media</text><line style="stroke:#181818;stroke-width:0.5;" x1="867.5" x2="959.8184" y1="257.7969" y2="257.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82.3184" x="872.5" y="274.792">Attachment</text></g><!--class orderInformation--><g class="entity" data-entity="orderInformation" data-source-line="31" data-uid="ent0011" id="entity_orderInformation"><rect fill="#F1F1F1" height="132.0781" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161.4268" x="7" y="1087" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="142.5908" x="16.418" y="1104.9951">Order information</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="167.4268" y1="1113.2969" y2="1113.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.8506" x="13" y="1130.292">orderId 1..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136.8965" x="13" y="1146.5889">orderDateTime 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.7197" x="13" y="1162.8857">orderPlacer 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.4873" x="13" y="1179.1826">orderReason 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.4268" x="13" y="1195.4795">orderReasonText 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.1533" x="13" y="1211.7764">clinicalQuastion 0..1</text></g><!--class supportingInformation--><g class="entity" data-entity="supportingInformation" data-source-line="32" data-uid="ent0013" id="entity_supportingInformation"><rect fill="#F1F1F1" height="132.0781" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="222.0684" x="111.5" y="416" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="185.459" x="129.8047" y="433.9951">Supporting information</text><line style="stroke:#181818;stroke-width:0.5;" x1="112.5" x2="332.5684" y1="442.2969" y2="442.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.0547" x="117.5" y="459.292">observation 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93.9873" x="117.5" y="475.5889">condition 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="210.0684" x="117.5" y="491.8857">medicationAdministration 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109.6758" x="117.5" y="508.1826">vaccination 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152.4619" x="117.5" y="524.4795">sexForClinicalUse 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.5547" x="117.5" y="540.7764">other 0..*</text></g><!--class specimen--><g class="entity" data-entity="specimen" data-source-line="33" data-uid="ent0015" id="entity_specimen"><rect fill="#F1F1F1" height="148.375" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="181.5381" x="368.5" y="408" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="76.7471" x="420.8955" y="425.9951">Specimen</text><line style="stroke:#181818;stroke-width:0.5;" x1="369.5" x2="549.0381" y1="434.2969" y2="434.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132.2686" x="374.5" y="451.292">typeOfSpecies 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.5986" x="374.5" y="467.5889">material 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.4883" x="374.5" y="483.8857">collectionPeriod 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.668" x="374.5" y="500.1826">bodySite 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.9814" x="374.5" y="516.4795">receivedDate 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169.5381" x="374.5" y="532.7764">collectionProcedure 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95.5938" x="374.5" y="549.0732">container 0..*</text></g><!--class serviceRequest--><g class="entity" data-entity="serviceRequest" data-source-line="34" data-uid="ent0017" id="entity_serviceRequest"><rect fill="#F1F1F1" height="132.0781" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="175.208" x="586" y="416" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127.8594" x="609.6743" y="433.9951">Service Request</text><line style="stroke:#181818;stroke-width:0.5;" x1="587" x2="760.208" y1="442.2969" y2="442.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.2529" x="592" y="459.292">serviceText 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.1543" x="592" y="475.5889">serviceCode 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.5303" x="592" y="491.8857">quantity 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.6826" x="592" y="508.1826">priority 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.208" x="592" y="524.4795">patientInstructions 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94.2539" x="592" y="540.7764">coverage 0..*</text></g><!--class resultData--><g class="entity" data-entity="resultData" data-source-line="35" data-uid="ent0019" id="entity_resultData"><rect fill="#F1F1F1" height="50.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="392.0713" x="796.5" y="456.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="90.5488" x="947.2612" y="474.4951">Result data</text><line style="stroke:#181818;stroke-width:0.5;" x1="797.5" x2="1187.5713" y1="482.7969" y2="482.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="380.0713" x="802.5" y="499.792">Comments Interpretations and Recommendations 0..*</text></g><!--class healthInsuranceAndPaymentInformation--><g class="entity" data-entity="healthInsuranceAndPaymentInformation" data-source-line="36" data-uid="ent0021" id="entity_healthInsuranceAndPaymentInformation"><rect fill="#F1F1F1" height="66.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="173.3506" x="1224" y="448.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="167.3506" x="1227" y="466.4951">Payment Information</text><line style="stroke:#181818;stroke-width:0.5;" x1="1225" x2="1396.3506" y1="474.7969" y2="474.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.7061" x="1230" y="491.792">insurance 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.6221" x="1230" y="508.0889">payment 0..*</text></g><!--class results--><g class="entity" data-entity="results" data-source-line="81" data-uid="ent0023" id="entity_results"><rect fill="#F1F1F1" height="376.5313" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="296.293" x="477.5" y="633" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="129.5684" x="560.8623" y="650.9951">Lab Observation</text><line style="stroke:#181818;stroke-width:0.5;" x1="478.5" x2="772.793" y1="659.2969" y2="659.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189.834" x="483.5" y="676.292">authorship information 1..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.1836" x="483.5" y="692.5889">status 1..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.4238" x="483.5" y="708.8857">observationDate 1..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.9277" x="483.5" y="725.1826">code 1..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.2305" x="483.5" y="741.4795">method 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="122.9648" x="483.5" y="757.7764">orderReference</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26.7148" x="610.915" y="757.7764">0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.6777" x="483.5" y="774.0732">performer 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="257.667" x="483.5" y="790.3701">value [quantity, code, range, ...] 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.085" x="483.5" y="806.667">dataAbsentReason 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.583" x="483.5" y="822.9639">uncertainty 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141.4014" x="483.5" y="839.2607">referenceRange 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161.8613" x="483.5" y="855.5576">interpretationCode 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.1504" x="483.5" y="871.8545">device 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.6104" x="483.5" y="888.1514">testKit 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98.2529" x="483.5" y="904.4482">calibrator 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170.6387" x="483.5" y="920.7451">accreditation status 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284.293" x="483.5" y="937.042">comments, narrative interpretations 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.459" x="483.5" y="953.3389">component 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="100.5361" x="483.5" y="969.6357">derivedFrom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24.8076" x="588.4863" y="969.6357">0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="94.1514" x="483.5" y="985.9326">triggeredBy</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24.8076" x="582.1016" y="985.9326">0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="92.1826" x="483.5" y="1002.2295">hasMember</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24.8076" x="580.1328" y="1002.2295">0..*</text></g><!--link labReport to header--><g class="link" data-entity-1="labReport" data-entity-2="header" data-source-line="13" data-uid="lnk4" id="link_labReport_header"><path codeLine="13" d="M606.8814,105.9497 C553.1614,129.9197 501.5096,152.9558 439.8796,180.4458" fill="none" id="labReport-header" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="617.84,101.06,610.7308,99.852,606.8814,105.9497,613.9906,107.1577,617.84,101.06" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="434.4,182.89,444.2488,182.8768,438.9663,180.8532,440.99,175.5707,434.4,182.89" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="534.5" y="149.0669">1..1</text></g><!--link labReport to body--><g class="link" data-entity-1="labReport" data-entity-2="body" data-source-line="14" data-uid="lnk6" id="link_labReport_body"><path codeLine="14" d="M671.846,115.657 C637.556,161.337 599.3732,212.2124 579.2532,239.0024" fill="none" id="labReport-body" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="679.05,106.06,672.249,108.4571,671.846,115.657,678.647,113.2598,679.05,106.06" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="575.65,243.8,584.2532,239.0056,578.6526,239.802,577.8563,234.2014,575.65,243.8" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="655.5" y="149.0669">1..1</text></g><!--link labReport to presentedForm--><g class="link" data-entity-1="labReport" data-entity-2="presentedForm" data-source-line="15" data-uid="lnk8" id="link_labReport_presentedForm"><path codeLine="15" d="M730.6604,117.6967 C740.6604,157.4067 750.0047,194.4717 757.8547,225.6417" fill="none" id="labReport-presentedForm" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="727.73,106.06,725.3163,112.8552,730.6604,117.6967,733.0741,110.9015,727.73,106.06" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="759.32,231.46,761.0009,221.7556,758.0989,226.6114,753.2431,223.7094,759.32,231.46" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="740.5" y="149.0669">0..1</text></g><!--link labReport to media--><g class="link" data-entity-1="labReport" data-entity-2="media" data-source-line="16" data-uid="lnk10" id="link_labReport_media"><path codeLine="16" d="M776.0683,114.2232 C813.7783,149.5432 849.5,183 849.5,183 C849.5,183 869.3157,205.5974 887.8757,226.7774" fill="none" id="labReport-media" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="767.31,106.02,768.9547,113.041,776.0683,114.2232,774.4235,107.2022,767.31,106.02" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="891.83,231.29,888.9069,221.8849,888.5347,227.5295,882.8901,227.1574,891.83,231.29" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="818.5" y="149.0669">0..*</text></g><!--link body to orderInformation--><g class="link" data-entity-1="body" data-entity-2="orderInformation" data-source-line="31" data-uid="lnk12" id="link_body_orderInformation"><path codeLine="31" d="M537.3799,276.4829 C504.7199,297.2229 451.5,331 451.5,331 C451.5,331 93.5,408 93.5,408 C93.5,408 89.5387,899.6702 88.0687,1080.9502" fill="none" id="body-orderInformation" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="547.51,270.05,540.3007,269.8897,537.3799,276.4829,544.5893,276.6431,547.51,270.05" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="88.02,1086.95,92.0928,1077.9827,88.0605,1081.9502,84.0931,1077.9179,88.02,1086.95" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="93.5" y="599.0669">0..*</text></g><!--link body to supportingInformation--><g class="link" data-entity-1="body" data-entity-2="supportingInformation" data-source-line="32" data-uid="lnk14" id="link_body_supportingInformation"><path codeLine="32" d="M537.4497,276.836 C495.3997,304.086 407.0147,361.3863 328.0147,412.5963" fill="none" id="body-supportingInformation" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="547.52,270.31,540.3095,270.2162,537.4497,276.836,544.6602,276.9298,547.52,270.31" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="322.98,415.86,332.7079,414.321,327.1756,413.1403,328.3563,407.608,322.98,415.86" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="406.5" y="374.0669">0..1</text></g><!--link body to specimen--><g class="link" data-entity-1="body" data-entity-2="specimen" data-source-line="33" data-uid="lnk16" id="link_body_specimen"><path codeLine="33" d="M555.4017,281.1304 C543.0117,306.9704 521.2155,352.3804 497.2355,402.3604" fill="none" id="body-specimen" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="560.59,270.31,554.389,273.9908,555.4017,281.1304,561.6027,277.4496,560.59,270.31" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="494.64,407.77,502.1396,401.3859,496.8029,403.262,494.9268,397.9253,494.64,407.77" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="517.5" y="374.0669">0..*</text></g><!--link body to serviceRequest--><g class="link" data-entity-1="body" data-entity-2="serviceRequest" data-source-line="34" data-uid="lnk18" id="link_body_serviceRequest"><path codeLine="34" d="M577.5995,281.1298 C590.6695,308.3798 615.0737,359.2408 639.6537,410.4508" fill="none" id="body-serviceRequest" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="572.41,270.31,571.3982,277.4498,577.5995,281.1298,578.6114,273.9901,572.41,270.31" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="642.25,415.86,641.9616,406.0154,640.0864,411.3524,634.7494,409.4771,642.25,415.86" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="624.5" y="374.0669">0..*</text></g><!--link body to resultData--><g class="link" data-entity-1="body" data-entity-2="resultData" data-source-line="35" data-uid="lnk20" id="link_body_resultData"><path codeLine="35" d="M595.6201,276.4829 C628.2801,297.2229 681.5,331 681.5,331 C681.5,331 847.8559,411.2332 936.0859,453.7932" fill="none" id="body-resultData" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="585.49,270.05,588.4107,276.6431,595.6201,276.4829,592.6993,269.8897,585.49,270.05" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="941.49,456.4,935.1217,448.887,936.9866,454.2277,931.6459,456.0925,941.49,456.4" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="774.5" y="374.0669">1..1</text></g><!--link body to healthInsuranceAndPaymentInformation--><g class="link" data-entity-1="body" data-entity-2="healthInsuranceAndPaymentInformation" data-source-line="36" data-uid="lnk22" id="link_body_healthInsuranceAndPaymentInformation"><path codeLine="36" d="M595.6201,276.4829 C628.2801,297.2229 681.5,331 681.5,331 C681.5,331 1206.5,408 1206.5,408 C1206.5,408 1231.3679,425.4645 1259.0679,444.8945" fill="none" id="body-healthInsuranceAndPaymentInformation" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="585.49,270.05,588.4107,276.6431,595.6201,276.4829,592.6993,269.8897,585.49,270.05" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="1263.98,448.34,1258.9089,439.897,1259.8866,445.4687,1254.3149,446.4464,1263.98,448.34" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="991.5" y="374.0669">0..*</text></g><!--link resultData to results--><g class="link" data-entity-1="resultData" data-entity-2="results" data-source-line="81" data-uid="lnk24" id="link_resultData_results"><path codeLine="81" d="M956.978,515.6638 C916.568,552.8338 850.1563,613.8984 778.0663,680.1984" fill="none" id="resultData-results" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="965.81,507.54,958.6861,508.6579,956.978,515.6638,964.102,514.5459,965.81,507.54" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="773.65,684.26,782.9821,681.1118,777.3302,680.8753,777.5667,675.2234,773.65,684.26" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="874.5" y="599.0669">0..*</text></g><!--link results to results--><g class="link" data-entity-1="results" data-entity-2="results" data-source-line="107" data-uid="lnk25" id="link_results_results"><path codeLine="107" d="M773.77,808.86 C794.57,810.92 808.5,815.14 808.5,821.5 C808.5,827.86 800.5408,831.4887 779.7408,833.5487" fill="none" id="results-to-results" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="773.77,834.14,783.1204,837.2335,778.7457,833.6472,782.332,829.2725,773.77,834.14" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103.9302" x="814.5" y="826.0669">triggeredBy 0..*</text></g><!--link results to results--><g class="link" data-entity-1="results" data-entity-2="results" data-source-line="108" data-uid="lnk26" id="link_results_results"><path codeLine="108" d="M773.74,793.81 C850.21,790.79 923.5,800.02 923.5,821.5 C923.5,842.98 856.2053,852.4468 779.7353,849.4268" fill="none" id="results-to-results-1" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="773.74,849.19,782.5751,853.542,778.7361,849.3873,782.8908,845.5483,773.74,849.19" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103.6191" x="929.5" y="826.0669">hasMember 0..*</text></g><!--link results to results--><g class="link" data-entity-1="results" data-entity-2="results" data-source-line="109" data-uid="lnk27" id="link_results_results"><path codeLine="109" d="M773.65,783.47 C895.27,771.53 1038.5,784.2 1038.5,821.5 C1038.5,858.8 901.2413,872.0562 779.6213,860.1162" fill="none" id="results-to-results-2" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="773.65,859.53,782.2161,864.3902,778.6261,860.0185,782.9978,856.4285,773.65,859.53" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109.7573" x="1044.5" y="826.0669">derivedFrom 0..*</text></g><!--link results to orderInformation--><g class="link" data-entity-1="results" data-entity-2="orderInformation" data-source-line="110" data-uid="lnk28" id="link_results_orderInformation"><path codeLine="110" d="M477.42,913.19 C377.57,974.34 254.7766,1049.5463 173.2366,1099.4863" fill="none" id="results-to-orderInformation" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="168.12,1102.62,177.8841,1101.3305,172.3838,1100.0086,173.7058,1094.5083,168.12,1102.62" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130.165" x="263.5" y="1053.0669">orderReference 0..1</text></g></g></svg>
+</figure>
+
+<h3 id="detail-ehds-information-models-for-laboratory-report">Detail EHDS information models for Laboratory report</h3>
+<ul>
+  <li><a href="StructureDefinition-EHDSLaboratoryReport.html">Laboratory Report Document</a></li>
+  <li><a href="StructureDefinition-EHDSLaboratoryObservation.html">Laboratory Observation</a></li>
+</ul>
+
+<h3 id="fhir-implementation-guide">FHIR Implementation Guide</h3>
+
+<p>Laboratory Report FHIR Implementation Guide has been published by HL7 Europe (<a href="https://hl7.eu/fhir/laboratory/index.html">published version</a>).
+Latest build version can be found <a href="https://build.fhir.org/ig/hl7-eu/laboratory/">here</a>. The changes proposed by Xt-EHR project and approved by the community will be included in the future version of the specification.</p>
+
+<p>MyHealth@EU has adopted HL7 Europe's FHIR IG for laboratory report crossborder service (see <a href="https://fhir.ehdsi.eu/laboratory/">crossborder adaption</a>).</p>
+
+<h3 id="supporting-information">Supporting Information</h3>
+
+<ul>
+  <li><a href="https://health.ec.europa.eu/publications/ehn-laboratory-result-guidelines_en">eHealth Network Guideline on Laboratory Results</a></li>
+  <li><a href="https://fhir.ehdsi.eu/laboratory/">MyHealth@EU crossborder HL7 FHIR specification</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  Package xtehr.eu.ehds.models#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jan 19, 2026 12:58+0000">2026-01-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

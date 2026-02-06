@@ -1,0 +1,45 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSDosaging","EHDSDosaging","","","",0,*,"","","","null {[]} {[]}
+","Dosaging model","The model covers usage instructions for administering a medicinal product, focusing on the most frequently used data elements. More complex dosage schemes may require additional elements, which should be communicated as part of the rendered dosage instructions element.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSDosaging.renderedDosageInstruction","EHDSDosaging.renderedDosageInstruction","","","",0,1,"","","","string {[]} {[]}
+","Full dosaging information as human-readable text covering all dosaging steps. Generating the text follows local rules and should include all locally implemented dosaging data even when such elements are not present in this model.","Full dosaging information as human-readable text covering all dosaging steps. Generating the text follows local rules and should include all locally implemented dosaging data even when such elements are not present in this model.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.renderedDosageInstruction",0,1,"",""
+"EHDSDosaging.dosageDetails","EHDSDosaging.dosageDetails","","","",0,*,"","","","Base {[]} {[]}
+","Details of single dosaging scheme step","Details of single dosaging scheme step","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails",0,*,"",""
+"EHDSDosaging.dosageDetails.sequence","EHDSDosaging.dosageDetails.sequence","","","",0,1,"","","","integer {[]} {[]}
+","Order of the dosage instruction, in case one treatment consists of several dosaging steps. When two schemes share the same sequence number, they are meant to be running in parallel.","Order of the dosage instruction, in case one treatment consists of several dosaging steps. When two schemes share the same sequence number, they are meant to be running in parallel.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.sequence",0,1,"",""
+"EHDSDosaging.dosageDetails.note","EHDSDosaging.dosageDetails.note","","","",0,1,"","","","string {[]} {[]}
+","Patient oriented instructions as free text for this dosaging step","Patient oriented instructions as free text for this dosaging step","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.note",0,1,"",""
+"EHDSDosaging.dosageDetails.doseAndRate","EHDSDosaging.dosageDetails.doseAndRate","","","",0,*,"","","","Base {[]} {[]}
+","Amount of medication administered per one dose (= one timing)","Amount of medication administered per one dose (= one timing)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.doseAndRate",0,*,"",""
+"EHDSDosaging.dosageDetails.doseAndRate.dose[x]","EHDSDosaging.dosageDetails.doseAndRate.dose[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Range {[]} {[]}","Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)","Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)","","","","","","","","","",,"preferred","UCUM (units of measurement), EDQM Standard Terms (units of presentation)","","",,,,"EHDSDosaging.dosageDetails.doseAndRate.dose[x]",0,1,"",""
+"EHDSDosaging.dosageDetails.doseAndRate.rate[x]","EHDSDosaging.dosageDetails.doseAndRate.rate[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Ratio {[]} {[]}","Amount of medication per time period (e.g. 100mg per 1 hour). When rate is provided per 1 time unit, Quantity data type can be used with a suitable unit (e.g. mg/h, ug/min).","Amount of medication per time period (e.g. 100mg per 1 hour). When rate is provided per 1 time unit, Quantity data type can be used with a suitable unit (e.g. mg/h, ug/min).","","","","","","","","","",,"preferred","UCUM (units of measurement), EDQM Standard Terms (units of presentation)","","",,,,"EHDSDosaging.dosageDetails.doseAndRate.rate[x]",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat","EHDSDosaging.dosageDetails.repeat","","","",0,1,"","","","Base {[]} {[]}
+","Repetition of the administration.","Repetition of the administration.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.bounds","EHDSDosaging.dosageDetails.repeat.bounds","","","",0,1,"","","","Base {[]} {[]}
+","Time bounds for the treatment (current dosaging scheme). Only one of the following can exist.","Time bounds for the treatment (current dosaging scheme). Only one of the following can exist.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.bounds",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.bounds.duration","EHDSDosaging.dosageDetails.repeat.bounds.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Number of time units, e.g 10 days","Number of time units, e.g 10 days","","","","","","","","","",,"preferred","UCUM","","",,,,"EHDSDosaging.dosageDetails.repeat.bounds.duration",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.bounds.period","EHDSDosaging.dosageDetails.repeat.bounds.period","","","",0,1,"","","","Period {[]} {[]}
+","Start and end date, 05.08.2023 - 10.08.2023","Start and end date, 05.08.2023 - 10.08.2023","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.bounds.period",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.duration","EHDSDosaging.dosageDetails.repeat.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration of administration (e.g '5 minutes', '1 hour')","Duration of administration (e.g '5 minutes', '1 hour')","","","","","","","","","",,"preferred","UCUM","","",,,,"EHDSDosaging.dosageDetails.repeat.duration",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.frequency","EHDSDosaging.dosageDetails.repeat.frequency","","","",0,1,"","","","Base {[]} {[]}
+","Frequency of intake/administration (e.g 'three times a day')","Frequency of intake/administration (e.g 'three times a day')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.frequency",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.frequency.numberOfTimes","EHDSDosaging.dosageDetails.repeat.frequency.numberOfTimes","","","",0,1,"","","","integer {[]} {[]}
+","Number of times per period (e.g '3 times')","Number of times per period (e.g '3 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.frequency.numberOfTimes",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.frequency.period","EHDSDosaging.dosageDetails.repeat.frequency.period","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration to which the frequency applies (e.g '... / 1 day')","Duration to which the frequency applies (e.g '... / 1 day')","","","","","","","","","",,"preferred","UCUM","","",,,,"EHDSDosaging.dosageDetails.repeat.frequency.period",0,1,"",""
+"EHDSDosaging.dosageDetails.repeat.dayOfWeek","EHDSDosaging.dosageDetails.repeat.dayOfWeek","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","The day of the week of administration, e.g Mon, Tue, etc","The day of the week of administration, e.g Mon, Tue, etc","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.dayOfWeek",0,*,"",""
+"EHDSDosaging.dosageDetails.repeat.timeOfDay","EHDSDosaging.dosageDetails.repeat.timeOfDay","","","",0,*,"","","","time {[]} {[]}
+","Exact time of day of administration (e.g '10:00')","Exact time of day of administration (e.g '10:00')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.timeOfDay",0,*,"",""
+"EHDSDosaging.dosageDetails.repeat.eventTime","EHDSDosaging.dosageDetails.repeat.eventTime","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Time period or event when the administration should happen ('before meal', 'immediately', 'morning')","Time period or event when the administration should happen ('before meal', 'immediately', 'morning')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.repeat.eventTime",0,*,"",""
+"EHDSDosaging.dosageDetails.asNeeded","EHDSDosaging.dosageDetails.asNeeded","","","",0,1,"","","","boolean {[]} {[]}
+","Take as needed","Take as needed","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.asNeeded",0,1,"",""
+"EHDSDosaging.dosageDetails.bodySite","EHDSDosaging.dosageDetails.bodySite","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Body site of administration","Body site of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.dosageDetails.bodySite",0,1,"",""
+"EHDSDosaging.dosageDetails.routeOfAdministration","EHDSDosaging.dosageDetails.routeOfAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Route of administration","Route of administration","","","","","","","","","",,"preferred","EDQM Standard Terms","","",,,,"EHDSDosaging.dosageDetails.routeOfAdministration",0,1,"",""

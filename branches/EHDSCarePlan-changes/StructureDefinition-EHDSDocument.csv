@@ -1,0 +1,53 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSDocument","EHDSDocument","","","",0,*,"","","","null {[]} {[]}
+","Document model","EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSDocument.header","EHDSDocument.header","","","",1,1,"","","","Base {[]} {[]}
+","Document header elements","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSDocument.header.subject","EHDSDocument.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSDocument.header.identifier","EHDSDocument.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Unique identifier of the document","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSDocument.header.authorship","EHDSDocument.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Resource authoring details","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSDocument.header.authorship.author[x]","EHDSDocument.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSDocument.header.authorship.datetime","EHDSDocument.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSDocument.header.lastUpdate","EHDSDocument.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource (may be used for technical corrections).","Date and time of the last update to the resource (may be used for technical corrections).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSDocument.header.status","EHDSDocument.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource or document","Status of the resource or document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSDocument.header.statusReason[x]","EHDSDocument.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSDocument.header.language","EHDSDocument.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSDocument.header.documentType","EHDSDocument.header.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type of document at hand, e.g. 60591-5 Patient summary document.","Type of document at hand, e.g. 60591-5 Patient summary document.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSDocument.header.documentType",1,1,"",""
+"EHDSDocument.header.documentTitle","EHDSDocument.header.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Human readable document title that can be displayed in search results, etc. This can be documentType's display name, or it can be assembled from multiple elements. Examples: 'Laboratory Result Report', 'Patient Summary of Jane Green 10.12.2024'","Human readable document title that can be displayed in search results, etc. This can be documentType's display name, or it can be assembled from multiple elements. Examples: 'Laboratory Result Report', 'Patient Summary of Jane Green 10.12.2024'","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.documentTitle",1,1,"",""
+"EHDSDocument.header.period","EHDSDocument.header.period","","","",0,1,"","","","Period {[]} {[]}
+","Time of service that is being documented","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.period",0,1,"",""
+"EHDSDocument.header.version","EHDSDocument.header.version","","","",0,1,"","","","string {[]} {[]}
+","Business version of the document.","Business version of the document.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.version",0,1,"",""
+"EHDSDocument.header.attestation","EHDSDocument.header.attestation","","","",0,*,"","","","Base {[]} {[]}
+","Document attestation details","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation",0,*,"",""
+"EHDSDocument.header.attestation.attester[x]","EHDSDocument.header.attestation.attester[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Attester who validated the document. Multiple attesters could be provided.","Attester who validated the document. Multiple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.attester[x]",1,1,"",""
+"EHDSDocument.header.attestation.datetime","EHDSDocument.header.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of the approval of the document by Attester.","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.attestation.datetime",1,1,"",""
+"EHDSDocument.header.legalAuthentication","EHDSDocument.header.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","Document legal authentication details","Document legal authentication details","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication",0,1,"",""
+"EHDSDocument.header.legalAuthentication.legalAuthenticator[x]","EHDSDocument.header.legalAuthentication.legalAuthenticator[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}","The person or organization taking responsibility for the medical content of the document","The person or organization taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.legalAuthenticator[x]",1,1,"",""
+"EHDSDocument.header.legalAuthentication.datetime","EHDSDocument.header.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time when the document was authorised.","Date and time when the document was authorised.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.legalAuthentication.datetime",1,1,"",""
+"EHDSDocument.header.eventType","EHDSDocument.header.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes.","Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes.","","","","","","","","","",,"preferred","LOINC, SNOMED CT, dicom-cid-33-Modality","","",,,,"EHDSDocument.header.eventType",0,*,"",""
+"EHDSDocument.header.serviceSpecialty","EHDSDocument.header.serviceSpecialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Additional details about where the content was created (e.g. clinical specialty)","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocument.header.serviceSpecialty",0,*,"",""
+"EHDSDocument.header.custodian","EHDSDocument.header.custodian","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}
+","Organisation that is in charge of maintaining the document/report.","Organisation that is in charge of maintaining the document/report.","","","","","","","","","",,,,,"",,,,"EHDSDocument.header.custodian",0,1,"",""
+"EHDSDocument.header.confidentiality","EHDSDocument.header.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Level of confidentiality of the document. Implicit value is normal.","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSDocument.header.confidentiality",0,1,"",""
+"EHDSDocument.presentedForm","EHDSDocument.presentedForm","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDocument.presentedForm",0,*,"",""

@@ -1,0 +1,810 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSCondition"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition EHDSCondition</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition\" title=\"EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.\">EHDSCondition</a><a name=\"EHDSCondition\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSDataSet.html\">EHDSDataSet</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Condition model<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-EHDSDataSet.html\" title=\"Common header for all patient-related data\">header</a><br/><span style=\"font-weight:bold\">Instances of this logical model can be the target of a Reference</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.problem\" title=\"Code identifying the condition, problem or diagnosis\">problem</a><a name=\"EHDSCondition.problem\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Code identifying the condition, problem or diagnosis<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">ICD-10, SNOMED CT, ICD-O, Orphacode if rare disease is diagnosed</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.onsetDate\" title=\"Onset date of a problem/condition\">onsetDate</a><a name=\"EHDSCondition.onsetDate\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Onset date of a problem/condition</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.endDate\" title=\"The date or estimated date that the condition resolved or went into remission\">endDate</a><a name=\"EHDSCondition.endDate\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The date or estimated date that the condition resolved or went into remission</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.category\" title=\"Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations).\">category</a><a name=\"EHDSCondition.category\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations).<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.problemStatus\" title=\"Status of the condition/problem (active, resolved, inactive, ...)\">problemStatus</a><a name=\"EHDSCondition.problemStatus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Status of the condition/problem (active, resolved, inactive, ...)<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">HL7 Condition Clinical Status Codes</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.resolutionCircumstances\" title=\"This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem &quot;hepatic cyst&quot; and will be included in surgical procedures).\">resolutionCircumstances</a><a name=\"EHDSCondition.resolutionCircumstances\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.).<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.severity\" title=\"A subjective assessment of the severity of the condition as evaluated by the clinician.\">severity</a><a name=\"EHDSCondition.severity\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">A subjective assessment of the severity of the condition as evaluated by the clinician.<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">HL7 Condition/Diagnosis Severity; SNOMED CT</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.anatomicLocation\" title=\"The anatomical location including laterality where this condition manifests itself.\">anatomicLocation</a><a name=\"EHDSCondition.anatomicLocation\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSBodyStructure.html\">EHDSBodyStructure</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The anatomical location including laterality where this condition manifests itself.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.stage\" title=\"Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used.\">stage</a><a name=\"EHDSCondition.stage\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used.<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …</span><br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.diagnosisAssertionStatus\" title=\"Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition.\">diagnosisAssertionStatus</a><a name=\"EHDSCondition.diagnosisAssertionStatus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition.<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">HL7 Condition Verification Status</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.asserter\" title=\"The asserter of the condition\">asserter</a><a name=\"EHDSCondition.asserter\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSHealthProfessional.html\">EHDSHealthProfessional</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The asserter of the condition</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.assertedDate\" title=\"Date and time of the diagnosis assertion\">assertedDate</a><a name=\"EHDSCondition.assertedDate\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Date and time of the diagnosis assertion</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.specialistContact\" title=\"Health Professional who may be specifically related to the problem, as a preferred contact.\">specialistContact</a><a name=\"EHDSCondition.specialistContact\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSHealthProfessional.html\">EHDSHealthProfessional</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Health Professional who may be specifically related to the problem, as a preferred contact.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSCondition-definitions.html#EHDSCondition.externalResource\" title=\"External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines.\">externalResource</a><a name=\"EHDSCondition.externalResource\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines.<br/></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "can-be-target"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "can-be-target"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.1"] ; # 
+  fhir:name [ fhir:v "EHDSCondition"] ; # 
+  fhir:title [ fhir:v "Condition model"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-12-23T07:26:44+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Xt-EHR"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Xt-EHR" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.xt-ehr.eu/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern."] ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDataSet"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDataSet>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "0.2.1"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSCondition" ] ;
+       fhir:path [ fhir:v "EHDSCondition" ] ;
+       fhir:short [ fhir:v "Condition model" ] ;
+       fhir:definition [ fhir:v "EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header" ] ;
+       fhir:short [ fhir:v "Common header for all patient-related data" ] ;
+       fhir:definition [ fhir:v "Common header for all patient-related data" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.subject" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.subject" ] ;
+       fhir:short [ fhir:v "Patient/subject information" ] ;
+       fhir:definition [ fhir:v "Patient/subject information" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.subject" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.identifier" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.identifier" ] ;
+       fhir:short [ fhir:v "Business identifier for the object" ] ;
+       fhir:definition [ fhir:v "Business identifier for the object" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.authorship" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.authorship" ] ;
+       fhir:short [ fhir:v "Resource authoring details" ] ;
+       fhir:definition [ fhir:v "Resource authoring details" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.authorship" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.authorship.author[x]" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.authorship.author[x]" ] ;
+       fhir:short [ fhir:v "Author(s) by whom the resource was/were authored. Multiple authors could be provided." ] ;
+       fhir:definition [ fhir:v "Author(s) by whom the resource was/were authored. Multiple authors could be provided." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.authorship.author[x]" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.authorship.datetime" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.authorship.datetime" ] ;
+       fhir:short [ fhir:v "Date and time of authoring/issuing" ] ;
+       fhir:definition [ fhir:v "Date and time of authoring/issuing" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.authorship.datetime" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.lastUpdate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.lastUpdate" ] ;
+       fhir:short [ fhir:v "Date and time of the last update to the resource (may be used for technical corrections)." ] ;
+       fhir:definition [ fhir:v "Date and time of the last update to the resource (may be used for technical corrections)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.lastUpdate" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.status" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.status" ] ;
+       fhir:short [ fhir:v "Status of the resource or document" ] ;
+       fhir:definition [ fhir:v "Status of the resource or document" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.statusReason[x]" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.statusReason[x]" ] ;
+       fhir:short [ fhir:v "Reason for the current status of the resource." ] ;
+       fhir:definition [ fhir:v "Reason for the current status of the resource." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.statusReason[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.header.language" ] ;
+       fhir:path [ fhir:v "EHDSCondition.header.language" ] ;
+       fhir:short [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:definition [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "BCP 47" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.problem" ] ;
+       fhir:path [ fhir:v "EHDSCondition.problem" ] ;
+       fhir:short [ fhir:v "Code identifying the condition, problem or diagnosis" ] ;
+       fhir:definition [ fhir:v "Code identifying the condition, problem or diagnosis" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.2; PS (v3.4) A.2.2.2.1, A.2.3.1.1" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.problem" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "ICD-10, SNOMED CT, ICD-O, Orphacode if rare disease is diagnosed" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.onsetDate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.onsetDate" ] ;
+       fhir:short [ fhir:v "Onset date of a problem/condition" ] ;
+       fhir:definition [ fhir:v "Onset date of a problem/condition" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.3; PS (v3.4) A.2.2.2.2, A.2.3.1.2" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.onsetDate" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.endDate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.endDate" ] ;
+       fhir:short [ fhir:v "The date or estimated date that the condition resolved or went into remission" ] ;
+       fhir:definition [ fhir:v "The date or estimated date that the condition resolved or went into remission" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.4; PS (v3.4) A.2.2.2.3" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.endDate" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.category" ] ;
+       fhir:path [ fhir:v "EHDSCondition.category" ] ;
+       fhir:short [ fhir:v "Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations)." ] ;
+       fhir:definition [ fhir:v "Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations)." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.5" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.category" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.problemStatus" ] ;
+       fhir:path [ fhir:v "EHDSCondition.problemStatus" ] ;
+       fhir:short [ fhir:v "Status of the condition/problem (active, resolved, inactive, ...)" ] ;
+       fhir:definition [ fhir:v "Status of the condition/problem (active, resolved, inactive, ...)" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.7; PS (v3.4) A.2.2.2.1" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.problemStatus" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Condition Clinical Status Codes" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.resolutionCircumstances" ] ;
+       fhir:path [ fhir:v "EHDSCondition.resolutionCircumstances" ] ;
+       fhir:short [ fhir:v "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." ] ;
+       fhir:definition [ fhir:v "This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem \"hepatic cyst\" and will be included in surgical procedures)." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.8; PS (v3.4) A.2.2.2.4" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.resolutionCircumstances" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.severity" ] ;
+       fhir:path [ fhir:v "EHDSCondition.severity" ] ;
+       fhir:short [ fhir:v "A subjective assessment of the severity of the condition as evaluated by the clinician." ] ;
+       fhir:definition [ fhir:v "A subjective assessment of the severity of the condition as evaluated by the clinician." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.9" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.severity" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Condition/Diagnosis Severity; SNOMED CT" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.anatomicLocation" ] ;
+       fhir:path [ fhir:v "EHDSCondition.anatomicLocation" ] ;
+       fhir:short [ fhir:v "The anatomical location including laterality where this condition manifests itself." ] ;
+       fhir:definition [ fhir:v "The anatomical location including laterality where this condition manifests itself." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.2" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.anatomicLocation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.stage" ] ;
+       fhir:path [ fhir:v "EHDSCondition.stage" ] ;
+       fhir:short [ fhir:v "Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used." ] ;
+       fhir:definition [ fhir:v "Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.10" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.stage" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.diagnosisAssertionStatus" ] ;
+       fhir:path [ fhir:v "EHDSCondition.diagnosisAssertionStatus" ] ;
+       fhir:short [ fhir:v "Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition." ] ;
+       fhir:definition [ fhir:v "Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline PS (v3.4) A.2.3.1.3" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.diagnosisAssertionStatus" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Condition Verification Status" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.asserter" ] ;
+       fhir:path [ fhir:v "EHDSCondition.asserter" ] ;
+       fhir:short [ fhir:v "The asserter of the condition" ] ;
+       fhir:definition [ fhir:v "The asserter of the condition" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.asserter" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.assertedDate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.assertedDate" ] ;
+       fhir:short [ fhir:v "Date and time of the diagnosis assertion" ] ;
+       fhir:definition [ fhir:v "Date and time of the diagnosis assertion" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.assertedDate" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.specialistContact" ] ;
+       fhir:path [ fhir:v "EHDSCondition.specialistContact" ] ;
+       fhir:short [ fhir:v "Health Professional who may be specifically related to the problem, as a preferred contact." ] ;
+       fhir:definition [ fhir:v "Health Professional who may be specifically related to the problem, as a preferred contact." ] ;
+       fhir:requirements [ fhir:v "ISO IPS, MyHealth@EU" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.specialistContact" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.externalResource" ] ;
+       fhir:path [ fhir:v "EHDSCondition.externalResource" ] ;
+       fhir:short [ fhir:v "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines." ] ;
+       fhir:definition [ fhir:v "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines." ] ;
+       fhir:requirements [ fhir:v "MyHealth@EU" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSCondition.externalResource" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "uri"^^xsd:anyURI ;
+           fhir:l fhir:uri
+         ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSCondition" ] ;
+       fhir:path [ fhir:v "EHDSCondition" ] ;
+       fhir:short [ fhir:v "Condition model" ] ;
+       fhir:definition [ fhir:v "EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern." ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.problem" ] ;
+       fhir:path [ fhir:v "EHDSCondition.problem" ] ;
+       fhir:short [ fhir:v "Code identifying the condition, problem or diagnosis" ] ;
+       fhir:definition [ fhir:v "Code identifying the condition, problem or diagnosis" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.2; PS (v3.4) A.2.2.2.1, A.2.3.1.1" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "ICD-10, SNOMED CT, ICD-O, Orphacode if rare disease is diagnosed" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.onsetDate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.onsetDate" ] ;
+       fhir:short [ fhir:v "Onset date of a problem/condition" ] ;
+       fhir:definition [ fhir:v "Onset date of a problem/condition" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.3; PS (v3.4) A.2.2.2.2, A.2.3.1.2" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.endDate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.endDate" ] ;
+       fhir:short [ fhir:v "The date or estimated date that the condition resolved or went into remission" ] ;
+       fhir:definition [ fhir:v "The date or estimated date that the condition resolved or went into remission" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.4; PS (v3.4) A.2.2.2.3" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.category" ] ;
+       fhir:path [ fhir:v "EHDSCondition.category" ] ;
+       fhir:short [ fhir:v "Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations)." ] ;
+       fhir:definition [ fhir:v "Category or categories of the problem (e.g. POA - present on admission, HAC - hospital aquired condition, and other categorisations)." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.5" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.problemStatus" ] ;
+       fhir:path [ fhir:v "EHDSCondition.problemStatus" ] ;
+       fhir:short [ fhir:v "Status of the condition/problem (active, resolved, inactive, ...)" ] ;
+       fhir:definition [ fhir:v "Status of the condition/problem (active, resolved, inactive, ...)" ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.7; PS (v3.4) A.2.2.2.1" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Condition Clinical Status Codes" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.resolutionCircumstances" ] ;
+       fhir:path [ fhir:v "EHDSCondition.resolutionCircumstances" ] ;
+       fhir:short [ fhir:v "Describes the reason for which the status of the problem changed from current to inactive (e.g. surgical procedure, medical treatment, etc.)." ] ;
+       fhir:definition [ fhir:v "This field includes free text if the resolution circumstances are not already included in other fields such as surgical procedure, medical device, etc., e.g. hepatic cystectomy (this will be the resolution circumstances for the problem \"hepatic cyst\" and will be included in surgical procedures)." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.8; PS (v3.4) A.2.2.2.4" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.severity" ] ;
+       fhir:path [ fhir:v "EHDSCondition.severity" ] ;
+       fhir:short [ fhir:v "A subjective assessment of the severity of the condition as evaluated by the clinician." ] ;
+       fhir:definition [ fhir:v "A subjective assessment of the severity of the condition as evaluated by the clinician." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.9" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Condition/Diagnosis Severity; SNOMED CT" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.anatomicLocation" ] ;
+       fhir:path [ fhir:v "EHDSCondition.anatomicLocation" ] ;
+       fhir:short [ fhir:v "The anatomical location including laterality where this condition manifests itself." ] ;
+       fhir:definition [ fhir:v "The anatomical location including laterality where this condition manifests itself." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.2" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.stage" ] ;
+       fhir:path [ fhir:v "EHDSCondition.stage" ] ;
+       fhir:short [ fhir:v "Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used." ] ;
+       fhir:definition [ fhir:v "Stage/grade usually assessed formally using a specific staging/grading system. Multiple assessment systems could be used." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline HDR (v1.1): A.2.6.1.10" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.diagnosisAssertionStatus" ] ;
+       fhir:path [ fhir:v "EHDSCondition.diagnosisAssertionStatus" ] ;
+       fhir:short [ fhir:v "Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition." ] ;
+       fhir:definition [ fhir:v "Assertion about the certainty associated with a diagnosis. Diagnostic and/or clinical evidence of condition." ] ;
+       fhir:requirements [ fhir:v "eHN Guideline PS (v3.4) A.2.3.1.3" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Condition Verification Status" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.asserter" ] ;
+       fhir:path [ fhir:v "EHDSCondition.asserter" ] ;
+       fhir:short [ fhir:v "The asserter of the condition" ] ;
+       fhir:definition [ fhir:v "The asserter of the condition" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.assertedDate" ] ;
+       fhir:path [ fhir:v "EHDSCondition.assertedDate" ] ;
+       fhir:short [ fhir:v "Date and time of the diagnosis assertion" ] ;
+       fhir:definition [ fhir:v "Date and time of the diagnosis assertion" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.specialistContact" ] ;
+       fhir:path [ fhir:v "EHDSCondition.specialistContact" ] ;
+       fhir:short [ fhir:v "Health Professional who may be specifically related to the problem, as a preferred contact." ] ;
+       fhir:definition [ fhir:v "Health Professional who may be specifically related to the problem, as a preferred contact." ] ;
+       fhir:requirements [ fhir:v "ISO IPS, MyHealth@EU" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSCondition.externalResource" ] ;
+       fhir:path [ fhir:v "EHDSCondition.externalResource" ] ;
+       fhir:short [ fhir:v "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines." ] ;
+       fhir:definition [ fhir:v "External Resource which may be specifically related to the problem, for example a link between a rare disease problem and the corresponding guidelines." ] ;
+       fhir:requirements [ fhir:v "MyHealth@EU" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "uri"^^xsd:anyURI ;
+           fhir:l fhir:uri
+         ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,43 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSImmunisation","EHDSImmunisation","","","",0,*,"","","","null {[]} {[]}
+","Immunisation model","EHDS refined base model for Immunisation","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSImmunisation.header","EHDSImmunisation.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSImmunisation.header.subject","EHDSImmunisation.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSImmunisation.header.identifier","EHDSImmunisation.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSImmunisation.header.authorship","EHDSImmunisation.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSImmunisation.header.authorship.author[x]","EHDSImmunisation.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSImmunisation.header.authorship.datetime","EHDSImmunisation.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSImmunisation.header.lastUpdate","EHDSImmunisation.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSImmunisation.header.status","EHDSImmunisation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Indicates the current status of the immunisation event (completed, not-done).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSImmunisation.header.statusReason[x]","EHDSImmunisation.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSImmunisation.header.language","EHDSImmunisation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSImmunisation.header.version","EHDSImmunisation.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSImmunisation.presentedForm","EHDSImmunisation.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSImmunisation.diseaseOrAgentTargeted","EHDSImmunisation.diseaseOrAgentTargeted","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Disease or agent targeted","Disease or agent that the vaccination provides protection against.","","","","","","","","","",,"preferred","ICD-10, SNOMED CT","","",,,,"EHDSImmunisation.diseaseOrAgentTargeted",0,*,"",""
+"EHDSImmunisation.vaccine","EHDSImmunisation.vaccine","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type of vaccine","Generic description of the vaccine/prophylaxis or its component(s).","","","","","","","","","",,"preferred","SNOMED CT, ATC","","",,,,"EHDSImmunisation.vaccine",1,1,"",""
+"EHDSImmunisation.administeredProduct","EHDSImmunisation.administeredProduct","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication {[]} {[]}
+","Administered medicinal product","Administered medicinal product","","","","","","","","","",,,,,"",,,,"EHDSImmunisation.administeredProduct",0,1,"",""
+"EHDSImmunisation.doseNumber","EHDSImmunisation.doseNumber","","","",0,1,"","","","integer {[]} {[]}
+","Number in a series of vaccinations / doses","Order in the vaccination course.","","","","","","","","","",,,,,"",,,,"EHDSImmunisation.doseNumber",0,1,"",""
+"EHDSImmunisation.dateOfVaccination","EHDSImmunisation.dateOfVaccination","","","",1,1,"","","","date {[]} {[]}
+","Date of vaccination","The date and time when the vaccination was administered","","","","","","","","","",,,,,"",,,,"EHDSImmunisation.dateOfVaccination",1,1,"",""
+"EHDSImmunisation.administeringCentre","EHDSImmunisation.administeringCentre","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}
+","Administering centre","Name/code of administering centre or a health authority responsible for the vaccination event","","","","","","","","","",,,,,"",,,,"EHDSImmunisation.administeringCentre",0,*,"",""
+"EHDSImmunisation.vaccineAdministrator","EHDSImmunisation.vaccineAdministrator","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Administrator of vaccine","Health professional responsible for administering the vaccine or prophylaxis","","","","","","","","","",,,,,"",,,,"EHDSImmunisation.vaccineAdministrator",0,*,"",""
+"EHDSImmunisation.nextVaccinationDate","EHDSImmunisation.nextVaccinationDate","","","",0,1,"","","","date {[]} {[]}
+","Next vaccination date","The date when the vaccination is planned to be given/repeated (e.g. next dose)","","","","","","","","","",,,,,"",,,,"EHDSImmunisation.nextVaccinationDate",0,1,"",""

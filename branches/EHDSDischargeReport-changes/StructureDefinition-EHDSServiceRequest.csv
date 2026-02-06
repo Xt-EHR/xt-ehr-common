@@ -1,0 +1,45 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSServiceRequest","EHDSServiceRequest","","","",0,*,"","","","null {[]} {[]}
+","Service request model","EHDS refined base model for Specification of requested service or services","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSServiceRequest.header","EHDSServiceRequest.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSServiceRequest.header.subject","EHDSServiceRequest.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSServiceRequest.header.identifier","EHDSServiceRequest.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).","Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSServiceRequest.header.authorship","EHDSServiceRequest.header.authorship","","","",0,*,"","","","Base {[]} {[]}
+","Resource authoring details. Multiple authors can be provided.","Resource authoring details. Multiple authors can be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",0,*,"",""
+"EHDSServiceRequest.header.authorship.author[x]","EHDSServiceRequest.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Author responsible for the provided information. The exact role of the responsible author varies across use cases and is often specified in individual models.","Author responsible for the provided information. The exact role of the responsible author varies across use cases and is often specified in individual models.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSServiceRequest.header.authorship.datetime","EHDSServiceRequest.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSServiceRequest.header.status","EHDSServiceRequest.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource or document","Status of the resource or document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSServiceRequest.header.language","EHDSServiceRequest.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSServiceRequest.serviceText","EHDSServiceRequest.serviceText","","","",0,1,"","","","string {[]} {[]}
+","Service text","Textual description of the requested service","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.serviceText",0,1,"",""
+"EHDSServiceRequest.serviceCode","EHDSServiceRequest.serviceCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Service code","A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.","","","","","","","","","",,"preferred","LOINC, NPU, SNOMED CT","","",,,,"EHDSServiceRequest.serviceCode",0,1,"",""
+"EHDSServiceRequest.reasonCode","EHDSServiceRequest.reasonCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason code","Health conditions affecting the health of the patient and are important to be known for a health professional during a health encounter. Clinical conditions of the subject relevant for the results interpretation.","","","","","","","","","",,"preferred","ICD-10 (ICD-11 when available), SNOMED CT, Orphacode","","",,,,"EHDSServiceRequest.reasonCode",0,*,"",""
+"EHDSServiceRequest.quantity","EHDSServiceRequest.quantity","","","",0,1,"","","","Quantity {[]} {[]}
+","Quantity","Amount of requested services of the same type","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.quantity",0,1,"",""
+"EHDSServiceRequest.anatomicLocation","EHDSServiceRequest.anatomicLocation","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Anatomic location","Anatomic location and laterality where the procedure should be performed. This is the target site.","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.anatomicLocation",0,*,"",""
+"EHDSServiceRequest.reasonReference[x]","EHDSServiceRequest.reasonReference[x]","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication {[]} {[]}","Reason reference","Indicates another resource that provides a justification for why this service is being requested.","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.reasonReference[x]",0,*,"",""
+"EHDSServiceRequest.priority","EHDSServiceRequest.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Priority","Indicates how quickly the ServiceRequest should be addressed with respect to other requests.","","","","","","","","","",,"preferred","HL7 Request priority","","",,,,"EHDSServiceRequest.priority",0,1,"",""
+"EHDSServiceRequest.supportingInformation[x]","EHDSServiceRequest.supportingInformation[x]","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministration {[]} {[]}","Supporting information","Health conditions relevant for the results interpretation, e.g. fasting status, sex for clinical use, etc.","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.supportingInformation[x]",0,*,"",""
+"EHDSServiceRequest.specimen","EHDSServiceRequest.specimen","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen {[]} {[]}
+","Specimen","Specimens to be used by the laboratory procedure","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.specimen",0,*,"",""
+"EHDSServiceRequest.encounter","EHDSServiceRequest.encounter","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSEncounter {[]} {[]}
+","Encounter","An encounter that provides additional information about the healthcare context in which this request is made.","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.encounter",0,1,"",""
+"EHDSServiceRequest.occurrence[x]","EHDSServiceRequest.occurrence[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Occurrence","When service should occur","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.occurrence[x]",0,1,"",""
+"EHDSServiceRequest.patientInstructions","EHDSServiceRequest.patientInstructions","","","",0,1,"","","","string {[]} {[]}
+","Patient instructions","Patient or consumer-oriented instructions","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.patientInstructions",0,1,"",""
+"EHDSServiceRequest.coverage","EHDSServiceRequest.coverage","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCoverage {[]} {[]}
+","Coverage","Insurance or medical plan or a payment agreement.","","","","","","","","","",,,,,"",,,,"EHDSServiceRequest.coverage",0,*,"",""

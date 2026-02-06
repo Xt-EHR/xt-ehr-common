@@ -1,0 +1,73 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSInpatientEncounter","EHDSInpatientEncounter","","","",0,*,"","","","null {[]} {[]}
+","Inpatient encounter model","EHDS refined base model for Inpatient encounter","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSInpatientEncounter.header","EHDSInpatientEncounter.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSInpatientEncounter.header.subject","EHDSInpatientEncounter.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSInpatientEncounter.header.identifier","EHDSInpatientEncounter.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSInpatientEncounter.header.authorship","EHDSInpatientEncounter.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSInpatientEncounter.header.authorship.author[x]","EHDSInpatientEncounter.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSInpatientEncounter.header.authorship.datetime","EHDSInpatientEncounter.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSInpatientEncounter.header.lastUpdate","EHDSInpatientEncounter.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSInpatientEncounter.header.status","EHDSInpatientEncounter.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSInpatientEncounter.header.statusReason[x]","EHDSInpatientEncounter.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSInpatientEncounter.header.language","EHDSInpatientEncounter.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSInpatientEncounter.header.version","EHDSInpatientEncounter.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSInpatientEncounter.presentedForm","EHDSInpatientEncounter.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSInpatientEncounter.priority","EHDSInpatientEncounter.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Priority","Admission urgency, either emergency or planned","","","","","","","","","",,"preferred","hl7:v3-xEncounterAdmissionUrgency","","",,,,"EHDSEncounter.priority",0,1,"",""
+"EHDSInpatientEncounter.type","EHDSInpatientEncounter.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Encounter type","The type of the encounter whether inpatient or short stay encounter.","","","","","","","","","",,"preferred","hl7v3:ActEncounterCode","","",,,,"EHDSEncounter.type",1,1,"",""
+"EHDSInpatientEncounter.note","EHDSInpatientEncounter.note","","","",0,1,"","","","string {[]} {[]}
+","A narrative description of the encounter course.","A narrative description of the encounter course.","","","","","","","","","",,,,,"",,,,"EHDSEncounter.note",0,1,"",""
+"EHDSInpatientEncounter.episodeOfCare","EHDSInpatientEncounter.episodeOfCare","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare {[]} {[]}
+","Reference to the episode(s) of care that this encounter should be recorded against","Reference to the episode(s) of care that this encounter should be recorded against","","","","","","","","","",,,,,"",,,,"EHDSEncounter.episodeOfCare",0,*,"",""
+"EHDSInpatientEncounter.basedOn[x]","EHDSInpatientEncounter.basedOn[x]","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest {[]} {[]}","Reference to the request that initiated this encounter","Reference to the request that initiated this encounter","","","","","","","","","",,,,,"",,,,"EHDSEncounter.basedOn[x]",0,*,"",""
+"EHDSInpatientEncounter.partOf","EHDSInpatientEncounter.partOf","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter {[]} {[]}
+","Reference to another encounter this encounter is part of","Reference to another encounter this encounter is part of","","","","","","","","","",,,,,"",,,,"EHDSEncounter.partOf",0,1,"",""
+"EHDSInpatientEncounter.serviceProvider","EHDSInpatientEncounter.serviceProvider","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}
+","The organisation (facility) responsible for this encounter","The organisation (facility) responsible for this encounter","","","","","","","","","",,,,,"",,,,"EHDSEncounter.serviceProvider",0,1,"",""
+"EHDSInpatientEncounter.actualPeriod","EHDSInpatientEncounter.actualPeriod","","","",1,1,"","","","Period {[]} {[]}
+","The actual start and end time of the encounter","The actual start and end time of the encounter","","","","","","","","","",,,,,"",,,,"EHDSEncounter.actualPeriod",0,1,"",""
+"EHDSInpatientEncounter.plannedStartDate","EHDSInpatientEncounter.plannedStartDate","","","",0,1,"","","","dateTime {[]} {[]}
+","The planned start date/time (or admission date) of the encounter","The planned start date/time (or admission date) of the encounter","","","","","","","","","",,,,,"",,,,"EHDSEncounter.plannedStartDate",0,1,"",""
+"EHDSInpatientEncounter.plannedEndDate","EHDSInpatientEncounter.plannedEndDate","","","",0,1,"","","","dateTime {[]} {[]}
+","The planned end date/time (or discharge date) of the encounter","The planned end date/time (or discharge date) of the encounter","","","","","","","","","",,,,,"",,,,"EHDSEncounter.plannedEndDate",0,1,"",""
+"EHDSInpatientEncounter.admission","EHDSInpatientEncounter.admission","","","",1,1,"","","","Base {[]} {[]}
+","Details about the admission to a healthcare service","Details about the admission to a healthcare service","","","","","","","","","",,,,,"",,,,"EHDSEncounter.admission",0,1,"",""
+"EHDSInpatientEncounter.admission.admitter","EHDSInpatientEncounter.admission.admitter","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Admitting healthcare professional","Admitting healthcare professional","","","","","","","","","",,,,,"",,,,"EHDSEncounter.admission.admitter",0,1,"",""
+"EHDSInpatientEncounter.admission.admitSource","EHDSInpatientEncounter.admission.admitSource","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","From where the patient was admitted (e.g. physician referral, transfer).","From where the patient was admitted (e.g. physician referral, transfer).","","","","","","","","","",,"preferred","hl7:admit-source","","",,,,"EHDSEncounter.admission.admitSource",0,1,"",""
+"EHDSInpatientEncounter.admission.referringProfessional","EHDSInpatientEncounter.admission.referringProfessional","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Referring Healthcare Professional","Referring Healthcare Professional","","","","","","","","","",,,,,"",,,,"EHDSEncounter.admission.referringProfessional",0,1,"",""
+"EHDSInpatientEncounter.admission.reason[x]","EHDSInpatientEncounter.admission.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation {[]} {[]}","Reason(s) for admission, e.g. problem, procedure or finding.","Reason(s) for admission, e.g. problem, procedure or finding.","","","","","","","","","",,,,,"",,,,"EHDSEncounter.admission.reason[x]",0,*,"",""
+"EHDSInpatientEncounter.admission.reasonComment","EHDSInpatientEncounter.admission.reasonComment","","","",0,1,"","","","string {[]} {[]}
+","Explanation of the reason for the encounter.","Explanation of the reason for the encounter.","","","","","","","","","",,,,,"",,,,"EHDSEncounter.admission.reasonComment",0,1,"",""
+"EHDSInpatientEncounter.admission.legalStatus","EHDSInpatientEncounter.admission.legalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Legal status/situation at admission (indicates the basis on which the patient is staying in a healthcare organisation).","Legal status can be either voluntary or involuntary, however the legal status is always determined by a court. A patient can also receive healthcare based on a forensic status. (voluntary, involuntary, admission by legal authority).","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSEncounter.admission.legalStatus",0,1,"",""
+"EHDSInpatientEncounter.discharge","EHDSInpatientEncounter.discharge","","","",1,1,"","","","Base {[]} {[]}
+","Discharge details","Discharge details","","","","","","","","","",,,,,"",,,,"EHDSEncounter.discharge",0,1,"",""
+"EHDSInpatientEncounter.discharge.destinationType","EHDSInpatientEncounter.discharge.destinationType","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc.  ","Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc.","","","","","","","","","",,"preferred","hl7.discharge-disposition","","",,,,"EHDSEncounter.discharge.destinationType",0,1,"",""
+"EHDSInpatientEncounter.discharge.destinationLocation[x]","EHDSInpatientEncounter.discharge.destinationLocation[x]","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}","The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact.","The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact.","","","","","","","","","",,,,,"",,,,"EHDSEncounter.discharge.destinationLocation[x]",0,1,"",""
+"EHDSInpatientEncounter.location","EHDSInpatientEncounter.location","","","",0,*,"","","","Base {[]} {[]}
+","List of locations where the patient has been.","List of locations where the patient has been.","","","","","","","","","",,,,,"",,,,"EHDSEncounter.location",0,*,"",""
+"EHDSInpatientEncounter.location.period","EHDSInpatientEncounter.location.period","","","",0,1,"","","","Period {[]} {[]}
+","Time period during which the patient was present at the location","Time period during which the patient was present at the location","","","","","","","","","",,,,,"",,,,"EHDSEncounter.location.period",0,1,"",""
+"EHDSInpatientEncounter.location.organisationPart[x]","EHDSInpatientEncounter.location.organisationPart[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}","Organisation or organisation part (department) where the patient was present.","Organisation or organisation part (department) where the patient was present.","","","","","","","","","",,,,,"",,,,"EHDSEncounter.location.organisationPart[x]",1,1,"",""

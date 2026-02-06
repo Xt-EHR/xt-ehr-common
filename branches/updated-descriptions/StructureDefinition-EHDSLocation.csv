@@ -1,0 +1,23 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSLocation","EHDSLocation","","","",0,*,"","","","null {[]} {[]}
+","Location (model)","C.17 - EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSLocation.identifier","EHDSLocation.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.17.1 - Identifier","Location identifier","","","","","","","","","",,,,,"",,,,"EHDSLocation.identifier",0,*,"",""
+"EHDSLocation.name","EHDSLocation.name","","","",0,1,"","","","string {[]} {[]}
+","C.17.2 - Name","Name of the location as used by humans","","","","","","","","","",,,,,"",,,,"EHDSLocation.name",0,1,"",""
+"EHDSLocation.description","EHDSLocation.description","","","",0,1,"","","","Narrative {[]} {[]}
+","C.17.3 - Description","Additional details about the location that could be displayed as further information to identify the location beyond its name","","","","","","","","","",,,,,"",,,,"EHDSLocation.description",0,1,"",""
+"EHDSLocation.type","EHDSLocation.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.17.4 - Type","Type of function performed at the location","","","","","","","","","",,"preferred","HL7 ServiceDeliveryLocationRoleType","","",,,,"EHDSLocation.type",0,*,"",""
+"EHDSLocation.address","EHDSLocation.address","","","",0,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress {[]} {[]}
+","C.17.5 - Address","Physical location address","","","","","","","","","",,,,,"",,,,"EHDSLocation.address",0,1,"",""
+"EHDSLocation.position","EHDSLocation.position","","","",0,1,"","","","Base {[]} {[]}
+","C.17.6 - Position","The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).","","","","","","","","","",,,,,"",,,,"EHDSLocation.position",0,1,"",""
+"EHDSLocation.position.longitude","EHDSLocation.position.longitude","","","",1,1,"","","","decimal {[]} {[]}
+","C.17.6.1 - Longitude","Longitude with WGS84 datum","","","","","","","","","",,,,,"",,,,"EHDSLocation.position.longitude",1,1,"",""
+"EHDSLocation.position.latitude","EHDSLocation.position.latitude","","","",1,1,"","","","decimal {[]} {[]}
+","C.17.6.2 - Latitude","Latitude with WGS84 datum","","","","","","","","","",,,,,"",,,,"EHDSLocation.position.latitude",1,1,"",""
+"EHDSLocation.managingOrganization","EHDSLocation.managingOrganization","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization]]}
+","C.17.7 - Managing organization","The organization responsible for the provisioning and upkeep of the location","","","","","","","","","",,,,,"",,,,"EHDSLocation.managingOrganization",0,1,"",""
+"EHDSLocation.partOf","EHDSLocation.partOf","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization]]}
+","C.17.8 - Part of","Another Location of which this Location is physically a part of","","","","","","","","","",,,,,"",,,,"EHDSLocation.partOf",0,1,"",""

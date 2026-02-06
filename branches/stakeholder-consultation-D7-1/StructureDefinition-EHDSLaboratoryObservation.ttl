@@ -1,0 +1,1494 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSLaboratoryObservation"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition EHDSLaboratoryObservation</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation\" title=\"Model for observation performed by laboratory\">EHDSLaboratoryObservation</a><a name=\"EHDSLaboratoryObservation\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSObservation.html\">EHDSObservation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Laboratory observation model<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-EHDSDataSet.html\" title=\"Basic metadata for this information\">header</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Clinically relevant time or time period for the observation\">observationDate[x]</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Observation type. Code and name representing the type of the observation using the agreed code systems.\">type</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Original (conventional) name of the observation as used in the local laboratory or clinical system.\">originalName</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Observation method (measurement principle) to obtain the result.\">method</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Specimen used for this observation.\">specimen</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Identifies order and order placer this observation belongs to\">order</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions.\">performer[x]</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Anatomic location and laterality where the observation was performed.\">bodySite</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation.\">result</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Reference range, multiple reference ranges of different types could by provided. Provides guide for interpretation of the result.\">referenceRange</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Information about reference intervals and result interpretation.\">interpretation</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Comments and narrative representation of the observation result and findings.\">note</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Component in case the observation consists of multiple sub-observations (e.g. blood pressure).\">component</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"Reference to the related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.\">derivedFrom[x]</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.\">hasMember[x]</a>, <a href=\"StructureDefinition-EHDSObservation.html\" title=\"A plan, proposal or order that is fulfilled in whole or in part by this observation.\">basedOn[x]</a></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.type\">type</a><a name=\"EHDSLaboratoryObservation.type\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Observation type. Code and name representing the type of the observation using the agreed code systems.</span><br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">LOINC, NPU</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.result\">result</a><a name=\"EHDSLaboratoryObservation.result\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Base</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Result of the laboratory observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.component\">component</a><a name=\"EHDSLaboratoryObservation.component\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.component.type\">type</a><a name=\"EHDSLaboratoryObservation.component.type\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Observation type. Code and name representing the type of the observation using the agreed code systems.</span><br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding Description: </span><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#preferred\" title=\"Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.\" class=\"binding\">preferred</a><span title=\"null\" class=\"binding\">)</span><span title=\"null\" class=\"binding\">: </span><span title=\"null\" class=\"binding\">LOINC, NPU</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_choice.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Choice of Types\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.triggeredBy[x]\" title=\"References to the observation(s) that triggered the performance of this observation.\">triggeredBy[x]</a><a name=\"EHDSLaboratoryObservation.triggeredBy_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">References to the observation(s) that triggered the performance of this observation.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <span title=\"Model for observation performed by laboratory\">triggeredByEHDSLaboratoryObservation</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSLaboratoryObservation.html\">EHDSLaboratoryObservation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <span title=\"Model for information about an oservation and its results.\">triggeredByEHDSObservation</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSObservation.html\">EHDSObservation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.testKit\" title=\"Laboratory test kit used during measurement.\">testKit</a><a name=\"EHDSLaboratoryObservation.testKit\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSDevice.html\">EHDSDevice</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Laboratory test kit used during measurement.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.calibrator\" title=\"Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain.\">calibrator</a><a name=\"EHDSLaboratoryObservation.calibrator\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.accreditationStatus\" title=\"Accreditation status of the laboratory for the observation.\">accreditationStatus</a><a name=\"EHDSLaboratoryObservation.accreditationStatus\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#boolean\">boolean</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Accreditation status of the laboratory for the observation.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.previousResults\" title=\"Previous results of the same observation\">previousResults</a><a name=\"EHDSLaboratoryObservation.previousResults\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSLaboratoryObservation.html\">EHDSLaboratoryObservation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Previous results of the same observation<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSLaboratoryObservation-definitions.html#EHDSLaboratoryObservation.pointOfCareTest\" title=\"Indicates if the observation is a point-of-care test (POCT), i.e. an examination performed near or at the site of a patient.\">pointOfCareTest</a><a name=\"EHDSLaboratoryObservation.pointOfCareTest\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#boolean\">boolean</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Examination performed near or at the site of a patient.</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.1"] ; # 
+  fhir:name [ fhir:v "EHDSLaboratoryObservation"] ; # 
+  fhir:title [ fhir:v "Laboratory observation model"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-02-06T17:48:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Xt-EHR"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Xt-EHR" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.xt-ehr.eu/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Model for observation performed by laboratory"] ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "0.2.1"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation" ] ;
+       fhir:short [ fhir:v "Laboratory observation model" ] ;
+       fhir:definition [ fhir:v "Model for observation performed by laboratory" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header" ] ;
+       fhir:short [ fhir:v "Basic metadata for this information" ] ;
+       fhir:definition [ fhir:v "Basic metadata for this information" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.subject" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.subject" ] ;
+       fhir:short [ fhir:v "Patient who is receiving health care. This patient might be different from the direct subject of the observation." ] ;
+       fhir:definition [ fhir:v "Patient/subject information" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.subject" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.identifier" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.identifier" ] ;
+       fhir:short [ fhir:v "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)." ] ;
+       fhir:definition [ fhir:v "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.author[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.author[x]" ] ;
+       fhir:short [ fhir:v "Author(s) responsible for the provided information." ] ;
+       fhir:definition [ fhir:v "Author(s) responsible for the provided information. The exact role of the responsible author varies across use cases and is specific to individual models." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.author[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.date" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.date" ] ;
+       fhir:short [ fhir:v "Date and optionally time of authoring/issuing" ] ;
+       fhir:definition [ fhir:v "Date and optionally time of authoring/issuing" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.date" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.status" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.status" ] ;
+       fhir:short [ fhir:v "Status of the resource or document" ] ;
+       fhir:definition [ fhir:v "Status of the resource or document" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Observation status" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.source" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.source" ] ;
+       fhir:short [ fhir:v "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information." ] ;
+       fhir:definition [ fhir:v "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.source" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.language" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.language" ] ;
+       fhir:short [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:definition [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "BCP 47" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.header.directSubject[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.header.directSubject[x]" ] ;
+       fhir:short [ fhir:v "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device. Additional types of subject may be allowed in implementations." ] ;
+       fhir:definition [ fhir:v "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device. Additional types of subject may be allowed in implementations." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.header.directSubject[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLocation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLocation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.observationDate[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.observationDate[x]" ] ;
+       fhir:short [ fhir:v "Clinically relevant time or time period for the observation" ] ;
+       fhir:definition [ fhir:v "Clinically relevant time or time period for the observation" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.observationDate[x]" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Period"^^xsd:anyURI ;
+           fhir:l fhir:Period
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.type" ] ;
+       fhir:short [ fhir:v "Observation type. Code and name representing the type of the observation using the agreed code systems." ] ;
+       fhir:definition [ fhir:v "Observation type. Code and name representing the type of the observation using the agreed code systems." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.type" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "LOINC, NPU" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.originalName" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.originalName" ] ;
+       fhir:short [ fhir:v "Original (conventional) name of the observation as used in the local laboratory or clinical system." ] ;
+       fhir:definition [ fhir:v "Original (conventional) name of the observation as used in the local laboratory or clinical system." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.originalName" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.method" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.method" ] ;
+       fhir:short [ fhir:v "Observation method" ] ;
+       fhir:definition [ fhir:v "Observation method (measurement principle) to obtain the result." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.method" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.specimen" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.specimen" ] ;
+       fhir:short [ fhir:v "Specimen used for this observation." ] ;
+       fhir:definition [ fhir:v "Specimen used for this observation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.specimen" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.order" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.order" ] ;
+       fhir:short [ fhir:v "Identifies order and order placer this observation belongs to" ] ;
+       fhir:definition [ fhir:v "Identifies order and order placer this observation belongs to" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.order" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.performer[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.performer[x]" ] ;
+       fhir:short [ fhir:v "Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions." ] ;
+       fhir:definition [ fhir:v "Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.performer[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.bodySite" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.bodySite" ] ;
+       fhir:short [ fhir:v "Anatomic location and laterality where the observation was performed." ] ;
+       fhir:definition [ fhir:v "Anatomic location and laterality where the observation was performed." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.bodySite" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result" ] ;
+       fhir:short [ fhir:v "Result of the laboratory observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation." ] ;
+       fhir:definition [ fhir:v "Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.result" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result.value[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result.value[x]" ] ;
+       fhir:short [ fhir:v "Observation result value according to the type of observation. Model covers only most frequently used data types but other data types can be used as well.\n    Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided." ] ;
+       fhir:definition [ fhir:v "Observation result value according to the type of observation. Model covers only most frequently used data types but other data types can be used as well.\n    Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.result.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Range"^^xsd:anyURI ;
+           fhir:l fhir:Range
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Ratio"^^xsd:anyURI ;
+           fhir:l fhir:Ratio
+         ]
+       ] [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units, SNOMED CT for coded results" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result.uncertainty" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result.uncertainty" ] ;
+       fhir:short [ fhir:v "Measurement uncertainty type and interval if needed." ] ;
+       fhir:definition [ fhir:v "Measurement uncertainty information about the observation result." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.result.uncertainty" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result.uncertainty.value" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result.uncertainty.value" ] ;
+       fhir:short [ fhir:v "The numerical value of the measurement uncertainty." ] ;
+       fhir:definition [ fhir:v "The numerical value of the measurement uncertainty." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.result.uncertainty.value" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "decimal"^^xsd:anyURI ;
+           fhir:l fhir:decimal
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result.uncertainty.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result.uncertainty.type" ] ;
+       fhir:short [ fhir:v "Probability Distribution Type for uncertainty" ] ;
+       fhir:definition [ fhir:v "Probability Distribution Type for uncertainty" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.result.uncertainty.type" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Coding"^^xsd:anyURI ;
+           fhir:l fhir:Coding
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 ProbabilityDistributionType" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result.dataAbsentReason" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result.dataAbsentReason" ] ;
+       fhir:short [ fhir:v "Provides a reason why the expected value in the element Observation.value[x] is missing." ] ;
+       fhir:definition [ fhir:v "Provides a reason why the expected value in the element Observation.value[x] is missing." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.result.dataAbsentReason" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Data absent reason" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange" ] ;
+       fhir:short [ fhir:v "Reference range, multiple reference ranges of different types could by provided. Provides guide for interpretation of the result." ] ;
+       fhir:definition [ fhir:v "Reference range, multiple reference ranges of different types could by provided. Provides guide for interpretation of the result." ] ;
+       fhir:comment [ fhir:v "Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.low" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.low" ] ;
+       fhir:short [ fhir:v "Low limit of the reference range." ] ;
+       fhir:definition [ fhir:v "Low limit of the reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.low" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.high" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.high" ] ;
+       fhir:short [ fhir:v "High limit of the reference range." ] ;
+       fhir:definition [ fhir:v "High limit of the reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.high" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.normalValue" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.normalValue" ] ;
+       fhir:short [ fhir:v "Normal value, if relevant for the reference range." ] ;
+       fhir:definition [ fhir:v "Normal value, if relevant for the reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.normalValue" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.type" ] ;
+       fhir:short [ fhir:v "Type of reference range." ] ;
+       fhir:definition [ fhir:v "Type of reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.type" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Observation Reference Range Meaning Codes" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.appliesTo" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.appliesTo" ] ;
+       fhir:short [ fhir:v "Codes to indicate the target population this reference range applies to." ] ;
+       fhir:definition [ fhir:v "Codes to indicate the target population this reference range applies to. For example, a reference range may be based on the normal population or a particular sex or race. Multiple appliesTo are interpreted as an \\\"AND\\\" of the target populations." ] ;
+       fhir:comment [ fhir:v "Multiple appliesTo are interpreted as an \"AND\" of the target populations." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.appliesTo" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT, HL7 v3-Race" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.age" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.age" ] ;
+       fhir:short [ fhir:v "Age range to which this reference range applies if applicable." ] ;
+       fhir:definition [ fhir:v "Age range to which this reference range applies if applicable." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.age" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Range"^^xsd:anyURI ;
+           fhir:l fhir:Range
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.referenceRange.text" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.referenceRange.text" ] ;
+       fhir:short [ fhir:v "Text based reference range in an observation." ] ;
+       fhir:definition [ fhir:v "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation. An example would be a reference value of \\\"Negative\\\" or a list or table of \\\"normals\\\"." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.referenceRange.text" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.interpretation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.interpretation" ] ;
+       fhir:short [ fhir:v "Information about reference intervals and result interpretation." ] ;
+       fhir:definition [ fhir:v "Information about reference intervals and result interpretation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.interpretation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT, HL7 ObservationInterpretation" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.note" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.note" ] ;
+       fhir:short [ fhir:v "Comments and narrative representation of the observation result and findings." ] ;
+       fhir:definition [ fhir:v "Comments and narrative representation of the observation result and findings." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.note" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component" ] ;
+       fhir:short [ fhir:v "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)." ] ;
+       fhir:definition [ fhir:v "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.type" ] ;
+       fhir:short [ fhir:v "Observation type. Code and name representing the type of the observation using the agreed code systems." ] ;
+       fhir:definition [ fhir:v "Observation type. Code and name representing the type of the observation using the agreed code systems." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.type" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "LOINC, NPU" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.originalName" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.originalName" ] ;
+       fhir:short [ fhir:v "Original (user-friendly) name of the observation as used in the local laboratory or clinical system." ] ;
+       fhir:definition [ fhir:v "Original (user-friendly) name of the observation as used in the local laboratory or clinical system." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.originalName" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.result" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.result" ] ;
+       fhir:short [ fhir:v "Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation." ] ;
+       fhir:definition [ fhir:v "Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.result" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.result.value[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.result.value[x]" ] ;
+       fhir:short [ fhir:v "Observation result value according to the type of observation. Model covers only most frequently used data types but other data types can be used as well.\n      Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided." ] ;
+       fhir:definition [ fhir:v "Observation result value according to the type of observation. Model covers only most frequently used data types but other data types can be used as well.\n      Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.result.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Range"^^xsd:anyURI ;
+           fhir:l fhir:Range
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Ratio"^^xsd:anyURI ;
+           fhir:l fhir:Ratio
+         ]
+       ] [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units, SNOMED CT for coded results" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.result.uncertainty" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.result.uncertainty" ] ;
+       fhir:short [ fhir:v "Measurement uncertainty type and interval if needed." ] ;
+       fhir:definition [ fhir:v "Measurement uncertainty information about the observation result." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.result.uncertainty" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.result.uncertainty.value" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.result.uncertainty.value" ] ;
+       fhir:short [ fhir:v "The numerical value of the measurement uncertainty." ] ;
+       fhir:definition [ fhir:v "The numerical value of the measurement uncertainty." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.result.uncertainty.value" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "decimal"^^xsd:anyURI ;
+           fhir:l fhir:decimal
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.result.uncertainty.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.result.uncertainty.type" ] ;
+       fhir:short [ fhir:v "Probability Distribution Type for uncertainty" ] ;
+       fhir:definition [ fhir:v "Probability Distribution Type for uncertainty" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.result.uncertainty.type" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Coding"^^xsd:anyURI ;
+           fhir:l fhir:Coding
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 ProbabilityDistributionType" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.result.dataAbsentReason" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.result.dataAbsentReason" ] ;
+       fhir:short [ fhir:v "Provides a reason why the expected value in the element component.value[x] is missing." ] ;
+       fhir:definition [ fhir:v "Provides a reason why the expected value in the element component.value[x] is missing." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.result.dataAbsentReason" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Data absent reason" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange" ] ;
+       fhir:short [ fhir:v "Reference range, multiple reference ranges of different types could by provided. Provides guide for interpretation of the result." ] ;
+       fhir:definition [ fhir:v "Reference range, multiple reference ranges of different types could by provided. Provides guide for interpretation of the result." ] ;
+       fhir:comment [ fhir:v "Reference ranges are usually implied only for a numeric scale type. Use of the same units for reference range and value is implied." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.low" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.low" ] ;
+       fhir:short [ fhir:v "Low limit of the reference range." ] ;
+       fhir:definition [ fhir:v "Low limit of the reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.low" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.high" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.high" ] ;
+       fhir:short [ fhir:v "High limit of the reference range." ] ;
+       fhir:definition [ fhir:v "High limit of the reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.high" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.normalValue" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.normalValue" ] ;
+       fhir:short [ fhir:v "Normal value, if relevant for the reference range." ] ;
+       fhir:definition [ fhir:v "Normal value, if relevant for the reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.normalValue" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.type" ] ;
+       fhir:short [ fhir:v "Type of reference range." ] ;
+       fhir:definition [ fhir:v "Type of reference range." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.type" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "HL7 Observation Reference Range Meaning Codes" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.appliesTo" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.appliesTo" ] ;
+       fhir:short [ fhir:v "Codes to indicate the target population this reference range applies to." ] ;
+       fhir:definition [ fhir:v "Codes to indicate the target population this reference range applies to. For example, a reference range may be based on the normal population or a particular sex or race. Multiple appliesTo are interpreted as an \\\"AND\\\" of the target populations." ] ;
+       fhir:comment [ fhir:v "Multiple appliesTo are interpreted as an \"AND\" of the target populations." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.appliesTo" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT, HL7 v3-Race" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.age" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.age" ] ;
+       fhir:short [ fhir:v "Age range to which this reference range applies if applicable." ] ;
+       fhir:definition [ fhir:v "Age range to which this reference range applies if applicable." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.age" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Range"^^xsd:anyURI ;
+           fhir:l fhir:Range
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.text" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.referenceRange.text" ] ;
+       fhir:short [ fhir:v "Text based reference range in an observation." ] ;
+       fhir:definition [ fhir:v "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation. An example would be a reference value of \\\"Negative\\\" or a list or table of \\\"normals\\\"." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.referenceRange.text" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.interpretation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.interpretation" ] ;
+       fhir:short [ fhir:v "Information about reference intervals and result interpretation." ] ;
+       fhir:definition [ fhir:v "Information about reference intervals and result interpretation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.component.interpretation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT, HL7 ObservationInterpretation" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:short [ fhir:v "Reference to the related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image." ] ;
+       fhir:definition [ fhir:v "Reference to the related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.derivedFrom[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingStudy>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.hasMember[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.hasMember[x]" ] ;
+       fhir:short [ fhir:v "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group." ] ;
+       fhir:definition [ fhir:v "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.hasMember[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.basedOn[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.basedOn[x]" ] ;
+       fhir:short [ fhir:v "A plan, proposal or order that is fulfilled in whole or in part by this observation." ] ;
+       fhir:definition [ fhir:v "A plan, proposal or order that is fulfilled in whole or in part by this observation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSObservation.basedOn[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:short [ fhir:v "References to the observation(s) that triggered the performance of this observation." ] ;
+       fhir:definition [ fhir:v "References to the observation(s) that triggered the performance of this observation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryObservation.triggeredBy[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.testKit" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.testKit" ] ;
+       fhir:short [ fhir:v "Laboratory test kit used during measurement." ] ;
+       fhir:definition [ fhir:v "Laboratory test kit used during measurement." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryObservation.testKit" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.calibrator" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.calibrator" ] ;
+       fhir:short [ fhir:v "Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain." ] ;
+       fhir:definition [ fhir:v "Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryObservation.calibrator" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.accreditationStatus" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.accreditationStatus" ] ;
+       fhir:short [ fhir:v "Accreditation status of the laboratory for the observation." ] ;
+       fhir:definition [ fhir:v "Accreditation status of the laboratory for the observation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryObservation.accreditationStatus" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.previousResults" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.previousResults" ] ;
+       fhir:short [ fhir:v "Previous results of the same observation" ] ;
+       fhir:definition [ fhir:v "Previous results of the same observation" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryObservation.previousResults" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:short [ fhir:v "Examination performed near or at the site of a patient." ] ;
+       fhir:definition [ fhir:v "Indicates if the observation is a point-of-care test (POCT), i.e. an examination performed near or at the site of a patient." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSLaboratoryObservation.pointOfCareTest" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation" ] ;
+       fhir:short [ fhir:v "Laboratory observation model" ] ;
+       fhir:definition [ fhir:v "Model for observation performed by laboratory" ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.type" ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "LOINC, NPU" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.result" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.result" ] ;
+       fhir:short [ fhir:v "Result of the laboratory observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation." ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.component.type" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.component.type" ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "LOINC, NPU" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:short [ fhir:v "References to the observation(s) that triggered the performance of this observation." ] ;
+       fhir:definition [ fhir:v "References to the observation(s) that triggered the performance of this observation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.testKit" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.testKit" ] ;
+       fhir:short [ fhir:v "Laboratory test kit used during measurement." ] ;
+       fhir:definition [ fhir:v "Laboratory test kit used during measurement." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.calibrator" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.calibrator" ] ;
+       fhir:short [ fhir:v "Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain." ] ;
+       fhir:definition [ fhir:v "Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.accreditationStatus" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.accreditationStatus" ] ;
+       fhir:short [ fhir:v "Accreditation status of the laboratory for the observation." ] ;
+       fhir:definition [ fhir:v "Accreditation status of the laboratory for the observation." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.previousResults" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.previousResults" ] ;
+       fhir:short [ fhir:v "Previous results of the same observation" ] ;
+       fhir:definition [ fhir:v "Previous results of the same observation" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:path [ fhir:v "EHDSLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:short [ fhir:v "Examination performed near or at the site of a patient." ] ;
+       fhir:definition [ fhir:v "Indicates if the observation is a point-of-care test (POCT), i.e. an examination performed near or at the site of a patient." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

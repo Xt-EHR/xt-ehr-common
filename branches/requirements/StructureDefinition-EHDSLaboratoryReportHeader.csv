@@ -1,0 +1,65 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSLaboratoryReportHeader","EHDSLaboratoryReportHeader","","","",0,*,"","","","null {[]} {[]}
+","Laboratory report header model","A.1 - EHDS refined base model for laboratory report header data elements","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSLaboratoryReportHeader.subject","EHDSLaboratoryReportHeader.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.subject",1,1,"",""
+"EHDSLaboratoryReportHeader.authorship","EHDSLaboratoryReportHeader.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship",1,*,"",""
+"EHDSLaboratoryReportHeader.authorship.author","EHDSLaboratoryReportHeader.authorship.author","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Author","Author by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship.author",1,1,"",""
+"EHDSLaboratoryReportHeader.authorship.datetime","EHDSLaboratoryReportHeader.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.authorship.datetime",1,1,"",""
+"EHDSLaboratoryReportHeader.lastUpdate","EHDSLaboratoryReportHeader.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.lastUpdate",0,1,"",""
+"EHDSLaboratoryReportHeader.status","EHDSLaboratoryReportHeader.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.status",1,1,"",""
+"EHDSLaboratoryReportHeader.statusReason[x]","EHDSLaboratoryReportHeader.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.statusReason[x]",0,1,"",""
+"EHDSLaboratoryReportHeader.language","EHDSLaboratoryReportHeader.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSCommonHeader.language",0,1,"",""
+"EHDSLaboratoryReportHeader.version","EHDSLaboratoryReportHeader.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSCommonHeader.version",0,1,"",""
+"EHDSLaboratoryReportHeader.documentId","EHDSLaboratoryReportHeader.documentId","","","",1,*,"","","","Identifier {[]} {[]}
+","Document ID","Unique identifier of the document","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.documentId",1,*,"",""
+"EHDSLaboratoryReportHeader.documentType","EHDSLaboratoryReportHeader.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document type","Identifies the type of document at hand, e.g. Hospital discharge report.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSDocumentHeader.documentType",1,1,"",""
+"EHDSLaboratoryReportHeader.documentTitle","EHDSLaboratoryReportHeader.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Document title","Document title, such as Hospital Discharge Report, Laboratory Result Report, etc.","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.documentTitle",1,1,"",""
+"EHDSLaboratoryReportHeader.documentStatus","EHDSLaboratoryReportHeader.documentStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Document status","The status of the Hospital discharge report. E.g., preliminary, final.","","","","","","","","","",,"preferred","hl7:CompositionStatus","","",,,,"EHDSDocumentHeader.documentStatus",1,1,"",""
+"EHDSLaboratoryReportHeader.period","EHDSLaboratoryReportHeader.period","","","",0,1,"","","","Period {[]} {[]}
+","Period","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.period",0,1,"",""
+"EHDSLaboratoryReportHeader.reportDateTime","EHDSLaboratoryReportHeader.reportDateTime","","","",1,1,"","","","dateTime {[]} {[]}
+","Report date and time","Date and time of the report creation.","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.reportDateTime",1,1,"",""
+"EHDSLaboratoryReportHeader.attestation","EHDSLaboratoryReportHeader.attestation","","","",0,*,"","","","Base {[]} {[]}
+","Attestation","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.attestation",0,*,"",""
+"EHDSLaboratoryReportHeader.attestation.attester","EHDSLaboratoryReportHeader.attestation.attester","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Attester","Attester who validated the document. Mulitple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.attestation.attester",1,1,"",""
+"EHDSLaboratoryReportHeader.attestation.datetime","EHDSLaboratoryReportHeader.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.attestation.datetime",1,1,"",""
+"EHDSLaboratoryReportHeader.legalAuthentication","EHDSLaboratoryReportHeader.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","Legal authentication","Document legal authentication","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.legalAuthentication",0,1,"",""
+"EHDSLaboratoryReportHeader.legalAuthentication.legalAuthenticator","EHDSLaboratoryReportHeader.legalAuthentication.legalAuthenticator","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","Legal authenticator","The person taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.legalAuthentication.legalAuthenticator",1,1,"",""
+"EHDSLaboratoryReportHeader.legalAuthentication.datetime","EHDSLaboratoryReportHeader.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","DateTime","Date and time when the document was authorized.","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.legalAuthentication.datetime",1,1,"",""
+"EHDSLaboratoryReportHeader.eventType","EHDSLaboratoryReportHeader.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Event type","Categorization of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocumentHeader.eventType",0,*,"",""
+"EHDSLaboratoryReportHeader.authorSpecialty","EHDSLaboratoryReportHeader.authorSpecialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Specialty","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSDocumentHeader.authorSpecialty",0,*,"",""
+"EHDSLaboratoryReportHeader.custodian","EHDSLaboratoryReportHeader.custodian","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","Document custodian","Organisation that is in charge of maintaining the document/report.","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.custodian",1,1,"",""
+"EHDSLaboratoryReportHeader.documentFormat","EHDSLaboratoryReportHeader.documentFormat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Document format","An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","","","","","","","","","",,"preferred","HL7 Document Format Codes","","",,,,"EHDSDocumentHeader.documentFormat",0,1,"",""
+"EHDSLaboratoryReportHeader.confidentiality","EHDSLaboratoryReportHeader.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Confidentiality","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSDocumentHeader.confidentiality",0,1,"",""
+"EHDSLaboratoryReportHeader.knowledgeResources","EHDSLaboratoryReportHeader.knowledgeResources","","","",0,*,"","","","Base {[]} {[]}
+","Related documents and information sources","Related documents and information sources","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.knowledgeResources",0,*,"",""
+"EHDSLaboratoryReportHeader.knowledgeResources.externalReference","EHDSLaboratoryReportHeader.knowledgeResources.externalReference","","","",0,*,"","","","RelatedArtifact {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.knowledgeResources.externalReference",0,*,"",""
+"EHDSLaboratoryReportHeader.knowledgeResources.relatedTo","EHDSLaboratoryReportHeader.knowledgeResources.relatedTo","","","",0,*,"","","","Reference {[]} {[]}
+","...","...","","","","","","","","","",,,,,"",,,,"EHDSDocumentHeader.knowledgeResources.relatedTo",0,*,"",""
+"EHDSLaboratoryReportHeader.healthInsuranceAndPaymentInformation","EHDSLaboratoryReportHeader.healthInsuranceAndPaymentInformation","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage {[]} {[]}
+","Health insurance and payment information","Health insurance information (Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.)","","","","","","","","","",,,,,"",,,,"EHDSLaboratoryReportHeader.healthInsuranceAndPaymentInformation",0,*,"",""
+"EHDSLaboratoryReportHeader.intendedRecipient","EHDSLaboratoryReportHeader.intendedRecipient","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}
+","Intended recipient","Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable","","","","","","","","","",,,,,"",,,,"EHDSLaboratoryReportHeader.intendedRecipient",0,*,"",""

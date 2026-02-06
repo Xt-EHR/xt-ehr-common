@@ -1,0 +1,19 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSSubstance","EHDSSubstance","","","",0,*,"","","","null {[]} {[]}
+","Substance model","C.28 - EHDS refined base model for Substance","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSSubstance.identifier","EHDSSubstance.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.28.1 - Identifier","Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly).","","","","","","","","","",,,,,"",,,,"EHDSSubstance.identifier",0,*,"",""
+"EHDSSubstance.code","EHDSSubstance.code","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.28.2 - Code","A code (or set of codes) that identify this substance.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSubstance.code",0,*,"",""
+"EHDSSubstance.description","EHDSSubstance.description","","","",0,1,"","","","string {[]} {[]}
+","C.28.3 - Description","A description of the substance - its appearance, handling requirements, and other usage notes.","","","","","","","","","",,,,,"",,,,"EHDSSubstance.description",0,1,"",""
+"EHDSSubstance.expiry","EHDSSubstance.expiry","","","",0,1,"","","","dateTime {[]} {[]}
+","C.28.4 - Expiry","When the substance is no longer valid to use.","","","","","","","","","",,,,,"",,,,"EHDSSubstance.expiry",0,1,"",""
+"EHDSSubstance.quantity","EHDSSubstance.quantity","","","",0,1,"","","","Quantity {[]} {[]}
+","C.28.5 - Quantity","The amount of the substance.","","","","","","","","","",,,,,"",,,,"EHDSSubstance.quantity",0,1,"",""
+"EHDSSubstance.ingredients","EHDSSubstance.ingredients","","","",0,*,"","","","Base {[]} {[]}
+","C.28.6 - Ingredients","Composition information about the substance","","","","","","","","","",,,,,"",,,,"EHDSSubstance.ingredients",0,*,"",""
+"EHDSSubstance.ingredients.quantity","EHDSSubstance.ingredients.quantity","","","",0,1,"","","","Ratio {[]} {[]}
+","C.28.6.1 - Quantity","The amount of the ingredient in the substance - a concentration ratio.","","","","","","","","","",,,,,"",,,,"EHDSSubstance.ingredients.quantity",0,1,"",""
+"EHDSSubstance.ingredients.substance","EHDSSubstance.ingredients.substance","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance]]}
+","C.28.6.2 - Substance","Another substance that is a component of this substance.","","","","","","","","","",,,,,"",,,,"EHDSSubstance.ingredients.substance",1,1,"",""

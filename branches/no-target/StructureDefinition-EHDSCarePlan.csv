@@ -1,0 +1,29 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSCarePlan","EHDSCarePlan","","","",0,*,"","","","null {[]} {[]}
+","Care plan model","C.19 - EHDS refined base model for Care plan","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSCarePlan.identifier","EHDSCarePlan.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.19.1 - Identifier","Care plan  identifier","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.identifier",0,*,"",""
+"EHDSCarePlan.status","EHDSCarePlan.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.19.2 - Status","Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.","","","","","","","","","",,"preferred","HL7 Request status","","",,,,"EHDSCarePlan.status",1,1,"",""
+"EHDSCarePlan.intent","EHDSCarePlan.intent","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","C.19.3 - Intent","Indicates the level of authority/intentionality associated with the care plan and where the care plan fits into the workflow chain.","","","","","","","","","",,"preferred","HL7 Care Plan Intent","","",,,,"EHDSCarePlan.intent",1,1,"",""
+"EHDSCarePlan.title","EHDSCarePlan.title","","","",0,1,"","","","Narrative {[]} {[]}
+","C.19.4 - Title","Human-friendly name for the care plan","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.title",0,1,"",""
+"EHDSCarePlan.description","EHDSCarePlan.description","","","",0,1,"","","","Narrative {[]} {[]}
+","C.19.5 - Description","A description of the scope and nature of the plan.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.description",0,1,"",""
+"EHDSCarePlan.patient","EHDSCarePlan.patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient]]}
+","C.19.6 - Subject","Identifies the patient or group whose intended care is described by the plan.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.patient",1,1,"",""
+"EHDSCarePlan.period","EHDSCarePlan.period","","","",0,1,"","","","Period {[]} {[]}
+","C.19.7 - Period","Indicates when the plan did (or is intended to) come into effect and end.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.period",0,1,"",""
+"EHDSCarePlan.custodian","EHDSCarePlan.custodian","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson]]}
+","C.19.8 - Custodian","Custodian is responsible for the care plan. The care plan is attributed to the custodian. The custodian might or might not be a contributor.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.custodian",0,1,"",""
+"EHDSCarePlan.contributor","EHDSCarePlan.contributor","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson]]}
+","C.19.9 - Contributor","Identifies the individual(s), organization or device who provided the contents of the care plan.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.contributor",0,*,"",""
+"EHDSCarePlan.addresses","EHDSCarePlan.addresses","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.19.10 - Addresses","Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan.","","","","","","","","","",,"preferred","ICD-10 (ICD-11 when available), SNOMED CT, Orphacode","","",,,,"EHDSCarePlan.addresses",0,*,"",""
+"EHDSCarePlan.goal","EHDSCarePlan.goal","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSGoal {[]} {[]}
+","C.19.11 - Goal","Describes the intended objective(s) of carrying out the care plan.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.goal",0,*,"",""
+"EHDSCarePlan.activity","EHDSCarePlan.activity","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAppointment], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescription], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTask], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest]]}
+","C.19.12 - Activity","The details of the proposed activity represented in a specific resource.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.activity",0,*,"",""
+"EHDSCarePlan.note","EHDSCarePlan.note","","","",0,*,"","","","Narrative {[]} {[]}
+","C.19.13 - Note","General notes about the care plan not covered elsewhere.","","","","","","","","","",,,,,"",,,,"EHDSCarePlan.note",0,*,"",""

@@ -1,0 +1,917 @@
+<!-- get modelType -->
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Inpatient encounter model - XML Representation - EHDS Logical Information Models v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"13.56"}
+    h3,h4,h5,h6{--heading-prefix:"13.56"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">eP/eD</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCaseLabOrder.html">Laboratory Order</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Hospital Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Inpatient encounter model</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/Xt-EHR/xt-ehr-common/tree/PS-remake">https://github.com/Xt-EHR/xt-ehr-common/tree/PS-remake</a> and changes regularly. See the <a href="https://www.xt-ehr.eu/specifications/fhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-EHDSInpatientEncounter.html">Content</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-EHDSInpatientEncounter-definitions.html">Detailed Descriptions</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSInpatientEncounter-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSInpatientEncounter.profile.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSInpatientEncounter.profile.ttl.html">TTL</a>
+    </li>
+  
+
+
+</ul>
+
+
+<a name="root"> </a>
+<h2 id="root">Logical Model: EHDSInpatientEncounter - XML Profile</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2025-04-16
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p>XML representation of the EHDSInpatientEncounter logical model.</p>
+
+<p><a href="StructureDefinition-EHDSInpatientEncounter.xml" no-download="true">Raw xml</a> | <a href="StructureDefinition-EHDSInpatientEncounter.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition">StructureDefinition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.id">id</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;EHDSInpatientEncounter&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition EHDSInpatientEncounter&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;EHDSInpatientEncounter&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcEHDSInpatientEncounter&quot;&gt; &lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter-en-US&quot;&gt; &lt;/a&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;tr style=&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top&quot;&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;The logical name of the element&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Information about the use of the element&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Minimum and Maximum # of times the element can appear in the instance&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;width: 100px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Reference to the type of the element&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Additional information about the element&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=&quot;float: right&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter&quot; title=&quot;C.23 - EHDS refined base model for Inpatient encounter&quot;&gt;EHDSInpatientEncounter&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot;&gt;EHDSEncounter&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;br/&gt;Elements defined in Ancestors:&lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;Encounter identifier (Business identifiers assigned to this encounter).&quot;&gt;identifier&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;Indicates the urgency of the encounter.&quot;&gt;priority&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The type of the encounter whether inpatient or short stay encounter.&quot;&gt;encounterType&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;A narrative description of the encounter course.&quot;&gt;encounterNote&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The patient related to this encounter.&quot;&gt;patient&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;Episode(s) of care that this encounter should be recorded against&quot;&gt;episodeOfCare&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The request that initiated this encounter&quot;&gt;basedOn&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;Another Encounter this encounter is part of&quot;&gt;partOf&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The organization (facility) responsible for this encounter&quot;&gt;serviceProvider&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The appointment that scheduled this encounter&quot;&gt;appointment&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The actual start and end time of the encounter&quot;&gt;actualPeriod&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The planned start date/time (or admission date) of the encounter&quot;&gt;plannedStartDate&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;The planned end date/time (or discharge date) of the encounter&quot;&gt;plannedEndDate&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;Details about the admission to a healthcare service&quot;&gt;admission&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;Discharge details&quot;&gt;discharge&lt;/a&gt;, &lt;a href=&quot;StructureDefinition-EHDSEncounter.html&quot; title=&quot;List of locations where the patient has been.&quot;&gt;location&lt;/a&gt;&lt;br/&gt;Inpatient encounter model&lt;br/&gt;&lt;span style=&quot;font-weight:bold&quot;&gt;Instances of this logical model can be the target of a Reference&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter.priority&quot; title=&quot;Admission urgency, either emergency or planned&quot;&gt;priority&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter.priority&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a style=&quot;opacity: 0.5&quot; href=&quot;http://hl7.org/fhir/R5/datatypes.html#CodeableConcept&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;C.30.3 - Priority&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter.actualPeriod&quot;&gt;actualPeriod&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter.actualPeriod&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;span style=&quot;opacity: 0.5&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a style=&quot;opacity: 0.5&quot; href=&quot;http://hl7.org/fhir/R5/datatypes.html#Period&quot;&gt;Period&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;C.30.11 - Actual period&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter.admission&quot;&gt;admission&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter.admission&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;span style=&quot;opacity: 0.5&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;Base&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;C.30.14 - Admission&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter.discharge&quot;&gt;discharge&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter.discharge&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;span style=&quot;opacity: 0.5&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;Base&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;C.30.15 - Discharge&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin_end.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter.location&quot;&gt;location&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter.location&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin_end.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-EHDSInpatientEncounter-definitions.html#EHDSInpatientEncounter.location.organizationPart&quot; title=&quot;Organization or organization part (hospital department) where the patient was present.&quot;&gt;organizationPart&lt;/a&gt;&lt;a name=&quot;EHDSInpatientEncounter.location.organizationPart&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a style=&quot;opacity: 0.5&quot; href=&quot;StructureDefinition-EHDSLocation.html&quot;&gt;EHDSLocation&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;C.30.16.2 - Organization part&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;hierarchy&quot;&gt;&lt;br/&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.extension">extension</a>
+             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;can-be-target&quot;/&gt;
+  &lt;/extension&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.extension">extension</a>
+             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;can-be-target&quot;/&gt;
+  &lt;/extension&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.url">url</a>
+       <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSInpatientEncounter&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Inpatient encounter model&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-04-16T13:19:07+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Xt-EHR&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Xt-EHR&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;http://Xt-EHR.eu&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.description">description</a>
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;C.23 - EHDS refined base model for Inpatient encounter&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;5.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.mapping">mapping</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;rim&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.mapping.uri">uri</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://hl7.org/v3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.mapping.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;RIM Mapping&quot;/&gt;
+  &lt;/mapping&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.kind">kind</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;logical&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.abstract">abstract</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.type">type</a>
+        <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSInpatientEncounter&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.derivation">derivation</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;specialization&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.extension">extension</a>
+               <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Inpatient encounter model&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;C.23 - EHDS refined base model for Inpatient encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Base&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;rim&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;n/a&quot;/&gt;
+      &lt;/mapping&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.identifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.identifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.1 - Identifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Encounter identifier (Business identifiers assigned to this encounter).&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.identifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.priority&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.priority&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.3 - Priority&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Admission urgency, either emergency or planned&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.priority&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding">binding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;hl7:v3-xEncounterAdmissionUrgency&quot;/&gt;
+      &lt;/binding&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.encounterType&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.encounterType&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.2 - Encounter type&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The type of the encounter whether inpatient or short stay encounter.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.encounterType&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding">binding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;hl7v3:ActEncounterCode&quot;/&gt;
+      &lt;/binding&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.encounterNote&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.encounterNote&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.4 - Encounter note&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;A narrative description of the encounter course.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.encounterNote&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;string&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.patient&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.patient&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.5 - Patient&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The patient related to this encounter.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.patient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.episodeOfCare&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.episodeOfCare&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.6 - Episode of care&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Episode(s) of care that this encounter should be recorded against&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.episodeOfCare&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.basedOn&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.basedOn&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.7 - Based on&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The request that initiated this encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.basedOn&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.partOf&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.partOf&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.8 - Part of&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Another Encounter this encounter is part of&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.partOf&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.serviceProvider&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.serviceProvider&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.9 - Service provider&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The organization (facility) responsible for this encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.serviceProvider&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.appointment&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.appointment&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.10 - Appointment&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The appointment that scheduled this encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.appointment&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAppointment&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.actualPeriod&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.actualPeriod&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.11 - Actual period&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The actual start and end time of the encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.actualPeriod&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Period&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.plannedStartDate&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.plannedStartDate&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.12 - Planned start date&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The planned start date/time (or admission date) of the encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.plannedStartDate&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;dateTime&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.plannedEndDate&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.plannedEndDate&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.13 - Planned end date&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The planned end date/time (or discharge date) of the encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.plannedEndDate&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;dateTime&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14 - Admission&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Details about the admission to a healthcare service&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Base&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission.admitter&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission.admitter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14.1 - Admitter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Admitting Healthcare Professional&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission.admitter&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission.admitSource&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission.admitSource&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14.2 - Admit Source&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;From where the patient was admitted (e.g. physician referral, transfer).&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission.admitSource&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding">binding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;hl7:admit-source&quot;/&gt;
+      &lt;/binding&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission.referringProfessional&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission.referringProfessional&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14.3 - Referring professional&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Referring Healthcare Professional&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission.referringProfessional&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission.admissionReason&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission.admissionReason&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14.4 - Admission reason&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Reason or reasons for admission, e.g. Problem, procedure or finding.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission.admissionReason&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission.admissionReasonComment&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission.admissionReasonComment&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14.5 - Admission reason comment&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Explanation of the reason for the encounter.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission.admissionReasonComment&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;string&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission.admissionLegalStatus&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission.admissionLegalStatus&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.14.6 - Admission legal status&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Legal status/situation at admission. The legal status indicates the basis on which the patient is staying in a healthcare organisation. This can be either voluntary or involuntary, however the legal status is always determined by a court. A patient can also receive healthcare based on a forensic status. (voluntary, involuntary, admission by legal authority).&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.admission.admissionLegalStatus&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding">binding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;SNOMED CT&quot;/&gt;
+      &lt;/binding&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.discharge&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.discharge&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.15 - Discharge&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Discharge details&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.discharge&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Base&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.discharge.destinationType&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.discharge.destinationType&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.15.1 - Destination type&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Type of location to which the patient will go after the encounter. E.g. home, hospital, nursing home, left against medical advice etc.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.discharge.destinationType&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding">binding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;hl7.discharge-disposition&quot;/&gt;
+      &lt;/binding&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.discharge.destinationLocation&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.discharge.destinationLocation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.15.2 - Destination location&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;The location/organisation to which the patient will go after the encounter. Name, address and telecommunication contact.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.discharge.destinationLocation&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Reference&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>
+                       <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.location&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.location&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.16 - Location&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;List of locations where the patient has been.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.location&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Base&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.location.period&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.location.period&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.16.1 - Period&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Time period during which the patient was present at the location&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.location.period&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;Period&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.location.organizationPart&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.location.organizationPart&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;C.30.16.2 - Organization part&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Organization or organization part (hospital department) where the patient was present.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSEncounter.location.organizationPart&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>
+              <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation&quot;/&gt;
+      &lt;/type&gt;
+    &lt;/element&gt;
+  &lt;/snapshot&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential">differential</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Inpatient encounter model&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;C.23 - EHDS refined base model for Inpatient encounter&quot;/&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.priority&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.priority&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Admission urgency, either emergency or planned&quot;/&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.actualPeriod&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.actualPeriod&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.admission&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.admission&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.discharge&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.discharge&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a>=&quot;EHDSInpatientEncounter.location.organizationPart&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EHDSInpatientEncounter.location.organizationPart&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Organization or organization part (hospital department) where the patient was present.&quot;/&gt;
+    &lt;/element&gt;
+  &lt;/differential&gt;
+&lt;/StructureDefinition&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://Xt-EHR.eu">Xt-EHR</a>.  Package eu.ehds.models#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Apr 16, 2025 13:19+0000">2025-04-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,1182 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "eu.ehds.models",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide eu.ehds.models</b></p><a name=\"eu.ehds.models\"> </a><a name=\"hceu.ehds.models\"> </a><a name=\"eu.ehds.models-en-US\"> </a><h2>EHDSModels</h2><p>The official URL for this implementation guide is: </p><pre>https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models</pre><div><p>EHDS Logical Information Models</p>\n</div></div>"
+  },
+  "url" : "https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models",
+  "version" : "0.1.0",
+  "name" : "EHDSModels",
+  "title" : "EHDS Logical Information Models",
+  "status" : "draft",
+  "date" : "2025-05-26T19:44:56+00:00",
+  "publisher" : "Xt-EHR",
+  "contact" : [{
+    "name" : "Xt-EHR",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://Xt-EHR.eu"
+    }]
+  }],
+  "description" : "EHDS Logical Information Models",
+  "packageId" : "eu.ehds.models",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["5.0.0"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r5",
+    "version" : "6.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r5",
+    "version" : "5.2.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r5#0.5.0"
+    }],
+    "grouping" : [{
+      "id" : "EHDSPsLogicalModels",
+      "name" : "EHDS Patient Summary Logical Models",
+      "description" : "Information Models for implementing EEHRxF Patient Summary under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\""
+    },
+    {
+      "id" : "EHDSPrescriptionDispenseLogicalModels",
+      "name" : "EHDS ePrescription and eDispense Logical Models",
+      "description" : "Information Models for implementing EEHRxF services for medication prescription and dispense services."
+    },
+    {
+      "id" : "EHDSLaboratoryLogicalModels",
+      "name" : "EHDS Laboratory Domain Logical Models",
+      "description" : "Information Models for implementing EEHRxF services in the laboratory domain under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\""
+    },
+    {
+      "id" : "EHDSImagingLogicalModels",
+      "name" : "EHDS Imaging Domain Logical Models",
+      "description" : "Information Models for implementing EEHRxF services in the imaging domain under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\""
+    },
+    {
+      "id" : "EHDSHdrLogicalModels",
+      "name" : "EHDS Hospital Discharge Report Domain Logical Models",
+      "description" : "Information Models for implementing EEHRxF Hospital discharge report under EHDS. Format based on ISO 13972 \"Health informatics — Clinical information models — Characteristics, structures and requirements.\""
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSAddress"
+      },
+      "name" : "Address model",
+      "description" : "EHDS refined base model for Address structure",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSAlertFlag"
+      },
+      "name" : "Alert flag model",
+      "description" : "C.22 - EHDS refined base model for Alert flag",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSAllergyIntolerance"
+      },
+      "name" : "Allergy intolerance model",
+      "description" : "EHDS refined base model for allergy/intolerance",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ANY"
+      },
+      "name" : "ANY",
+      "description" : "An abstract type",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSAppointment"
+      },
+      "name" : "Appointment model",
+      "description" : "EHDS refined base model for Appointment. This is a simplified model with minimal information - it is not intended to cover the full functionality of booking systems.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSAttachment"
+      },
+      "name" : "Attachment model",
+      "description" : "EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSBodyStructure"
+      },
+      "name" : "Body structure model",
+      "description" : "EHDS refined base model for Body structure",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSCarePlan"
+      },
+      "name" : "Care plan model",
+      "description" : "EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Coded"
+      },
+      "name" : "Coded",
+      "description" : "Coded data element",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSConditionHdr"
+      },
+      "name" : "Condition HDR model",
+      "description" : "C.38 - EHDS refined base model for Condition HDR",
+      "isExample" : false,
+      "groupingId" : "EHDSHdrLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSCondition"
+      },
+      "name" : "Condition model",
+      "description" : "EHDS refined base model for A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSCoverage"
+      },
+      "name" : "Coverage model",
+      "description" : "EHDS refined base model for Coverage",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDataSet"
+      },
+      "name" : "DataSet model",
+      "description" : "Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDevice"
+      },
+      "name" : "Device model",
+      "description" : "EHDS refined base model for Device information",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDeviceUse"
+      },
+      "name" : "Device use model",
+      "description" : "EHDS refined base model for Device Use",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDocument"
+      },
+      "name" : "Document model",
+      "description" : "EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDosage"
+      },
+      "name" : "Dosage model",
+      "description" : "C.40 - EHDS refined base model for Dosage",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDosaging"
+      },
+      "name" : "Dosaging model",
+      "description" : "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSEncounter"
+      },
+      "name" : "Encounter model",
+      "description" : "C.30 - EHDS refined base model for Encounter",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSEndpoint"
+      },
+      "name" : "Endpoint model",
+      "description" : "C.33 - EHDS refined base model for Endpoint",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSEpisodeOfCare"
+      },
+      "name" : "Episode of care model",
+      "description" : "C.29 - EHDS refined base model for Episode of care",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSFamilyMemberHistory"
+      },
+      "name" : "Family member history model",
+      "description" : "C.37 - EHDS refined base model for Family member history",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSFunctionalStatus"
+      },
+      "name" : "Functional status",
+      "description" : "EHDS refined base model for Functional status",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSGroup"
+      },
+      "name" : "Group model",
+      "description" : "C. - EHDS refined base model for Group",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSHealthProfessional"
+      },
+      "name" : "Health professional model",
+      "description" : "EHDS refined base model for Health professional (HP)",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSHospitalDischargeReportBody"
+      },
+      "name" : "Hospital Discharge Report body model",
+      "description" : "EHDS refined base model for Hospital Discharge Report body",
+      "isExample" : false,
+      "groupingId" : "EHDSHdrLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSHospitalDischargeReportHeader"
+      },
+      "name" : "Hospital Discharge Report header model",
+      "description" : "A.1 - EHDS refined base model for Hospital Discharge Report header data elements",
+      "isExample" : false,
+      "groupingId" : "EHDSHdrLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSHospitalDischargeReport"
+      },
+      "name" : "Hospital Discharge Report model",
+      "description" : "A - EHDS refined base model for Hospital Discharge Report",
+      "isExample" : false,
+      "groupingId" : "EHDSHdrLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSHumanName"
+      },
+      "name" : "Human name model",
+      "description" : "C.27 - EHDS refined base model for Human name",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSImagingReportBody"
+      },
+      "name" : "Imaging report body model",
+      "description" : "B.1 - EHDS refined base model for Imaging report body",
+      "isExample" : false,
+      "groupingId" : "EHDSImagingLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSImagingReportHeader"
+      },
+      "name" : "Imaging report header model",
+      "description" : "A.1 - EHDS refined base model for Imaging Report header data elements",
+      "isExample" : false,
+      "groupingId" : "EHDSImagingLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSImagingReport"
+      },
+      "name" : "Imaging report model",
+      "description" : "A - EHDS refined base model for Imaging Result Report",
+      "isExample" : false,
+      "groupingId" : "EHDSImagingLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSImagingStudy"
+      },
+      "name" : "Imaging study model",
+      "description" : "C.32 - EHDS refined base model for Imaging study",
+      "isExample" : false,
+      "groupingId" : "EHDSImagingLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSImmunization"
+      },
+      "name" : "Immunization model",
+      "description" : "C.24 - EHDS refined base model for Immunization",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSInpatientEncounter"
+      },
+      "name" : "Inpatient encounter model",
+      "description" : "C.23 - EHDS refined base model for Inpatient encounter",
+      "isExample" : false,
+      "groupingId" : "EHDSHdrLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryObservation"
+      },
+      "name" : "Laboratory observation model",
+      "description" : "C.11 - EHDS refined base model for Observation performed by laboratory",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryOrder"
+      },
+      "name" : "Laboratory order",
+      "description" : "A - EHDS refined base model for Laboratory order",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryOrderBody"
+      },
+      "name" : "Laboratory order body model",
+      "description" : "B.1 - EHDS refined base model for Laboratory order body",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryOrderHeader"
+      },
+      "name" : "Laboratory order header model",
+      "description" : "A.1 - EHDS refined base model for Laboratory order header data elements",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryReportBody"
+      },
+      "name" : "Laboratory report body model",
+      "description" : "B.1 - EEHRxF refined base model for Laboratory result report body",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryReportHeader"
+      },
+      "name" : "Laboratory report header model",
+      "description" : "A.1 - EHDS refined base model for laboratory report header data elements",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLaboratoryReport"
+      },
+      "name" : "Laboratory report model",
+      "description" : "A - EHDS refined base model for Laboratory result report",
+      "isExample" : false,
+      "groupingId" : "EHDSLaboratoryLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSLocation"
+      },
+      "name" : "Location model",
+      "description" : "C.17 - EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSMedia"
+      },
+      "name" : "Media model",
+      "description" : "C.14 - EHDS refined base model for A photo, video, or audio recording acquired or used in healthcare.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSMedicationAdministration"
+      },
+      "name" : "Medication administration model",
+      "description" : "EHDS refined base model for medication administration",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSDispenseDecline"
+      },
+      "name" : "Medication dispense decline model",
+      "description" : "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment).",
+      "isExample" : false,
+      "groupingId" : "EHDSPrescriptionDispenseLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSMedicationDispense"
+      },
+      "name" : "Medication dispense model",
+      "description" : "Logical model for medication dispensation (based on request or independently)",
+      "isExample" : false,
+      "groupingId" : "EHDSPrescriptionDispenseLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSMedicationPrescription"
+      },
+      "name" : "Medication prescription model",
+      "description" : "Logical model for medication prescription. A prescription contains one or more prescription items.",
+      "isExample" : false,
+      "groupingId" : "EHDSPrescriptionDispenseLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSMedicationStatement"
+      },
+      "name" : "Medication statement model",
+      "description" : "C.39 - EHDS refined base model for Medication statement",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSMedication"
+      },
+      "name" : "Medicinal product model",
+      "description" : "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile.",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSObservation"
+      },
+      "name" : "Observation model",
+      "description" : "C.10 - EHDS refined base model for Observation information",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSOrganization"
+      },
+      "name" : "Organization model",
+      "description" : "C.3 - EHDS refined base model for Health provider or any other type of organization",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSPatient"
+      },
+      "name" : "Patient model",
+      "description" : "C.1 - EHDS refined base model for Patient/subject information",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSPatientSummary"
+      },
+      "name" : "Patient summary model",
+      "description" : "EHDS refined base model for Patient Summary",
+      "isExample" : false,
+      "groupingId" : "EHDSPsLogicalModels"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSProcedure"
+      },
+      "name" : "Procedure model",
+      "description" : "C.16 - EHDS refined base model for An action that is or was performed on or for a patient",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSRelatedPerson"
+      },
+      "name" : "Related person model",
+      "description" : "C.13 - EHDS refined base model for Patient/subject guardian and other related person information",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSServiceRequest"
+      },
+      "name" : "Service request model",
+      "description" : "C.8 - EHDS refined base model for Specification of requested service or services",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSSpecimen"
+      },
+      "name" : "Specimen model",
+      "description" : "C.9 - EHDS refined base model for A sample to be used for Analysis",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSSubstance"
+      },
+      "name" : "Substance model",
+      "description" : "C.28 - EHDS refined base model for Substance",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/EHDSTelecom"
+      },
+      "name" : "Telecom model",
+      "description" : "C.6 - EHDS refined base model for Telecommunication contact information structure",
+      "isExample" : false
+    }],
+    "page" : {
+      "sourceUrl" : "toc.html",
+      "name" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "sourceUrl" : "index.html",
+        "name" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "howto.html",
+        "name" : "howto.html",
+        "title" : "How to read this guide",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "knownIssues.html",
+        "name" : "knownIssues.html",
+        "title" : "Known issues",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "scope.html",
+        "name" : "scope.html",
+        "title" : "Scope and Content",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "wow.html",
+        "name" : "wow.html",
+        "title" : "Ways of working",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "useCasePrescription.html",
+        "name" : "useCasePrescription.html",
+        "title" : "ePrescription & eDispensation",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "useCasePatientSummary.html",
+        "name" : "useCasePatientSummary.html",
+        "title" : "Patient Summary",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "useCaseLabReport.html",
+        "name" : "useCaseLabReport.html",
+        "title" : "Laboratory Report",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "obligationsLabReport.html",
+        "name" : "obligationsLabReport.html",
+        "title" : "Obligations for Laboratory Report",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "useCaseMedicalImages.html",
+        "name" : "useCaseMedicalImages.html",
+        "title" : "Medical Images",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "useCaseHospitalDischargeReport.html",
+        "name" : "useCaseHospitalDischargeReport.html",
+        "title" : "Hospital Discharge Report",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "downloads.html",
+        "name" : "downloads.html",
+        "title" : "Download",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "copyrightyear"
+      },
+      "value" : "2022+"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "releaselabel"
+      },
+      "value" : "ci-build"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "produce-jekyll-data"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "autoload-resources"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/examples"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/extensions"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/models"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/operations"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/profiles"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/maps"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/testing"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/history"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "template/config"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "input/images"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "template/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "input/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-qa"
+      },
+      "value" : "temp/qa"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-temp"
+      },
+      "value" : "temp/pages"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-output"
+      },
+      "value" : "output"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-tx-cache"
+      },
+      "value" : "input-cache/txcache"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-suppressed-warnings"
+      },
+      "value" : "input/ignoreWarnings.txt"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-history"
+      },
+      "value" : "https://www.xt-ehr.eu/specifications/fhir/history.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-html"
+      },
+      "value" : "template-page.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-md"
+      },
+      "value" : "template-page-md.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-contact"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-context"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-copyright"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-jurisdiction"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-license"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-publisher"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-version"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-wg"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "active-tables"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "fmm-definition"
+      },
+      "value" : "http://hl7.org/fhir/versions.html#maturity"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "propagate-status"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludelogbinaryformat"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "tabbed-snapshots"
+      },
+      "value" : "true"
+    }]
+  }
+}

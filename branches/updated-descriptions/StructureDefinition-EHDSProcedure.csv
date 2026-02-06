@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSProcedure","EHDSProcedure","","","",0,*,"","","","null {[]} {[]}
+","Procedure (model)","C.16 - EHDS refined base model for An action that is or was performed on or for a patient","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSProcedure.identifier","EHDSProcedure.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.16.1 - Identifier","Procedure identifier","","","","","","","","","",,,,,"",,,,"EHDSProcedure.identifier",0,*,"",""
+"EHDSProcedure.description","EHDSProcedure.description","","","",0,1,"","","","Narrative {[]} {[]}
+","C.16.2 - Description","Procedure specification in narrative form","","","","","","","","","",,,,,"",,,,"EHDSProcedure.description",0,1,"",""
+"EHDSProcedure.code","EHDSProcedure.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.16.3 - Code","Code identifying the procedure","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSProcedure.code",0,1,"",""
+"EHDSProcedure.date[x]","EHDSProcedure.date[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","C.16.4 - Date","Date and time of the procedure or interval of its performance","","","","","","","","","",,,,,"",,,,"EHDSProcedure.date[x]",0,1,"",""
+"EHDSProcedure.performer","EHDSProcedure.performer","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional]]}
+","C.16.5 - Performer","An actor who or what performed the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.performer",0,*,"",""
+"EHDSProcedure.anatomicLocation","EHDSProcedure.anatomicLocation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.16.6 - Anatomic location","Anatomic location and laterality where the procedure was performed. This is the target site.","","","","","","","","","",,"preferred","SNOMED CT, ICD-O-3","","",,,,"EHDSProcedure.anatomicLocation",0,*,"",""
+"EHDSProcedure.reason","EHDSProcedure.reason","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure]]}
+","C.16.7 - Reason","The reason why the procedure was performed.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.reason",0,*,"",""
+"EHDSProcedure.outcome","EHDSProcedure.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.16.8 - Outcome","The outcome of the procedure - did it resolve the reasons for the procedure being performed?","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSProcedure.outcome",0,1,"",""
+"EHDSProcedure.complication","EHDSProcedure.complication","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","C.16.9 - Complication","Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the procedure description, which will typically describe the procedure itself rather than any 'post procedure' issues.","","","","","","","","","",,"preferred","ICD-10*, SNOMED CT, Orphacode if rare disease is diagnosed","","",,,,"EHDSProcedure.complication",0,*,"",""
+"EHDSProcedure.deviceUsed","EHDSProcedure.deviceUsed","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}
+","C.16.10 - Device used","Device used to perform the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.deviceUsed",0,*,"",""
+"EHDSProcedure.focalDevice","EHDSProcedure.focalDevice","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}
+","C.16.11 - Focal device","Device or devices that is/are implanted, removed, or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.focalDevice",0,*,"",""
+"EHDSProcedure.location","EHDSProcedure.location","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation {[]} {[]}
+","C.16.12 - Location","Location where the procedure had been performed","","","","","","","","","",,,,,"",,,,"EHDSProcedure.location",0,*,"",""
+"EHDSProcedure.note","EHDSProcedure.note","","","",0,1,"","","","Narrative {[]} {[]}
+","C.16.13 - Note","Additional information about the procedure","","","","","","","","","",,,,,"",,,,"EHDSProcedure.note",0,1,"",""
+"EHDSProcedure.subject","EHDSProcedure.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSGroup]]}
+","C.16.14 - Patient","On whom or on what the procedure was performed. This is usually an individual human, but can also be performed on animals, groups of humans or animals, organizations or practitioners (for licensing), locations or devices (for safety inspections or regulatory authorizations). If the actual focus of the procedure is different from the subject, the focus element specifies the actual focus of the procedure.","","","","","","","","","",,,,,"",,,,"EHDSProcedure.subject",1,1,"",""

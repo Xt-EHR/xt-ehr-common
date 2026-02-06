@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSTravelHistory","EHDSTravelHistory","","","",0,*,"","","","null {[]} {[]}
+","Travel history model","Relevant information about the patient's recent travel history, for one visit","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSTravelHistory.header","EHDSTravelHistory.header","","","",1,*,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,*,"",""
+"EHDSTravelHistory.header.subject","EHDSTravelHistory.header.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSTravelHistory.header.identifier","EHDSTravelHistory.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSTravelHistory.header.authorship","EHDSTravelHistory.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Authorship","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSTravelHistory.header.authorship.author[x]","EHDSTravelHistory.header.authorship.author[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice {[]} {[]}","Author","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSTravelHistory.header.authorship.datetime","EHDSTravelHistory.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of the issuing the document/resource by its author.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSTravelHistory.header.lastUpdate","EHDSTravelHistory.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource","Date and time of the last update to the document/information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSTravelHistory.header.status","EHDSTravelHistory.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource","Status of the resource","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSTravelHistory.header.statusReason[x]","EHDSTravelHistory.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSTravelHistory.header.language","EHDSTravelHistory.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSTravelHistory.header.version","EHDSTravelHistory.header.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Business version of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.version",0,1,"",""
+"EHDSTravelHistory.presentedForm","EHDSTravelHistory.presentedForm","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment {[]} {[]}
+","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.presentedForm",0,*,"",""
+"EHDSTravelHistory.country","EHDSTravelHistory.country","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Country visited","Country visited","","eHN PS Guideline","","","","","","","",,"preferred","ISO 3166","","",,,,"EHDSTravelHistory.country",1,1,"",""
+"EHDSTravelHistory.period","EHDSTravelHistory.period","","","",0,1,"","","","Period {[]} {[]}
+","Date of entry and departure","The period during which the patient visited the country","","eHN PS Guideline","","","","","","","",,,,,"",,,,"EHDSTravelHistory.period",0,1,"",""

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Laboratory Report - EHDS Logical Information Models v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">eP/eD</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Hospital Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Laboratory Report</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/Xt-EHR/xt-ehr-common/tree/fixes">https://github.com/Xt-EHR/xt-ehr-common/tree/fixes</a> and changes regularly. See the <a href="https://www.xt-ehr.eu/specifications/fhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Laboratory Report</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#information-models" id="markdown-toc-information-models">Information Models</a></li>
+  <li><a href="#detail-ehds-information-models-for-laboratory-report" id="markdown-toc-detail-ehds-information-models-for-laboratory-report">Detail EHDS information models for Laboratory report</a></li>
+  <li><a href="#fhir-implementation-guide" id="markdown-toc-fhir-implementation-guide">FHIR Implementation Guide</a></li>
+  <li><a href="#supporting-information" id="markdown-toc-supporting-information">Supporting Information</a></li>
+</ul>
+
+</div>
+<h3 id="information-models">Information Models</h3>
+<h4 id="conceptual-view">Conceptual view</h4>
+
+<p>Laboratory result report could be divided into several parts: document header, body and optionally it could also have various attachments.</p>
+
+<h5 id="laboratory-result-report">Laboratory Result Report</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="247px" preserveAspectRatio="none" style="width:483px;height:247px;background:#FFFFFF;" version="1.1" viewBox="0 0 483 247" width="483px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="147.75" x="10" y="104.4453" /><a href="StructureDefinition-EHDSLaboratoryReport.html" target="_top" title="StructureDefinition-EHDSLaboratoryReport.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSLaboratoryReport.html" xlink:show="new" xlink:title="StructureDefinition-EHDSLaboratoryReport.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="127.75" x="20" y="127.4404">Laboratory Report</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="201.5215" x="207.75" y="20" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181.5215" x="217.75" y="42.9951">Laboratory Report header</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,38.1484 197.75,38.1484 L207.75,38.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="264.002" x="207.75" y="76.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="244.002" x="217.75" y="99.292">Laboratory Report structured body</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,94.4453 197.75,94.4453 L207.75,94.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="135.2129" x="207.75" y="132.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.2129" x="217.75" y="155.5889">Presented forms</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,150.7422 197.75,150.7422 L207.75,150.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="240.8145" x="207.75" y="188.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="220.8145" x="217.75" y="211.8857">Laboratory Report attachments</text><path d="M157.75,122.5938 L167.75,122.5938 C182.75,122.5938 182.75,207.0391 197.75,207.0391 L207.75,207.0391" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h5 id="laboratory-result-header">Laboratory Result header</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="587px" preserveAspectRatio="none" style="width:641px;height:587px;background:#FFFFFF;" version="1.1" viewBox="0 0 641 587" width="641px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="201.5215" x="10" y="274.7461" /><a href="StructureDefinition-EHDSLaboratoryReportHeader.html" target="_top" title="StructureDefinition-EHDSLaboratoryReportHeader.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSLaboratoryReportHeader.html" xlink:show="new" xlink:title="StructureDefinition-EHDSLaboratoryReportHeader.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="181.5215" x="20" y="297.7412">Laboratory Report header</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="72.3359" x="261.5215" y="20" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3359" x="271.5215" y="42.9951">Subject</text><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,38.1484 251.5215,38.1484 L261.5215,38.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="321.9707" x="261.5215" y="76.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="301.9707" x="271.5215" y="99.292">Health insurance and payment information</text><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,94.4453 251.5215,94.4453 L261.5215,94.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="148.5225" x="261.5215" y="132.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.5225" x="271.5215" y="155.5889">Intended recipient</text><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,150.7422 251.5215,150.7422 L261.5215,150.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="96.0771" x="261.5215" y="188.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.0771" x="271.5215" y="211.8857">Authorship</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.1338" x="410.5986" y="202.7373">Author</text><path d="M357.5986,207.0391 L367.5986,207.0391 C382.5986,207.0391 382.5986,197.8906 397.5986,197.8906 L407.5986,197.8906" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1543" x="410.5986" y="221.0342">DateTime</text><path d="M357.5986,207.0391 L367.5986,207.0391 C382.5986,207.0391 382.5986,216.1875 397.5986,216.1875 L407.5986,216.1875" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,207.0391 251.5215,207.0391 L261.5215,207.0391" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="97.3486" x="261.5215" y="245.1875" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.3486" x="271.5215" y="268.1826">Attestation</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.3213" x="411.8701" y="259.0342">Attester</text><path d="M358.8701,263.3359 L368.8701,263.3359 C383.8701,263.3359 383.8701,254.1875 398.8701,254.1875 L408.8701,254.1875" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1543" x="411.8701" y="277.3311">DateTime</text><path d="M358.8701,263.3359 L368.8701,263.3359 C383.8701,263.3359 383.8701,272.4844 398.8701,272.4844 L408.8701,272.4844" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,263.3359 251.5215,263.3359 L261.5215,263.3359" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="163.9922" x="261.5215" y="301.4844" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143.9922" x="271.5215" y="324.4795">Legal authentication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136.9854" x="478.5137" y="315.3311">Legal authenticator</text><path d="M425.5137,319.6328 L435.5137,319.6328 C450.5137,319.6328 450.5137,310.4844 465.5137,310.4844 L475.5137,310.4844" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1543" x="478.5137" y="333.6279">DateTime</text><path d="M425.5137,319.6328 L435.5137,319.6328 C450.5137,319.6328 450.5137,328.7813 465.5137,328.7813 L475.5137,328.7813" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,319.6328 251.5215,319.6328 L261.5215,319.6328" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="164.833" x="261.5215" y="438.7109" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144.833" x="271.5215" y="461.7061">Document metadata</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.8887" x="479.3545" y="351.9248">Document ID</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,347.0781 466.3545,347.0781 L476.3545,347.0781" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.2539" x="479.3545" y="370.2217">Document type</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,365.375 466.3545,365.375 L476.3545,365.375" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.998" x="479.3545" y="388.5186">Document status</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,383.6719 466.3545,383.6719 L476.3545,383.6719" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.1533" x="479.3545" y="406.8154">Period</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,401.9688 466.3545,401.9688 L476.3545,401.9688" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.9258" x="479.3545" y="425.1123">Report date and time</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,420.2656 466.3545,420.2656 L476.3545,420.2656" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3506" x="479.3545" y="443.4092">Document title</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,438.5625 466.3545,438.5625 L476.3545,438.5625" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.8311" x="479.3545" y="461.7061">Event type</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,456.8594 466.3545,456.8594 L476.3545,456.8594" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.2168" x="479.3545" y="480.0029">Specialty</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,475.1563 466.3545,475.1563 L476.3545,475.1563" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.6357" x="479.3545" y="498.2998">Report custodian</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,493.4531 466.3545,493.4531 L476.3545,493.4531" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.9355" x="479.3545" y="516.5967">Document format</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,511.75 466.3545,511.75 L476.3545,511.75" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.917" x="479.3545" y="534.8936">Confidentiality</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,530.0469 466.3545,530.0469 L476.3545,530.0469" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.0908" x="479.3545" y="553.1904">Language</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,548.3438 466.3545,548.3438 L476.3545,548.3438" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.5684" x="479.3545" y="571.4873">Version</text><path d="M426.3545,456.8594 L436.3545,456.8594 C451.3545,456.8594 451.3545,566.6406 466.3545,566.6406 L476.3545,566.6406" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M211.5215,292.8945 L221.5215,292.8945 C236.5215,292.8945 236.5215,456.8594 251.5215,456.8594 L261.5215,456.8594" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h5 id="laboratory-result-body">Laboratory Result body</h5>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="299px" preserveAspectRatio="none" style="width:759px;height:299px;background:#FFFFFF;" version="1.1" viewBox="0 0 759 299" width="759px" zoomAndPan="magnify"><defs /><g><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="187.542" x="10" y="130.8359" /><a href="StructureDefinition-EHDSLaboratoryReportBody.html" target="_top" title="StructureDefinition-EHDSLaboratoryReportBody.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-EHDSLaboratoryReportBody.html" xlink:show="new" xlink:title="StructureDefinition-EHDSLaboratoryReportBody.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="167.542" x="20" y="153.8311">Laboratory Report Body</text></a><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="145.5283" x="247.542" y="37.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125.5283" x="257.542" y="60.5889">Order information</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57.4971" x="446.0703" y="23.9951">Order Id</text><path d="M393.0703,55.7422 L403.0703,55.7422 C418.0703,55.7422 418.0703,19.1484 433.0703,19.1484 L443.0703,19.1484" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.9189" x="446.0703" y="42.292">Order date and time</text><path d="M393.0703,55.7422 L403.0703,55.7422 C418.0703,55.7422 418.0703,37.4453 433.0703,37.4453 L443.0703,37.4453" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.9033" x="446.0703" y="60.5889">Order placer</text><path d="M393.0703,55.7422 L403.0703,55.7422 C418.0703,55.7422 418.0703,55.7422 433.0703,55.7422 L443.0703,55.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.4893" x="446.0703" y="78.8857">Order reason text</text><path d="M393.0703,55.7422 L403.0703,55.7422 C418.0703,55.7422 418.0703,74.0391 433.0703,74.0391 L443.0703,74.0391" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.1621" x="446.0703" y="97.1826">Order reason</text><path d="M393.0703,55.7422 L403.0703,55.7422 C418.0703,55.7422 418.0703,92.3359 433.0703,92.3359 L443.0703,92.3359" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M197.542,148.9844 L207.542,148.9844 C222.542,148.9844 222.542,55.7422 237.542,55.7422 L247.542,55.7422" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="182.4902" x="247.542" y="129.0781" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162.4902" x="257.542" y="152.0732">Supporting information</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.251" x="483.0322" y="115.4795">Observation</text><path d="M430.0322,147.2266 L440.0322,147.2266 C455.0322,147.2266 455.0322,110.6328 470.0322,110.6328 L480.0322,110.6328" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.8076" x="483.0322" y="133.7764">Condition</text><path d="M430.0322,147.2266 L440.0322,147.2266 C455.0322,147.2266 455.0322,128.9297 470.0322,128.9297 L480.0322,128.9297" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183.7021" x="483.0322" y="152.0732">Medication Administration</text><path d="M430.0322,147.2266 L440.0322,147.2266 C455.0322,147.2266 455.0322,147.2266 470.0322,147.2266 L480.0322,147.2266" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.5713" x="483.0322" y="170.3701">Sex for clinical use</text><path d="M430.0322,147.2266 L440.0322,147.2266 C455.0322,147.2266 455.0322,165.5234 470.0322,165.5234 L480.0322,165.5234" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.0107" x="483.0322" y="188.667">Service requests</text><path d="M430.0322,147.2266 L440.0322,147.2266 C455.0322,147.2266 455.0322,183.8203 470.0322,183.8203 L480.0322,183.8203" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M197.542,148.9844 L207.542,148.9844 C222.542,148.9844 222.542,147.2266 237.542,147.2266 L247.542,147.2266" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="89.0977" x="247.542" y="185.375" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.0977" x="257.542" y="208.3701">Specimen</text><path d="M197.542,148.9844 L207.542,148.9844 C222.542,148.9844 222.542,203.5234 237.542,203.5234 L247.542,203.5234" fill="none" style="stroke:#181818;stroke-width:1;" /><rect fill="#F1F1F1" height="36.2969" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="99.8711" x="247.542" y="241.6719" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.8711" x="257.542" y="264.667">Result data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.9365" x="400.4131" y="246.3701">Narrative report</text><path d="M347.4131,259.8203 L357.4131,259.8203 C372.4131,259.8203 372.4131,241.5234 387.4131,241.5234 L397.4131,241.5234" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="346.6025" x="400.4131" y="264.667">Comments interpretations and recommendations</text><path d="M347.4131,259.8203 L357.4131,259.8203 C372.4131,259.8203 372.4131,259.8203 387.4131,259.8203 L397.4131,259.8203" fill="none" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159.2568" x="400.4131" y="282.9639">Laboratory test results</text><path d="M347.4131,259.8203 L357.4131,259.8203 C372.4131,259.8203 372.4131,278.1172 387.4131,278.1172 L397.4131,278.1172" fill="none" style="stroke:#181818;stroke-width:1;" /><path d="M197.542,148.9844 L207.542,148.9844 C222.542,148.9844 222.542,259.8203 237.542,259.8203 L247.542,259.8203" fill="none" style="stroke:#181818;stroke-width:1;" /></g></svg>
+</figure>
+
+<h5 id="uml-representation">UML representation</h5>
+<p>Components of laboratory result report and its representation using UML notation:</p>
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="690px" preserveAspectRatio="none" style="width:942px;height:690px;background:#FFFFFF;" version="1.1" viewBox="0 0 942 690" width="942px" zoomAndPan="magnify"><defs /><g><!--class labReport--><g class="entity" data-entity="labReport" data-source-line="6" data-uid="ent0002" id="entity_labReport"><rect fill="#F1F1F1" height="107.4844" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="195.1758" x="518" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="141.21" x="544.9829" y="24.9951">Laboratory report</text><line style="stroke:#181818;stroke-width:0.5;" x1="519" x2="712.1758" y1="33.2969" y2="33.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183.1758" x="524" y="50.292">Laboratory Report Header</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167.542" x="524" y="66.5889">Laboratory Report Body</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.043" x="524" y="82.8857">Presented Form</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42.0479" x="524" y="99.1826">Media</text><line style="stroke:#181818;stroke-width:0.5;" x1="519" x2="712.1758" y1="106.4844" y2="106.4844" /></g><!--class header--><g class="entity" data-entity="header" data-source-line="13" data-uid="ent0003" id="entity_header"><rect fill="#F1F1F1" height="156.375" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="326.7129" x="7" y="191" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="207.04" x="66.8364" y="208.9951">Laboratory Report Header</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="332.7129" y1="217.2969" y2="217.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.9082" x="13" y="234.292">subject 1..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314.7129" x="13" y="250.5889">healthInsuranceAndPaymentInformation 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157.0625" x="13" y="266.8857">intendedRecipient 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.0283" x="13" y="283.1826">authorization 1..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105.6084" x="13" y="299.4795">attestation 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167.7949" x="13" y="315.7764">legalAuthentication 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168.0957" x="13" y="332.0732">documentMetadata 1..1</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="332.7129" y1="339.375" y2="339.375" /></g><!--class body--><g class="entity" data-entity="body" data-source-line="14" data-uid="ent0005" id="entity_body"><rect fill="#F1F1F1" height="42.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="195.3965" x="369" y="248" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="189.3965" x="372" y="265.9951">Laboratory Report Body</text><line style="stroke:#181818;stroke-width:0.5;" x1="370" x2="563.3965" y1="274.2969" y2="274.2969" /><line style="stroke:#181818;stroke-width:0.5;" x1="370" x2="563.3965" y1="282.2969" y2="282.2969" /></g><!--class presentedForm--><g class="entity" data-entity="presentedForm" data-source-line="15" data-uid="ent0007" id="entity_presentedForm"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="132.2119" x="599.5" y="239.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="126.2119" x="602.5" y="257.4951">Presented Form</text><line style="stroke:#181818;stroke-width:0.5;" x1="600.5" x2="730.7119" y1="265.7969" y2="265.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82.3184" x="605.5" y="282.792">Attachment</text><line style="stroke:#181818;stroke-width:0.5;" x1="600.5" x2="730.7119" y1="290.0938" y2="290.0938" /></g><!--class media--><g class="entity" data-entity="media" data-source-line="16" data-uid="ent0009" id="entity_media"><rect fill="#F1F1F1" height="58.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94.3184" x="766.5" y="239.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="47.6943" x="789.812" y="257.4951">Media</text><line style="stroke:#181818;stroke-width:0.5;" x1="767.5" x2="859.8184" y1="265.7969" y2="265.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82.3184" x="772.5" y="282.792">Attachment</text><line style="stroke:#181818;stroke-width:0.5;" x1="767.5" x2="859.8184" y1="290.0938" y2="290.0938" /></g><!--class orderInformation--><g class="entity" data-entity="orderInformation" data-source-line="31" data-uid="ent0011" id="entity_orderInformation"><rect fill="#F1F1F1" height="42.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148.5908" x="241" y="448.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="142.5908" x="244" y="466.4951">Order information</text><line style="stroke:#181818;stroke-width:0.5;" x1="242" x2="388.5908" y1="474.7969" y2="474.7969" /><line style="stroke:#181818;stroke-width:0.5;" x1="242" x2="388.5908" y1="482.7969" y2="482.7969" /></g><!--class specimen--><g class="entity" data-entity="specimen" data-source-line="32" data-uid="ent0013" id="entity_specimen"><rect fill="#F1F1F1" height="42.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82.7471" x="425" y="448.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="76.7471" x="428" y="466.4951">Specimen</text><line style="stroke:#181818;stroke-width:0.5;" x1="426" x2="506.7471" y1="474.7969" y2="474.7969" /><line style="stroke:#181818;stroke-width:0.5;" x1="426" x2="506.7471" y1="482.7969" y2="482.7969" /></g><!--class resultData--><g class="entity" data-entity="resultData" data-source-line="33" data-uid="ent0015" id="entity_resultData"><rect fill="#F1F1F1" height="91.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="392.0713" x="543.5" y="424" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="90.5488" x="694.2612" y="441.9951">Result data</text><line style="stroke:#181818;stroke-width:0.5;" x1="544.5" x2="934.5713" y1="450.2969" y2="450.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148.0732" x="549.5" y="467.292">Narrative Report 0..1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="380.0713" x="549.5" y="483.5889">Comments Interpretations and Recommendations 0..*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.5791" x="549.5" y="499.8857">Test Results</text><line style="stroke:#181818;stroke-width:0.5;" x1="544.5" x2="934.5713" y1="507.1875" y2="507.1875" /></g><!--class results--><g class="entity" data-entity="results" data-source-line="49" data-uid="ent0017" id="entity_results"><rect fill="#F1F1F1" height="91.1875" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="362.8135" x="558" y="592" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97.3438" x="690.7349" y="609.9951">Test Results</text><line style="stroke:#181818;stroke-width:0.5;" x1="559" x2="919.8135" y1="618.2969" y2="618.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.9082" x="564" y="635.292">Narrative Report</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="350.8135" x="564" y="651.5889">Comments Interpretations and Recommendations</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.5791" x="564" y="667.8857">Test Results</text><line style="stroke:#181818;stroke-width:0.5;" x1="559" x2="919.8135" y1="675.1875" y2="675.1875" /></g><!--link labReport to header--><g class="link" data-entity-1="labReport" data-entity-2="header" data-source-line="13" data-uid="lnk4" id="link_labReport_header"><path codeLine="13" d="M506.955,111.8714 C453.235,136.8014 401.4725,160.8143 339.8425,189.4143" fill="none" id="labReport-header" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="517.84,106.82,510.7137,105.7174,506.955,111.8714,514.0813,112.974,517.84,106.82" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="334.4,191.94,344.2476,191.7799,338.9354,189.8353,340.88,184.5232,334.4,191.94" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="434.5" y="157.0669">1..1</text></g><!--link labReport to body--><g class="link" data-entity-1="labReport" data-entity-2="body" data-source-line="14" data-uid="lnk6" id="link_labReport_body"><path codeLine="14" d="M570.498,123.871 C539.108,167.371 506.7702,212.1839 484.6102,242.9039" fill="none" id="labReport-body" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="577.52,114.14,570.7654,116.6648,570.498,123.871,577.2527,121.3461,577.52,114.14" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="481.1,247.77,489.6093,242.811,484.0251,243.7149,483.1212,238.1308,481.1,247.77" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="555.5" y="157.0669">1..1</text></g><!--link labReport to presentedForm--><g class="link" data-entity-1="labReport" data-entity-2="presentedForm" data-source-line="15" data-uid="lnk8" id="link_labReport_presentedForm"><path codeLine="15" d="M631.0728,125.8033 C640.7028,165.5933 649.3269,201.2188 657.1469,233.4888" fill="none" id="labReport-presentedForm" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="628.25,114.14,625.7736,120.9126,631.0728,125.8033,633.5491,119.0307,628.25,114.14" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="658.56,239.32,660.3279,229.6311,657.3824,234.4606,652.5529,231.5152,658.56,239.32" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="640.5" y="157.0669">0..1</text></g><!--link labReport to media--><g class="link" data-entity-1="labReport" data-entity-2="media" data-source-line="16" data-uid="lnk10" id="link_labReport_media"><path codeLine="16" d="M678.6282,122.5099 C715.7282,158.3699 749.5,191 749.5,191 C749.5,191 767.6341,212.8264 785.8341,234.7164" fill="none" id="labReport-media" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="670,114.17,671.5342,121.216,678.6282,122.5099,677.0941,115.4638,670,114.17" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="789.67,239.33,786.9919,229.8523,786.4734,235.4853,780.8404,234.9668,789.67,239.33" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="718.5" y="157.0669">0..*</text></g><!--link body to orderInformation--><g class="link" data-entity-1="body" data-entity-2="orderInformation" data-source-line="31" data-uid="lnk12" id="link_body_orderInformation"><path codeLine="31" d="M443.9243,299.6804 C414.9843,337.7204 363.4522,405.4543 334.4822,443.5443" fill="none" id="body-orderInformation" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="451.19,290.13,444.3737,292.4833,443.9243,299.6804,450.7406,297.3271,451.19,290.13" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="330.85,448.32,339.4821,443.578,333.8768,444.3403,333.1145,438.735,330.85,448.32" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="383.5" y="390.0669">0..*</text></g><!--link body to specimen--><g class="link" data-entity-1="body" data-entity-2="specimen" data-source-line="32" data-uid="lnk14" id="link_body_specimen"><path codeLine="32" d="M466.5,302.13 C466.5,340.17 466.5,404.23 466.5,442.32" fill="none" id="body-specimen" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="466.5,290.13,462.5,296.13,466.5,302.13,470.5,296.13,466.5,290.13" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="466.5,448.32,470.5,439.32,466.5,443.32,462.5,439.32,466.5,448.32" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="467.5" y="390.0669">0..*</text></g><!--link body to resultData--><g class="link" data-entity-1="body" data-entity-2="resultData" data-source-line="33" data-uid="lnk16" id="link_body_resultData"><path codeLine="33" d="M503.8859,297.1866 C546.7859,328.3766 615.8374,378.5812 673.4274,420.4612" fill="none" id="body-resultData" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="494.18,290.13,496.6808,296.8936,503.8859,297.1866,501.3851,290.423,494.18,290.13" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="678.28,423.99,673.3537,415.4617,674.2362,421.0493,668.6486,421.9318,678.28,423.99" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.8066" x="636.5" y="390.0669">1..1</text></g><!--link resultData to results--><g class="link" data-entity-1="resultData" data-entity-2="results" data-source-line="49" data-uid="lnk18" id="link_resultData_results"><path codeLine="49" d="M739.5,527.42 C739.5,551.14 739.5,562.15 739.5,585.83" fill="none" id="resultData-results" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="739.5,515.42,735.5,521.42,739.5,527.42,743.5,521.42,739.5,515.42" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="739.5,591.83,743.5,582.83,739.5,586.83,735.5,582.83,739.5,591.83" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="740.5" y="558.0669">0..*</text></g></g></svg>
+</figure>
+
+<h3 id="detail-ehds-information-models-for-laboratory-report">Detail EHDS information models for Laboratory report</h3>
+<ul>
+  <li><a href="StructureDefinition-EHDSLaboratoryReport.html">Laboratory Report Document</a></li>
+  <li><a href="StructureDefinition-EHDSLaboratoryReportHeader.html">Laboratory Report Header</a></li>
+  <li><a href="StructureDefinition-EHDSLaboratoryReportBody.html">Laboratory Report Body</a></li>
+  <li><a href="StructureDefinition-EHDSLaboratoryObservation.html">Laboratory Observation</a></li>
+</ul>
+
+<h3 id="fhir-implementation-guide">FHIR Implementation Guide</h3>
+
+<p>Laboratory Report FHIR Implementation Guide has been published by HL7 Europe (<a href="https://hl7.eu/fhir/laboratory/index.html">published version</a>).
+Latest build version can be found <a href="https://build.fhir.org/ig/hl7-eu/laboratory/">here</a>. The changes proposed by Xt-EHR project and approved by the community will be included in the future version of the specification.</p>
+
+<p>MyHealth@EU has adopted HL7 Europe's FHIR IG for laboratory report crossborder service (see <a href="https://fhir.ehdsi.eu/laboratory/">crossborder adaption</a>).</p>
+
+<h3 id="supporting-information">Supporting Information</h3>
+
+<ul>
+  <li><a href="https://health.ec.europa.eu/publications/ehn-laboratory-result-guidelines_en">eHealth Network Guideline on Laboratory Results</a></li>
+  <li><a href="https://fhir.ehdsi.eu/laboratory/">MyHealth@EU crossborder HL7 FHIR specification</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://Xt-EHR.eu">Xt-EHR</a>.  Package eu.ehds.models#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, May 26, 2025 19:45+0000">2025-05-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSDeviceUse","EHDSDeviceUse","","","",0,*,"","","","null {[]} {[]}
+","Device use model","C.25 - EHDS refined base model for Device Use","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSDeviceUse.identifier","EHDSDeviceUse.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","C.25.1 - Identifier","An identifier for this statement.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.identifier",0,*,"",""
+"EHDSDeviceUse.status","EHDSDeviceUse.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.25.2 - Status","Current status of the Device Usage.","","","","","","","","","",,"preferred","HL7 device-statement-status","","",,,,"EHDSDeviceUse.status",0,1,"",""
+"EHDSDeviceUse.implantDate","EHDSDeviceUse.implantDate","","","",0,1,"","","","dateTime {[]} {[]}
+","C.25.3 - Implant date","Date when procedure was performed.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.implantDate",0,1,"",""
+"EHDSDeviceUse.endDate","EHDSDeviceUse.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","C.25.4 - End date","Date when the device was explanted from the patient or the external device was no longer in use; likewise when the device is planned to be explanted.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.endDate",0,1,"",""
+"EHDSDeviceUse.device","EHDSDeviceUse.device","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]]}
+","C.25.5 - Device","The details of the device used.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.device",1,1,"",""
+"EHDSDeviceUse.subject","EHDSDeviceUse.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient]]}
+","C.25.6 - Subject","The patient using the device.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.subject",1,1,"",""
+"EHDSDeviceUse.bodySite","EHDSDeviceUse.bodySite","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","C.25.7 - Body site","Anatomical location of the device. May include laterality.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.bodySite",0,1,"",""
+"EHDSDeviceUse.note","EHDSDeviceUse.note","","","",0,*,"","","","Narrative {[]} {[]}
+","C.25.8 - Note","Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.note",0,*,"",""
+"EHDSDeviceUse.recorded","EHDSDeviceUse.recorded","","","",0,1,"","","","dateTime {[]} {[]}
+","C.25.9 - Recorded","Date and time at which the statement was made/recorded.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.recorded",0,1,"",""
+"EHDSDeviceUse.source","EHDSDeviceUse.source","","","",0,1,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson]]}
+","C.25.10 - Source","Who reported the device was being used by the patient.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.source",0,1,"",""
+"EHDSDeviceUse.reason","EHDSDeviceUse.reason","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure]]}
+","C.25.11 - Reason","Reason or justification for the use of the device.","","","","","","","","","",,,,,"",,,,"EHDSDeviceUse.reason",0,*,"",""

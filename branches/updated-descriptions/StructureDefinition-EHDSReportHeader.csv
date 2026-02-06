@@ -1,0 +1,65 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSReportHeader","EHDSReportHeader","","","",0,*,"","","","null {[]} {[]}
+","Report header","EHDS refined base model for Report header data elements. Common for hospital discharge, laboratory and medical imaging reports.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSReportHeader.subject","EHDSReportHeader.subject","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","A.1.1 - Subject","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.subject",1,1,"",""
+"EHDSReportHeader.healthInsuranceAndPaymentInformation","EHDSReportHeader.healthInsuranceAndPaymentInformation","","","",0,1,"","","","Base {[]} {[]}
+","A.1.4 - Health insurance and payment information","Health insurance information (Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.)","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.healthInsuranceAndPaymentInformation",0,1,"",""
+"EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceCode","EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceCode","","","",0,1,"","","","Identifier {[]} {[]}
+","A.1.4.1 - Health insurance code","Unique health insurance company identification code","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceCode",0,1,"",""
+"EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceName","EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceName","","","",0,1,"","","","string {[]} {[]}
+","A.1.4.2 - Health insurance name","Full, official name of the healthcare insurance provider.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceName",0,1,"",""
+"EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceNumber","EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceNumber","","","",0,1,"","","","Identifier {[]} {[]}
+","A.1.4.3 - Health insurance number","Number or code under which the insured person is registered at the insurance provider.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.healthInsuranceAndPaymentInformation.healthInsuranceNumber",0,1,"",""
+"EHDSReportHeader.intendedRecipient[x]","EHDSReportHeader.intendedRecipient[x]","","","",0,*,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson {[]} {[]}","A.1.5 - Intended recipient","Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.intendedRecipient[x]",0,*,"",""
+"EHDSReportHeader.authorship","EHDSReportHeader.authorship","","","",1,*,"","","","Base {[]} {[]}
+","A.1.6 - Authorship","Document authoring details","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.authorship",1,*,"",""
+"EHDSReportHeader.authorship.author","EHDSReportHeader.authorship.author","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","A.1.6.1 - Author","Author by whom the document was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.authorship.author",1,1,"",""
+"EHDSReportHeader.authorship.datetime","EHDSReportHeader.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","A.1.6.2 - DateTime","Date and time of the last modification of the document by its Author.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.authorship.datetime",1,1,"",""
+"EHDSReportHeader.attestation","EHDSReportHeader.attestation","","","",0,*,"","","","Base {[]} {[]}
+","A.1.7 - Attestation","Document attestation details","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.attestation",0,*,"",""
+"EHDSReportHeader.attestation.attester","EHDSReportHeader.attestation.attester","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","A.1.7.1 - Attester","Attester who validated the document. Mulitple attesters could be provided.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.attestation.attester",1,1,"",""
+"EHDSReportHeader.attestation.datetime","EHDSReportHeader.attestation.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","A.1.7.2 - DateTime","Date and time of the approval of the document by Attester.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.attestation.datetime",1,1,"",""
+"EHDSReportHeader.legalAuthentication","EHDSReportHeader.legalAuthentication","","","",0,1,"","","","Base {[]} {[]}
+","A.1.8 - Legal authentication","Document legal authentication","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.legalAuthentication",0,1,"",""
+"EHDSReportHeader.legalAuthentication.legalAuthenticator","EHDSReportHeader.legalAuthentication.legalAuthenticator","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+","A.1.8.1 - Legal authenticator","The person taking responsibility for the medical content of the document","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.legalAuthentication.legalAuthenticator",1,1,"",""
+"EHDSReportHeader.legalAuthentication.datetime","EHDSReportHeader.legalAuthentication.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","A.1.8.2 - DateTime","Date and time when the document was authorized.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.legalAuthentication.datetime",1,1,"",""
+"EHDSReportHeader.documentMetadata","EHDSReportHeader.documentMetadata","","","",1,1,"","","","Base {[]} {[]}
+","A.1.9 - Document metadata","Data relevent to document type and its content for administrative and searching purposes.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata",1,1,"",""
+"EHDSReportHeader.documentMetadata.documentId","EHDSReportHeader.documentMetadata.documentId","","","",1,1,"","","","Identifier {[]} {[]}
+","A.1.9.1 - Document ID","Unique identifier of the document","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.documentId",1,1,"",""
+"EHDSReportHeader.documentMetadata.documentType","EHDSReportHeader.documentMetadata.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","A.1.9.2 - Document type","Identifies the type of document at hand, e.g. Hospital discharge report.","","","","","","","","","",,"preferred","LOINC","","",,,,"EHDSReportHeader.documentMetadata.documentType",1,1,"",""
+"EHDSReportHeader.documentMetadata.documentStatus","EHDSReportHeader.documentMetadata.documentStatus","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","A.1.9.3 - Document status","The status of the Hospital discharge report. E.g., preliminary, final.","","","","","","","","","",,"preferred","hl7:CompositionStatus","","",,,,"EHDSReportHeader.documentMetadata.documentStatus",1,1,"",""
+"EHDSReportHeader.documentMetadata.period","EHDSReportHeader.documentMetadata.period","","","",0,1,"","","","Period {[]} {[]}
+","A.1.9.4 - Period","Time of service that is being documented","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.period",0,1,"",""
+"EHDSReportHeader.documentMetadata.reportDateAndTime","EHDSReportHeader.documentMetadata.reportDateAndTime","","","",1,1,"","","","dateTime {[]} {[]}
+","A.1.9.5 - Report date and time","Date and time of the report creation.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.reportDateAndTime",1,1,"",""
+"EHDSReportHeader.documentMetadata.documentTitle","EHDSReportHeader.documentMetadata.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","A.1.9.6 - Document title","Document title, such as Hospital Discharge Report, Laboratory Result Report, etc.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.documentTitle",1,1,"",""
+"EHDSReportHeader.documentMetadata.eventType","EHDSReportHeader.documentMetadata.eventType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+",".1.9.7 - Event type","Categorization of an """"event"""" covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of event types depends on the use case and agreement betwen data sharing parties. This meta-data element serves primarily for searching and filtering purpuses.","","","","","","","","","",,"preferred","LOINC, SNOMED CT, dicom-cid-33-Modality","","",,,,"EHDSReportHeader.documentMetadata.eventType",0,*,"",""
+"EHDSReportHeader.documentMetadata.specialty","EHDSReportHeader.documentMetadata.specialty","","","",0,*,"","","","CodeableConcept {[]} {[]}
+",".1.9.8 - Specialty","Additional details about where the content was created (e.g. clinical specialty)","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSReportHeader.documentMetadata.specialty",0,*,"",""
+"EHDSReportHeader.documentMetadata.reportCustodian","EHDSReportHeader.documentMetadata.reportCustodian","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization {[]} {[]}
+","A.1.9.9 - Report custodian","Organisation that is in charge of maintaining the report [this element will include organisation ID, name, address etc., as other elements describing organisations].","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.reportCustodian",1,1,"",""
+"EHDSReportHeader.documentMetadata.documentFormat","EHDSReportHeader.documentMetadata.documentFormat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","1.9.10 - Document format","An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","","","","","","","","","",,"preferred","HL7 Document Format Codes","","",,,,"EHDSReportHeader.documentMetadata.documentFormat",0,1,"",""
+"EHDSReportHeader.documentMetadata.confidentiality","EHDSReportHeader.documentMetadata.confidentiality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+",".1.9.11 - Confidentiality","Level of confidentiality of the document. Implicit value is normal.","","","","","","","","","",,"preferred","hl7:Confidentiality","","",,,,"EHDSReportHeader.documentMetadata.confidentiality",0,1,"",""
+"EHDSReportHeader.documentMetadata.language","EHDSReportHeader.documentMetadata.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+",".1.9.12 - Language","Language in which the document is written. Language is expressed by the ISO language code.","","","","","","","","","",,"preferred","ISO 639","","",,,,"EHDSReportHeader.documentMetadata.language",0,1,"",""
+"EHDSReportHeader.documentMetadata.version","EHDSReportHeader.documentMetadata.version","","","",0,1,"","","","string {[]} {[]}
+","A.1.9.13 - Version","Version of the document","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.version",0,1,"",""
+"EHDSReportHeader.documentMetadata.presentedForm","EHDSReportHeader.documentMetadata.presentedForm","","","",0,1,"","","","Attachment {[]} {[]}
+","A.1.10 - Presented form","Entire report as issued pdf format recommended","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.presentedForm",0,1,"",""
+"EHDSReportHeader.documentMetadata.media","EHDSReportHeader.documentMetadata.media","","","",0,*,"","","","Attachment {[]} {[]}
+","A.1.11 - Media","Media attachments.","","","","","","","","","",,,,,"",,,,"EHDSReportHeader.documentMetadata.media",0,*,"",""
