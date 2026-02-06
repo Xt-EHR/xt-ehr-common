@@ -3,7 +3,7 @@ Title: "Medication dispense model"
 Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on a request and dispensed in a pharmacy). Implementers should take into account, if allowed and needed, the calculation of remaining dispensable product based on this information."
 
-* header.author[x] 
+* header.author[x] 1..
   * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
   * ^definition = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
 * header.date 1..1
