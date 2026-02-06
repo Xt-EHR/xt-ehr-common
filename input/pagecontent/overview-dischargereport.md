@@ -14,11 +14,7 @@ Discharge report could be divided into several parts: document header, body and 
 
 ### FHIR Implementation Guide
 
-The work for building the European FHIR specification for Hospital Discharge Report is ongoing in a joint working group of Xt-EHR, XpanDH, xShare and HL7 Europe. Any interested stakeholder is welcome to join the group - please see the detailed [information about the meetings](https://confluence.hl7.org/display/HEU/Meetings+PS-HDR-Base).
-
-The Hospital Discharge Report FHIR Implementation Guide:
-- [R4 version](https://build.fhir.org/ig/hl7-eu/hdr/)
-- R5 - not available
+The work for building the European FHIR specification currently has a scope of Hospital Discharge Report ([see details](https://confluence.hl7.org/spaces/HEU/pages/358255737/Implementation+Guides)).
 
 
 ### Supporting information
