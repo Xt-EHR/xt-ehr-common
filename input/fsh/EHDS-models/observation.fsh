@@ -81,7 +81,7 @@ Description: """Model for information about an oservation and its results."""
 * note 0..1 string "Comments and narrative representation of the observation result and findings."
 
 * component 0..* Base "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)."
-  * code 1..1 CodeableConcept "Code representing the observation using the agreed code systems."
+  * type 1..1 CodeableConcept "Observation type. Code and name representing the type of the observation using the agreed code systems."
     * ^binding.description = "LOINC, NPU, SNOMED CT"
     * ^binding.strength = #preferred
   * originalName 0..1 string "Original (user-friendly) name of the observation as used in the local laboratory or clinical system."
@@ -127,3 +127,4 @@ Description: """Model for information about an oservation and its results."""
 * derivedFrom[x] 0..* EHDSObservation or EHDSLaboratoryObservation or EHDSImagingStudy "Reference to the related resource from which the observation has been made. For example, a calculated anion gap or a fetal measurement based on an ultrasound image."
 //* triggeredBy[x] 0..* EHDSLaboratoryObservation or EHDSObservation "References to the observation(s) that triggered the performance of this observation."
 * hasMember[x] 0..* EHDSLaboratoryObservation or EHDSObservation "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group."
+* basedOn[x] 0..* EHDSServiceRequest "A plan, proposal or order that is fulfilled in whole or in part by this observation."

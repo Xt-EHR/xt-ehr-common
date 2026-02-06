@@ -5,15 +5,15 @@ hide stereotype
 hide empty members
 
 class "**Laboratory report**" as labReport{
-  Laboratory Report Header
-  Laboratory Report Body
-  Presented Form
-  Media
+  Laboratory Report Header 1..1
+  Laboratory Report Body 1..1
+  Presented Form 0..*
+  Media 0..*
 }
 
 labReport *--> header: "1..1"
 labReport *--> body: "1..1"
-labReport *--> presentedForm: "0..1"
+labReport *--> presentedForm: "0..*"
 labReport *--> media: "0..*"
 
 class "**Laboratory Report Header**" as header{
@@ -34,50 +34,56 @@ body *--> supportingInformation: "0..1"
 body *--> specimen: "0..*"
 body *--> serviceRequest: "0..*"
 body *--> resultData: "1..1"
-body *--> healthInsuranceAndPaymentInformation: "0..*"
 
 class "**Order information**" as orderInformation {
   orderId 1..*
   orderDateTime 0..1
   orderPlacer 0..1
   orderReason 0..*
-  orderReasonText 0..*
-  clinicalQuastion 0..1
+  clinicalQuestion 0..1
 }
 
 class "**Supporting information**" as supportingInformation {
   observation 0..*
   condition 0..*
   medicationAdministration 0..*
-  vaccination 0..*
   sexForClinicalUse 0..*
+  vaccination 0..*
   other 0..*
 }
 
 
 class "**Specimen**" as specimen {
-  typeOfSpecies 0..1
-  material 0..1
-  collectionPeriod 0..1
-  bodySite 0..1
+  source 0..1
+  type 0..1
+  parentSpecimen 0..*
+  collected 1..1
+  collection [method, device, quantity, bodySite, ...] 0..1
   receivedDate 0..1
-  collectionProcedure 0..1
-  container 0..*
+  container [device, quantity] 0..*
+  note 0..1
 }
 
 class "**Service Request**" as serviceRequest {
-  serviceText 0..1
-  serviceCode 0..1
+  description 0..1
+  code 0..1
   quantity 0..1
+  bodySite 0..*
+  **reasonReference** 0..*
   priority 0..1
+  **supportingInformationReference** 0..*
+  **specimen** 0..*
+  encounter 0..1
+  occurrence 0..1
   patientInstructions 0..1
-  coverage 0..*
 }
 
+serviceRequest --> specimen: "specimen 0..*"
+serviceRequest --> supportingInformation: "supportingInformationReference 0..*"
 
 class "**Result data**" as resultData {
-  Comments Interpretations and Recommendations 0..*
-}
+  comments, narrative interpretations 0..*
+  }
 
 resultData *--> results: 0..*
 
@@ -85,21 +91,23 @@ class "**Lab Observation**" as results {
   authorship information 1..*
   status 1..1
   observationDate 1..1
-  code 1..1
+  type 1..1
+  originalName 0..1
   method 0..1
-  **orderReference** 0..1
+  bodySite 0..1
   performer 0..1
   value [quantity, code, range, ...] 0..1
-  dataAbsentReason 0..1
   uncertainty 0..1
+  dataAbsentReason 0..1
   referenceRange 0..*
   interpretationCode 0..*
+  component [type, originalName, value, ...] 0..*
   device 0..1
   testKit 0..1
   calibrator 0..1
   accreditation status 0..1
-  comments, narrative interpretations 0..*
-  component 0..*
+
+  **basedOn** 0..*
   **derivedFrom** 0..*
   **triggeredBy** 0..*
   **hasMember** 0..*
@@ -108,7 +116,7 @@ class "**Lab Observation**" as results {
 results --> results: "triggeredBy 0..*"
 results --> results: "hasMember 0..*"
 results --> results: "derivedFrom 0..*"
-results --> orderInformation: "orderReference 0..1"
+results --> serviceRequest: "basedOn 0..*"
 
 
 class "**Presented Form**" as presentedForm {
@@ -117,11 +125,6 @@ class "**Presented Form**" as presentedForm {
 
 class "**Media**" as media {
   Attachment
-}
-
-class "**Payment Information**" as healthInsuranceAndPaymentInformation {
-  insurance 0..*
-  payment 0..*
 }
 
 
