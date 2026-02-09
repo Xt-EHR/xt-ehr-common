@@ -95,6 +95,8 @@ class "**Lab Observation**" as results {
   originalName 0..1
   method 0..1
   bodySite 0..1
+  specimen 0..1
+  order 0..1
   performer 0..1
   value [quantity, code, range, ...] 0..1
   uncertainty 0..1
@@ -107,16 +109,15 @@ class "**Lab Observation**" as results {
   calibrator 0..1
   accreditation status 0..1
 
-  **basedOn** 0..*
+  **hasMember** 0..*
   **derivedFrom** 0..*
   **triggeredBy** 0..*
-  **hasMember** 0..*
 }
 
 results --> results: "triggeredBy 0..*"
 results --> results: "hasMember 0..*"
 results --> results: "derivedFrom 0..*"
-results --> serviceRequest: "basedOn 0..*"
+results --> serviceRequest: "order 0..1"
 
 
 class "**Presented Form**" as presentedForm {
