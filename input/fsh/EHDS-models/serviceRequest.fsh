@@ -9,7 +9,7 @@ Description: """The model covers details about a requested service or services. 
   * ^binding.strength = #preferred
 * quantity 0..1 Quantity "Amount of requested services of the same type"
 * bodySite 0..* EHDSBodyStructure "Anatomic location and laterality where the procedure should be performed. This is the target site."
-* reasonReference[x] 0..* EHDSObservation or EHDSCondition or EHDSProcedure or EHDSMedication or string "A reference to reason why this service is being requested."
+* reason[x] 0..* CodeableConcept or EHDSObservation or EHDSCondition or EHDSProcedure or EHDSMedication or string "A code, text or reference to reason why this service is being requested."
   * ^binding.description = "ICD-10, SNOMED CT, Orphacode"
   * ^binding.strength = #preferred
 * priority 0..1 CodeableConcept "Indicates how quickly the request should be addressed with respect to other requests."
