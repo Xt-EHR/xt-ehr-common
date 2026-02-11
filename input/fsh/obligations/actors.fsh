@@ -13,7 +13,7 @@ Usage: #example
 
 Instance: actor-consumer
 InstanceOf: ActorDefinition
-Title: "Consumer Actor"
+Title: "Consumer actor"
 Description: """Actor where the system receives, processes, or displays electronic health data originating from another system;"""
 Usage: #example
 * url = $actor-consumer

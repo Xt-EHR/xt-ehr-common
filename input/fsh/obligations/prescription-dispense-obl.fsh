@@ -7,6 +7,7 @@ Description: "Obligations for the logical model for medication prescription body
 * header.identifier // prescription identifier
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers SHALL match prescriptionItem.identifier."""
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall use this prescription identifier for reference in the dispense record."""
@@ -48,8 +49,9 @@ Description: "Obligations for the logical model for medication prescription body
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * prescriptionItem.identifier // prescription iitem identifier
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers SHALL match .identifier."""
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall use this prescription identifier for reference in the dispense record."""
