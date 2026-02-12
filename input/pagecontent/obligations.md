@@ -1,10 +1,9 @@
-
-### Requirement levels
+### Requirement levels  
 
 The obligation framework uses requirement levels SHALL, SHOULD and MAY according to the definitions in RFC 2119.  
 
-|Term   |Requirement Level |Definition |
-|------ | -------- | ---------------------------------- |
+|Term|Requirement Level|Definition|
+|---|--------|----------------------------------|
 |SHALL  |Mandatory|Means that the definition is an absolute requirement of the specification.|
 |SHOULD |Recommended |Means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.|
 |MAY    |Optional|Means that an item is truly optional.  One vendor may choose to include the item because a particular marketplace requires it or because the vendor feels that it enhances the product while another vendor may omit the same item. An implementation which does not include a particular option MUST be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option MUST be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides.)|  
@@ -49,3 +48,5 @@ Logical information models are designed as the source of requirements. They do n
 The requirements defined in logical models (including related obligations) are used as the basis for defining FHIR implementation guides. The logical models are realised as FHIR profiles on FHIR resources, and obligations are replicated for the corresponding elements in FHIR profiles. Mappings between logical models and FHIR profiles are provided in FHIR IGs.  
 
 Cross-border services derive requirements from the FHIR IGs, but may further restrict the specification and add or strengthen obligations where necessary.  
+
+  
