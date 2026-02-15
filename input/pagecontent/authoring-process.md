@@ -1,10 +1,10 @@
-### Authoring logical information models
-
 Xt-EHR Information models are published as FHIR Logical Models. While they may be represented similarly to the technical FHIR profiles, they remain representations of abstract data structures - simply captured as a technical artifact (a FHIR StructureDefinition) instead of a spreadsheet or document. These models are different and separate artifacts from the profiles. For example, a model for "Prescription" is defined independently of any resource or any FHIR release, and it may me mapped to its FHIR implementation as a MedicationRequest in FHIR R4 or FHIR R5 as well as to a CDA document or a custom national specification.
 
 FHIR Implementation Guide for publishing information models is based on current FHIR R5 release, but this does not imply that the actual implementations would have to use the same or any other FHIR version.
 
-#### Minimum metadata for each model:
+### Minimum metadata 
+
+#### Minimum metadata for each model
 **Name**: EHDSModelName - CamelCase name with the prefix "EHDS". The name part may but does not have to follow the resource names in FHIR.  
 **Title**: Model Name model – ortographically correct name of the model for human users. The last word of the title is "model". 
 **Description**: Short description of the model. Significant limitations or considerations can be provided. Markdown allowed, but not recommended.  
@@ -33,7 +33,7 @@ In addition, the following elements are often filled in:
 **Binding** – Preferred code systems or value set definitions are provided as binding description. Actual value sets are typically not created by the project, as they might be implementation-specific or following a different authoring cycle. This includes binding strength.  
 **Requirement** – reference to the source of the requirement (eHN guideline, MyHealth@EU requirements catalogue, ISO model, etc).  
 
-#### Files and folders in GitHub
+### Files and folders in GitHub
 
 Every model is authored in a different FSH-file. File name corresponds to the model name, but without the EHDS-prefix. 
 
@@ -43,18 +43,18 @@ Additional information about the usage of the model can be added into *intro* an
 
 Artifacts are organised in the sushi-config.yaml file. Logical models and obligations should be kept separate.
 
-#### Data types
+### Data types
 
 Default data types to use in FHIR logical models are FHIR data types. While these data types are physically constrained and dependent of a FHIR release, in the logical models they are used with a representative intent, and not impose on the physical format. For example, "dateTime" implies a specific format in FHIR resources, but in a logical model it is convened that these constraints may not apply in all cases, and some dateTime elements could have a different physical format. In other words, the logical models do not impose any physical constraints by default.
 
 Please see the list of allowed data types on [Data types and references page](dataypes.html).
 
-#### Obligations
+### Obligations
 
 Obligations are authored as derivations of the models. The title of the obligation model should include the original model name, the word "obligations", and the additional context/flavour when needed.
 
 Please see the details about obligations on [Obligations page](obligations.html)
 
-### Change management process
+### Change management and release process
 
 See [Ways of working](wow.html).
