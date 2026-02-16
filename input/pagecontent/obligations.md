@@ -37,8 +37,16 @@ Obligation requirements apply to EHR systems and relate to system capabilities. 
 - Obligations use the HL7 FHIR Obligations framework (including the required value sets)
 - Obligation sets for the same model may differ between priority categories or context (e.g. EHDSDevice as an author of a document, laboratory test kit, or an implant).
 - In case the obligation authors cannot reach an agreement on which requirement level to use, the weaker level is preferred.
-- SHOULD requirements are a strong recommendation and candidates for future SHALLs.
+- SHOULD requirements are a strong recommendation and often candidates for future SHALLs.
 - Terminology obligations are preferably provided as terminology bindings in the model (description only).  
+- Introducing default values for elements can be helpful for limiting the number of obligations (e.g. if numberOfRepeats is not provided, it is considered to be '0' - this allows systems that never allow repeats to be interoperable without filling in this data).
+- When a polymorphic element is equipped with an obligation, then: 1) mark the obligation on element[x] level, when obligation applies to all data types in the model (FHIR IG might have more data types, and obligations there would apply to only those data types present in the model); 2) mark the obligation on elementDataType level when the obligation applies to only certain data types.
+- When a backbone element has an obligation SHOULD, MAY, or no obligation, the obligations of subelements would only apply when the block itself is implemented (similar to how cardinalities are interpreted). When the obligations of subelements are already clear from the cardinalities, the redundant obligations do not have to be provided unless needed for additional clarity (i.e. providing comments). Typically, the subelements should not have a stronger obligation than the upper level elements in the element tree.
+
+
+**Rules for *able-to-populate*:**
+- All elements with cardinality 1.. correspond to SHALL *able-to-populate*.
+- Elements that must be available on demand but do not have to be present while operating in a known (e.g. national) environment correspond to SHOULD *able-to-populate* (for example, if a larger data object is described by a single code from a local code system, it might be sufficient to use the code and display name in that environment. However, the system must be capable of filling in the individual elements to make the instance understandable in other environments that have no access to the original code system).
 
 
 ### Obligations on logical models vs FHIR profiles  
