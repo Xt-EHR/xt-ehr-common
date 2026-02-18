@@ -49,7 +49,7 @@ Description: "Obligations for the logical model for medication prescription body
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * prescriptionItem.identifier // prescription iitem identifier
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers SHALL match .identifier."""
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
@@ -69,7 +69,7 @@ Description: "Obligations for the logical model for medication prescription body
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * prescriptionItem.dosageInstructions 
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
