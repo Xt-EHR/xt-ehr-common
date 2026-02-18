@@ -3,7 +3,7 @@ Parent: EHDSMedicationPrescription
 Title: "Medication prescription model obligations for prescribing systems"
 Description: "Obligations for the logical model for medication prescription body for prescribing systems."
 
-// ok to refer to sub-models, or separate by model?
+
 * header.identifier // prescription identifier
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
