@@ -1,6 +1,7 @@
-Profile: EHDSMedicationPrescriptionObligations
+// EHDS<System><Model>Obligations
+Logical: EHDSMedicationPrescriptionObligations
 Parent: EHDSMedicationPrescription
-Title: "Medication prescription model obligations for prescribing systems"
+Title: "Medication prescription model obligations"
 Description: "Obligations for the logical model for medication prescription body for prescribing systems."
 
 
@@ -48,7 +49,7 @@ Description: "Obligations for the logical model for medication prescription body
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
-* prescriptionItem.identifier // prescription iitem identifier
+* prescriptionItem.identifier // prescription item identifier
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers SHALL match .identifier."""
@@ -74,9 +75,9 @@ Description: "Obligations for the logical model for medication prescription body
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
-* prescriptionItem.dosageInstructions.renderedDosageInstruction	
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+// * prescriptionItem.dosageInstructions.renderedDosageInstruction	
+//   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+//   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
@@ -105,64 +106,42 @@ Description: "Obligations for the logical model for medication prescription body
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 
-Profile: EHDSMedicationDispenseObligations
+Logical: EHDSMedicationDispenseObligations
 Parent: EHDSMedicationDispense
-Title: "Medication dispense model obligations for dispensing/pharamacy systems"
-Description: "Obligations for the logical model for medication dispense for dispensing/pharamacy systems."
+Title: "Medication dispense model obligations"
+Description: "Obligations for the logical model for medication dispense for dispensing/pharmacy systems."
 
-* header.identifier // dispense identifier
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+// * header.identifier // dispense identifier
+//   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+//   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 * header.subject // patient for which the medication(s) is/are dispensed
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-/*
-* header.authorship.author // dispenser
+
+* header.author[x] //EHDSHealthProfessional	 // hp dispenser
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* header.authorship.datetime // dispense datetime
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
+* header.date // dispense datetime
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer 
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
+
 * header.status
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* header.statusReason[x]
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* dispenseLocation
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * relatedRequest
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer 
-* receiver[x]
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
+
 * medication
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * dispensedQuantity
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* timeOfDispensation
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* substitution
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* substitution.substitutionOccurred
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* substitution.type
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* substitution.reason
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * dosageInstructions
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-* comment
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-*/
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
