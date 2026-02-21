@@ -27,7 +27,7 @@ Description: "Obligations for the logical model for dosage."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
-* dosageDetails.repeat.boundsDuration
+* dosageDetails.repeat.boundsQuantity
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
