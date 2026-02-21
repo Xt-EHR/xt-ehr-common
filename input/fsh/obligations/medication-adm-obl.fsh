@@ -1,7 +1,7 @@
 Profile: EHDSMedicationAdministrationObligations
 Parent: EHDSMedicationAdministration
 Title: "MedicationAdministration obligations"
-Description: "Obligations for the logical model for medication use."
+Description: "Obligations for the logical model for medication administration."
 
 * header.subject
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
