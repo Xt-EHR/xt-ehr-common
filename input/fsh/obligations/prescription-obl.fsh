@@ -93,6 +93,11 @@ Description: "Obligations for the logical model for medication prescription body
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
+* prescriptionItem.substitution.allowedBoolean 
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
+
 * prescriptionItem.validityPeriod
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
