@@ -10,10 +10,7 @@ Description: "Obligations for the logical model for dosage."
 * dosageDetails.doseAndRate.dose[x]
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* dosageDetails.doseAndRate.doseQuantity
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least Quantity data type for the element."
 
 * dosageDetails.doseAndRate.doseRange
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
@@ -26,10 +23,7 @@ Description: "Obligations for the logical model for dosage."
 * dosageDetails.repeat.bounds[x]
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* dosageDetails.repeat.boundsQuantity
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least Quantity data type for the element."
 
 * dosageDetails.repeat.frequency
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate

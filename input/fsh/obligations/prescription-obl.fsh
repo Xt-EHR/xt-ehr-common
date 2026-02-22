@@ -23,6 +23,7 @@ Description: "Obligations for the logical model for medication prescription body
 * header.author[x] // prescriber
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least EHDSHealthProfessional data type for the element."
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
@@ -90,12 +91,9 @@ Description: "Obligations for the logical model for medication prescription body
 * prescriptionItem.substitution 
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least boolean data type for the element."
   // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
   // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-
-* prescriptionItem.substitution.allowedBoolean 
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 
 * prescriptionItem.validityPeriod

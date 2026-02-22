@@ -18,11 +18,7 @@ Description: "Obligations for the logical model for medication administration."
 * occurrence[x]
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* occurrenceDateTime
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least dateTime data type for the element."
 
 * dosage
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
