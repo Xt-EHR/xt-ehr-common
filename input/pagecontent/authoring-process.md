@@ -25,11 +25,10 @@ For models authored in FSH, the following information is created automatically b
 **Name** – data element name starts with lowercase character, and every next word in the name is uppercase character (e.g goodNameExample). When the data element is a subelement, the name should typically not include the parent element name in order to avoid repetitions in path names (e.g when the parent is „Object“ and the subelements are for the code and date of the Object, name the subelements *code* and *date* and avoid *objectCode* and *objectDate* to avoid paths like *object.objectCode*). In rare cases, repetition of the upper element is needed to remove ambiguity (i.e. several dates of different kinds are expected) and therefore allowed.  
 **Data type** – Use FHIR data types or other logical models. Please see the list of allowed data types with their descriptions on [Data types and references page](datatypes.html).   
 **Cardinality** – There is no „soft“ cardinality in logical models, and all instances without providing a mandatory (1..) element are considered invalid. An ability for a system to populate an element (even though it may not be present in the data) is described through [Obligations](obligations.html).  
-**Definition** - the actual definition of the data element in the context of the model
-**Short description** - this description is visible in the tree view of the model and should contain a definition or clarification about the element. It should be more informative than the element name itself. Short description does not have a length restriction, but the authors should consider the readability in the tree format. Longer texts can be provided in *definition* and *comment* elements.
+**Short description** - this description is visible in the tree view of the model and should contain a definition or clarification about the element. It should be more informative than the element name itself. Short description does not have a length restriction, but the authors should consider the readability in the tree format. Longer texts can be provided in *definition* and *comment* elements.  
 
-In addition, the following elements are often filled in: 
-**Definition** – allows markdown and longer descriptions, is not instantly visible in the tree view (appears when hovering the element or opening detailed view)  
+In addition, the following elements are often filled in:  
+**Definition** – allows markdown and longer descriptions, is not instantly visible in the tree view (appears when hovering the element or opening detailed view).  
 **Binding** – Preferred code systems or value set definitions are provided as binding description. Actual value sets are typically not created by the project, as they might be implementation-specific or following a different authoring cycle. This includes binding strength.  
 **Requirement** – reference to the source of the requirement (eHN guideline, MyHealth@EU requirements catalogue, ISO model, etc).  
 
@@ -37,7 +36,7 @@ In addition, the following elements are often filled in:
 
 Every model is authored in a different FSH-file. File name corresponds to the model name, but without the EHDS-prefix. 
 
-Files are allowed to include comments – these comments are visible to everyone in GitHub repository, so they should not added for personal use. 
+Files are allowed to include comments – these comments are visible to everyone in GitHub repository, so they should not be added for personal use. 
 
 Additional information about the usage of the model can be added into *intro* and *notes* pages which will appear accordingly before or after the model on the logical model page.
 
