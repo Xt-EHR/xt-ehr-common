@@ -44,7 +44,7 @@ Description: "Logical model for medication prescription. A prescription contains
   * substitution 0..1 Base "Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing."
     * allowed[x] 0..1 boolean or CodeableConcept "Whether and to what extent substitution is allowed."
     * reason[x] 0..1 CodeableConcept or string "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)"
-  * numberOfRepeats 0..1 integer "Number of refills authorised - how many times the prescription item can be dispensed in addition to the original dispense."
+  * numberOfRepeats 0..1 integer "Number of refills authorised - how many times the prescription item can be dispensed in addition to the original dispense. The default value is 0 (no repeats)."
   * minimumDispenseInterval 0..1 Quantity "Minimum dispense interval. If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here."
   * offLabel 0..1 Base "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug" 
     * isOffLabelUse 1..1 boolean "Indicates off-label use. Must be 'true' when .reason is provided."

@@ -1,7 +1,7 @@
 Profile: EHDSMedicationObligations
 Parent: EHDSMedication
-Title: "Medication  model obligations for Medication use and administration"
-Description: "Obligations for the logical model for medication for use with EHDSMedicationUse and EHDSMedicationAdministration models."
+Title: "Medication  model obligations"
+Description: "Obligations for the logical model for medication."
 
 * identifyingCode[x] // medication identifier or code
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate

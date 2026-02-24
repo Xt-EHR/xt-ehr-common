@@ -13,6 +13,7 @@ Description: "Obligations for the logical model for medication dispense for disp
 * header.author[x] //EHDSHealthProfessional	 // hp dispenser
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least EHDSHealthProfessional data type for the element."
 
 * header.date // dispense datetime
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate

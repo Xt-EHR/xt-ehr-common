@@ -1,7 +1,7 @@
 Profile: EHDSMedicationAdministrationObligations
 Parent: EHDSMedicationAdministration
 Title: "MedicationAdministration obligations"
-Description: "Obligations for the logical model for medication use."
+Description: "Obligations for the logical model for medication administration."
 
 * header.subject
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -18,6 +18,7 @@ Description: "Obligations for the logical model for medication use."
 * occurrence[x]
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least dateTime data type for the element."
 
 * dosage
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate

@@ -22,6 +22,7 @@ Description: "Obligations for the logical model for procedure."
 * procedureDate[x]
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least dateTime data type for the element."
 
 * bodySite
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate

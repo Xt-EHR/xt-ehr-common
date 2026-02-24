@@ -17,9 +17,9 @@ The following examples represent relatively simple dosage patterns, which are co
 |_doseAndRate.rateQuantity||||50 mg/h||
 |_doseAndRate.rateRatio||||||
 |_repeat||||||
-|_repeat.bounds||||||
-|_repeat.bounds.duration|7 day(s)|||||
-|_repeat.bounds.period||8.12.2025 - 15.12.2025||||
+|_repeat.bounds[x]||||||
+|_repeat.boundsQuantity|7 day(s)|||||
+|_repeat.boundsPeriod||8.12.2025 - 15.12.2025||||
 |_repeat.duration||||20 min||
 |_repeat.frequency||||||
 |_repeat.frequency.numberOfTimes|3||1|||
@@ -50,9 +50,9 @@ The following example repeats dosageDetails block. Rendered dosage information i
 |_doseAndRate.rateQuantity||
 |_doseAndRate.rateRatio||
 |_repeat||
-|_repeat.bounds||
-|_repeat.bounds.duration|7 day(s) // 7 day(s)|
-|_repeat.bounds.period||
+|_repeat.bounds[x]||
+|_repeat.boundsQuantity|7 day(s) // 7 day(s)|
+|_repeat.boundsPeriod||
 |_repeat.duration||
 |_repeat.frequency||
 |_repeat.frequency.numberOfTimes|1 // 1|
