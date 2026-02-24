@@ -1,4 +1,4 @@
-Profile: EHDSConditionbligations
+Profile: EHDSConditionObligations
 Parent: EHDSCondition
 Title: "Condition obligations"
 Description: "Obligations for the logical model for condition."
