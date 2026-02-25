@@ -17,10 +17,14 @@ Description: "Obligations for the logical model for medication dispense for disp
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least EHDSHealthProfessional data type for the element."
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:process
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * header.date // dispense datetime
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:process
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * header.status
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -49,3 +53,5 @@ Description: "Obligations for the logical model for medication dispense for disp
 * dosageInstructions
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:process
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer

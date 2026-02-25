@@ -2,7 +2,7 @@
 Logical: EHDSMedicationPrescriptionObligations
 Parent: EHDSMedicationPrescription
 Title: "Medication prescription model obligations"
-Description: "Obligations for the logical model for medication prescription body for prescribing systems."
+Description: "Obligations for the logical model for medication prescription body for prescribing systems (producer) and dispensing systems (consumer)."
 
 
 * header.identifier // prescription identifier
@@ -29,8 +29,8 @@ Description: "Obligations for the logical model for medication prescription body
 * header.date // issue datetime
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  // * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
-  // * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * header.status // 	prescription status
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -63,7 +63,7 @@ Description: "Obligations for the logical model for medication prescription body
 * prescriptionItem.medication // 	medication prescribed
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:display
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * prescriptionItem.status // 	status of prescription line
@@ -71,6 +71,7 @@ Description: "Obligations for the logical model for medication prescription body
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall process the prescription status together with other information to determine dispensability."""
 
 * prescriptionItem.dosageInstructions 
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -89,7 +90,6 @@ Description: "Obligations for the logical model for medication prescription body
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-
 
 * prescriptionItem.validityPeriod
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
