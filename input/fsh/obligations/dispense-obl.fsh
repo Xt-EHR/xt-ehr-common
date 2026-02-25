@@ -1,7 +1,7 @@
 Logical: EHDSMedicationDispenseObligations
 Parent: EHDSMedicationDispense
 Title: "Medication dispense model obligations"
-Description: "Obligations for the logical model for medication dispense for dispensing/pharmacy systems."
+Description: "Obligations for the logical model for medication dispense for dispensing/pharmacy systems (producer) and prescribing systems or prescription repositories(consumer)."
 
 // * header.identifier // dispense identifier
 //   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
