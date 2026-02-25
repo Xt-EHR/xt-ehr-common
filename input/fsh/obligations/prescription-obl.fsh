@@ -23,7 +23,7 @@ Description: "Obligations for the logical model for medication prescription body
 * header.author[x] // prescriber
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System shall support at least EHDSHealthProfessional data type for the element."
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "Systems shall support at least EHDSHealthProfessional data type for the element."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
