@@ -3,6 +3,9 @@ Title: "Medication dispense model"
 Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on a request and dispensed in a pharmacy). Implementers should take into account, if allowed and needed, the calculation of remaining dispensable product based on this information."
 
+
+// search: subject, author, status, author datetime, identifier, relatedRequest
+
 * header.subject
   * ^short = "The person for whom the medication is prescribed. [Used for searching]"
   * ^definition = "The person for whom the medication is prescribed. [Used for searching]" 
@@ -28,7 +31,7 @@ Description: "Logical model for medication dispensation (based on a request and 
 * dispensedQuantity 1..1 Quantity "Number of dispensed packages if the package size is known, or number of smaller items/units, according to the medication dispensed. A unit is expected."
   * ^binding.description = "UCUM, EDQM Standard Terms"
   * ^binding.strength = #preferred
-* timeOfDispensation 0..1 dateTime "Date and time when medication was handed over. When not present, the time of dispensation is assumed to be the time of issuing dispense record. [Used for searching]"
+* timeOfDispensation 0..1 dateTime "Date and time when medication was handed over. When not present, the time of dispensation is assumed to be the time of issuing dispense record."
 * substitutionOccurred 0..1 boolean "Whether substitution was made by the dispenser. Definition of substitution is specific to the jurisdiction."
 * dosageInstructions 0..1 EHDSDosage "Dosage and administration instructions"
 * note 0..1 string "Additional information or comments"
