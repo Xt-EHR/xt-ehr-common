@@ -50,7 +50,7 @@ Please see the list of allowed data types on the [Data types and references page
 
 ### Obligations
 
-Obligations are authored as derivations of the models. The title of the obligation model should include the original model name, the word "obligations", and the additional context/flavour when needed.
+Interoperability profiles as sets of obligations on a logical model are authored as derivations of the models. The title of the obligation model should include the original model name, the word "obligations", and the additional context/flavour when needed.
 
 Please see the details about obligations on [Obligations page](obligations.html)
 

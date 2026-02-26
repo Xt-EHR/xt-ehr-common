@@ -26,4 +26,4 @@ Knowing if a block of data is technically included as a reference or physically 
 
 ### Polymorphic elements
 
-In some cases a choice between data types is allowed. In that case, the grouper element is marked with [x] and a type-specific element (called "slice" in FHIR) is automatically created for each data type. Usually, only one choice out of the options is allowed to be used at any given time (when element is repeatable, the repeats may include data of different data types).
+In some cases a choice between data types is allowed. In that case, the grouper element is marked with [x] and a type-specific element (called "slice" in FHIR) is automatically created for each data type. Only one choice out of the options is allowed to be used at any given time, but when element is repeatable, the repeats may include data of different data types.
