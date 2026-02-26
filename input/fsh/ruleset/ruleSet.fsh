@@ -18,6 +18,11 @@ RuleSet: OblConsumerDoc(code, documentation)
 * ^extension[$obligation][=].extension[actor].valueCanonical = "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"
 * ^extension[$obligation][=].extension[documentation].valueMarkdown = {documentation}
 
+/* RuleSet: OblProducerType(code)
+* ^type[0].extension[$obligation][+].[code].valueCode = {code}
+* ^type[0].extension[$obligation][=].extension[actor].valueCanonical = "https://www.xt-ehr.eu/specifications/fhir/actor-producer"
+ */
+
 /* RuleSet: OblConsumer(code, documentation)
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/obligation"
 * ^extension[=].extension[+].url = "code"
