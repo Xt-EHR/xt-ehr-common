@@ -22,3 +22,5 @@ Description: "Obligations for the logical model for related person."
 * telecom
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "Only for use cases where the related person needs to be contacted directly."
+

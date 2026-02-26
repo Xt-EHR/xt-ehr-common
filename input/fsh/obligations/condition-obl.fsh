@@ -12,7 +12,7 @@ Description: "Obligations for the logical model for condition."
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * header.identifier
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * header.status
@@ -20,11 +20,11 @@ Description: "Obligations for the logical model for condition."
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * problem
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * onsetDate
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * endDate
