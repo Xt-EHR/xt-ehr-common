@@ -41,11 +41,11 @@ Description: "Obligations for the logical model for observation."
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * component.code
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * component.result
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * component.result.value[x]
