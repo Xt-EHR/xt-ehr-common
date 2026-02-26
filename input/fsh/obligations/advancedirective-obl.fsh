@@ -1,7 +1,7 @@
-Profile: EHDSObservationObligations
-Parent: EHDSObservation
-Title: "Observation obligations"
-Description: "Obligations for the logical model for observation."
+Profile: EHDSAdvanceDirectiveObligations
+Parent: EHDSAdvanceDirective
+Title: "Advance directive obligations"
+Description: "Obligations for the logical model for advance directive."
 
 * header.subject
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -19,36 +19,15 @@ Description: "Obligations for the logical model for observation."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
-* observationDate[x]
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* type
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* result
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* result.value[x]
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-
-* component
+* header.source
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
-* component.code
+* category
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
-* component.result
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-
-* component.result.value[x]
+* attachment
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
