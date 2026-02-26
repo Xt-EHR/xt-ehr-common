@@ -12,7 +12,7 @@ Description: """The model is a structured document designed to provide an overvi
 * alerts 0..1 Base "Section: Alerts" "Substantial alerts or warnings that health professionals should be aware of."
   * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
-  * emptyReason 0..1 CodeableConcept "Reason for absence of data"
+  // ./_* emptyReason 0..1 CodeableConcept "Reason for absence of data"
   * medicalAlert 0..* EHDSAlert "Description of medical alerts in textual format: any clinical information that is imperative to know so that the life or health of the patient does not come under threat."
     * ^requirements = "ISO IPS"
   * note 0..1 string "Free text notes by the health professional"
