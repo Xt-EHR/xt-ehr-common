@@ -1,7 +1,7 @@
 Profile: EHDSPatientLaboratoryObligations
 Parent: EHDSPatient
-Title: "Patient Obligations"
-Description: "Obligations for the logical model of patient"
+Title: "Patient laboratory specific obligations"
+Description: "Obligations for the logical model of patient in the scope of laboratory use case"
 * identifier
   * insert OblProducerDoc(#SHALL:able-to-populate, "EHR system SHALL be able to populate one or more business identifiers of the patient. ")
   * insert OblConsumerDoc(#SHOULD:display, "SHALL process patient identifiers to ensure proper assignment of information.")

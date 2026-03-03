@@ -1,7 +1,7 @@
 Profile: EHDSObservationObligations
 Parent: EHDSObservation
 Title: "Observation Obligations"
-Description: "Obligations for the logical model of observation"
+Description: "Obligations for the logical model of general observation"
 * header
   * identifier
     * insert OblProducerDoc(#SHALL:able-to-populate, "A business identifier of the observation SHALL be populated if known.")

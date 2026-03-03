@@ -1,7 +1,7 @@
 Profile: EHDSHealthProfessionalLaboratoryObligations
 Parent: EHDSHealthProfessional
-Title: "Health professional Obligations"
-Description: "Obligations for the logical model of health professional"
+Title: "Health professional laboratory specific obligations"
+Description: "Obligations for the logical model of health professional in the scope of laboratory use case"
 * identifier
   * insert OblProducerDoc(#SHALL:able-to-populate, "EHR system SHALL be able to populate one or more business identifiers of the health professional. ")
   * insert OblConsumerDoc(#SHALL:process, "If provided\, EHR systems SHOULD display and SHALL process. Processing means mainly store as part of the resource and consider the value for furter processing (e.g. validation\, retrieval of details from registry\, etc.\).")

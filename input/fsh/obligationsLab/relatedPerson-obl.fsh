@@ -1,7 +1,7 @@
 Profile: EHDSRelatedPersonLaboratoryObligations
 Parent: EHDSRelatedPerson
-Title: "Related person Obligations"
-Description: "Obligations for the logical model of related person"
+Title: "Related person laboratory specific obligations"
+Description: "Obligations for the logical model of related person in the scope of laboratory use case"
 
 * name
   * insert OblProducerDoc(#SHALL:able-to-populate, "EHR system SHALL populate one or more names of the related person meeting conformity requirements on the name structure if a value is known and allowed to be shared. ")

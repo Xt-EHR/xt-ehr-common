@@ -12,7 +12,7 @@ Description: """Model for information about an oservation and its results."""
 * header.directSubject[x] 0..1 EHDSPatient or EHDSLocation or EHDSDevice or EHDSHealthProfessional or EHDSOrganisation or EHDSProcedure "The direct subject of the observation if different from the patient (subject of care), e.g. an observation of an implanted device. Additional types of subject may be allowed in implementations."
 * observationDate[x] 1..1 dateTime or Period "Clinically relevant time or time period for the observation"
 * type 1..1 CodeableConcept "Observation type. Code and name representing the type of the observation using the agreed code systems."
-  * ^binding.description = "LOINC, NPU, SNOMED CT"
+  * ^binding.description = "LOINC, SNOMED CT"
   * ^binding.strength = #preferred
 //* name 1..1 string "Name of the observation"
 * originalName 0..1 string "Original (conventional) name of the observation as used in the local laboratory or clinical system."
@@ -82,7 +82,7 @@ Description: """Model for information about an oservation and its results."""
 
 * component 0..* Base "Component in case the observation consists of multiple sub-observations (e.g. blood pressure)."
   * type 1..1 CodeableConcept "Code representing the observation using the agreed code systems."
-    * ^binding.description = "LOINC, NPU, SNOMED CT"
+    * ^binding.description = "LOINC, SNOMED CT"
     * ^binding.strength = #preferred
   * originalName 0..1 string "Original (user-friendly) name of the observation as used in the local laboratory or clinical system."
   * result 1..1 Base "Result of the observation including text, numeric, coded, and other types of results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation."

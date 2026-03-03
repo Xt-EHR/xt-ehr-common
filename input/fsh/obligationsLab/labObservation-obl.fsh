@@ -1,6 +1,6 @@
 Profile: EHDSLaboratoryObservationObligations
 Parent: EHDSLaboratoryObservation
-Title: "Laboratory observation Obligations"
+Title: "Laboratory observation obligations"
 Description: "Obligations for the logical model of laboratory observation"
 
 * header

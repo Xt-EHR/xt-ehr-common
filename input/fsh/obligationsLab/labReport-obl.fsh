@@ -2,6 +2,7 @@ Profile: EHDSLaboratoryReportObligations
 Parent: EHDSLaboratoryReport
 Title: "Laboratory Report Obligations"
 Description: "Obligations for the logical model of laboratory report"
+
 * header
   * insert OblProducerDoc(#SHALL:able-to-populate, "Each producer of a laboratory report SHALL be abe to provide basic information\, such as type of the report\, authorship\, status of the report\, title\, etc. These information is crucial for safe identification of the report and for searchability of the report using standardized searching parameters.")
   * insert OblConsumerDoc(#SHALL:process, "EHR systems that consume laboratory report SHALL process document header information.")
@@ -52,7 +53,7 @@ Description: "Obligations for the logical model of laboratory report"
     * insert OblConsumer(#SHOULD:display)
   * custodian
     * insert OblProducer(#SHALL:able-to-populate)
-
+//* intendedRecipient[x] 0..* EHDSPatient or EHDSRelatedPerson or EHDSHealthProfessional or EHDSOrganisation or EHDSDevice "Intended recipient" """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable"""
 * body
   * insert OblProducerDoc(#SHALL:able-to-populate, "Each EHR system that is a producer of a laboratory report SHALL be able to provide structured information about the laboratory investigation\, such as order information\, supporting information\, specimen details and result data.")
   * insert OblConsumerDoc(#SHALL:process, "EHR systems that consume laboratory report SHALL process structured body information.")

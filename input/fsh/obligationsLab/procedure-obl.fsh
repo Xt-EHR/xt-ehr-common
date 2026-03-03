@@ -1,9 +1,9 @@
-Profile: EHDSConditionLaboratoryObligations
-Parent: EHDSCondition
-Title: "Condition laboratory specific obligations"
-Description: "Obligations for the logical model of condition in the scope of laboratory use case"
+Profile: EHDSProcedureLaboratoryObligations
+Parent: EHDSProcedure
+Title: "Procedure laboratory specific obligations"
+Description: "Obligations for the logical model of procedure in the scope of laboratory use case"
+
 * header
-  * insert OblProducer(#SHALL:able-to-populate)
   * subject
     * insert OblProducerDoc(#SHALL:able-to-populate, "EHR systems SHALL provide information about the subject of care (patient\).")
     * insert OblConsumerDoc(#SHALL:display, "EHR system SHALL render information about the subject of care in such a way that unambiguous assignment to the care subject is preserved.")
@@ -11,18 +11,20 @@ Description: "Obligations for the logical model of condition in the scope of lab
   * identifier
     * insert OblProducer(#SHOULD:able-to-populate)
 
-
   * status
     * insert OblProducer(#SHALL:able-to-populate)
-    * insert OblConsumer(#SHOULD:display)
 
-
-* problem
+* code
+  * insert OblProducer(#SHALL:able-to-populate)
+  * insert OblConsumer(#SHALL:display)
+* procedureDate[x]
+  * insert OblProducer(#SHALL:able-to-populate)
+* procedureDateDateTime
   * insert OblProducer(#SHALL:able-to-populate)
 
-
-
-
-
 * bodySite
+  * insert OblProducer(#SHALL:able-to-populate)
+
+* note
   * insert OblProducer(#SHOULD:able-to-populate)
+  * insert OblConsumer(#SHALL:display)
