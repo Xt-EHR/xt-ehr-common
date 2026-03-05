@@ -25,7 +25,7 @@ Description: "Obligations for the logical model of medication administration in 
   * insert OblProducer(#SHOULD:able-to-populate)
   * insert OblConsumer(#SHALL:display)
 
-* dosageInstructions
+* dosage
   * insert OblProducer(#SHALL:able-to-populate)
 * note
   * insert OblProducer(#SHOULD:able-to-populate)

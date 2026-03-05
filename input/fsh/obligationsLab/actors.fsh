@@ -1,4 +1,4 @@
-Alias: $actor-producer = https://www.xt-ehr.eu/specifications/fhir/actor-producer
+/* Alias: $actor-producer = https://www.xt-ehr.eu/specifications/fhir/actor-producer
 Alias: $actor-consumer = https://www.xt-ehr.eu/specifications/fhir/actor-consumer
 
 Instance: actor-producer
@@ -19,4 +19,4 @@ Usage: #example
 * url = $actor-consumer
 * name = "Consumer"
 * status = #active
-* type = #system
+* type = #system */

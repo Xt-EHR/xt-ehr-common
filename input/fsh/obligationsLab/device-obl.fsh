@@ -4,7 +4,7 @@ Title: "Device laboratory specific obligations"
 Description: "Obligations for the logical model of device in the scope of laboratory use case"
 * instanceIdentifier
   * insert OblProducer(#SHOULD:able-to-populate)
-* udiCarrier
+* udi
   * insert OblProducer(#SHALL:able-to-populate)
   * insert OblConsumerDoc(#SHALL:process, "Consumer system SHALL consider the value to assees comparability of the result values if device is the author of the observation.")
 * manufacturer
