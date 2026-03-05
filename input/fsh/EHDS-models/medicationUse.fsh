@@ -15,6 +15,7 @@ Description: """Statement about a single medication as part of a medication summ
     * ^definition = "The author of the medication use statement"
 * treatmentStatus 0..1 CodeableConcept "The current status of taking the medicine (e.g. taking, on-hold, stopped)"
   * ^requirements = "MyHealth@EU"
+* changeType 0..* CodeableConcept "Medication use's change type in a medication summary (e.g. 'added', 'removed', 'altered'). Relevant at the time of discharge or other alteration of the active medications' list."
 * medication 1..1 EHDSMedication "Describes the medicinal product."
   * ^requirements = "eHN PS Guideline, ISO IPS, MyHealth@EU"
 * reason[x] 0..* CodeableConcept or string "Reason for the use of the medication (typically diagnosis, or a procedure)"

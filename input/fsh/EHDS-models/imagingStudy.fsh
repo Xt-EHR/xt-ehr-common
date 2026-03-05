@@ -9,7 +9,6 @@ Description: """Imaging study model includes the key information about the conte
 * header.identifier ^short = "Identifiers for the imaging study such as DICOM Study Instance UID. If one or more series elements are present in the imaging study, then there shall be one DICOM Study UID identifier."
 * header.identifier 1..*
   * ^requirements = "eHN Guideline IMG (v1.1): B.1.1"
-* header.author[x] 1..*
 * header.date 1..1  
 * header.source 0..0
 * modality 0..* CodeableConcept "All of the distinct values for series' modalities"
@@ -25,7 +24,7 @@ Description: """Imaging study model includes the key information about the conte
   * ^requirements = "eHN Guideline IMG (v1.1): B.1.2"
 * studyCustodian 0..1 EHDSOrganisation "Organisation name, address, contact information."
   * ^requirements = "eHN Guideline IMG (v1.1): B.1.3"
-* studyEndpoint 0..1 EHDSEndpoint "Study endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
+* studyEndpoint 0..* EHDSEndpoint "Study endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
 * series 0..* Base "Series. Each study has one or more series of instances, but they may be absent when no series information needs to be conveyed"
   * ^requirements = "eHN Guideline IMG (v1.1): B.1.4"
   * seriesUid 1..1 Identifier "DICOM Series Instance UID for the series"
@@ -38,7 +37,7 @@ Description: """Imaging study model includes the key information about the conte
   * description 0..1 string "A short human readable summary of the series"
     * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.1"
   * numberOfInstances 0..1 integer "Number of series related instances"
-  * seriesEndpoint 0..1 EHDSEndpoint "Series endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
+  * seriesEndpoint 0..* EHDSEndpoint "Series endpoint describing the technical details of a location that can be connected to for the delivery/retrieval of information. Sufficient information is required to ensure that a connection can be made securely, and appropriate data transmitted as defined by the endpoint owner. These may be locally hosted services, regional services, or national service."
     * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.6"
   * bodySite 0..1 EHDSBodyStructure "Body part (with laterality) examined"
   * specimen 0..* EHDSSpecimen "Specimen imaged"

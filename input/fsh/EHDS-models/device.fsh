@@ -1,9 +1,9 @@
 Logical: EHDSDevice
-//Id: EHDSdevice
 Title: "Device model"
 Description: "Model for device information"
+
 * instanceIdentifier 0..* Identifier "Identifier of the device instance"
-* udiCarrier 0..* Identifier "Unique Device Identifier (UDI) value"
+* udi 0..* Identifier "Unique Device Identifier (UDI) value"
 * manufacturer 0..1 string "Name of device manufacturer. If the manufacturer code is included in an identifier, manufacturer must correspond to that code."
 * manufactureDate 0..1 dateTime "The date and time when the device was manufactured"
 * expiryDate 0..1 dateTime "The date and time beyond which this device is no longer valid or should not be used (if applicable)"

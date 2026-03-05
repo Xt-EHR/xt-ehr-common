@@ -1,0 +1,1 @@
+Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation

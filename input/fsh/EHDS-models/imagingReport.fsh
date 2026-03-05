@@ -46,7 +46,6 @@ Description: """Imaging report reflects the observations and interpretations of 
       * ^binding.strength = #preferred
   * specimen 0..* EHDSSpecimen "Specimen information. Note: A specimen (not attached to a body) can be used for diagnostic, forensic and medical research purposes."
     * ^requirements = "eHN Guideline IMG (v1.1): A.4"
-  * serviceRequest 0..* EHDSServiceRequest "Specification of requested service(s)."
   * exposureInformation 0..1 string "Information on total exposure to ionising radiation. This information is required by regulations in several EU countries."
     * ^requirements = "eHN Guideline IMG (v1.1): B.1.4.4, Article 2 Imaging report definition"
   * examinationReport 1..1 Base "Examination report content."

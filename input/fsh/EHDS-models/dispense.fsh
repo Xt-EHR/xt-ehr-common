@@ -3,21 +3,30 @@ Title: "Medication dispense model"
 Parent: EHDSDataSet
 Description: "Logical model for medication dispensation (based on a request and dispensed in a pharmacy). Implementers should take into account, if allowed and needed, the calculation of remaining dispensable product based on this information."
 
+
+// search: subject, author, status, author datetime, identifier, relatedRequest
+
+* header.subject
+  * ^short = "The person for whom the medication is prescribed. [Used for searching]"
+  * ^definition = "The person for whom the medication is prescribed. [Used for searching]" 
+* header.identifier
+  * ^short = "Business identifier(s) for the dispense record. [Used for searching]"
+  * ^definition = "Business identifier(s) for the dispense record. [Used for searching]"
 * header.author[x] 1..
   * ^short = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
   * ^definition = "The actor who issued the dispense record. Responsibility for the dispense should be traceable from this information."
 * header.date 1..1
-  * ^short = "Date and time of issuing the dispense record"
-  * ^definition = "Date and time of issuing the dispense record"
+  * ^short = "Date and time of issuing the dispense record. [Used for searching]"
+  * ^definition = "Date and time of issuing the dispense record. [Used for searching]"
 * header.status 
-  * ^short = "The status of the dispense, e.g. completed, declined, entered-in-error"
-  * ^definition = "The status of the dispense, e.g. completed, declined, entered-in-error"
+  * ^short = "The status of the dispense, e.g. completed, declined, entered-in-error. [Used for searching]"
+  * ^definition = "The status of the dispense, e.g. completed, declined, entered-in-error. [Used for searching]"
   * ^binding.description = "HL7 MedicationDispense Status Codes"
   * ^binding.strength = #preferred
 * header.source 0..0
 * dispenseLocation 0..1 EHDSLocation "Location of dispense"
 * receiver[x] 0..1 EHDSPatient or EHDSHealthProfessional or EHDSRelatedPerson "Identification of the person who received the dispensed medication, especially when it was not the patient. When not present, it is assumed that the patient is the receiver."
-* relatedRequest 0..* Identifier "Identifier of the prescription item the dispense is related to"
+* relatedRequest 0..* Identifier "Identifier of the prescription item the dispense is related to.  [Used for searching]"
 * medication 1..1 EHDSMedication "Exact dispensed product. If multiple medications are dispensed together, multiple dispense records should be created."
 * dispensedQuantity 1..1 Quantity "Number of dispensed packages if the package size is known, or number of smaller items/units, according to the medication dispensed. A unit is expected."
   * ^binding.description = "UCUM, EDQM Standard Terms"

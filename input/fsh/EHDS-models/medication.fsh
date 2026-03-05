@@ -22,8 +22,6 @@ Description: "Logical model for prescribed/dispensed medication. The model is sh
 // * packSize 0..* Quantity "Overall amount of product in one package (100 ml; 20 tablets; 1 cream & 6 pessaries)"
 * description 0..1 string "Textual description of the product, e.g. including package description."
 //  * ^comment = "No change"
-  * ^binding.description = "UCUM for units of measure. EDQM Standard Terms for units of presentation."
-  * ^binding.strength = #preferred
 * item 0..* Base "A medication item. For combination packs, this can be multiple manufactured items with each item having its own dose form and ingredients+strengths defined"
 //  * ^comment = "Structure changed, elements repeated for complex packages"
   * doseForm 0..1 CodeableConcept "Administrable or manufactured item dose form, depending on the type of medication definition. This should not include combined dose forms."
