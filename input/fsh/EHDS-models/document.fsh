@@ -22,7 +22,8 @@ Description: "Model for common document data elements, including the common head
     * attester[x] 1..1 EHDSHealthProfessional or EHDSDevice  "Attester who validated the document"
     * datetime 1..1 dateTime "Date and time of the approval of the document by Attester"
   * legalAuthentication 0..* Base "Document legal authentication details"
-    * legalAuthenticator[x] 1..1 EHDSHealthProfessional or EHDSOrganisation "The person or organisation taking responsibility for the medical content of the document (typically the person who signs it)"
+    * legalAuthenticator[x] 1..1 EHDSHealthProfessional or EHDSOrganisation 
+    "The person or organisation taking responsibility for the content of the document."
     * datetime 1..1 dateTime "Date and time when the document was authorised"
   * eventType 0..* CodeableConcept "Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
     * ^binding.description = "LOINC, SNOMED CT, dicom-cid-33-Modality"
