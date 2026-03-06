@@ -33,16 +33,16 @@ Description: """The model is a structured document designed to provide an overvi
 * problems 1..1 Base "Section: Medical problems" """Conditions and symptoms affecting the health of the patient."""
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
   * emptyReason 0..1 CodeableConcept "Use if no conditions are listed" 
-    * ^binding.description = "HL7 ListEmptyReasons"
-    * ^binding.strength = #preferred
+    // * ^binding.description = "HL7 ListEmptyReasons"
+    // * ^binding.strength = #preferred
   * problem 0..* EHDSCondition "Health conditions affecting the health of the patient."
   * note 0..1 string "Free text notes by the health professional"
 
 * medicationSummary 1..1 Base "Section: Medication summary" """Current and relevant past medicines."""
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
   * emptyReason 0..1 CodeableConcept "Use if no medicines are listed" 
-    * ^binding.description = "HL7 ListEmptyReasons"
-    * ^binding.strength = #preferred
+    // * ^binding.description = "HL7 ListEmptyReasons"
+    // * ^binding.strength = #preferred
   * medicationUse 0..* EHDSMedicationUse "Medication treatment/prescription relevant for this patient summary. Typically, medications whose period of time indicated for the treatment has not yet expired whether it has been dispensed or not."
   * note 0..1 string "Free text notes by the health professional"
 
@@ -50,16 +50,16 @@ Description: """The model is a structured document designed to provide an overvi
 status depends on."
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
   * emptyReason 0..1 CodeableConcept "Use if no conditions are listed" 
-    * ^binding.description = "HL7 ListEmptyReasons"
-    * ^binding.strength = #preferred 
+    // * ^binding.description = "HL7 ListEmptyReasons"
+    // * ^binding.strength = #preferred 
   * deviceUse 0..* EHDSDeviceUse "Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP."
   * note 0..1 string "Free text notes by the health professional"
 
 * procedures 1..1 Base "Section: Procedures" "Significant procedures performed on the patient." 
   * generatedNarrative 0..1 string "Narrative, potentially formatted, content of the whole section."
   * emptyReason 0..1 CodeableConcept "Reason for absence of data"
-    * ^binding.description = "HL7 ListEmptyReasons"
-    * ^binding.strength = #preferred
+    // * ^binding.description = "HL7 ListEmptyReasons"
+    // * ^binding.strength = #preferred
   * procedure 0..* EHDSProcedure "List of procedures" 
   * note 0..1 string "Free text notes by the health professional"
 
