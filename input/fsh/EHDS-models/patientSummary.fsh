@@ -22,9 +22,9 @@ Description: """The model is a structured document designed to provide an overvi
   * allergyIntolerance 0..* EHDSAllergyIntolerance "List of structured allergies and intolerances"
     * ^requirements = "eHN PS Guideline, MyHealth@EU, ISO IPS"
   * emptyReason 0..1 CodeableConcept "Use if no Allergies are listed" "Reason for absence of data (indicates whether the person is known to have no allergies or the data is considered incomplete)"
-    * ^binding.description = "HL7 ListEmptyReasons"
+   // * ^binding.description = "HL7 ListEmptyReasons"
     // * ^binding.description = "1.3.6.1.4.1.12559.11.10.1.3.1.42.47eHDSIAbsentOrUnknownAllergy; http://hl7.org/fhir/ValueSet/list-empty-reason"
-    * ^binding.strength = #preferred
+   // * ^binding.strength = #preferred
     // * ^example[+].label = "value"
     // * ^example[=].valueCoding = #no-known-allergies "No known allergies"
     * ^requirements = "This element is present in MyHealth@EU specifications and ISO IPS. The proposed way of modelling is identical to the newest version of FHIR IPS IG. See general description of Patient summary modelling for more information about this element. MH@EU has a similar concept, but it is modelled in slightly different way."
