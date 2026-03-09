@@ -28,7 +28,7 @@ Description: """Model for observation performed by laboratory"""
 //         * ^binding.description = "hl7:ProbabilityDistributionType"
 //         * ^binding.strength = #preferred
 * type
-  * ^binding.description = "LOINC, NPU"
+  * ^binding.description = "LOINC, NPU, SNOMED CT"
   * ^binding.strength = #preferred
 * triggeredBy[x] 0..* EHDSLaboratoryObservation or EHDSObservation "References to the observation(s) that triggered the performance of this observation."
 * testKit 0..1 EHDSDevice "Laboratory test kit used during measurement."
