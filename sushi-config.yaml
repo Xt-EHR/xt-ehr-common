@@ -231,14 +231,52 @@ groups:
 
   EHDSHdrLogicalModels:
     name: EHDS Discharge Report Domain Logical Models
-    description: Information Models for implementing EEHRxF Discharge report under EHDS. Format based on ISO 13972 "Health informatics — Clinical information models — Characteristics, structures and requirements."
+    description: Information models for implementing EEHRxF Discharge report under EHDS. Format based on ISO 13972 "Health informatics — Clinical information models — Characteristics, structures and requirements."
     resources:
-
       - StructureDefinition/EHDSDischargeReport
+  
+  EHDSCommonLogicalModels:
+    name: EHDS Common Logical Models
+    description: Information models shared across different priority categories. Additional requirements may be provided below in the Obligations section.
+    resources:
+      - StructureDefinition/EHDSMedication
+      - StructureDefinition/EHDSMedicationUse
+      - StructureDefinition/EHDSMedicationAdministration
+      - StructureDefinition/EHDSDosage
+      - StructureDefinition/EHDSObservation
+      - StructureDefinition/EHDSProcedure
+      - StructureDefinition/EHDSImmunisation
+      - StructureDefinition/EHDSAllergyIntolerance
+      - StructureDefinition/EHDSPatient
+      - StructureDefinition/EHDSHealthProfessional
+      - StructureDefinition/EHDSOrganisation
+      - StructureDefinition/EHDSDevice
+      - StructureDefinition/EHDSDeviceUse
+      - StructureDefinition/EHDSRelatedPerson
+      - StructureDefinition/EHDSAlert
+      - StructureDefinition/EHDSAdvanceDirective
+      - StructureDefinition/EHDSCondition
+      - StructureDefinition/EHDSCurrentPregnancy
+      - StructureDefinition/EHDSAddress
+      - StructureDefinition/EHDSHumanName
+      - StructureDefinition/EHDSTelecom
+      - StructureDefinition/EHDSEndpoint
+      - StructureDefinition/EHDSBodyStructure
+      - StructureDefinition/EHDSAdministeredDosage
+      - StructureDefinition/EHDSAttachment
+      - StructureDefinition/EHDSCarePlan
+      - StructureDefinition/EHDSEncounter
+      - StructureDefinition/EHDSLocation
+      - StructureDefinition/EHDSServiceRequest
+      - StructureDefinition/EHDSTravelHistory
+      - StructureDefinition/EHDSSpecimen
+      - StructureDefinition/EHDSDataSet
+      - StructureDefinition/EHDSDocument
+
 
   EHDSObligations:
     name: EHDS Obligations
-    description: Information models derived from EHDS information models including obligations for data elements.
+    description: Information models derived from EHDS information models including obligations for data elements. These obligations are default obligations across use cases.
     resources:
       - StructureDefinition/EHDSMedicationObligations
       - StructureDefinition/EHDSMedicationPrescriptionObligations
@@ -259,6 +297,28 @@ groups:
       - StructureDefinition/EHDSAlertObligations
       - StructureDefinition/EHDSAdvanceDirectiveObligations
       - StructureDefinition/EHDSConditionObligations
+      - StructureDefinition/EHDSCurrentPregnancyObligations
+
+  EHDSLaboratoryObligations:
+    name: EHDS Laboratory Domain Obligations
+    description: Information models derived from EHDS information models including obligations for data elements. These obligations apply to laboratory domain use cases.
+    resources:
+      - StructureDefinition/EHDSBodyStructureLaboratoryObligations
+      - StructureDefinition/EHDSConditionLaboratoryObligations
+      - StructureDefinition/EHDSDeviceLaboratoryObligations
+      - StructureDefinition/EHDSHealthProfessionalLaboratoryObligations
+      - StructureDefinition/EHDSImmunisationLaboratoryObligations
+      - StructureDefinition/EHDSLaboratoryReportObligations
+      - StructureDefinition/EHDSMedicationLaboratoryObligations
+      - StructureDefinition/EHDSMedicationAdministrationLaboratoryObligations
+      - StructureDefinition/EHDSMedicationUseLaboratoryObligations
+      - StructureDefinition/EHDSOrganisationLaboratoryObligations
+      - StructureDefinition/EHDSPatientLaboratoryObligations
+      - StructureDefinition/EHDSProcedureLaboratoryObligations
+      - StructureDefinition/EHDSRelatedPersonLaboratoryObligations
+      - StructureDefinition/EHDSServiceRequestLaboratoryObligations
+      - StructureDefinition/EHDSSpecimenLaboratoryObligations
+
 
 #
 #
