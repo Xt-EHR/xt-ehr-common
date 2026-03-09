@@ -30,6 +30,9 @@ Description: """Model for observation performed by laboratory"""
 * type
   * ^binding.description = "LOINC, NPU"
   * ^binding.strength = #preferred
+* component.type
+  * ^binding.description = "LOINC, NPU"
+  * ^binding.strength = #preferred
 * triggeredBy[x] 0..* EHDSLaboratoryObservation or EHDSObservation "References to the observation(s) that triggered the performance of this observation."
 * testKit 0..1 EHDSDevice "Laboratory test kit used during measurement."
 * calibrator 0..1 Identifier "Information about which end-user calibrator the laboratory used for the measurement to indicate the metrological traceability chain."
