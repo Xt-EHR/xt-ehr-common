@@ -15,4 +15,5 @@ Description: "Obligations for the logical model of related person in the scope o
   * insert OblConsumer(#SHALL:display)
 
 * telecom
-  * insert OblProducerDoc(#SHOULD:able-to-populate, "EHR systems SHOULD populate contact information of the  related person.")
+//  * insert OblProducerDoc(#SHOULD:able-to-populate, "EHR systems SHOULD populate contact information of the  related person.")
+  * insert OblProducer(#SHOULD:able-to-populate)
