@@ -1,5 +1,5 @@
 Profile: EHDSDeviceLaboratoryObligations
-Parent: EHDSDevice
+Parent: EHDSDeviceObligations
 Title: "Device laboratory specific obligations"
 Description: "Obligations for the logical model of device in the scope of laboratory use case"
 * instanceIdentifier

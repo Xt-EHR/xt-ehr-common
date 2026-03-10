@@ -1,5 +1,5 @@
 Profile: EHDSPatientLaboratoryObligations
-Parent: EHDSPatient
+Parent: EHDSPatientObligations
 Title: "Patient laboratory specific obligations"
 Description: "Obligations for the logical model of patient in the scope of laboratory use case"
 * identifier

@@ -1,5 +1,5 @@
 Profile: EHDSMedicationAdministrationLaboratoryObligations
-Parent: EHDSMedicationAdministration
+Parent: EHDSMedicationAdministrationObligations
 Title: "Medication Administration laboratory specific obligations"
 Description: "Obligations for the logical model of medication administration in the scope of laboratory use case"
 

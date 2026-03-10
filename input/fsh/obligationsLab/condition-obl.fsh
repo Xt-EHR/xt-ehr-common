@@ -1,5 +1,5 @@
 Profile: EHDSConditionLaboratoryObligations
-Parent: EHDSCondition
+Parent: EHDSConditionObligations
 Title: "Condition laboratory specific obligations"
 Description: "Obligations for the logical model of condition in the scope of laboratory use case"
 * header

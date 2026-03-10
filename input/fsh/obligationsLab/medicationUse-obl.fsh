@@ -1,5 +1,5 @@
 Profile: EHDSMedicationUseLaboratoryObligations
-Parent: EHDSMedicationUse
+Parent: EHDSMedicationUseObligations
 Title: "Medication Use laboratory specific obligations"
 Description: "Obligations for the logical model of medication use in the scope of laboratory use case"
 

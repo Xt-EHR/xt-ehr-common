@@ -1,5 +1,5 @@
 Profile: EHDSObservationObligations
-Parent: EHDSObservation
+Parent: EHDSObservationObligations
 Title: "Observation Obligations"
 Description: "Obligations for the logical model of general observation"
 * header

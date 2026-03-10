@@ -1,5 +1,5 @@
 Profile: EHDSOrganisationLaboratoryObligations
-Parent: EHDSOrganisation
+Parent: EHDSOrganisationObligations
 Title: "Organisation laboratory specific obligations"
 Description: "Obligations for the logical model of organisation in the scope of laboratory use case"
 * identifier

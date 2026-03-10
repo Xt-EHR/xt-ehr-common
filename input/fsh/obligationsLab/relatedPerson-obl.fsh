@@ -1,5 +1,5 @@
 Profile: EHDSRelatedPersonLaboratoryObligations
-Parent: EHDSRelatedPerson
+Parent: EHDSRelatedPersonObligations
 Title: "Related person laboratory specific obligations"
 Description: "Obligations for the logical model of related person in the scope of laboratory use case"
 

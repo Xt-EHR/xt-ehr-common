@@ -1,5 +1,5 @@
 Profile: EHDSImmunisationLaboratoryObligations
-Parent: EHDSImmunisation
+Parent: EHDSImmunisationObligations
 Title: "Immunisation laboratory specific obligations"
 Description: "Obligations for the logical model of immunisation in the scope of laboratory use case"
 

@@ -1,5 +1,5 @@
 Profile: EHDSProcedureLaboratoryObligations
-Parent: EHDSProcedure
+Parent: EHDSProcedureObligations
 Title: "Procedure laboratory specific obligations"
 Description: "Obligations for the logical model of procedure in the scope of laboratory use case"
 

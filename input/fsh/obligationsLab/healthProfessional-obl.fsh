@@ -1,5 +1,5 @@
 Profile: EHDSHealthProfessionalLaboratoryObligations
-Parent: EHDSHealthProfessional
+Parent: EHDSHealthProfessionalObligations
 Title: "Health professional laboratory specific obligations"
 Description: "Obligations for the logical model of health professional in the scope of laboratory use case"
 * identifier
