@@ -93,12 +93,12 @@ Description: "Obligations for the logical model for medication prescription body
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
 * prescriptionItem.substitution.allowed[x]
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A prescribing system shall, if supporting substitution, at least using a boolean value, be able to indicate whether substitution is allowed or not for a prescription item."""
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:process
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A prescribing system shall, when supporting substitution, be able to indicate whether substitution is allowed or not for a prescription item at least using a boolean value."""
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall, if supporting substitution, shall process, at least as a boolean value, the substitution indication for a prescription item."""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall, when supporting substitution, shall process, at least as a boolean value, the substitution indication for a prescription item."""
 
 // * prescriptionItem.substitution.allowedBoolean
 //   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
