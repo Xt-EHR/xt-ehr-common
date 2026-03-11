@@ -43,7 +43,7 @@ Description: "Obligations for the logical model for medication prescription body
 * presentedForm // 	rendered form of the (sufficientLY?) complete prescription
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHOULD be able to provide a rendered, human-readable version of the prescription,"""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHOULD be able to provide a rendered, human-readable version of the prescription."""
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:display
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
@@ -95,7 +95,7 @@ Description: "Obligations for the logical model for medication prescription body
   * substitution.allowed[x]
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL support at least using the boolean data type."""
+    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL support at least the boolean data type."""
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
     * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL support at least the boolean data type."""
