@@ -8,22 +8,22 @@ Description: "Obligations for the logical model for medication prescription body
 * header.identifier // prescription identifier
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers shall match prescriptionItem.identifier."""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers SHALL match prescriptionItem.identifier."""
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall use this prescription identifier for reference in the dispense record."""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL use this prescription identifier for reference in the dispense record."""
 
 * header.subject // patient for which the medication(s) is/are prescribed
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall process the patient information for identification purposes."""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL process the patient information for identification purposes."""
 
 * header.author[x] // prescriber
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "Systems shall support at least EHDSHealthProfessional data type for the element."
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least EHDSHealthProfessional data type for the element."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
@@ -38,12 +38,12 @@ Description: "Obligations for the logical model for medication prescription body
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall process the prescription status together with other information to determine dispensability."""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL process the prescription status together with other information to determine dispensability."""
 
 * presentedForm // 	rendered form of the (sufficientLY?) complete prescription
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A system making prescriptions available should be able to provide a rendered, human-readable version of the prescription,"""
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHOULD be able to provide a rendered, human-readable version of the prescription,"""
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:display
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
 
@@ -56,10 +56,10 @@ Description: "Obligations for the logical model for medication prescription body
   * identifier // prescription item identifier
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers shall match .identifier."""
+    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """For a single-item prescription these identifiers SHALL match .identifier."""
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall use this prescription identifier for reference in the dispense record."""
+    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL use this prescription identifier for reference in the dispense record."""
 
   * medication // 	medication prescribed
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -72,7 +72,7 @@ Description: "Obligations for the logical model for medication prescription body
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall process the prescription status together with other information to determine dispensability."""
+    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL process the prescription status together with other information to determine dispensability."""
 
   * dosageInstructions 
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -95,20 +95,20 @@ Description: "Obligations for the logical model for medication prescription body
   * substitution.allowed[x]
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A prescribing system shall, when supporting substitution, be able to indicate whether substitution is allowed or not for a prescription item at least using a boolean value."""
+    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL support at least using the boolean data type."""
     * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall, when supporting substitution, shall process, at least as a boolean value, the substitution indication for a prescription item."""
+    * ^extension[$obligation][=].extension[documentation].valueMarkdown = """System SHALL support at least the boolean data type."""
 
 // see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/sdf-1.3A.20Element.20paths.20must.20be.20unique.20unless.20the.20structure.20is
 // slicing not possible in derived/specialised logical models
     // * allowedBoolean
     //   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
     //   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-    //   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A prescribing system shall, if supporting substitution, be able to indicate whether substitution is allowed or not for a prescription item."""
+    //   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A prescribing system SHALL, if supporting substitution, be able to indicate whether substitution is allowed or not for a prescription item."""
     //   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:process
     //   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-consumer
-    //   * ^extension[$obligation][=].extension[documentation].valueMarkdown = """A dispensing system shall, if supporting substitution, shall process the substitution indication for a prescription item."""
+    //   * ^extension[$obligation][=].extension.valueMarkdown = """A dispensing system SHALL, if supporting substitution, SHALL process the substitution indication for a prescription item."""
 
   * validityPeriod
     * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate

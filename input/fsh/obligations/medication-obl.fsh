@@ -24,7 +24,7 @@ Description: "Obligations for the logical model for medication."
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * item.ingredient.substance
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * item.ingredient.strengthInfo
