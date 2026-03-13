@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSPregnancyHistory","EHDSPregnancyHistory","","","",0,*,"","","","null {[]} {[]}
+","Pregnancy history model","Pregnancy history for one pregnancy","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSPregnancyHistory.header","EHDSPregnancyHistory.header","","","",1,1,"","","","Base {[]} {[]}
+","Common header for all patient-related data","Common header for all patient-related data","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header",1,1,"",""
+"EHDSPregnancyHistory.header.subject","EHDSPregnancyHistory.header.subject","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient/subject information","Patient/subject information","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.subject",1,1,"",""
+"EHDSPregnancyHistory.header.identifier","EHDSPregnancyHistory.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business identifier for the object","Business identifier for the object","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.identifier",0,*,"",""
+"EHDSPregnancyHistory.header.authorship","EHDSPregnancyHistory.header.authorship","","","",1,*,"","","","Base {[]} {[]}
+","Resource authoring details","Resource authoring details","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship",1,*,"",""
+"EHDSPregnancyHistory.header.authorship.author[x]","EHDSPregnancyHistory.header.authorship.author[x]","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","Author(s) by whom the resource was/were authored. Multiple authors could be provided.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.author[x]",1,1,"",""
+"EHDSPregnancyHistory.header.authorship.datetime","EHDSPregnancyHistory.header.authorship.datetime","","","",1,1,"","","","dateTime {[]} {[]}
+","Date and time of authoring/issuing","Date and time of authoring/issuing","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.authorship.datetime",1,1,"",""
+"EHDSPregnancyHistory.header.lastUpdate","EHDSPregnancyHistory.header.lastUpdate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time of the last update to the resource (may be used for technical corrections).","Date and time of the last update to the resource (may be used for technical corrections).","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.lastUpdate",0,1,"",""
+"EHDSPregnancyHistory.header.status","EHDSPregnancyHistory.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Status of the resource or document","Status of the resource or document","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.status",1,1,"",""
+"EHDSPregnancyHistory.header.statusReason[x]","EHDSPregnancyHistory.header.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Reason for the current status of the resource.","Reason for the current status of the resource.","","","","","","","","","",,,,,"",,,,"EHDSDataSet.header.statusReason[x]",0,1,"",""
+"EHDSPregnancyHistory.header.language","EHDSPregnancyHistory.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Language in which the resource is written. Language is expressed by the IETF language tag.","Language in which the resource is written. Language is expressed by the IETF language tag.","","","","","","","","","",,"preferred","BCP 47","","",,,,"EHDSDataSet.header.language",0,1,"",""
+"EHDSPregnancyHistory.narrative","EHDSPregnancyHistory.narrative","","","",0,1,"","","","string {[]} {[]}
+","Narrative, potentially formatted, content of the section","Narrative description describing the outcome of any previous pregnancies.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSPregnancyHistory.narrative",0,1,"",""
+"EHDSPregnancyHistory.outcomeDate","EHDSPregnancyHistory.outcomeDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Outcome date","Date referred to the previous pregnancies outcome.","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSPregnancyHistory.outcomeDate",0,1,"",""
+"EHDSPregnancyHistory.outcome","EHDSPregnancyHistory.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Outcome","Outcome of the previous pregnancy.","","eHN PS Guideline, ISO IPS","","","","","","","",,"preferred","1.3.6.1.4.1.12559.11.10.1.3.1.42.62 eHDSIOutcomeOfPregnancy (SNOMED CT, used in MH@EU); 1.3.6.1.4.1.12559.11.10.1.3.1.42.63 eHDSIRareDisease (OrphaCodes, used in MH@EU); ICD-11; SNOMED CT","","",,,,"EHDSPregnancyHistory.outcome",0,1,"",""
+"EHDSPregnancyHistory.numberOfChildren","EHDSPregnancyHistory.numberOfChildren","","","",0,1,"","","","integer {[]} {[]}
+","Number of children/fetuses in this specific pregnancy","Number of children/fetuses in this specific pregnancy","","eHN PS Guideline, ISO IPS","","","","","","","",,,,,"",,,,"EHDSPregnancyHistory.numberOfChildren",0,1,"",""

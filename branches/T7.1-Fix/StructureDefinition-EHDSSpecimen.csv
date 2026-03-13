@@ -1,0 +1,43 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSSpecimen","EHDSSpecimen","","","",0,*,"","","","null {[]} {[]}
+","Specimen model","Model for a specimen to be used for analysis","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSSpecimen.identifier","EHDSSpecimen.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by ordering system, identifier assigned by laboratory etc. Multiple identifiers can be used.","An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by ordering system, identifier assigned by laboratory etc. Multiple identifiers can be used.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.identifier",1,*,"",""
+"EHDSSpecimen.status","EHDSSpecimen.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Availability of the specimen.","Availability of the specimen.","","","","","","","","","",,"preferred","HL7 specimen-status","","",,,,"EHDSSpecimen.status",0,1,"",""
+"EHDSSpecimen.type","EHDSSpecimen.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","The kind of material that forms the Specimen.","The kind of material that forms the Specimen.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSpecimen.type",0,1,"",""
+"EHDSSpecimen.specimenSource[x]","EHDSSpecimen.specimenSource[x]","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLocation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}","Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a device. Additional types of specimen may be allowed in implementations.","Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a device. Additional types of specimen may be allowed in implementations.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.specimenSource[x]",0,1,"",""
+"EHDSSpecimen.parentSpecimen","EHDSSpecimen.parentSpecimen","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen {[]} {[]}
+","Specimen from which this specimen originated","Specimen from which this specimen originated","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.parentSpecimen",0,*,"",""
+"EHDSSpecimen.request","EHDSSpecimen.request","","","",0,*,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest {[]} {[]}
+","Why the specimen ws collected","Why the specimen ws collected","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.request",0,*,"",""
+"EHDSSpecimen.combined","EHDSSpecimen.combined","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","This element signifies if the specimen is part of a group or pooled.","This element signifies if the specimen is part of a group or pooled.","","","","","","","","","",,"preferred","HL7 specimen-combined","","",,,,"EHDSSpecimen.combined",0,1,"",""
+"EHDSSpecimen.collection","EHDSSpecimen.collection","","","",0,1,"","","","Base {[]} {[]}
+","Collection details","Collection details","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collection",0,1,"",""
+"EHDSSpecimen.collection.performer[x]","EHDSSpecimen.collection.performer[x]","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional {[]} {[]}
+http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient {[]} {[]}http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson {[]} {[]}","Person or organisation who collected the specimen","Person or organisation who collected the specimen","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collection.performer[x]",0,1,"",""
+"EHDSSpecimen.collection.collected[x]","EHDSSpecimen.collection.collected[x]","","","",1,1,"","","","Period {[]} {[]}
+dateTime {[]} {[]}","The period or date and time of specimen collection.","The period or date and time of specimen collection.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collection.collected[x]",1,1,"",""
+"EHDSSpecimen.collection.quantity","EHDSSpecimen.collection.quantity","","","",0,1,"","","","Quantity {[]} {[]}
+","The quantity of specimen collected","The quantity of specimen collected","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collection.quantity",0,1,"",""
+"EHDSSpecimen.collection.method","EHDSSpecimen.collection.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","If relevant for the results, the method of obtaining the specimen.","If relevant for the results, the method of obtaining the specimen.","","","","","","","","","",,"preferred","SNOMED CT","","",,,,"EHDSSpecimen.collection.method",0,1,"",""
+"EHDSSpecimen.collection.device","EHDSSpecimen.collection.device","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}
+","Device used to perform specimen collection","Device used to perform specimen collection","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collection.device",0,1,"",""
+"EHDSSpecimen.collection.bodySite","EHDSSpecimen.collection.bodySite","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Anatomic location (e.g. body location, laterality and other details) where the material is collected, e.g. Elbow, left","Anatomic location (e.g. body location, laterality and other details) where the material is collected, e.g. Elbow, left","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.collection.bodySite",0,1,"",""
+"EHDSSpecimen.receivedDate","EHDSSpecimen.receivedDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date and time when specimen is received by the testing laboratory.","Date and time when specimen is received by the testing laboratory.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.receivedDate",0,1,"",""
+"EHDSSpecimen.container","EHDSSpecimen.container","","","",0,*,"","","","Base {[]} {[]}
+","The container holding the specimen.","The container holding the specimen.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.container",0,*,"",""
+"EHDSSpecimen.container.specimenQuantity","EHDSSpecimen.container.specimenQuantity","","","",0,1,"","","","Quantity {[]} {[]}
+","Quantity of specimen within container","Quantity of specimen within container","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.container.specimenQuantity",0,1,"",""
+"EHDSSpecimen.container.containerDevice","EHDSSpecimen.container.containerDevice","","","",1,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice {[]} {[]}
+","The device resource for the the container holding the specimen.","The device resource for the the container holding the specimen.","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.container.containerDevice",1,1,"",""
+"EHDSSpecimen.condition","EHDSSpecimen.condition","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","State of the specimen. State of the speeimen should be alligned with dataAbsentReason element of the Observatiom model.","State of the specimen. State of the speeimen should be alligned with dataAbsentReason element of the Observatiom model.","","","","","","","","","",,"preferred","HL7 specimenCondition","","",,,,"EHDSSpecimen.condition",0,*,"",""
+"EHDSSpecimen.note","EHDSSpecimen.note","","","",0,1,"","","","string {[]} {[]}
+","To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).","To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).","","","","","","","","","",,,,,"",,,,"EHDSSpecimen.note",0,1,"",""
