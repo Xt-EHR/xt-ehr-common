@@ -1,4 +1,4 @@
-Logical: EHDSMedicationDispenseObligations
+Profile: EHDSMedicationDispenseObligations
 Parent: EHDSMedicationDispense
 Title: "Medication dispense model obligations"
 Description: "Obligations for the logical model for medication dispense for dispensing/pharmacy systems (producer) and prescribing systems or prescription repositories(consumer)."

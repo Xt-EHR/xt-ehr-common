@@ -1,5 +1,5 @@
 // EHDS<System><Model>Obligations
-Logical: EHDSMedicationPrescriptionObligations
+Profile: EHDSMedicationPrescriptionObligations
 Parent: EHDSMedicationPrescription
 Title: "Medication prescription model obligations"
 Description: "Obligations for the logical model for medication prescription body for prescribing systems (producer) and dispensing systems (consumer)."
