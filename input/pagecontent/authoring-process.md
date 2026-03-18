@@ -46,7 +46,7 @@ Artifacts are organised in the sushi-config.yaml file. Logical models and obliga
 
 Default data types to use in FHIR logical models are FHIR data types. While these data types are physically constrained and dependent on a FHIR release, in the logical models they are used with a representative intent and do not impose constraints on the physical format. For example, dateTime implies a specific format in FHIR resources, but in a logical model it is understood that these constraints may not apply in all cases, and some dateTime elements could have a different physical format. In other words, logical models do not, by default, impose any physical constraints.
 
-Please see the list of allowed data types on the [Data types and references page](dataypes.html).
+Please see the list of allowed data types on the [Data types and references page](datatypes.html).
 
 ### Obligations
 
