@@ -11,7 +11,7 @@ Description: "Obligations for the logical model of imaging study."
     * insert OblConsumer(#SHOULD:process)
   * identifier
     * insert OblProducer(#SHALL:able-to-populate)
-    * insert OblConsumer(#SHOUlD:process)
+    * insert OblConsumer(#SHOULD:process)
   * author[x]
     * insert OblProducer(#SHALL:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
