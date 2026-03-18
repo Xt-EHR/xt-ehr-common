@@ -1,4 +1,4 @@
-Logical: EHDSPatientSummaryObligations
+Profile: EHDSPatientSummaryObligations
 Parent: EHDSPatientSummary
 Title: "Patient summary obligations"
 Description: "Obligations for the logical model for patient summary."
