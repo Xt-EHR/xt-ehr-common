@@ -4,18 +4,18 @@ Parent: EHDSDocument
 Description: """Imaging report reflects the observations and interpretations of one or more imaging studies, contains elements such as the reason why the study is requested, relevant contextual medical information, the modality used to acquire images and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice."""
 
 * header ^short = "Imaging report header"
-  * status 
+  * status
     * ^short = "Status of the report"
     * ^definition = "Status of the report"
-  * author[x] 
+  * author[x]
     * ^short = "The author of the report."
     * ^definition = "The author of the report."
   * attestation.attester[x]
     * ^short = "Attester who validated the document"
-  * documentType 
+  * documentType
     * ^short = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
     * ^definition = "Type of document (e.g. 18748-4 Diagnostic imaging study)"
-  * eventType 
+  * eventType
     * ^short = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
     * ^definition = "Categorisation of the event covered by the document (e.g. imaging study types, body regions, modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes."
   * accessionNumber 0..* Identifier "Accession number - an identifier, managed by the RIS at the local level, which usually uniquely identifies an imaging procedure request, and links it to imaging study(ies) and related imaging report(s)."
