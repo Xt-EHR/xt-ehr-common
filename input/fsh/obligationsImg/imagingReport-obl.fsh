@@ -50,18 +50,18 @@ Description: "Obligations for the logical model of imaging report."
   * eventType
     * insert OblProducer(#SHOULD:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
+  * accessionNumber
+    * insert OblProducer(#SHALL:able-to-populate)
+    * insert OblConsumer(#SHOULD:process)
   * serviceSpecialty
     //* insert OblProducer(#SHALL:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
   * custodian
     * insert OblProducer(#SHOULD:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
-  * accessionNumber
-    * insert OblProducer(#SHALL:able-to-populate)
-    * insert OblConsumer(#SHALL:process)
   * intendedRecipient[x]
     * insert OblProducer(#SHOULD:able-to-populate)
-    * insert OblConsumer(#SHOULD:process)
+    //* insert OblConsumer(#SHOULD:process)
 * presentedForm
   * insert OblProducer(#SHOULD:able-to-populate)
   * insert OblConsumer(#SHOULD:process)
@@ -89,6 +89,24 @@ Description: "Obligations for the logical model of imaging report."
   * supportingInformation
     * insert OblProducer(#SHOULD:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
+    * observation
+      * insert OblProducer(#SHOULD:able-to-populate)
+      //* insert OblConsumer(#SHALL:display)
+    * condition
+      * insert OblProducer(#SHOULD:able-to-populate)
+      //* insert OblConsumer(#SHALL:display)
+    * priorMedicationAdministration
+      * insert OblProducer(#SHOULD:able-to-populate)
+      //* insert OblConsumer(#SHALL:display)
+    * sexForClinicalUse
+      * insert OblProducer(#SHOULD:able-to-populate)
+      //* insert OblConsumer(#SHALL:display)
+    * device
+      * insert OblProducer(#SHOULD:able-to-populate)
+      //* insert OblConsumer(#SHALL:display)
+    * pregnancyStatus
+      * insert OblProducer(#SHOULD:able-to-populate)
+      //* insert OblConsumer(#SHOULD:display)
   * specimen
     * insert OblProducer(#SHOULD:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
