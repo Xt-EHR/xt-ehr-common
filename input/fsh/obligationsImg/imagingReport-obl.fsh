@@ -50,14 +50,14 @@ Description: "Obligations for the logical model of imaging report."
   * eventType
     * insert OblProducer(#SHOULD:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
-  * accessionNumber
-    * insert OblProducer(#SHALL:able-to-populate)
-    * insert OblConsumer(#SHOULD:process)
   * serviceSpecialty
     //* insert OblProducer(#SHALL:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
   * custodian
     * insert OblProducer(#SHOULD:able-to-populate)
+    * insert OblConsumer(#SHOULD:process)
+  * accessionNumber
+    * insert OblProducer(#SHALL:able-to-populate)
     * insert OblConsumer(#SHOULD:process)
   * intendedRecipient[x]
     * insert OblProducer(#SHOULD:able-to-populate)
