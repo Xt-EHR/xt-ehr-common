@@ -10,7 +10,7 @@ Description: """Model for body structure"""
 * location 0..1 CodeableConcept "Body site"
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
-* locationQualifier 0..* CodeableConcept "Additional qualifier of the body structure (e.g. upper, lower, left side)."
+* locationQualifier 0..* CodeableConcept "Additional qualifier of the body structure (e.g. upper, lower, distal, proximal)."
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * laterality 0..1 CodeableConcept "Body structure laterality (e.g. left, right)."
