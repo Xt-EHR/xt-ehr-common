@@ -8,59 +8,63 @@ The following examples represent relatively simple dosage patterns, which are co
 |-|---|---|---|---|---|
 |renderedDosageInstruction|"1 tablet 3 times a day. 7 days"|"15-20ml, 8AM and 8PM. 8.-15.12.2025"|"2 tbl in every 3 days. Additional comment: standing on left foot."|"50mg/h for 20min. Monday. Route: introvenous."|"0,5 tbl as needed. Before breakfast."|
 |dosageDetails||||||
-|_patientInstruction|||"standing on left foot"|||
-|_doseAndRate||||||
-|_doseAndRate.dose[x]||||||
-|_doseAndRate.doseQuantity|1 tablet(s)||2 tablet(s)||0.5 tablet(s)|
-|_doseAndRate.doseRange||15 ml - 20 ml||||
-|_doseAndRate.rate[x]||||||
-|_doseAndRate.rateQuantity||||50 mg/h||
-|_doseAndRate.rateRatio||||||
-|_repeat||||||
-|_repeat.bounds[x]||||||
-|_repeat.boundsQuantity|7 day(s)|||||
-|_repeat.boundsPeriod||8.12.2025 - 15.12.2025||||
-|_repeat.duration||||20 min||
-|_repeat.frequency||||||
-|_repeat.frequency.numberOfTimes|3||1|||
-|_repeat.frequency.period|1 day(s)||3 day(s)|||
-|_repeat.dayOfWeek||||Monday||
-|_repeat.timeOfDay||8:00, 20:00||||
-|_repeat.eventTime|||||before breakfast|
-|_asNeeded|||||TRUE|
-|_bodySite||||||
-|_routeOfAdministration||||intravenous||
+|.patientInstruction|||"standing on left foot"|||
+|.doseAndRate||||||
+|.doseAndRate.dose[x]||||||
+|.doseAndRate.doseQuantity|1 tablet(s)||2 tablet(s)||0.5 tablet(s)|
+|.doseAndRate.doseRange||15 ml - 20 ml||||
+|.doseAndRate.rate[x]||||||
+|.doseAndRate.rateQuantity||||50 mg/h||
+|.doseAndRate.rateRatio||||||
+|.repeat||||||
+|.repeat.bounds[x]||||||
+|.repeat.boundsQuantity|7 day(s)|||||
+|.repeat.boundsPeriod||8.12.2025 - 15.12.2025||||
+|.repeat.duration||||20 min||
+|.repeat.frequency||||||
+|.repeat.frequency.numberOfTimes|3||1|||
+|.repeat.frequency.period|1 day(s)||3 day(s)|||
+|.repeat.dayOfWeek||||Monday||
+|.repeat.timeOfDay||8:00, 20:00||||
+|.repeat.eventTime|||||before breakfast|
+|.asNeeded|||||TRUE|
+|.bodySite||||||
+|.routeOfAdministration||||intravenous||
 {:.table-bordered .table-striped .thead-light}
 
 ##### Alternating dosage example
 
-The following example repeats dosageDetails block. Rendered dosage information includes both regimens. In this case, both regimens are happening in parallel.
+The following example repeats dosageDetails block. Rendered dosage information includes both regimens, and should include all elements from the structured information. In this case, both regimens are happening in parallel, so they share the sequence number.
 
-|Element|Values. Multiple dosageDetails are separated by "//"|
-|-|-|
-|renderedDosageInstruction|* 1 drop; in the morning. Site: left eye. 7 days. * 2 drops; in the evening. Site: left eye. 7 days.|
-|dosageDetails||
-|_sequence|1 // 1|
-|_note||
-|_doseAndRate||
-|_doseAndRate.dose[x]||
-|_doseAndRate.doseQuantity|1 drop(s) // 2 drop(s)|
-|_doseAndRate.doseRange||
-|_doseAndRate.rate[x]||
-|_doseAndRate.rateQuantity||
-|_doseAndRate.rateRatio||
-|_repeat||
-|_repeat.bounds[x]||
-|_repeat.boundsQuantity|7 day(s) // 7 day(s)|
-|_repeat.boundsPeriod||
-|_repeat.duration||
-|_repeat.frequency||
-|_repeat.frequency.numberOfTimes|1 // 1|
-|_repeat.frequency.period|1 day(s) // 1 day(s)|
-|_repeat.dayOfWeek||
-|_repeat.timeOfDay||
-|_repeat.eventTime|morning // evening|
-|_asNeeded||
-|_bodySite|left eye // left eye|
-|_routeOfAdministration||
+|Element|Value|Comment|
+|-|-|-|
+|**renderedDosageInstruction**|1 drop in the morning, 2 drops in the evening. Site: left eye. 7 days.|This element overarches the dosageDetails in the following table|
+{:.table-bordered .table-striped .thead-light}
+
+|Element|dosageDetails 1|dosageDetails 2|
+|-|-|-|
+|dosageDetails|||
+|.sequence|1|1|
+|.note|||
+|.doseAndRate|||
+|.doseAndRate.dose[x]|||
+|.doseAndRate.doseQuantity|1 drop(s)|2 drop(s)|
+|.doseAndRate.doseRange|||
+|.doseAndRate.rate[x]|||
+|.doseAndRate.rateQuantity|||
+|.doseAndRate.rateRatio|||
+|.repeat|||
+|.repeat.bounds[x]|||
+|.repeat.boundsQuantity|7 day(s)|7 day(s)|
+|.repeat.boundsPeriod|||
+|.repeat.duration|||
+|.repeat.frequency|||
+|.repeat.frequency.numberOfTimes|1|1|
+|.repeat.frequency.period|1 day(s)|1 day(s)|
+|.repeat.dayOfWeek|||
+|.repeat.timeOfDay|||
+|.repeat.eventTime|morning|evening|
+|.asNeeded|||
+|.bodySite|left eye|left eye|
+|.routeOfAdministration|||
 {:.table-bordered .table-striped .thead-light}
