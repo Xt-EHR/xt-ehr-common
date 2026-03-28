@@ -5,7 +5,7 @@ Patient Summary could be divided into several basic parts: document header, body
 
 ##### Patient Summary
 <figure>
-  {% include PsReport_CIM.svg %}
+  {% include PatientSummary_CIM.svg %}
 </figure>
 
 
