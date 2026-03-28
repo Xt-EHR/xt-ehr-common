@@ -16,7 +16,7 @@ Patient Summary could be divided into several basic parts: document header, body
 
 ### FHIR Implementation Guide
 
-Patient Summary FHIR Implementation Guide is based on International Patient Summary FHIR IG.
+Patient Summary FHIR Implementation Guide aligns with International Patient Summary FHIR IG.
 
 The work for building the European specialisation of International Patient Summary is ongoing in a joint working group with HL7 Europe ([see details](https://confluence.hl7.org/spaces/HEU/pages/358255737/Implementation+Guides)).
 
