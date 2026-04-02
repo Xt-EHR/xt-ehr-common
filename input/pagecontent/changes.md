@@ -1,11 +1,17 @@
 This page summarizes the main changes applied to this version of the guide.
 
+### from 0.3.0 to 1.0.0
+
+* Obligations added to describe system requirements for supporting data elements. Obligations are provided in separate models, which are derivations of the logical models.  
+* Pages with background information about usage and maintenance added.  
+* Small refinements in a few models. No major changes.  
+
 ### from 0.2.1 to 0.3.0
 
 Based on the stakeholder feedback and additional internal reviews, following significant changes have been made in this version:
 
 * EHDSCoverage model removed as out of scope
-* EHDSDosage and EHDSDosaging models renamed respectively as * EHDSAdministeredDosage (for a factual dose administered) and EHDSDosage (for dosage instructions)
+* EHDSDosage and EHDSDosaging models renamed respectively as EHDSAdministeredDosage (for a factual dose administered) and EHDSDosage (for dosage instructions). The model for dosaging has been significantly reduced.
 * EHDSEpisodeOfCare model removed as out of scope
 * EHDSFamilyMemberHistory model removed as out of scope
 * EHDSFunctionalStatus model removed; respective sections in documents are modeled as a combination of EHDSCondition and EHDSObservation

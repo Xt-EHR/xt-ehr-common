@@ -21,11 +21,14 @@ Imaging result report could be divided into several parts: document header, body
 
 ### FHIR Implementation Guide
 
-HL7 Europe published FHIR IG: https://hl7.eu/fhir/imaging-r5/
-
+HL7 Europe and IHE-Europe has published the following FHIR IGs: 
+- [Imaging report R4](https://hl7.eu/fhir/imaging)  
+- [Imaging report R5](https://hl7.eu/fhir/imaging-r5/)
+- [Imaging manifest R5 - based on IHE MADO](https://hl7.eu/fhir/imaging-manifest-r5/)
 
 ### IHE Profile
-...
+- [IHE RAD](https://profiles.ihe.net/RAD/)
+- [IHE MADO](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MADO.pdf)
 
 ### Supporting information
 - [eHealth Network Guideline on Medical Imaging Studies and Reports](https://health.ec.europa.eu/document/download/0079ad26-8f8f-435b-9472-3cd8625f4220_en?filename=ehn_mi_guidelines_en.pdf)

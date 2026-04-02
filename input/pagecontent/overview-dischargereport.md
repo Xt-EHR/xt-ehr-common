@@ -14,7 +14,8 @@ Discharge report could be divided into several parts: document header, body and 
 
 ### FHIR Implementation Guide
 
-The work for building the European FHIR specification currently has a scope of Hospital Discharge Report ([see details](https://confluence.hl7.org/spaces/HEU/pages/358255737/Implementation+Guides)).
+FHIR Implementation Guide based on the models in this guide has been developed in a cross-project working group lead by HL7 Europe. Approved requirements are adopted by HL7 Europe Hospital Discharge Report FHIR IG:  
+- [R4 HDR FHIR IG](https://hl7.eu/fhir/hdr/)
 
 
 ### Supporting information
