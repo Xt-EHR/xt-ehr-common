@@ -1,0 +1,512 @@
+<!-- get modelType -->
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Substance use model - Definitions - EHDS Logical Information Models v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"14.45"}
+    h3,h4,h5,h6{--heading-prefix:"14.45"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="useCaseDispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Substance use model</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 4" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.2.1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSMedicationStatement-EHDSMedicationAdministration-changes'>https://github.com/Xt-EHR/xt-ehr-common/tree/EHDSMedicationStatement-EHDSMedicationAdministration-changes</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-EHDSSubstanceUse.html">Content</a>
+  </li>
+
+
+
+  <li class="active">
+    <a href="#">Detailed Descriptions</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSSubstanceUse-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSSubstanceUse.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSSubstanceUse.profile.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-EHDSSubstanceUse.profile.ttl.html">TTL</a>
+    </li>
+  
+
+
+</ul>
+
+
+<a name="root"> </a>
+<h2 id="root">Logical Model: EHDSSubstanceUse - Detailed Descriptions</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2026-02-05
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p>Definitions for the EHDSSubstanceUse logical model.</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div id="tabs">
+    <ul>
+      <li>
+        <a href="#tabs-key">Key Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-diff">Differential Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-snap">Snapshot Elements Table</a>
+      </li>
+    </ul>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <p>Guidance on how to interpret the contents of this table can be found<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#data-dictionaries">here</a></p><table class="dict" data-fhir="generated"><tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse">  </a><span style="color: grey">0</span><b>. EHDSSubstanceUse</b><a href="#key_EHDSSubstanceUse" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p>Statement about using a substance (such as tobacco, alcohol, drugs, etc).</p>
+<br/><div style="color:DarkGray;text-decoration:line-through"><p>Base definition for all types defined in FHIR type system.</p>
+</div></td></tr><tr><td style="white-space: nowrap">Short</td><td>Substance use model<span style="color:DarkGray;text-decoration:line-through">Base for all types and resources</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">false</span></td></tr><tr><td style="white-space: nowrap">Logical Model</td><td>Instances of this logical model are not marked to be the target of a Reference</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header">  </a><span style="color: grey">2</span><b>. EHDSSubstanceUse.header</b><a href="#key_EHDSSubstanceUse.header" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Basic metadata for this information</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Basic metadata for this information</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.subject">  </a><span style="color: grey">4</span><b>. EHDSSubstanceUse.header.subject</b><a href="#key_EHDSSubstanceUse.header.subject" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Patient/subject information</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Patient/subject information</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="StructureDefinition-EHDSPatient.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.identifier">  </a><span style="color: grey">6</span><b>. EHDSSubstanceUse.header.identifier</b><a href="#key_EHDSSubstanceUse.header.identifier" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).</td></tr><tr><td style="white-space: nowrap">Note</td><td>This is a business identifier, not a resource identifier (see <a href="http://hl7.org/fhir/R5/resource.html#identifiers">discussion</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Identifier">Identifier</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.author[x]">  </a><a name="key_EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">  </a><a name="key_EHDSSubstanceUse.header.author[x]:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">  </a><a name="key_EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">  </a><a name="key_EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation">  </a><a name="key_EHDSSubstanceUse.header.author[x]:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation">  </a><a name="key_EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation">  </a><a name="key_EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice">  </a><a name="key_EHDSSubstanceUse.header.author[x]:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice">  </a><a name="key_EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice">  </a><span style="color: grey">8</span><b>. EHDSSubstanceUse.header.author[x]</b><a href="#key_EHDSSubstanceUse.header.author[x]" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Author(s) responsible for the provided information. The exact role of the responsible author varies across use cases and is specific to individual models.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Author(s) responsible for the provided information.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td>Choice of: <a href="StructureDefinition-EHDSHealthProfessional.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional</a>, <a href="StructureDefinition-EHDSOrganisation.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation</a>, <a href="StructureDefinition-EHDSDevice.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice</a></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/R5/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.date">  </a><span style="color: grey">10</span><b>. EHDSSubstanceUse.header.date</b><a href="#key_EHDSSubstanceUse.header.date" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Date and optionally time of authoring/issuing</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Date and optionally time of authoring/issuing</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">dateTime</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.status">  </a><span style="color: grey">12</span><b>. EHDSSubstanceUse.header.status</b><a href="#key_EHDSSubstanceUse.header.status" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Status of the resource or document</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Status of the patient’s alcohol use.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">SNOMED CT</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.source">  </a><span style="color: grey">14</span><b>. EHDSSubstanceUse.header.source</b><a href="#key_EHDSSubstanceUse.header.source" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.header.language">  </a><span style="color: grey">16</span><b>. EHDSSubstanceUse.header.language</b><a href="#key_EHDSSubstanceUse.header.language" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Language in which the resource is written. Language is expressed by the IETF language tag.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Language in which the resource is written. Language is expressed by the IETF language tag.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">BCP 47</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.observationPeriod">  </a><span style="color: grey">18</span><b>. EHDSSubstanceUse.observationPeriod</b><a href="#key_EHDSSubstanceUse.observationPeriod" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Time period for which this observation about substance use is applicable</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period for which this observation about substance use is applicable</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Period">Period</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.frequencyAndQuantity">  </a><span style="color: grey">20</span><b>. EHDSSubstanceUse.frequencyAndQuantity</b><a href="#key_EHDSSubstanceUse.frequencyAndQuantity" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">The extent of the patient’s alcohol use in units of alcohol per time period.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>The extent of the patient’s alcohol use in units of alcohol per time period.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.frequencyAndQuantity.quantity">  </a><span style="color: grey">22</span><b>. EHDSSubstanceUse.frequencyAndQuantity.quantity</b><a href="#key_EHDSSubstanceUse.frequencyAndQuantity.quantity" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Quantity (volume per time unit).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Quantity (volume per time unit).</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Quantity">Quantity</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.frequencyAndQuantity.periodOfUse">  </a><span style="color: grey">24</span><b>. EHDSSubstanceUse.frequencyAndQuantity.periodOfUse</b><a href="#key_EHDSSubstanceUse.frequencyAndQuantity.periodOfUse" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Time period of substance use.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period of substance use.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Period">Period</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.substanceType">  </a><span style="color: grey">26</span><b>. EHDSSubstanceUse.substanceType</b><a href="#key_EHDSSubstanceUse.substanceType" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Type of substance</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Type of substance</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">SNOMED CT</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.routeOfAdministration">  </a><span style="color: grey">28</span><b>. EHDSSubstanceUse.routeOfAdministration</b><a href="#key_EHDSSubstanceUse.routeOfAdministration" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Route(s) of administration</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Route(s) of administration</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">EDQM</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_EHDSSubstanceUse.note">  </a><span style="color: grey">30</span><b>. EHDSSubstanceUse.note</b><a href="#key_EHDSSubstanceUse.note" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Textual comment.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Textual comment.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr>
+
+</table>
+    </div>
+    <a name="tabs-diff"> </a>
+    <div id="tabs-diff">
+      <p>Guidance on how to interpret the contents of this table can be found<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#data-dictionaries">here</a></p><table class="dict" data-fhir="generated"><tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse">  </a><span style="color: grey">0</span><b>. EHDSSubstanceUse</b><a href="#diff_EHDSSubstanceUse" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Statement about using a substance (such as tobacco, alcohol, drugs, etc).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Substance use model</td></tr><tr><td style="white-space: nowrap">Logical Model</td><td>Instances of this logical model are not marked to be the target of a Reference</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.header">  </a><span style="color: grey">2</span><b>. EHDSSubstanceUse.header</b><a href="#diff_EHDSSubstanceUse.header" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.header.status">  </a><span style="color: grey">4</span><b>. EHDSSubstanceUse.header.status</b><a href="#diff_EHDSSubstanceUse.header.status" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Short</td><td>Status of the patient’s alcohol use.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">SNOMED CT</p>
+</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.observationPeriod">  </a><span style="color: grey">6</span><b>. EHDSSubstanceUse.observationPeriod</b><a href="#diff_EHDSSubstanceUse.observationPeriod" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Time period for which this observation about substance use is applicable</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period for which this observation about substance use is applicable</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Period">Period</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.frequencyAndQuantity">  </a><span style="color: grey">8</span><b>. EHDSSubstanceUse.frequencyAndQuantity</b><a href="#diff_EHDSSubstanceUse.frequencyAndQuantity" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">The extent of the patient’s alcohol use in units of alcohol per time period.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>The extent of the patient’s alcohol use in units of alcohol per time period.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.frequencyAndQuantity.quantity">  </a><span style="color: grey">10</span><b>. EHDSSubstanceUse.frequencyAndQuantity.quantity</b><a href="#diff_EHDSSubstanceUse.frequencyAndQuantity.quantity" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Quantity (volume per time unit).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Quantity (volume per time unit).</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Quantity">Quantity</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.frequencyAndQuantity.periodOfUse">  </a><span style="color: grey">12</span><b>. EHDSSubstanceUse.frequencyAndQuantity.periodOfUse</b><a href="#diff_EHDSSubstanceUse.frequencyAndQuantity.periodOfUse" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Time period of substance use.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period of substance use.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Period">Period</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.substanceType">  </a><span style="color: grey">14</span><b>. EHDSSubstanceUse.substanceType</b><a href="#diff_EHDSSubstanceUse.substanceType" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Type of substance</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Type of substance</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">SNOMED CT</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.routeOfAdministration">  </a><span style="color: grey">16</span><b>. EHDSSubstanceUse.routeOfAdministration</b><a href="#diff_EHDSSubstanceUse.routeOfAdministration" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Route(s) of administration</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Route(s) of administration</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p style="font-size: 11px">EDQM</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_EHDSSubstanceUse.note">  </a><span style="color: grey">18</span><b>. EHDSSubstanceUse.note</b><a href="#diff_EHDSSubstanceUse.note" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Textual comment.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Textual comment.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr>
+
+</table>
+    </div>
+    <a name="tabs-snap"> </a>
+    <div id="tabs-snap">
+      <p>Guidance on how to interpret the contents of this table can be found<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#data-dictionaries">here</a></p><table class="dict" data-fhir="generated"><tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse">  </a><span style="color: grey">0</span><b>. EHDSSubstanceUse</b><a href="#EHDSSubstanceUse" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Statement about using a substance (such as tobacco, alcohol, drugs, etc).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Substance use model</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Logical Model</td><td>Instances of this logical model are not marked to be the target of a Reference</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header">  </a><span style="color: grey">2</span><b>. EHDSSubstanceUse.header</b><a href="#EHDSSubstanceUse.header" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Basic metadata for this information</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Basic metadata for this information</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.subject">  </a><span style="color: grey">4</span><b>. EHDSSubstanceUse.header.subject</b><a href="#EHDSSubstanceUse.header.subject" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Patient/subject information</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Patient/subject information</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="StructureDefinition-EHDSPatient.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.identifier">  </a><span style="color: grey">6</span><b>. EHDSSubstanceUse.header.identifier</b><a href="#EHDSSubstanceUse.header.identifier" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).</td></tr><tr><td style="white-space: nowrap">Note</td><td>This is a business identifier, not a resource identifier (see <a href="http://hl7.org/fhir/R5/resource.html#identifiers">discussion</a>)</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Identifier">Identifier</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.author[x]">  </a><a name="EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">  </a><a name="EHDSSubstanceUse.header.author[x]:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">  </a><a name="EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">  </a><a name="EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation">  </a><a name="EHDSSubstanceUse.header.author[x]:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation">  </a><a name="EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation">  </a><a name="EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice">  </a><a name="EHDSSubstanceUse.header.author[x]:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice">  </a><a name="EHDSSubstanceUse.header.authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice:authorHttp://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice">  </a><span style="color: grey">8</span><b>. EHDSSubstanceUse.header.author[x]</b><a href="#EHDSSubstanceUse.header.author[x]" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Author(s) responsible for the provided information. The exact role of the responsible author varies across use cases and is specific to individual models.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Author(s) responsible for the provided information.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td>Choice of: <a href="StructureDefinition-EHDSHealthProfessional.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional</a>, <a href="StructureDefinition-EHDSOrganisation.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation</a>, <a href="StructureDefinition-EHDSDevice.html">http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice</a></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/R5/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.date">  </a><span style="color: grey">10</span><b>. EHDSSubstanceUse.header.date</b><a href="#EHDSSubstanceUse.header.date" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Date and optionally time of authoring/issuing</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Date and optionally time of authoring/issuing</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">dateTime</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.status">  </a><span style="color: grey">12</span><b>. EHDSSubstanceUse.header.status</b><a href="#EHDSSubstanceUse.header.status" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Status of the resource or document</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Status of the patient’s alcohol use.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p>SNOMED CT</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.source">  </a><span style="color: grey">14</span><b>. EHDSSubstanceUse.header.source</b><a href="#EHDSSubstanceUse.header.source" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.header.language">  </a><span style="color: grey">16</span><b>. EHDSSubstanceUse.header.language</b><a href="#EHDSSubstanceUse.header.language" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Language in which the resource is written. Language is expressed by the IETF language tag.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Language in which the resource is written. Language is expressed by the IETF language tag.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p>BCP 47</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.observationPeriod">  </a><span style="color: grey">18</span><b>. EHDSSubstanceUse.observationPeriod</b><a href="#EHDSSubstanceUse.observationPeriod" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Time period for which this observation about substance use is applicable</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period for which this observation about substance use is applicable</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Period">Period</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.frequencyAndQuantity">  </a><span style="color: grey">20</span><b>. EHDSSubstanceUse.frequencyAndQuantity</b><a href="#EHDSSubstanceUse.frequencyAndQuantity" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">The extent of the patient’s alcohol use in units of alcohol per time period.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>The extent of the patient’s alcohol use in units of alcohol per time period.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.frequencyAndQuantity.quantity">  </a><span style="color: grey">22</span><b>. EHDSSubstanceUse.frequencyAndQuantity.quantity</b><a href="#EHDSSubstanceUse.frequencyAndQuantity.quantity" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Quantity (volume per time unit).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Quantity (volume per time unit).</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Quantity">Quantity</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.frequencyAndQuantity.periodOfUse">  </a><span style="color: grey">24</span><b>. EHDSSubstanceUse.frequencyAndQuantity.periodOfUse</b><a href="#EHDSSubstanceUse.frequencyAndQuantity.periodOfUse" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Time period of substance use.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Time period of substance use.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#Period">Period</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.substanceType">  </a><span style="color: grey">26</span><b>. EHDSSubstanceUse.substanceType</b><a href="#EHDSSubstanceUse.substanceType" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Type of substance</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Type of substance</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p>SNOMED CT</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.routeOfAdministration">  </a><span style="color: grey">28</span><b>. EHDSSubstanceUse.routeOfAdministration</b><a href="#EHDSSubstanceUse.routeOfAdministration" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Route(s) of administration</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Route(s) of administration</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/terminologies.html">Binding</a></td><td><p>EDQM</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="EHDSSubstanceUse.note">  </a><span style="color: grey">30</span><b>. EHDSSubstanceUse.note</b><a href="#EHDSSubstanceUse.note" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Textual comment.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Textual comment.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R5/elementdefinition.html#primitives">Primitive Value</a></td><td>This primitive element may be present, or absent, or replaced by an extension</td></tr>
+
+</table>
+    </div>
+  </div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  Package xtehr.eu.ehds.models#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 5, 2026 21:14+0000">2026-02-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

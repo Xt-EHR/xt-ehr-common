@@ -1,0 +1,87 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSDosaging","EHDSDosaging","","","",0,*,"","","","null {[]} {[]}
+","Dosaging model","Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSDosaging.sequence","EHDSDosaging.sequence","","","",0,1,"","","","integer {[]} {[]}
+","Order of the dosage instruction, in case one treatment consists of several dosaging schemes","Order of the dosage instruction, in case one treatment consists of several dosaging schemes","","","","","","","","","",,,,,"",,,,"EHDSDosaging.sequence",0,1,"",""
+"EHDSDosaging.text","EHDSDosaging.text","","","",0,1,"","","","string {[]} {[]}
+","Free text usage/dosage instructions when structured dosage information is not fully provided","Free text usage/dosage instructions when structured dosage information is not fully provided","","","","","","","","","",,,,,"",,,,"EHDSDosaging.text",0,1,"",""
+"EHDSDosaging.renderedDescription","EHDSDosaging.renderedDescription","","","",0,1,"","","","string {[]} {[]}
+","Text representation rendered from all dosaging data elements with a value","Text representation rendered from all dosaging data elements with a value","","","","","","","","","",,,,,"",,,,"EHDSDosaging.renderedDescription",0,1,"",""
+"EHDSDosaging.additionalInstruction","EHDSDosaging.additionalInstruction","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Coded instructions, e.g warnings to the patient, like 'may cause drowsiness' etc","Coded instructions, e.g warnings to the patient, like 'may cause drowsiness' etc","","","","","","","","","",,,,,"",,,,"EHDSDosaging.additionalInstruction",0,*,"",""
+"EHDSDosaging.patientInstruction","EHDSDosaging.patientInstruction","","","",0,1,"","","","string {[]} {[]}
+","Patient oriented instructions as free text","Patient oriented instructions as free text","","","","","","","","","",,,,,"",,,,"EHDSDosaging.patientInstruction",0,1,"",""
+"EHDSDosaging.doseAndRate","EHDSDosaging.doseAndRate","","","",0,*,"","","","Base {[]} {[]}
+","Amount of medication administered per one dose (= one timing)","Amount of medication administered per one dose (= one timing)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate",0,*,"",""
+"EHDSDosaging.doseAndRate.type","EHDSDosaging.doseAndRate.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","The kind of dose or rate specified (e.g calculated, ordered, etc).","The kind of dose or rate specified (e.g calculated, ordered, etc).","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate.type",0,1,"",""
+"EHDSDosaging.doseAndRate.dose[x]","EHDSDosaging.doseAndRate.dose[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Range {[]} {[]}","Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)","Amount of medication per one dose. (1 tablet, 2-3 tablets, 20ml)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate.dose[x]",0,1,"",""
+"EHDSDosaging.doseAndRate.rate[x]","EHDSDosaging.doseAndRate.rate[x]","","","",0,1,"","","","Ratio {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}","Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)","Time period during which one defined dose is administered (per 1 hour, per 5-10 minutes)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.doseAndRate.rate[x]",0,1,"",""
+"EHDSDosaging.timing","EHDSDosaging.timing","","","",0,1,"","","","Base {[]} {[]}
+","When medication should be administered (period, time of day, frequency, etc)","When medication should be administered (period, time of day, frequency, etc)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing",0,1,"",""
+"EHDSDosaging.timing.event","EHDSDosaging.timing.event","","","",0,*,"","","","dateTime {[]} {[]}
+","Exact date and/or time of the administration","Exact date and/or time of the administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.event",0,*,"",""
+"EHDSDosaging.timing.code","EHDSDosaging.timing.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Timing abbreviation (AM - morning, Q4H - once in every 4 hours, BID - twice a day, etc)","Timing abbreviation (AM - morning, Q4H - once in every 4 hours, BID - twice a day, etc)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.code",0,1,"",""
+"EHDSDosaging.timing.repeat","EHDSDosaging.timing.repeat","","","",0,1,"","","","Base {[]} {[]}
+","Repetition of the administration.","Repetition of the administration.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat",0,1,"",""
+"EHDSDosaging.timing.repeat.bounds","EHDSDosaging.timing.repeat.bounds","","","",0,1,"","","","Base {[]} {[]}
+","Time bounds for the treatment (current dosaging scheme). Only one of the following can exist.","Time bounds for the treatment (current dosaging scheme). Only one of the following can exist.","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds",0,1,"",""
+"EHDSDosaging.timing.repeat.bounds.duration","EHDSDosaging.timing.repeat.bounds.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Number of time units, e.g 10 days","Number of time units, e.g 10 days","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds.duration",0,1,"",""
+"EHDSDosaging.timing.repeat.bounds.range","EHDSDosaging.timing.repeat.bounds.range","","","",0,1,"","","","Range {[]} {[]}
+","A range of numbers of time units, 5-10 days","A range of numbers of time units, 5-10 days","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds.range",0,1,"",""
+"EHDSDosaging.timing.repeat.bounds.period","EHDSDosaging.timing.repeat.bounds.period","","","",0,1,"","","","Period {[]} {[]}
+","Start and end date, 05.08.2023 - 10.08.2023","Start and end date, 05.08.2023 - 10.08.2023","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.bounds.period",0,1,"",""
+"EHDSDosaging.timing.repeat.count","EHDSDosaging.timing.repeat.count","","","",0,1,"","","","Base {[]} {[]}
+","Number of times to repeat, exact or range","Number of times to repeat, exact or range","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.count",0,1,"",""
+"EHDSDosaging.timing.repeat.count.count","EHDSDosaging.timing.repeat.count.count","","","",0,1,"","","","integer {[]} {[]}
+","Number of times (e.g 'once', '10 times')","Number of times (e.g 'once', '10 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.count.count",0,1,"",""
+"EHDSDosaging.timing.repeat.count.countMax","EHDSDosaging.timing.repeat.count.countMax","","","",0,1,"","","","integer {[]} {[]}
+","Maximum number of times (e.g 'maximum 10 times')","Maximum number of times (e.g 'maximum 10 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.count.countMax",0,1,"",""
+"EHDSDosaging.timing.repeat.duration","EHDSDosaging.timing.repeat.duration","","","",0,1,"","","","Base {[]} {[]}
+","Duration of one administration, exact or range","Duration of one administration, exact or range","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.duration",0,1,"",""
+"EHDSDosaging.timing.repeat.duration.duration","EHDSDosaging.timing.repeat.duration.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration of administration (e.g '5 minutes', '1 hour')","Duration of administration (e.g '5 minutes', '1 hour')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.duration.duration",0,1,"",""
+"EHDSDosaging.timing.repeat.duration.durationMax","EHDSDosaging.timing.repeat.duration.durationMax","","","",0,1,"","","","Quantity {[]} {[]}
+","Maximum duration of administration (e.g 'maximum 1 hour')","Maximum duration of administration (e.g 'maximum 1 hour')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.duration.durationMax",0,1,"",""
+"EHDSDosaging.timing.repeat.frequency","EHDSDosaging.timing.repeat.frequency","","","",0,1,"","","","Base {[]} {[]}
+","Frequency of intake/administration (e.g 'three times a day')","Frequency of intake/administration (e.g 'three times a day')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency",0,1,"",""
+"EHDSDosaging.timing.repeat.frequency.numberOfTimes","EHDSDosaging.timing.repeat.frequency.numberOfTimes","","","",0,1,"","","","integer {[]} {[]}
+","Number of times per period (e.g '3 times')","Number of times per period (e.g '3 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.numberOfTimes",0,1,"",""
+"EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes","EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes","","","",0,1,"","","","integer {[]} {[]}
+","Maximum number of times per period (e.g. 'maximum 3 times')","Maximum number of times per period (e.g. 'maximum 3 times')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes",0,1,"",""
+"EHDSDosaging.timing.repeat.frequency.period","EHDSDosaging.timing.repeat.frequency.period","","","",0,1,"","","","Quantity {[]} {[]}
+","Duration to which the frequency applies (e.g '... / 1 day')","Duration to which the frequency applies (e.g '... / 1 day')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.period",0,1,"",""
+"EHDSDosaging.timing.repeat.frequency.periodMax","EHDSDosaging.timing.repeat.frequency.periodMax","","","",0,1,"","","","Quantity {[]} {[]}
+","Upper limit of the period (e.g ... / 4-6 hours)","Upper limit of the period (e.g ... / 4-6 hours)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.frequency.periodMax",0,1,"",""
+"EHDSDosaging.timing.repeat.dayOfWeek","EHDSDosaging.timing.repeat.dayOfWeek","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","The day of the week of administration, e.g Mon, Tue, etc","The day of the week of administration, e.g Mon, Tue, etc","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.dayOfWeek",0,*,"",""
+"EHDSDosaging.timing.repeat.timeOfDay","EHDSDosaging.timing.repeat.timeOfDay","","","",0,*,"","","","time {[]} {[]}
+","Time of day of administration (e.g '10:00')","Time of day of administration (e.g '10:00')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.timeOfDay",0,*,"",""
+"EHDSDosaging.timing.repeat.eventTime","EHDSDosaging.timing.repeat.eventTime","","","",0,*,"","","","Base {[]} {[]}
+","An event the administration is bound to, e.g 'before meal', '30 min before meal'","An event the administration is bound to, e.g 'before meal', '30 min before meal'","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.eventTime",0,*,"",""
+"EHDSDosaging.timing.repeat.eventTime.when","EHDSDosaging.timing.repeat.eventTime.when","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Time period or event ('before meal', 'immediately', 'morning')","Time period or event ('before meal', 'immediately', 'morning')","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.eventTime.when",0,*,"",""
+"EHDSDosaging.timing.repeat.eventTime.offset","EHDSDosaging.timing.repeat.eventTime.offset","","","",0,1,"","","","integer {[]} {[]}
+","minutes from event, before or after (?not sure how to show before/after with only positive integers)","minutes from event, before or after (?not sure how to show before/after with only positive integers)","","","","","","","","","",,,,,"",,,,"EHDSDosaging.timing.repeat.eventTime.offset",0,1,"",""
+"EHDSDosaging.asNeeded","EHDSDosaging.asNeeded","","","",0,1,"","","","boolean {[]} {[]}
+","Take as needed","Take as needed","","","","","","","","","",,,,,"",,,,"EHDSDosaging.asNeeded",0,1,"",""
+"EHDSDosaging.asNeededFor","EHDSDosaging.asNeededFor","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Take as needed for the coded reason","Take as needed for the coded reason","","","","","","","","","",,,,,"",,,,"EHDSDosaging.asNeededFor",0,*,"",""
+"EHDSDosaging.bodySite","EHDSDosaging.bodySite","","","",0,1,"","","","http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure {[]} {[]}
+","Body site of administration","Body site of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.bodySite",0,1,"",""
+"EHDSDosaging.routeOfAdministration","EHDSDosaging.routeOfAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Route of administration","Route of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.routeOfAdministration",0,1,"",""
+"EHDSDosaging.methodOfAdministration","EHDSDosaging.methodOfAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Method of administration","Method of administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.methodOfAdministration",0,1,"",""
+"EHDSDosaging.maxDose","EHDSDosaging.maxDose","","","",0,*,"","","","Base {[]} {[]}
+","Maximum dose for the patient","Maximum dose for the patient","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose",0,*,"",""
+"EHDSDosaging.maxDose.maxDosePerPeriod","EHDSDosaging.maxDose.maxDosePerPeriod","","","",0,*,"","","","Ratio {[]} {[]}
+","Upper limit on medication per unit of time","Upper limit on medication per unit of time","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose.maxDosePerPeriod",0,*,"",""
+"EHDSDosaging.maxDose.maxDosePerAdministration","EHDSDosaging.maxDose.maxDosePerAdministration","","","",0,1,"","","","Quantity {[]} {[]}
+","Upper limit on medication per one administration","Upper limit on medication per one administration","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose.maxDosePerAdministration",0,1,"",""
+"EHDSDosaging.maxDose.maxDosePerLifetime","EHDSDosaging.maxDose.maxDosePerLifetime","","","",0,1,"","","","Quantity {[]} {[]}
+","Upper limit on medication per lifetime of the patient","Upper limit on medication per lifetime of the patient","","","","","","","","","",,,,,"",,,,"EHDSDosaging.maxDose.maxDosePerLifetime",0,1,"",""
