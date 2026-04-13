@@ -1,0 +1,15 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHDSCoverage","EHDSCoverage","","","",0,*,"","","","null {[]} {[]}
+","Coverage model","EHDS refined base model for Coverage","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"EHDSCoverage.identifier","EHDSCoverage.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Business Identifier for the coverage","Business Identifier for the coverage","","","","","","","","","",,,,,"",,,,"EHDSCoverage.identifier",0,*,"",""
+"EHDSCoverage.type","EHDSCoverage.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organisation.","Type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organisation.","","","","","","","","","",,"preferred","hl7:coverage-selfpay, hl7:v3-ActCoverageTypeCode","","",,,,"EHDSCoverage.type",0,1,"",""
+"EHDSCoverage.patient","EHDSCoverage.patient","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}
+","Patient who benefits from the insurance coverage when products and/or services are provided.","Patient who benefits from the insurance coverage when products and/or services are provided.","","","","","","","","","",,,,,"",,,,"EHDSCoverage.patient",1,1,"",""
+"EHDSCoverage.payor","EHDSCoverage.payor","","","",1,*,"","","","Base {[]} {[]}
+","Payor including both insurance and non-insurance agreements, such as patient-pay agreements.","Payor including both insurance and non-insurance agreements, such as patient-pay agreements.","","","","","","","","","",,,,,"",,,,"EHDSCoverage.payor",1,*,"",""
+"EHDSCoverage.payor.payorEntity[x]","EHDSCoverage.payor.payorEntity[x]","","","",1,1,"","","","https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganisation {[]} {[]}
+https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient {[]} {[]}","Payor entity","Payor entity","","","","","","","","","",,,,,"",,,,"EHDSCoverage.payor.payorEntity[x]",1,1,"",""
+"EHDSCoverage.payor.subscriberId","EHDSCoverage.payor.subscriberId","","","",0,1,"","","","Identifier {[]} {[]}
+","Number or code under which the insured person is registered at the insurance provider.","Number or code under which the insured person is registered at the insurance provider.","","","","","","","","","",,,,,"",,,,"EHDSCoverage.payor.subscriberId",0,1,"",""

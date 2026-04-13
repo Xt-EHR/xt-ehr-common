@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Obligations Framework - EHDS Logical Information Models v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+      <li>
+        <a href="datatypes.html">Data types</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Priority Categories
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="overview-prescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="overview-dispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="overview-medicaltestresult.html">Medical Test Results</a>
+      </li>
+      <li>
+        <a href="overview-patientsummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="overview-medicalimages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="overview-dischargereport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+      <li>
+        <a href="authoring-process.html">Authoring process</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Obligations Framework</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 1.0.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/main'>https://github.com/Xt-EHR/xt-ehr-common/tree/main</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Obligations Framework</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#requirement-levels" id="markdown-toc-requirement-levels">Requirement levels</a></li>
+  <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+  <li><a href="#obligation-vs-cardinality" id="markdown-toc-obligation-vs-cardinality">Obligation vs cardinality</a></li>
+  <li><a href="#authoring-rules" id="markdown-toc-authoring-rules">Authoring rules</a></li>
+  <li><a href="#obligations-on-logical-models-vs-fhir-profiles" id="markdown-toc-obligations-on-logical-models-vs-fhir-profiles">Obligations on logical models vs FHIR profiles</a></li>
+</ul>
+
+</div>
+<h3 id="requirement-levels">Requirement levels</h3>
+
+<p>The obligation framework uses requirement levels SHALL, SHOULD and MAY according to the definitions in RFC 2119.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Requirement Level</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SHALL</td>
+      <td>Mandatory</td>
+      <td>Means that the definition is an absolute requirement of the specification.</td>
+    </tr>
+    <tr>
+      <td>SHOULD</td>
+      <td>Recommended</td>
+      <td>Means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.</td>
+    </tr>
+    <tr>
+      <td>MAY</td>
+      <td>Optional</td>
+      <td>Means that an item is truly optional.  One vendor may choose to include the item because a particular marketplace requires it or because the vendor feels that it enhances the product while another vendor may omit the same item. An implementation which does not include a particular option MUST be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option MUST be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Additional rule:</strong><br />
+Omission of a SHALL element may be permitted only where the corresponding capability is permanently out of scope for the system. Such omission must be accompanied by a clear, explicit and verifiable written justification.</p>
+
+<h3 id="actors">Actors</h3>
+
+<p>Obligations are provided for two generic actors:</p>
+<ul>
+  <li><strong>Producer</strong>: A system that generates or makes available structured electronic health data for exchange. In this role, the system is responsible for being technically capable of populating the relevant data elements in accordance with the applicable <em>able-to-populate</em> obligations and for associating the required metadata, such as authorship, provenance, status, and temporal information, before the data are made available to downstream systems.</li>
+  <li><strong>Consumer</strong>: A system that receives electronic health data originating from another system and processes or displays that data. In this role, the system is responsible for ingesting and validating the received data and for preserving the meaning, structure, and associated metadata of the information in accordance with the applicable Consumer obligations (<em>display</em> or <em>process</em>), ensuring correct interpretation and presentation to end users or other systems.</li>
+</ul>
+
+<p>The third defined actor, <strong>Exchanger</strong>, is a system or component that routes, brokers, or mediates the transfer of electronic health data without altering, enriching, or reinterpreting its content or semantics. 
+Because an Exchanger does not modify the data it handles, it has no data-level obligations defined. If a system alters, enriches, or transforms data while relaying it, it is no longer acting as an Exchanger for that exchange and assumes the role of Producer for the resulting dataset.</p>
+
+<p>A single system may perform different roles for different data categories or exchange scenarios. Obligations are therefore always assessed in relation to a specific role and within a declared scope.</p>
+
+<h3 id="obligation-vs-cardinality">Obligation vs cardinality</h3>
+
+<p>Obligations and cardinality of data elements both signal requirements.</p>
+
+<p>Cardinality requirements apply to every instance of data. For example, if the cardinality of an element is 1..*, all instances must have the element filled in with an appropriate value in order to pass the validation.</p>
+
+<p>Obligation requirements apply to EHR systems and relate to system capabilities. SHALL <em>able-to-populate</em> means the data element must be supported in the EHR system. When the cardinality of such element is 0..* or 0..1, the system does not have to populate this element for every instance but only where the data is applicable and available.</p>
+
+<h3 id="authoring-rules">Authoring rules</h3>
+
+<ul>
+  <li>Obligations are authored in the derived models as an additional layer.</li>
+  <li>Obligations use the <a href="https://hl7.org/fhir/R5/obligations.html">HL7 FHIR Obligations framework</a> (including the required value sets)</li>
+  <li>Obligation sets for the same model may differ between priority categories or context (e.g. EHDSDevice as an author of a document, laboratory test kit, or an implant).</li>
+  <li>In case the obligation authors cannot reach an agreement on which requirement level to use, the weaker level is preferred.</li>
+  <li>All elements with cardinality 1.. correspond to SHALL <em>able-to-populate</em>.</li>
+  <li>When the mandatory element situates underneath an element that has no obligations, it does not have to be marked with a SHALL obligation, since there is no obligation on the parent and the cardinality ensures that the element is filled in when the parent element is used in data.</li>
+  <li>SHOULD requirements are a strong recommendation and often candidates for future SHALLs.</li>
+  <li>Terminology obligations are preferably provided as terminology bindings in the model (description only).</li>
+  <li>Introducing default values for elements can be helpful for limiting the number of obligations (e.g. if numberOfRepeats is not provided, it is considered to be '0' - this allows systems that never allow repeats to be interoperable without filling in this data).</li>
+  <li>When a polymorphic element is equipped with an obligation, then mark the obligation on element[x] level. In case one data type is preferred over others, mark it in the obligation documentation (e.g. System SHALL support at least Quantity data type for the element. System SHOULD support boolean data type for the element.).</li>
+  <li>When a backbone element has an obligation SHOULD, MAY, or no obligation, the obligations of subelements would only apply when the block itself is implemented (similar to how cardinalities are interpreted). When the obligations of subelements are already clear from the cardinalities, the redundant obligations do not have to be provided unless needed for additional clarity (i.e. providing comments). Typically, the subelements should not have a stronger obligation than the upper level elements in the element tree.</li>
+</ul>
+
+<h3 id="obligations-on-logical-models-vs-fhir-profiles">Obligations on logical models vs FHIR profiles</h3>
+
+<p>Logical information models are designed as the source of requirements. They do not serve well as implementable and testable specifications as they are independent of any specific implementation technology.</p>
+
+<p>The requirements defined in logical models (including related obligations) are used as the basis for defining FHIR implementation guides. The logical models are realised as FHIR profiles on FHIR resources, and obligations are replicated for the corresponding elements in FHIR profiles. Mappings between logical models and FHIR profiles are provided in FHIR IGs.</p>
+
+<p>Cross-border services derive requirements from the FHIR IGs, but may further restrict the specification and add or strengthen obligations where necessary.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  
+          Package xtehr.eu.ehds.models#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
+          Generated 
+  <span title="2026-04-09 11:17:00 +0000">
+    2026-04-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

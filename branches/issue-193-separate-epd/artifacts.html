@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - EHDS Logical Information Models v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/xt-ehr.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"14"}
+    h3,h4,h5,h6{--heading-prefix:"14.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.xt-ehr.eu/">
+            <img height="61" alt="Project home" src="assets/images/xt-ehr-logo-transp.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+<!--
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+-->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">EHDS Logical Information Models</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - qa-preview
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope &amp; Content</a>
+      </li>
+      <li>
+        <a href="howto.html">How to read this guide</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">EHDS Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="useCasePrescription.html">ePrescription</a>
+      </li>
+      <li>
+        <a href="useCaseDispensation.html">eDispensation</a>
+      </li>
+      <li>
+        <a href="useCaseLabReport.html">Laboratory Report</a>
+      </li>
+      <li>
+        <a href="useCasePatientSummary.html">Patient Summary</a>
+      </li>
+      <li>
+        <a href="useCaseMedicalImages.html">Medical Images</a>
+      </li>
+      <li>
+        <a href="useCaseHospitalDischargeReport.html">Discharge Report</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="knownIssues.html">Known issues</a>
+      </li>
+      <li>
+        <a href="wow.html">Ways of working</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">EHDS Logical Information Models, published by Xt-EHR. This guide is not an authorized publication; it is the continuous build for version 0.2.1  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/Xt-EHR/xt-ehr-common/tree/issue-193-separate-epd'>https://github.com/Xt-EHR/xt-ehr-common/tree/issue-193-separate-epd</a> and changes regularly. See the <a href='http://www.xt-ehr.eu/fhir/models/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">EHDS Patient Summary Logical Models</a>
+      </li>
+      <li>
+         <a href="#2">EHDS ePrescription and eDispense Logical Models</a>
+      </li>
+      <li>
+         <a href="#3">EHDS Laboratory Domain Logical Models</a>
+      </li>
+      <li>
+         <a href="#4">EHDS Imaging Domain Logical Models</a>
+      </li>
+      <li>
+         <a href="#5">EHDS Discharge Report Domain Logical Models</a>
+      </li>
+      <li>
+         <a href="#6">Structures: Logical Models</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>EHDS Patient Summary Logical Models </h3>
+    <p>Information Models for implementing EEHRxF Patient Summary under EHDS. Format based on ISO 13972 "Health informatics — Clinical information models — Characteristics, structures and requirements. The Patient Summary is currently being defined in a <a href="https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/branches/patient-summary/artifacts.html#ehds-patient-summary-logical-models">separate branch</a></p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSPatientSummary.html"
+                  title="StructureDefinition/EHDSPatientSummary">Patient summary model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Patient Summary</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>EHDS ePrescription and eDispense Logical Models </h3>
+    <p>Information Models for implementing EEHRxF services for medication prescription and dispense services.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDispenseDecline.html"
+                  title="StructureDefinition/EHDSDispenseDecline">Medication dispense decline model</a>
+            </td>
+            <td>
+<p>Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSMedicationDispense.html"
+                  title="StructureDefinition/EHDSMedicationDispense">Medication dispense model</a>
+            </td>
+            <td>
+<p>Logical model for medication dispensation (based on request or independently)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSMedicationPrescription.html"
+                  title="StructureDefinition/EHDSMedicationPrescription">Medication prescription model</a>
+            </td>
+            <td>
+<p>Logical model for medication prescription. A prescription contains one or more prescription items.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>EHDS Laboratory Domain Logical Models </h3>
+    <p>Information Models for implementing EEHRxF services in the laboratory domain under EHDS. Format based on ISO 13972 "Health informatics — Clinical information models — Characteristics, structures and requirements."</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSLaboratoryObservation.html"
+                  title="StructureDefinition/EHDSLaboratoryObservation">Laboratory observation model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Observation performed by laboratory</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSLaboratoryReport.html"
+                  title="StructureDefinition/EHDSLaboratoryReport">Laboratory report model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Laboratory result report</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>EHDS Imaging Domain Logical Models </h3>
+    <p>Information Models for implementing EEHRxF services in the imaging domain under EHDS. Format based on ISO 13972 "Health informatics — Clinical information models — Characteristics, structures and requirements."</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSImagingReport.html"
+                  title="StructureDefinition/EHDSImagingReport">Imaging report model</a>
+            </td>
+            <td>
+<p>Imaging report reflects the observations and interpretations of one or more imaging studies, contains elements such as the reason why the study is requested, relevant contextual medical information, the modality used to acquire images and its settings, procedures and body localisations that were used, a description of the observations and findings, exposure information, conclusion and advice.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSImagingStudy.html"
+                  title="StructureDefinition/EHDSImagingStudy">Imaging study model</a>
+            </td>
+            <td>
+<p>Imaging study model includes the key information about the content of an imaging study. It does not include image pixels but includes location pointers to its image content and organises this information according to the well-established model of an imaging study made of one or more series and each series made of instances or images. Composed of a set of data (DICOM KOS) that facilitates the location of all available images.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>EHDS Discharge Report Domain Logical Models </h3>
+    <p>Information Models for implementing EEHRxF Discharge report under EHDS. Format based on ISO 13972 "Health informatics — Clinical information models — Characteristics, structures and requirements."</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDischargeReport.html"
+                  title="StructureDefinition/EHDSDischargeReport">Discharge Report model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Discharge Report</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSAddress.html"
+                  title="StructureDefinition/EHDSAddress">Address model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Address structure</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSAdvanceDirective.html"
+                  title="StructureDefinition/EHDSAdvanceDirective">Advance directive model</a>
+            </td>
+            <td>
+<p>Healthcare directives concerning life or after life wishes of the patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSAlert.html"
+                  title="StructureDefinition/EHDSAlert">Alert model</a>
+            </td>
+            <td>
+<p>Alert flag</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSAllergyIntolerance.html"
+                  title="StructureDefinition/EHDSAllergyIntolerance">Allergy intolerance model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for allergy/intolerance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSAttachment.html"
+                  title="StructureDefinition/EHDSAttachment">Attachment model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSBodyStructure.html"
+                  title="StructureDefinition/EHDSBodyStructure">Body structure model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Body structure</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSCarePlan.html"
+                  title="StructureDefinition/EHDSCarePlan">Care plan model</a>
+            </td>
+            <td>
+<p>EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSCondition.html"
+                  title="StructureDefinition/EHDSCondition">Condition model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSCoverage.html"
+                  title="StructureDefinition/EHDSCoverage">Coverage model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Coverage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSCurrentPregnancy.html"
+                  title="StructureDefinition/EHDSCurrentPregnancy">Current pregnancy status model</a>
+            </td>
+            <td>
+<p>Current pregnancy status</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDataSet.html"
+                  title="StructureDefinition/EHDSDataSet">DataSet model</a>
+            </td>
+            <td>
+<p>Common elements (including header) for all documents and their independently functioning parts, e.g FHIR resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDevice.html"
+                  title="StructureDefinition/EHDSDevice">Device model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Device information</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDeviceUse.html"
+                  title="StructureDefinition/EHDSDeviceUse">Device use model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for device use information</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDocument.html"
+                  title="StructureDefinition/EHDSDocument">Document model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for common document data elements, including the common header. Data relevant to document type and its content for administrative and searching purposes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDosage.html"
+                  title="StructureDefinition/EHDSDosage">Dosage model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Dosage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSDosaging.html"
+                  title="StructureDefinition/EHDSDosaging">Dosaging model</a>
+            </td>
+            <td>
+<p>Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSEncounter.html"
+                  title="StructureDefinition/EHDSEncounter">Encounter model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Encounter</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSEndpoint.html"
+                  title="StructureDefinition/EHDSEndpoint">Endpoint model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Endpoint</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSEpisodeOfCare.html"
+                  title="StructureDefinition/EHDSEpisodeOfCare">Episode of care model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Episode of care</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSFamilyMemberHistory.html"
+                  title="StructureDefinition/EHDSFamilyMemberHistory">Family member history model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for family member history</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSFunctionalStatus.html"
+                  title="StructureDefinition/EHDSFunctionalStatus">Functional status</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Functional status</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSHealthProfessional.html"
+                  title="StructureDefinition/EHDSHealthProfessional">Health professional model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Health professional (HP)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSHumanName.html"
+                  title="StructureDefinition/EHDSHumanName">Human name model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Human name</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSImmunisation.html"
+                  title="StructureDefinition/EHDSImmunisation">Immunisation model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Immunisation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSInfectiousContact.html"
+                  title="StructureDefinition/EHDSInfectiousContact">Infectious contact model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for an infectious contact</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSLocation.html"
+                  title="StructureDefinition/EHDSLocation">Location model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSMedia.html"
+                  title="StructureDefinition/EHDSMedia">Media model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for A photo, video, or audio recording acquired or used in healthcare.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSMedicationAdministration.html"
+                  title="StructureDefinition/EHDSMedicationAdministration">Medication administration model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for a single medication administration</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSMedication.html"
+                  title="StructureDefinition/EHDSMedication">Medication model</a>
+            </td>
+            <td>
+<p>Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile. Model is suitable for generic/virtual medications as well as branded/real products.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSMedicationStatement.html"
+                  title="StructureDefinition/EHDSMedicationStatement">Medication statement model</a>
+            </td>
+            <td>
+<p>Statement about a single medication as part of a medication summary.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSObservation.html"
+                  title="StructureDefinition/EHDSObservation">Observation model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Observation information</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSOrganisation.html"
+                  title="StructureDefinition/EHDSOrganisation">Organisation model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Health provider or any other type of organisation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSPatientAnimal.html"
+                  title="StructureDefinition/EHDSPatientAnimal">Patient Animal model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Patient:Animal</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSPatient.html"
+                  title="StructureDefinition/EHDSPatient">Patient model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for patient (subject of care) information</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSPregnancyHistory.html"
+                  title="StructureDefinition/EHDSPregnancyHistory">Pregnancy history model</a>
+            </td>
+            <td>
+<p>Pregnancy history for one pregnancy</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSProcedure.html"
+                  title="StructureDefinition/EHDSProcedure">Procedure model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for an action that is or was performed on or for a patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSRelatedPerson.html"
+                  title="StructureDefinition/EHDSRelatedPerson">Related person model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Patient/subject guardian and other related person information</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSServiceRequest.html"
+                  title="StructureDefinition/EHDSServiceRequest">Service request model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Specification of requested service or services</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSSocialHistory.html"
+                  title="StructureDefinition/EHDSSocialHistory">Social history model</a>
+            </td>
+            <td>
+<p>EHDS model for social history observations</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSSpecimen.html"
+                  title="StructureDefinition/EHDSSpecimen">Specimen model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for A sample to be used for Analysis</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSSubstance.html"
+                  title="StructureDefinition/EHDSSubstance">Substance model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Substance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSSubstanceUse.html"
+                  title="StructureDefinition/EHDSSubstanceUse">Substance use model</a>
+            </td>
+            <td>
+<p>Statement about using a substance (such as tobacco, alcohol, drugs, etc).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSTelecom.html"
+                  title="StructureDefinition/EHDSTelecom">Telecom model</a>
+            </td>
+            <td>
+<p>EHDS refined base model for Telecommunication contact information structure</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EHDSTravelHistory.html"
+                  title="StructureDefinition/EHDSTravelHistory">Travel history model</a>
+            </td>
+            <td>
+<p>Relevant information about the patient's recent travel history, for one visit</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.xt-ehr.eu/">Xt-EHR</a>.  Package xtehr.eu.ehds.models#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Dec 8, 2025 12:22+0000">2025-12-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div id="container" style="color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+  <div>
+    Links: 
+    <a style="color: #ffffff" href="toc.html">Table of Contents</a> |
+    <a style="color: #ffffff" href="qa.html">QA Report</a>
+    <a style="color: #ffffff" rel="license" href="http://hl7.org/fhir/R5/license.html">
+      <img style="border-style: none;" alt="CC0" src="cc0.png"/>
+    </a><br/>
+    The Xt-EHR action is co-funded by the European Union, EU4Health Program 2021-2027, under Grant Agreement Nr.º 101128085.
+  </div>
+  <div>
+    <img height="41" alt="a EU funded project" src="assets/images/eu.png"/>
+  </div>
+</div>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

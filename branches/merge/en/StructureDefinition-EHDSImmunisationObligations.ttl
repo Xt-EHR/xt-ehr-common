@@ -1,0 +1,1634 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSImmunisationObligations"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition EHDSImmunisationObligations</b></p><a name=\"EHDSImmunisationObligations\"> </a><a name=\"hcEHDSImmunisationObligations\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation\">EHDSImmunisation</a><a name=\"EHDSImmunisation\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSImmunisation.html\">EHDSImmunisation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Immunisation model</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.header\">header</a><a name=\"EHDSImmunisation.header\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.header.subject\">subject</a><a name=\"EHDSImmunisation.header.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSPatient.html\">EHDSPatient</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Patient/subject information</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.header.identifier\">identifier</a><a name=\"EHDSImmunisation.header.identifier\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.header.status\">status</a><a name=\"EHDSImmunisation.header.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Status of the immunisation event (completed, not-done).</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.vaccine\">vaccine</a><a name=\"EHDSImmunisation.vaccine\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Type of immunisation, e.g. J07AM01 Tetanus toxoid; or 871803007 Hepatitis A and Hepatitis B virus antigens only vaccine product.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.administeredProduct\">administeredProduct</a><a name=\"EHDSImmunisation.administeredProduct\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSMedication.html\">EHDSMedication</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Administered medicinal product (e.g. TETAVAX suspension for injection), including batch/lot details when necessary.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.administeredProduct.identifyingCode[x]\">identifyingCode[x]</a><a name=\"EHDSImmunisation.administeredProduct.identifyingCode_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">An identifier (e.g. from EMA SPOR PMS or national registry) or a code (e.g. from SNOMED CT or national code system) for the product (virtual product, branded product, or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities. An identifier might not exist e.g. for substance-based prescriptions.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.administeredProduct.productName\">productName</a><a name=\"EHDSImmunisation.administeredProduct.productName\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Current trade name (authorised name) of the product. When medication is specified by a CodeableConcept, the name may be omitted when available as the display name of the concept.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck101.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.administeredProduct.batch\">batch</a><a name=\"EHDSImmunisation.administeredProduct.batch\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Base</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.administeredProduct.batch.lotNumber\">lotNumber</a><a name=\"EHDSImmunisation.administeredProduct.batch.lotNumber\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Batch identifier of the medicinal product.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSImmunisationObligations-definitions.html#EHDSImmunisation.administrationTime\">administrationTime</a><a name=\"EHDSImmunisation.administrationTime\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The date and optionally the exact time when the vaccination was administered.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr></table></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "EHDSImmunisationObligations"] ; # 
+  fhir:title [ fhir:v "Immunisation obligations"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-04-02T12:48:10+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Xt-EHR"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Xt-EHR" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.xt-ehr.eu/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Obligations for the logical model for immunisation."] ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation>
+  ] ; # 
+  fhir:derivation [ fhir:v "constraint"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "1.0.0"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSImmunisation" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation" ] ;
+       fhir:short [ fhir:v "Immunisation model" ] ;
+       fhir:definition [ fhir:v "Model describes the administration of immunisation products, including vaccines and immunoglobulins, covering active and passive immunisations. It focuses on immunisation as a clinical procedure rather than the resulting immunity. The model supports routine immunisations at standard doses and may overlap with medication summaries or prescription lists. Natural immunity, immunisation outcomes, refusals, and administration or planning details are out of scope." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.header" ] ;
+       fhir:short [ fhir:v "Basic metadata for this information" ] ;
+       fhir:definition [ fhir:v "Basic metadata for this information" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.subject" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.subject" ] ;
+       fhir:short [ fhir:v "Patient/subject information" ] ;
+       fhir:definition [ fhir:v "Patient/subject information" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.subject" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.identifier" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.identifier" ] ;
+       fhir:short [ fhir:v "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)." ] ;
+       fhir:definition [ fhir:v "Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.author[x]" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.author[x]" ] ;
+       fhir:short [ fhir:v "The author of the immunisation statement." ] ;
+       fhir:definition [ fhir:v "The author of the immunisation statement." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.author[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.date" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.date" ] ;
+       fhir:short [ fhir:v "Date and optionally time of authoring/issuing" ] ;
+       fhir:definition [ fhir:v "Date and optionally time of authoring/issuing" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.date" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.status" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.status" ] ;
+       fhir:short [ fhir:v "Status of the immunisation event (completed, not-done)." ] ;
+       fhir:definition [ fhir:v "Status of the immunisation event (completed, not-done)." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.source" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.source" ] ;
+       fhir:short [ fhir:v "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information." ] ;
+       fhir:definition [ fhir:v "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.source" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.language" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.language" ] ;
+       fhir:short [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:definition [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "BCP 47" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.diseaseOrAgentTargeted" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.diseaseOrAgentTargeted" ] ;
+       fhir:short [ fhir:v "Disease or agent that the vaccination provides protection against (e.g. 76902006 Tetanus)." ] ;
+       fhir:definition [ fhir:v "Disease or agent that the vaccination provides protection against (e.g. 76902006 Tetanus)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.diseaseOrAgentTargeted" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "ICD-10, SNOMED CT" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.vaccine" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.vaccine" ] ;
+       fhir:short [ fhir:v "Type of immunisation, e.g. J07AM01 Tetanus toxoid; or 871803007 Hepatitis A and Hepatitis B virus antigens only vaccine product." ] ;
+       fhir:definition [ fhir:v "Type of immunisation, e.g. J07AM01 Tetanus toxoid; or 871803007 Hepatitis A and Hepatitis B virus antigens only vaccine product." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.vaccine" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "SNOMED CT, ATC" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct" ] ;
+       fhir:short [ fhir:v "Administered medicinal product (e.g. TETAVAX suspension for injection), including batch/lot details when necessary." ] ;
+       fhir:definition [ fhir:v "Administered medicinal product (e.g. TETAVAX suspension for injection), including batch/lot details when necessary." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.administeredProduct" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.identifyingCode[x]" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.identifyingCode[x]" ] ;
+       fhir:short [ fhir:v "An identifier (e.g. from EMA SPOR PMS or national registry) or a code (e.g. from SNOMED CT or national code system) for the product (virtual product, branded product, or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities. An identifier might not exist e.g. for substance-based prescriptions." ] ;
+       fhir:definition [ fhir:v "An identifier (e.g. from EMA SPOR PMS or national registry) or a code (e.g. from SNOMED CT or national code system) for the product (virtual product, branded product, or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities. An identifier might not exist e.g. for substance-based prescriptions." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.identifyingCode[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.classification" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.classification" ] ;
+       fhir:short [ fhir:v "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)" ] ;
+       fhir:definition [ fhir:v "Classification (e.g. ATC; narcotic/psychotropic; orphan drug; etc.)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.classification" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "WHO ATC" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.productName" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.productName" ] ;
+       fhir:short [ fhir:v "Current trade name (authorised name) of the product. When medication is specified by a CodeableConcept, the name may be omitted when available as the display name of the concept." ] ;
+       fhir:definition [ fhir:v "Current trade name (authorised name) of the product. When medication is specified by a CodeableConcept, the name may be omitted when available as the display name of the concept." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.productName" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.marketingAuthorisationHolder" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.marketingAuthorisationHolder" ] ;
+       fhir:short [ fhir:v "Marketing authorisation holder of the medicinal product. Relevant for identifying the exact product. If the product does not have a marketing authorisation, the manufacturer information may be used." ] ;
+       fhir:definition [ fhir:v "Marketing authorisation holder of the medicinal product. Relevant for identifying the exact product. If the product does not have a marketing authorisation, the manufacturer information may be used." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.marketingAuthorisationHolder" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.marketingAuthorisationHolder.organisationName" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.marketingAuthorisationHolder.organisationName" ] ;
+       fhir:short [ fhir:v "Name of the organisation holding the authorisation for marketing/manufacturing" ] ;
+       fhir:definition [ fhir:v "Name of the organisation holding the authorisation for marketing/manufacturing" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.marketingAuthorisationHolder.organisationName" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.marketingAuthorisationHolder.organisationIdentifier" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.marketingAuthorisationHolder.organisationIdentifier" ] ;
+       fhir:short [ fhir:v "Identifier of the organisation and/or its physical location" ] ;
+       fhir:definition [ fhir:v "Identifier of the organisation and/or its physical location" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.marketingAuthorisationHolder.organisationIdentifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.doseForm" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.doseForm" ] ;
+       fhir:short [ fhir:v "Dose form at the package level (e.g. authorised dose form), corresponding to IDMP Combined Pharmaceutical Dose Form (this includes terms from EDQM Combination Pack or Combined Dose Form lists). Dose form for a single package item is defined in item.doseForm." ] ;
+       fhir:definition [ fhir:v "Dose form at the package level (e.g. authorised dose form), corresponding to IDMP Combined Pharmaceutical Dose Form (this includes terms from EDQM Combination Pack or Combined Dose Form lists). Dose form for a single package item is defined in item.doseForm." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.doseForm" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "EDQM Standard Terms" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.description" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.description" ] ;
+       fhir:short [ fhir:v "Textual description of the product, e.g. including package description." ] ;
+       fhir:definition [ fhir:v "Textual description of the product, e.g. including package description." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.description" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item" ] ;
+       fhir:short [ fhir:v "A medication item. For combination packs, this can be multiple manufactured items with each item having its own dose form and ingredients+strengths defined" ] ;
+       fhir:definition [ fhir:v "A medication item. For combination packs, this can be multiple manufactured items with each item having its own dose form and ingredients+strengths defined" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.doseForm" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.doseForm" ] ;
+       fhir:short [ fhir:v "Administrable or manufactured item dose form, depending on the type of medication definition. This should not include combined dose forms." ] ;
+       fhir:definition [ fhir:v "Administrable or manufactured item dose form, depending on the type of medication definition. This should not include combined dose forms." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.doseForm" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "EDQM Standard Terms" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient" ] ;
+       fhir:short [ fhir:v "Ingredients" ] ;
+       fhir:definition [ fhir:v "Ingredients" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.ingredient" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.isActive" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.isActive" ] ;
+       fhir:short [ fhir:v "Marks whether the ingredient is considered an active ingredient. Excipients are typically not needed, and by default only active ingredients are expected." ] ;
+       fhir:definition [ fhir:v "Marks whether the ingredient is considered an active ingredient. Excipients are typically not needed, and by default only active ingredients are expected." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.ingredient.isActive" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.substance" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.substance" ] ;
+       fhir:short [ fhir:v "Substance" ] ;
+       fhir:definition [ fhir:v "Substance" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.ingredient.substance" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "EMA SPOR SMS" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.strengthInfo" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.strengthInfo" ] ;
+       fhir:short [ fhir:v "Strength of the product - amount of substance per unit" ] ;
+       fhir:definition [ fhir:v "Strength of the product - amount of substance per unit" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.ingredient.strengthInfo" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.strengthInfo.strength" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.strengthInfo.strength" ] ;
+       fhir:short [ fhir:v "Concentration or presentation strength, e.g '100 mg/1 ml' or '500 mg per 1 tablet'" ] ;
+       fhir:definition [ fhir:v "Concentration or presentation strength, e.g '100 mg/1 ml' or '500 mg per 1 tablet'" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.ingredient.strengthInfo.strength" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Ratio"^^xsd:anyURI ;
+           fhir:l fhir:Ratio
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.strengthInfo.basisOfStrengthSubstance" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.ingredient.strengthInfo.basisOfStrengthSubstance" ] ;
+       fhir:short [ fhir:v "Substance that the strength refers to, especially when different from .item.strength.substance" ] ;
+       fhir:definition [ fhir:v "Substance that the strength refers to, especially when different from .item.strength.substance" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "EMA SPOR SMS" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.unitOfPresentation" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.unitOfPresentation" ] ;
+       fhir:short [ fhir:v "Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package." ] ;
+       fhir:definition [ fhir:v "Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.unitOfPresentation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "EDQM Standard Terms" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.containedQuantity" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.containedQuantity" ] ;
+       fhir:short [ fhir:v "Manufactured item quantity per one item (3 ml / 1 vial)" ] ;
+       fhir:definition [ fhir:v "Manufactured item quantity per one item (3 ml / 1 vial)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.containedQuantity" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Ratio"^^xsd:anyURI ;
+           fhir:l fhir:Ratio
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.amount" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.amount" ] ;
+       fhir:short [ fhir:v "Number of such items in this product (5 vials). The combined amount of all items will be considered to be the total package size." ] ;
+       fhir:definition [ fhir:v "Number of such items in this product (5 vials). The combined amount of all items will be considered to be the total package size." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.amount" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM for units of measure. EDQM Standard Terms for units of presentation." ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.item.packageType" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.item.packageType" ] ;
+       fhir:short [ fhir:v "Type of package of the medication item" ] ;
+       fhir:definition [ fhir:v "Type of package of the medication item" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.item.packageType" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "EDQM Standard Terms for packaging." ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.device" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.device" ] ;
+       fhir:short [ fhir:v "Administration device included in the product. Devices that are not inside the medication package are excluded." ] ;
+       fhir:definition [ fhir:v "Administration device included in the product. Devices that are not inside the medication package are excluded." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.device" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.device.deviceQuantity" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.device.deviceQuantity" ] ;
+       fhir:short [ fhir:v "Number of such devices" ] ;
+       fhir:definition [ fhir:v "Number of such devices" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.device.deviceQuantity" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.device.device[x]" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.device.device[x]" ] ;
+       fhir:short [ fhir:v "Device coded" ] ;
+       fhir:definition [ fhir:v "Device coded" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.device.device[x]" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.characteristic" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.characteristic" ] ;
+       fhir:short [ fhir:v "Additional features of the product (e.g. reimbursable, sugar-free, easy-open cap, score-lined). It is expected that implementers will define a valueset supporting their use cases." ] ;
+       fhir:definition [ fhir:v "Additional features of the product (e.g. reimbursable, sugar-free, easy-open cap, score-lined). It is expected that implementers will define a valueset supporting their use cases." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.characteristic" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.characteristic.type" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.characteristic.type" ] ;
+       fhir:short [ fhir:v "A code expressing the type of characteristic." ] ;
+       fhir:definition [ fhir:v "A code expressing the type of characteristic." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.characteristic.type" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.characteristic.value[x]" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.characteristic.value[x]" ] ;
+       fhir:short [ fhir:v "Description of the characteristic value." ] ;
+       fhir:definition [ fhir:v "Description of the characteristic value." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.characteristic.value[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] [
+         fhir:code [
+           fhir:v "integer"^^xsd:anyURI ;
+           fhir:l fhir:integer
+         ]
+       ] [
+         fhir:code [
+           fhir:v "decimal"^^xsd:anyURI ;
+           fhir:l fhir:decimal
+         ]
+       ] [
+         fhir:code [
+           fhir:v "Ratio"^^xsd:anyURI ;
+           fhir:l fhir:Ratio
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.batch" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.batch" ] ;
+       fhir:short [ fhir:v "Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request." ] ;
+       fhir:definition [ fhir:v "Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.batch" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.batch.lotNumber" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.batch.lotNumber" ] ;
+       fhir:short [ fhir:v "Batch identifier of the medicinal product." ] ;
+       fhir:definition [ fhir:v "Batch identifier of the medicinal product." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.batch.lotNumber" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.batch.expirationDate" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.batch.expirationDate" ] ;
+       fhir:short [ fhir:v "Batch expiration date of the medicinal product." ] ;
+       fhir:definition [ fhir:v "Batch expiration date of the medicinal product." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedication.batch.expirationDate" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administrationTime" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administrationTime" ] ;
+       fhir:short [ fhir:v "The date and optionally the exact time when the vaccination was administered." ] ;
+       fhir:definition [ fhir:v "The date and optionally the exact time when the vaccination was administered." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.administrationTime" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeringCentre" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeringCentre" ] ;
+       fhir:short [ fhir:v "Administering centre or a health authority responsible for the vaccination event" ] ;
+       fhir:definition [ fhir:v "Administering centre or a health authority responsible for the vaccination event" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.administeringCentre" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administrator" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.administrator" ] ;
+       fhir:short [ fhir:v "Health professional responsible for administering the immunisation product." ] ;
+       fhir:definition [ fhir:v "Health professional responsible for administering the immunisation product." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.administrator" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.note" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation.note" ] ;
+       fhir:short [ fhir:v "Any additional free-text information about the immunisation" ] ;
+       fhir:definition [ fhir:v "Any additional free-text information about the immunisation" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSImmunisation.note" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSImmunisation" ] ;
+       fhir:path [ fhir:v "EHDSImmunisation" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.subject" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.subject" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.identifier" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.identifier" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.header.status" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.header.status" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.vaccine" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.vaccine" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.identifyingCode[x]" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.identifyingCode[x]" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.productName" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.productName" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.batch" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.batch" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administeredProduct.batch.lotNumber" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administeredProduct.batch.lotNumber" ]
+     ] [
+       fhir:id [ fhir:v "EHDSImmunisation.administrationTime" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSImmunisation.administrationTime" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

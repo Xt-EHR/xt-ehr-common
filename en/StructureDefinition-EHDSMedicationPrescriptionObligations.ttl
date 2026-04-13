@@ -1,0 +1,2878 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSMedicationPrescriptionObligations"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition EHDSMedicationPrescriptionObligations</b></p><a name=\"EHDSMedicationPrescriptionObligations\"> </a><a name=\"hcEHDSMedicationPrescriptionObligations\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription\">EHDSMedicationPrescription</a><a name=\"EHDSMedicationPrescription\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-EHDSMedicationPrescription.html\">EHDSMedicationPrescription</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Medication prescription model</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.header\">header</a><a name=\"EHDSMedicationPrescription.header\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.header.subject\">subject</a><a name=\"EHDSMedicationPrescription.header.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSPatient.html\">EHDSPatient</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The person for whom the medication is prescribed/ordered. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.header.identifier\">identifier</a><a name=\"EHDSMedicationPrescription.header.identifier\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Business identifier(s) for the prescription. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.header.author[x]\">author[x]</a><a name=\"EHDSMedicationPrescription.header.author_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSHealthProfessional.html\">EHDSHealthProfessional</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSOrganisation.html\">EHDSOrganisation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.header.date\">date</a><a name=\"EHDSMedicationPrescription.header.date\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Time of issuing (signing) the prescription by health care professional. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.header.status\">status</a><a name=\"EHDSMedicationPrescription.header.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Status of authorisation for dispensing the prescription items. This should not be the status of treatment. For a multiple-item prescription, this conveys the aggregate status of the entire prescription. In case of a single-item prescription, prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.presentedForm\">presentedForm</a><a name=\"EHDSMedicationPrescription.presentedForm\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSAttachment.html\">EHDSAttachment</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Entire prescription as issued. Various formats could be provided, PDF format is recommended.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-display\" title=\"Obligation Codes: display\">display</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem\">prescriptionItem</a><a name=\"EHDSMedicationPrescription.prescriptionItem\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Base</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.identifier\">identifier</a><a name=\"EHDSMedicationPrescription.prescriptionItem.identifier\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.status\">status</a><a name=\"EHDSMedicationPrescription.prescriptionItem.status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item. [Used for searching]</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.medication\">medication</a><a name=\"EHDSMedicationPrescription.prescriptionItem.medication\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSMedication.html\">EHDSMedication</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Prescribed product, branded, generic, virtual, extemporal, etc</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.quantityPrescribed\">quantityPrescribed</a><a name=\"EHDSMedicationPrescription.prescriptionItem.quantityPrescribed\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#Quantity\">Quantity</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Overall quantity of prescribed product (e.g number of packages or number of tablets).</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.dosageInstructions\">dosageInstructions</a><a name=\"EHDSMedicationPrescription.prescriptionItem.dosageInstructions\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"StructureDefinition-EHDSDosage.html\">EHDSDosage</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Dosage and administration instructions</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.validityPeriod\">validityPeriod</a><a name=\"EHDSMedicationPrescription.prescriptionItem.validityPeriod\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#Period\">Period</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">The period over which the prescription is considered valid and dispensable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.substitution\">substitution</a><a name=\"EHDSMedicationPrescription.prescriptionItem.substitution\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Base</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]\">allowed[x]</a><a name=\"EHDSMedicationPrescription.prescriptionItem.substitution.allowed_x_\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#boolean\">boolean</a><span style=\"opacity: 0.5\">, </span><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Whether and to what extent substitution is allowed.</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHALL</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-process\" title=\"Obligation Codes: process\">process</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHDSMedicationPrescriptionObligations-definitions.html#EHDSMedicationPrescription.prescriptionItem.note\">note</a><a name=\"EHDSMedicationPrescription.prescriptionItem.note\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element has obligations\">O</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Additional information or comments, e.g. message to the dispenser</span><table class=\"obligation grid\"><tr><td style=\"font-size: 11px\"><b>Obligations</b></td><td style=\"font-size: 11px\"><b>Actor</b></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-able-to-populate\" title=\"Obligation Codes: be able to populate\">able-to-populate</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-producer.html\">Producer</a></td></tr><tr><td style=\"font-size: 11px\"><b>SHOULD</b>:<a href=\"http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-display\" title=\"Obligation Codes: display\">display</a></td><td style=\"font-size: 11px; opacity: 0.5;\"><a href=\"ActorDefinition-actor-consumer.html\">Consumer</a></td></tr></table></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "EHDSMedicationPrescriptionObligations"] ; # 
+  fhir:title [ fhir:v "Medication prescription model obligations"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-04-09T11:17:25+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Xt-EHR"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Xt-EHR" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.xt-ehr.eu/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Obligations for the logical model for medication prescription body for prescribing systems (producer) and dispensing systems (consumer)."] ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription"^^xsd:anyURI ;
+     fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription>
+  ] ; # 
+  fhir:derivation [ fhir:v "constraint"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "1.0.0"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSMedicationPrescription" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription" ] ;
+       fhir:short [ fhir:v "Medication prescription model" ] ;
+       fhir:definition [ fhir:v "Logical model for medication prescription. A prescription contains one or more prescription items (medications)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header" ] ;
+       fhir:short [ fhir:v "Prescription header" ] ;
+       fhir:definition [ fhir:v "Prescription header" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.subject" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL process the patient information for identification purposes."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.subject" ] ;
+       fhir:short [ fhir:v "The person for whom the medication is prescribed/ordered. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "The person for whom the medication is prescribed/ordered. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.subject" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.identifier" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "For a single-item prescription these identifiers SHALL match prescriptionItem.identifier."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL use this prescription identifier for reference in the dispense record."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.identifier" ] ;
+       fhir:short [ fhir:v "Business identifier(s) for the prescription. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "Business identifier(s) for the prescription. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.identifier" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.author[x]" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL support at least EHDSHealthProfessional data type for the element."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.author[x]" ] ;
+       fhir:short [ fhir:v "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "The prescriber, the person who made the prescription, and who takes the responsibility for the treatment. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.author[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional>
+         ]
+       ] [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.date" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.date" ] ;
+       fhir:short [ fhir:v "Time of issuing (signing) the prescription by health care professional. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "Time of issuing (signing) the prescription by health care professional. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.date" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "dateTime"^^xsd:anyURI ;
+           fhir:l fhir:dateTime
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.status" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL process the prescription status together with other information to determine dispensability."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.status" ] ;
+       fhir:short [ fhir:v "Status of authorisation for dispensing the prescription items. This should not be the status of treatment. For a multiple-item prescription, this conveys the aggregate status of the entire prescription. In case of a single-item prescription, prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "Status of authorisation for dispensing the prescription items. This should not be the status of treatment. For a multiple-item prescription, this conveys the aggregate status of the entire prescription. In case of a single-item prescription, prescriptionItem.status shall be the same as EHDSMedicationPrescription.header.status. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.source" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.source" ] ;
+       fhir:short [ fhir:v "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information." ] ;
+       fhir:definition [ fhir:v "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "0" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.source" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.language" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.language" ] ;
+       fhir:short [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:definition [ fhir:v "Language in which the resource is written. Language is expressed by the IETF language tag." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSDataSet.header.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "BCP 47" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.statusReason[x]" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.statusReason[x]" ] ;
+       fhir:short [ fhir:v "Reason for the current status of prescription, for example the reason why the prescription was made invalid or changed from a previous state." ] ;
+       fhir:definition [ fhir:v "Reason for the current status of prescription, for example the reason why the prescription was made invalid or changed from a previous state." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.header.statusReason[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.presentedForm" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHOULD be able to provide a rendered, human-readable version of the prescription."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:display"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.presentedForm" ] ;
+       fhir:short [ fhir:v "Entire prescription as issued. Various formats could be provided, PDF format is recommended." ] ;
+       fhir:definition [ fhir:v "Entire prescription as issued. Various formats could be provided, PDF format is recommended." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.presentedForm" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAttachment"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAttachment>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem" ] ;
+       fhir:short [ fhir:v "Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together." ] ;
+       fhir:definition [ fhir:v "Prescription line for one medication. In many countries, only one item is allowed and there shall be no expectation to be able to manage multiple items. In case multiple medications are allowed, all items need to be authored together." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.identifier" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "For a single-item prescription these identifiers SHALL match .identifier."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL use this prescription identifier for reference in the dispense record."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.identifier" ] ;
+       fhir:short [ fhir:v "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "Identifier for a single item on prescription, if exists. In case of single-item prescription, this identifier is typically the same as prescription identifier. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.identifier" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Identifier"^^xsd:anyURI ;
+           fhir:l fhir:Identifier
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.status" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL process the prescription status together with other information to determine dispensability."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.status" ] ;
+       fhir:short [ fhir:v "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item. [Used for searching]" ] ;
+       fhir:definition [ fhir:v "Status of a single item of a multi-item prescription. In case of single-item prescriptions, the status of prescription has the same meaning as the status of the item. [Used for searching]" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.statusReason[x]" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.statusReason[x]" ] ;
+       fhir:short [ fhir:v "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous" ] ;
+       fhir:definition [ fhir:v "Reason for the current status of prescription, for example the reason why the prescription was made invalid or why the prescription was changed from previous" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.statusReason[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.medication" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.medication" ] ;
+       fhir:short [ fhir:v "Prescribed product, branded, generic, virtual, extemporal, etc" ] ;
+       fhir:definition [ fhir:v "Prescribed product, branded, generic, virtual, extemporal, etc" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.medication" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.indication[x]" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.indication[x]" ] ;
+       fhir:short [ fhir:v "Reason for the prescription (typically diagnosis, or a procedure)" ] ;
+       fhir:definition [ fhir:v "Reason for the prescription (typically diagnosis, or a procedure)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.indication[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "ICD-10, SNOMED CT, Orphacode" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.intendedUseType" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.intendedUseType" ] ;
+       fhir:short [ fhir:v "Intent of the prescription - prophylaxis, treatment, anesthesia, etc" ] ;
+       fhir:definition [ fhir:v "Intent of the prescription - prophylaxis, treatment, anesthesia, etc" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.intendedUseType" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.periodOfUse" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.periodOfUse" ] ;
+       fhir:short [ fhir:v "Period over which the medication is to be taken (in case of multiple dosage schemes, this would be the overall period of all dosages.)" ] ;
+       fhir:definition [ fhir:v "Period over which the medication is to be taken (in case of multiple dosage schemes, this would be the overall period of all dosages.)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.periodOfUse" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Period"^^xsd:anyURI ;
+           fhir:l fhir:Period
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.quantityPrescribed" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.quantityPrescribed" ] ;
+       fhir:short [ fhir:v "Overall quantity of prescribed product (e.g number of packages or number of tablets)." ] ;
+       fhir:definition [ fhir:v "Overall quantity of prescribed product (e.g number of packages or number of tablets)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.quantityPrescribed" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] ) ;
+       fhir:binding [
+         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:description [ fhir:v "UCUM, EDQM Standard Terms" ]
+       ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.dosageInstructions" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.dosageInstructions" ] ;
+       fhir:short [ fhir:v "Dosage and administration instructions" ] ;
+       fhir:definition [ fhir:v "Dosage and administration instructions" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.dosageInstructions" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosage"^^xsd:anyURI ;
+           fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosage>
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.validityPeriod" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.validityPeriod" ] ;
+       fhir:short [ fhir:v "The period over which the prescription is considered valid and dispensable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription." ] ;
+       fhir:definition [ fhir:v "The period over which the prescription is considered valid and dispensable. validityPeriod.start is, if missing, is assumed to be the date of issuing the prescription." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.validityPeriod" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Period"^^xsd:anyURI ;
+           fhir:l fhir:Period
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution" ] ;
+       fhir:short [ fhir:v "Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing." ] ;
+       fhir:definition [ fhir:v "Whether and which type of substitution is allowed for this prescription. The legislation in the country of dispense applies, e.g. if this information is missing." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL support at least the boolean data type."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL support at least the boolean data type."
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]" ] ;
+       fhir:short [ fhir:v "Whether and to what extent substitution is allowed." ] ;
+       fhir:definition [ fhir:v "Whether and to what extent substitution is allowed." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]" ] ;
+       fhir:short [ fhir:v "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)" ] ;
+       fhir:definition [ fhir:v "Reason for the substitution requirement (e.g. Biological product, Patient allergic to an excipient in alternative products, etc)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.numberOfRepeats" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.numberOfRepeats" ] ;
+       fhir:short [ fhir:v "Number of refills authorised - how many times the prescription item can be dispensed in addition to the original dispense. The default value is 0 (no repeats)." ] ;
+       fhir:definition [ fhir:v "Number of refills authorised - how many times the prescription item can be dispensed in addition to the original dispense. The default value is 0 (no repeats)." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.numberOfRepeats" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "integer"^^xsd:anyURI ;
+           fhir:l fhir:integer
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval" ] ;
+       fhir:short [ fhir:v "Minimum dispense interval. If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here." ] ;
+       fhir:definition [ fhir:v "Minimum dispense interval. If a prescription allows for repeated dispensations, the interval between dispensations shall be stated here." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Quantity"^^xsd:anyURI ;
+           fhir:l fhir:Quantity
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel" ] ;
+       fhir:short [ fhir:v "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug" ] ;
+       fhir:definition [ fhir:v "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the drug" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "Base"^^xsd:anyURI ;
+           fhir:l fhir:Base
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel.isOffLabelUse" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel.isOffLabelUse" ] ;
+       fhir:short [ fhir:v "Indicates off-label use. Must be 'true' when .reason is provided." ] ;
+       fhir:definition [ fhir:v "Indicates off-label use. Must be 'true' when .reason is provided." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel.isOffLabelUse" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "boolean"^^xsd:anyURI ;
+           fhir:l fhir:boolean
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel.reason[x]" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel.reason[x]" ] ;
+       fhir:short [ fhir:v "Reason or related clarification for off-label use" ] ;
+       fhir:definition [ fhir:v "Reason or related clarification for off-label use" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.offLabel.reason[x]" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "CodeableConcept"^^xsd:anyURI ;
+           fhir:l fhir:CodeableConcept
+         ]
+       ] [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.note" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:display"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-source>
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations|1.0.0"^^xsd:anyURI ;
+             fhir:l <http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations?version=1.0.0>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.note" ] ;
+       fhir:short [ fhir:v "Additional information or comments, e.g. message to the dispenser" ] ;
+       fhir:definition [ fhir:v "Additional information or comments, e.g. message to the dispenser" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.note" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "EHDSMedicationPrescription" ] ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.subject" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL process the patient information for identification purposes."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.subject" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.identifier" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "For a single-item prescription these identifiers SHALL match prescriptionItem.identifier."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL use this prescription identifier for reference in the dispense record."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.identifier" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.author[x]" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL support at least EHDSHealthProfessional data type for the element."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.author[x]" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.date" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.date" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.header.status" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL process the prescription status together with other information to determine dispensability."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.header.status" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.presentedForm" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHOULD be able to provide a rendered, human-readable version of the prescription."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:display"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.presentedForm" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.identifier" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "For a single-item prescription these identifiers SHALL match .identifier."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL use this prescription identifier for reference in the dispense record."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.identifier" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.status" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL process the prescription status together with other information to determine dispensability."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.status" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.medication" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.medication" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.quantityPrescribed" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.quantityPrescribed" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.dosageInstructions" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.dosageInstructions" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.validityPeriod" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.validityPeriod" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL support at least the boolean data type."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHALL:process"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] [
+           fhir:url [
+             fhir:v "documentation"^^xsd:anyURI ;
+             fhir:l fhir:documentation
+           ] ;
+           fhir:value [
+             a fhir:Markdown ;
+             fhir:v "System SHALL support at least the boolean data type."
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]" ]
+     ] [
+       fhir:id [ fhir:v "EHDSMedicationPrescription.prescriptionItem.note" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:able-to-populate"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-producer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-producer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "code"^^xsd:anyURI ;
+             fhir:l fhir:code
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "SHOULD:display"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "actor"^^xsd:anyURI ;
+             fhir:l fhir:actor
+           ] ;
+           fhir:value [
+             a fhir:Canonical ;
+             fhir:v "https://www.xt-ehr.eu/specifications/fhir/actor-consumer"^^xsd:anyURI ;
+             fhir:l <https://www.xt-ehr.eu/specifications/fhir/actor-consumer>
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/obligation"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/obligation>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "EHDSMedicationPrescription.prescriptionItem.note" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
